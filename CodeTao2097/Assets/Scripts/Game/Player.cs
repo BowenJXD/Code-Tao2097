@@ -3,10 +3,8 @@ using QFramework;
 
 namespace CodeTao
 {
-	public partial class Player : ViewController
+	public partial class Player : MoveController
 	{
-		public float MovementSpeed = 5;
-		
 		void Update()
 		{
 			Move(GetMovementDirection());
@@ -21,7 +19,7 @@ namespace CodeTao
 		
 		public void Move(Vector2 direction)
 		{
-			SelfRigidbody2D.velocity = direction * MovementSpeed;
+			SelfRigidbody2D.velocity = direction * SPD;
 		}
 	}
 }

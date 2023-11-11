@@ -15,23 +15,23 @@ MonoBehaviour:
   CNName: "4.DocKit.\u7C7B\u56FE"
   serializedNodes: []
   nodes:
-  - id: 0
-  - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
-  - id: 7
-  - id: 8
-  - id: 9
-  - id: 10
-  - id: 11
-  - id: 12
-  - id: 13
-  - id: 14
-  - id: 15
-  - id: 16
+  - rid: 0
+  - rid: 1
+  - rid: 2
+  - rid: 3
+  - rid: 4
+  - rid: 5
+  - rid: 6
+  - rid: 7
+  - rid: 8
+  - rid: 9
+  - rid: 10
+  - rid: 11
+  - rid: 12
+  - rid: 13
+  - rid: 14
+  - rid: 15
+  - rid: 16
   edges: []
   groups: []
   stackNodes: []
@@ -40,12 +40,13 @@ MonoBehaviour:
   serializedParameterList: []
   stickyNotes: []
   nodeInspectorReference: {fileID: 0}
-  position: {x: 229, y: -204.5, z: 0}
-  scale: {x: 0.21494322, y: 0.21494322, z: 1}
+  position: {x: 248.8, y: -1150.4, z: 0}
+  scale: {x: 0.43232757, y: 0.43232757, z: 1}
   mGraphCurrentID2Generate: 0
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -73,7 +74,7 @@ MonoBehaviour:
 
           Just right-click on any directory that has code and select
           @dockit /Create Class Graph to do the following'
-    00000001:
+    - rid: 1
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -90,7 +91,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: 50864016704734230a398df4d5a8c232, type: 3}
         ENTexture: {fileID: 2800000, guid: 50864016704734230a398df4d5a8c232, type: 3}
-    00000002:
+    - rid: 2
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -107,7 +108,7 @@ MonoBehaviour:
         nodeLock: 0
         CNText: "\u521B\u5EFA\u4E4B\u540E\uFF0C\u5982\u4E0B\u6240\u793A:"
         ENText: 'After creation, it looks like this:'
-    00000003:
+    - rid: 3
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -124,7 +125,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: 227728f70e93647d7a0168ea073ae8cc, type: 3}
         ENTexture: {fileID: 2800000, guid: 227728f70e93647d7a0168ea073ae8cc, type: 3}
-    00000004:
+    - rid: 4
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -141,7 +142,7 @@ MonoBehaviour:
         nodeLock: 0
         CNText: "\u6211\u4EEC\u5148\u770B\u5B83\u7684 Inspector \u5982\u4E0B"
         ENText: We first look at it in Inspector below
-    00000005:
+    - rid: 5
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -158,7 +159,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: a84251a3b01874254bca83c3e59857bc, type: 3}
         ENTexture: {fileID: 2800000, guid: a7869c75cc69543b381e47ae3bca1073, type: 3}
-    00000006:
+    - rid: 6
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -175,7 +176,7 @@ MonoBehaviour:
         nodeLock: 0
         CNText: "\u6211\u4EEC\u53EF\u4EE5\u770B\u5230\u89E3\u6790\u6309\u94AE\uFF0C\u70B9\u51FB\u5B83\uFF0C\u7ED3\u679C\u5982\u4E0B:"
         ENText: 'We can see the parse button, click it and the result is as follows:'
-    00000007:
+    - rid: 7
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -192,7 +193,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: e6ae3f8d52d4249b092fcfa2da80701e, type: 3}
         ENTexture: {fileID: 2800000, guid: 04b8f500734cb469d8cf91f477f9280b, type: 3}
-    00000008:
+    - rid: 8
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -209,7 +210,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: f565998036ddd456eb9e05c549c19eb3, type: 3}
         ENTexture: {fileID: 2800000, guid: b15d33d7b59c549e581b39016032297b, type: 3}
-    00000009:
+    - rid: 9
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -230,7 +231,7 @@ MonoBehaviour:
 
 
           A new window also opens as follows:'
-    0000000A:
+    - rid: 10
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -257,7 +258,7 @@ MonoBehaviour:
 
           For the ClassGraph class
           in the figure, we can click the see button to open the code editor as follows:'
-    0000000B:
+    - rid: 11
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -274,7 +275,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: 8fde148e651d449548b2d619fd42c4d3, type: 3}
         ENTexture: {fileID: 2800000, guid: 8fde148e651d449548b2d619fd42c4d3, type: 3}
-    0000000C:
+    - rid: 12
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -291,7 +292,7 @@ MonoBehaviour:
         nodeLock: 0
         CNText: "\u6211\u4EEC\u6765\u5BF9\u8FD9\u4E2A\u7C7B\u5DF2\u7ECF\u65B9\u6CD5\u5199\u968F\u4FBF\u5199\u4E00\u70B9\u6CE8\u91CA\uFF0C\u5982\u4E0B\u3002"
         ENText: Let's write comments about the class method, as follows.
-    0000000D:
+    - rid: 13
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -308,7 +309,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: 385ab3129c1584821894748ea12b4a02, type: 3}
         ENTexture: {fileID: 2800000, guid: 385ab3129c1584821894748ea12b4a02, type: 3}
-    0000000E:
+    - rid: 14
       type: {class: DocumentImageNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -325,7 +326,7 @@ MonoBehaviour:
         nodeLock: 0
         CNTexture: {fileID: 2800000, guid: c78c71f88ed294438ab7f5131e01cb4f, type: 3}
         ENTexture: {fileID: 2800000, guid: 7d51d098412494a3b91ff204c7d3fcfd, type: 3}
-    0000000F:
+    - rid: 15
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 
@@ -344,7 +345,7 @@ MonoBehaviour:
           ClassGraph \u7C7B\u56FE\u53D8\u6210\u5982\u4E0B"
         ENText: Then we go back to the class diagram editor, right-click to reload,
           and see our ClassGraph class diagram look like this
-    00000010:
+    - rid: 16
       type: {class: DocumentTextNode, ns: QFramework, asm: DocKit.Editor}
       data:
         nodeCustomName: 

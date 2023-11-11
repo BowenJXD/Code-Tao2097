@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using QFramework;
 using UnityEngine;
 
 namespace CodeTao
 {
-    public class Defencer : MonoBehaviour
+    public class Defencer : ViewController
     {
         public BindableStat DEF = new BindableStat();
         public BindableStat HP = new BindableStat();

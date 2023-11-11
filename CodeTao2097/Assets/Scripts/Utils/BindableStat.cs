@@ -26,7 +26,11 @@ namespace CodeTao
         protected Dictionary<string, float> mAdditiveModifiers = new Dictionary<string, float>();
         protected Dictionary<string, float> mMultiplicativeModifiers = new Dictionary<string, float>();
         
+        public BindableStat(){}
         
+        public BindableStat(float value) : base(value)
+        {
+        }
         
         public bool AddModifier(string name, float value, ModifierType modifierType, RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
@@ -89,7 +93,12 @@ namespace CodeTao
             float basic = mBasicModifiers.Values.Sum();
             float additive = mAdditiveModifiers.Values.Sum();
             float multiplicative = mMultiplicativeModifiers.Values.Sum();
-            return (mValue + basic) * multiplicative + additive;
+            return (mValue + basic) * (1 + multiplicative) + additive;
+        }
+        
+        public static implicit operator float(BindableStat myObject)
+        {
+            return myObject.Value;
         }
     }
 }

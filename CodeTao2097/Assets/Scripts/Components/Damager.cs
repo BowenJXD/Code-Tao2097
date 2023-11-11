@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using QFramework;
 using UnityEngine;
 
 namespace CodeTao 
 {
-    public class Damager : MonoBehaviour
+    public class Damager : ViewController
     {
         public BindableStat DMG = new BindableStat();
         public Element DamageElement = new Element();

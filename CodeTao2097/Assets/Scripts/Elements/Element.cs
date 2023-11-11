@@ -12,13 +12,32 @@ namespace CodeTao
         Wood,
         Water,
         Fire,
-        Earth
+        Earth,
+        All
     }
     
     public class Element
     {
-        public ElementType Type;
-        public float Aura; // 附着量
+        private ElementType mType;
+        public ElementType Type
+        {
+            get { return mType; }
+            set { mType = value; }
+        }
+        
+        private float mAura;
+        public float Aura
+        {
+            get { return mAura; }
+            set { mAura = value; }
+        }
+
+        private float mFadeSpeed;
+        public float FadeSpeed
+        {
+            get { return mFadeSpeed; }
+            set { mFadeSpeed = value; }
+        }
     }
 }
 

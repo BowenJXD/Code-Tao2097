@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using CodeTao;
+using QFramework;
 using UnityEngine;
 
 namespace CodeTao
 {
     
-    public class Attacker : MonoBehaviour
+    public class Attacker : ViewController
     {
         public BindableStat ATK = new BindableStat();
-        public BindableStat CritRate = new BindableStat();
+        public BindableStat CritRate = new BindableStat(); // 0.0f ~ 1.0f
         public BindableStat CritDamage = new BindableStat();
         public Dictionary<ElementType, float> ElementBonuses = ElementType.GetValues(typeof(ElementType))
             .Cast<ElementType>()

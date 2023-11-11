@@ -18,20 +18,13 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: SpriteRenderer
-      PathToRoot: Sprite
-      MemberName: Sprite
-    - TypeName: CircleCollider2D
-      PathToRoot: HurtBox
-      MemberName: HurtBox
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: Player
+    BindInfos: []
+    ScriptsFolder: Assets/Scripts/Game/Enemy
+    ClassName: Enemy
     Namespace: CodeTao
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
-      partial class Player : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Enemy : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:9f947f3a-2111-41c2-972e-3193f04441a6\r\nusing UnityEngine;\r\n\r\nnamespace
-      CodeTao\r\n{\r\n\tpublic partial class Player\r\n\t{\r\n\r\n\t\tpublic SpriteRenderer
-      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HurtBox;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D
-      SelfRigidbody2D;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:8c86ecfb-880c-466a-b3c5-86b686cd38af\r\nusing UnityEngine;\r\n\r\nnamespace
+      CodeTao\r\n{\r\n\tpublic partial class Enemy\r\n\t{\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D
+      SelfRigidbody2D;\r\n\r\n\t\tpublic UnityEngine.AI.NavMeshAgent SelfNavAgent;\r\n\r\n\t}\r\n}\r\n"
