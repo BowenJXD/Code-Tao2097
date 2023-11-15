@@ -64,28 +64,28 @@ namespace CodeTao
             return this;
         }
 
-        public bool SetDamageSection(DamageSection section, string modifiername, float value, RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
+        public bool SetDamageSection(DamageSection section, string name, float value, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
         {
             if (DamageSections.ContainsKey(section))
             {
-                if (DamageSections[section].ContainsKey(modifiername))
+                if (DamageSections[section].ContainsKey(name))
                 {
                     switch (repetitionBehavior)
                     {
-                        case RepetitionBehavior.Return:
+                        case ERepetitionBehavior.Return:
                             break;
-                        case RepetitionBehavior.Overwrite:
-                            DamageSections[section][modifiername] = value;
+                        case ERepetitionBehavior.Overwrite:
+                            DamageSections[section][name] = value;
                             break;
-                        case RepetitionBehavior.Stack:
-                            DamageSections[section][modifiername] += value;
+                        case ERepetitionBehavior.AddStack:
+                            DamageSections[section][name] += value;
                             break;
                     }
 
                     return false;
                 }
                 
-                return DamageSections[section].TryAdd(modifiername, value);
+                return DamageSections[section].TryAdd(name, value);
             }
 
             return false;

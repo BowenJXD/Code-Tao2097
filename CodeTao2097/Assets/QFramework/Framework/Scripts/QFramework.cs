@@ -582,7 +582,8 @@ namespace QFramework
         void UnRegister(Action<T> onValueChanged);
         IUnRegister Register(Action<T> onValueChanged);
     }
-
+    
+    [Serializable]
     public class BindableProperty<T> : IBindableProperty<T> 
     {
         public BindableProperty(T defaultValue = default) => mValue = defaultValue;
@@ -608,7 +609,7 @@ namespace QFramework
 
         public void SetValueWithoutEvent(T newValue) => mValue = newValue;
 
-        private Action<T> mOnValueChanged = (v) => { };
+        protected Action<T> mOnValueChanged = (v) => { };
 
         public IUnRegister Register(Action<T> onValueChanged)
         {

@@ -16,27 +16,27 @@ namespace CodeTao
         All
     }
     
-    public class Element
+    public class Element : IContent<Element>
     {
-        private ElementType mType;
+        private ElementType _type;
         public ElementType Type
         {
-            get { return mType; }
-            set { mType = value; }
+            get { return _type; }
+            set { _type = value; }
         }
         
         private float mAura;
-        public float Aura
+        public float Gauge
         {
             get { return mAura; }
             set { mAura = value; }
         }
 
-        private float mFadeSpeed;
-        public float FadeSpeed
+        public IContainer<Element> Container { get; set; }
+
+        public bool AddToContainer(IContainer<Element> container)
         {
-            get { return mFadeSpeed; }
-            set { mFadeSpeed = value; }
+            throw new System.NotImplementedException();
         }
     }
 }

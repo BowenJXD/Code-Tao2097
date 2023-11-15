@@ -20,7 +20,7 @@ namespace CodeTao
         {
             damage.SetTarget(this);
             damage.SetDamageSection(DamageSection.TargetDEF, "", DEF.Value);
-            damage.SetDamageSection(DamageSection.ElementRES, "", ElementResistances[damage.DamageElement.Type], RepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.ElementRES, "", ElementResistances[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
             return damage;
         }
     }

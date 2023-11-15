@@ -22,14 +22,14 @@ namespace CodeTao
             damage.SetSource(this);
             damage.SetDamageSection(DamageSection.SourceATK, "", ATK.Value);
             damage.SetDamageSection(DamageSection.CRIT, "", GetCritRate());
-            damage.SetDamageSection(DamageSection.ElementBON, "", ElementBonuses[damage.DamageElement.Type], RepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.ElementBON, "", ElementBonuses[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
             return damage;
         }
         
         public float GetCritRate()
         {
             float result = 1.0f;
-            if (Global.Random.Next(100) < CritRate.Value * 100)
+            if (Global.Instance.Random.Next(100) < CritRate.Value * 100)
             {
                 result = CritDamage.Value;
             }

@@ -1,104 +1,168 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using GraphProcessor;
 using QFramework;
 using UnityEngine;
 
 namespace CodeTao
 {
-    public enum ModifierType
+    public enum EModifierType
     {
         Basic,
-        Multiplicative,
-        Additive
+        Additive,
+        MultiAdd,
+        Multiplicative
     }
 
-    public enum RepetitionBehavior
+    public enum ERepetitionBehavior
     {
         Return,
         Overwrite,
-        Stack
+        AddStack,
+        NewStack
     }
     
+    [Serializable]
     public class BindableStat : BindableProperty<float>
     {
-        protected Dictionary<string, float> mBasicModifiers = new Dictionary<string, float>();
-        protected Dictionary<string, float> mAdditiveModifiers = new Dictionary<string, float>();
-        protected Dictionary<string, float> mMultiplicativeModifiers = new Dictionary<string, float>();
+        private float _initValue = 0;
+        private Dictionary<string, float> _basicModifiers = new Dictionary<string, float>();
+        private Dictionary<string, float> _additiveModifiers = new Dictionary<string, float>();
+        private Dictionary<string, float> _multiAddModifiers = new Dictionary<string, float>();
+        private Dictionary<string, float> _multiplicativeModifiers = new Dictionary<string, float>();
+        private float _minValue = 0;
+        private float _maxValue = float.MaxValue;
         
         public BindableStat(){}
         
         public BindableStat(float value) : base(value)
         {
+            _initValue = value;
         }
         
-        public bool AddModifier(string name, float value, ModifierType modifierType, RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
+        public BindableStat SetMinValue(float value)
         {
+            _minValue = value;
+            return this;
+        }
+        
+        public BindableStat SetMaxValue(float value)
+        {
+            _maxValue = value;
+            return this;
+        }
+        
+        public bool AddModifier(string name, float value, EModifierType modifierType, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+        {
+            bool result = false;
             Dictionary<string, float> modifiers = null;
             switch (modifierType)
             {
-                case ModifierType.Basic:
-                    modifiers = mBasicModifiers;
+                case EModifierType.Basic:
+                    modifiers = _basicModifiers;
                     break;
-                case ModifierType.Additive:
-                    modifiers = mAdditiveModifiers;
+                case EModifierType.Additive:
+                    modifiers = _additiveModifiers;
                     break;
-                case ModifierType.Multiplicative:
-                    modifiers = mMultiplicativeModifiers;
+                case EModifierType.MultiAdd:
+                    modifiers = _multiAddModifiers;
+                    break;
+                case EModifierType.Multiplicative:
+                    modifiers = _multiplicativeModifiers;
                     break;
             }
             
             if (modifiers == null)
             {
-                return false;
+                return result;
             }
             
             if (modifiers.ContainsKey(name))
             {
                 switch (repetitionBehavior)
                 {
-                    case RepetitionBehavior.Return:
+                    case ERepetitionBehavior.Return:
                         break;
-                    case RepetitionBehavior.Overwrite:
+                    case ERepetitionBehavior.Overwrite:
                         modifiers[name] = value;
+                        result = true;
                         break;
-                    case RepetitionBehavior.Stack:
+                    case ERepetitionBehavior.AddStack:
                         modifiers[name] += value;
+                        result = true;
+                        break;
+                    case ERepetitionBehavior.NewStack: // not implemented
+                        modifiers.Add(name, value);
+                        result = true;
                         break;
                 }
-
-                return false;
             }
 
-            return modifiers.TryAdd(name, value);
+            result = modifiers.TryAdd(name, value);
+            
+            if (result)
+            {
+                mOnValueChanged?.Invoke(Value);
+            }
+            
+            return result;
         }
         
-        public bool RemoveModifier(string name, ModifierType modifierType)
+        public bool RemoveModifier(string name, EModifierType modifierType)
         {
+            bool result = false;
             switch (modifierType)
             {
-                case ModifierType.Basic:
-                    return mBasicModifiers.Remove(name);
-                case ModifierType.Additive:
-                    return mAdditiveModifiers.Remove(name);
-                case ModifierType.Multiplicative:
-                    return mMultiplicativeModifiers.Remove(name);
+                case EModifierType.Basic:
+                    result = _basicModifiers.Remove(name);
+                    break;
+                case EModifierType.Additive:
+                    result = _additiveModifiers.Remove(name);
+                    break;
+                case EModifierType.MultiAdd:
+                    result = _multiAddModifiers.Remove(name);
+                    break;
+                case EModifierType.Multiplicative:
+                    result = _multiplicativeModifiers.Remove(name);
+                    break;
             }
 
-            return false;
+            if (result)
+            {
+                mOnValueChanged?.Invoke(Value);
+            }
+            return result;
         }
 
         protected override float GetValue()
         {
-            float basic = mBasicModifiers.Values.Sum();
-            float additive = mAdditiveModifiers.Values.Sum();
-            float multiplicative = mMultiplicativeModifiers.Values.Sum();
-            return (mValue + basic) * (1 + multiplicative) + additive;
+            float basic = _basicModifiers.Values.Sum();
+            float additive = _additiveModifiers.Values.Sum();
+            float multiAdd = _multiAddModifiers.Values.Sum();
+            float multiplicative = _multiplicativeModifiers.Values.Aggregate(1f, (current, value) => current * (1 + value));
+            float resultValue = (mValue + basic) * multiplicative * (1 + multiAdd) + additive;
+            resultValue = Math.Clamp(resultValue, _minValue, _maxValue);
+            return resultValue;
+        }
+        
+        public void Reset()
+        {
+            _basicModifiers.Clear();
+            _additiveModifiers.Clear();
+            _multiplicativeModifiers.Clear();
+            Value = _initValue;
         }
         
         public static implicit operator float(BindableStat myObject)
         {
             return myObject.Value;
+        }
+        
+        public static implicit operator int(BindableStat myObject)
+        {
+            return (int)myObject.Value;
         }
     }
 }

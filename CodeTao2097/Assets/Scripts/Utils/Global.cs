@@ -1,18 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using CodeTao;
 using JetBrains.Annotations;
+using QFramework;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = System.Random;
 
 
 namespace CodeTao
 {
-    public class Global
+    public class Global : MonoSingleton<Global>
     {
-        public static int RandomSeed = 0;
+        public int RandomSeed = 0;
 
-        public static Random Random;
+        public Random Random;
+        
+        public UnityEvent OnGameStart = new UnityEvent();
+
+        private void Start()
+        {
+            OnGameStart.Invoke();
+        }
     }
 }

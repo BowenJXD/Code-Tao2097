@@ -7,7 +7,7 @@ namespace CodeTao
 {
     public class MoveController : ViewController
     {
-        [SerializeField] public BindableStat SPD = new BindableStat(1);
+        public BindableStat SPD = new BindableStat(1);
         
         private Vector2 mMoveDirection = Vector2.zero;
         
