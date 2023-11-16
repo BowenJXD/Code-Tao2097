@@ -25,14 +25,18 @@ namespace CodeTao
     
     public class Damage
     {
-        protected Attacker Source;
-        protected Damager Median;
-        protected Defencer Target;
-        public Element DamageElement { get; protected set; } = new Element();
-        protected float Base = 0; 
-        protected Dictionary<DamageSection, Dictionary<string, float>> DamageSections = DamageSection.GetValues(typeof(DamageSection))
+        public Attacker Source { get; private set; }
+        public Damager Median { get; private set; }
+        public Defencer Target { get; private set; }
+        public Element DamageElement { get; private set; } = new Element();
+        
+        public float Base { get; private set; }
+        
+        public Dictionary<DamageSection, Dictionary<string, float>> DamageSections = DamageSection.GetValues(typeof(DamageSection))
             .Cast<DamageSection>()
             .ToDictionary(key => key, value => new Dictionary<string, float>());
+
+        public float Knockback = 1;
 
         public Damage SetSource(Attacker source)
         {
@@ -90,7 +94,23 @@ namespace CodeTao
 
             return false;
         }
+            
+        public bool RemoveDamageSection(DamageSection section, string name)
+        {
+            if (DamageSections.ContainsKey(section))
+            {
+                return DamageSections[section].Remove(name);
+            }
 
+            return false;
+        }
+        
+        public Damage MultiplyKnockBack(float value)
+        {
+            Knockback *= value;
+            return this;
+        }
+        
         public float CalculateDamage()
         {
             float result = Base;

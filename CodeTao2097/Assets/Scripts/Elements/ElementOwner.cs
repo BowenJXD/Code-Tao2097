@@ -9,9 +9,31 @@ namespace CodeTao
     public class ElementOwner : ViewController, IContainer<Element>
     {
         public List<IContent<Element>> Contents { get; set; }
-
+        
         public void Start()
         {
+            
+        }
+
+        public void AddElement(Element element, Damage damage = null)
+        {
+            IContainer<Element> container = this;
+            if (container.AddContent(element))
+            {
+                ProcessAddedElement(damage);
+            }
+        }
+
+        public void ProcessAddedElement(Damage damage)
+        {
+            if (Contents.Count > 1)
+            {
+                Element elementA = (Element) Contents[0];
+                Element elementB = (Element) Contents[1];
+                
+                Reaction reaction = ReactionManager.Instance.GetReaction(elementA.Type, elementB.Type);
+                reaction.React(this, damage);
+            }
         }
     }
 }

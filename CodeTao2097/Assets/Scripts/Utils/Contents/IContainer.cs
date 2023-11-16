@@ -43,11 +43,17 @@ namespace CodeTao
             {
                 Contents.Add(content);
                 result = true;
-                return true;
             }
 
+            if (result)
+            {
+                ProcessAddedContent(content);
+            }
+            
             return result;
         }
+
+        public void ProcessAddedContent(IContent<T> content) { }
         
         /// <summary>
         /// Should only be invoked from Content
@@ -61,9 +67,16 @@ namespace CodeTao
             {
                 return result;
             }
-            
             result = Contents.Remove(content);
+            
+            if (result)
+            {
+                ProcessRemovedContent(content);
+            }
+            
             return result;
         }
+
+        public void ProcessRemovedContent(IContent<T> content) { }
     }
 }

@@ -2,9 +2,9 @@
 {
     public abstract class Reaction
     {
-        public ElementType[] RelatedElements;
+        public ElementType[] RelatedElements = new ElementType[2];
 
-        public abstract void Trigger(ElementOwner owner, Damage damage);
+        public abstract void React(ElementOwner owner, Damage damage = null);
     }
 
     public abstract class InstantReaction

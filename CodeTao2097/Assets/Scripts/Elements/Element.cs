@@ -25,11 +25,11 @@ namespace CodeTao
             set { _type = value; }
         }
         
-        private float mAura;
+        private float _gauge;
         public float Gauge
         {
-            get { return mAura; }
-            set { mAura = value; }
+            get { return _gauge; }
+            set { _gauge = value; }
         }
 
         public IContainer<Element> Container { get; set; }
