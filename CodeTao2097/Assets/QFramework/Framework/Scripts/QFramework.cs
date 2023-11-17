@@ -588,7 +588,7 @@ namespace QFramework
     {
         public BindableProperty(T defaultValue = default) => mValue = defaultValue;
 
-        protected T mValue;
+        [SerializeField] public T mValue;
 
         public T Value
         {

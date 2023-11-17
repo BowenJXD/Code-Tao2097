@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using QFramework;
 
@@ -8,6 +9,13 @@ namespace CodeTao
 		void Update()
 		{
 			Move(GetMovementDirection());
+		}
+
+		public static Player Instance;
+
+		private void Awake()
+		{
+			Instance = this;
 		}
 
 		public Vector2 GetMovementDirection()

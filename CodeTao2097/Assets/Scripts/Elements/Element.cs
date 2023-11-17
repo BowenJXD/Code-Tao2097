@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 namespace CodeTao 
 {
+    [Serializable]
     public enum ElementType
     {
         None,
@@ -16,16 +18,17 @@ namespace CodeTao
         All
     }
     
+    [Serializable]
     public class Element : IContent<Element>
     {
-        private ElementType _type;
+        [SerializeField] private ElementType _type;
         public ElementType Type
         {
             get { return _type; }
             set { _type = value; }
         }
         
-        private float _gauge;
+        [SerializeField] private float _gauge;
         public float Gauge
         {
             get { return _gauge; }
@@ -33,11 +36,6 @@ namespace CodeTao
         }
 
         public IContainer<Element> Container { get; set; }
-
-        public bool AddToContainer(IContainer<Element> container)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
 

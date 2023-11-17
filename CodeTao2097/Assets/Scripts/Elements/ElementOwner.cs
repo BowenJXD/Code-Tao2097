@@ -17,6 +17,8 @@ namespace CodeTao
 
         public void AddElement(Element element, Damage damage = null)
         {
+            if (element.Type == ElementType.None || element.Gauge <= 0)
+                return;
             IContainer<Element> container = this;
             if (container.AddContent(element))
             {

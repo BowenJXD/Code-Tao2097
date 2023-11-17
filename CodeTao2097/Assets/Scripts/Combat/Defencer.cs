@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class Defencer : ViewController
+    public partial class Defencer : ViewController
     {
         #region HP
         
@@ -56,7 +56,7 @@ namespace CodeTao
         #region Condition
         
         public float DMGCD;
-        public bool IsInCD;
+        [HideInInspector] public bool IsInCD;
         
         public void StartCD()
         {
@@ -84,7 +84,7 @@ namespace CodeTao
         
         public bool ValidateDamage(Damager damager, Attacker attacker)
         {
-            bool result = !IsInCD && !Util.IsTagIncluded(damager.gameObject.tag, defencingTags);
+            bool result = !IsInCD && !Util.IsTagIncluded(Util.GetTagFromParent(damager), defencingTags);
 
             return result;
         }

@@ -17,7 +17,7 @@ namespace CodeTao
         public List<ETag> damagingTags = new List<ETag>();
 
         public float DMGCD;
-        public bool IsInCD;
+        [HideInInspector] public bool IsInCD;
 
         public void StartCD()
         {
@@ -29,7 +29,7 @@ namespace CodeTao
 
         public bool ValidateDamage(Defencer defencer, Attacker attacker)
         {
-            bool result = !IsInCD && Util.IsTagIncluded(defencer.gameObject.tag, damagingTags);
+            bool result = !IsInCD && Util.IsTagIncluded(Util.GetTagFromParent(defencer), damagingTags);
 
             return result;
         }

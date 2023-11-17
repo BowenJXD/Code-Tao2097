@@ -5,6 +5,7 @@ using System.Linq;
 using GraphProcessor;
 using QFramework;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeTao
 {
@@ -34,12 +35,15 @@ namespace CodeTao
         private Dictionary<string, float> _multiplicativeModifiers = new Dictionary<string, float>();
         private float _minValue = 0;
         private float _maxValue = float.MaxValue;
-        
-        public BindableStat(){}
+
+        public BindableStat()
+        {
+            _initValue = mValue;
+        }
         
         public BindableStat(float value) : base(value)
         {
-            _initValue = value;
+            _initValue = mValue;
         }
         
         public BindableStat SetMinValue(float value)

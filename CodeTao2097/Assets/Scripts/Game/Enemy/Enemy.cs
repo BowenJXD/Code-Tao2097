@@ -9,7 +9,17 @@ namespace CodeTao
 	{
 		private void Start()
 		{
-			SelfNavAgent.speed = SPD;
+			SelfNavAgent.updateRotation = false;
+			SelfNavAgent.updateUpAxis = false;
+		}
+
+		private void Update()
+		{
+			if (Player.Instance)
+			{
+				SelfNavAgent.speed = SPD;
+				SelfNavAgent.SetDestination(Player.Instance.transform.position);
+			}
 		}
 	}
 }

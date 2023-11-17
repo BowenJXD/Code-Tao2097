@@ -215,6 +215,22 @@ MonoBehaviour:
   m_graph: {fileID: 11400000}
   m_comment: 
   m_enableStatusIndicator: 1
+--- !u!114 &-1082558085915138166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69338f26bc080584993f1e9fa0b4a4fe, type: 3}
+  m_Name: GameObjectKey
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_typeString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  m_blackboard: {fileID: 7046229846797809737}
 --- !u!114 &-1016172341604251239
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -273,14 +289,14 @@ MonoBehaviour:
     m_fieldValueType: UnityEngine.AI.NavMeshAgent, UnityEngine.AIModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   player:
-    m_entry: {fileID: 1542401905745544302}
+    m_entry: {fileID: 0}
     m_valuePath: 
     m_dynamicName: 
     m_isDynamic: 0
     m_filters:
     - UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-    m_inspectorValue: {fileID: 0}
+    m_inspectorValue: {fileID: 1317225334756031151, guid: 4626c4236a71af198adb53c14c51e278, type: 3}
   minDistance:
     m_entry: {fileID: 0}
     m_valuePath: 
@@ -320,7 +336,7 @@ MonoBehaviour:
   - {fileID: -2497839277497702769}
   - {fileID: 3216159648079688852}
   - {fileID: -734273552532182645}
-  m_zoom: 1.9450002
+  m_zoom: 2.29
   m_pan: {x: -554.37427, y: -614.7694}
 --- !u!114 &1542401905745544302
 MonoBehaviour:
@@ -392,7 +408,7 @@ MonoBehaviour:
   precisionMode: 0
   offset: {x: 0, y: 0, z: 0.5}
   gameObjectKey:
-    m_entry: {fileID: 1542401905745544302}
+    m_entry: {fileID: 0}
     m_valuePath: 
     m_dynamicName: 
     m_isDynamic: 0
@@ -418,6 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_entries:
   - {fileID: 1542401905745544302}
+  - {fileID: -1082558085915138166}
 --- !u!114 &8055891695332981111
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,13 +7,13 @@ namespace CodeTao
 {
     public class MoveController : ViewController
     {
-        public BindableStat SPD = new BindableStat(1);
+        [SerializeField] public BindableStat SPD = new BindableStat(1);
         
-        private Vector2 mMoveDirection = Vector2.zero;
+        private Vector2 _moveDirection = Vector2.zero;
         
         public Vector2 MovementDirection { 
-            get { return mMoveDirection; }
-            set { mMoveDirection = value; } 
+            get { return _moveDirection; }
+            set { _moveDirection = value; } 
         }
     }
 }

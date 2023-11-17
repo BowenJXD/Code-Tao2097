@@ -10,8 +10,13 @@ namespace CodeTao
     {
         public BindableStat attackInterval = new BindableStat(2).SetMinValue(0.1f);
 
-        public Attacker attacker;
+        [HideInInspector] public Attacker attacker;
         
-        public Damager damager;
+        [HideInInspector] public Damager damager;
+        
+        public virtual void Attack(Defencer defencer)
+        {
+            DamageManager.Instance.ExecuteDamage(damager, defencer, attacker);
+        }
     }
 }

@@ -5,14 +5,17 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class Stinky : Weapon
+    public partial class Stinky : Weapon
     {
         public float radius;
 		
         public LoopTask ShootTask;
 
-        void Start()
+        protected virtual void Start()
         {
+            attacker = Player.Instance.Attacker;
+            damager = Damager;
+            
             ShootTask = new LoopTask(this, attackInterval, AttackSurrounding);
             ShootTask.Start();
             attackInterval.RegisterWithInitValue(interval =>
@@ -25,12 +28,12 @@ namespace CodeTao
         {
             List<Collider2D> colliders = Physics2D.OverlapCircleAll(transform.position, radius).ToList();
 			
-            foreach (var collider in colliders)
+            foreach (var col in colliders)
             {
-                Defencer defencer = collider.GetComponentInParent<Defencer>();
+                Defencer defencer = Util.GetComponentInSiblings<Defencer>(col);
                 if (defencer)
                 {
-                    DamageManager.Instance.ExecuteDamage(damager, defencer, attacker);
+                    Attack(defencer);
                 }
             }
         }
