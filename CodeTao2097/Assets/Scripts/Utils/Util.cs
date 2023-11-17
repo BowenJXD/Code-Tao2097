@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace CodeTao
@@ -45,6 +47,24 @@ namespace CodeTao
         public static string GetTagFromParent(Component component)
         {
             return component.transform.parent.tag;
+        }
+        
+        public static int GetRandomWeightedIndex(List<int> list)
+        {
+            int totalWeight = list.Sum();
+            int randomValue = Global.Instance.Random.Next(totalWeight);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                randomValue -= list[i];
+                if (randomValue <= 0)
+                {
+                    return i;
+                }
+            }
+
+            // This should not happen if the total weight is correct
+            throw new InvalidOperationException("Unable to retrieve a random key.");
         }
     }
 }

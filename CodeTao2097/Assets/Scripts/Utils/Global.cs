@@ -22,6 +22,7 @@ namespace CodeTao
 
         private void Start()
         {
+            Random = new Random(RandomSeed);
             OnGameStart.Invoke();
         }
     }

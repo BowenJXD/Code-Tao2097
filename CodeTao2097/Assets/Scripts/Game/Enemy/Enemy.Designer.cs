@@ -1,4 +1,4 @@
-// Generate Id:8dc9b196-f522-46df-bf8e-fa21fcf3e96e
+// Generate Id:693ccac6-67a8-41cc-84f7-c8006f36ba53
 using UnityEngine;
 
 namespace CodeTao

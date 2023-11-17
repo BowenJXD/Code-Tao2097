@@ -11,31 +11,22 @@ namespace CodeTao
     {
         #region HP
         
-        private float _hp;
-        public float HP
-        {
-            get => _hp;
-            set
-            {
-                SetHP(value);
-            }
-        }
+        public BindableProperty<float> HP;
         public BindableStat MaxHP = new BindableStat();
 
         private float SetHP(float value)
         {
-            _hp = value;
             if (value <= 0)
             {
                 
             }
-            _hp = Mathf.Clamp(value, 0, MaxHP);
-            return _hp;
+            HP.Value = Mathf.Clamp(value, 0, MaxHP);
+            return HP.Value;
         }
 
         private float AlterHP(float value)
         {
-            return SetHP(HP + value);
+            return SetHP(HP.Value + value);
         }
         
         #endregion
@@ -44,11 +35,15 @@ namespace CodeTao
         
         public Action<Damage> OnDeath;
         
-        public bool IsDead => HP <= 0;
+        public bool IsDead => HP.Value <= 0;
 
         public void Die(Damage damage)
         {
-            OnDeath.Invoke(damage);
+            OnDeath?.Invoke(damage);
+            if (IsDead)
+            {
+                OnDeath = null;
+            }
         }
         
         #endregion
@@ -60,8 +55,13 @@ namespace CodeTao
         
         public void StartCD()
         {
+            if (DMGCD <= 0)
+            {
+                return;
+            }
+            
             IsInCD = true;
-            ActionKit.Delay(DMGCD, () => { IsInCD = false; });
+            ActionKit.Delay(DMGCD, () => { IsInCD = false; }).Start(this);
         }
         
         public List<ETag> defencingTags = new List<ETag>();
@@ -92,8 +92,8 @@ namespace CodeTao
         public Damage ProcessDamage(Damage damage)
         {
             damage.SetTarget(this);
-            damage.SetDamageSection(DamageSection.TargetDEF, "", DEF.Value);
-            damage.SetDamageSection(DamageSection.ElementRES, "", ElementResistances[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.TargetDEF, "", 1 / DEF.Value);
+            damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;
         }
@@ -104,16 +104,18 @@ namespace CodeTao
         public void TakeDamage(Damage damage)
         {
             elementOwner?.AddElement(damage.DamageElement);
-            
-            damage = OnTakeDamage?.Invoke(damage);
-            
+
+            if (OnTakeDamage != null)
+            {
+                damage = OnTakeDamage.Invoke(damage);
+            }
+
             if (damage != null)
             {
                 float damageValue = damage.CalculateDamage();
                 AlterHP(-damageValue);
+                TakeDamageAfter?.Invoke(damage);
             }
-
-            TakeDamageAfter?.Invoke(damage);
             
             if (IsDead)
             {

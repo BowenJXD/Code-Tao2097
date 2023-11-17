@@ -18,6 +18,19 @@ namespace CodeTao
 			Instance = this;
 		}
 
+		private void Start()
+		{
+			Defencer.TakeDamageAfter += (damage) =>
+			{
+				Sprite.color = Color.red;
+				ActionKit.Delay(Defencer.DMGCD, () =>
+				{
+					if (!this) return;
+					Sprite.color = Color.white;
+				}).Start(this);
+			};
+		}
+
 		public Vector2 GetMovementDirection()
 		{
 			var horizontal = Input.GetAxis("Horizontal");

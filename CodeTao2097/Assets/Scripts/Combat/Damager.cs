@@ -21,8 +21,13 @@ namespace CodeTao
 
         public void StartCD()
         {
+            if (DMGCD <= 0)
+            {
+                return;
+            }
+            
             IsInCD = true;
-            ActionKit.Delay(DMGCD, () => { IsInCD = false; });
+            ActionKit.Delay(DMGCD, () => { IsInCD = false; }).Start(this);
         }
         
         #endregion
@@ -48,9 +53,16 @@ namespace CodeTao
         
         public void DealDamage(Damage damage)
         {
-            OnDealDamage.Invoke(damage);
-            damage.Target.TakeDamage(damage);
-            DealDamageAfter.Invoke(damage);
+            if (OnDealDamage != null)
+            {
+                damage = OnDealDamage.Invoke(damage);
+            }
+
+            if (damage != null)
+            {
+                damage.Target.TakeDamage(damage);
+                DealDamageAfter?.Invoke(damage);
+            }
         }
     }
 
