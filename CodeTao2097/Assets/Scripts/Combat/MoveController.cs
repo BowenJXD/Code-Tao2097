@@ -5,16 +5,11 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class MoveController : ViewController
+    public partial class MoveController : ViewController
     {
         [SerializeField] public BindableStat SPD = new BindableStat(1);
-        
-        private Vector2 _moveDirection = Vector2.zero;
-        
-        public Vector2 MovementDirection { 
-            get { return _moveDirection; }
-            set { _moveDirection = value; } 
-        }
+
+        public BindableProperty<Vector2> MovementDirection = new BindableProperty<Vector2>(Vector2.zero);
     }
 }
 

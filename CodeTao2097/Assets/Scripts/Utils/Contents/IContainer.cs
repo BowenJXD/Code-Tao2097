@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CodeTao
 {
@@ -6,6 +7,9 @@ namespace CodeTao
     {
         public List<IContent<T>> Contents { get; set; }
         
+        public Action<IContent<T>> AddAfter { get; set; }
+        
+        public Action<IContent<T>> RemoveAfter { get; set; }
         
         /// <summary>
         /// Should only be invoked from Content
@@ -47,6 +51,7 @@ namespace CodeTao
 
             if (result)
             {
+                AddAfter?.Invoke(content);
                 ProcessAddedContent(content);
             }
             
@@ -71,6 +76,7 @@ namespace CodeTao
             
             if (result)
             {
+                RemoveAfter?.Invoke(content);
                 ProcessRemovedContent(content);
             }
             

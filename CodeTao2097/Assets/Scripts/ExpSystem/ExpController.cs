@@ -3,7 +3,7 @@ using QFramework;
 
 namespace CodeTao
 {
-    public class ExperienceSystem : ViewController
+    public class ExpController : ViewController
     {
         public BindableProperty<float> EXP = new BindableProperty<float>(0);
         
@@ -13,12 +13,18 @@ namespace CodeTao
         {
             EXP.RegisterWithInitValue(exp =>
             {
-                if (exp > RequiredEXP(LVL.Value))
+                float requiredExp = RequiredEXP(LVL.Value);
+                if (exp > requiredExp)
                 {
-                    EXP.Value = 0;
-                    LVL.Value += 1;
+                    LevelUp();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
+        }
+
+        protected void LevelUp()
+        {
+            EXP.Value -= RequiredEXP(LVL.Value);
+            LVL.Value += 1;
         }
         
         public float RequiredEXP(int level)

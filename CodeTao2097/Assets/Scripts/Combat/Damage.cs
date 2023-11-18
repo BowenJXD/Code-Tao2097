@@ -17,12 +17,6 @@ namespace CodeTao
         ReactionMultiplier
     }
 
-    public class DamageSectionList
-    {
-        public DamageSection Section;
-        public Dictionary<string, float> Modifiers = new Dictionary<string, float>();
-    }
-    
     public class Damage
     {
         public Attacker Source { get; private set; }

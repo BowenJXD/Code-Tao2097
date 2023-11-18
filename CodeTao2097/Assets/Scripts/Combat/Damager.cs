@@ -34,7 +34,7 @@ namespace CodeTao
 
         public bool ValidateDamage(Defencer defencer, Attacker attacker)
         {
-            bool result = !IsInCD && Util.IsTagIncluded(Util.GetTagFromParent(defencer), damagingTags);
+            bool result = !IsInCD && Util.IsTagIncluded(ComponentUtil.GetTagFromParent(defencer), damagingTags);
 
             return result;
         }
@@ -48,14 +48,14 @@ namespace CodeTao
             return damage;
         }
         
-        public Func<Damage, Damage> OnDealDamage;
+        public List<Func<Damage, Damage>> OnDealDamageFuncs = new List<Func<Damage, Damage>>();
         public Action<Damage> DealDamageAfter;
         
         public void DealDamage(Damage damage)
         {
-            if (OnDealDamage != null)
+            foreach (var func in OnDealDamageFuncs)
             {
-                damage = OnDealDamage.Invoke(damage);
+                damage = func.Invoke(damage);
             }
 
             if (damage != null)

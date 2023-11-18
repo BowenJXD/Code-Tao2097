@@ -80,11 +80,9 @@ namespace CodeTao
 
         #endregion
         
-        public ElementOwner elementOwner;
-        
         public bool ValidateDamage(Damager damager, Attacker attacker)
         {
-            bool result = !IsInCD && !Util.IsTagIncluded(Util.GetTagFromParent(damager), defencingTags);
+            bool result = !IsInCD && !Util.IsTagIncluded(ComponentUtil.GetTagFromParent(damager), defencingTags);
 
             return result;
         }
@@ -98,16 +96,14 @@ namespace CodeTao
             return damage;
         }
         
-        public Func<Damage, Damage> OnTakeDamage;
+        public List<Func<Damage, Damage>> OnTakeDamageFuncs = new List<Func<Damage, Damage>>();
         public Action<Damage> TakeDamageAfter;
         
         public void TakeDamage(Damage damage)
         {
-            elementOwner?.AddElement(damage.DamageElement);
-
-            if (OnTakeDamage != null)
+            foreach (var func in OnTakeDamageFuncs)
             {
-                damage = OnTakeDamage.Invoke(damage);
+                damage = func.Invoke(damage);
             }
 
             if (damage != null)

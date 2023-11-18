@@ -7,33 +7,31 @@ namespace CodeTao
 {
     public partial class Stinky : Weapon
     {
-        public float radius;
-		
-        public LoopTask ShootTask;
-
-        protected virtual void Start()
+        protected override void Start()
         {
-            attacker = Player.Instance.Attacker;
-            damager = Damager;
+            base.Start();
+            IContainer<Item> itemContainer = Player.Instance.Inventory;
             
-            ShootTask = new LoopTask(this, attackInterval, AttackSurrounding);
-            ShootTask.Start();
-            attackInterval.RegisterWithInitValue(interval =>
+            // put self into player's inventory
+            ActionKit.DelayFrame(1, () =>
             {
-                ShootTask.LoopInterval = interval;
-            }).UnRegisterWhenGameObjectDestroyed(this);
+                if (!this) return;
+                itemContainer.AddContent(this);
+            }).Start(this);
+            damager = Damager;
         }
 
-        public void AttackSurrounding()
+        public override void Fire()
         {
-            List<Collider2D> colliders = Physics2D.OverlapCircleAll(transform.position, radius).ToList();
+            List<Collider2D> colliders = Physics2D.OverlapCircleAll(transform.position, attackRange).ToList();
 			
             foreach (var col in colliders)
             {
-                Defencer defencer = Util.GetComponentInSiblings<Defencer>(col);
-                if (defencer)
+                UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
+                Defencer target = ComponentUtil.GetComponentInDescendants<Defencer>(unitController);
+                if (Util.IsTagIncluded(unitController.tag, Damager.damagingTags) && target)
                 {
-                    Attack(defencer);
+                    Attack(target);
                 }
             }
         }

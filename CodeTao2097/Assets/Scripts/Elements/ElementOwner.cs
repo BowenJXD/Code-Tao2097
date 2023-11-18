@@ -9,7 +9,9 @@ namespace CodeTao
     public class ElementOwner : ViewController, IContainer<Element>
     {
         public List<IContent<Element>> Contents { get; set; }
-        
+        public Action<IContent<Element>> AddAfter { get; set; }
+        public Action<IContent<Element>> RemoveAfter { get; set; }
+
         public void Start()
         {
             

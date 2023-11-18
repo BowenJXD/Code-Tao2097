@@ -4,11 +4,12 @@ using QFramework;
 
 namespace CodeTao
 {
-	public partial class Player : MoveController
+	public partial class Player : UnitController
 	{
 		void Update()
 		{
-			Move(GetMovementDirection());
+			MoveController.MovementDirection.Value = GetMovementDirection();
+			Move(MoveController.MovementDirection.Value);
 		}
 
 		public static Player Instance;
@@ -29,6 +30,15 @@ namespace CodeTao
 					Sprite.color = Color.white;
 				}).Start(this);
 			};
+			
+			Inventory.AddAfter += (content) =>
+			{
+				Weapon weapon = (Weapon) content;
+				if (weapon)
+				{
+					weapon.attacker = Attacker;
+				}
+			};
 		}
 
 		public Vector2 GetMovementDirection()
@@ -40,7 +50,7 @@ namespace CodeTao
 		
 		public void Move(Vector2 direction)
 		{
-			SelfRigidbody2D.velocity = direction * SPD;
+			SelfRigidbody2D.velocity = direction * MoveController.SPD;
 		}
 	}
 }

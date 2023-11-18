@@ -9,20 +9,31 @@ namespace CodeTao
     {
         public List<ETag> collectingTags = new List<ETag>();
         
-        public Collider2D collider2D;
+        [HideInInspector] public Collider2D collider2D;
         
-        private void Start()
+        protected virtual void Start()
         {
             collider2D.OnTriggerEnter2DEvent(col =>
             {
-                if (Util.IsTagIncluded(col.gameObject.tag, collectingTags))
+                if (ValidateCollect(col))
                 {
-                    Collect();
+                    Collect(col);
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
         }
 
-        public void Collect(GameObject collector = null)
+        public virtual bool ValidateCollect(Collider2D col)
+        {
+            UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
+            if (Util.IsTagIncluded(unitController.tag, collectingTags))
+            {
+                return true;
+            }
+
+            return false;
+        }
+        
+        public virtual void Collect(Collider2D collector = null)
         {
             Destroy(gameObject);
         }

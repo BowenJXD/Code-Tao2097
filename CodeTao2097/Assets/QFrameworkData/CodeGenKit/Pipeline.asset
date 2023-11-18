@@ -23,29 +23,15 @@ MonoBehaviour:
       PathToRoot: Sprite
       MemberName: Sprite
     - TypeName: CircleCollider2D
-      PathToRoot: HurtBox
-      MemberName: HurtBox
-    - TypeName: CodeTao.Attacker
-      PathToRoot: Attacker
-      MemberName: Attacker
-    - TypeName: CodeTao.Defencer
-      PathToRoot: Defencer
-      MemberName: Defencer
-    - TypeName: CodeTao.Stinky
-      PathToRoot: Stinky
-      MemberName: Stinky
-    - TypeName: CodeTao.ElementOwner
-      PathToRoot: ElementOwner
-      MemberName: ElementOwner
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: Player
+      PathToRoot: HitBox
+      MemberName: HitBox
+    ScriptsFolder: Assets/Scripts/ExpSystem
+    ClassName: ExpBall
     Namespace: CodeTao
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
-      partial class Player : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class ExpBall : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:b67d4db9-8460-4443-a41e-e01c97897695\r\nusing UnityEngine;\r\n\r\nnamespace
-      CodeTao\r\n{\r\n\tpublic partial class Player\r\n\t{\r\n\r\n\t\tpublic SpriteRenderer
-      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HurtBox;\r\n\r\n\t\tpublic CodeTao.Attacker
-      Attacker;\r\n\r\n\t\tpublic CodeTao.Defencer Defencer;\r\n\r\n\t\tpublic CodeTao.Stinky
-      Stinky;\r\n\r\n\t\tpublic CodeTao.ElementOwner ElementOwner;\r\n\r\n\t\tpublic
-      UnityEngine.Rigidbody2D SelfRigidbody2D;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:db628456-2d9f-4865-84a5-8c7aee76e11a\r\nusing UnityEngine;\r\n\r\nnamespace
+      CodeTao\r\n{\r\n\tpublic partial class ExpBall\r\n\t{\r\n\r\n\t\tpublic SpriteRenderer
+      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HitBox;\r\n\r\n\t\tpublic UnityEngine.AI.NavMeshAgent
+      SelfNavAgent;\r\n\r\n\t}\r\n}\r\n"

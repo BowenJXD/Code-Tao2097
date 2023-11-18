@@ -1,4 +1,4 @@
-// Generate Id:b67d4db9-8460-4443-a41e-e01c97897695
+// Generate Id:b7864bac-2334-49d8-a497-306dce732369
 using UnityEngine;
 
 namespace CodeTao
@@ -10,13 +10,15 @@ namespace CodeTao
 
 		public CircleCollider2D HurtBox;
 
+		public CodeTao.MoveController MoveController;
+
 		public CodeTao.Attacker Attacker;
 
 		public CodeTao.Defencer Defencer;
 
-		public CodeTao.Stinky Stinky;
-
 		public CodeTao.ElementOwner ElementOwner;
+
+		public CodeTao.Inventory Inventory;
 
 		public UnityEngine.Rigidbody2D SelfRigidbody2D;
 

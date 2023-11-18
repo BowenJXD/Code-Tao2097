@@ -21,6 +21,10 @@ namespace CodeTao
     [Serializable]
     public class Element : IContent<Element>
     {
+        public IContainer<Element> Container { get; set; }
+        public Action<IContent<Element>> AddAfter { get; set; }
+        public Action<IContent<Element>> RemoveAfter { get; set; }
+        
         [SerializeField] private ElementType _type;
         public ElementType Type
         {
@@ -34,8 +38,8 @@ namespace CodeTao
             get { return _gauge; }
             set { _gauge = value; }
         }
-
-        public IContainer<Element> Container { get; set; }
+        
+        
     }
 }
 

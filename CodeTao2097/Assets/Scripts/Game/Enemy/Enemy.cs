@@ -2,16 +2,33 @@ using System;
 using GraphProcessor;
 using UnityEngine;
 using QFramework;
+using UnityEngine.Serialization;
 
 namespace CodeTao
 {
-	public partial class Enemy : MoveController
+	public partial class Enemy : UnitController
 	{
+		public Transform target;
+		public BindableProperty<float> EXPValue = new BindableProperty<float>(1);
+
 		private void Start()
 		{
+			if (!target)
+			{
+				target = Player.Instance.transform;
+			}
+
 			SelfNavAgent.updateRotation = false;
 			SelfNavAgent.updateUpAxis = false;
-
+			
+			// Receive element when taking damage
+			Defencer.OnTakeDamageFuncs.Add((damage) =>
+			{
+				ElementOwner?.AddElement(damage.DamageElement);
+				return damage;
+			});
+			
+			// Change color after taking damage
 			Defencer.TakeDamageAfter += (damage) =>
 			{
 				Sprite.color = Color.red;
@@ -21,23 +38,35 @@ namespace CodeTao
 					Sprite.color = Color.white;
 				}).Start(this);
 			};
+			
+			// 
+			Defencer.OnDeath += damage =>
+			{
+				ExpGenerator.Instance.GenerateExpBall(EXPValue.Value, transform.position);
+			};
 
+			// Attack player when player is in range
 			HitBox.OnTriggerEnter2DEvent((col) =>
 			{
-				if (Util.IsTagIncluded(Util.GetTagFromParent(col), Damager.damagingTags))
+				UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
+				Defencer defencer = ComponentUtil.GetComponentInAncestors<Defencer>(col, 1);
+				if (Util.IsTagIncluded(unitController.tag, Damager.damagingTags) && defencer)
 				{
-					Defencer target = Util.GetComponentInSiblings<Defencer>(col);
-					DamageManager.Instance.ExecuteDamage(Damager, target, Attacker);
+					DamageManager.Instance.ExecuteDamage(Damager, defencer, Attacker);
 				}
+			}).UnRegisterWhenGameObjectDestroyed(this);
+
+			MoveController.SPD.RegisterWithInitValue(value =>
+			{
+				SelfNavAgent.speed = value;
 			}).UnRegisterWhenGameObjectDestroyed(this);
 		}
 
 		private void Update()
 		{
-			if (Player.Instance)
+			if (target)
 			{
-				SelfNavAgent.speed = SPD;
-				SelfNavAgent.SetDestination(Player.Instance.transform.position);
+				SelfNavAgent.SetDestination(target.position);
 			}
 		}
 	}
