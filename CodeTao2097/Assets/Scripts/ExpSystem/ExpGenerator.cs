@@ -15,8 +15,8 @@ namespace CodeTao
                     return expBall;
                 }, expBallPrefab =>
                 {
-                    expBallPrefab.collider2D.enabled = true;
                     expBallPrefab.gameObject.SetActive(true);
+                    expBallPrefab.ToggleCollider(true);
                 }
                 , expBallPrefab =>
                 {
@@ -37,15 +37,19 @@ namespace CodeTao
         public override void OnSingletonInit()
         {
             base.OnSingletonInit();
-            ExpPool expPool = new ExpPool(expBallPrefab);
+            ExpPool = new ExpPool(expBallPrefab);
         }
 
-        public ExpBall GenerateExpBall(float expValue, Vector3 position)
+        public void GenerateExpBall(float expValue, Vector3 position)
         {
-            ExpBall expBall = ExpPool.Get();
-            expBall.EXPValue.Value = expValue;
-            expBall.ToggleCollider(true);
-            return expBall;
+            ActionKit.DelayFrame(1, () =>
+            {
+                ExpBall expBall = ExpPool.Get();
+                expBall.transform.position = position;
+                expBall.transform.parent = transform;
+                expBall.EXPValue.Value = expValue;
+                expBall.ToggleCollider(true);
+            }).Start(this);
         }
     }
 }

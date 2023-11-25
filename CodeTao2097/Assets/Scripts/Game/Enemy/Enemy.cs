@@ -38,21 +38,18 @@ namespace CodeTao
 					Sprite.color = Color.white;
 				}).Start(this);
 			};
-			
-			// 
-			Defencer.OnDeath += damage =>
-			{
-				ExpGenerator.Instance.GenerateExpBall(EXPValue.Value, transform.position);
-			};
 
 			// Attack player when player is in range
 			HitBox.OnTriggerEnter2DEvent((col) =>
 			{
 				UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
 				Defencer defencer = ComponentUtil.GetComponentInAncestors<Defencer>(col, 1);
-				if (Util.IsTagIncluded(unitController.tag, Damager.damagingTags) && defencer)
+				if (unitController)
 				{
-					DamageManager.Instance.ExecuteDamage(Damager, defencer, Attacker);
+					if (Util.IsTagIncluded(unitController.tag, Damager.damagingTags) && defencer)
+					{
+						DamageManager.Instance.ExecuteDamage(Damager, defencer, Attacker);
+					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(this);
 
@@ -62,9 +59,19 @@ namespace CodeTao
 			}).UnRegisterWhenGameObjectDestroyed(this);
 		}
 
+		private void OnEnable()
+		{
+			// spawn experience ball
+			Defencer.OnDeath += damage =>
+			{
+				Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, 0);
+				ExpGenerator.Instance.GenerateExpBall(EXPValue.Value, spawnPosition);
+			};
+		}
+
 		private void Update()
 		{
-			if (target)
+			if (target && SelfNavAgent.isOnNavMesh)
 			{
 				SelfNavAgent.SetDestination(target.position);
 			}

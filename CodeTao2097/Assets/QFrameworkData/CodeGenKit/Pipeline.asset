@@ -19,19 +19,15 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: SpriteRenderer
-      PathToRoot: Sprite
-      MemberName: Sprite
-    - TypeName: CircleCollider2D
-      PathToRoot: HitBox
-      MemberName: HitBox
-    ScriptsFolder: Assets/Scripts/ExpSystem
-    ClassName: ExpBall
+    - TypeName: CodeTao.Damager
+      PathToRoot: ShooterDamager
+      MemberName: ShooterDamager
+    ScriptsFolder: Assets/Scripts/Items/Weapons
+    ClassName: Shooter
     Namespace: CodeTao
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
-      partial class ExpBall : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Shooter : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:db628456-2d9f-4865-84a5-8c7aee76e11a\r\nusing UnityEngine;\r\n\r\nnamespace
-      CodeTao\r\n{\r\n\tpublic partial class ExpBall\r\n\t{\r\n\r\n\t\tpublic SpriteRenderer
-      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HitBox;\r\n\r\n\t\tpublic UnityEngine.AI.NavMeshAgent
-      SelfNavAgent;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:1d580586-89ad-4c20-b60a-a0cc5e1ef780\r\nusing UnityEngine;\r\n\r\nnamespace
+      CodeTao\r\n{\r\n\tpublic partial class Shooter\r\n\t{\r\n\r\n\t\tpublic CodeTao.Damager
+      ShooterDamager;\r\n\r\n\t}\r\n}\r\n"

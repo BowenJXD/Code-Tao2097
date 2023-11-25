@@ -8,7 +8,7 @@ using UnityEngine;
 namespace CodeTao
 {
     
-    public class Attacker : ViewController
+    public partial class Attacker : ViewController
     {
         public BindableStat ATK = new BindableStat();
         public BindableStat CritRate = new BindableStat(); // 0% - 100%

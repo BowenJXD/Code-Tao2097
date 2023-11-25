@@ -15,10 +15,6 @@ namespace CodeTao
         protected override void Start()
         {
             base.Start();
-            collider2D = GetComponent<Collider2D>();
-            
-            SelfNavAgent.updateRotation = false;
-            SelfNavAgent.updateUpAxis = false;
             
             moveSpeed.RegisterWithInitValue(value =>
             {
@@ -28,7 +24,11 @@ namespace CodeTao
 
         private void OnEnable()
         {
+            SelfNavAgent.updateRotation = false;
+            SelfNavAgent.updateUpAxis = false;
             SelfNavAgent.enabled = false;
+            
+            collider2D = HitBox;
             
             ValidateCollectFunc = col =>
             {
@@ -43,6 +43,7 @@ namespace CodeTao
             CollectFunc = col =>
             {
                 StartChase();
+                target = col.transform;
             };
         }
 
@@ -76,9 +77,10 @@ namespace CodeTao
         protected void StartChase()
         {
             SelfNavAgent.enabled = true;
+            SelfNavAgent.speed = moveSpeed.Value;
             ValidateCollectFunc = col =>
             {
-                if (!ComponentUtil.GetComponentInAncestors<Damager>(col))
+                if (!ComponentUtil.GetComponentInAncestors<Defencer>(col))
                 {
                     return false;
                 }
@@ -102,7 +104,7 @@ namespace CodeTao
 
         private void Update()
         {
-            if (SelfNavAgent.enabled)
+            if (SelfNavAgent.enabled && target)
             {
                 SelfNavAgent.SetDestination(target.position);
             }

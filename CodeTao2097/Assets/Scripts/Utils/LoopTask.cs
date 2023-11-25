@@ -23,6 +23,8 @@ namespace CodeTao
 
         private float _loopInterval;
 
+        private bool _isPaused;
+
         public float LoopInterval
         {
             get => _loopInterval;
@@ -85,11 +87,23 @@ namespace CodeTao
         public void Start()
         {
             _owner.StartCoroutine(Update());
+            _isPaused = false;
         }
         
         public void Pause()
         {
+            _isPaused = true;
             _owner.StopCoroutine(Update());
+        }
+        
+        public void Resume(bool immediateLoop = false)
+        {
+            if (immediateLoop)
+            {
+                _loopTime = _loopInterval;
+            }
+            _isPaused = false;
+            //_owner.StartCoroutine(Update());
         }
 
         public void Finish()
@@ -105,7 +119,7 @@ namespace CodeTao
             {
                 while (_loopTime < _loopInterval)
                 {
-                    _loopTime += Time.deltaTime;
+                    _loopTime += _isPaused? 0 : Time.deltaTime;
                     
 #if !UNITY_EDITOR
                     yield return new WaitForSeconds(_loopInterval);

@@ -38,6 +38,42 @@ namespace CodeTao
             // This should not happen if the total weight is correct
             throw new InvalidOperationException("Unable to retrieve a random key.");
         }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <returns>Angle in degrees 0 - 360</returns>
+        public static float GetAngleFromVector(Vector2 dir)
+        {
+            return Vector2.SignedAngle(Vector2.right, dir);
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="angle">Angle in degrees</param>
+        /// <returns>Normalized vector derived from angle (from positive x axis)</returns>
+        public static Vector2 GetVectorFromAngle(float angle)
+        {
+            return new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
+        }
+
+        public static Vector2 AddAnglesInV2(Vector2 v1, Vector2 v2)
+        {
+            float angle1 = GetAngleFromVector(v1);
+            float angle2 = GetAngleFromVector(v2);
+            float angle = angle1 + angle2;
+            return GetVectorFromAngle(angle);
+        }
+        
+        public static Vector2 GetRandomNormalizedVector()
+        {
+            float randomAngle = Global.Instance.Random.Next(360);
+            Vector2 randomDirection = GetVectorFromAngle(randomAngle);
+        
+            return randomDirection;
+        }
     }
 
     public static class ComponentUtil

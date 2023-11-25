@@ -25,9 +25,12 @@ namespace CodeTao
         public virtual bool ValidateCollect(Collider2D col)
         {
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
-            if (Util.IsTagIncluded(unitController.tag, collectingTags))
+            if (unitController)
             {
-                return true;
+                if (Util.IsTagIncluded(unitController.tag, collectingTags))
+                {
+                    return true;
+                }
             }
 
             return false;

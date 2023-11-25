@@ -4,7 +4,7 @@ using QFramework;
 
 namespace CodeTao
 {
-    public class Inventory : ViewController, IContainer<Item>
+    public partial class Inventory : ViewController, IContainer<Item>
     {
         public List<IContent<Item>> Contents { get; set; }
         public Action<IContent<Item>> AddAfter { get; set; }
