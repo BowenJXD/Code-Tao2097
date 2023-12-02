@@ -17,7 +17,7 @@ namespace CodeTao
         public List<ETag> damagingTags = new List<ETag>();
 
         public float DMGCD;
-        [HideInInspector] public bool IsInCD;
+        public bool IsInCD;
 
         public void StartCD()
         {

@@ -2,14 +2,27 @@
 using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeTao
 {
-    public enum EShootDirectionBase
+    public enum EAimWay
     {
+        /// <summary>
+        /// Shoot to the nearest target
+        /// </summary>
         AutoTargeting,
-        OwnerMoveDirection,
+        /// <summary>
+        /// Shoot from the owner's moving direction
+        /// </summary>
+        Owner,
+        /// <summary>
+        /// Shoot to a random direction
+        /// </summary>
         Random,
+        /// <summary>
+        /// Shoot to the cursor
+        /// </summary>
         Cursor
     }
     
@@ -20,13 +33,16 @@ namespace CodeTao
         public BindableProperty<float> reloadTime = new BindableProperty<float>(1);
         
         public Projectile projectilePrefab;
-        public ProjectilePool pool;
-
+        protected ProjectilePool pool;
+        
+        /// <summary>
+        /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
+        /// </summary>
         public List<float> ShootingDirections = new List<float>();
         private int _currentDirectionIndex = 0;
         public float shootAmount = 1;
         public float shootPointOffset = 1;
-        public EShootDirectionBase shootDirectionBase = EShootDirectionBase.Random;
+        public EAimWay aimWay = EAimWay.Random;
         
         private MoveController _ownerMoveController;
 
@@ -85,7 +101,7 @@ namespace CodeTao
                 pool.Release(projectile);
             };
             projectile.transform.position = transform.position + (Vector3)direction * shootPointOffset;
-            projectile.transform.parent = transform;
+            projectile.transform.parent = ProjectileManager.Instance.transform;
             projectile.Init(this, direction);
             projectile.damager = damager;
             ammo.Value--;
@@ -95,22 +111,23 @@ namespace CodeTao
         public Vector2 GetBaseDirection()
         {
             Vector2 result = Util.GetRandomNormalizedVector();
-            switch (shootDirectionBase)
+            switch (aimWay)
             {
-                case EShootDirectionBase.AutoTargeting:
-                    if (GetTargets().Count > 0)
+                case EAimWay.AutoTargeting:
+                    var targets = GetTargets();
+                    if (targets.Count > 0)
                     {
-                        Defencer target = GetTargets()[0];
+                        Defencer target = targets[0];
                         result = (target.transform.position - transform.position);
                     }
                     break;
-                case EShootDirectionBase.OwnerMoveDirection:
+                case EAimWay.Owner:
                     result = _ownerMoveController.LastNonZeroDirection.Value;
                     break;
-                case EShootDirectionBase.Random:
+                case EAimWay.Random:
                     result = Util.GetRandomNormalizedVector();
                     break;
-                case EShootDirectionBase.Cursor:
+                case EAimWay.Cursor:
                     result = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
                     break;
             }

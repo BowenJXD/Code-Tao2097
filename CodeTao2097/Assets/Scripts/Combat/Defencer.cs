@@ -51,7 +51,7 @@ namespace CodeTao
         #region Condition
         
         public float DMGCD;
-        [HideInInspector] public bool IsInCD;
+        public bool IsInCD;
         
         public void StartCD()
         {

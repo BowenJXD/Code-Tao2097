@@ -19,15 +19,18 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: CodeTao.Damager
-      PathToRoot: ShooterDamager
-      MemberName: ShooterDamager
-    ScriptsFolder: Assets/Scripts/Items/Weapons
-    ClassName: Shooter
+    - TypeName: UnityEngine.Tilemaps.Tilemap
+      PathToRoot: Tilemap
+      MemberName: Tilemap
+    - TypeName: Transform
+      PathToRoot: Navigations
+      MemberName: Navigations
+    ScriptsFolder: Assets/Scripts/Game
+    ClassName: MapController
     Namespace: CodeTao
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
-      partial class Shooter : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class MapController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:1d580586-89ad-4c20-b60a-a0cc5e1ef780\r\nusing UnityEngine;\r\n\r\nnamespace
-      CodeTao\r\n{\r\n\tpublic partial class Shooter\r\n\t{\r\n\r\n\t\tpublic CodeTao.Damager
-      ShooterDamager;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:2be88bfc-0ea5-4e40-9869-b80f8bba33da\r\nusing UnityEngine;\r\n\r\nnamespace
+      CodeTao\r\n{\r\n\tpublic partial class MapController\r\n\t{\r\n\r\n\t\tpublic
+      UnityEngine.Tilemaps.Tilemap Tilemap;\r\n\r\n\t\tpublic Transform Navigations;\r\n\r\n\t}\r\n}\r\n"

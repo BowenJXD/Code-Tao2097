@@ -26,24 +26,8 @@ namespace CodeTao
         }
     }
     
-    /*
-    public class ProjectileGenerator : MonoSingleton<ExpGenerator>
+    public class ProjectileManager : MonoSingleton<ExpGenerator>
     {
-        public ProjectilePool pools;
         
-        public override void OnSingletonInit()
-        {
-            base.OnSingletonInit();
-            pools = new ProjectilePool(expBallPrefab);
-        }
-
-        public void GenerateProjectile(float expValue, Vector3 position)
-        {
-            ActionKit.DelayFrame(1, () =>
-            {
-                Projectile expBall = pools.Get();
-                expBall.transform.position = position;
-            }).Start(this);
-        }
-    }*/
+    }
 }

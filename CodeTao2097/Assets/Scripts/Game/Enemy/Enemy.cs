@@ -40,7 +40,7 @@ namespace CodeTao
 			};
 
 			// Attack player when player is in range
-			HitBox.OnTriggerEnter2DEvent((col) =>
+			HitBox.OnTriggerStay2DEvent((col) =>
 			{
 				UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
 				Defencer defencer = ComponentUtil.GetComponentInAncestors<Defencer>(col, 1);
