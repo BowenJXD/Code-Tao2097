@@ -18,19 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: UnityEngine.Tilemaps.Tilemap
-      PathToRoot: Tilemap
-      MemberName: Tilemap
-    - TypeName: Transform
-      PathToRoot: Navigations
-      MemberName: Navigations
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: MapController
+    BindInfos: []
+    ScriptsFolder: Assets/Scripts/ExpSystem
+    ClassName: ExpGenerator
     Namespace: CodeTao
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
-      partial class MapController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class ExpGenerator : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:2be88bfc-0ea5-4e40-9869-b80f8bba33da\r\nusing UnityEngine;\r\n\r\nnamespace
-      CodeTao\r\n{\r\n\tpublic partial class MapController\r\n\t{\r\n\r\n\t\tpublic
-      UnityEngine.Tilemaps.Tilemap Tilemap;\r\n\r\n\t\tpublic Transform Navigations;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:c58d6477-63d5-4a81-bd0d-eb66b0fcbadd\r\nusing UnityEngine;\r\n\r\nnamespace
+      CodeTao\r\n{\r\n\tpublic partial class ExpGenerator\r\n\t{\r\n\r\n\t}\r\n}\r\n"

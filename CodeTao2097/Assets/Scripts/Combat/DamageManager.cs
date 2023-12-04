@@ -1,9 +1,25 @@
 ﻿using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
     public class DamageManager : MonoSingleton<DamageManager>
     {
+        public Defencer ColToDef(Damager damager, Collider2D col)
+        {
+            UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
+            if (unitController)
+            {
+                Defencer defencer = ComponentUtil.GetComponentInDescendants<Defencer>(unitController);
+                if (Util.IsTagIncluded(unitController.tag, damager.damagingTags) && defencer)
+                {
+                    return defencer;
+                }
+            }
+
+            return null;
+        }
+        
         public bool CheckDamage(Damager damager, Defencer defencer, Attacker attacker = null)
         {
             bool result = true;
@@ -28,6 +44,7 @@ namespace CodeTao
             defencer.ProcessDamage(damage);
             
             damager.DealDamage(damage);
+            attacker?.DealDamageAfter?.Invoke(damage);
             return damage;
         }
     }

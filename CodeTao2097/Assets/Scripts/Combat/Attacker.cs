@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace CodeTao
             damage.SetDamageSection(DamageSection.ElementBON, "", 1 + ElementBonuses[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
             return damage;
         }
+        
+        public Action<Damage> DealDamageAfter;
         
         public float GetCritRate()
         {

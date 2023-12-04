@@ -1,46 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using CodeTao;
 using QFramework;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace CodeTao
 {
-    public enum EAimWay
+    public partial class Shooter : SpawnerWeapon<Projectile>
     {
-        /// <summary>
-        /// Shoot to the nearest target
-        /// </summary>
-        AutoTargeting,
-        /// <summary>
-        /// Shoot from the owner's moving direction
-        /// </summary>
-        Owner,
-        /// <summary>
-        /// Shoot to a random direction
-        /// </summary>
-        Random,
-        /// <summary>
-        /// Shoot to the cursor
-        /// </summary>
-        Cursor
-    }
-    
-    public partial class Shooter : Weapon
-    {
-        protected BindableProperty<int> ammo = new BindableProperty<int>(3);
-        public BindableProperty<int> maxAmmo = new BindableProperty<int>(3);
-        public BindableProperty<float> reloadTime = new BindableProperty<float>(1);
-        
-        public Projectile projectilePrefab;
-        protected ProjectilePool pool;
-        
         /// <summary>
         /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
         /// </summary>
         public List<float> ShootingDirections = new List<float>();
         private int _currentDirectionIndex = 0;
-        public float shootAmount = 1;
         public float shootPointOffset = 1;
         public EAimWay aimWay = EAimWay.Random;
         
@@ -56,56 +29,29 @@ namespace CodeTao
             base.Start();
             
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
-            _ownerMoveController = ComponentUtil.GetComponentInDescendants<MoveController>(unitController);
-            ammo.Value = maxAmmo.Value;
-            ammo.RegisterWithInitValue(value =>
-            {
-                if (value <= 0)
-                {
-                    StartReload();
-                }
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            
-            pool = new ProjectilePool(projectilePrefab);
         }
 
-        public override void Fire()
+        public override Projectile SpawnUnit(Vector2 spawnPosition)
         {
-            base.Fire();
-
-            for (int i = 0; i < shootAmount; i++)
-            {
-                if (ammo.Value <= 0)
-                {
-                    break;
-                }
-                Vector2 direction = GetBaseDirection();
-                if (ShootingDirections.Count > 0)
-                {
-                    _currentDirectionIndex += 1;
-                    _currentDirectionIndex %= ShootingDirections.Count > 0 ? ShootingDirections.Count : 1;
-                    float angle = Util.GetAngleFromVector(direction);
-                    angle += ShootingDirections[_currentDirectionIndex];
-                    direction = Util.GetVectorFromAngle(angle);
-                }
-                
-                SpawnProjectile(direction);
-            }
+            Projectile unit = base.SpawnUnit(spawnPosition);
+            unit.transform.parent = ProjectileManager.Instance.transform;
+            unit.Init(this, spawnPosition.normalized);
+            unit.damager = damager;
+            return unit;
         }
         
-        public virtual Projectile SpawnProjectile(Vector2 direction)
+        public override Vector2 GetSpawnPoint(int spawnIndex)
         {
-            Projectile projectile = pool.Get();
-            projectile.OnDestroy = () =>
+            Vector2 direction = GetBaseDirection();
+            if (ShootingDirections.Count > 0)
             {
-                pool.Release(projectile);
-            };
-            projectile.transform.position = transform.position + (Vector3)direction * shootPointOffset;
-            projectile.transform.parent = ProjectileManager.Instance.transform;
-            projectile.Init(this, direction);
-            projectile.damager = damager;
-            ammo.Value--;
-            return projectile;
+                _currentDirectionIndex += 1;
+                _currentDirectionIndex %= ShootingDirections.Count > 0 ? ShootingDirections.Count : 1;
+                float angle = Util.GetAngleFromVector(direction);
+                angle += ShootingDirections[_currentDirectionIndex];
+                direction = Util.GetVectorFromAngle(angle);
+            }
+            return direction * shootPointOffset;
         }
 
         public Vector2 GetBaseDirection()
@@ -133,21 +79,6 @@ namespace CodeTao
             }
 
             return result.normalized;
-        }
-        
-        public virtual void StartReload()
-        {
-            FireLoop.Pause();
-            ActionKit.Delay(reloadTime.Value, () =>
-            {
-                Reload();
-            }).Start(this);
-        }
-        
-        public virtual void Reload()
-        {
-            ammo.Value = maxAmmo.Value;
-            FireLoop.Resume(true);
         }
     }
 }

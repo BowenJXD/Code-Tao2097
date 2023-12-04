@@ -29,7 +29,7 @@ namespace CodeTao
         }
     }
     
-    public class ExpGenerator : MonoSingleton<ExpGenerator>
+    public partial class ExpGenerator : MonoSingleton<ExpGenerator>
     {
         public ExpBall expBallPrefab;
         public ExpPool ExpPool;

@@ -17,15 +17,15 @@ namespace CodeTao
         
         [HideInInspector] public Damager damager;
 
-        protected LoopTask FireLoop;
+        protected LoopTask fireLoop;
 
         protected virtual void Start()
         {
-            FireLoop = new LoopTask(this, attackInterval, Fire);
-            FireLoop.Start();
+            fireLoop = new LoopTask(this, attackInterval, Fire);
+            fireLoop.Start();
             attackInterval.RegisterWithInitValue(interval =>
             {
-                FireLoop.LoopInterval = interval;
+                fireLoop.LoopInterval = interval;
             }).UnRegisterWhenGameObjectDestroyed(this);
             
             // Add to inventory
@@ -65,15 +65,11 @@ namespace CodeTao
             SortedList<float, Defencer> targetDistances = new SortedList<float, Defencer>();
             foreach (var col in colliders)
             {
-                UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
-                if (unitController)
+                Defencer target = DamageManager.Instance.ColToDef(damager, col);
+                if (target)
                 {
-                    Defencer target = ComponentUtil.GetComponentInDescendants<Defencer>(unitController);
-                    if (Util.IsTagIncluded(unitController.tag, damager.damagingTags) && target)
-                    {
-                        float targetDistance = Vector2.Distance(transform.position, col.transform.position);
-                        targetDistances.Add(targetDistance, target);
-                    }
+                    float targetDistance = Vector2.Distance(transform.position, col.transform.position);
+                    targetDistances.Add(targetDistance, target);
                 }
             }
 

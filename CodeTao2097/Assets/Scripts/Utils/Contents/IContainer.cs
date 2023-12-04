@@ -14,18 +14,24 @@ namespace CodeTao
         /// <summary>
         /// Should only be invoked from Content
         /// </summary>
-        /// <param name="content"></param>
+        /// <param name="newContent"></param>
         /// <param name="repetitionBehavior"></param>
         /// <returns></returns>
-        public bool AddContent(IContent<T> content, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+        public bool AddContent(IContent<T> newContent, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
         {
             bool result = false;
+            
             if (Contents == null)
             {
                 Contents = new List<IContent<T>>();
             }
+
+            var matches = Contents.FindAll(delegate(IContent<T> content)
+            {
+                return content.Equals(newContent);
+            });
             
-            if (Contents.Contains(content))
+            if (matches.Count > 0)
             {
                 switch (repetitionBehavior)
                 {
@@ -33,26 +39,32 @@ namespace CodeTao
                         result = false;
                         break;
                     case ERepetitionBehavior.Overwrite:
-                        Contents.Remove(content);
-                        Contents.Add(content);
+                        matches.ForEach(delegate(IContent<T> content)
+                        {
+                            Contents.Remove(content);
+                        });
+                        Contents.Add(newContent);
                         result = true;
                         break;
                     case ERepetitionBehavior.AddStack:
-                        Contents.Add(content);
+                        result = matches[0].Stack(newContent);
+                        break;
+                    case ERepetitionBehavior.NewStack:
+                        Contents.Add(newContent);
                         result = true;
                         break;
                 }
             }
             else
             {
-                Contents.Add(content);
+                Contents.Add(newContent);
                 result = true;
             }
 
             if (result)
             {
-                AddAfter?.Invoke(content);
-                ProcessAddedContent(content);
+                AddAfter?.Invoke(newContent);
+                ProcessAddedContent(newContent);
             }
             
             return result;

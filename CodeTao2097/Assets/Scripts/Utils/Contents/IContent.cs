@@ -2,7 +2,7 @@
 
 namespace CodeTao
 {
-    public interface IContent<T> where T : IContent<T>
+    public interface IContent<T> : IStackable where T : IContent<T>
     {
         public IContainer<T> Container { get; set; }
 

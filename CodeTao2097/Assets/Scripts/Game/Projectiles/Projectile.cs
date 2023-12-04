@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeTao
 {
-    public partial class Projectile : ViewController
+    public partial class Projectile : UnitController
     {
-        [HideInInspector] public Rigidbody2D rigidbody2D;
+        [HideInInspector] public Rigidbody2D rb2D;
         [HideInInspector] public Damager damager;
         [HideInInspector] public Collider2D col2D;
         [HideInInspector] public MoveController moveController;
@@ -18,35 +19,31 @@ namespace CodeTao
 
         protected virtual void Awake()
         {
-            rigidbody2D = SelfRigidbody2D;
+            rb2D = SelfRigidbody2D;
             col2D = PjtlCollider;
             moveController = MoveController;
             
             // change rigidbody2D's velocity when moveController's SPD or MovementDirection changed
             moveController.SPD.RegisterWithInitValue(value =>
             {
-                rigidbody2D.velocity = moveController.MovementDirection.Value * value;
+                rb2D.velocity = moveController.MovementDirection.Value * value;
             }).UnRegisterWhenGameObjectDestroyed(this);
             moveController.MovementDirection.RegisterWithInitValue(value =>
             {
-                rigidbody2D.velocity = moveController.SPD * value;
+                rb2D.velocity = moveController.SPD * value;
             }).UnRegisterWhenGameObjectDestroyed(this);
             
             // attack when colliding with target
             col2D.OnTriggerEnter2DEvent(col =>
             {
-                UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
-                if (unitController)
+                Defencer target = DamageManager.Instance.ColToDef(damager, col);
+                if (target)
                 {
-                    Defencer defencer = ComponentUtil.GetComponentInDescendants<Defencer>(unitController);
-                    if (Util.IsTagIncluded(unitController.tag, damager.damagingTags) && defencer)
+                    Attack(target);
+                    penetratedCols.Add(col);
+                    if (penetration.Value <= penetratedCols.Count)
                     {
-                        Attack(defencer);
-                        penetratedCols.Add(col);
-                        if (penetration.Value <= penetratedCols.Count)
-                        {
-                            Destroy();
-                        }
+                        Destroy();
                     }
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
@@ -70,16 +67,16 @@ namespace CodeTao
         {
             if (damager)
             {
-                DamageManager.Instance.ExecuteDamage(damager, defencer, weapon.attacker);
+                DamageManager.Instance.ExecuteDamage(damager, defencer, weapon? weapon.attacker : null);
             }
         }
         
-        public Action OnDestroy;
+        public Action onDestroy;
         
         public virtual void Destroy()
         {
-            OnDestroy?.Invoke();
-            OnDestroy = null;
+            onDestroy?.Invoke();
+            onDestroy = null;
         }
     }
 }

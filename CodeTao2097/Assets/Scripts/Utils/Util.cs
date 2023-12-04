@@ -78,6 +78,20 @@ namespace CodeTao
 
     public static class ComponentUtil
     {
+        public static T GetComponentFromUnit<T>(Component component) where T : Component
+        {
+            UnitController unitController = GetComponentInAncestors<UnitController>(component);
+            if (unitController)
+            {
+                T result = GetComponentInDescendants<T>(unitController);
+                if (result)
+                {
+                    return result;
+                }
+            }
+            return null;
+        }
+        
         public static T GetComponentInSiblings<T>(Component component) where T : Component
         {
             Transform transform = component.transform;
