@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using GraphProcessor;
 using QFramework;
+using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
 namespace CodeTao
 {
+    // [Serializable]
     public class LoopTask
     {
 
@@ -17,13 +19,13 @@ namespace CodeTao
 
         private MonoBehaviour _owner;
         
-        private float _loopTime;
+        [SerializeField][ReadOnly] private float _loopTime;
         
-        private int _loopCount;
+        [SerializeField][ReadOnly] private int _loopCount;
 
-        private float _loopInterval;
+        [SerializeField][ReadOnly] private float _loopInterval;
 
-        private bool _isPaused;
+        [SerializeField][ReadOnly] bool _isPaused;
 
         public float LoopInterval
         {
@@ -111,6 +113,7 @@ namespace CodeTao
             _endTask?.Invoke();
             _loopTask = null;
             _loopCount = 0;
+            _isPaused = true;
         }
 
         private IEnumerator Update()

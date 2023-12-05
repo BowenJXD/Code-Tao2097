@@ -23,7 +23,7 @@ namespace CodeTao
 		{
 			Defencer.TakeDamageAfter += (damage) =>
 			{
-				Sprite.color = Color.red;
+				Sprite.color = damage.DamageElement.GetColor();
 				ActionKit.Delay(Defencer.DMGCD, () =>
 				{
 					if (!this) return;

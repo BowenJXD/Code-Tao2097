@@ -18,12 +18,16 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
-    ScriptsFolder: Assets/Scripts/ExpSystem
-    ClassName: ExpGenerator
+    BindInfos:
+    - TypeName: CodeTao.Damager
+      PathToRoot: GroundEffectDamager
+      MemberName: GroundEffectDamager
+    ScriptsFolder: Assets/Scripts/Items/Weapons
+    ClassName: GroundEffectSpawner
     Namespace: CodeTao
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
-      partial class ExpGenerator : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class GroundEffectSpawner : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:c58d6477-63d5-4a81-bd0d-eb66b0fcbadd\r\nusing UnityEngine;\r\n\r\nnamespace
-      CodeTao\r\n{\r\n\tpublic partial class ExpGenerator\r\n\t{\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:07243d04-c539-4a83-9a21-6139617c5c49\r\nusing UnityEngine;\r\n\r\nnamespace
+      CodeTao\r\n{\r\n\tpublic partial class GroundEffectSpawner\r\n\t{\r\n\r\n\t\tpublic
+      CodeTao.Damager GroundEffectDamager;\r\n\r\n\t}\r\n}\r\n"

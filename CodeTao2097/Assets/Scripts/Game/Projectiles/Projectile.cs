@@ -47,12 +47,6 @@ namespace CodeTao
                     }
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
-            
-            // destroy when lifeTime is over
-            ActionKit.Delay(lifeTime.Value, () =>
-            {
-                Destroy();
-            }).Start(this);
         }
         
         public virtual void Init(Weapon weapon, Vector2 direction)
@@ -61,6 +55,12 @@ namespace CodeTao
             damager = weapon.damager;
             moveController.MovementDirection.Value = direction;
             transform.rotation = Quaternion.Euler(0, 0, Util.GetAngleFromVector(direction));
+            
+            // destroy when lifeTime is over
+            ActionKit.Delay(lifeTime.Value, () =>
+            {
+                Destroy();
+            }).Start(this);
         }
         
         public virtual void Attack(Defencer defencer)
@@ -70,9 +70,7 @@ namespace CodeTao
                 DamageManager.Instance.ExecuteDamage(damager, defencer, weapon? weapon.attacker : null);
             }
         }
-        
-        public Action onDestroy;
-        
+
         public virtual void Destroy()
         {
             onDestroy?.Invoke();

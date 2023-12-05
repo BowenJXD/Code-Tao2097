@@ -11,7 +11,9 @@ namespace CodeTao
     {
         public BindableStat attackInterval = new BindableStat(2).SetMinValue(0.1f);
         
-        public BindableStat attackRange = new BindableStat(1);
+        public BindableStat weaponSize = new BindableStat(1);
+        
+        public BindableStat attackRange = new BindableStat(5);
 
         [HideInInspector] public Attacker attacker;
         
@@ -21,6 +23,8 @@ namespace CodeTao
 
         protected virtual void Start()
         {
+            damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
+            
             fireLoop = new LoopTask(this, attackInterval, Fire);
             fireLoop.Start();
             attackInterval.RegisterWithInitValue(interval =>

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class GroundEffect : UnitController
+    public partial class GroundEffect : UnitController
     {
         [HideInInspector] public Damager damager;
         [HideInInspector] public Collider2D col2D;
@@ -15,8 +15,13 @@ namespace CodeTao
         public BindableStat lifeTime = new BindableStat(5f);
 
         public LoopTask attackLoop;
-        
-        protected virtual void Awake()
+
+        private void Awake()
+        {
+            col2D = ComponentUtil.GetComponentInDescendants<Collider2D>(this);
+        }
+
+        protected virtual void OnEnable()
         {
             attackLoop = new LoopTask(this, attackInterval, AttackAll, Destroy);
             attackLoop.SetTimeCondition(lifeTime);
@@ -32,7 +37,13 @@ namespace CodeTao
                 attackLoop.SetTimeCondition(value);
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
-
+        
+        public virtual void Init(Weapon weapon)
+        {
+            this.weapon = weapon;
+            damager = weapon.damager;
+        }
+        
         public virtual void AttackAll()
         {
             List<Collider2D> cols = new List<Collider2D>();
@@ -55,8 +66,6 @@ namespace CodeTao
                 DamageManager.Instance.ExecuteDamage(damager, defencer, weapon? weapon.attacker : null);
             }
         }
-        
-        public Action onDestroy;
         
         public virtual void Destroy()
         {

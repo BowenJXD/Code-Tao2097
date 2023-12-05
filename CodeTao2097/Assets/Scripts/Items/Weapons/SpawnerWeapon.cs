@@ -61,6 +61,7 @@ namespace CodeTao
                 pool.Release(unit);
             };
             unit.transform.position = transform.position + (Vector3)spawnPosition;
+            unit.transform.localScale = new Vector3(weaponSize, weaponSize);
             ammo.Value--;
             return unit;
         }

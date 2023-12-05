@@ -9,29 +9,11 @@ using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace VSLTut
+namespace CodeTao
 {
-	public class EnemyPool : ObjectPool<Enemy>
-	{
-		public EnemyPool(Enemy defaultPrefab, int defaultCapacity = 10) :
-			base(() =>
-				{
-					Enemy enemy = Object.Instantiate(defaultPrefab);
-					return enemy;
-				}, enemyPrefab =>
-				{
-					enemyPrefab.gameObject.SetActive(true);
-				}
-				, enemyPrefab => { enemyPrefab.gameObject.SetActive(false); }
-				, enemyPrefab => { Object.Destroy(enemyPrefab); }
-				, true, defaultCapacity)
-		{
-		}
-	}
-
 	public partial class EnemyGenerator : ViewController
 	{
-		public List<EnemyPool> EnemyPools = new List<EnemyPool>();
+		public List<UnitPool<Enemy>> EnemyPools = new List<UnitPool<Enemy>>();
 		public List<Enemy> enemyPrefabs = new List<Enemy>();
 		public List<GeneratorTask> tasks = new List<GeneratorTask>();
 		
@@ -42,7 +24,7 @@ namespace VSLTut
 		{
 			for (int i = 0; i < enemyPrefabs.Count; i++)
 			{
-				EnemyPool enemyPool = new EnemyPool(enemyPrefabs[i]);
+				UnitPool<Enemy> enemyPool = new UnitPool<Enemy>(enemyPrefabs[i]);
 				EnemyPools.Add(enemyPool);
 			}
 		}

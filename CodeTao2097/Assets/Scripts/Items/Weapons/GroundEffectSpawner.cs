@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class GroundEffectSpawner : SpawnerWeapon<GroundEffect>
+    public partial class GroundEffectSpawner : SpawnerWeapon<GroundEffect>
     {
         public List<Vector2> spawnPoints = new List<Vector2>();
         private int _currentSpawnPointIndex = 0;
@@ -11,9 +11,18 @@ namespace CodeTao
         
         public float spawnPointMaxOffset = 1;
 
+        public override GroundEffect SpawnUnit(Vector2 spawnPosition)
+        {
+            GroundEffect unit = base.SpawnUnit(spawnPosition);
+            unit.transform.parent = GroundEffectManager.Instance.transform;
+            unit.Init(this);
+            return unit;
+        }
+
         public override Vector2 GetSpawnPoint(int spawnIndex)
         {
-            Vector2 result = Util.GetRandomNormalizedVector();
+            float r2 = Global.Instance.Random.Next(attackRange);
+            Vector2 result = Util.GetRandomNormalizedVector() * r2;
             if (spawnPoints.Count > 0)
             {
                 result = spawnPoints[_currentSpawnPointIndex];
@@ -30,20 +39,17 @@ namespace CodeTao
                         {
                             int r1 = Global.Instance.Random.Next(targets.Count);
                             Defencer target = targets[r1];
-                            result = target.transform.position;
+                            result = target.transform.position - transform.position;
                         }
                         break;
                     case EAimWay.Owner:
                         result = Vector2.zero;
                         break;
                     case EAimWay.Random:
-                        float r2 = Global.Instance.Random.Next(attackRange);
-                        result = Util.GetRandomNormalizedVector() * r2;
                         break;
                     case EAimWay.Cursor:
                         result = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
                         break;
-                    
                 }
             }
             Vector2 randomOffset = Util.GetRandomNormalizedVector() * spawnPointMaxOffset * Global.Instance.Random.Next(1);

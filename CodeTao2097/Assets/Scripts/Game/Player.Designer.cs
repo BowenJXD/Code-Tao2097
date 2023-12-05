@@ -1,4 +1,4 @@
-// Generate Id:39c16f75-511b-4f30-bd3e-589e89b6b6b0
+// Generate Id:3b1485fa-5112-4ebc-a7f8-26173d28ac90
 using UnityEngine;
 
 namespace CodeTao
@@ -18,9 +18,11 @@ namespace CodeTao
 
 		public CodeTao.Inventory Inventory;
 
-		public CircleCollider2D Collector;
+		public CodeTao.Collector Collector;
 
 		public CodeTao.ExpController ExpController;
+
+		public Buffs.BuffOwner SelfBuffOwner;
 
 		public UnityEngine.Rigidbody2D SelfRigidbody2D;
 

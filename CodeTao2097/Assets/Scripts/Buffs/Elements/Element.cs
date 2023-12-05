@@ -44,7 +44,24 @@ namespace CodeTao
             set { _gauge = value; }
         }
 
-
+        public Color GetColor()
+        {
+            switch (Type)
+            {
+                case ElementType.Metal:
+                    return Color.yellow;
+                case ElementType.Wood:
+                    return Color.green;
+                case ElementType.Water:
+                    return Color.blue;
+                case ElementType.Fire:
+                    return Color.red;
+                case ElementType.Earth:
+                    return new Color(165,42,42);
+                default:
+                    return Color.white;
+            }
+        }
     }
 }
 

@@ -26,7 +26,7 @@ namespace CodeTao
         }
     }
     
-    public partial class ProjectileManager : MonoSingleton<ExpGenerator>
+    public partial class ProjectileManager : MonoSingleton<ProjectileManager>
     {
         
     }

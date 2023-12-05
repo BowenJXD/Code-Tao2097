@@ -28,7 +28,7 @@ namespace CodeTao
             SelfNavAgent.updateUpAxis = false;
             SelfNavAgent.enabled = false;
             
-            collider2D = HitBox;
+            col2D = HitBox;
             
             ValidateCollectFunc = col =>
             {
@@ -49,7 +49,7 @@ namespace CodeTao
 
         public void ToggleCollider(bool value)
         {
-            collider2D.enabled = value;
+            col2D.enabled = value;
         }
         
         public Func<Collider2D, bool> ValidateCollectFunc;

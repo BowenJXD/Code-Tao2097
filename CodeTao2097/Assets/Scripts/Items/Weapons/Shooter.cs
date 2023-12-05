@@ -36,7 +36,6 @@ namespace CodeTao
             Projectile unit = base.SpawnUnit(spawnPosition);
             unit.transform.parent = ProjectileManager.Instance.transform;
             unit.Init(this, spawnPosition.normalized);
-            unit.damager = damager;
             return unit;
         }
         

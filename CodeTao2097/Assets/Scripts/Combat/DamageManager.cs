@@ -1,10 +1,13 @@
-﻿using QFramework;
+﻿using System;
+using QFramework;
 using UnityEngine;
 
 namespace CodeTao
 {
     public class DamageManager : MonoSingleton<DamageManager>
     {
+        public Action<Damage> damageAfter;
+        
         public Defencer ColToDef(Damager damager, Collider2D col)
         {
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
@@ -45,6 +48,8 @@ namespace CodeTao
             
             damager.DealDamage(damage);
             attacker?.DealDamageAfter?.Invoke(damage);
+            damageAfter?.Invoke(damage);
+            
             return damage;
         }
     }

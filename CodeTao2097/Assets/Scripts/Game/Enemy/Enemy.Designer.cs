@@ -1,4 +1,4 @@
-// Generate Id:c56a915b-e3f2-4db8-912d-d6bf20078991
+// Generate Id:d04b6b0b-bbca-44b1-91b6-3e6cbe72c642
 using UnityEngine;
 
 namespace CodeTao
@@ -19,6 +19,8 @@ namespace CodeTao
 		public CodeTao.Damager Damager;
 
 		public CodeTao.ElementOwner ElementOwner;
+
+		public Buffs.BuffOwner SelfBuffOwner;
 
 		public UnityEngine.Rigidbody2D SelfRigidbody2D;
 

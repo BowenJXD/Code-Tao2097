@@ -9,7 +9,7 @@ using UnityEngine.Events;
 using UnityEngine.Pool;
 using UnityEngine.Serialization;
 
-namespace VSLTut
+namespace CodeTao
 {
     [Serializable]
     public class GeneratorTask
