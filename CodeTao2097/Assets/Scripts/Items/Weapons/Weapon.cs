@@ -7,41 +7,138 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    [Serializable]
+    public class UpgradeMod
+    {
+        /// <summary>
+        /// Minimum level (inclusive) to unlock this modifier, 0 for default, negative to be overriden.
+        /// </summary>
+        public int minLevel = 0;
+        /// <summary>
+        /// Maximum level (inclusive) to unlock this modifier, 0 for default, negative to be overriden.
+        /// </summary>
+        public int maxLevel = 0;
+        public EWAt attribute;
+        public EModifierType modType;
+        public float value;
+        
+        public bool CheckCondition(int level, bool triggered = false)
+        {
+            bool result = false;
+            maxLevel = Mathf.Abs(maxLevel) < Mathf.Abs(minLevel) ? minLevel : maxLevel;
+            if (triggered)
+            {
+                if (minLevel > 0 && maxLevel > 0)
+                {
+                    if (level >= Mathf.Abs(minLevel) && level <= Mathf.Abs(maxLevel))
+                    {
+                        result = true;
+                    }
+                }
+            }
+            else
+            {
+                if (level >= Mathf.Abs(minLevel) && level <= Mathf.Abs(maxLevel))
+                {
+                    result = true;
+                }
+
+                if (minLevel == 0 && maxLevel == 0)
+                {
+                    result = true;
+                }
+            }
+
+            return result;
+        }
+        
+        public static Comparison<UpgradeMod> Comparison()
+        {
+            return (a, b) =>
+            {
+                int absMinLevelComparison = Mathf.Abs(b.minLevel).CompareTo(Mathf.Abs(a.minLevel));
+
+                if (absMinLevelComparison == 0)
+                {
+                    // If absolute minLevels are equal, positive comes before negative
+                    return b.minLevel.CompareTo(a.minLevel);
+                }
+                else
+                {
+                    return absMinLevelComparison;
+                }
+            };
+        }
+
+        public BindableStat AddModifier(BindableStat stat, int newLevel)
+        {
+            stat.AddModifier($"Level{newLevel}", value, modType);
+
+            return stat;
+        }
+
+        public string GetDescription()
+        {
+            string result = "";
+            char sign = value > 0 ? '+' : '-';
+            switch (modType)
+            {
+                case EModifierType.Basic:
+                    result += $" base {attribute} {sign} {value}.";
+                    break; 
+                case EModifierType.Additive:
+                    result += $" {attribute} {sign} {value}.";
+                    break;
+                case EModifierType.MultiAdd:
+                    result += $" {attribute} {sign} {value * 100} %.";
+                    break;
+                case EModifierType.Multiplicative:
+                    result += $" {attribute} * {value * 100} %.";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            return result;
+        }
+    }
+    
     public class Weapon : Item
     {
         [SerializeField]
-        public SerializableDictionary<EWAts, BindableStat> ats = new SerializableDictionary<EWAts, BindableStat>()
+        public SerializableDictionary<EWAt, BindableStat> ats = new SerializableDictionary<EWAt, BindableStat>()
         {
-            {EWAts.Damage, new BindableStat(10)}, 
-            {EWAts.Amount, new BindableStat(1)},
-            {EWAts.Duration, new BindableStat(5).SetMinValue(0.1f)},
-            {EWAts.Speed, new BindableStat(4)},
-            {EWAts.Cooldown, new BindableStat(2).SetMinValue(0.1f)},
-            {EWAts.Area, new BindableStat(0)}
+            {EWAt.Damage, new BindableStat(10)}, 
+            {EWAt.Amount, new BindableStat(1)},
+            {EWAt.Duration, new BindableStat(5).SetMinValue(0.1f)},
+            {EWAt.Speed, new BindableStat(4)},
+            {EWAt.Cooldown, new BindableStat(2).SetMinValue(0.1f)},
+            {EWAt.Area, new BindableStat(0)}
         };
         
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
         public BindableStat reloadTime = new BindableStat(0);
-        public float attackRange => ats[EWAts.Area].Value > 0? ats[EWAts.Area].Value : 10;
+        public float attackRange => ats[EWAt.Area].Value > 0? ats[EWAt.Area].Value : 10;
         
         [HideInInspector] public Attacker attacker;
         
         [HideInInspector] public Damager damager;
 
         protected LoopTask fireLoop;
+        
+        public List<UpgradeMod> upgradeMods = new List<UpgradeMod>();
 
         protected override void Start()
         {
             base.Start();
             
             damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
-            ats[EWAts.Damage].RegisterWithInitValue(dmg =>
+            ats[EWAt.Damage].RegisterWithInitValue(dmg =>
             {
                 damager.DMG.AddModifier("weapon", dmg, EModifierType.Additive, ERepetitionBehavior.Overwrite);
             }).UnRegisterWhenGameObjectDestroyed(this);
             
             // setup fire loop
-            fireLoop = new LoopTask(this, ats[EWAts.Cooldown], Fire, StartReload);
+            fireLoop = new LoopTask(this, ats[EWAt.Cooldown], Fire, StartReload);
             if (shotsToReload.Value > 0)
             {
                 shotsToReload.RegisterWithInitValue(count =>
@@ -50,12 +147,10 @@ namespace CodeTao
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
             fireLoop.Start();
-            ats[EWAts.Cooldown].RegisterWithInitValue(interval =>
+            ats[EWAt.Cooldown].RegisterWithInitValue(interval =>
             {
                 fireLoop.LoopInterval = interval;
             }).UnRegisterWhenGameObjectDestroyed(this);
-            
-            LVL.RegisterWithInitValue(LevelUpAfter).UnRegisterWhenGameObjectDestroyed(gameObject);
             
             // Add to inventory
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
@@ -91,8 +186,44 @@ namespace CodeTao
             fireLoop.Start();
         }
 
-        public void LevelUpAfter(int newLvl)
+        public override void Upgrade(int lvlIncrement = 1)
         {
+            base.Upgrade(lvlIncrement);
+            int newLevel = LVL.Value;
+            
+            // sort upgradeMods by minLevel in descending order
+            upgradeMods.Sort(UpgradeMod.Comparison());
+            
+            bool triggered = false;
+            foreach (var mod in upgradeMods)
+            {
+                if (mod.CheckCondition(newLevel, triggered))
+                {
+                    ats[mod.attribute].AddModifier($"Level{newLevel}", mod.value, mod.modType);
+                    triggered = true;
+                }
+            }
+        }
+        
+        public override string GetDescription()
+        {
+            List<string> result = new List<string>();
+            int newLevel = LVL.Value + 1;
+            
+            // sort upgradeMods by minLevel in descending order
+            upgradeMods.Sort(UpgradeMod.Comparison());
+            
+            bool triggered = false;
+            foreach (var mod in upgradeMods)
+            {
+                if (mod.CheckCondition(newLevel, triggered))
+                {
+                    result.Add($"{GetType().Name} ({newLevel})" + mod.GetDescription());
+                    triggered = true;
+                }
+            }
+            
+            return result.StringJoin("\n");
         }
 
         public virtual void Attack(Defencer defencer)

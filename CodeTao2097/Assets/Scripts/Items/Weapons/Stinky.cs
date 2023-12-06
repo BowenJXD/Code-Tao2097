@@ -13,7 +13,7 @@ namespace CodeTao
             
             damager = StinkyDamager;
 
-            ats[EWAts.Area].RegisterWithInitValue(range =>
+            ats[EWAt.Area].RegisterWithInitValue(range =>
             {
                 transform.localScale = Vector3.one * range;
             }).UnRegisterWhenGameObjectDestroyed(this);
@@ -27,13 +27,13 @@ namespace CodeTao
             }
         }
         
-        public override void Upgrade(int lvlIncrement = 1)
+        /*public override void Upgrade(int lvlIncrement = 1)
         {
             base.Upgrade(lvlIncrement);
             switch (LVL.Value)
             {
                 default:
-                    ats[EWAts.Area].AddModifier($"Level{LVL.Value}", 0.3f, EModifierType.MultiAdd, ERepetitionBehavior.AddStack);
+                    ats[EWAt.Area].AddModifier($"Level{LVL.Value}", 0.3f, EModifierType.MultiAdd, ERepetitionBehavior.AddStack);
                     break;
             }
         }
@@ -42,6 +42,6 @@ namespace CodeTao
         {
             string result = $"{GetType()}'s range + 30%";
             return result;
-        }
+        }*/
     }
 }

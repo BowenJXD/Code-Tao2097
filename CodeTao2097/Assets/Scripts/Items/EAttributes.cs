@@ -1,6 +1,6 @@
 ﻿namespace CodeTao
 {
-    public enum EWAts
+    public enum EWAt
     {
         Damage,
         Cooldown,

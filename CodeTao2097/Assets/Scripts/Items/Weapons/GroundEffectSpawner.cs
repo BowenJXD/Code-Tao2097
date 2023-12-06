@@ -15,15 +15,15 @@ namespace CodeTao
         {
             GroundEffect unit = base.SpawnUnit(spawnPosition);
             unit.transform.parent = GroundEffectManager.Instance.transform;
-            unit.attackInterval.Value = ats[EWAts.Cooldown].Value;
-            unit.lifeTime.Value = ats[EWAts.Duration].Value;
+            unit.attackInterval.Value = ats[EWAt.Cooldown].Value;
+            unit.lifeTime.Value = ats[EWAt.Duration].Value;
             unit.Init(this);
             return unit;
         }
 
         public override Vector2 GetSpawnPoint(int spawnIndex)
         {
-            float r2 = Global.Instance.Random.Next(ats[EWAts.Area]);
+            float r2 = Global.Instance.Random.Next(ats[EWAt.Area]);
             Vector2 result = Util.GetRandomNormalizedVector() * r2;
             if (spawnPoints.Count > 0)
             {
@@ -59,13 +59,13 @@ namespace CodeTao
             return result;
         }
 
-        public override void Upgrade(int lvlIncrement = 1)
+        /*public override void Upgrade(int lvlIncrement = 1)
         {
             base.Upgrade(lvlIncrement);
             switch (LVL.Value)
             {
                 default:
-                    ats[EWAts.Cooldown].AddModifier($"Level{LVL.Value}", 1 - 0.1f, EModifierType.Multiplicative, ERepetitionBehavior.NewStack);
+                    ats[EWAt.Cooldown].AddModifier($"Level{LVL.Value}", 1 - 0.1f, EModifierType.Multiplicative, ERepetitionBehavior.NewStack);
                     break;
             }
         }
@@ -74,6 +74,6 @@ namespace CodeTao
         {
             string result = $"{GetType()}'s attack interval - 10%";
             return result;
-        }
+        }*/
     }
 }

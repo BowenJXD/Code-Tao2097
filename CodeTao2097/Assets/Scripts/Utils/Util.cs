@@ -88,15 +88,16 @@ namespace CodeTao
         /// <returns></returns>
         public static List<T> GetRandomItems<T>(List<T> list, int count, Func<T, int> getWeight)
         {
-            count = Mathf.Clamp(count, 0, list.Count);
+            List<T> listCache = new List<T>(list);
+            count = Mathf.Clamp(count, 0, listCache.Count);
             List<T> result = new List<T>();
-            List<int> weights = list.Select(getWeight).ToList();
+            List<int> weights = listCache.Select(getWeight).ToList();
             for (int i = 0; i < count; i++)
             {
                 int randomIndex = GetRandomWeightedIndex(weights);
-                result.Add(list[randomIndex]);
+                result.Add(listCache[randomIndex]);
                 weights.RemoveAt(randomIndex);
-                list.RemoveAt(randomIndex);
+                listCache.RemoveAt(randomIndex);
             }
 
             return result;

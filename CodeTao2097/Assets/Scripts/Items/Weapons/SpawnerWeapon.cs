@@ -22,7 +22,7 @@ namespace CodeTao
             
             pool = new UnitPool<T>(unitPrefab);
             
-            ats[EWAts.Cooldown].RegisterWithInitValue(cooldown =>
+            ats[EWAt.Cooldown].RegisterWithInitValue(cooldown =>
             {
                 reloadTime.Value = cooldown * coolDownReloadRatio.Value;
             }).UnRegisterWhenGameObjectDestroyed(this);
@@ -32,7 +32,7 @@ namespace CodeTao
         {
             base.Fire();
 
-            for (int i = 0; i < ats[EWAts.Amount].Value; i++)
+            for (int i = 0; i < ats[EWAt.Amount].Value; i++)
             {
                 SpawnUnit(GetSpawnPoint(i));
             }
@@ -51,7 +51,7 @@ namespace CodeTao
                 pool.Release(unit);
             };
             unit.transform.position = transform.position + (Vector3)spawnPosition;
-            unit.transform.localScale = new Vector3(ats[EWAts.Area], ats[EWAts.Area]);
+            unit.transform.localScale = new Vector3(ats[EWAt.Area], ats[EWAt.Area]);
             return unit;
         }
 
