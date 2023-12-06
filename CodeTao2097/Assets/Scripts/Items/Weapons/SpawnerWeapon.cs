@@ -8,42 +8,32 @@ namespace CodeTao
 {
     public abstract class SpawnerWeapon<T> : Weapon where T : UnitController
     {
-        protected BindableProperty<int> ammo = new BindableProperty<int>(3);
-        public BindableProperty<int> maxAmmo = new BindableProperty<int>(3);
-        public BindableProperty<float> reloadTime = new BindableProperty<float>(1);
+        /// <summary>
+        /// Reload time = cooldown / reloadCoolDownRatio
+        /// </summary>
+        public BindableProperty<float> coolDownReloadRatio = new BindableProperty<float>(0.5f);
         
         public T unitPrefab;
         protected UnitPool<T> pool;
-
-        public BindableProperty<int> spawnAmount = new BindableProperty<int>(1);
 
         protected override void Start()
         {
             base.Start();
             
-            ammo.Value = maxAmmo.Value;
-            ammo.RegisterWithInitValue(value =>
-            {
-                if (value <= 0)
-                {
-                    StartReload();
-                }
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            
             pool = new UnitPool<T>(unitPrefab);
+            
+            ats[EWAts.Cooldown].RegisterWithInitValue(cooldown =>
+            {
+                reloadTime.Value = cooldown * coolDownReloadRatio.Value;
+            }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
         public override void Fire()
         {
             base.Fire();
 
-            for (int i = 0; i < spawnAmount.Value; i++)
+            for (int i = 0; i < ats[EWAts.Amount].Value; i++)
             {
-                if (ammo.Value <= 0)
-                {
-                    break;
-                }
-                
                 SpawnUnit(GetSpawnPoint(i));
             }
         }
@@ -61,26 +51,10 @@ namespace CodeTao
                 pool.Release(unit);
             };
             unit.transform.position = transform.position + (Vector3)spawnPosition;
-            unit.transform.localScale = new Vector3(weaponSize, weaponSize);
-            ammo.Value--;
+            unit.transform.localScale = new Vector3(ats[EWAts.Area], ats[EWAts.Area]);
             return unit;
         }
 
         public abstract Vector2 GetSpawnPoint(int spawnIndex);
-        
-        public virtual void StartReload()
-        {
-            fireLoop.Pause();
-            ActionKit.Delay(reloadTime.Value, () =>
-            {
-                Reload();
-            }).Start(this);
-        }
-        
-        public virtual void Reload()
-        {
-            ammo.Value = maxAmmo.Value;
-            fireLoop.Resume(true);
-        }
     }
 }

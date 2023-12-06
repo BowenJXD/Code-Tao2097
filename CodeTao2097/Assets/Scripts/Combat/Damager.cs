@@ -8,7 +8,7 @@ namespace CodeTao
 {
     public class Damager : ViewController
     {
-        public Element DamageElement = new Element();
+        public ElementType DamageElementType = ElementType.None;
         public BindableStat DMG = new BindableStat();
         public BindableStat KnockBackFactor = new BindableStat();
         
@@ -43,7 +43,9 @@ namespace CodeTao
         {
             damage.SetMedian(this);
             damage.SetBase(DMG.Value);
-            damage.SetElement(DamageElement);
+            Element element = new Element();
+            element.Type = DamageElementType;
+            damage.SetElement(element);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;
         }

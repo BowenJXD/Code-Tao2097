@@ -39,7 +39,7 @@ namespace CodeTao
                 Finish();
                 return;
             }
-            int index = Util.GetRandomWeightedIndex(amountsToGenerate);
+            int index = RandomUtil.GetRandomWeightedIndex(amountsToGenerate);
             amountsToGenerate[index] = Mathf.Max(0, amountsToGenerate[index] - 1);
             onGenerate.Invoke(index);
         }

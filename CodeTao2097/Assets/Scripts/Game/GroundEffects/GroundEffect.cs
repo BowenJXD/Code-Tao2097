@@ -23,6 +23,15 @@ namespace CodeTao
 
         protected virtual void OnEnable()
         {
+            
+           
+        }
+
+        public virtual void Init(Weapon weapon)
+        {
+            this.weapon = weapon;
+            damager = weapon.damager;
+            
             attackLoop = new LoopTask(this, attackInterval, AttackAll, Destroy);
             attackLoop.SetTimeCondition(lifeTime);
             attackLoop.Start();
@@ -36,12 +45,6 @@ namespace CodeTao
             {
                 attackLoop.SetTimeCondition(value);
             }).UnRegisterWhenGameObjectDestroyed(this);
-        }
-        
-        public virtual void Init(Weapon weapon)
-        {
-            this.weapon = weapon;
-            damager = weapon.damager;
         }
         
         public virtual void AttackAll()

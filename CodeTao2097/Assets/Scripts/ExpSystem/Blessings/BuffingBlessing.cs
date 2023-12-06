@@ -6,7 +6,7 @@ namespace CodeTao
     {
         public Attacker attacker;
         
-        public IContent<Buff> buffToApply;
+        public Content<Buff> buffToApply;
 
         public void Init()
         {

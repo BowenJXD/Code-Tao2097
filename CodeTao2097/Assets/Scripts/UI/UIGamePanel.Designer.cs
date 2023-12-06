@@ -5,17 +5,11 @@ using QFramework;
 
 namespace CodeTao
 {
-	// Generate Id:e30e05ce-7161-4808-9466-5121eca1211a
+	// Generate Id:c3d6c9aa-380d-4e9e-bbad-aec4aec81861
 	public partial class UIGamePanel
 	{
 		public const string Name = "UIGamePanel";
 		
-		[SerializeField]
-		public RectTransform Upgrades;
-		[SerializeField]
-		public UnityEngine.UI.Button BtnDMGUp;
-		[SerializeField]
-		public UnityEngine.UI.Button BtnFrequencyUp;
 		[SerializeField]
 		public UnityEngine.UI.Slider HPBar;
 		[SerializeField]
@@ -34,14 +28,13 @@ namespace CodeTao
 		public TMPro.TextMeshProUGUI MinuteValue;
 		[SerializeField]
 		public TMPro.TextMeshProUGUI SecondValue;
+		[SerializeField]
+		public ExpUpgradePanel ExpUpgradePanel;
 		
 		private UIGamePanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
-			Upgrades = null;
-			BtnDMGUp = null;
-			BtnFrequencyUp = null;
 			HPBar = null;
 			HpValue = null;
 			MaxHpValue = null;
@@ -51,6 +44,7 @@ namespace CodeTao
 			LvlValue = null;
 			MinuteValue = null;
 			SecondValue = null;
+			ExpUpgradePanel = null;
 			
 			mData = null;
 		}

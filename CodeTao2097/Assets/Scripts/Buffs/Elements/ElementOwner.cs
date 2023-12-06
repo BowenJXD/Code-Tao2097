@@ -6,12 +6,8 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class ElementOwner : ViewController, IContainer<Element>
+    public class ElementOwner : Container<Element>
     {
-        public List<IContent<Element>> Contents { get; set; }
-        public Action<IContent<Element>> AddAfter { get; set; }
-        public Action<IContent<Element>> RemoveAfter { get; set; }
-
         public void Start()
         {
             
@@ -21,7 +17,7 @@ namespace CodeTao
         {
             if (element.Type == ElementType.None || element.Gauge <= 0)
                 return;
-            IContainer<Element> container = this;
+            Container<Element> container = this;
             if (container.AddContent(element))
             {
                 ProcessAddedElement(damage);

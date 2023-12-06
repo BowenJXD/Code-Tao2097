@@ -24,17 +24,79 @@ namespace CodeTao
         AddStack,
         NewStack
     }
+
+    public class ModifierGroup
+    {
+        private Dictionary<EModifierType, Dictionary<string, float>> _modifiers = EModifierType.GetValues(typeof(EModifierType))
+            .Cast<EModifierType>()
+            .ToDictionary(key => key, value => new Dictionary<string, float>());
+
+        public Dictionary<string, float> GetModifier(EModifierType modifierType)
+        {
+            return _modifiers[modifierType];
+        }
+
+        public bool AddModifier(string name, float value, EModifierType modifierType, 
+            ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+        {
+            bool result = false;
+            Dictionary<string, float> modifiers = _modifiers[modifierType];
+            
+            if (modifiers == null)
+            {
+                return result;
+            }
+            
+            if (modifiers.ContainsKey(name))
+            {
+                switch (repetitionBehavior)
+                {
+                    case ERepetitionBehavior.Return:
+                        break;
+                    case ERepetitionBehavior.Overwrite:
+                        modifiers[name] = value;
+                        result = true;
+                        break;
+                    case ERepetitionBehavior.AddStack:
+                        modifiers[name] += value;
+                        result = true;
+                        break;
+                    case ERepetitionBehavior.NewStack: // not implemented
+                        name += modifiers.Count;
+                        modifiers.Add(name, value);
+                        result = true;
+                        break;
+                }
+            }
+
+            result = modifiers.TryAdd(name, value);
+            
+            return result;
+        }
+        
+        public bool RemoveModifier(string name, EModifierType modifierType)
+        {
+            bool result = false;
+            result = _modifiers[modifierType].Remove(name);
+            return result;
+        }
+        
+        public void Clear()
+        {
+            foreach (var keyValuePair in _modifiers)
+            {
+                keyValuePair.Value.Clear();
+            }
+        }
+    }
     
     [Serializable]
     public class BindableStat : BindableProperty<float>
     {
         private float _initValue = 0;
-        private Dictionary<string, float> _basicModifiers = new Dictionary<string, float>();
-        private Dictionary<string, float> _additiveModifiers = new Dictionary<string, float>();
-        private Dictionary<string, float> _multiAddModifiers = new Dictionary<string, float>();
-        private Dictionary<string, float> _multiplicativeModifiers = new Dictionary<string, float>();
         private float _minValue = 0;
         private float _maxValue = float.MaxValue;
+        private ModifierGroup _modiferGroup = new ModifierGroup();
 
         public BindableStat()
         {
@@ -57,95 +119,38 @@ namespace CodeTao
             _maxValue = value;
             return this;
         }
-        
-        public bool AddModifier(string name, float value, EModifierType modifierType, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
-        {
-            bool result = false;
-            Dictionary<string, float> modifiers = null;
-            switch (modifierType)
-            {
-                case EModifierType.Basic:
-                    modifiers = _basicModifiers;
-                    break;
-                case EModifierType.Additive:
-                    modifiers = _additiveModifiers;
-                    break;
-                case EModifierType.MultiAdd:
-                    modifiers = _multiAddModifiers;
-                    break;
-                case EModifierType.Multiplicative:
-                    modifiers = _multiplicativeModifiers;
-                    break;
-            }
-            
-            if (modifiers == null)
-            {
-                return result;
-            }
-            
-            if (modifiers.ContainsKey(name))
-            {
-                switch (repetitionBehavior)
-                {
-                    case ERepetitionBehavior.Return:
-                        break;
-                    case ERepetitionBehavior.Overwrite:
-                        modifiers[name] = value;
-                        result = true;
-                        break;
-                    case ERepetitionBehavior.AddStack:
-                        modifiers[name] += value;
-                        result = true;
-                        break;
-                    case ERepetitionBehavior.NewStack: // not implemented
-                        modifiers.Add(name, value);
-                        result = true;
-                        break;
-                }
-            }
 
-            result = modifiers.TryAdd(name, value);
-            
+        public bool AddModifier(string name, float value, EModifierType modifierType,
+            ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+        {
+            bool result = _modiferGroup.AddModifier(name, value, modifierType, repetitionBehavior);
             if (result)
             {
                 mOnValueChanged?.Invoke(Value);
             }
-            
+
             return result;
         }
-        
+
         public bool RemoveModifier(string name, EModifierType modifierType)
         {
             bool result = false;
-            switch (modifierType)
-            {
-                case EModifierType.Basic:
-                    result = _basicModifiers.Remove(name);
-                    break;
-                case EModifierType.Additive:
-                    result = _additiveModifiers.Remove(name);
-                    break;
-                case EModifierType.MultiAdd:
-                    result = _multiAddModifiers.Remove(name);
-                    break;
-                case EModifierType.Multiplicative:
-                    result = _multiplicativeModifiers.Remove(name);
-                    break;
-            }
+            result = _modiferGroup.RemoveModifier(name, modifierType);
 
             if (result)
             {
                 mOnValueChanged?.Invoke(Value);
             }
+
             return result;
         }
 
         protected override float GetValue()
         {
-            float basic = _basicModifiers.Values.Sum();
-            float additive = _additiveModifiers.Values.Sum();
-            float multiAdd = _multiAddModifiers.Values.Sum();
-            float multiplicative = _multiplicativeModifiers.Values.Aggregate(1f, (current, value) => current * (1 + value));
+            float basic = _modiferGroup.GetModifier(EModifierType.Basic).Values.Sum();
+            float additive = _modiferGroup.GetModifier(EModifierType.Additive).Values.Sum();
+            float multiAdd = _modiferGroup.GetModifier(EModifierType.MultiAdd).Values.Sum();
+            float multiplicative = _modiferGroup.GetModifier(EModifierType.Multiplicative).Values.Aggregate(1f, (current, value) => current * (1 + value));
             float resultValue = (mValue + basic) * multiplicative * (1 + multiAdd) + additive;
             resultValue = Math.Clamp(resultValue, _minValue, _maxValue);
             return resultValue;
@@ -153,9 +158,8 @@ namespace CodeTao
         
         public void Reset()
         {
-            _basicModifiers.Clear();
-            _additiveModifiers.Clear();
-            _multiplicativeModifiers.Clear();
+            _modiferGroup.Clear();
+
             Value = _initValue;
         }
         

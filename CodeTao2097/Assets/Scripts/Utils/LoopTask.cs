@@ -88,8 +88,10 @@ namespace CodeTao
 
         public void Start()
         {
-            _owner.StartCoroutine(Update());
-            _isPaused = false;
+            _condition = null;
+            _loopCount = 0;
+            _loopTime = 0;
+            Resume();
         }
         
         public void Pause()
@@ -105,7 +107,7 @@ namespace CodeTao
                 _loopTime = _loopInterval;
             }
             _isPaused = false;
-            //_owner.StartCoroutine(Update());
+            _owner.StartCoroutine(Update());
         }
 
         public void Finish()
@@ -113,7 +115,7 @@ namespace CodeTao
             _endTask?.Invoke();
             _loopTask = null;
             _loopCount = 0;
-            _isPaused = true;
+            Pause();
         }
 
         private IEnumerator Update()

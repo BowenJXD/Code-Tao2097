@@ -22,6 +22,21 @@ namespace CodeTao
             rb2D = SelfRigidbody2D;
             col2D = PjtlCollider;
             moveController = MoveController;
+        }
+        
+        public virtual void Init(Weapon weapon, Vector2 direction)
+        {
+            this.weapon = weapon;
+            damager = weapon.damager;
+            moveController.MovementDirection.Value = direction;
+            transform.rotation = Quaternion.Euler(0, 0, Util.GetAngleFromVector(direction));
+            
+            // destroy when lifeTime is over
+            ActionKit.Delay(lifeTime.Value, () =>
+            {
+                Destroy();
+            }).Start(this);
+            
             
             // change rigidbody2D's velocity when moveController's SPD or MovementDirection changed
             moveController.SPD.RegisterWithInitValue(value =>
@@ -47,20 +62,6 @@ namespace CodeTao
                     }
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
-        }
-        
-        public virtual void Init(Weapon weapon, Vector2 direction)
-        {
-            this.weapon = weapon;
-            damager = weapon.damager;
-            moveController.MovementDirection.Value = direction;
-            transform.rotation = Quaternion.Euler(0, 0, Util.GetAngleFromVector(direction));
-            
-            // destroy when lifeTime is over
-            ActionKit.Delay(lifeTime.Value, () =>
-            {
-                Destroy();
-            }).Start(this);
         }
         
         public virtual void Attack(Defencer defencer)

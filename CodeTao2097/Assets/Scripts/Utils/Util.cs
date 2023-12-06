@@ -21,24 +21,6 @@ namespace CodeTao
             return false;
         }
 
-        public static int GetRandomWeightedIndex(List<int> list)
-        {
-            int totalWeight = list.Sum();
-            int randomValue = Global.Instance.Random.Next(totalWeight);
-
-            for (int i = 0; i < list.Count; i++)
-            {
-                randomValue -= list[i];
-                if (randomValue <= 0)
-                {
-                    return i;
-                }
-            }
-
-            // This should not happen if the total weight is correct
-            throw new InvalidOperationException("Unable to retrieve a random key.");
-        }
-        
         /// <summary>
         /// 
         /// </summary>
@@ -73,6 +55,51 @@ namespace CodeTao
             Vector2 randomDirection = GetVectorFromAngle(randomAngle);
         
             return randomDirection;
+        }
+    }
+
+    public static class RandomUtil
+    {
+        public static int GetRandomWeightedIndex(List<int> list)
+        {
+            int totalWeight = list.Sum();
+            int randomValue = Global.Instance.Random.Next(totalWeight);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                randomValue -= list[i];
+                if (randomValue <= 0)
+                {
+                    return i;
+                }
+            }
+
+            // This should not happen if the total weight is correct
+            throw new InvalidOperationException("Unable to retrieve a random key.");
+        }
+        
+        /// <summary>
+        /// Get random items from list without repeating
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="count"></param>
+        /// <param name="getWeight"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static List<T> GetRandomItems<T>(List<T> list, int count, Func<T, int> getWeight)
+        {
+            count = Mathf.Clamp(count, 0, list.Count);
+            List<T> result = new List<T>();
+            List<int> weights = list.Select(getWeight).ToList();
+            for (int i = 0; i < count; i++)
+            {
+                int randomIndex = GetRandomWeightedIndex(weights);
+                result.Add(list[randomIndex]);
+                weights.RemoveAt(randomIndex);
+                list.RemoveAt(randomIndex);
+            }
+
+            return result;
         }
     }
 

@@ -58,25 +58,11 @@ namespace CodeTao
 			expController.LVL.Register(lvl =>
 			{
 				Time.timeScale = 0;
-				Upgrades.Show();
+				ExpUpgradePanel.Show();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			// Upgrade
-			Upgrades.Hide();
-			
-			BtnDMGUp.onClick.AddListener(() =>
-			{
-				Time.timeScale = 1;
-				// SimpleAbility.Default.DMG.Value += 1;
-				Upgrades.Hide();
-			});
-
-			BtnFrequencyUp.onClick.AddListener(() =>
-			{
-				Time.timeScale = 1;
-				// SimpleAbility.Default.triggerInterval.AddModifier($"Level{Global.LVL.Value}", -0.1f, ModifierType.Multiplicative, RepetitionBehavior.AddStack);
-				Upgrades.Hide();
-			});
+			ExpUpgradePanel.Hide();
 			
 			// Timer
 			Global.GameTime.RegisterWithInitValue(time =>

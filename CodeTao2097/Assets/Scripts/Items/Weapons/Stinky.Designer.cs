@@ -1,4 +1,4 @@
-// Generate Id:d0b3b90e-e6a4-44ff-9918-85425b8e0004
+// Generate Id:0864dd81-638a-4d1b-9645-331d2763989a
 using UnityEngine;
 
 namespace CodeTao
@@ -6,7 +6,11 @@ namespace CodeTao
 	public partial class Stinky
 	{
 
-		public CodeTao.Damager Damager;
+		public CodeTao.Damager StinkyDamager;
+
+		public SpriteRenderer Sprite;
+
+		public CircleCollider2D StinkyRange;
 
 	}
 }

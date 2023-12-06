@@ -35,6 +35,7 @@ namespace CodeTao
         {
             Projectile unit = base.SpawnUnit(spawnPosition);
             unit.transform.parent = ProjectileManager.Instance.transform;
+            unit.lifeTime.Value = ats[EWAts.Duration].Value;
             unit.Init(this, spawnPosition.normalized);
             return unit;
         }
@@ -78,6 +79,23 @@ namespace CodeTao
             }
 
             return result.normalized;
+        }
+        
+        public override void Upgrade(int lvlIncrement = 1)
+        {
+            base.Upgrade(lvlIncrement);
+            switch (LVL.Value)
+            {
+                default:
+                    damager.DMG.AddModifier($"Level{LVL.Value}", 5, EModifierType.Additive, ERepetitionBehavior.AddStack);
+                    break;
+            }
+        }
+
+        public override string GetDescription()
+        {
+            string result = $"{GetType()}'s damage + 5";
+            return result;
         }
     }
 }

@@ -20,16 +20,8 @@ namespace CodeTao
     }
     
     [Serializable]
-    public class Element : IContent<Element>
+    public class Element : Content<Element>
     {
-        #region IContent
-        public IContainer<Element> Container { get; set; }
-        public Action<IContent<Element>> AddAfter { get; set; }
-        public Action<IContent<Element>> RemoveAfter { get; set; }
-        public BindableProperty<int> LVL { get; set; }
-        public BindableProperty<int> MaxLVL { get; set; }
-        #endregion
-        
         [SerializeField] private ElementType _type;
         public ElementType Type
         {

@@ -5,12 +5,8 @@ using QFramework;
 
 namespace Buffs
 {
-    public class BuffOwner : ViewController, IContainer<Buff>
+    public class BuffOwner : Container<Buff>
     {
-        public List<IContent<Buff>> Contents { get; set; }
-        public Action<IContent<Buff>> AddAfter { get; set; }
-        public Action<IContent<Buff>> RemoveAfter { get; set; }
-        
         public void Start()
         {
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);

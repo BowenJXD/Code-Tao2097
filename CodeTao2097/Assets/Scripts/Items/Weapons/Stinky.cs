@@ -11,15 +11,37 @@ namespace CodeTao
         {
             base.Start();
             
-            damager = Damager;
+            damager = StinkyDamager;
+
+            ats[EWAts.Area].RegisterWithInitValue(range =>
+            {
+                transform.localScale = Vector3.one * range;
+            }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
         public override void Fire()
         {
-            foreach (var target in GetTargets())
+            foreach (var target in GetTargets(StinkyRange))
             {
                 Attack(target);
             }
+        }
+        
+        public override void Upgrade(int lvlIncrement = 1)
+        {
+            base.Upgrade(lvlIncrement);
+            switch (LVL.Value)
+            {
+                default:
+                    ats[EWAts.Area].AddModifier($"Level{LVL.Value}", 0.3f, EModifierType.MultiAdd, ERepetitionBehavior.AddStack);
+                    break;
+            }
+        }
+
+        public override string GetDescription()
+        {
+            string result = $"{GetType()}'s range + 30%";
+            return result;
         }
     }
 }

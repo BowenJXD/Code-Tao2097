@@ -42,7 +42,7 @@ namespace Buffs.ElementBuffs
 
         public void Remove()
         {
-            IContent<Buff> iContent = this;
+            Content<Buff> iContent = this;
             iContent.RemoveFromContainer(Container);
         }
     }
