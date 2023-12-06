@@ -1,5 +1,6 @@
 ﻿using System;
 using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
@@ -11,25 +12,31 @@ namespace CodeTao
 
         private void Start()
         {
-            EXP.RegisterWithInitValue(exp =>
-            {
-                float requiredExp = RequiredEXP(LVL.Value);
-                if (exp > requiredExp)
-                {
-                    LevelUp();
-                }
-            }).UnRegisterWhenGameObjectDestroyed(gameObject);
-        }
-
-        protected void LevelUp()
-        {
-            EXP.Value -= RequiredEXP(LVL.Value);
-            LVL.Value += 1;
         }
         
-        public float RequiredEXP(int level)
+        public Action levelUpAfter;
+        
+        protected void LevelUp()
         {
-            return LVL.Value;
+            LVL.Value += 1;
+            levelUpAfter?.Invoke();
+        }
+        
+        public float AlterEXP(float exp)
+        {
+            float result = exp + EXP.Value;
+            while (result >= RequiredEXP())
+            {
+                result -= RequiredEXP(); 
+                LevelUp();
+            }
+            EXP.Value = result;
+            return result;
+        }
+        
+        public float RequiredEXP()
+        {
+            return LVL.Value + 1;
         }
     }
 }

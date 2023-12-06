@@ -91,7 +91,7 @@ namespace CodeTao
             {
                 UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
                 ExpController expController = ComponentUtil.GetComponentInDescendants<ExpController>(unitController);
-                expController.EXP.Value += EXPValue.Value;
+                expController.AlterEXP(EXPValue.Value);
                 Destroy(gameObject);
             };
         }

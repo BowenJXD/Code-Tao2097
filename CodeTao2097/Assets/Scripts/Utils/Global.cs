@@ -18,12 +18,22 @@ namespace CodeTao
 
         public Random Random;
         
+        public static bool IsPass = false;
+        public static float GameDuration = 60;
+        public static BindableProperty<float> GameTime = new BindableProperty<float>(0);
+        
         public UnityEvent OnGameStart = new UnityEvent();
 
         private void Start()
         {
             Random = new Random(RandomSeed);
             OnGameStart.Invoke();
+        }
+
+        public void Reset()
+        {
+            IsPass = false;
+            GameTime = new BindableProperty<float>(0);
         }
     }
 }
