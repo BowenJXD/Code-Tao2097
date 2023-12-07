@@ -35,6 +35,7 @@ namespace CodeTao
 				(btn) =>
 				{
 					btn.Hide();
+					btn.UpgradeBtn?.onClick.RemoveAllListeners();
 				},
 				(btn) =>
 				{

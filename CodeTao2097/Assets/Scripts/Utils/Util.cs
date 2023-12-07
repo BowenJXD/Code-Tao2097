@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using QFramework;
 using UnityEngine;
+using Random = System.Random;
 
 namespace CodeTao
 {
@@ -60,10 +61,12 @@ namespace CodeTao
 
     public static class RandomUtil
     {
+        public static Random rand => Global.Instance.Random;
+        
         public static int GetRandomWeightedIndex(List<int> list)
         {
             int totalWeight = list.Sum();
-            int randomValue = Global.Instance.Random.Next(totalWeight);
+            int randomValue = rand.Next(totalWeight);
 
             for (int i = 0; i < list.Count; i++)
             {
@@ -101,6 +104,30 @@ namespace CodeTao
             }
 
             return result;
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static Vector3 GetRandomScreenPosition(float marginPercentage = 0.1f)
+        {
+            // Assuming you're using the main camera
+            Camera mainCamera = Camera.main;
+            
+            marginPercentage = Mathf.Clamp(marginPercentage, 0, 1);
+            
+            // Generate random x and y coordinates within the screen boundaries
+            float randomX = rand.Next((int)(Screen.width * (1 - marginPercentage)));
+            float randomY = rand.Next((int)(Screen.height * (1 - marginPercentage)));
+
+            // Convert screen coordinates to world coordinates
+            Vector3 randomScreenPosition = new Vector3(randomX, randomY, 10f); // 10f is the distance from the camera
+
+            // Convert screen position to world position
+            Vector3 randomWorldPosition = mainCamera.ScreenToWorldPoint(randomScreenPosition);
+
+            return randomWorldPosition;
         }
     }
 

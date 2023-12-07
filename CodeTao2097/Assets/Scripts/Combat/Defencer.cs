@@ -76,7 +76,7 @@ namespace CodeTao
             .Cast<ElementType>()
             .ToDictionary(key => key, value => 0.0f);
         
-        public BindableStat KnockBackFactor = new BindableStat();
+        public BindableStat KnockBackFactor = new BindableStat(1);
 
         #endregion
         

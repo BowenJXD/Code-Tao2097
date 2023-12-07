@@ -20,6 +20,5 @@ namespace CodeTao
             if (items == null || items.Count == 0) return null;
             return RandomUtil.GetRandomItems(items, count, item => item.GetWeight());
         }
-        
     }
 }

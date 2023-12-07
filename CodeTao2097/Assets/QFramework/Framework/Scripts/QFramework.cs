@@ -630,6 +630,30 @@ namespace QFramework
             return Register(Action);
             void Action(T _) => onEvent();
         }
+        
+        public static implicit operator float(BindableProperty<T> myObject)
+        {
+            if (typeof(T) == typeof(float))
+            {
+                return Convert.ToSingle(myObject.Value);
+            }
+            else
+            {
+                throw new InvalidCastException($"Cannot convert BindableProperty<{typeof(T)}> to float.");
+            }
+        }
+        
+        public static implicit operator int(BindableProperty<T> myObject)
+        {
+            if (typeof(T) == typeof(int))
+            {
+                return Convert.ToInt32(myObject.Value);
+            }
+            else
+            {
+                throw new InvalidCastException($"Cannot convert BindableProperty<{typeof(T)}> to int.");
+            }
+        }
     }
 
     public class BindablePropertyUnRegister<T> : IUnRegister

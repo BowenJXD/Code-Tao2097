@@ -93,7 +93,7 @@ namespace CodeTao
                     result += $" {attribute} {sign} {value * 100} %.";
                     break;
                 case EModifierType.Multiplicative:
-                    result += $" {attribute} * {value * 100} %.";
+                    result += $" {attribute} * {(1 + value) * 100} %.";
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -117,7 +117,8 @@ namespace CodeTao
         
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
         public BindableStat reloadTime = new BindableStat(0);
-        public float attackRange => ats[EWAt.Area].Value > 0? ats[EWAt.Area].Value : 10;
+        
+        public BindableProperty<float> attackRange = new BindableProperty<float>(10);
         
         [HideInInspector] public Attacker attacker;
         
@@ -149,7 +150,7 @@ namespace CodeTao
             fireLoop.Start();
             ats[EWAt.Cooldown].RegisterWithInitValue(interval =>
             {
-                fireLoop.LoopInterval = interval;
+                fireLoop.LoopInterval = ats[EWAt.Cooldown];
             }).UnRegisterWhenGameObjectDestroyed(this);
             
             // Add to inventory
@@ -228,7 +229,7 @@ namespace CodeTao
 
         public virtual void Attack(Defencer defencer)
         {
-            DamageManager.Instance.ExecuteDamage(damager, defencer, attacker);
+            Damage dmg = DamageManager.Instance.ExecuteDamage(damager, defencer, attacker);
         }
         
         
@@ -245,7 +246,7 @@ namespace CodeTao
             }
             else
             {
-                colliders = Physics2D.OverlapCircleAll(transform.position, attackRange).ToList();
+                colliders = Physics2D.OverlapCircleAll(transform.position, attackRange.Value).ToList();
             }
             
             SortedList<float, Defencer> targetDistances = new SortedList<float, Defencer>();

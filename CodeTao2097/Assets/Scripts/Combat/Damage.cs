@@ -23,8 +23,8 @@ namespace CodeTao
         public Damager Median { get; private set; }
         public Defencer Target { get; private set; }
         public Element DamageElement { get; private set; } = new Element();
-        
         public float Base { get; private set; }
+        public bool Dealt { get; private set; }
         
         public Dictionary<DamageSection, Dictionary<string, float>> DamageSections = DamageSection.GetValues(typeof(DamageSection))
             .Cast<DamageSection>()
@@ -59,6 +59,12 @@ namespace CodeTao
         public Damage SetBase(float value)
         {
             Base = value;
+            return this;
+        }
+        
+        public Damage SetDealt(bool value)
+        {
+            Dealt = value;
             return this;
         }
 
@@ -117,6 +123,11 @@ namespace CodeTao
             }
 
             return result;
+        }
+
+        public override string ToString()
+        {
+            return CalculateDamage().ToString();
         }
     }
 

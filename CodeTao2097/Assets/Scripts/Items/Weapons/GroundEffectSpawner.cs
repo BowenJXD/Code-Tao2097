@@ -23,8 +23,7 @@ namespace CodeTao
 
         public override Vector2 GetSpawnPoint(int spawnIndex)
         {
-            float r2 = Global.Instance.Random.Next(ats[EWAt.Area]);
-            Vector2 result = Util.GetRandomNormalizedVector() * r2;
+            Vector2 result = RandomUtil.GetRandomScreenPosition();
             if (spawnPoints.Count > 0)
             {
                 result = spawnPoints[_currentSpawnPointIndex];

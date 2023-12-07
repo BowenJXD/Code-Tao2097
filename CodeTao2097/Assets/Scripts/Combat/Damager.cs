@@ -10,7 +10,7 @@ namespace CodeTao
     {
         public ElementType DamageElementType = ElementType.None;
         public BindableStat DMG = new BindableStat();
-        public BindableStat KnockBackFactor = new BindableStat();
+        public BindableStat KnockBackFactor = new BindableStat(0);
         
         #region Condition
         

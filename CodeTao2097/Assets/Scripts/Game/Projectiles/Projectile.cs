@@ -14,6 +14,7 @@ namespace CodeTao
         [HideInInspector] public MoveController moveController;
         [HideInInspector] public Weapon weapon;
         public BindableProperty<float> lifeTime = new BindableProperty<float>(5f);
+        private LoopTask _lifeTimeTask;
         public BindableProperty<int> penetration = new BindableProperty<int>(1);
         protected List<Collider2D> penetratedCols = new List<Collider2D>();
 
@@ -32,12 +33,11 @@ namespace CodeTao
             transform.rotation = Quaternion.Euler(0, 0, Util.GetAngleFromVector(direction));
             
             // destroy when lifeTime is over
-            ActionKit.Delay(lifeTime.Value, () =>
-            {
-                Destroy();
-            }).Start(this);
-            
-            
+            // ActionKit.Delay(lifeTime.Value, Destroy).Start(this);
+            _lifeTimeTask = new LoopTask(this, lifeTime.Value, Destroy);
+            _lifeTimeTask.SetCountCondition(1);
+            _lifeTimeTask.Start();
+
             // change rigidbody2D's velocity when moveController's SPD or MovementDirection changed
             moveController.SPD.RegisterWithInitValue(value =>
             {
@@ -76,6 +76,7 @@ namespace CodeTao
         {
             onDestroy?.Invoke();
             onDestroy = null;
+            _lifeTimeTask.Pause();
         }
     }
 }
