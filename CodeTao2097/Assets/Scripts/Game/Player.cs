@@ -21,14 +21,27 @@ namespace CodeTao
 
 		private void Start()
 		{
+			// Change color after taking damage
 			Defencer.TakeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();
+				if (damage.Source)
+				{
+					Vector2 knockBackDirection = (transform.position - damage.Source.transform.position).normalized;
+					SelfRigidbody2D.AddForce(damage.Knockback * knockBackDirection,
+						ForceMode2D.Impulse);
+				}
+
 				ActionKit.Delay(Defencer.DMGCD, () =>
 				{
 					if (!this) return;
 					Sprite.color = Color.white;
 				}).Start(this);
+			};
+			
+			Defencer.OnDeath += (damage) =>
+			{
+				onDestroy?.Invoke();
 			};
 			
 			Inventory.AddAfter += (content) =>

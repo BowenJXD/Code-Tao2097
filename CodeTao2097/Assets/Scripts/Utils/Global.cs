@@ -18,8 +18,8 @@ namespace CodeTao
 
         public Random Random;
         
-        public static bool IsPass = false;
-        public static float GameDuration = 60;
+        public static BindableProperty<bool> IsPass = new BindableProperty<bool>(false);
+        public static BindableProperty<float> GameDuration = new BindableProperty<float>(60);
         public static BindableProperty<float> GameTime = new BindableProperty<float>(0);
         
         public UnityEvent OnGameStart = new UnityEvent();
@@ -28,11 +28,36 @@ namespace CodeTao
         {
             Random = new Random(RandomSeed);
             OnGameStart.Invoke();
+            
+            // pass the game when game time reaches the duration
+            GameTime.RegisterWithInitValue(value =>
+            {
+                if (value >= GameDuration)
+                {
+                    IsPass.Value = true;
+                }
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            
+            // open pass panel when game is passed
+            IsPass.RegisterWithInitValue(value =>
+            {
+                if (value)
+                {
+                    UIKit.OpenPanel<UIGamePassPanel>();
+                }
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            
+            // open game over panel when player is destroyed
+            Player.Instance.onDestroy += () =>
+            {
+                IsPass.Value = false;
+                UIKit.OpenPanel<UIGameOverPanel>();
+            };
         }
 
         public void Reset()
         {
-            IsPass = false;
+            IsPass.Value = new BindableProperty<bool>(false);
             GameTime = new BindableProperty<float>(0);
         }
     }

@@ -13,9 +13,12 @@ namespace CodeTao
 {
 	public partial class EnemyGenerator : ViewController
 	{
-		public List<UnitPool<Enemy>> EnemyPools = new List<UnitPool<Enemy>>();
+		protected List<UnitPool<Enemy>> enemyPools = new List<UnitPool<Enemy>>();
 		public List<Enemy> enemyPrefabs = new List<Enemy>();
 		public List<GeneratorTask> tasks = new List<GeneratorTask>();
+		
+		protected ObjectPool<ParticleSystem> deathFXPool;
+		public ParticleSystem deathFX;
 		
 		public float minDistance = 10;
 		public float maxDistance = 20;
@@ -25,8 +28,26 @@ namespace CodeTao
 			for (int i = 0; i < enemyPrefabs.Count; i++)
 			{
 				UnitPool<Enemy> enemyPool = new UnitPool<Enemy>(enemyPrefabs[i]);
-				EnemyPools.Add(enemyPool);
+				enemyPools.Add(enemyPool);
 			}
+			
+			deathFXPool = new ObjectPool<ParticleSystem>(() =>
+			{
+				ParticleSystem particleSystem = Instantiate(deathFX);
+				return particleSystem;
+			}, prefab =>
+			{
+				prefab.gameObject.SetActive(true);
+				prefab.Play();
+			}
+			, prefab =>
+			{
+				prefab.gameObject.SetActive(false);
+				prefab.Stop();
+				prefab.Clear();
+			}
+			, prefab => { Destroy(prefab); }
+			, true, 4);
 		}
 
 		void Start()
@@ -56,22 +77,23 @@ namespace CodeTao
 		public void ProcessTask(int index)
 		{
 			if (!Player.Instance) return;
-			if (index < EnemyPools.Count)
+			if (index < enemyPools.Count)
 			{
 				float randomDistance = Random.Range(minDistance, maxDistance);
 				float randomAngle = Random.Range(0f, 360f);
 				Vector3 spawnDirection = Quaternion.Euler(0f, 0f, randomAngle) * Vector2.right;
 				Vector3 spawnPosition = Player.Instance.transform.position + spawnDirection * randomDistance;
 				
-				Enemy enemy = EnemyPools[index].Get().Position(spawnPosition).Parent(transform).Show();
-				enemy.Defencer.OnDeath += ((damage) =>
+				Enemy enemy = enemyPools[index].Get().Position(spawnPosition).Parent(transform);
+				enemy.onDestroy += () =>
 				{
-					EnemyPools[index].Release(enemy);
-				});
+					enemyPools[index].Release(enemy);
+					deathFXPool.Get().Position(enemy.transform.position).Parent(transform);
+				};
 			}
 			else
 			{
-				Debug.LogError($"Index {index} / {EnemyPools.Count} is out of range!");
+				Debug.LogError($"Index {index} / {enemyPools.Count} is out of range!");
 			}
 		}
 	}

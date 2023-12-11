@@ -73,6 +73,7 @@ namespace CodeTao
 			{
 				Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, 0);
 				ExpGenerator.Instance.GenerateExpBall(EXPValue.Value, spawnPosition);
+				onDestroy?.Invoke();
 			};
 		}
 

@@ -17,6 +17,7 @@ namespace CodeTao
                 , prefab =>
                 {
                     prefab.gameObject.SetActive(false);
+                    prefab.onDestroy = null;
                 }
                 , prefab => { Object.Destroy(prefab); }
                 , true, defaultCapacity)
