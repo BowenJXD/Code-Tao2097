@@ -10,6 +10,7 @@ TagManager:
   - Collectable
   - BattleUnit
   - Blessing
+  - Weapon
   layers:
   - Default
   - TransparentFX

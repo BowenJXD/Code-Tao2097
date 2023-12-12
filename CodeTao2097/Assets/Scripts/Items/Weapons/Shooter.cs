@@ -24,19 +24,15 @@ namespace CodeTao
             damager = ShooterDamager;
         }
 
-        protected override void Start()
-        {
-            base.Start();
-            
-            UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
-        }
-
         public override Projectile SpawnUnit(Vector2 spawnPosition)
         {
             Projectile unit = base.SpawnUnit(spawnPosition);
-            unit.transform.parent = ProjectileManager.Instance.transform;
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
-            unit.Init(this, spawnPosition.normalized);
+            unit.Parent(ProjectileManager.Instance.transform)
+                .SetMovingDirection(spawnPosition.normalized)
+                .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(spawnPosition.normalized)))
+                .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]))
+                .Init(this);
             return unit;
         }
         
@@ -56,7 +52,7 @@ namespace CodeTao
 
         public Vector2 GetBaseDirection()
         {
-            Vector2 result = Util.GetRandomNormalizedVector();
+            Vector2 result = RandomUtil.GetRandomNormalizedVector();
             switch (aimWay)
             {
                 case EAimWay.AutoTargeting:
@@ -71,7 +67,7 @@ namespace CodeTao
                     result = _ownerMoveController.LastNonZeroDirection.Value;
                     break;
                 case EAimWay.Random:
-                    result = Util.GetRandomNormalizedVector();
+                    result = RandomUtil.GetRandomNormalizedVector();
                     break;
                 case EAimWay.Cursor:
                     result = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
@@ -79,17 +75,6 @@ namespace CodeTao
             }
 
             return result.normalized;
-        }
-        
-        public override void Upgrade(int lvlIncrement = 1)
-        {
-            base.Upgrade(lvlIncrement);
-            switch (LVL.Value)
-            {
-                default:
-                    damager.KnockBackFactor.AddModifier($"Level{LVL.Value}", 1, EModifierType.Additive, ERepetitionBehavior.AddStack);
-                    break;
-            }
         }
     }
 }

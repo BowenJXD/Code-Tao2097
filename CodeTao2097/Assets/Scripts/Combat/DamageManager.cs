@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace CodeTao
 {
     public class DamageManager : MonoSingleton<DamageManager>
     {
+        private List<Damage> _damagesLog = new List<Damage>();
+        
         public Action<Damage> damageAfter;
         
         public Defencer ColToDef(Damager damager, Collider2D col)
@@ -48,9 +51,46 @@ namespace CodeTao
             
             damager.DealDamage(damage);
             attacker?.DealDamageAfter?.Invoke(damage);
-            damageAfter?.Invoke(damage);
-            
+            if (damage.Dealt)
+            {
+                damageAfter?.Invoke(damage);
+                _damagesLog.Add(damage);
+            }
+
             return damage;
+        }
+
+        protected override void OnApplicationQuit()
+        {
+            base.OnApplicationQuit();
+            LogDamageStat();
+        }
+
+        public void LogDamageStat()
+        {
+            Dictionary<Damager, float> damagerStats = new Dictionary<Damager, float>();
+            foreach (var damage in _damagesLog)
+            {
+                Damager damager = damage.Median;
+                if (ComponentUtil.GetUnitController(damager) != Player.Instance)
+                {
+                    continue;
+                }
+                
+                if (!damagerStats.ContainsKey(damager))
+                {
+                    damagerStats.Add(damager, 0);
+                }
+                damagerStats[damager] += damage.GetDamageValue();
+            }
+            
+            string log = "";
+            foreach (var damagerStat in damagerStats)
+            {
+                log += $"{damagerStat.Key.name}: {damagerStat.Value}\n";
+            }
+            
+            LogKit.I(log);
         }
     }
 }

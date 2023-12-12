@@ -41,7 +41,7 @@ namespace CodeTao
 			
 			Defencer.OnDeath += (damage) =>
 			{
-				onDestroy?.Invoke();
+				Deinit();
 			};
 			
 			Inventory.AddAfter += (content) =>

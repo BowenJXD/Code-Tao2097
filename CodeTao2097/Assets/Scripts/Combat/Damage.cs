@@ -111,7 +111,7 @@ namespace CodeTao
             return this;
         }
         
-        public float CalculateDamage()
+        public float GetDamageValue()
         {
             float result = Base;
             foreach (var damageSection in DamageSections)
@@ -127,7 +127,7 @@ namespace CodeTao
 
         public override string ToString()
         {
-            return CalculateDamage().ToString();
+            return GetDamageValue().ToString();
         }
     }
 

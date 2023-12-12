@@ -44,7 +44,7 @@ namespace CodeTao
         {
             TextMeshProUGUI newText = floatingTextPool.Get();
             
-            float DMG = damage.CalculateDamage();
+            float DMG = damage.GetDamageValue();
             Color color = damage.DamageElement.GetColor();
             Vector2 position = damage.Target.transform.position;
             

@@ -26,22 +26,5 @@ namespace CodeTao
                 Attack(target);
             }
         }
-        
-        /*public override void Upgrade(int lvlIncrement = 1)
-        {
-            base.Upgrade(lvlIncrement);
-            switch (LVL.Value)
-            {
-                default:
-                    ats[EWAt.Area].AddModifier($"Level{LVL.Value}", 0.3f, EModifierType.MultiAdd, ERepetitionBehavior.AddStack);
-                    break;
-            }
-        }
-
-        public override string GetDescription()
-        {
-            string result = $"{GetType()}'s range + 30%";
-            return result;
-        }*/
     }
 }

@@ -32,7 +32,7 @@ namespace CodeTao
             this.weapon = weapon;
             damager = weapon.damager;
             
-            attackLoop = new LoopTask(this, attackInterval, AttackAll, Destroy);
+            attackLoop = new LoopTask(this, attackInterval, AttackAll, Deinit);
             attackLoop.SetTimeCondition(lifeTime);
             attackLoop.Start();
             
@@ -68,12 +68,6 @@ namespace CodeTao
             {
                 DamageManager.Instance.ExecuteDamage(damager, defencer, weapon? weapon.attacker : null);
             }
-        }
-        
-        public virtual void Destroy()
-        {
-            onDestroy?.Invoke();
-            onDestroy = null;
         }
     }
 }

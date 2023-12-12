@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using QFramework;
 using UnityEngine;
 
 namespace CodeTao
@@ -14,10 +15,11 @@ namespace CodeTao
         public override GroundEffect SpawnUnit(Vector2 spawnPosition)
         {
             GroundEffect unit = base.SpawnUnit(spawnPosition);
-            unit.transform.parent = GroundEffectManager.Instance.transform;
             unit.attackInterval.Value = ats[EWAt.Cooldown].Value;
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
-            unit.Init(this);
+            unit.Parent(GroundEffectManager.Instance.transform)
+                .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]))
+                .Init(this);
             return unit;
         }
 
@@ -53,26 +55,9 @@ namespace CodeTao
                         break;
                 }
             }
-            Vector2 randomOffset = Util.GetRandomNormalizedVector() * spawnPointMaxOffset * Global.Instance.Random.Next(1);
+            Vector2 randomOffset = RandomUtil.GetRandomNormalizedVector() * spawnPointMaxOffset * Global.Instance.Random.Next(1);
             result = result + randomOffset;
             return result;
         }
-
-        /*public override void Upgrade(int lvlIncrement = 1)
-        {
-            base.Upgrade(lvlIncrement);
-            switch (LVL.Value)
-            {
-                default:
-                    ats[EWAt.Cooldown].AddModifier($"Level{LVL.Value}", 1 - 0.1f, EModifierType.Multiplicative, ERepetitionBehavior.NewStack);
-                    break;
-            }
-        }
-
-        public override string GetDescription()
-        {
-            string result = $"{GetType()}'s attack interval - 10%";
-            return result;
-        }*/
     }
 }

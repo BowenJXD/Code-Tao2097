@@ -1,4 +1,4 @@
-// Generate Id:9537c047-8297-476d-a3dc-3277c91d6bea
+// Generate Id:48ae1483-f8cf-444f-849e-5fec4b923004
 using UnityEngine;
 
 namespace CodeTao
@@ -11,8 +11,6 @@ namespace CodeTao
 		public SpriteRenderer Sprite;
 
 		public CodeTao.MoveController MoveController;
-
-		public UnityEngine.Rigidbody2D SelfRigidbody2D;
 
 	}
 }

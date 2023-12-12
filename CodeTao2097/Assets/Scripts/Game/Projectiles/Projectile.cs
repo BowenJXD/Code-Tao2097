@@ -9,45 +9,56 @@ namespace CodeTao
     public partial class Projectile : UnitController
     {
         [HideInInspector] public Rigidbody2D rb2D;
-        [HideInInspector] public Damager damager;
         [HideInInspector] public Collider2D col2D;
         [HideInInspector] public MoveController moveController;
         [HideInInspector] public Weapon weapon;
+        [HideInInspector] public Damager damager;
         public BindableProperty<float> lifeTime = new BindableProperty<float>(5f);
         private LoopTask _lifeTimeTask;
+        
+        /// <summary>
+        /// The number of individual targets that the projectile can penetrate, when reached, the projectile will be destroyed.
+        /// If <= 0, the projectile will not be destroyed.
+        /// </summary>
         public BindableProperty<int> penetration = new BindableProperty<int>(1);
         protected List<Collider2D> penetratedCols = new List<Collider2D>();
 
         protected virtual void Awake()
         {
-            rb2D = SelfRigidbody2D;
+            rb2D = GetComponent<Rigidbody2D>();
             col2D = PjtlCollider;
             moveController = MoveController;
         }
         
-        public virtual void Init(Weapon weapon, Vector2 direction)
+        public Projectile SetMovingDirection(Vector2 direction)
+        {
+            moveController.MovementDirection.Value = direction;
+            return this;
+        }
+        
+        public virtual void Init(Weapon weapon)
         {
             this.weapon = weapon;
             damager = weapon.damager;
-            moveController.MovementDirection.Value = direction;
-            transform.rotation = Quaternion.Euler(0, 0, Util.GetAngleFromVector(direction));
             
             // destroy when lifeTime is over
-            // ActionKit.Delay(lifeTime.Value, Destroy).Start(this);
-            _lifeTimeTask = new LoopTask(this, lifeTime.Value, Destroy);
+            _lifeTimeTask = new LoopTask(this, lifeTime.Value, Deinit);
             _lifeTimeTask.SetCountCondition(1);
             _lifeTimeTask.Start();
 
-            // change rigidbody2D's velocity when moveController's SPD or MovementDirection changed
-            moveController.SPD.RegisterWithInitValue(value =>
+            if (rb2D)
             {
-                rb2D.velocity = moveController.MovementDirection.Value * value;
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            moveController.MovementDirection.RegisterWithInitValue(value =>
-            {
-                rb2D.velocity = moveController.SPD * value;
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            
+                // change rigidbody2D's velocity when moveController's SPD or MovementDirection changed
+                moveController.SPD.RegisterWithInitValue(value =>
+                {
+                    rb2D.velocity = moveController.MovementDirection.Value * value;
+                }).UnRegisterWhenGameObjectDestroyed(this);
+                moveController.MovementDirection.RegisterWithInitValue(value =>
+                {
+                    rb2D.velocity = moveController.SPD * value;
+                }).UnRegisterWhenGameObjectDestroyed(this);
+            }
+
             // attack when colliding with target
             col2D.OnTriggerEnter2DEvent(col =>
             {
@@ -55,11 +66,7 @@ namespace CodeTao
                 if (target)
                 {
                     Attack(target);
-                    penetratedCols.Add(col);
-                    if (penetration.Value <= penetratedCols.Count)
-                    {
-                        Destroy();
-                    }
+                    Penetrate(col);
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
@@ -72,10 +79,22 @@ namespace CodeTao
             }
         }
 
-        public virtual void Destroy()
+        public void Penetrate(Collider2D col)
         {
-            onDestroy?.Invoke();
-            onDestroy = null;
+            if (penetration <= 0)
+            {
+                return;
+            }
+            penetratedCols.Add(col);
+            if (penetration <= penetratedCols.Count)
+            {
+                Deinit();
+            }
+        }
+        
+        public override void Deinit()
+        {
+            base.Deinit();
             _lifeTimeTask.Pause();
         }
     }

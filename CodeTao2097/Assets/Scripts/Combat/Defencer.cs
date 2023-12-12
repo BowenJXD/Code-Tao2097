@@ -108,8 +108,12 @@ namespace CodeTao
 
             if (damage != null)
             {
-                float damageValue = damage.CalculateDamage();
-                AlterHP(-damageValue);
+                float damageValue = damage.GetDamageValue();
+                if (damageValue > 0)
+                {
+                    AlterHP(-damageValue);
+                    damage.SetDealt(true);
+                }
                 TakeDamageAfter?.Invoke(damage);
             }
             

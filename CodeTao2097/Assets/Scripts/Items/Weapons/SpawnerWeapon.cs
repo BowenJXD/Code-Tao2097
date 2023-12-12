@@ -41,7 +41,7 @@ namespace CodeTao
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="spawnPosition">The relative spawn position from transform</param>
+        /// <param name="spawnPosition">The spawn position relative to the transform</param>
         /// <returns></returns>
         public virtual T SpawnUnit(Vector2 spawnPosition)
         {
@@ -51,10 +51,14 @@ namespace CodeTao
                 pool.Release(unit);
             };
             unit.transform.position = transform.position + (Vector3)spawnPosition;
-            unit.transform.localScale = new Vector3(ats[EWAt.Area], ats[EWAt.Area]);
             return unit;
         }
-
+        
+        /// <summary>
+        /// Get the spawn position relative to the transform
+        /// </summary>
+        /// <param name="spawnIndex">The index of the spawning item in one fire event</param>
+        /// <returns></returns>
         public abstract Vector2 GetSpawnPoint(int spawnIndex);
     }
 }

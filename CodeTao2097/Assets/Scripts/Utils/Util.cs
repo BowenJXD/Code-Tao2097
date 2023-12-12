@@ -49,14 +49,6 @@ namespace CodeTao
             float angle = angle1 + angle2;
             return GetVectorFromAngle(angle);
         }
-        
-        public static Vector2 GetRandomNormalizedVector()
-        {
-            float randomAngle = Global.Instance.Random.Next(360);
-            Vector2 randomDirection = GetVectorFromAngle(randomAngle);
-        
-            return randomDirection;
-        }
     }
 
     public static class RandomUtil
@@ -128,6 +120,14 @@ namespace CodeTao
             Vector3 randomWorldPosition = mainCamera.ScreenToWorldPoint(randomScreenPosition);
 
             return randomWorldPosition;
+        }
+
+        public static Vector2 GetRandomNormalizedVector()
+        {
+            float randomAngle = Global.Instance.Random.Next(360);
+            Vector2 randomDirection = Util.GetVectorFromAngle(randomAngle);
+        
+            return randomDirection;
         }
     }
 

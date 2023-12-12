@@ -25,5 +25,5 @@ MonoBehaviour:
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
       partial class GameUIManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:eb2bb66a-7858-4c21-8fcc-568529cf887b\r\nusing UnityEngine;\r\n\r\nnamespace
+    DesignerCode: "// Generate Id:f527bb7a-3f70-473c-a3ec-7c6f191da6af\r\nusing UnityEngine;\r\n\r\nnamespace
       CodeTao\r\n{\r\n\tpublic partial class GameUIManager\r\n\t{\r\n\r\n\t}\r\n}\r\n"
