@@ -17,7 +17,8 @@ namespace CodeTao
         public int RandomSeed = 0;
 
         public Random Random;
-        
+
+        public float DefenceFactor = 10;
         public static BindableProperty<bool> IsPass = new BindableProperty<bool>(false);
         public static BindableProperty<float> GameDuration = new BindableProperty<float>(60);
         public static BindableProperty<float> GameTime = new BindableProperty<float>(0);

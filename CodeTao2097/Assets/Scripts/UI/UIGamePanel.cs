@@ -31,20 +31,20 @@ namespace CodeTao
 			// HP
 			defencer.HP.RegisterWithInitValue(hp =>
 			{
-				HpValue.text = hp.ToString();
+				HpValue.text = Math.Round(hp).ToString();
 				HPBar.value = hp / defencer.MaxHP.Value;
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			defencer.MaxHP.RegisterWithInitValue(maxHp =>
 			{
-				MaxHpValue.text = maxHp.ToString();
+				MaxHpValue.text = Math.Round(maxHp).ToString();
 				HPBar.value = defencer.HP.Value / maxHp;
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			// Experience
 			expController.EXP.RegisterWithInitValue(exp =>
 			{
-				ExpValue.text = exp.ToString();
+				ExpValue.text = Math.Round(exp).ToString();
 				EXPBar.value = exp / expController.RequiredEXP();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			

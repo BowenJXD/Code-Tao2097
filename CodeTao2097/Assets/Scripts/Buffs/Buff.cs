@@ -1,6 +1,9 @@
 ﻿using System;
 using CodeTao;
 using QFramework;
+using UnityEngine;
+using UnityEngine.Pool;
+using Object = UnityEngine.Object;
 
 namespace Buffs
 {
@@ -8,4 +11,5 @@ namespace Buffs
     {
         public LoopTask buffLoop;
     }
+    
 }

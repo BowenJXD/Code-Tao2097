@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public partial class Stinky : Weapon
+    public partial class Stinky : MeleeWeapon
     {
         protected override void Start()
         {
@@ -19,12 +19,12 @@ namespace CodeTao
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
-        public override void Fire()
+        /*public override void Fire()
         {
             foreach (var target in GetTargets(StinkyRange))
             {
                 Attack(target);
             }
-        }
+        }*/
     }
 }

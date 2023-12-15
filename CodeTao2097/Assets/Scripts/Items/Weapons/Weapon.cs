@@ -22,11 +22,9 @@ namespace CodeTao
         
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
         public BindableStat reloadTime = new BindableStat(0);
-        
         public BindableProperty<float> attackRange = new BindableProperty<float>(10);
         
         [HideInInspector] public Attacker attacker;
-        
         [HideInInspector] public Damager damager;
 
         protected LoopTask fireLoop;
@@ -40,7 +38,7 @@ namespace CodeTao
             damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
             ats[EWAt.Damage].RegisterWithInitValue(dmg =>
             {
-                damager.DMG.AddModifier("weapon", dmg, EModifierType.Additive, ERepetitionBehavior.Overwrite);
+                damager.DMG = ats[EWAt.Damage];
             }).UnRegisterWhenGameObjectDestroyed(this);
             
             // setup fire loop
@@ -57,6 +55,11 @@ namespace CodeTao
             {
                 fireLoop.LoopInterval = ats[EWAt.Cooldown];
             }).UnRegisterWhenGameObjectDestroyed(this);
+            
+            AddAfter += content =>
+            {
+                attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
+            };
             
             // Add to inventory
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
@@ -141,19 +144,25 @@ namespace CodeTao
         /// <summary>
         /// Get available targets in attackRange in ascending order of distance
         /// </summary>
-        /// <returns></returns>
-        public List<Defencer> GetTargets(Collider2D colUsed = null)
+        /// /// <param name="range">default to be attackRange</param>
+        /// <param name="colUsed"></param>
+        /// <returns>Sorted in ascending order of distance to the ordering position.</returns>
+        public List<Defencer> GetTargets(float range = 0, Collider2D colUsed = null)
         {
             List<Collider2D> colliders = new List<Collider2D>();
+            if (range == 0)
+            {
+                range = attackRange;
+            }
             if (colUsed)
             {
                 Physics2D.OverlapCollider(colUsed, new ContactFilter2D().NoFilter(), colliders);
             }
             else
             {
-                colliders = Physics2D.OverlapCircleAll(transform.position, attackRange.Value).ToList();
+                colliders = Physics2D.OverlapCircleAll(transform.position, range).ToList();
             }
-            
+
             SortedList<float, Defencer> targetDistances = new SortedList<float, Defencer>();
             foreach (var col in colliders)
             {

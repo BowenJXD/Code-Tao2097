@@ -90,7 +90,8 @@ namespace CodeTao
         public Damage ProcessDamage(Damage damage)
         {
             damage.SetTarget(this);
-            damage.SetDamageSection(DamageSection.TargetDEF, "", 1 / DEF.Value);
+            var def = DEF.Value;
+            damage.SetDamageSection(DamageSection.TargetDEF, "", def / (Global.Instance.DefenceFactor + def));
             damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;

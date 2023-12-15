@@ -19,24 +19,29 @@ namespace CodeTao
             if (result)
             {
                 Container = container;
+                OnAdd();
                 AddAfter?.Invoke(this);
             }
 
             return result;
         }
-        
+
+        public virtual void OnAdd(){}
+
         public virtual bool RemoveFromContainer(Container<T> container)
         {
             bool result = container.RemoveContent(this);
             if (result)
             {
                 Container = null;
+                OnRemove();
                 RemoveAfter?.Invoke(this);
             }
 
             return result;
         }
         
+        public virtual void OnRemove(){}
         
         public BindableProperty<int> LVL = new BindableProperty<int>(1);
 

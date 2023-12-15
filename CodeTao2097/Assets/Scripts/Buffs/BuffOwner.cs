@@ -15,9 +15,9 @@ namespace Buffs
 
         public void ClearBuff()
         {
-            foreach (var buff in Contents)
+            for (int i = Contents.Count - 1; i >= 0; i--)
             {
-                buff.RemoveFromContainer(this);
+                Contents[i].RemoveFromContainer(this);
             }
         }
     }

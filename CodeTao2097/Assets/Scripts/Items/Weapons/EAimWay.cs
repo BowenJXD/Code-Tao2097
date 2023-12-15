@@ -17,6 +17,10 @@
         /// <summary>
         /// Shoot to the cursor
         /// </summary>
-        Cursor
+        Cursor,
+        /// <summary>
+        /// Sequentially shoot to the spawn points
+        /// </summary>
+        Sequential
     }
 }

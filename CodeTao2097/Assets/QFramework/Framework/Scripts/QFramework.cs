@@ -475,6 +475,19 @@ namespace QFramework
         public void AddUnRegister(IUnRegister unRegister) => mUnRegisters.Add(unRegister);
 
         public void RemoveUnRegister(IUnRegister unRegister) => mUnRegisters.Remove(unRegister);
+        
+        /// <summary>
+        /// Implemented by Aaron
+        /// </summary>
+        private void OnDisable()
+        {
+            foreach (var unRegister in mUnRegisters)
+            {
+                unRegister.UnRegister();
+            }
+
+            mUnRegisters.Clear();
+        }
 
         private void OnDestroy()
         {

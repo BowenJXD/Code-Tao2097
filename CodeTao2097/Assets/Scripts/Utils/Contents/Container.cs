@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
     public abstract class Container<T> : ViewController where T : Content<T>
     {
-        public List<Content<T>> Contents;
+        [HideInInspector] public List<Content<T>> Contents;
 
         public Action<Content<T>> AddAfter;
 
@@ -71,7 +72,10 @@ namespace CodeTao
             return result;
         }
 
-        public virtual void ProcessAddedContent(Content<T> content) { }
+        public virtual void ProcessAddedContent(Content<T> content)
+        {
+            content.Parent(transform);
+        }
         
         /// <summary>
         /// Should only be invoked from Content

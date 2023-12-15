@@ -73,7 +73,7 @@ namespace CodeTao
                 angle += ShootingDirections[_currentDirectionIndex];
                 direction = Util.GetVectorFromAngle(angle);
             }
-            return direction * ats[EWAt.Area];
+            return direction * attackRange;
         }
     }
 }

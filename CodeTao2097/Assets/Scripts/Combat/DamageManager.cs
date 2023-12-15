@@ -72,7 +72,7 @@ namespace CodeTao
             foreach (var damage in _damagesLog)
             {
                 Damager damager = damage.Median;
-                if (ComponentUtil.GetUnitController(damager) != Player.Instance)
+                if (ComponentUtil.GetComponentInAncestors<UnitController>(damager) != Player.Instance)
                 {
                     continue;
                 }

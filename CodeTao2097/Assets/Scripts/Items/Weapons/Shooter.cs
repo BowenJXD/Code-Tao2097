@@ -22,6 +22,10 @@ namespace CodeTao
         private void Awake()
         {
             damager = ShooterDamager;
+            AddAfter += content =>
+            {
+                _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
+            };
         }
 
         public override Projectile SpawnUnit(Vector2 spawnPosition)
@@ -71,6 +75,9 @@ namespace CodeTao
                     break;
                 case EAimWay.Cursor:
                     result = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+                    break;
+                default:
+                    result = Vector2.right;
                     break;
             }
 

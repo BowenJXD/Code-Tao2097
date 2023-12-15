@@ -49,6 +49,29 @@ namespace CodeTao
             float angle = angle1 + angle2;
             return GetVectorFromAngle(angle);
         }
+        
+        /// <summary>
+        /// Find the 
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="vector2s"></param>
+        /// <returns></returns>
+        public static Vector2 FindNearestV2WithAngle(Vector2 target, Vector2 source, List<Vector2> vector2s)
+        {
+            Vector2 result = Vector2.zero;
+            float minAngle = float.MaxValue;
+            foreach (var vector2 in vector2s)
+            {
+                float angle = Vector2.Angle(target - source, vector2 - source);
+                if (angle < minAngle)
+                {
+                    minAngle = angle;
+                    result = vector2;
+                }
+            }
+
+            return result;
+        }
     }
 
     public static class RandomUtil
@@ -170,7 +193,14 @@ namespace CodeTao
 
             return null;
         }
-
+        
+        /// <summary>
+        /// /// Get component in descendants, including self, stop when maxDepth or UnitController is reached
+        /// </summary>
+        /// <param name="parent"></param>
+        /// <param name="maxDepth"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public static T GetComponentInDescendants<T>(Component parent, int maxDepth = int.MaxValue) where T : Component
         {
             return GetComponentInDescendants<T>(parent.transform, 0, maxDepth);
@@ -193,13 +223,12 @@ namespace CodeTao
                     return component;
                 }
                 
-                // Avoid UnitController
+                // Stop with UnitController unless the searching component is a subclass of UnitController
                 UnitController unitController = component as UnitController;
                 if (unitController && !typeof(T).IsSubclassOf(typeof(UnitController)))
                 {
                     return null;
                 }
-
 
                 // Recursively search the descendants with increased depth
                 T descendantComponent = GetComponentInDescendants<T>(child, currentDepth + 1, maxDepth);
@@ -213,6 +242,13 @@ namespace CodeTao
             return null;
         }
         
+        /// <summary>
+        /// Get component in ancestors, including self, stop when maxDepth or UnitController is reached
+        /// </summary>
+        /// <param name="child"></param>
+        /// <param name="maxDepth"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public static T GetComponentInAncestors<T>(Component child, int maxDepth = int.MaxValue) where T : Component
         {
             return GetComponentInAncestors<T>(child.transform, 0, maxDepth);
@@ -233,7 +269,7 @@ namespace CodeTao
                 return component;
             }
             
-            // Avoid UnitController
+            // Stop with UnitController unless the searching component is a subclass of UnitController
             UnitController unitController = component as UnitController;
             if (unitController && !typeof(T).IsSubclassOf(typeof(UnitController)))
             {
@@ -251,7 +287,7 @@ namespace CodeTao
         
         public static UnitController GetUnitController(Component component)
         {
-            return component.transform.parent.GetComponent<UnitController>();
+            return GetComponentInAncestors<UnitController>(component);
         }
     }
 }
