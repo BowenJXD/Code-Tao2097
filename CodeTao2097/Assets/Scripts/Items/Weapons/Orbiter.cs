@@ -44,22 +44,17 @@ namespace CodeTao
             {
                 transform.localScale = new Vector3(value, value);
             }).UnRegisterWhenGameObjectDestroyed(this);
-
-            ats[EWAt.Amount].RegisterWithInitValue(value =>
-            {
-                GenerateShootingDirections();
-            });
         }
 
-        #if UNITY_EDITOR
+        /*#if UNITY_EDITOR
         [UnityEditor.CustomEditor(typeof(Orbiter))]
-        public class RepeatTileControllerEditor : UnityEditor.Editor
+        public class OrbiterEditor : UnityEditor.Editor
         {
         	public override void OnInspectorGUI()
         	{
         		base.OnInspectorGUI();
         
-        		if (GUILayout.Button("Generate Shooting Directions"))
+        		if (GUILayout.Button("Generate Spawning Directions"))
         		{
         			var controller = target as Orbiter;
         			controller.GenerateShootingDirections();
@@ -70,15 +65,9 @@ namespace CodeTao
         
         public void GenerateShootingDirections()
         {
-            spawningDirections.Clear();
-            int count = ats[EWAt.Amount];
-            float angle = 360f / count;
-            for (int i = 0; i < count; i++)
-            {
-                spawningDirections.Add(angle * i);
-            }
-            LogKit.I("Generated ShootingDirections: " + spawningDirections);
-        }
+            spawningDirections = Util.GenerateAngles(ats[EWAt.Amount]);
+            LogKit.I("Generated SpawningDirections: " + spawningDirections);
+        }*/
         
         public override Projectile SpawnUnit(Vector2 spawnPosition)
         {
@@ -91,18 +80,22 @@ namespace CodeTao
             return unit;
         }
         
-        public override Vector2 GetSpawnPoint(int spawnIndex)
+        public override Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex)
         {
-            Vector2 direction = Vector2.zero;
+            float angle = Util.GetAngleFromVector(basePoint);
             if (spawningDirections.Count > 0)
             {
                 _currentDirectionIndex += 1;
                 _currentDirectionIndex %= spawningDirections.Count > 0 ? spawningDirections.Count : 1;
-                float angle = Util.GetAngleFromVector(direction);
                 angle += spawningDirections[_currentDirectionIndex];
-                direction = Util.GetVectorFromAngle(angle);
             }
-            return direction * attackRange;
+            else
+            {
+                float amount = ats[EWAt.Amount].Value;
+                angle = spawnIndex * 360 / amount;
+            }
+            
+            return Util.GetVectorFromAngle(angle) * AttackRange;
         }
     }
 }

@@ -28,7 +28,8 @@ namespace CodeTao
         [BoxGroup("Secondary Attributes")]
         public BindableStat reloadTime = new BindableStat(0);
         [BoxGroup("Secondary Attributes")]
-        public BindableProperty<float> attackRange = new BindableProperty<float>(10);
+        [ShowInInspector] private BindableProperty<float> attackRange = new BindableProperty<float>(10);
+        public virtual float AttackRange => attackRange.Value;
         
         [HideInInspector] public Attacker attacker;
         [HideInInspector] public Damager damager;
@@ -136,7 +137,7 @@ namespace CodeTao
             List<Collider2D> colliders = new List<Collider2D>();
             if (range == 0)
             {
-                range = attackRange;
+                range = AttackRange;
             }
             if (colUsed)
             {

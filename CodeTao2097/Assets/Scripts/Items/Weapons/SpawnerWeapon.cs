@@ -37,10 +37,12 @@ namespace CodeTao
         public override void Fire()
         {
             base.Fire();
-
+            
+            Vector2 baseDirection = GetBaseDirection();
             for (int i = 0; i < ats[EWAt.Amount].Value; i++)
             {
-                SpawnUnit(GetSpawnPoint(i));
+                Vector2 spawnPoint = GetSpawnPoint(baseDirection, i);
+                SpawnUnit(spawnPoint);
             }
         }
         
@@ -59,12 +61,15 @@ namespace CodeTao
             unit.transform.position = transform.position + (Vector3)spawnPosition;
             return unit;
         }
-        
+
         /// <summary>
         /// Get the spawn position relative to the transform
         /// </summary>
+        /// <param name="basePoint">The base point to modify from</param>
         /// <param name="spawnIndex">The index of the spawning item in one fire event</param>
         /// <returns></returns>
-        public abstract Vector2 GetSpawnPoint(int spawnIndex);
+        public abstract Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex);
+
+        public virtual Vector2 GetBaseDirection(){ return Vector2.zero; }
     }
 }

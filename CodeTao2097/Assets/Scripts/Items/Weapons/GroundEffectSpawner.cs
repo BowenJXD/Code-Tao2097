@@ -38,9 +38,10 @@ namespace CodeTao
             return unit;
         }
 
-        public override Vector2 GetSpawnPoint(int spawnIndex)
+        public override Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex)
         {
             Vector2 result = RandomUtil.GetRandomScreenPosition();
+            result += basePoint;
             switch (aimWay)
             {
                 case EAimWay.AutoTargeting:
@@ -59,12 +60,14 @@ namespace CodeTao
                     }
                     break;
                 case EAimWay.Owner:
-                    result = _ownerMoveController.LastNonZeroDirection.Value * attackRange;
-                    
                     // find the nearest spawn point in spawnPoints regarding to angle
                     if (spawnPoints.Count > 0)
                     {
                         result = spawnPoints.OrderBy(v => Vector2.Angle(result, v)).First();
+                    }
+                    else
+                    {
+                        result = _ownerMoveController.LastNonZeroDirection.Value * AttackRange;
                     }
                     break;
                 case EAimWay.Random:
@@ -73,14 +76,20 @@ namespace CodeTao
                         int r2 = Global.Instance.Random.Next(spawnPoints.Count);
                         result = spawnPoints[r2];
                     }
+                    else
+                    {
+                        result = RandomUtil.GetRandomScreenPosition();
+                    }
                     break;
                 case EAimWay.Cursor:
-                    result = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
-                    
                     // find the nearest spawn point in spawnPoints regarding to distance
                     if (spawnPoints.Count > 0)
                     {
                         result = spawnPoints.OrderBy(v => Vector2.Distance(result, v)).First();
+                    }
+                    else
+                    {
+                        result = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
                     }
                     break;
                 case EAimWay.Sequential:
@@ -93,8 +102,9 @@ namespace CodeTao
 
                     break;
             }
+            
             Vector2 randomOffset = RandomUtil.GetRandomNormalizedVector() * spawnPointMaxOffset * Global.Instance.Random.Next(1);
-            result = result + randomOffset;
+            result += randomOffset;
             return result;
         }
     }

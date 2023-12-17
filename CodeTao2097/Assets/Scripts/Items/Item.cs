@@ -29,6 +29,11 @@ namespace CodeTao
         public override void Upgrade(int lvlIncrement = 1)
         {
             base.Upgrade(lvlIncrement);
+            int newLevel = LVL.Value;
+            if (newLevel == MaxLVL)
+            {
+                weight.Value = 0;
+            }
         }
 
         public virtual string GetDescription()

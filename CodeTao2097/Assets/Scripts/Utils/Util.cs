@@ -72,6 +72,18 @@ namespace CodeTao
 
             return result;
         }
+        
+        public static List<float> GenerateAngles(float count, float startAngle = -180, float endAngle = 180)
+        {
+            List<float> result = new List<float>();
+            float step = (endAngle - startAngle) / count;
+            for (float angle = startAngle; angle < endAngle; angle += step)
+            {
+                result.Add(angle);
+            }
+
+            return result;
+        }
     }
 
     public static class RandomUtil

@@ -16,8 +16,8 @@ namespace CodeTao
         /// <summary>
         /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
         /// </summary>
-        [BoxGroup("Shooter")]
-        public List<float> ShootingDirections = new List<float>();
+        [FormerlySerializedAs("ShootingDirections")] [BoxGroup("Shooter")]
+        public List<float> shootingDirections = new List<float>();
         private int _currentDirectionIndex = 0;
         [BoxGroup("Shooter")]
         public float shootPointOffset = 1;
@@ -37,6 +37,29 @@ namespace CodeTao
             damager = ShooterDamager;
         }
 
+/*#if UNITY_EDITOR
+        [UnityEditor.CustomEditor(typeof(Shooter))]
+        public class ShooterEditor : UnityEditor.Editor
+        {
+            public override void OnInspectorGUI()
+            {
+                base.OnInspectorGUI();
+        
+                if (GUILayout.Button("Generate Spawning Directions"))
+                {
+                    var controller = target as Shooter;
+                    controller.GenerateShootingDirections();
+                }
+            }
+        }
+#endif
+        
+        public void GenerateShootingDirections()
+        {
+            shootingDirections = Util.GenerateAngles(ats[EWAt.Amount]);
+            LogKit.I("Generated SpawningDirections: " + shootingDirections);
+        }*/
+        
         public override Projectile SpawnUnit(Vector2 spawnPosition)
         {
             Projectile unit = base.SpawnUnit(spawnPosition);
@@ -50,21 +73,25 @@ namespace CodeTao
             return unit;
         }
         
-        public override Vector2 GetSpawnPoint(int spawnIndex)
+        public override Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex)
         {
-            Vector2 direction = GetBaseDirection();
-            if (ShootingDirections.Count > 0)
+            float angle = Util.GetAngleFromVector(basePoint);
+            if (shootingDirections.Count > 0)
             {
                 _currentDirectionIndex += 1;
-                _currentDirectionIndex %= ShootingDirections.Count > 0 ? ShootingDirections.Count : 1;
-                float angle = Util.GetAngleFromVector(direction);
-                angle += ShootingDirections[_currentDirectionIndex];
-                direction = Util.GetVectorFromAngle(angle);
+                _currentDirectionIndex %= shootingDirections.Count > 0 ? shootingDirections.Count : 1;
+                angle += shootingDirections[_currentDirectionIndex];
             }
-            return direction * shootPointOffset;
+            else
+            {
+                float amount = ats[EWAt.Amount].Value;
+                angle += spawnIndex * 360 / amount;
+            }
+            
+            return Util.GetVectorFromAngle(angle) * shootPointOffset;
         }
 
-        public Vector2 GetBaseDirection()
+        public override Vector2 GetBaseDirection()
         {
             Vector2 result = RandomUtil.GetRandomNormalizedVector();
             switch (aimWay)
