@@ -14,9 +14,9 @@ namespace CodeTao
         public BindableStat ATK = new BindableStat();
         public BindableStat CritRate = new BindableStat(); // 0% - 100%
         public BindableStat CritDamage = new BindableStat(); // %
-        public Dictionary<ElementType, float> ElementBonuses = ElementType.GetValues(typeof(ElementType))
+        public Dictionary<ElementType, BindableStat> ElementBonuses = ElementType.GetValues(typeof(ElementType))
             .Cast<ElementType>()
-            .ToDictionary(key => key, value => 0.0f);
+            .ToDictionary(key => key, value => new BindableStat(0));
 
         public Damage ProcessDamage(Damage damage)
         {

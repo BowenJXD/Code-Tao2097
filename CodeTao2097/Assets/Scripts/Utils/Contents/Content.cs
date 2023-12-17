@@ -1,5 +1,6 @@
 ﻿using System;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace CodeTao
@@ -7,15 +8,17 @@ namespace CodeTao
     [Serializable]
     public abstract class Content<T> : ViewController where T : Content<T>
     {
+        #region Add&Remove
+        
         [HideInInspector] public Container<T> Container;
 
         public Action<Content<T>> AddAfter;
 
         public Action<Content<T>> RemoveAfter;
 
-        public virtual bool AddToContainer(Container<T> container)
+        public virtual bool AddToContainer(Container<T> container, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
         {
-            bool result = container.AddContent(this);
+            bool result = container.AddContent(this, repetitionBehavior);
             if (result)
             {
                 Container = container;
@@ -43,9 +46,13 @@ namespace CodeTao
         
         public virtual void OnRemove(){}
         
-        public BindableProperty<int> LVL = new BindableProperty<int>(1);
-
-        public BindableProperty<int> MaxLVL = new BindableProperty<int>(10);
+        #endregion
+        
+        [TabGroup("Content")]
+        public BindableProperty<int> LVL = new BindableProperty<int>(0);
+        
+        [TabGroup("Content")]
+        public BindableProperty<int> MaxLVL = new BindableProperty<int>(9);
 
         public virtual bool Stack(Content<T> newContent)
         {
@@ -74,6 +81,16 @@ namespace CodeTao
         public virtual void Upgrade(int lvlIncrement = 1)
         {
             LVL.Value += lvlIncrement;
+        }
+        
+        public override bool Equals(object other)
+        {
+            return GetType() == other.GetType();
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

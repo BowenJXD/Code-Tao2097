@@ -16,10 +16,12 @@ namespace CodeTao
 		ItemManager itemManager;
 		List<ExpUpgradeBtn> btns = new List<ExpUpgradeBtn>();
 		ObjectPool<ExpUpgradeBtn> ExpUpBtnPool;
+		private Inventory _playerInventory;
 
 		private void Awake()
 		{
 			if (!itemManager) itemManager = ItemManager.Instance;
+			_playerInventory = Player.Instance.Inventory;
 			
 			ExpUpBtnPool = new ObjectPool<ExpUpgradeBtn>(
 				() =>
@@ -68,10 +70,15 @@ namespace CodeTao
 				btn.BtnText.text = item.GetDescription();
 				btn.UpgradeBtn.onClick.AddListener(() =>
 				{
-					Time.timeScale = 1.0f;
+					if (item.LVL == 0)
+					{
+						item.AddToContainer(_playerInventory);
+					}
 					item.Upgrade();
+					Time.timeScale = 1.0f;
 					this.Hide();
 				});
+
 				btns.Add(btn);
 			}
 		}

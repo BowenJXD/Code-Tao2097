@@ -7,9 +7,9 @@ namespace CodeTao
 {
     public partial class Stinky : MeleeWeapon
     {
-        protected override void Start()
+        public override void Init()
         {
-            base.Start();
+            base.Init();
             
             damager = StinkyDamager;
 

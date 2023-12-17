@@ -23,7 +23,7 @@ namespace Buffs.ElementBuffs
             MaxLVL.Value = 5;
             _damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
             Attacker attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
-            _damager.DMG.AddModifier("Attacker", attacker.ATK, EModifierType.Multiplicative);
+            _damager.DMG.AddModifier(attacker.ATK, EModifierType.Multiplicative, "Attacker");
             
             BuffOwner buffOwner = (BuffOwner) Container;
             

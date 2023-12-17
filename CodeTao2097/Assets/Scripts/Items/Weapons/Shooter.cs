@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using CodeTao;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,29 +10,38 @@ namespace CodeTao
 {
     public partial class Shooter : SpawnerWeapon<Projectile>
     {
+        [BoxGroup("Secondary Attributes")]
+        public BindableProperty<int> penetration = new BindableProperty<int>(1);
+        
         /// <summary>
         /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
         /// </summary>
+        [BoxGroup("Shooter")]
         public List<float> ShootingDirections = new List<float>();
         private int _currentDirectionIndex = 0;
+        [BoxGroup("Shooter")]
         public float shootPointOffset = 1;
+        [BoxGroup("Shooter")]
         public EAimWay aimWay = EAimWay.Random;
         
         private MoveController _ownerMoveController;
 
+        public override void OnAdd()
+        {
+            base.OnAdd();
+            _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
+        }
+
         private void Awake()
         {
             damager = ShooterDamager;
-            AddAfter += content =>
-            {
-                _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
-            };
         }
 
         public override Projectile SpawnUnit(Vector2 spawnPosition)
         {
             Projectile unit = base.SpawnUnit(spawnPosition);
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
+            unit.penetration = penetration;
             unit.Parent(ProjectileManager.Instance.transform)
                 .SetMovingDirection(spawnPosition.normalized)
                 .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(spawnPosition.normalized)))

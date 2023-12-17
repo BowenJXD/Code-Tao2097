@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,6 +10,8 @@ namespace CodeTao
 {
     public class Weapon : Item
     {
+        public ElementType elementType = ElementType.None;
+        
         [SerializeField]
         public SerializableDictionary<EWAt, BindableStat> ats = new SerializableDictionary<EWAt, BindableStat>()
         {
@@ -20,8 +23,11 @@ namespace CodeTao
             {EWAt.Area, new BindableStat(1).SetMinValue(0.1f)}
         };
         
+        [BoxGroup("Secondary Attributes")]
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
+        [BoxGroup("Secondary Attributes")]
         public BindableStat reloadTime = new BindableStat(0);
+        [BoxGroup("Secondary Attributes")]
         public BindableProperty<float> attackRange = new BindableProperty<float>(10);
         
         [HideInInspector] public Attacker attacker;
@@ -29,13 +35,19 @@ namespace CodeTao
 
         protected LoopTask fireLoop;
         
-        public List<UpgradeMod> upgradeMods = new List<UpgradeMod>();
+        public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
 
-        protected override void Start()
+        public override void OnAdd()
         {
-            base.Start();
-            
+            base.OnAdd();
+            attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
+        }
+
+        public override void Init()
+        {
+            base.Init();
             damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
+            damager.DamageElementType = elementType;
             ats[EWAt.Damage].RegisterWithInitValue(dmg =>
             {
                 damager.DMG = ats[EWAt.Damage];
@@ -55,26 +67,6 @@ namespace CodeTao
             {
                 fireLoop.LoopInterval = ats[EWAt.Cooldown];
             }).UnRegisterWhenGameObjectDestroyed(this);
-            
-            AddAfter += content =>
-            {
-                attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
-            };
-            
-            // Add to inventory
-            UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
-            if (unitController)
-            {
-                Container<Item> itemContainer = ComponentUtil.GetComponentInDescendants<Inventory>(unitController);
-                if (itemContainer != null)
-                {
-                    ActionKit.DelayFrame(1, () =>
-                    {
-                        if (!this) return;
-                        itemContainer.AddContent(this);
-                    }).Start(this);
-                }
-            }
         }
 
         public virtual void Fire()
@@ -99,17 +91,13 @@ namespace CodeTao
         {
             base.Upgrade(lvlIncrement);
             int newLevel = LVL.Value;
-            
-            // sort upgradeMods by minLevel in descending order
-            upgradeMods.Sort(UpgradeMod.Comparison());
-            
-            bool triggered = false;
+
             foreach (var mod in upgradeMods)
             {
-                if (mod.CheckCondition(newLevel, triggered))
+                if (mod.CheckCondition(newLevel))
                 {
-                    ats[mod.attribute].AddModifier($"Level{newLevel}", mod.value, mod.modType);
-                    triggered = true;
+                    ats[mod.attribute].AddModifier(mod.value, mod.modType, $"Level{newLevel}");
+                    if (mod.exclusive) break;
                 }
             }
         }
@@ -119,20 +107,16 @@ namespace CodeTao
             List<string> result = new List<string>();
             int newLevel = LVL.Value + 1;
             
-            // sort upgradeMods by minLevel in descending order
-            upgradeMods.Sort(UpgradeMod.Comparison());
-            
-            bool triggered = false;
             foreach (var mod in upgradeMods)
             {
-                if (mod.CheckCondition(newLevel, triggered))
+                if (mod.CheckCondition(newLevel))
                 {
-                    result.Add($"{GetType().Name} ({newLevel})" + mod.GetDescription());
-                    triggered = true;
+                    result.Add(mod.GetDescription());
+                    if (mod.exclusive) break;
                 }
             }
             
-            return result.StringJoin("\n");
+            return base.GetDescription() + result.StringJoin("\n");
         }
 
         public virtual void Attack(Defencer defencer)

@@ -1,26 +1,40 @@
 ﻿using System;
 using QFramework;
+using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace CodeTao
 {
     public abstract class Item : Content<Item>
     {
-        protected virtual void Start()
+        [BoxGroup("Content")]
+        public BindableStat weight = new BindableStat(10);
+
+        public override void OnAdd()
         {
-            LVL = new BindableProperty<int>(1);
-            MaxLVL = new BindableProperty<int>(10);
+            base.OnAdd();
+            Init();
         }
 
-        public BindableStat weight = new BindableStat(10);
+        public virtual void Init()
+        {
+            gameObject.SetActive(true);
+        }
         
         public virtual int GetWeight()
         {
             return (int)weight.Value;
         }
 
+        public override void Upgrade(int lvlIncrement = 1)
+        {
+            base.Upgrade(lvlIncrement);
+        }
+
         public virtual string GetDescription()
         {
-            return $"{GetType()} ++";
+            int newLevel = LVL.Value + 1;
+            return $"{(newLevel == 1 ? "New!! " : "")} {GetType().Name} ({newLevel}): ";
         }
     }
 }

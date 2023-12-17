@@ -243,6 +243,49 @@ namespace CodeTao
         }
         
         /// <summary>
+        /// Get components in descendants, including self, stop when maxDepth or UnitController is reached
+        /// </summary>
+        /// <param name="parent"></param>
+        /// <param name="maxDepth"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static List<T> GetComponentsInDescendants<T>(Component parent, int maxDepth = int.MaxValue) where T : Component
+        {
+            List<T> components = new List<T>();
+            GetComponentsInDescendants(parent.transform, components, 0, maxDepth);
+            return components;
+        }
+
+        private static void GetComponentsInDescendants<T>(Transform parent, List<T> components, int currentDepth, int maxDepth) where T : Component
+        {
+            if (currentDepth > maxDepth)
+            {
+                return;
+            }
+
+            foreach (Transform child in parent)
+            {
+                T component = child.GetComponent<T>();
+
+                if (component != null)
+                {
+                    // Found a component, add it to the list
+                    components.Add(component);
+                }
+
+                // Stop with UnitController unless the searching component is a subclass of UnitController
+                UnitController unitController = component as UnitController;
+                if (unitController && !typeof(T).IsSubclassOf(typeof(UnitController)))
+                {
+                    return;
+                }
+
+                // Recursively search the descendants with increased depth
+                GetComponentsInDescendants(child, components, currentDepth + 1, maxDepth);
+            }
+        }
+        
+        /// <summary>
         /// Get component in ancestors, including self, stop when maxDepth or UnitController is reached
         /// </summary>
         /// <param name="child"></param>

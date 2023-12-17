@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.Serialization;
@@ -8,18 +9,23 @@ namespace CodeTao
 {
     public abstract class SpawnerWeapon<T> : Weapon where T : UnitController
     {
-        /// <summary>
-        /// Reload time = cooldown / reloadCoolDownRatio
-        /// </summary>
-        public BindableProperty<float> coolDownReloadRatio = new BindableProperty<float>(0.5f);
-        
         public T unitPrefab;
         protected UnitPool<T> pool;
 
-        protected override void Start()
+        /// <summary>
+        /// Reload time = cooldown / reloadCoolDownRatio
+        /// </summary>
+        [BoxGroup("Secondary Attributes")]
+        public BindableProperty<float> coolDownReloadRatio = new BindableProperty<float>(0.5f);
+
+        public override void Init()
         {
-            base.Start();
-            
+            base.Init();
+
+            if (!unitPrefab)
+            {
+                unitPrefab = ComponentUtil.GetComponentInDescendants<T>(this);
+            }
             pool = new UnitPool<T>(unitPrefab);
             
             ats[EWAt.Cooldown].RegisterWithInitValue(cooldown =>

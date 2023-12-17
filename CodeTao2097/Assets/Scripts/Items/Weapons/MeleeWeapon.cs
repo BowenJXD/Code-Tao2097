@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace CodeTao
@@ -9,6 +10,7 @@ namespace CodeTao
         /// <summary>
         /// 0 - 360
         /// </summary>
+        [BoxGroup("Secondary Attributes")]
         public BindableStat angularRange = new BindableStat(1).SetMaxValue(360f);
         /// <summary>
         /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
@@ -20,12 +22,10 @@ namespace CodeTao
         
         private MoveController _ownerMoveController;
 
-        private void Awake()
+        public override void OnAdd()
         {
-            AddAfter += content =>
-            {
-                _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
-            };
+            base.OnAdd();
+            _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
         }
 
         public override void Fire()

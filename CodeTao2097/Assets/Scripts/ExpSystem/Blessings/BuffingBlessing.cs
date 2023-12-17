@@ -23,6 +23,7 @@ namespace CodeTao
 
         public void ApplyBuff(Damage damage)
         {
+            if (damage.Target.IsDead) return;
             BuffOwner target = ComponentUtil.GetComponentFromUnit<BuffOwner>(damage.Target);
             if (target && CheckCondition(damage))
             {

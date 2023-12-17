@@ -44,14 +44,14 @@ namespace CodeTao
 				Deinit();
 			};
 			
-			Inventory.AddAfter += (content) =>
+			/*Inventory.AddAfter += (content) =>
 			{
 				Weapon weapon = (Weapon) content;
 				if (weapon)
 				{
 					weapon.attacker = Attacker;
 				}
-			};
+			};*/
 		}
 
 		public Vector2 GetMovementDirection()

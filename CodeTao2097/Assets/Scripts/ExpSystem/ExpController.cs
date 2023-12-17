@@ -9,6 +9,8 @@ namespace CodeTao
         public BindableProperty<float> EXP = new BindableProperty<float>(0);
         
         public BindableProperty<int> LVL = new BindableProperty<int>(1);
+        
+        public BindableStat EXPRate = new BindableStat(1);
 
         private void Start()
         {
@@ -24,7 +26,7 @@ namespace CodeTao
         
         public float AlterEXP(float exp)
         {
-            float result = exp + EXP.Value;
+            float result = exp * EXPRate + EXP.Value;
             while (result >= RequiredEXP())
             {
                 result -= RequiredEXP(); 

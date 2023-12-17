@@ -8,9 +8,10 @@
         Amount,
         Duration,
         Speed
+        // range
     }
 
-    public enum EItemAttributes
+    public enum EAAt
     {
         ATK,
         DEF,
@@ -18,5 +19,18 @@
         SPD,
         CritRate,
         CritDamage,
+        AllElementBON,
+        MetalElementBON,
+        WoodElementBON,
+        WaterElementBON,
+        FireElementBON,
+        EarthElementBON,
+        AllElementRES,
+        MetalElementRES,
+        WoodElementRES,
+        WaterElementRES,
+        FireElementRES,
+        EarthElementRES,
+        EXPBonus,
     }
 }

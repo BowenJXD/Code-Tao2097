@@ -40,7 +40,7 @@ namespace CodeTao
         {
             this.weapon = weapon;
             damager = weapon.damager;
-            
+
             // destroy when lifeTime is over
             _lifeTimeTask = new LoopTask(this, lifeTime.Value, Deinit);
             _lifeTimeTask.SetCountCondition(1);

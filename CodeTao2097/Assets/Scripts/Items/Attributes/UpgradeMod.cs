@@ -1,76 +1,51 @@
 ﻿using System;
-using UnityEngine;
+using QFramework;
 
 namespace CodeTao
 {
-    [Serializable]
-    public class UpgradeMod
+    public abstract class UpgradeMod
     {
         /// <summary>
-        /// Minimum level (inclusive) to unlock this modifier, 0 for default, negative to be overriden.
+        /// Each digit in levels represents a level of upgrade, "" to include all levels > 1, 0 to include all levels, -x to include all levels > x.
         /// </summary>
-        public int minLevel = 0;
+        public string levels = "";
         /// <summary>
-        /// Maximum level (inclusive) to unlock this modifier, 0 for default, negative to be overriden.
+        /// If exclusive, stop checking other mods when this mod is triggered.
         /// </summary>
-        public int maxLevel = 0;
-        public EWAt attribute;
-        public EModifierType modType;
+        public bool exclusive = true;
         public float value;
+        public EModifierType modType;
+
+        public abstract string GetAttribute();
         
-        public bool CheckCondition(int level, bool triggered = false)
+        public bool CheckCondition(int level)
         {
             bool result = false;
-            maxLevel = Mathf.Abs(maxLevel) < Mathf.Abs(minLevel) ? minLevel : maxLevel;
-            if (triggered)
+
+            int levelDigit = -1;
+            if (levels != "")
             {
-                if (minLevel > 0 && maxLevel > 0)
-                {
-                    if (level >= Mathf.Abs(minLevel) && level <= Mathf.Abs(maxLevel))
-                    {
-                        result = true;
-                    }
-                }
+                int.TryParse(levels, out levelDigit);
+            }
+
+            if (levelDigit <= 0)
+            {
+                result = level > -levelDigit;
             }
             else
             {
-                if (level >= Mathf.Abs(minLevel) && level <= Mathf.Abs(maxLevel))
+                foreach (char c in levels)
                 {
-                    result = true;
-                }
-
-                if (minLevel == 0 && maxLevel == 0)
-                {
-                    result = true;
+                    int digit = c - '0';
+                    if (digit == level)
+                    {
+                        result = true;
+                        break;
+                    }
                 }
             }
 
             return result;
-        }
-        
-        public static Comparison<UpgradeMod> Comparison()
-        {
-            return (a, b) =>
-            {
-                int absMinLevelComparison = Mathf.Abs(b.minLevel).CompareTo(Mathf.Abs(a.minLevel));
-
-                if (absMinLevelComparison == 0)
-                {
-                    // If absolute minLevels are equal, positive comes before negative
-                    return b.minLevel.CompareTo(a.minLevel);
-                }
-                else
-                {
-                    return absMinLevelComparison;
-                }
-            };
-        }
-
-        public BindableStat AddModifier(BindableStat stat, int newLevel)
-        {
-            stat.AddModifier($"Level{newLevel}", value, modType);
-
-            return stat;
         }
 
         public string GetDescription()
@@ -80,16 +55,16 @@ namespace CodeTao
             switch (modType)
             {
                 case EModifierType.Basic:
-                    result += $" base {attribute} {sign} {value}.";
+                    result += $" base {GetAttribute()} {sign} {value}.";
                     break; 
                 case EModifierType.Additive:
-                    result += $" {attribute} {sign} {value}.";
+                    result += $" {GetAttribute()} {sign} {value}.";
                     break;
                 case EModifierType.MultiAdd:
-                    result += $" {attribute} {sign} {value * 100} %.";
+                    result += $" {GetAttribute()} {sign} {value * 100} %.";
                     break;
                 case EModifierType.Multiplicative:
-                    result += $" {attribute} * {(1 + value) * 100} %.";
+                    result += $" {GetAttribute()} * {(1 + value) * 100} %.";
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

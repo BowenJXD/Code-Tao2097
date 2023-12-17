@@ -11,8 +11,16 @@ namespace CodeTao
     {
         #region HP
         
-        public BindableProperty<float> HP;
+        public BindableStat HP = new BindableStat();
         public BindableStat MaxHP = new BindableStat();
+
+        private void Awake()
+        {
+            MaxHP.RegisterWithInitValue(value =>
+            {
+                HP.SetMaxValue(value);
+            }).UnRegisterWhenGameObjectDestroyed(this);
+        }
 
         private float SetHP(float value)
         {
@@ -27,6 +35,11 @@ namespace CodeTao
         private float AlterHP(float value)
         {
             return SetHP(HP.Value + value);
+        }
+
+        public void Revive()
+        {
+            HP.Value = MaxHP.Value;
         }
         
         #endregion
@@ -72,9 +85,9 @@ namespace CodeTao
         
         public BindableStat DEF = new BindableStat();
         
-        public Dictionary<ElementType, float> ElementResistances = ElementType.GetValues(typeof(ElementType))
+        public Dictionary<ElementType, BindableStat> ElementResistances = ElementType.GetValues(typeof(ElementType))
             .Cast<ElementType>()
-            .ToDictionary(key => key, value => 0.0f);
+            .ToDictionary(key => key, value => new BindableStat(0));
         
         public BindableStat KnockBackFactor = new BindableStat(1);
 

@@ -12,7 +12,7 @@ namespace CodeTao
 
         private void Start()
         {
-            items = FindObjectsOfType<Item>().ToList();
+            items = FindObjectsOfType<Item>(true).ToList();
         }
         
         public List<Item> GetRandomItems(int count)

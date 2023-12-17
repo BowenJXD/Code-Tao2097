@@ -2,27 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace CodeTao
 {
     public partial class GroundEffectSpawner : SpawnerWeapon<GroundEffect>
     {
+        [BoxGroup("GroundEffectCaster")]
         public List<Vector2> spawnPoints = new List<Vector2>();
         private int _currentSpawnPointIndex = 0;
+        [BoxGroup("GroundEffectCaster")]
         public EAimWay aimWay = EAimWay.Random;
-        
+        [BoxGroup("GroundEffectCaster")]
         public float spawnPointMaxOffset = 1;
+        [BoxGroup("GroundEffectCaster")]
         public bool rootToOwner = false;
         
         private MoveController _ownerMoveController;
 
-        private void Awake()
+        public override void OnAdd()
         {
-            AddAfter += content =>
-            {
-                _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
-            };
+            base.OnAdd();
+            _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
         }
 
         public override GroundEffect SpawnUnit(Vector2 spawnPosition)

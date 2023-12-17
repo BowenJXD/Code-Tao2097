@@ -68,6 +68,7 @@ namespace CodeTao
 
 		private void OnEnable()
 		{
+			Defencer.Revive();
 			// spawn experience ball
 			Defencer.OnDeath += damage =>
 			{
