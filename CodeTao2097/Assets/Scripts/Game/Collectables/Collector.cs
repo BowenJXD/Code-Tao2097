@@ -13,6 +13,18 @@ namespace CodeTao
 			{
 				CollectRange.radius = value;
 			}).UnRegisterWhenGameObjectDestroyed(this);
+			
+			CollectRange.OnTriggerEnter2DEvent(col =>
+			{
+				Collectable collectable = ComponentUtil.GetComponentFromUnit<Collectable>(col);
+				if (collectable)
+				{
+					if (collectable.ValidateCollect(CollectRange))
+					{
+						collectable.Collect();
+					}
+				}
+			}).UnRegisterWhenGameObjectDestroyed(this);
 		}
 	}
 }

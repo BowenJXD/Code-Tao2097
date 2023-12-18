@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
-    public class Collectable : ViewController
+    public class Collectable : UnitController
     {
         public List<ETag> collectingTags = new List<ETag>();
         

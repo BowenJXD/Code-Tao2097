@@ -15,8 +15,10 @@ namespace CodeTao
         public Action<Content<T>> AddAfter;
 
         public Action<Content<T>> RemoveAfter;
+        
+        public ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return;
 
-        public virtual bool AddToContainer(Container<T> container, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+        public virtual bool AddToContainer(Container<T> container)
         {
             bool result = container.AddContent(this, repetitionBehavior);
             if (result)
@@ -29,7 +31,13 @@ namespace CodeTao
             return result;
         }
 
-        public virtual void OnAdd(){}
+        public virtual void OnAdd()
+        {
+            if (LVL == 0)
+            {
+                Upgrade();
+            }
+        }
 
         public virtual bool RemoveFromContainer(Container<T> container)
         {

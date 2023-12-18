@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Buffs
+namespace CodeTao
 {
     public class BuffManager : MonoSingleton<BuffManager>
     {

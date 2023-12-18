@@ -1,10 +1,12 @@
-// Generate Id:3b1485fa-5112-4ebc-a7f8-26173d28ac90
+// Generate Id:a6e56ea3-52f1-480e-8481-976fef3027d4
 using UnityEngine;
 
 namespace CodeTao
 {
 	public partial class Player
 	{
+
+		public CodeTao.Inventory Inventory;
 
 		public SpriteRenderer Sprite;
 
@@ -16,13 +18,13 @@ namespace CodeTao
 
 		public CodeTao.ElementOwner ElementOwner;
 
-		public CodeTao.Inventory Inventory;
-
 		public CodeTao.Collector Collector;
 
 		public CodeTao.ExpController ExpController;
 
-		public Buffs.BuffOwner SelfBuffOwner;
+		public CodeTao.BuffOwner SelfBuffOwner;
+
+		public CodeTao.AttributeController SelfAttributeController;
 
 		public UnityEngine.Rigidbody2D SelfRigidbody2D;
 

@@ -36,6 +36,8 @@ namespace CodeTao
             return _modifiers[modifierType];
         }
 
+        public Action onChanged;
+        
         public bool AddModifier(float value, EModifierType modifierType, string name = "", 
             ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
         {
@@ -76,12 +78,26 @@ namespace CodeTao
                 result = modifiers.TryAdd(name, value);
             }
 
+            if (result)
+            {
+                onChanged?.Invoke();
+            }
+
             return result;
         }
         
-        public bool RemoveModifier(string name, EModifierType modifierType)
+        public bool RemoveModifier(EModifierType modifierType, string name = "")
         {
-            bool result = _modifiers[modifierType].Remove(name);
+            bool result = false;
+            if (name == "")
+            {
+                result = _modifiers[modifierType].Count > 0;
+                _modifiers[modifierType].Clear();
+            }
+            else
+            {
+                result = _modifiers[modifierType].Remove(name);
+            }
             return result;
         }
         
@@ -107,11 +123,13 @@ namespace CodeTao
         public BindableStat()
         {
             _initValue = mValue;
+            _modiferGroup.onChanged += () => { mOnValueChanged?.Invoke(Value); };
         }
         
         public BindableStat(float value) : base(value)
         {
             _initValue = mValue;
+            _modiferGroup.onChanged += () => { mOnValueChanged?.Invoke(Value); };
         }
         
         public BindableStat SetMinValue(float value)
@@ -138,10 +156,10 @@ namespace CodeTao
             return result;
         }
 
-        public bool RemoveModifier(string name, EModifierType modifierType)
+        public bool RemoveModifier(EModifierType modifierType, string name = "")
         {
             bool result = false;
-            result = _modiferGroup.RemoveModifier(name, modifierType);
+            result = _modiferGroup.RemoveModifier(modifierType, name);
 
             if (result)
             {
@@ -157,6 +175,7 @@ namespace CodeTao
             if (!_otherModGroups.Contains(modifierGroup))
             {
                 _otherModGroups.Add(modifierGroup);
+                modifierGroup.onChanged += () => { mOnValueChanged?.Invoke(Value); };
                 result = true;
             }
 
@@ -169,6 +188,7 @@ namespace CodeTao
             if (_otherModGroups.Contains(modifierGroup))
             {
                 _otherModGroups.Remove(modifierGroup);
+                modifierGroup.onChanged -= () => { mOnValueChanged?.Invoke(Value); };
                 result = true;
             }
 
@@ -199,6 +219,7 @@ namespace CodeTao
         public void Reset()
         {
             _modiferGroup.Clear();
+            _otherModGroups.Clear();
 
             Value = _initValue;
         }

@@ -8,8 +8,14 @@ namespace CodeTao
     {
         public List<ArtefactUpgradeMod> upgradeMods = new List<ArtefactUpgradeMod>();
         
-        public Inventory inventory => Container as Inventory;
-        
+        public AttributeController attributeController;
+
+        public override void OnAdd()
+        {
+            base.OnAdd();
+            attributeController = ComponentUtil.GetComponentFromUnit<AttributeController>(Container);
+        }
+
         public override void Upgrade(int lvlIncrement = 1)
         {
             base.Upgrade(lvlIncrement);
@@ -19,7 +25,7 @@ namespace CodeTao
             {
                 if (mod.CheckCondition(newLevel))
                 {
-                    inventory.AddArtefactModifier(mod.attribute, mod.value, mod.modType, $"{GetType().Name} Level{newLevel}");
+                    attributeController?.AddArtefactModifier(mod.attribute, mod.value, mod.modType, $"{GetType().Name} Level{newLevel}");
                     if (mod.exclusive) break;
                 }
             }

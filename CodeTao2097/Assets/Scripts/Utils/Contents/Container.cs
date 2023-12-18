@@ -38,21 +38,18 @@ namespace CodeTao
                 switch (repetitionBehavior)
                 {
                     case ERepetitionBehavior.Return:
-                        result = false;
                         break;
                     case ERepetitionBehavior.Overwrite:
                         matches.ForEach(delegate(Content<T> content)
                         {
                             Contents.Remove(content);
                         });
-                        Contents.Add(newContent);
                         result = true;
                         break;
                     case ERepetitionBehavior.AddStack:
-                        result = matches[0].Stack(newContent);
+                        matches[0].Stack(newContent);
                         break;
                     case ERepetitionBehavior.NewStack:
-                        Contents.Add(newContent);
                         result = true;
                         break;
                 }
@@ -65,6 +62,7 @@ namespace CodeTao
 
             if (result)
             {
+                Contents.Add(newContent);
                 AddAfter?.Invoke(newContent);
                 ProcessAddedContent(newContent);
             }

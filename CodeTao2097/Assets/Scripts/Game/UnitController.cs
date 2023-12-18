@@ -3,7 +3,7 @@ using QFramework;
 
 namespace CodeTao
 {
-    public class UnitController : ViewController
+    public abstract class UnitController : ViewController
     {
         public Action onInit;
         
@@ -19,5 +19,7 @@ namespace CodeTao
             onDestroy?.Invoke();
             onDestroy = null;
         }
+        
+        public virtual void AddAAtMod(EAAt at, ModifierGroup modGroup){}
     }
 }

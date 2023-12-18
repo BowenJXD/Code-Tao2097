@@ -74,7 +74,10 @@ namespace CodeTao
 					{
 						item.AddToContainer(_playerInventory);
 					}
-					item.Upgrade();
+					else
+					{
+						item.Upgrade();
+					}
 					Time.timeScale = 1.0f;
 					this.Hide();
 				});

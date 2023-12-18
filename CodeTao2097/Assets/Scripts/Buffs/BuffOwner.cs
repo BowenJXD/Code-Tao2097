@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using CodeTao;
 using QFramework;
+using UnityEngine;
 
-namespace Buffs
+namespace CodeTao
 {
     public class BuffOwner : Container<Buff>
     {
+        [HideInInspector] public AttributeController attributeController;
+        
         public void Start()
         {
+            attributeController = ComponentUtil.GetComponentFromUnit<AttributeController>(this);
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
             unitController.onDestroy += ClearBuff;
         }

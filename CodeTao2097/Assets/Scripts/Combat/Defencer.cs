@@ -83,7 +83,7 @@ namespace CodeTao
 
         #region Taking
         
-        public BindableStat DEF = new BindableStat();
+        public BindableStat DEF = new BindableStat().SetMinValue(0);
         
         public Dictionary<ElementType, BindableStat> ElementResistances = ElementType.GetValues(typeof(ElementType))
             .Cast<ElementType>()
@@ -104,7 +104,7 @@ namespace CodeTao
         {
             damage.SetTarget(this);
             var def = DEF.Value;
-            damage.SetDamageSection(DamageSection.TargetDEF, "", def / (Global.Instance.DefenceFactor + def));
+            damage.SetDamageSection(DamageSection.TargetDEF, "", 1 - def / (Global.Instance.DefenceFactor + def));
             damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;

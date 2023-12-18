@@ -1,16 +1,16 @@
-﻿using Buffs;
-using Buffs.ElementBuffs;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeTao
 {
     public class BuffingBlessing : Blessing
     {
+        public ElementType buffingElement;
+        
         [HideInInspector] public Attacker attacker;
         
         [HideInInspector] public Content<Buff> buffToApply;
 
-        private BuffPool<BurningBuff> _buffPool;
+        private BuffPool<Buff> _buffPool;
 
         public override void OnAdd()
         {
@@ -18,7 +18,7 @@ namespace CodeTao
             attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
             attacker.DealDamageAfter += ApplyBuff;
             buffToApply = ComponentUtil.GetComponentInDescendants<Buff>(this);
-            _buffPool = new BuffPool<BurningBuff>((BurningBuff) buffToApply);
+            _buffPool = new BuffPool<Buff>((Buff) buffToApply);
         }
 
         public void ApplyBuff(Damage damage)
@@ -27,14 +27,14 @@ namespace CodeTao
             BuffOwner target = ComponentUtil.GetComponentFromUnit<BuffOwner>(damage.Target);
             if (target && CheckCondition(damage))
             {
-                BurningBuff buff = _buffPool.Get();
+                Buff buff = _buffPool.Get();
                 buff.AddToContainer(target);
             }
         }
 
         public bool CheckCondition(Damage damage)
         {
-            return damage.DamageElement.Type == ElementType.Fire;
+            return damage.DamageElement.Type == buffingElement;
         }
     }
 }
