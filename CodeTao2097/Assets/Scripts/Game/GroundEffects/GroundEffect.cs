@@ -37,9 +37,16 @@ namespace CodeTao
            
         }
 
-        public virtual void Init(Weapon weapon)
+        public GroundEffect SetWeapon(Weapon newWeapon)
         {
-            this.weapon = weapon;
+            this.weapon = newWeapon;
+            return this;
+        }
+
+        public override void Init()
+        {
+            base.Init();
+            
             damager = weapon.damager;
             
             attackLoop = new LoopTask(this, attackInterval, AttackAll, Deinit);

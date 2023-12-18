@@ -28,7 +28,7 @@ namespace CodeTao
         [BoxGroup("Secondary Attributes")]
         public BindableStat reloadTime = new BindableStat(0);
         [BoxGroup("Secondary Attributes")]
-        [ShowInInspector] private BindableProperty<float> attackRange = new BindableProperty<float>(10);
+        [ShowInInspector] public BindableStat attackRange = new BindableStat(10);
         public virtual float AttackRange => attackRange.Value;
         
         [HideInInspector] public Attacker attacker;
@@ -97,9 +97,21 @@ namespace CodeTao
             {
                 if (mod.CheckCondition(newLevel))
                 {
-                    ats[mod.attribute].AddModifier(mod.value, mod.modType, $"Level{newLevel}");
+                    ModAttribute(mod);
                     if (mod.exclusive) break;
                 }
+            }
+        }
+        
+        public virtual void ModAttribute(WeaponUpgradeMod mod)
+        {
+            if (ats.Contains(mod.attribute))
+            {
+                ats[mod.attribute].AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
+            }
+            else if (mod.attribute == EWAt.Range)
+            {
+                attackRange.AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
             }
         }
         

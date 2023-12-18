@@ -136,30 +136,27 @@ namespace CodeTao
         /// <summary>
         /// 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A random relative position from the camera</returns>
         public static Vector3 GetRandomScreenPosition(float marginPercentage = 0.1f)
         {
-            // Assuming you're using the main camera
             Camera mainCamera = Camera.main;
+            float cameraHeight = 2 * mainCamera.orthographicSize;
+            float cameraWidth = cameraHeight * mainCamera.aspect;
             
-            marginPercentage = Mathf.Clamp(marginPercentage, 0, 1);
+            marginPercentage = Mathf.Clamp(1 - marginPercentage, 0, 1);
             
-            // Generate random x and y coordinates within the screen boundaries
-            float randomX = rand.Next((int)(Screen.width * (1 - marginPercentage)));
-            float randomY = rand.Next((int)(Screen.height * (1 - marginPercentage)));
+            float randomX = ((float)rand.NextDouble() * cameraWidth - cameraWidth / 2) * marginPercentage;
+            float randomY = ((float)rand.NextDouble() * cameraHeight - cameraHeight / 2) * marginPercentage;
 
-            // Convert screen coordinates to world coordinates
-            Vector3 randomScreenPosition = new Vector3(randomX, randomY, 10f); // 10f is the distance from the camera
-
-            // Convert screen position to world position
-            Vector3 randomWorldPosition = mainCamera.ScreenToWorldPoint(randomScreenPosition);
+            Vector3 randomWorldPosition = new Vector3(randomX, randomY, 10f); // 10f is the distance from the camera
+            // Vector3 randomWorldPosition = mainCamera.ScreenToWorldPoint(randomScreenPosition);
 
             return randomWorldPosition;
         }
 
         public static Vector2 GetRandomNormalizedVector()
         {
-            float randomAngle = Global.Instance.Random.Next(360);
+            float randomAngle = rand.Next(360);
             Vector2 randomDirection = Util.GetVectorFromAngle(randomAngle);
         
             return randomDirection;
@@ -213,20 +210,27 @@ namespace CodeTao
         /// <param name="maxDepth"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T GetComponentInDescendants<T>(Component parent, int maxDepth = int.MaxValue) where T : Component
+        public static T GetComponentInDescendants<T>(Component parent, bool includeDisabled = false, int maxDepth = int.MaxValue) where T : Component
         {
-            return GetComponentInDescendants<T>(parent.transform, 0, maxDepth);
+            return GetComponentInDescendants<T>(parent.transform, 0, maxDepth, includeDisabled);
         }
 
-        private static T GetComponentInDescendants<T>(Transform parent, int currentDepth, int maxDepth) where T : Component
+        private static T GetComponentInDescendants<T>(Transform parent, int currentDepth, int maxDepth, bool includeDisabled = false) where T : Component
         {
             if (currentDepth > maxDepth)
             {
                 return null;
             }
-
-            foreach (Transform child in parent)
+            
+            for (int i = 0; i < parent.childCount; i++)
             {
+                Transform child = parent.GetChild(i);
+                
+                if (!includeDisabled && child.gameObject.activeSelf == false)
+                {
+                    continue;
+                }
+                
                 T component = child.GetComponent<T>();
             
                 if (component != null)

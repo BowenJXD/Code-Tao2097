@@ -11,7 +11,7 @@ namespace CodeTao
     public partial class Shooter : SpawnerWeapon<Projectile>
     {
         [BoxGroup("Secondary Attributes")]
-        public BindableProperty<int> penetration = new BindableProperty<int>(1);
+        public BindableStat penetration = new BindableStat(1);
         
         /// <summary>
         /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
@@ -37,39 +37,18 @@ namespace CodeTao
             damager = ShooterDamager;
         }
 
-/*#if UNITY_EDITOR
-        [UnityEditor.CustomEditor(typeof(Shooter))]
-        public class ShooterEditor : UnityEditor.Editor
-        {
-            public override void OnInspectorGUI()
-            {
-                base.OnInspectorGUI();
-        
-                if (GUILayout.Button("Generate Spawning Directions"))
-                {
-                    var controller = target as Shooter;
-                    controller.GenerateShootingDirections();
-                }
-            }
-        }
-#endif
-        
-        public void GenerateShootingDirections()
-        {
-            shootingDirections = Util.GenerateAngles(ats[EWAt.Amount]);
-            LogKit.I("Generated SpawningDirections: " + shootingDirections);
-        }*/
-        
         public override Projectile SpawnUnit(Vector2 spawnPosition)
         {
             Projectile unit = base.SpawnUnit(spawnPosition);
-            unit.lifeTime.Value = ats[EWAt.Duration].Value;
-            unit.penetration = penetration;
             unit.Parent(ProjectileManager.Instance.transform)
-                .SetMovingDirection(spawnPosition.normalized)
                 .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(spawnPosition.normalized)))
                 .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]))
-                .Init(this);
+                .SetWeapon(this)
+                .SetPenetration(penetration)
+                .SetLifeTime(ats[EWAt.Duration])
+                .SetSPD(ats[EWAt.Speed])
+                .SetMovingDirection(spawnPosition.normalized)
+                .Init();
             return unit;
         }
         
@@ -119,6 +98,15 @@ namespace CodeTao
             }
 
             return result.normalized;
+        }
+
+        public override void ModAttribute(WeaponUpgradeMod mod)
+        {
+            base.ModAttribute(mod);
+            if (mod.attribute == EWAt.Penetration)
+            {
+                penetration.AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
+            }
         }
     }
 }

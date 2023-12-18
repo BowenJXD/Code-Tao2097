@@ -5,21 +5,28 @@ namespace CodeTao
 {
     public abstract class UnitController : ViewController
     {
+        /// <summary>
+        /// Called from UnitPool
+        /// </summary>
+        public virtual void PreInit(){}
+        
         public Action onInit;
         
+        /// <summary>
+        /// Set gameObject to be active
+        /// </summary>
         public virtual void Init()
         {
             onInit?.Invoke();
+            gameObject.SetActive(true);
         }
         
-        public Action onDestroy;
+        public Action onDeinit;
         
         public virtual void Deinit()
         {
-            onDestroy?.Invoke();
-            onDestroy = null;
+            onDeinit?.Invoke();
+            onDeinit = null;
         }
-        
-        public virtual void AddAAtMod(EAAt at, ModifierGroup modGroup){}
     }
 }

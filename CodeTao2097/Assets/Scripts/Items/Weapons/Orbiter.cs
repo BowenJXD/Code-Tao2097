@@ -74,9 +74,10 @@ namespace CodeTao
             Projectile unit = base.SpawnUnit(spawnPosition);
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
             unit.Parent(transform)
-                .SetMovingDirection(Vector2.zero)
                 .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(spawnPosition.normalized)))
-                .Init(this);
+                .SetWeapon(this)
+                .SetMovingDirection(Vector2.zero)
+                .Init();
             return unit;
         }
         

@@ -12,9 +12,9 @@ namespace CodeTao
         
         [HideInInspector] public Container<T> Container;
 
-        public Action<Content<T>> AddAfter;
+        public Action<T> AddAfter;
 
-        public Action<Content<T>> RemoveAfter;
+        public Action<T> RemoveAfter;
         
         public ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return;
 
@@ -25,7 +25,7 @@ namespace CodeTao
             {
                 Container = container;
                 OnAdd();
-                AddAfter?.Invoke(this);
+                AddAfter?.Invoke((T)this);
             }
 
             return result;
@@ -46,7 +46,7 @@ namespace CodeTao
             {
                 Container = null;
                 OnRemove();
-                RemoveAfter?.Invoke(this);
+                RemoveAfter?.Invoke((T)this);
             }
 
             return result;
@@ -93,7 +93,17 @@ namespace CodeTao
         
         public override bool Equals(object other)
         {
-            return GetType() == other.GetType();
+            if (other == null || gameObject == null)
+            {
+                return false;
+            }
+            T content = other as T;
+            if (content)
+            {
+                return gameObject.name == content.gameObject.name;
+            }
+
+            return false;
         }
 
         public override int GetHashCode()

@@ -7,12 +7,14 @@
         Area,
         Amount,
         Duration,
-        Speed
-        // range
+        Speed,
+        Range,
+        Penetration,
     }
 
     public enum EAAt
     {
+        NULL,
         ATK,
         DEF,
         MaxHP,

@@ -33,7 +33,7 @@ namespace CodeTao
                 parent = Weapons;
                 weaponInventory.Add(item as Weapon);
             }
-            else if (item.GetType() == typeof(Item) || item.CompareTag("Item"))
+            else if (item.GetType() == typeof(Artefact) || item.CompareTag("Artefact"))
             {
                 parent = Items;
             }

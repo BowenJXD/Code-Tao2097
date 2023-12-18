@@ -14,7 +14,7 @@ namespace CodeTao
         {
             attributeController = ComponentUtil.GetComponentFromUnit<AttributeController>(this);
             UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
-            unitController.onDestroy += ClearBuff;
+            unitController.onDeinit += ClearBuff;
         }
 
         public void ClearBuff()

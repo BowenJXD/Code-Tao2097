@@ -49,7 +49,7 @@ namespace CodeTao
             }).UnRegisterWhenGameObjectDestroyed(this);
             
             // open game over panel when player is destroyed
-            Player.Instance.onDestroy += () =>
+            Player.Instance.onDeinit += () =>
             {
                 IsPass.Value = false;
                 UIKit.OpenPanel<UIGameOverPanel>();

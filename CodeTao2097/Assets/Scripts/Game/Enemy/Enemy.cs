@@ -88,74 +88,77 @@ namespace CodeTao
 			}
 		}
 		
-		public override void AddAAtMod(EAAt at, ModifierGroup modGroup)
-        {
-            switch (at)
+		public override BindableStat GetAAtMod(EAAt at)
+		{
+			BindableStat result = null;
+			switch (at)
             {
                 case EAAt.ATK:
-                    Attacker.ATK.AddModifierGroup(modGroup);
+                    result = Attacker.ATK;
                     break;
                 case EAAt.CritRate:
-                    Attacker.CritRate.AddModifierGroup(modGroup);
+                    result = Attacker.CritRate;
                     break;
                 case EAAt.CritDamage:
-                    Attacker.CritDamage.AddModifierGroup(modGroup);
+                    result = Attacker.CritDamage;
                     break;
                 case EAAt.AllElementBON:
-                    Attacker.ElementBonuses[ElementType.All].AddModifierGroup(modGroup);
+                    result = Attacker.ElementBonuses[ElementType.All];
                     break;
                 case EAAt.MetalElementBON:
-                    Attacker.ElementBonuses[ElementType.Metal].AddModifierGroup(modGroup);
+                    result = Attacker.ElementBonuses[ElementType.Metal];
                     break;
                 case EAAt.WoodElementBON:
-                    Attacker.ElementBonuses[ElementType.Wood].AddModifierGroup(modGroup);
+                    result = Attacker.ElementBonuses[ElementType.Wood];
                     break;
                 case EAAt.WaterElementBON:
-                    Attacker.ElementBonuses[ElementType.Water].AddModifierGroup(modGroup);
+                    result = Attacker.ElementBonuses[ElementType.Water];
                     break;
                 case EAAt.FireElementBON:
-                    Attacker.ElementBonuses[ElementType.Fire].AddModifierGroup(modGroup);
+                    result = Attacker.ElementBonuses[ElementType.Fire];
                     break;
                 case EAAt.EarthElementBON:
-                    Attacker.ElementBonuses[ElementType.Earth].AddModifierGroup(modGroup);
+                    result = Attacker.ElementBonuses[ElementType.Earth];
                     break;
                 
                 case EAAt.DEF:
-                    Defencer.DEF.AddModifierGroup(modGroup);
+                    result = Defencer.DEF;
                     break;
                 case EAAt.MaxHP:
-                    Defencer.MaxHP.AddModifierGroup(modGroup);
+                    result = Defencer.MaxHP;
                     break;
                 case EAAt.AllElementRES:
-                    Defencer.ElementResistances[ElementType.All].AddModifierGroup(modGroup);
+                    result = Defencer.ElementResistances[ElementType.All];
                     break;
                 case EAAt.MetalElementRES:
-                    Defencer.ElementResistances[ElementType.Metal].AddModifierGroup(modGroup);
+                    result = Defencer.ElementResistances[ElementType.Metal];
                     break;
                 case EAAt.WoodElementRES:
-                    Defencer.ElementResistances[ElementType.Wood].AddModifierGroup(modGroup);
+                    result = Defencer.ElementResistances[ElementType.Wood];
                     break;
                 case EAAt.WaterElementRES:
-                    Defencer.ElementResistances[ElementType.Water].AddModifierGroup(modGroup);
+                    result = Defencer.ElementResistances[ElementType.Water];
                     break;
                 case EAAt.FireElementRES:
-                    Defencer.ElementResistances[ElementType.Fire].AddModifierGroup(modGroup);
+                    result = Defencer.ElementResistances[ElementType.Fire];
                     break;
                 case EAAt.EarthElementRES:
-                    Defencer.ElementResistances[ElementType.Earth].AddModifierGroup(modGroup);
+                    result = Defencer.ElementResistances[ElementType.Earth];
                     break;
                 
                 case EAAt.SPD:
-                    MoveController.SPD.AddModifierGroup(modGroup);
+                    result = MoveController.SPD;
                     break;
                 
                 case EAAt.EXPBonus:
-                    EXPValue.AddModifierGroup(modGroup);
+	                result = EXPValue;
                     break;
                 
                 default:
                     break;
             }
-        }
+
+			return result;
+		}
 	}
 }

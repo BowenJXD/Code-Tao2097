@@ -12,12 +12,12 @@ namespace CodeTao
                     return instance;
                 }, prefab =>
                 {
-                    prefab.gameObject.SetActive(true);
+                    prefab.PreInit();
                 }
                 , prefab =>
                 {
                     prefab.gameObject.SetActive(false);
-                    prefab.onDestroy = null;
+                    prefab.onDeinit = null;
                 }
                 , prefab => { Object.Destroy(prefab); }
                 , true, defaultCapacity)

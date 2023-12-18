@@ -13,34 +13,60 @@ namespace CodeTao
         [HideInInspector] public MoveController moveController;
         [HideInInspector] public Weapon weapon;
         [HideInInspector] public Damager damager;
-        public BindableProperty<float> lifeTime = new BindableProperty<float>(5f);
+        public BindableStat lifeTime = new BindableStat(5f);
         private LoopTask _lifeTimeTask;
         
         /// <summary>
         /// The number of individual targets that the projectile can penetrate, when reached, the projectile will be destroyed.
         /// If <= 0, the projectile will not be destroyed.
         /// </summary>
-        public BindableProperty<int> penetration = new BindableProperty<int>(1);
+        public BindableStat penetration = new BindableStat(1);
         protected List<Collider2D> penetratedCols = new List<Collider2D>();
 
-        protected virtual void Awake()
-        {
-            rb2D = GetComponent<Rigidbody2D>();
-            col2D = PjtlCollider;
-            moveController = MoveController;
-        }
-        
         public Projectile SetMovingDirection(Vector2 direction)
         {
             moveController.MovementDirection.Value = direction;
             return this;
         }
         
-        public virtual void Init(Weapon weapon)
+        public Projectile SetWeapon(Weapon newWeapon)
         {
-            this.weapon = weapon;
+            this.weapon = newWeapon;
             damager = weapon.damager;
+            return this;
+        }
+        
+        public Projectile SetPenetration(BindableStat newPenetration)
+        {
+            penetration = newPenetration;
+            return this;
+        }
+        
+        public Projectile SetLifeTime(BindableStat newLifeTime)
+        {
+            lifeTime = newLifeTime;
+            return this;
+        }
+        
+        public Projectile SetSPD(BindableStat newSPD)
+        {
+            moveController.SPD = newSPD;
+            return this;
+        }
 
+        public override void PreInit()
+        {
+            base.PreInit();
+            
+            rb2D = GetComponent<Rigidbody2D>();
+            col2D = PjtlCollider;
+            moveController = MoveController;
+        }
+
+        public override void Init()
+        {
+            base.Init();
+            
             // destroy when lifeTime is over
             _lifeTimeTask = new LoopTask(this, lifeTime.Value, Deinit);
             _lifeTimeTask.SetCountCondition(1);

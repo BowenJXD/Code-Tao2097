@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
@@ -8,28 +9,44 @@ namespace CodeTao
         
         [HideInInspector] public Attacker attacker;
         
-        [HideInInspector] public Content<Buff> buffToApply;
+        [HideInInspector] public Buff buffToApply;
 
-        private BuffPool<Buff> _buffPool;
+        private ContentPool<Buff> _buffPool;
 
         public override void OnAdd()
         {
             base.OnAdd();
             attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
-            attacker.DealDamageAfter += ApplyBuff;
+            attacker.DealDamageAfter += TryApplyBuff;
             buffToApply = ComponentUtil.GetComponentInDescendants<Buff>(this);
-            _buffPool = new BuffPool<Buff>((Buff) buffToApply);
+            _buffPool = new ContentPool<Buff>(buffToApply);
         }
 
-        public void ApplyBuff(Damage damage)
+        public void TryApplyBuff(Damage damage)
         {
             if (damage.Target.IsDead) return;
             BuffOwner target = ComponentUtil.GetComponentFromUnit<BuffOwner>(damage.Target);
             if (target && CheckCondition(damage))
             {
-                Buff buff = _buffPool.Get();
-                buff.AddToContainer(target);
+                ApplyBuff(target);
             }
+        }
+        
+        public virtual Buff ApplyBuff(BuffOwner target)
+        {
+            Buff buff = _buffPool.Get().Parent(this);
+            if (!buff.AddToContainer(target))
+            {
+                _buffPool.Release(buff);
+            }
+            else
+            {
+                buff.RemoveAfter += buffRemoved =>
+                {
+                    _buffPool.Release(buffRemoved);
+                };
+            }
+            return buff;
         }
 
         public bool CheckCondition(Damage damage)

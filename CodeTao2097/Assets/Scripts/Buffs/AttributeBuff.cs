@@ -17,12 +17,11 @@ namespace CodeTao
                 buffOwner?.attributeController?.AddArtefactModifier(attribute, modValue * value, modifierType, name,
                     ERepetitionBehavior.Overwrite);
             }).UnRegisterWhenGameObjectDestroyed(this);
-
         }
         
-        public override void Remove()
+        public override void OnRemove()
         {
-            base.Remove();
+            base.OnRemove();
             buffOwner?.attributeController?.RemoveArtefactModifier(attribute, modifierType, name);
         }
     }

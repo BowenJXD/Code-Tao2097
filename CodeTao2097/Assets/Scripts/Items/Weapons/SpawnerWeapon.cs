@@ -54,11 +54,11 @@ namespace CodeTao
         public virtual T SpawnUnit(Vector2 spawnPosition)
         {
             T unit = pool.Get();
-            unit.onDestroy = () =>
+            unit.onDeinit = () =>
             {
                 pool.Release(unit);
             };
-            unit.transform.position = transform.position + (Vector3)spawnPosition;
+            unit.Position(transform.position + (Vector3)spawnPosition);
             return unit;
         }
 

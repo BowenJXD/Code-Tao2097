@@ -34,14 +34,14 @@ namespace CodeTao
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
             unit.Parent(rootToOwner? transform : GroundEffectManager.Instance.transform)
                 .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]))
-                .Init(this);
+                .SetWeapon(this)
+                .Init();
             return unit;
         }
 
         public override Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex)
         {
             Vector2 result = RandomUtil.GetRandomScreenPosition();
-            result += basePoint;
             switch (aimWay)
             {
                 case EAimWay.AutoTargeting:
@@ -75,10 +75,6 @@ namespace CodeTao
                     {
                         int r2 = Global.Instance.Random.Next(spawnPoints.Count);
                         result = spawnPoints[r2];
-                    }
-                    else
-                    {
-                        result = RandomUtil.GetRandomScreenPosition();
                     }
                     break;
                 case EAimWay.Cursor:

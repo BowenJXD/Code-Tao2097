@@ -27,7 +27,7 @@ namespace CodeTao
         {
             buffOwner = (BuffOwner) Container;
             
-            if (triggerInterval <= 0) triggerInterval.Value = float.MaxValue;
+            if (triggerInterval <= 0f) triggerInterval.Value = float.MaxValue;
             
             buffLoop = new LoopTask(buffOwner, triggerInterval, Trigger, Remove);
             
@@ -62,6 +62,13 @@ namespace CodeTao
         {
             buffLoop = null;
             RemoveFromContainer(Container);
+        }
+        
+        public override void OnRemove()
+        {
+            base.OnRemove();
+            buffLoop?.Pause();
+            buffLoop = null;
         }
     }
     

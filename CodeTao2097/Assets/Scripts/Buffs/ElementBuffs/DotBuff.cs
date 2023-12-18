@@ -2,30 +2,41 @@
 using CodeTao;
 using QFramework;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeTao
 {
     public partial class DotBuff : Buff
     {
         [HideInInspector] private Defencer _target;
-        [HideInInspector] private Damager _damager;
+        [HideInInspector] public Damager damager;
+        public EAAt baseAttribute;
+        public EModifierType modType;
 
         public override void Init()
         {
             base.Init();
             LVL.Value = 1;
             MaxLVL.Value = 5;
-            
-            _damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
-            Attacker attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
-            _damager.DMG.AddModifier(attacker.ATK, EModifierType.Multiplicative, "Attacker's ATK", ERepetitionBehavior.Overwrite);
 
-            LVL.RegisterWithInitValue(value =>
+            if (!damager)
             {
-                _damager.DMG.AddModifier(LVL, EModifierType.Multiplicative, "BuffLevel", ERepetitionBehavior.Overwrite);
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            
-            
+                damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
+                if (baseAttribute != EAAt.NULL)
+                {
+                    CombatUnit combatUnit = ComponentUtil.GetComponentInAncestors<CombatUnit>(Container);
+                    combatUnit.GetAAtMod(baseAttribute).RegisterWithInitValue(value =>
+                    {
+                        damager.DMG.AddModifier(value, modType, "BuffBaseAttribute", ERepetitionBehavior.Overwrite);
+                    }).UnRegisterWhenGameObjectDestroyed(this);
+                }
+                
+                LVL.RegisterWithInitValue(value =>
+                {
+                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "BuffLevel", ERepetitionBehavior.Overwrite);
+                }).UnRegisterWhenGameObjectDestroyed(this);
+            }
+
             _target = ComponentUtil.GetComponentFromUnit<Defencer>(buffOwner);
             if (_target)
             {
@@ -36,8 +47,7 @@ namespace CodeTao
         public override void Trigger()
         {
             base.Trigger();
-            DamageManager.Instance.ExecuteDamage(_damager, _target);
+            DamageManager.Instance.ExecuteDamage(damager, _target);
         }
-
     }
 }

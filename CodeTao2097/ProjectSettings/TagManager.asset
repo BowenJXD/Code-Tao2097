@@ -11,6 +11,7 @@ TagManager:
   - BattleUnit
   - Blessing
   - Weapon
+  - Artefact
   layers:
   - Default
   - TransparentFX

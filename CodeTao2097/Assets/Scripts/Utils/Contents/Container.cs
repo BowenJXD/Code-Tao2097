@@ -56,7 +56,6 @@ namespace CodeTao
             }
             else
             {
-                Contents.Add(newContent);
                 result = true;
             }
 

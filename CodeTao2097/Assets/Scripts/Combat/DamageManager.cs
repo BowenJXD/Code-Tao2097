@@ -68,26 +68,22 @@ namespace CodeTao
 
         public void LogDamageStat()
         {
-            Dictionary<Damager, float> damagerStats = new Dictionary<Damager, float>();
+            Dictionary<string, float> damagerStats = new Dictionary<string, float>();
             foreach (var damage in _damagesLog)
             {
                 Damager damager = damage.Median;
-                if (ComponentUtil.GetComponentInAncestors<UnitController>(damager) != Player.Instance)
-                {
-                    continue;
-                }
                 
-                if (!damagerStats.ContainsKey(damager))
+                if (!damagerStats.ContainsKey(damager.name))
                 {
-                    damagerStats.Add(damager, 0);
+                    damagerStats.Add(damager.name, 0);
                 }
-                damagerStats[damager] += damage.GetDamageValue();
+                damagerStats[damager.name] += damage.GetDamageValue();
             }
             
             string log = "";
             foreach (var damagerStat in damagerStats)
             {
-                log += $"{damagerStat.Key.name}: {damagerStat.Value}\n";
+                log += $"{damagerStat.Key}: {damagerStat.Value}\n";
             }
             
             LogKit.I(log);

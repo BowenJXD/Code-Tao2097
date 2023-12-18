@@ -85,11 +85,12 @@ namespace CodeTao
 				Vector3 spawnPosition = Player.Instance.transform.position + spawnDirection * randomDistance;
 				
 				Enemy enemy = enemyPools[index].Get().Position(spawnPosition).Parent(transform);
-				enemy.onDestroy += () =>
+				enemy.onDeinit += () =>
 				{
 					enemyPools[index].Release(enemy);
 					deathFXPool.Get().Position(enemy.transform.position).Parent(transform);
 				};
+				enemy.Init();
 			}
 			else
 			{

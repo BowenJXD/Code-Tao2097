@@ -10,21 +10,13 @@ namespace CodeTao
         public override void Init()
         {
             base.Init();
-            
-            damager = StinkyDamager;
+
+            damager = ComponentUtil.GetComponentInDescendants<Damager>(this, true);
 
             ats[EWAt.Area].RegisterWithInitValue(range =>
             {
                 transform.localScale = Vector3.one * range;
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
-
-        /*public override void Fire()
-        {
-            foreach (var target in GetTargets(StinkyRange))
-            {
-                Attack(target);
-            }
-        }*/
     }
 }
