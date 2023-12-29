@@ -9,7 +9,11 @@
 
         public virtual void AddAAtMod(EAAt at, ModifierGroup modGroup)
         {
-            GetAAtMod(at).AddModifierGroup(modGroup);
+            BindableStat stat = GetAAtMod(at);
+            if (stat != null)
+            {
+                stat.AddModifierGroup(modGroup);
+            }
         }
     }
 }

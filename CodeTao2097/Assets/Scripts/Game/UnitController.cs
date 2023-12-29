@@ -3,7 +3,7 @@ using QFramework;
 
 namespace CodeTao
 {
-    public abstract class UnitController : ViewController
+    public abstract class UnitController : MonoController
     {
         /// <summary>
         /// Called from UnitPool

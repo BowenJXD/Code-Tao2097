@@ -22,6 +22,12 @@ namespace CodeTao
             {EWAt.Cooldown, new BindableStat(2).SetMinValue(0.1f)},
             {EWAt.Area, new BindableStat(1).SetMinValue(0.1f)}
         };
+
+        public Buff buffToApply;
+        /// <summary>
+        /// 0 - 100
+        /// </summary>
+        public BindableStat buffHitRate = new BindableStat(0);
         
         [BoxGroup("Secondary Attributes")]
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
@@ -54,6 +60,8 @@ namespace CodeTao
                 damager.DMG = ats[EWAt.Damage];
             }).UnRegisterWhenGameObjectDestroyed(this);
             
+            damager.DealDamageAfter += TryApplyBuff;
+            
             // setup fire loop
             fireLoop = new LoopTask(this, ats[EWAt.Cooldown], Fire, StartReload);
             if (shotsToReload.Value > 0)
@@ -74,7 +82,44 @@ namespace CodeTao
         {
             
         }
+        
+        private ContentPool<Buff> _buffPool;
+        
+        public virtual void TryApplyBuff(Damage damage)
+        {
+            if (damage.Target.IsDead) return;
+            BuffOwner target = ComponentUtil.GetComponentFromUnit<BuffOwner>(damage.Target);
+            if (target && CheckBuffHit(damage))
+            {
+                ApplyBuff(target);
+            }
+        }
+        
+        public virtual Buff ApplyBuff(BuffOwner target)
+        {
+            Buff buff = _buffPool.Get().Parent(this);
+            buff.duration.AddModifierGroups(ats[EWAt.Duration].ModGroups);
+            
+            if (!buff.AddToContainer(target))
+            {
+                _buffPool.Release(buff);
+            }
+            else
+            {
+                buff.RemoveAfter += buffRemoved =>
+                {
+                    _buffPool.Release(buffRemoved);
+                };
+            }
 
+            return buff;
+        }
+
+        public virtual bool CheckBuffHit(Damage damage)
+        {
+            return RandomUtil.rand.Next(100) < buffHitRate.Value;
+        }
+        
         public virtual void StartReload()
         {
             ActionKit.Delay(reloadTime.Value, () =>
@@ -112,6 +157,10 @@ namespace CodeTao
             else if (mod.attribute == EWAt.Range)
             {
                 attackRange.AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
+            }
+            else if (mod.attribute == EWAt.Knockback)
+            {
+                damager.KnockBackFactor.AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
             }
         }
         

@@ -27,10 +27,20 @@ namespace CodeTao
 
     public class ModifierGroup
     {
+        public string Source { get; set; }
+        
         private Dictionary<EModifierType, Dictionary<string, float>> _modifiers = EModifierType.GetValues(typeof(EModifierType))
             .Cast<EModifierType>()
             .ToDictionary(key => key, value => new Dictionary<string, float>());
 
+        public ModifierGroup(Action newOnChanged = null)
+        {
+            if (newOnChanged != null)
+            {
+                onChanged += newOnChanged;
+            }
+        }
+        
         public Dictionary<string, float> GetModifier(EModifierType modifierType)
         {
             return _modifiers[modifierType];
@@ -116,20 +126,27 @@ namespace CodeTao
         private float _initValue = 0;
         private float _minValue = 0;
         private float _maxValue = float.MaxValue;
-        private ModifierGroup _modiferGroup = new ModifierGroup();
-        
-        private List<ModifierGroup> _otherModGroups = new List<ModifierGroup>();
+
+        private ModifierGroup _mainModGroup;
+        private List<ModifierGroup> _modGroups = new List<ModifierGroup>();
+
+        public List<ModifierGroup> ModGroups
+        {
+            get => _modGroups;
+        }
 
         public BindableStat()
         {
             _initValue = mValue;
-            _modiferGroup.onChanged += () => { mOnValueChanged?.Invoke(Value); };
+            _mainModGroup = new ModifierGroup(() => mOnValueChanged?.Invoke(Value));
+            _modGroups.Add(_mainModGroup);
         }
-        
+
         public BindableStat(float value) : base(value)
         {
             _initValue = mValue;
-            _modiferGroup.onChanged += () => { mOnValueChanged?.Invoke(Value); };
+            _mainModGroup = new ModifierGroup(() => mOnValueChanged?.Invoke(Value));
+            _modGroups.Add(_mainModGroup);
         }
         
         public BindableStat SetMinValue(float value)
@@ -147,7 +164,7 @@ namespace CodeTao
         public bool AddModifier(float value, EModifierType modifierType, string name = "", 
             ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
         {
-            bool result = _modiferGroup.AddModifier(value, modifierType, name, repetitionBehavior);
+            bool result = _mainModGroup.AddModifier(value, modifierType, name, repetitionBehavior);
             if (result)
             {
                 mOnValueChanged?.Invoke(Value);
@@ -159,7 +176,7 @@ namespace CodeTao
         public bool RemoveModifier(EModifierType modifierType, string name = "")
         {
             bool result = false;
-            result = _modiferGroup.RemoveModifier(modifierType, name);
+            result = _mainModGroup.RemoveModifier(modifierType, name);
 
             if (result)
             {
@@ -172,9 +189,9 @@ namespace CodeTao
         public bool AddModifierGroup(ModifierGroup modifierGroup)
         {
             bool result = false;
-            if (!_otherModGroups.Contains(modifierGroup))
+            if (!_modGroups.Contains(modifierGroup))
             {
-                _otherModGroups.Add(modifierGroup);
+                _modGroups.Add(modifierGroup);
                 modifierGroup.onChanged += () => { mOnValueChanged?.Invoke(Value); };
                 result = true;
             }
@@ -185,32 +202,47 @@ namespace CodeTao
         public bool RemoveModifierGroup(ModifierGroup modifierGroup)
         {
             bool result = false;
-            if (_otherModGroups.Contains(modifierGroup))
+            if (_modGroups.Contains(modifierGroup))
             {
-                _otherModGroups.Remove(modifierGroup);
+                _modGroups.Remove(modifierGroup);
                 modifierGroup.onChanged -= () => { mOnValueChanged?.Invoke(Value); };
                 result = true;
             }
 
             return result;
         }
+        
+        public void AddModifierGroups(List<ModifierGroup> modifierGroups)
+        {
+            foreach (var modifierGroup in modifierGroups)
+            {
+                AddModifierGroup(modifierGroup);
+            }
+        }
+        
+        public void RemoveModifierGroups(List<ModifierGroup> modifierGroups)
+        {
+            foreach (var modifierGroup in modifierGroups)
+            {
+                RemoveModifierGroup(modifierGroup);
+            }
+        }
 
         protected override float GetValue()
         {
-           
-            float basic = _modiferGroup.GetModifier(EModifierType.Basic).Values.Sum();
-            float additive = _modiferGroup.GetModifier(EModifierType.Additive).Values.Sum();
-            float multiAdd = _modiferGroup.GetModifier(EModifierType.MultiAdd).Values.Sum();
-            float multiplicative = _modiferGroup.GetModifier(EModifierType.Multiplicative).Values.Aggregate(1f, (current, value) => current * (1 + value));
+            float basic = 0;
+            float additive = 0;
+            float multiAdd = 0;
+            float multiplicative = 1;
 
-            foreach (var modifierGroup in _otherModGroups)
+            foreach (var modifierGroup in _modGroups)
             {
                 basic += modifierGroup.GetModifier(EModifierType.Basic).Values.Sum();
                 additive += modifierGroup.GetModifier(EModifierType.Additive).Values.Sum();
                 multiAdd += modifierGroup.GetModifier(EModifierType.MultiAdd).Values.Sum();
                 multiplicative *= modifierGroup.GetModifier(EModifierType.Multiplicative).Values.Aggregate(1f, (current, value) => current * (1 + value));
             }
-            
+
             float resultValue = (mValue + basic) * multiplicative * (1 + multiAdd) + additive;
             resultValue = Math.Clamp(resultValue, _minValue, _maxValue);
             return resultValue;
@@ -218,8 +250,8 @@ namespace CodeTao
         
         public void Reset()
         {
-            _modiferGroup.Clear();
-            _otherModGroups.Clear();
+            _mainModGroup.Clear();
+            _modGroups.Clear();
 
             Value = _initValue;
         }

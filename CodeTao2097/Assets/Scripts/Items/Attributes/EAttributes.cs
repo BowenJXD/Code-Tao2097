@@ -10,6 +10,8 @@
         Speed,
         Range,
         Penetration,
+        Knockback,
+        EffectHitRate,
     }
 
     public enum EAAt

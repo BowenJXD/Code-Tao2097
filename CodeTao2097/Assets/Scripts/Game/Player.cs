@@ -60,6 +60,11 @@ namespace CodeTao
 			SelfRigidbody2D.velocity = direction * MoveController.SPD;
 		}
 
+		public override void AddAAtMod(EAAt at, ModifierGroup modGroup)
+		{
+			base.AddAAtMod(at, modGroup);
+		}
+
 		public override BindableStat GetAAtMod(EAAt at)
 		{
 			BindableStat result = null;
