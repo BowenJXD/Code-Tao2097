@@ -51,7 +51,7 @@ namespace CodeTao
 
         public bool CheckCondition(Damage damage)
         {
-            return damage.DamageElement.Type == buffingElement;
+            return damage.DamageElement == buffingElement;
         }
     }
 }

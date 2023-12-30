@@ -13,6 +13,9 @@ namespace CodeTao
         TargetDEF,
         CRIT,
         ElementBON,
+        /// <summary>
+        /// Defaults to be 0
+        /// </summary>
         ElementRES,
         ReactionMultiplier
     }
@@ -22,7 +25,7 @@ namespace CodeTao
         public Attacker Source { get; private set; }
         public Damager Median { get; private set; }
         public Defencer Target { get; private set; }
-        public Element DamageElement { get; private set; } = new Element();
+        public ElementType DamageElement { get; private set; }
         public float Base { get; private set; }
         public bool Dealt { get; private set; }
         
@@ -50,7 +53,7 @@ namespace CodeTao
             return this;
         }
         
-        public Damage SetElement(Element element)
+        public Damage SetElement(ElementType element)
         {
             DamageElement = element;
             return this;

@@ -12,8 +12,8 @@ namespace CodeTao
 
         public override void OnAdd()
         {
-            base.OnAdd();
             attributeController = ComponentUtil.GetComponentFromUnit<AttributeController>(Container);
+            base.OnAdd();
         }
 
         public override void Upgrade(int lvlIncrement = 1)

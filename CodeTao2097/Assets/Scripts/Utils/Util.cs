@@ -84,6 +84,25 @@ namespace CodeTao
 
             return result;
         }
+
+        public static Color GetColor(this ElementType type)
+        {
+            switch (type)
+            {
+                case ElementType.Metal:
+                    return Color.yellow;
+                case ElementType.Wood:
+                    return Color.green;
+                case ElementType.Water:
+                    return Color.blue;
+                case ElementType.Fire:
+                    return Color.red;
+                case ElementType.Earth:
+                    return new Color(165,42,42);
+                default:
+                    return Color.white;
+            }
+        }
     }
 
     public static class RandomUtil
@@ -165,7 +184,7 @@ namespace CodeTao
 
     public static class ComponentUtil
     {
-        public static T GetComponentFromUnit<T>(Component component) where T : Component
+        public static T GetComponentFromUnit<T>(this Component component) where T : Component
         {
             UnitController unitController = GetComponentInAncestors<UnitController>(component);
             if (unitController)
@@ -179,7 +198,7 @@ namespace CodeTao
             return null;
         }
         
-        public static T GetComponentInSiblings<T>(Component component) where T : Component
+        public static T GetComponentInSiblings<T>(this Component component) where T : Component
         {
             Transform transform = component.transform;
             if (transform.parent == null)
@@ -202,20 +221,21 @@ namespace CodeTao
 
             return null;
         }
-        
+
         /// <summary>
         /// /// Get component in descendants, including self, stop when maxDepth or UnitController is reached
         /// </summary>
         /// <param name="parent"></param>
+        /// <param name="inactive"></param>
         /// <param name="maxDepth"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T GetComponentInDescendants<T>(Component parent, bool includeDisabled = false, int maxDepth = int.MaxValue) where T : Component
+        public static T GetComponentInDescendants<T>(this Component parent, bool inactive = false, int maxDepth = int.MaxValue) where T : Component
         {
-            return GetComponentInDescendants<T>(parent.transform, 0, maxDepth, includeDisabled);
+            return GetComponentInDescendants<T>(parent.transform, 0, maxDepth, inactive);
         }
 
-        private static T GetComponentInDescendants<T>(Transform parent, int currentDepth, int maxDepth, bool includeDisabled = false) where T : Component
+        private static T GetComponentInDescendants<T>(Transform parent, int currentDepth, int maxDepth, bool inactive = false) where T : Component
         {
             if (currentDepth > maxDepth)
             {
@@ -226,7 +246,7 @@ namespace CodeTao
             {
                 Transform child = parent.GetChild(i);
                 
-                if (!includeDisabled && child.gameObject.activeSelf == false)
+                if (!inactive && child.gameObject.activeSelf == false)
                 {
                     continue;
                 }
@@ -257,22 +277,23 @@ namespace CodeTao
             // Component not found within the specified depth
             return null;
         }
-        
+
         /// <summary>
         /// Get components in descendants, including self, stop when maxDepth or UnitController is reached
         /// </summary>
         /// <param name="parent"></param>
+        /// <param name="inactive">True if want to consider inactive game objects</param>
         /// <param name="maxDepth"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static List<T> GetComponentsInDescendants<T>(Component parent, int maxDepth = int.MaxValue) where T : Component
+        public static List<T> GetComponentsInDescendants<T>(this Component parent, bool inactive = false, int maxDepth = int.MaxValue) where T : Component
         {
             List<T> components = new List<T>();
-            GetComponentsInDescendants(parent.transform, components, 0, maxDepth);
+            GetComponentsInDescendants(parent.transform, components, inactive, 0, maxDepth);
             return components;
         }
 
-        private static void GetComponentsInDescendants<T>(Transform parent, List<T> components, int currentDepth, int maxDepth) where T : Component
+        private static void GetComponentsInDescendants<T>(Transform parent, List<T> components, bool inactive, int currentDepth, int maxDepth) where T : Component
         {
             if (currentDepth > maxDepth)
             {
@@ -281,6 +302,11 @@ namespace CodeTao
 
             foreach (Transform child in parent)
             {
+                if (child.gameObject.activeSelf == false && !inactive)
+                {
+                    continue;
+                }
+                
                 T component = child.GetComponent<T>();
 
                 if (component != null)
@@ -297,7 +323,7 @@ namespace CodeTao
                 }
 
                 // Recursively search the descendants with increased depth
-                GetComponentsInDescendants(child, components, currentDepth + 1, maxDepth);
+                GetComponentsInDescendants(child, components, inactive, currentDepth + 1, maxDepth);
             }
         }
         
@@ -308,7 +334,7 @@ namespace CodeTao
         /// <param name="maxDepth"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T GetComponentInAncestors<T>(Component child, int maxDepth = int.MaxValue) where T : Component
+        public static T GetComponentInAncestors<T>(this Component child, int maxDepth = int.MaxValue) where T : Component
         {
             return GetComponentInAncestors<T>(child.transform, 0, maxDepth);
         }
@@ -339,12 +365,12 @@ namespace CodeTao
             return GetComponentInAncestors<T>(child.parent, currentDepth + 1, maxDepth);
         }
         
-        public static string GetTagFromParent(Component component)
+        public static string GetTagFromParent(this Component component)
         {
             return component.transform.parent.tag;
         }
         
-        public static UnitController GetUnitController(Component component)
+        public static UnitController GetUnitController(this Component component)
         {
             return GetComponentInAncestors<UnitController>(component);
         }

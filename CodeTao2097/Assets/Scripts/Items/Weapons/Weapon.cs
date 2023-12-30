@@ -27,7 +27,7 @@ namespace CodeTao
         /// <summary>
         /// 0 - 100
         /// </summary>
-        public BindableStat buffHitRate = new BindableStat(0);
+        public BindableStat buffHitRate = new BindableStat(1);
         
         [BoxGroup("Secondary Attributes")]
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
@@ -76,6 +76,8 @@ namespace CodeTao
             {
                 fireLoop.LoopInterval = ats[EWAt.Cooldown];
             }).UnRegisterWhenGameObjectDestroyed(this);
+            
+            _buffPool = new ContentPool<Buff>(buffToApply);
         }
 
         public virtual void Fire()

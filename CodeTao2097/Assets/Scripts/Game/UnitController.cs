@@ -18,11 +18,18 @@ namespace CodeTao
         public virtual void Init()
         {
             onInit?.Invoke();
+            onInit = null;
             gameObject.SetActive(true);
         }
         
+        /// <summary>
+        /// Used by UnitPool to return gameObject to pool
+        /// </summary>
         public Action onDeinit;
         
+        /// <summary>
+        /// Used to deactivate gameObject
+        /// </summary>
         public virtual void Deinit()
         {
             onDeinit?.Invoke();

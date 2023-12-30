@@ -26,5 +26,10 @@ namespace CodeTao
 				}
 			}).UnRegisterWhenGameObjectDestroyed(this);
 		}
+		
+		private void OnDisable()
+		{
+			range.Reset();
+		}
 	}
 }

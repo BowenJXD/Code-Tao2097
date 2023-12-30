@@ -98,5 +98,22 @@ namespace CodeTao
         }
 
         public virtual void ProcessRemovedContent(Content<T> content) { }
+        
+        public virtual void Clear()
+        {
+            if (Contents == null)
+            {
+                return;
+            }
+            for (int i = Contents.Count - 1; i >= 0; i--)
+            {
+                Contents[i].RemoveFromContainer(this);
+            }
+        }
+        
+        private void OnDisable()
+        {
+            Clear();
+        }
     }
 }

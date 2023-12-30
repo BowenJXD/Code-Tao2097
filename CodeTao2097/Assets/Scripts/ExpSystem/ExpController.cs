@@ -40,5 +40,17 @@ namespace CodeTao
         {
             return LVL.Value + 1;
         }
+        
+        public void Reset()
+        {
+            EXP = new BindableProperty<float>(0);
+            LVL = new BindableProperty<int>(1);
+            EXPRate.Reset();
+        }
+        
+        private void OnDisable()
+        {
+            Reset();
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace CodeTao
                 Contents[i].RemoveFromContainer(this);
             }
         }
+
+        private void OnDisable()
+        {
+            ClearBuff();
+        }
     }
 }

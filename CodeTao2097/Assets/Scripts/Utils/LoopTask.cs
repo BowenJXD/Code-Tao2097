@@ -127,7 +127,7 @@ namespace CodeTao
                     _loopTime += _isPaused? 0 : Time.deltaTime;
                     
 #if !UNITY_EDITOR
-                    yield return new WaitForSeconds(_loopInterval);
+                    yield return new WaitForSeconds(Time.deltaTime);
 #else
                     yield return null;
 #endif

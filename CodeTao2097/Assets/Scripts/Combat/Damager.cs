@@ -43,9 +43,7 @@ namespace CodeTao
         {
             damage.SetMedian(this);
             damage.SetBase(DMG.Value);
-            Element element = new Element();
-            element.Type = DamageElementType;
-            damage.SetElement(element);
+            damage.SetElement(DamageElementType);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;
         }
@@ -65,6 +63,12 @@ namespace CodeTao
                 damage.Target.TakeDamage(damage);
                 DealDamageAfter?.Invoke(damage);
             }
+        }
+
+        private void OnDisable()
+        {
+            DMG.Reset();
+            KnockBackFactor.Reset();
         }
     }
 

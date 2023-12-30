@@ -111,12 +111,27 @@ namespace CodeTao
             return result;
         }
         
-        public void Clear()
+        /// <summary>
+        ///  Clear all modifiers
+        /// </summary>
+        /// <param name="change"> Whether to trigger change or not, default to true </param>
+        /// <returns></returns>
+        public bool Clear(bool change = true)
         {
-            foreach (var keyValuePair in _modifiers)
+            if (_modifiers.Count > 0)
             {
-                keyValuePair.Value.Clear();
+                foreach (var keyValuePair in _modifiers)
+                {
+                    keyValuePair.Value.Clear();
+                }
+                if (change)
+                {
+                    onChanged?.Invoke();
+                }
+                return true;
             }
+
+            return false;
         }
     }
     
@@ -124,7 +139,7 @@ namespace CodeTao
     public class BindableStat : BindableProperty<float>
     {
         private float _initValue = 0;
-        private float _minValue = 0;
+        private float _minValue = float.MinValue;
         private float _maxValue = float.MaxValue;
 
         private ModifierGroup _mainModGroup;
@@ -250,20 +265,15 @@ namespace CodeTao
         
         public void Reset()
         {
-            _mainModGroup.Clear();
+            _mainModGroup.Clear(false);
             _modGroups.Clear();
-
-            Value = _initValue;
+            _modGroups.Add(_mainModGroup);
+            mOnValueChanged = null;
         }
         
         public static implicit operator float(BindableStat myObject)
         {
             return myObject.Value;
-        }
-        
-        public static implicit operator int(BindableStat myObject)
-        {
-            return (int)myObject.Value;
         }
     }
 }

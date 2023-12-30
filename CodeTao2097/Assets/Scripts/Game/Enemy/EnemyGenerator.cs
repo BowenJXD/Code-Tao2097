@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using CodeTao;
 using UnityEngine;
 using QFramework;
@@ -48,6 +49,8 @@ namespace CodeTao
 			}
 			, prefab => { Destroy(prefab); }
 			, true, 4);
+			
+			Global.GameDuration.Value = tasks.Sum(task => task.duration);
 		}
 
 		void Start()
@@ -60,13 +63,10 @@ namespace CodeTao
 			if (tasks.Count > 0)
 			{
 				GeneratorTask task = tasks[0];
+				tasks.RemoveAt(0);
 				task.Start(this);
 				task.onGenerate.AddListener(ProcessTask);
-				task.onFinish.AddListener(() =>
-				{
-					tasks.RemoveAt(0);
-					NewTask();
-				});
+				task.onFinish.AddListener(NewTask);
 			}
 			else
 			{
@@ -88,7 +88,8 @@ namespace CodeTao
 				enemy.onDeinit += () =>
 				{
 					enemyPools[index].Release(enemy);
-					deathFXPool.Get().Position(enemy.transform.position).Parent(transform);
+					ParticleSystem ps = deathFXPool.Get().Position(enemy.transform.position).Parent(transform);
+					ActionKit.Delay(ps.main.duration, () => { deathFXPool.Release(ps); }).Start(this);
 				};
 				enemy.Init();
 			}

@@ -37,6 +37,11 @@ namespace CodeTao
             damager = ShooterDamager;
         }
 
+        private void OnEnable()
+        {
+            damager = ShooterDamager;
+        }
+
         public override Projectile SpawnUnit(Vector2 spawnPosition)
         {
             Projectile unit = base.SpawnUnit(spawnPosition);

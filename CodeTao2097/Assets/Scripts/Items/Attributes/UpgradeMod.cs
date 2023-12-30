@@ -1,5 +1,6 @@
 ﻿using System;
 using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
@@ -8,6 +9,7 @@ namespace CodeTao
         /// <summary>
         /// Each digit in levels represents a level of upgrade, "" to include all levels > 1, 0 to include all levels, -x to include all levels > x.
         /// </summary>
+        [Tooltip("Each digit in levels represents a level of upgrade, \"\" to include all levels > 1, 0 to include all levels, -x to include all levels > x.")]
         public string levels = "";
         /// <summary>
         /// If exclusive, stop checking other mods when this mod is triggered.

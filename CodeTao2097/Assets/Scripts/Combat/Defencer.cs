@@ -14,14 +14,6 @@ namespace CodeTao
         public BindableStat HP = new BindableStat();
         public BindableStat MaxHP = new BindableStat();
 
-        private void Awake()
-        {
-            MaxHP.RegisterWithInitValue(value =>
-            {
-                HP.SetMaxValue(value);
-            }).UnRegisterWhenGameObjectDestroyed(this);
-        }
-
         private float SetHP(float value)
         {
             if (value <= 0)
@@ -37,11 +29,6 @@ namespace CodeTao
             return SetHP(HP.Value + value);
         }
 
-        public void Revive()
-        {
-            HP.Value = MaxHP.Value;
-        }
-        
         #endregion
         
         #region Death
@@ -63,7 +50,7 @@ namespace CodeTao
         
         #region Condition
         
-        public float DMGCD;
+        public readonly float DMGCD;
         public bool IsInCD;
         
         public void StartCD()
@@ -93,6 +80,15 @@ namespace CodeTao
 
         #endregion
         
+        private void OnEnable()
+        {
+            MaxHP.RegisterWithInitValue(value =>
+            {
+                HP.SetMaxValue(value);
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            HP.Value = MaxHP;
+        }
+        
         public bool ValidateDamage(Damager damager, Attacker attacker)
         {
             bool result = !IsInCD && !Util.IsTagIncluded(ComponentUtil.GetTagFromParent(damager), defencingTags);
@@ -105,7 +101,7 @@ namespace CodeTao
             damage.SetTarget(this);
             var def = DEF.Value;
             damage.SetDamageSection(DamageSection.TargetDEF, "", 1 - def / (Global.Instance.DefenceFactor + def));
-            damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement], ERepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;
         }
@@ -135,6 +131,19 @@ namespace CodeTao
             {
                 Die(damage);
             }
+        }
+
+        private void OnDisable()
+        {
+            MaxHP.Reset();
+            DEF.Reset();
+            KnockBackFactor.Reset();
+            foreach (var elementResistance in ElementResistances)
+            {
+                elementResistance.Value.Reset();
+            }
+            
+            IsInCD = false;
         }
     }
 }

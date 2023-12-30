@@ -21,13 +21,6 @@ namespace CodeTao
 			SelfNavAgent.updateRotation = false;
 			SelfNavAgent.updateUpAxis = false;
 			
-			// Receive element when taking damage
-			Defencer.OnTakeDamageFuncs.Add((damage) =>
-			{
-				ElementOwner?.AddElement(damage.DamageElement);
-				return damage;
-			});
-			
 			// Change color after taking damage
 			Defencer.TakeDamageAfter += (damage) =>
 			{
@@ -70,7 +63,6 @@ namespace CodeTao
 
 		private void OnEnable()
 		{
-			Defencer.Revive();
 			// spawn experience ball
 			Defencer.OnDeath += damage =>
 			{

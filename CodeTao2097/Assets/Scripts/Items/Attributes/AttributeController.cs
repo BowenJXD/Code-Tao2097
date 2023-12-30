@@ -76,5 +76,19 @@ namespace CodeTao
                 return true;
             }
         }
+
+        private void OnDisable()
+        {
+            foreach (var modGroup in artefactModGroups)
+            {
+                modGroup.Value.Clear();
+            }
+            artefactModGroups.Clear();
+            foreach (var modGroup in weaponModGroups)
+            {
+                modGroup.Value.Clear();
+            }
+            weaponModGroups.Clear();
+        }
     }
 }

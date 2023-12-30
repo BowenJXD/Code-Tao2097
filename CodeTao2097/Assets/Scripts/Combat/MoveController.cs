@@ -24,6 +24,13 @@ namespace CodeTao
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
+
+        private void OnDisable()
+        {
+            SPD.Reset();
+            MovementDirection = new BindableProperty<Vector2>(Vector2.zero);
+            LastNonZeroDirection = new BindableProperty<Vector2>(Vector2.up);
+        }
     }
 }
 

@@ -23,7 +23,7 @@ namespace CodeTao
             damage.SetSource(this);
             damage.SetDamageSection(DamageSection.SourceATK, "", ATK.Value);
             damage.SetDamageSection(DamageSection.CRIT, "", GetCritRate());
-            damage.SetDamageSection(DamageSection.ElementBON, "", 1 + ElementBonuses[damage.DamageElement.Type], ERepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.ElementBON, "", 1 + ElementBonuses[damage.DamageElement], ERepetitionBehavior.Overwrite);
             return damage;
         }
         
@@ -38,6 +38,16 @@ namespace CodeTao
             }
             return result;
         }
-    }
 
+        private void OnDisable()
+        {
+            ATK.Reset();
+            CritRate.Reset();
+            CritDamage.Reset();
+            foreach (var elementBonus in ElementBonuses)
+            {
+                elementBonus.Value.Reset();
+            }
+        }
+    }
 }

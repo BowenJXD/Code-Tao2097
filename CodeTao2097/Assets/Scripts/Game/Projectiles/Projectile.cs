@@ -59,8 +59,8 @@ namespace CodeTao
             base.PreInit();
             
             rb2D = GetComponent<Rigidbody2D>();
-            col2D = PjtlCollider;
-            moveController = MoveController;
+            col2D = this.GetComponentInDescendants<Collider2D>();
+            moveController = this.GetComponentInDescendants<MoveController>();
         }
 
         public override void Init()
