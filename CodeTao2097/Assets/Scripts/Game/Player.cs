@@ -21,7 +21,7 @@ namespace CodeTao
 
 		private void Start()
 		{
-			// Change color after taking damage
+			// Change color after taking DMG
 			Defencer.TakeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();

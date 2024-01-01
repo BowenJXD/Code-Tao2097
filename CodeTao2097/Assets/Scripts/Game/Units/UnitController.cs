@@ -3,7 +3,7 @@ using QFramework;
 
 namespace CodeTao
 {
-    public abstract class UnitController : MonoController
+    public abstract class UnitController : ViewController
     {
         /// <summary>
         /// Called from UnitPool
@@ -13,7 +13,7 @@ namespace CodeTao
         public Action onInit;
         
         /// <summary>
-        /// Set gameObject to be active
+        /// Set gameObject to be active, need to be called manually
         /// </summary>
         public virtual void Init()
         {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using CodeTao;
-using JetBrains.Annotations;
-using QFramework;
+﻿using QFramework;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = System.Random;
@@ -56,6 +50,22 @@ namespace CodeTao
             };
         }
 
+        /// <summary>
+        /// Register config files
+        /// </summary>
+        void RegisterConfigs()
+        {
+            string[] configFiles = new string[]
+            {
+                "WeaponCn",
+            };
+
+            foreach (var fileName in configFiles)
+            {
+                ConfigManager.Instance.Register(fileName, new ConfigData(fileName));
+            }
+        }
+        
         public void Reset()
         {
             IsPass.Value = new BindableProperty<bool>(false);

@@ -31,7 +31,7 @@ namespace CodeTao
             }
         }
         
-        public override string GetDescription()
+        public override string GetUpgradeDescription()
         {
             List<string> result = new List<string>();
             int newLevel = LVL.Value + 1;
@@ -45,7 +45,7 @@ namespace CodeTao
                 }
             }
             
-            return base.GetDescription() + result.StringJoin("\n");
+            return base.GetUpgradeDescription() + result.StringJoin("\n");
         }
     }
 }

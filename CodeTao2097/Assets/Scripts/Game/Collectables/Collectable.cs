@@ -8,7 +8,7 @@ namespace CodeTao
 {
     public class Collectable : UnitController
     {
-        public List<ETag> collectingTags = new List<ETag>();
+        public List<EntityType> collectingTags = new List<EntityType>();
         
         [HideInInspector] public Collider2D col2D;
         

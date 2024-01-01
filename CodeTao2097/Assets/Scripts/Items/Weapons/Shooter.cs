@@ -42,18 +42,17 @@ namespace CodeTao
             damager = ShooterDamager;
         }
 
-        public override Projectile SpawnUnit(Vector2 spawnPosition)
+        public override Projectile SpawnUnit(Vector2 localPos)
         {
-            Projectile unit = base.SpawnUnit(spawnPosition);
+            Projectile unit = base.SpawnUnit(localPos);
             unit.Parent(ProjectileManager.Instance.transform)
-                .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(spawnPosition.normalized)))
+                .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(localPos.normalized)))
                 .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]))
                 .SetWeapon(this)
                 .SetPenetration(penetration)
                 .SetLifeTime(ats[EWAt.Duration])
                 .SetSPD(ats[EWAt.Speed])
-                .SetMovingDirection(spawnPosition.normalized)
-                .Init();
+                .SetMovingDirection(localPos.normalized);
             return unit;
         }
         

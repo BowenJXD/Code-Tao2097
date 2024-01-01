@@ -13,21 +13,6 @@ namespace CodeTao
         public void Start()
         {
             attributeController = ComponentUtil.GetComponentFromUnit<AttributeController>(this);
-            UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(this);
-            unitController.onDeinit += ClearBuff;
-        }
-
-        public void ClearBuff()
-        {
-            for (int i = Contents.Count - 1; i >= 0; i--)
-            {
-                Contents[i].RemoveFromContainer(this);
-            }
-        }
-
-        private void OnDisable()
-        {
-            ClearBuff();
         }
     }
 }

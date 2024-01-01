@@ -14,7 +14,7 @@ namespace CodeTao
         
         #region Condition
         
-        public List<ETag> damagingTags = new List<ETag>();
+        public List<EntityType> damagingTags = new List<EntityType> { EntityType.Enemy };
 
         public float DMGCD;
         public bool IsInCD;
@@ -69,6 +69,8 @@ namespace CodeTao
         {
             DMG.Reset();
             KnockBackFactor.Reset();
+            OnDealDamageFuncs.Clear();
+            DealDamageAfter = null;
         }
     }
 

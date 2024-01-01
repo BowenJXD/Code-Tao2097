@@ -27,15 +27,14 @@ namespace CodeTao
             _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
         }
 
-        public override GroundEffect SpawnUnit(Vector2 spawnPosition)
+        public override GroundEffect SpawnUnit(Vector2 localPos)
         {
-            GroundEffect unit = base.SpawnUnit(spawnPosition);
+            GroundEffect unit = base.SpawnUnit(localPos);
             unit.attackInterval.Value = ats[EWAt.Cooldown].Value;
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
-            unit.Parent(rootToOwner? transform : GroundEffectManager.Instance.transform)
+            unit.Parent(rootToOwner ? transform : GroundEffectManager.Instance.transform)
                 .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]))
-                .SetWeapon(this)
-                .Init();
+                .SetWeapon(this);
             return unit;
         }
 

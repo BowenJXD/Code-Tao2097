@@ -1,13 +1,16 @@
 ﻿namespace CodeTao
 {
-    public enum ETag
+    public enum EntityType
     {
         Player,
         Enemy,
-        Item,
+        Artefact,
+        Weapon,
         Projectile,
         GroundEffect,
         Collectable,
-        BattleUnit
+        Building,
+        Blessing,
+        Buff,
     }
 }

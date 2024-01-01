@@ -42,23 +42,23 @@ namespace CodeTao
             for (int i = 0; i < ats[EWAt.Amount].Value; i++)
             {
                 Vector2 spawnPoint = GetSpawnPoint(baseDirection, i);
-                SpawnUnit(spawnPoint);
+                SpawnUnit(spawnPoint).Init();
             }
         }
         
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="spawnPosition">The spawn position relative to the transform</param>
+        /// <param name="localPos">The spawn position relative to the transform</param>
         /// <returns></returns>
-        public virtual T SpawnUnit(Vector2 spawnPosition)
+        public virtual T SpawnUnit(Vector2 localPos)
         {
             T unit = pool.Get();
             unit.onDeinit = () =>
             {
                 pool.Release(unit);
             };
-            unit.Position(transform.position + (Vector3)spawnPosition);
+            unit.Position(transform.position + (Vector3)localPos);
             return unit;
         }
 

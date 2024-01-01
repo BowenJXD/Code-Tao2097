@@ -21,7 +21,7 @@ namespace CodeTao
 			SelfNavAgent.updateRotation = false;
 			SelfNavAgent.updateUpAxis = false;
 			
-			// Change color after taking damage
+			// Change color after taking DMG
 			Defencer.TakeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();

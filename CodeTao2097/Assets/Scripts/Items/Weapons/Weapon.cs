@@ -27,13 +27,10 @@ namespace CodeTao
         /// <summary>
         /// 0 - 100
         /// </summary>
-        public BindableStat buffHitRate = new BindableStat(1);
+        public BindableStat buffHitRate = new BindableStat(50);
         
-        [BoxGroup("Secondary Attributes")]
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
-        [BoxGroup("Secondary Attributes")]
         public BindableStat reloadTime = new BindableStat(0);
-        [BoxGroup("Secondary Attributes")]
         [ShowInInspector] public BindableStat attackRange = new BindableStat(10);
         public virtual float AttackRange => attackRange.Value;
         
@@ -53,14 +50,11 @@ namespace CodeTao
         public override void Init()
         {
             base.Init();
-            damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
+            damager = this.GetComponentInDescendants<Damager>();
             damager.DamageElementType = elementType;
-            ats[EWAt.Damage].RegisterWithInitValue(dmg =>
-            {
-                damager.DMG = ats[EWAt.Damage];
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            
+            damager.DMG = ats[EWAt.Damage];
             damager.DealDamageAfter += TryApplyBuff;
+            buffToApply = this.GetComponentInDescendants<Buff>();
             
             // setup fire loop
             fireLoop = new LoopTask(this, ats[EWAt.Cooldown], Fire, StartReload);
@@ -74,7 +68,7 @@ namespace CodeTao
             fireLoop.Start();
             ats[EWAt.Cooldown].RegisterWithInitValue(interval =>
             {
-                fireLoop.LoopInterval = ats[EWAt.Cooldown];
+                fireLoop.LoopInterval = interval;
             }).UnRegisterWhenGameObjectDestroyed(this);
             
             _buffPool = new ContentPool<Buff>(buffToApply);
@@ -166,7 +160,7 @@ namespace CodeTao
             }
         }
         
-        public override string GetDescription()
+        public override string GetUpgradeDescription()
         {
             List<string> result = new List<string>();
             int newLevel = LVL.Value + 1;
@@ -180,7 +174,7 @@ namespace CodeTao
                 }
             }
             
-            return base.GetDescription() + result.StringJoin("\n");
+            return base.GetUpgradeDescription() + result.StringJoin("\n");
         }
 
         public virtual void Attack(Defencer defencer)

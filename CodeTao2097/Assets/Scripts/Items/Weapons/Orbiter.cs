@@ -69,15 +69,14 @@ namespace CodeTao
             LogKit.I("Generated SpawningDirections: " + spawningDirections);
         }*/
         
-        public override Projectile SpawnUnit(Vector2 spawnPosition)
+        public override Projectile SpawnUnit(Vector2 localPos)
         {
-            Projectile unit = base.SpawnUnit(spawnPosition);
+            Projectile unit = base.SpawnUnit(localPos);
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
             unit.Parent(transform)
-                .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(spawnPosition.normalized)))
+                .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(localPos.normalized)))
                 .SetWeapon(this)
-                .SetMovingDirection(Vector2.zero)
-                .Init();
+                .SetMovingDirection(Vector2.zero);
             return unit;
         }
         

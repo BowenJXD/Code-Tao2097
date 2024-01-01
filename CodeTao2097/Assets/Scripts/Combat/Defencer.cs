@@ -64,7 +64,7 @@ namespace CodeTao
             ActionKit.Delay(DMGCD, () => { IsInCD = false; }).Start(this);
         }
         
-        public List<ETag> defencingTags = new List<ETag>();
+        public List<EntityType> defencingTags = new List<EntityType>();
         
         #endregion
 
@@ -109,6 +109,7 @@ namespace CodeTao
         public List<Func<Damage, Damage>> OnTakeDamageFuncs = new List<Func<Damage, Damage>>();
         public Action<Damage> TakeDamageAfter;
         
+        
         public void TakeDamage(Damage damage)
         {
             foreach (var func in OnTakeDamageFuncs)
@@ -142,6 +143,9 @@ namespace CodeTao
             {
                 elementResistance.Value.Reset();
             }
+            
+            OnTakeDamageFuncs.Clear();
+            TakeDamageAfter = null;
             
             IsInCD = false;
         }

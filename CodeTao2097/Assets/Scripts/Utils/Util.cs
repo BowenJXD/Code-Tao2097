@@ -9,7 +9,7 @@ namespace CodeTao
 {
     public static class Util
     {
-        public static bool IsTagIncluded(string tag, List<ETag> tags)
+        public static bool IsTagIncluded(string tag, List<EntityType> tags)
         {
             foreach (var t in tags)
             {

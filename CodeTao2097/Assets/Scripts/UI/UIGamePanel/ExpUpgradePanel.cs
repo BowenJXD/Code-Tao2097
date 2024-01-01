@@ -67,7 +67,7 @@ namespace CodeTao
 			foreach (var item in randomItems)
 			{
 				var btn = ExpUpBtnPool.Get();
-				btn.BtnText.text = item.GetDescription();
+				btn.BtnText.text = item.GetUpgradeDescription();
 				btn.UpgradeBtn.onClick.AddListener(() =>
 				{
 					if (item.LVL == 0)
