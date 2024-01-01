@@ -6,14 +6,14 @@ namespace CodeTao
 {
     public class Explosion : UnitController
     {
-        protected Animation ani;
+        protected Animator ani;
         public Damager damager;
         public BindableStat range = new BindableStat(2);
 
         public override void PreInit()
         {
             base.PreInit();
-            ani = this.GetComponentInDescendants<Animation>();
+            ani = this.GetComponentInDescendants<Animator>();
             damager = this.GetComponentInDescendants<Damager>();
         }
         
@@ -22,7 +22,7 @@ namespace CodeTao
             base.Init();
             
             ActionKit.DelayFrame(5, Explode).Start(this);
-            ActionKit.Delay(ani.clip.length, Deinit).Start(this);
+            ActionKit.Delay(ani.GetCurrentAnimatorStateInfo(0).length, Deinit).Start(this);
         }
 
         void Explode()
