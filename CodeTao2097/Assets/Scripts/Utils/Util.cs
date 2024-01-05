@@ -184,12 +184,24 @@ namespace CodeTao
 
     public static class ComponentUtil
     {
+        /// <summary>
+        /// Get component from unit, including the unit controller. Stop when UnitController is reached
+        /// </summary>
+        /// <param name="component"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public static T GetComponentFromUnit<T>(this Component component) where T : Component
         {
-            UnitController unitController = GetComponentInAncestors<UnitController>(component);
+            UnitController unitController = component is UnitController ? (UnitController)component : GetComponentInAncestors<UnitController>(component);
             if (unitController)
             {
-                T result = GetComponentInDescendants<T>(unitController);
+                T result;
+                result = unitController.GetComponent<T>();
+                if (result)
+                {
+                    return result;
+                }
+                result = GetComponentInDescendants<T>(unitController);
                 if (result)
                 {
                     return result;
@@ -223,7 +235,7 @@ namespace CodeTao
         }
 
         /// <summary>
-        /// /// Get component in descendants, including self, stop when maxDepth or UnitController is reached
+        /// /// Get component in descendants, excluding self, stop when maxDepth or UnitController is reached
         /// </summary>
         /// <param name="parent"></param>
         /// <param name="inactive"></param>
@@ -279,7 +291,7 @@ namespace CodeTao
         }
 
         /// <summary>
-        /// Get components in descendants, including self, stop when maxDepth or UnitController is reached
+        /// Get components in descendants, excluding self, stop when maxDepth or UnitController is reached
         /// </summary>
         /// <param name="parent"></param>
         /// <param name="inactive">True if want to consider inactive game objects</param>

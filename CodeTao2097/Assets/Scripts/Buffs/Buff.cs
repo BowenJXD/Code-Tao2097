@@ -58,12 +58,18 @@ namespace CodeTao
         
         public virtual void Trigger(){}
         
-        public virtual void Remove()
+        /// <summary>
+        /// Called inside
+        /// </summary>
+        void Remove()
         {
             buffLoop = null;
             RemoveFromContainer(Container);
         }
         
+        /// <summary>
+        /// Called outside
+        /// </summary>
         public override void OnRemove()
         {
             base.OnRemove();

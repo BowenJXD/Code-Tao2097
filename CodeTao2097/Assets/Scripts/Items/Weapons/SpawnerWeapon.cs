@@ -41,7 +41,7 @@ namespace CodeTao
             Vector2 baseDirection = GetBaseDirection();
             for (int i = 0; i < ats[EWAt.Amount].Value; i++)
             {
-                Vector2 spawnPoint = GetSpawnPoint(baseDirection, i);
+                Vector2 spawnPoint = GetLocalSpawnPoint(baseDirection, i);
                 SpawnUnit(spawnPoint).Init();
             }
         }
@@ -68,7 +68,7 @@ namespace CodeTao
         /// <param name="basePoint">The base point to modify from</param>
         /// <param name="spawnIndex">The index of the spawning item in one fire event</param>
         /// <returns></returns>
-        public abstract Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex);
+        public abstract Vector2 GetLocalSpawnPoint(Vector2 basePoint, int spawnIndex);
 
         public virtual Vector2 GetBaseDirection(){ return Vector2.zero; }
     }

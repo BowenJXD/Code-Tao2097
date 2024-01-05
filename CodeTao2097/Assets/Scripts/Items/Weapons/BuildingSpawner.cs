@@ -31,7 +31,7 @@ namespace CodeTao
             return unit;
         }
         
-        public override Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex)
+        public override Vector2 GetLocalSpawnPoint(Vector2 basePoint, int spawnIndex)
         {
             Vector2 result = RandomUtil.GetRandomScreenPosition();
             switch (aimWay)

@@ -48,7 +48,7 @@ namespace CodeTao
             unit.Parent(ProjectileManager.Instance.transform)
                 .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(localPos.normalized)))
                 .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]))
-                .SetWeapon(this)
+                .SetWeapon(this) // and damager
                 .SetPenetration(penetration)
                 .SetLifeTime(ats[EWAt.Duration])
                 .SetSPD(ats[EWAt.Speed])
@@ -56,7 +56,7 @@ namespace CodeTao
             return unit;
         }
         
-        public override Vector2 GetSpawnPoint(Vector2 basePoint, int spawnIndex)
+        public override Vector2 GetLocalSpawnPoint(Vector2 basePoint, int spawnIndex)
         {
             float angle = Util.GetAngleFromVector(basePoint);
             if (shootingDirections.Count > 0)

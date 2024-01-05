@@ -28,7 +28,7 @@ namespace CodeTao
 		{
 			for (int i = 0; i < enemyPrefabs.Count; i++)
 			{
-				UnitPool<Enemy> enemyPool = new UnitPool<Enemy>(enemyPrefabs[i]);
+				UnitPool<Enemy> enemyPool = new UnitPool<Enemy>(enemyPrefabs[i], transform, 2000);
 				enemyPools.Add(enemyPool);
 			}
 			
@@ -48,7 +48,7 @@ namespace CodeTao
 				prefab.Clear();
 			}
 			, prefab => { Destroy(prefab); }
-			, true, 4);
+			, true, 100);
 			
 			Global.GameDuration.Value = tasks.Sum(task => task.duration);
 		}

@@ -78,6 +78,8 @@ namespace CodeTao
         
         public BindableStat KnockBackFactor = new BindableStat(1);
 
+        protected Rigidbody2D rb;
+
         #endregion
         
         private void OnEnable()
@@ -87,6 +89,8 @@ namespace CodeTao
                 HP.SetMaxValue(value);
             }).UnRegisterWhenGameObjectDestroyed(this);
             HP.Value = MaxHP;
+            
+            rb = this.GetComponentFromUnit<Rigidbody2D>();
         }
         
         public bool ValidateDamage(Damager damager, Attacker attacker)
@@ -131,6 +135,16 @@ namespace CodeTao
             if (IsDead)
             {
                 Die(damage);
+            }
+            else if (rb && damage is { Knockback: > 0 })
+            {
+                Vector3 knockBackSource = damage.Source ? damage.Source.transform.position : damage.Median.transform.position;
+                Vector3 sourceTargetDistance = transform.position - knockBackSource;
+                if (sourceTargetDistance.magnitude > 0.1f)
+                {
+                    Vector2 knockBackDirection = sourceTargetDistance.normalized;
+                    rb.AddForce(damage.Knockback * knockBackDirection, ForceMode2D.Impulse);
+                }
             }
         }
 

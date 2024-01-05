@@ -6,7 +6,7 @@ namespace CodeTao
 {
     public class UnitPool<T> : ObjectPool<T> where T : UnitController
     {
-        public UnitPool(T defaultPrefab, Transform parent = null, int defaultCapacity = 10) :
+        public UnitPool(T defaultPrefab, Transform parent = null, int defaultCapacity = 100) :
             base(() =>
                 {
                     T instance = parent ? Object.Instantiate(defaultPrefab, parent) : Object.Instantiate(defaultPrefab);

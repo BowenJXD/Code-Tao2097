@@ -25,12 +25,6 @@ namespace CodeTao
 			Defencer.TakeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();
-				if (damage.Source)
-				{
-					Vector2 knockBackDirection = (transform.position - damage.Source.transform.position).normalized;
-					SelfRigidbody2D.AddForce(damage.Knockback * knockBackDirection,
-						ForceMode2D.Impulse);
-				}
 
 				ActionKit.Delay(Defencer.DMGCD, () =>
 				{
