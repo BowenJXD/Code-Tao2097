@@ -132,6 +132,31 @@ namespace CodeTao
         {
             return GetDamageValue().ToString();
         }
+
+        public static string GetCSVHeader()
+        {
+            return
+                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,ElementBON,ElementRES,ReactionMultiplier,Knockback";
+        }
+        
+        public string ToCSV()
+        {
+            string log = "";
+            log += $"{Median.name},{Target.name},{(Source?Source.name : "")},{DamageElement},{this},{Base},";
+            foreach (var damageSection in DamageSections)
+            {
+                if (damageSection.Value.Count > 0)
+                {
+                    log += $"{damageSection.Value.Values.Sum()},";
+                }
+                else
+                {
+                    log += ",";
+                }
+            }
+            log += $"{Knockback}";
+            return log;
+        }
     }
 
     

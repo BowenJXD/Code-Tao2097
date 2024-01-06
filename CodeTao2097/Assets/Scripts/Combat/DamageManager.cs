@@ -7,8 +7,6 @@ namespace CodeTao
 {
     public class DamageManager : MonoSingleton<DamageManager>
     {
-        private List<Damage> _damagesLog = new List<Damage>();
-        
         public Action<Damage> damageAfter;
         
         public Defencer ColToDef(Damager damager, Collider2D col)
@@ -54,13 +52,12 @@ namespace CodeTao
             if (damage.Dealt)
             {
                 damageAfter?.Invoke(damage);
-                _damagesLog.Add(damage);
             }
 
             return damage;
         }
 
-        protected override void OnApplicationQuit()
+        /*protected override void OnApplicationQuit()
         {
             base.OnApplicationQuit();
             LogDamageStat();
@@ -87,6 +84,6 @@ namespace CodeTao
             }
             
             LogKit.I(log);
-        }
+        }*/
     }
 }

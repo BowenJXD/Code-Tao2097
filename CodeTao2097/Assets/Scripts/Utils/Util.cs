@@ -109,6 +109,23 @@ namespace CodeTao
     {
         public static Random rand => Global.Instance.Random;
         
+        public static int Rand(int max)
+        {
+            return rand.Next(Mathf.Abs(max));
+        }
+        
+        public static bool RandBool()
+        {
+            return rand.Next(2) == 0;
+        }
+        
+        public static int RandRange(int a, int b)
+        {
+            int min = Mathf.Min(a, b);
+            int max = Mathf.Max(a, b);
+            return rand.Next(min, max);
+        }
+        
         public static int GetRandomWeightedIndex(List<int> list)
         {
             int totalWeight = list.Sum();
@@ -244,6 +261,10 @@ namespace CodeTao
         /// <returns></returns>
         public static T GetComponentInDescendants<T>(this Component parent, bool inactive = false, int maxDepth = int.MaxValue) where T : Component
         {
+            if (parent == null)
+            {
+                return null;
+            }
             return GetComponentInDescendants<T>(parent.transform, 0, maxDepth, inactive);
         }
 
@@ -348,6 +369,10 @@ namespace CodeTao
         /// <returns></returns>
         public static T GetComponentInAncestors<T>(this Component child, int maxDepth = int.MaxValue) where T : Component
         {
+            if (child == null)
+            {
+                return null;
+            }
             return GetComponentInAncestors<T>(child.transform, 0, maxDepth);
         }
 

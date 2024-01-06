@@ -5,6 +5,7 @@ using System.Linq;
 using CodeTao;
 using UnityEngine;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine.Pool;
 using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
@@ -23,6 +24,11 @@ namespace CodeTao
 		
 		public float minDistance = 10;
 		public float maxDistance = 20;
+		public float distributionVariationInterval = 5;
+		public int minDistribution = 10;
+		public float maxDistributionVariation = 20;
+		
+		protected float lastSpawnedAngle = 0;
 		
 		private void Awake()
 		{
@@ -80,8 +86,13 @@ namespace CodeTao
 			if (index < enemyPools.Count)
 			{
 				float randomDistance = Random.Range(minDistance, maxDistance);
-				float randomAngle = Random.Range(0f, 360f);
-				Vector3 spawnDirection = Quaternion.Euler(0f, 0f, randomAngle) * Vector2.right;
+				float randomRange = maxDistributionVariation 
+					* Mathf.Cos(Global.GameTime / distributionVariationInterval);
+				int roundedAbsRange = Mathf.RoundToInt(Mathf.Abs(randomRange));
+				int distribution = minDistribution + RandomUtil.Rand(roundedAbsRange);
+				distribution *= RandomUtil.RandBool()? 1: -1;
+				lastSpawnedAngle += distribution;
+				Vector3 spawnDirection = Quaternion.Euler(0f, 0f, lastSpawnedAngle) * Vector2.right;
 				Vector3 spawnPosition = Player.Instance.transform.position + spawnDirection * randomDistance;
 				
 				Enemy enemy = enemyPools[index].Get().Position(spawnPosition).Parent(transform);

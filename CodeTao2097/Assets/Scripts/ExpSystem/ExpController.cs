@@ -18,7 +18,7 @@ namespace CodeTao
         
         public Action levelUpAfter;
         
-        protected void LevelUp()
+        public void LevelUp()
         {
             LVL.Value += 1;
             levelUpAfter?.Invoke();

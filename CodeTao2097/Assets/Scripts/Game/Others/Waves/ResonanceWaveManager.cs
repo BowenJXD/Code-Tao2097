@@ -16,7 +16,7 @@ namespace CodeTao
             {
                 attacker.ATK.RegisterWithInitValue(value =>
                 {
-                    damager.DMG.AddModifier(value, EModifierType.MultiAdd, "ATK", ERepetitionBehavior.Overwrite);
+                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "ATK", ERepetitionBehavior.Overwrite);
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
         }
