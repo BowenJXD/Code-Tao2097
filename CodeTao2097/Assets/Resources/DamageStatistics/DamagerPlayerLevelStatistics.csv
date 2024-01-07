@@ -1,6 +1,7 @@
 Damager,TotalDamage,TotalDps,Level0,Level1,Level2
-SaDouChengBingDamager,1240,59.3183,Infinity,58.1702
-ResonanceDamager,1429.111,68.36487,Infinity,67.79082
-ChaoDamager,855.5555,40.9275,Infinity,39.49238
-ExplosionDamager,50,2.391867,Infinity
-BackFlowDamager,85,4.066174,Infinity,3.826987
+ResonanceDamager,4278,101.2245,Infinity,100.9879
+ChaoDamager,2120.556,50.17582,Infinity,49.58427
+EnemyDamager,12.5,0.2957704,Infinity
+SaDouChengBingDamager,1224,28.96184,Infinity,28.48861
+BackFlowDamager,255.5556,6.046863,Infinity,5.928555
+ExplosionDamager,1050,24.84472,Infinity,23.66164
