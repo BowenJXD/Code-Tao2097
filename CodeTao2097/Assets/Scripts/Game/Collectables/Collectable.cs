@@ -2,44 +2,77 @@
 using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Serialization;
 
 namespace CodeTao
 {
-    public class Collectable : UnitController
+    public class Collectable : Interactable
     {
-        public List<EntityType> collectingTags = new List<EntityType>();
-        
-        [HideInInspector] public Collider2D col2D;
-        
-        protected virtual void Start()
-        {
-            col2D.OnTriggerEnter2DEvent(col =>
-            {
-                if (ValidateCollect(col))
-                {
-                    Collect(col);
-                }
-            }).UnRegisterWhenGameObjectDestroyed(gameObject);
-        }
+        NavMeshAgent navAgent;
+        MoveController moveController;
+        Transform target;
+        [HideInInspector] public Rigidbody2D rb2D;
+        [HideInInspector] public Collider2D collectableCol;		
+        public float knockBackForce = 1;
 
-        public virtual bool ValidateCollect(Collider2D col)
+        public override void OnSceneLoaded()
         {
-            UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
-            if (unitController)
-            {
-                if (Util.IsTagIncluded(unitController.tag, collectingTags))
-                {
-                    return true;
-                }
+            base.OnSceneLoaded();
+            if (!collectableCol){
+                collectableCol = this.GetComponentInDescendants<Collider2D>(true, (int)ELayer.Collectable);
             }
+        }
 
-            return false;
+        public override void PreInit()
+        {
+            base.PreInit();
+            
+            if (!navAgent){
+                navAgent = GetComponent<NavMeshAgent>();
+                navAgent.updateRotation = false;
+                navAgent.updateUpAxis = false;
+            }
+            navAgent.enabled = false;
+            
+            collectableCol.enabled = false;
+            interactableCol.enabled = false;
+            
+            if (!moveController){
+                moveController = this.GetComponentInDescendants<MoveController>(true);
+            }
+            moveController.SPD.RegisterWithInitValue(value =>
+            {
+                navAgent.speed = value;
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            
+            if (!rb2D){
+                rb2D = GetComponent<Rigidbody2D>();
+            }
         }
         
-        public virtual void Collect(Collider2D collector = null)
+        public override void Init()
         {
-            Destroy(gameObject);
+            base.Init();
+            collectableCol.enabled = true;
+        }
+
+        public void StartCollection(Transform newTarget)
+        {
+            target = newTarget;
+            navAgent.enabled = true;
+            Vector2 direction = (target.position - transform.position).normalized;
+            rb2D.AddForce(direction * knockBackForce, ForceMode2D.Impulse);
+            collectableCol.enabled = false;
+            interactableCol.enabled = true;
+        }
+
+        private void Update()
+        {
+            if (navAgent.enabled && target)
+            {
+                navAgent.SetDestination(target.position);
+            }
         }
     }
 }

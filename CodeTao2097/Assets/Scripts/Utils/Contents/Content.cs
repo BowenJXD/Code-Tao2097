@@ -55,7 +55,9 @@ namespace CodeTao
         public virtual void OnRemove(){}
         
         #endregion
-        
+
+        #region Level
+
         [TabGroup("Content")]
         public BindableProperty<int> LVL = new BindableProperty<int>(0);
         
@@ -90,6 +92,8 @@ namespace CodeTao
         {
             LVL.Value += lvlIncrement;
         }
+        
+        #endregion
         
         public override bool Equals(object other)
         {

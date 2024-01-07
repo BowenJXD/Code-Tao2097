@@ -20,12 +20,12 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Collectable
+  - Interactable
+  - Building
+  - Projectile
   - 
   - 
   - 

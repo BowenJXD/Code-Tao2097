@@ -109,5 +109,21 @@ namespace CodeTao
 				Debug.LogError($"Index {index} / {enemyPools.Count} is out of range!");
 			}
 		}
+		
+		public void Pause()
+		{
+			foreach (GeneratorTask task in tasks)
+			{
+				task.LoopTask.Pause();
+			}
+		}
+		
+		public void Resume()
+		{
+			foreach (GeneratorTask task in tasks)
+			{
+				task.LoopTask.Resume();
+			}
+		}
 	}
 }

@@ -19,9 +19,9 @@ namespace CodeTao
 				Collectable collectable = ComponentUtil.GetComponentFromUnit<Collectable>(col);
 				if (collectable)
 				{
-					if (collectable.ValidateCollect(CollectRange))
+					if (collectable.ValidateCollision(CollectRange))
 					{
-						collectable.Collect();
+						collectable.StartCollection(transform);
 					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(this);

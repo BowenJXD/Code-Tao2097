@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using QFramework;
 using UnityEngine;
+using UnityEngine.Timeline;
 using Random = System.Random;
 
 namespace CodeTao
@@ -256,19 +257,20 @@ namespace CodeTao
         /// </summary>
         /// <param name="parent"></param>
         /// <param name="inactive"></param>
+        /// <param name="layer"></param>
         /// <param name="maxDepth"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T GetComponentInDescendants<T>(this Component parent, bool inactive = false, int maxDepth = int.MaxValue) where T : Component
+        public static T GetComponentInDescendants<T>(this Component parent, bool inactive = false, int layer = 0, int maxDepth = int.MaxValue) where T : Component
         {
             if (parent == null)
             {
                 return null;
             }
-            return GetComponentInDescendants<T>(parent.transform, 0, maxDepth, inactive);
+            return GetComponentInDescendants<T>(parent.transform, 0, maxDepth, inactive, layer);
         }
 
-        private static T GetComponentInDescendants<T>(Transform parent, int currentDepth, int maxDepth, bool inactive = false) where T : Component
+        private static T GetComponentInDescendants<T>(Transform parent, int currentDepth, int maxDepth, bool inactive = false, int layer = 0) where T : Component
         {
             if (currentDepth > maxDepth)
             {
@@ -280,6 +282,11 @@ namespace CodeTao
                 Transform child = parent.GetChild(i);
                 
                 if (!inactive && child.gameObject.activeSelf == false)
+                {
+                    continue;
+                }
+                
+                if (layer != 0 && child.gameObject.layer != layer)
                 {
                     continue;
                 }

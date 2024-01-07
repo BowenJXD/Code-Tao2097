@@ -2,7 +2,7 @@
 
 namespace CodeTao
 {
-    public class ExplosionManager : UnitManager<Explosion>
+    public class ExplosionManager : UnitManager<Explosion, ExplosionManager>
     {
         public BindableStat DMG = new BindableStat(10);
         public BindableStat knockBackFactor = new BindableStat(2);

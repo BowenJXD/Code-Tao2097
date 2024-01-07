@@ -11,9 +11,7 @@ namespace CodeTao
             TagOwner tagOwner = col.GetComponentFromUnit<TagOwner>();
             if (tagOwner && tagOwner.HasTag(Tag.Resonating))
             {
-                ResonanceWave wave = ResonanceWaveManager.Instance.Get();
-                wave.Parent(tagOwner.transform).Position(tagOwner.transform.position);
-                wave.Init();
+                ResonanceWaveManager.Instance.Get().Position(tagOwner.transform.position).Init();
             }
         }
     }

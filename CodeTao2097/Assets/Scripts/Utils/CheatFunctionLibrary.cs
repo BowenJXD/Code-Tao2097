@@ -12,6 +12,8 @@ namespace CodeTao
         Defencer defencer;
         Attacker attacker;
         LoopTask expUpTask;
+        EnemyGenerator enemyGenerator;
+        bool f4Toggle = false;
         public float expUpInterval = 10f;
 
         private void Start()
@@ -20,10 +22,12 @@ namespace CodeTao
             playerInput.actions["1"].performed += ctx => F1();
             playerInput.actions["2"].performed += ctx => F2();
             playerInput.actions["3"].performed += ctx => F3();
+            playerInput.actions["4"].performed += ctx => F4();
             
             expController = Player.Instance.ExpController;
             defencer = Player.Instance.Defencer;
             attacker = Player.Instance.Attacker;
+            enemyGenerator = FindObjectOfType<EnemyGenerator>();
         }
 
         void F1()
@@ -42,7 +46,24 @@ namespace CodeTao
 
         void F3()
         {
-            attacker.ATK.AddModifier(1, EModifierType.Multiplicative, name, ERepetitionBehavior.AddStack);
+            Enemy[] enemies = FindObjectsOfType<Enemy>();
+            foreach (Enemy enemy in enemies)
+            {
+                enemy.Defencer.IsInCD = true;
+            }
+        }
+
+        void F4()
+        {
+            if (f4Toggle)
+            {
+                enemyGenerator.Pause();
+            }
+            else
+            {
+                enemyGenerator.Resume();
+            }
+            f4Toggle = !f4Toggle;
         }
     }
 }

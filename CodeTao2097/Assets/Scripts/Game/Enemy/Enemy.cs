@@ -61,7 +61,9 @@ namespace CodeTao
 			Defencer.OnDeath += damage =>
 			{
 				Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, 0);
-				ExpGenerator.Instance.GenerateExpBall(EXPValue.Value, spawnPosition);
+				var expBall = ExpGenerator.Instance.Get().Position(spawnPosition);
+				expBall.EXPValue.Value = EXPValue.Value;
+				expBall.Init();
 				Deinit();
 			};
 		}

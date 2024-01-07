@@ -7,9 +7,15 @@ namespace CodeTao
     {
         public BindableProperty<int> weight = new BindableProperty<int>(1);
 
-        public int GetWeight()
+        public virtual int GetWeight()
         {
             return weight.Value;
+        }
+
+        public override void OnRemove()
+        {
+            base.OnRemove();
+            enabled = false;
         }
     }
 }

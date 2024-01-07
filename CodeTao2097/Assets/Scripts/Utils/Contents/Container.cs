@@ -99,6 +99,23 @@ namespace CodeTao
 
         public virtual void ProcessRemovedContent(Content<T> content) { }
         
+        public virtual V GetContent<V>() where V : Content<T>
+        {
+            if (Contents == null)
+            {
+                return null;
+            }
+            foreach (var content in Contents)
+            {
+                if (content is V)
+                {
+                    return (V)content;
+                }
+            }
+
+            return null;
+        }
+        
         public virtual void Clear()
         {
             if (Contents == null)

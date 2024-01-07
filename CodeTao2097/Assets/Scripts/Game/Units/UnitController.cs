@@ -6,6 +6,12 @@ namespace CodeTao
     public abstract class UnitController : ViewController
     {
         /// <summary>
+        /// Will be called from global when scene is loaded,
+        /// Used to bind components
+        /// </summary>
+        public virtual void OnSceneLoaded(){}
+        
+        /// <summary>
         /// Called from UnitPool
         /// </summary>
         public virtual void PreInit(){}

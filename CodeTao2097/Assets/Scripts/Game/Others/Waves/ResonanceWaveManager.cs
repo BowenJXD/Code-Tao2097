@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class ResonanceWaveManager : UnitManager<ResonanceWave>
+    public class ResonanceWaveManager : UnitManager<ResonanceWave, ResonanceWaveManager>
     {
         public static Damager damager;
 
@@ -16,7 +16,7 @@ namespace CodeTao
             {
                 attacker.ATK.RegisterWithInitValue(value =>
                 {
-                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "ATK", ERepetitionBehavior.Overwrite);
+                    damager.DMG.AddModifier(value - 1, EModifierType.Multiplicative, "ATK", ERepetitionBehavior.Overwrite);
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
         }

@@ -1,4 +1,5 @@
-﻿using QFramework;
+﻿using System;
+using QFramework;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = System.Random;
@@ -19,7 +20,7 @@ namespace CodeTao
         
         public UnityEvent OnGameStart = new UnityEvent();
 
-        private void Start()
+        private void Awake()
         {
             Random = new Random(RandomSeed);
             OnGameStart.Invoke();
@@ -41,7 +42,16 @@ namespace CodeTao
                     UIKit.OpenPanel<UIGamePassPanel>();
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
-            
+
+            UnitController[] unitControllers = FindObjectsOfType<UnitController>(true);
+            foreach (var unitController in unitControllers)
+            {
+                unitController.OnSceneLoaded();
+            }
+        }
+
+        private void Start()
+        {
             // open game over panel when player is destroyed
             Player.Instance.onDeinit += () =>
             {
