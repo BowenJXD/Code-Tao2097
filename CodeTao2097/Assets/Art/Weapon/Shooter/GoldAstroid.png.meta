@@ -113,216 +113,6 @@ TextureImporter:
       name: GoldAstroid_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e072de84b54bfa4a95b51ff573a950f
-      internalID: 1762213291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66d90efffd87ad944bed43cbc18df083
-      internalID: 1406682089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7e8386935aa25b468b36b1a61b2544e
-      internalID: 1653837533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a3d27b2fbbbb5340894b7e8e1371166
-      internalID: -1202482499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5736f4dc0254b9439b9d71a127ebaff
-      internalID: 1855231536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad9a29fbd51a4b74b8b7cf6904c5d0bf
-      internalID: -1926381784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbe604a3b4454694485d9c4e19889caf
-      internalID: 862236285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19c35086c97276344b223aba4c3a9eaf
-      internalID: -622085279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd6f51ebac0113f47819cd5be9eaae29
-      internalID: 1504846606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f34a0f1ffca8104683387b8c7ae3c01
-      internalID: 108514054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoldAstroid_10
-      rect:
-        serializedVersion: 2
         x: 320
         y: 0
         width: 32
@@ -334,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8199790058a5c74e8a82b561b3428b3
-      internalID: 512917989
+      spriteID: 23b0128ba42c0b942a0cacf35ed2d00e
+      internalID: -1372842209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_11
+      name: GoldAstroid_1
       rect:
         serializedVersion: 2
         x: 352
@@ -355,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df887945be0fbee43a4e1f7fe720c85a
-      internalID: 1730983019
+      spriteID: bdaa3a4e09b2cf8418c429966b903ce9
+      internalID: -1967685524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_12
+      name: GoldAstroid_2
       rect:
         serializedVersion: 2
         x: 384
@@ -376,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebf54eba0e9614b41b05528edd107def
-      internalID: 430038126
+      spriteID: a48d5c0bbda8f3f48b682b5862a1e0c6
+      internalID: -153953281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_13
+      name: GoldAstroid_3
       rect:
         serializedVersion: 2
         x: 416
@@ -397,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1766ecec37e72e143a37543e06f81fbb
-      internalID: 2037239985
+      spriteID: 42c20d7dd91206541a4a0280bbbb090c
+      internalID: -166124737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_14
+      name: GoldAstroid_4
       rect:
         serializedVersion: 2
         x: 448
@@ -418,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2826f343899b8dd4da87eab5e77100e3
-      internalID: 1321898933
+      spriteID: 0cedb1fcdae2a3348b9938161deadfd9
+      internalID: 214047660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_15
+      name: GoldAstroid_5
       rect:
         serializedVersion: 2
         x: 480
@@ -439,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00881b0bde159124c972ef66741bc3f9
-      internalID: 1729021654
+      spriteID: 4911f7e1e312b35468fc3b844b2e776f
+      internalID: 214769872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_16
+      name: GoldAstroid_6
       rect:
         serializedVersion: 2
         x: 512
@@ -460,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d54d6ec7439fa4cb932acc49bc0b05
-      internalID: 511650353
+      spriteID: 3ca7b1a6389b9ca49a409575fbe3c2d9
+      internalID: -694753754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_17
+      name: GoldAstroid_7
       rect:
         serializedVersion: 2
         x: 544
@@ -481,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e518755b5fcf7254e83c159b115f1740
-      internalID: -1035068844
+      spriteID: 1cf8181ec5524474e8f6b26eeae201ef
+      internalID: 1495219097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_18
+      name: GoldAstroid_8
       rect:
         serializedVersion: 2
         x: 576
@@ -502,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebf221f27be719e4ebe61b87788d611f
-      internalID: -246220928
+      spriteID: ce8effee94f2d4a45a4193d2e5403453
+      internalID: 590709082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_19
+      name: GoldAstroid_9
       rect:
         serializedVersion: 2
         x: 608
@@ -523,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4026882b94997ac409251137fa6b93cd
-      internalID: 1403192218
+      spriteID: 415f3b6dbf2816c459755699540280a9
+      internalID: -533938453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_20
+      name: GoldAstroid_10
       rect:
         serializedVersion: 2
         x: 640
@@ -544,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25a9fc978aa3762418e3a1bbe922ddef
-      internalID: 1942345025
+      spriteID: 613ee1e0cee446e4ea850b5ea7493d63
+      internalID: 1927763950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_21
+      name: GoldAstroid_11
       rect:
         serializedVersion: 2
         x: 672
@@ -565,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c511d3883f17cb3439ca0396d1f01c5a
-      internalID: 1368642013
+      spriteID: c2c086e5f5a06c842b6d163639cd0718
+      internalID: -2068166750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_22
+      name: GoldAstroid_12
       rect:
         serializedVersion: 2
         x: 704
@@ -586,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d6754be48880c49a0b658110ed9280
-      internalID: 643397766
+      spriteID: ba95f08995305814fa2344a29f23a0d4
+      internalID: -253676444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_23
+      name: GoldAstroid_13
       rect:
         serializedVersion: 2
         x: 736
@@ -607,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b2620790840f347a58b1fc1b0d6e1d
-      internalID: -147709652
+      spriteID: 6aa390f387e46b14589a793d3f99af55
+      internalID: -1301888084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_24
+      name: GoldAstroid_14
       rect:
         serializedVersion: 2
         x: 768
@@ -628,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26450e81b03acc742a493b53ae83d801
-      internalID: 1894632953
+      spriteID: a5b40272ba7634942a059a61efb3c59e
+      internalID: 1212504677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_25
+      name: GoldAstroid_15
       rect:
         serializedVersion: 2
         x: 800
@@ -649,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 411216de5471ef0458082de62b59ef18
-      internalID: -689143014
+      spriteID: cd95278af8c29b345bc896a77349ea04
+      internalID: 610745085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_26
+      name: GoldAstroid_16
       rect:
         serializedVersion: 2
         x: 832
@@ -670,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99d46cbd3d8f354b82f4fb2a6af4454
-      internalID: -975793577
+      spriteID: d371e8e5abf1ec04298146c9b6e69fed
+      internalID: 1252542522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_27
+      name: GoldAstroid_17
       rect:
         serializedVersion: 2
         x: 864
@@ -691,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b155133111592ea4eab554cd490a02b0
-      internalID: 1894978412
+      spriteID: f4536e6cb37056e4988d0ce430c79527
+      internalID: -853037794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_28
+      name: GoldAstroid_18
       rect:
         serializedVersion: 2
         x: 896
@@ -712,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97978381d52a5574ea1cf9ef09be223a
-      internalID: -1482270418
+      spriteID: c30ebe43cc490d045929e1f92766a24b
+      internalID: -548742749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_29
+      name: GoldAstroid_19
       rect:
         serializedVersion: 2
         x: 928
@@ -733,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5d9b6bf0b6727d49be03018e609f221
-      internalID: -1501265208
+      spriteID: e0ee60465f0a6914bb95f0359081c903
+      internalID: 1779100069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_30
+      name: GoldAstroid_20
       rect:
         serializedVersion: 2
         x: 960
@@ -754,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e9bc08017005a544a1bebe89eb84a2d
-      internalID: -1852091781
+      spriteID: f961c3556646fac4db9db88a55612627
+      internalID: -1498830455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_31
+      name: GoldAstroid_21
       rect:
         serializedVersion: 2
         x: 992
@@ -775,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a87b721e4e4a7e049b72eacd24505aba
-      internalID: -250922775
+      spriteID: 133066ce1b408d542b138d863dd5513b
+      internalID: 245225797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_32
+      name: GoldAstroid_22
       rect:
         serializedVersion: 2
         x: 1024
@@ -796,14 +586,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9a74dc3f25512e489221005f84ce581
-      internalID: -60074873
+      spriteID: 741727dbfc83b00469cb8f5da8b21d6f
+      internalID: 1130859936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_33
+      name: GoldAstroid_23
       rect:
         serializedVersion: 2
         x: 1056
@@ -817,14 +607,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaed68c7bc4d2d04e8a3c5e9146f8acc
-      internalID: 1770203082
+      spriteID: 5615230cd0270194dab77653155c4ceb
+      internalID: 347214092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_34
+      name: GoldAstroid_24
       rect:
         serializedVersion: 2
         x: 1088
@@ -838,14 +628,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7b64fbed3c2ef5419f24ed735246737
-      internalID: 1881435631
+      spriteID: 07fb626a35835104cb28ef12157e6a8d
+      internalID: -974203730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_35
+      name: GoldAstroid_25
       rect:
         serializedVersion: 2
         x: 1120
@@ -859,14 +649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ead263282a5fc034ea9914ee3b699337
-      internalID: 710242161
+      spriteID: 94177c0e8bdd0b14dbb716de25c1a2ac
+      internalID: 764214614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_36
+      name: GoldAstroid_26
       rect:
         serializedVersion: 2
         x: 1152
@@ -880,14 +670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a98ed0dec32236c43b457284037ab9fc
-      internalID: 1228803025
+      spriteID: 7fb22b40568c2324ea0f858de6706edc
+      internalID: 79681974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_37
+      name: GoldAstroid_27
       rect:
         serializedVersion: 2
         x: 1184
@@ -901,14 +691,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7511dc6cb4589a647a5011e62284cca6
-      internalID: 2055950457
+      spriteID: 4545e09f2e6169c49b94ba62b4a541c9
+      internalID: 1028529952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldAstroid_38
+      name: GoldAstroid_28
       rect:
         serializedVersion: 2
         x: 1216
@@ -922,8 +712,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 996f704fc2a59e94b9c5ad09e6081b47
-      internalID: 1735221144
+      spriteID: 95fe8ca276b60d2449780b0c52bf30a6
+      internalID: 1620320179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldAstroid_29
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11df31d967a383469b262d786458131
+      internalID: 1022719548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldAstroid_30
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120a9df1f101ada4fba4648b0fb999c2
+      internalID: 196944833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldAstroid_31
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 0
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423a519d840725740b9f31b00cfc0cc2
+      internalID: -153150612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldAstroid_32
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af13abac2122d84f9bd5c60b6b03a37
+      internalID: -519409003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldAstroid_33
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 0
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a527d1adf7e5f4948a84f931ec77218c
+      internalID: 488474339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldAstroid_34
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8adbba8d5cfe7f4a9f98565106df5e5
+      internalID: -1172234515
       vertices: []
       indices: 
       edges: []
@@ -939,45 +855,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GoldAstroid_0: 1762213291
-      GoldAstroid_1: 1406682089
-      GoldAstroid_10: 512917989
-      GoldAstroid_11: 1730983019
-      GoldAstroid_12: 430038126
-      GoldAstroid_13: 2037239985
-      GoldAstroid_14: 1321898933
-      GoldAstroid_15: 1729021654
-      GoldAstroid_16: 511650353
-      GoldAstroid_17: -1035068844
-      GoldAstroid_18: -246220928
-      GoldAstroid_19: 1403192218
-      GoldAstroid_2: 1653837533
-      GoldAstroid_20: 1942345025
-      GoldAstroid_21: 1368642013
-      GoldAstroid_22: 643397766
-      GoldAstroid_23: -147709652
-      GoldAstroid_24: 1894632953
-      GoldAstroid_25: -689143014
-      GoldAstroid_26: -975793577
-      GoldAstroid_27: 1894978412
-      GoldAstroid_28: -1482270418
-      GoldAstroid_29: -1501265208
-      GoldAstroid_3: -1202482499
-      GoldAstroid_30: -1852091781
-      GoldAstroid_31: -250922775
-      GoldAstroid_32: -60074873
-      GoldAstroid_33: 1770203082
-      GoldAstroid_34: 1881435631
-      GoldAstroid_35: 710242161
-      GoldAstroid_36: 1228803025
-      GoldAstroid_37: 2055950457
-      GoldAstroid_38: 1735221144
-      GoldAstroid_4: 1855231536
-      GoldAstroid_5: -1926381784
-      GoldAstroid_6: 862236285
-      GoldAstroid_7: -622085279
-      GoldAstroid_8: 1504846606
-      GoldAstroid_9: 108514054
+      GoldAstroid_0: -1372842209
+      GoldAstroid_1: -1967685524
+      GoldAstroid_10: 1927763950
+      GoldAstroid_11: -2068166750
+      GoldAstroid_12: -253676444
+      GoldAstroid_13: -1301888084
+      GoldAstroid_14: 1212504677
+      GoldAstroid_15: 610745085
+      GoldAstroid_16: 1252542522
+      GoldAstroid_17: -853037794
+      GoldAstroid_18: -548742749
+      GoldAstroid_19: 1779100069
+      GoldAstroid_2: -153953281
+      GoldAstroid_20: -1498830455
+      GoldAstroid_21: 245225797
+      GoldAstroid_22: 1130859936
+      GoldAstroid_23: 347214092
+      GoldAstroid_24: -974203730
+      GoldAstroid_25: 764214614
+      GoldAstroid_26: 79681974
+      GoldAstroid_27: 1028529952
+      GoldAstroid_28: 1620320179
+      GoldAstroid_29: 1022719548
+      GoldAstroid_3: -166124737
+      GoldAstroid_30: 196944833
+      GoldAstroid_31: -153150612
+      GoldAstroid_32: -519409003
+      GoldAstroid_33: 488474339
+      GoldAstroid_34: -1172234515
+      GoldAstroid_4: 214047660
+      GoldAstroid_5: 214769872
+      GoldAstroid_6: -694753754
+      GoldAstroid_7: 1495219097
+      GoldAstroid_8: 590709082
+      GoldAstroid_9: -533938453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
