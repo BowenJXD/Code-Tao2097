@@ -1,5 +1,8 @@
 ﻿namespace CodeTao
 {
+    /// <summary>
+    /// unity tags
+    /// </summary>
     public enum EntityType
     {
         Player,

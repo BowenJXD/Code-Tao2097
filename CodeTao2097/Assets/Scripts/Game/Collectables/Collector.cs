@@ -3,6 +3,9 @@ using QFramework;
 
 namespace CodeTao
 {
+	/// <summary>
+	/// 获取附近的collectable的组件
+	/// </summary>
 	public partial class Collector : ViewController
 	{
 		public BindableStat range = new BindableStat(3);

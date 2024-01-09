@@ -7,6 +7,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 道具Collectable：修为、金币等。无实体。进入玩家的拾取范围内后，朝玩家移动。
+    /// </summary>
     public class Collectable : Interactable
     {
         NavMeshAgent navAgent;

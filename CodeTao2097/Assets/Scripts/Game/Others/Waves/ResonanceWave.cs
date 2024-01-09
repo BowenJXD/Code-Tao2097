@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 共振波
+    /// </summary>
     public class ResonanceWave : Wave
     {
         

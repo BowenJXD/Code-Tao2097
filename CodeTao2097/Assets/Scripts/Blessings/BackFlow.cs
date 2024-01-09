@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 回流（水） 令修为在吸取时对接触的敌人造成回流伤害（受玩家移动速度影响）。
+    /// BackFlow (Water) When absorbing the cultivation, it causes backflow damage to the enemy in contact (affected by the player's movement speed).
+    /// </summary>
     public class BackFlow : Blessing
     {
         public Damager damager;

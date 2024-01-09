@@ -4,6 +4,10 @@ using UnityEngine.Pool;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 单位对象池，不会在获取时enable，但会在回收时disable。
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class UnitPool<T> : ObjectPool<T> where T : UnitController
     {
         public UnitPool(T defaultPrefab, Transform parent = null, int defaultCapacity = 100) :

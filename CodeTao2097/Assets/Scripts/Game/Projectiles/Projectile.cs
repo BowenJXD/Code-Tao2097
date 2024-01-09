@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 弹射物Projectile：无实体。触碰到单位后造成伤害。
+    /// </summary>
     public partial class Projectile : UnitController
     {
         [HideInInspector] public Rigidbody2D rb2D;

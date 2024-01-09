@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 爆炸单位，会在生成后爆炸，对周围单位造成伤害，并击退。
+    /// </summary>
     public class Explosion : UnitController
     {
         protected Animator ani;
@@ -21,7 +24,7 @@ namespace CodeTao
         {
             base.Init();
             
-            ActionKit.DelayFrame(5, Explode).Start(this);
+            ActionKit.DelayFrame(1, Explode).Start(this);
             ActionKit.Delay(ani.GetCurrentAnimatorStateInfo(0).length, Deinit).Start(this);
         }
 

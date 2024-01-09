@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 负责执行伤害事件，包括伤害的计算、触发、结算。
+    /// </summary>
     public class DamageManager : MonoSingleton<DamageManager>
     {
         public Action<Damage> damageAfter;

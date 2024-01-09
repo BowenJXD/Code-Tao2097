@@ -4,6 +4,9 @@ using QFramework;
 
 namespace CodeTao
 {
+	/// <summary>
+	/// 玩家单位，用于管理玩家专属的多组件交互逻辑，和控制动画。
+	/// </summary>
 	public partial class Player : CombatUnit
 	{
 		public static Player Instance;

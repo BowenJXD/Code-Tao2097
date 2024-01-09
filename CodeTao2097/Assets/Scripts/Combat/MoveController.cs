@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 负责管理移动的控制器，包括移动速度，移动方向，以及最后一次移动的方向。
+    /// </summary>
     public partial class MoveController : ViewController
     {
         [SerializeField] public BindableStat SPD = new BindableStat(1);

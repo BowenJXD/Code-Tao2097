@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 奇物，可以提供额外的属性加成，可升级。
+    /// </summary>
     public class Artefact : Item
     {
         [TabGroup("Content")]

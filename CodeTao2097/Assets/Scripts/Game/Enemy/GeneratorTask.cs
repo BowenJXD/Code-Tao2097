@@ -11,6 +11,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 生成器任务，在给定的时间内生成指定数量的单位。
+    /// </summary>
     [Serializable]
     public class GeneratorTask
     {

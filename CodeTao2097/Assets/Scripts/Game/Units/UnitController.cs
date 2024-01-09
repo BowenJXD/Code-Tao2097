@@ -3,6 +3,9 @@ using QFramework;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 单位控制器，用于管理单位的生命周期
+    /// </summary>
     public abstract class UnitController : ViewController
     {
         /// <summary>

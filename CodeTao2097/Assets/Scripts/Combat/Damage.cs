@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 伤害乘区
+    /// </summary>
     public enum DamageSection
     {
         SourceATK,
@@ -20,6 +23,9 @@ namespace CodeTao
         ReactionMultiplier
     }
 
+    /// <summary>
+    /// 伤害，包括Attacker、Damager、Defencer、伤害元素、基础伤害、伤害乘区。。。最终伤害值由基础伤害乘以所有乘区的乘积得到。
+    /// </summary>
     public class Damage
     {
         public Attacker Source { get; private set; }

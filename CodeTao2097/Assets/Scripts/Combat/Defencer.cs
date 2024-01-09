@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 受到伤害的组件。包括血量，防御，抗性，伤害cd，以及受到伤害的逻辑。为造成伤害的必要条件。
+    /// </summary>
     public partial class Defencer : ViewController
     {
         #region HP

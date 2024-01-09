@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 升级属性配置，用于设置一个item升级的属性变化
+    /// </summary>
     public abstract class UpgradeMod
     {
         /// <summary>

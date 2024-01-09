@@ -2,6 +2,9 @@
 
 namespace CodeTao
 {
+    /// <summary>
+    /// unity layers
+    /// </summary>
     public enum ELayer
     {
         Enemy = 7,

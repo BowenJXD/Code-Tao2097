@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 攻击目标类型
+    /// </summary>
     public enum EAttackTarget
     {
         None,
@@ -12,6 +15,9 @@ namespace CodeTao
         All,
     }
     
+    /// <summary>
+    /// 领域GroundEffect：无实体，间歇性对领域内的敌人造成伤害。进出领域可以有伤害。
+    /// </summary>
     public partial class GroundEffect : UnitController
     {
         [HideInInspector] public Damager damager;

@@ -8,7 +8,10 @@ using Object = UnityEngine.Object;
 
 namespace CodeTao
 {
-    public class Buff : Content<Buff>
+    /// <summary>
+    /// Base class for all buffs. Has a loop task to trigger buff and end buff.
+    /// </summary>
+    public abstract class Buff : Content<Buff>
     {
         public List<TriggerCondition> triggerConditions = new List<TriggerCondition>();
         public BindableStat triggerInterval = new BindableStat(0);

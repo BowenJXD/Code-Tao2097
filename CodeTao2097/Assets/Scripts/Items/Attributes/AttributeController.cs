@@ -4,6 +4,9 @@ using QFramework;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 属性管理器组件，用于管理单位的各种属性。
+    /// </summary>
     public class AttributeController : ViewController
     {
         public Dictionary<EAAt, ModifierGroup> artefactModGroups = new Dictionary<EAAt, ModifierGroup>();

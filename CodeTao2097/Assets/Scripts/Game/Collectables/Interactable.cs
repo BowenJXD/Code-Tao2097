@@ -5,6 +5,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 可以被玩家交互的单位，包括NPC、道具等。
+    /// </summary>
     public class Interactable : UnitController
     {
         public List<EntityType> interactingTags = new List<EntityType>();

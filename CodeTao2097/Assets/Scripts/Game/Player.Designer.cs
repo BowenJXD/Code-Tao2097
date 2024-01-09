@@ -16,8 +16,6 @@ namespace CodeTao
 
 		public CodeTao.Defencer Defencer;
 
-		public CodeTao.ElementOwner ElementOwner;
-
 		public CodeTao.Collector Collector;
 
 		public CodeTao.ExpController ExpController;

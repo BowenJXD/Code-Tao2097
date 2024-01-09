@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 共振波管理器，会覆盖共振波的DMG，并基于玩家的ATK来设置DMG。
+    /// </summary>
     public class ResonanceWaveManager : UnitManager<ResonanceWave, ResonanceWaveManager>
     {
         public static Damager damager;

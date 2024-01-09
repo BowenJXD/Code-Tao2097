@@ -18,8 +18,6 @@ namespace CodeTao
 
 		public CodeTao.Damager EnemyDamager;
 
-		public CodeTao.ElementOwner ElementOwner;
-
 		public CodeTao.BuffOwner SelfBuffOwner;
 
 		public CodeTao.AttributeController SelfAttributeController;

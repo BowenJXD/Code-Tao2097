@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 从自身出发，呈圆形向外扩散的单位，通过触碰来造成伤害。
+    /// </summary>
     public class Wave : UnitController
     {
         public Ease easeMode = Ease.Linear;

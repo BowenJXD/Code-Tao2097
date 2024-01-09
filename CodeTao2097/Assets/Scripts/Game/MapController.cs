@@ -7,6 +7,9 @@ using UnityEngine.Tilemaps;
 
 namespace CodeTao
 {
+	/// <summary>
+	/// 地图控制器，用于管理tilemap的位置，以及NavMeshSurface的位置。
+	/// </summary>
 	public partial class MapController : ViewController
 	{
 		/*#if UNITY_EDITOR

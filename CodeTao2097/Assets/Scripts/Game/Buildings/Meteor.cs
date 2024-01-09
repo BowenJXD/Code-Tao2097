@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 流星，建筑物的子类，用于掉落。
+    /// </summary>
     public class Meteor : Building
     {
         protected Animator ani;

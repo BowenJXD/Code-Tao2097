@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 建筑物的基类，有实体，地图上初始就可以有。
+    /// </summary>
     public class Building : CombatUnit
     {
         public BindableStat lifeTime = new BindableStat(5f);

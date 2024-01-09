@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// BuffingBlessing is a special blessing that can be used to buff the target if the specific type of element damage is dealt.
+    /// </summary>
     public class BuffingBlessing : Blessing
     {
-        public ElementType buffingElement;
-        
         [HideInInspector] public Attacker attacker;
         
         [HideInInspector] public Buff buffToApply;
@@ -51,7 +52,7 @@ namespace CodeTao
 
         public bool CheckCondition(Damage damage)
         {
-            return damage.DamageElement == buffingElement;
+            return relatedElements.Contains(damage.DamageElement);
         }
     }
 }

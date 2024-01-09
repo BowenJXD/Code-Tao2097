@@ -3,6 +3,9 @@ using QFramework;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// A unit component to save tags.
+    /// </summary>
     public class TagOwner : ViewController
     {
         public List<Tag> tags = new List<Tag>();

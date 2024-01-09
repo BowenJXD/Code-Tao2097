@@ -2,6 +2,9 @@
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 爆炸单位的管理器，会覆盖爆炸单位的DMG和击退系数。
+    /// </summary>
     public class ExplosionManager : UnitManager<Explosion, ExplosionManager>
     {
         public BindableStat DMG = new BindableStat(10);

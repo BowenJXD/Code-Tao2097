@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+	/// <summary>
+	/// 敌人，通过自动寻路追击玩家，在触碰玩家时造成伤害。
+	/// </summary>
 	public partial class Enemy : CombatUnit
 	{
 		public Transform target;

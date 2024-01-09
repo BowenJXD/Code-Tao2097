@@ -8,7 +8,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    
+    /// <summary>
+    /// 增幅伤害的组件，通常挂载在有defencer的单位上。包括攻击力、暴击率、暴击伤害、五行伤害加成，不为造成伤害的必要条件。
+    /// </summary>
     public partial class Attacker : ViewController
     {
         public BindableStat ATK = new BindableStat();

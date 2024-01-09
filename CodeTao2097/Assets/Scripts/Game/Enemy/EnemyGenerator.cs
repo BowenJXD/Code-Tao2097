@@ -13,6 +13,9 @@ using Random = UnityEngine.Random;
 
 namespace CodeTao
 {
+	/// <summary>
+	/// 敌人生成器，根据任务生成敌人。
+	/// </summary>
 	public partial class EnemyGenerator : ViewController
 	{
 		protected List<UnitPool<Enemy>> enemyPools = new List<UnitPool<Enemy>>();

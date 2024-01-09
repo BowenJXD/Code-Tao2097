@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 单次伤害的信息，包括伤害的时间，玩家等级，伤害者等级，以及伤害相关的属性。
+    /// </summary>
     public class DamageLog
     {
         public Damage damage;
@@ -32,6 +35,9 @@ namespace CodeTao
         }
     }
 
+    /// <summary>
+    /// 单个damager在每个玩家等级下的伤害统计，包括总伤害，总DPS，以及每个玩家等级下的DPS。
+    /// </summary>
     public class DamagerPlayerLevelStat
     {
         public Damager damager;
@@ -78,6 +84,9 @@ namespace CodeTao
         }
     }
     
+    /// <summary>
+    /// 单个damager在每个等级下的伤害统计，包括总伤害，总DPS，以及每个等级下的DPS。
+    /// </summary>
     public class DamagerLevelStat
     {
         public Damager damager;
@@ -134,6 +143,9 @@ namespace CodeTao
         }
     }
     
+    /// <summary>
+    /// 伤害统计工具，负责记录和导出三种伤害信息文件（Resources/DamageStatistics/）。
+    /// </summary>
     public class DamageStatistics : MonoSingleton<DamageStatistics>
     {
         protected List<DamageLog> damageLogs = new List<DamageLog>();
