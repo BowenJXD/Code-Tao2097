@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CodeTao;
 using QFramework;
 using Sirenix.OdinInspector;
@@ -10,19 +11,18 @@ namespace CodeTao
 {
     public partial class Shooter : SpawnerWeapon<Projectile>
     {
-        [BoxGroup("Secondary Attributes")]
+        [BoxGroup("Shooter")]
         public BindableStat penetration = new BindableStat(1);
-        
+        [BoxGroup("Shooter")]
+        public float shootPointOffset = 1;
+        [BoxGroup("Shooter")]
+        public EAimWay aimWay = EAimWay.Random;
         /// <summary>
         /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
         /// </summary>
         [FormerlySerializedAs("ShootingDirections")] [BoxGroup("Shooter")]
         public List<float> shootingDirections = new List<float>();
         private int _currentDirectionIndex = 0;
-        [BoxGroup("Shooter")]
-        public float shootPointOffset = 1;
-        [BoxGroup("Shooter")]
-        public EAimWay aimWay = EAimWay.Random;
         
         private MoveController _ownerMoveController;
 
@@ -111,6 +111,13 @@ namespace CodeTao
             {
                 penetration.AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
             }
+        }
+        
+        [Button("Generate Attacking Directions")]
+        public void GenerateDirections()
+        {
+            shootingDirections = Util.GenerateAngles((int)ats[EWAt.Amount], shootingDirections.FirstOrDefault());
+            LogKit.I("Generated AttackingDirections: " + shootingDirections);
         }
     }
 }

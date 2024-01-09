@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public abstract class Container<T> : ViewController where T : Content<T>
+    public abstract class Container<T> : MonoBehaviour where T : Content<T>
     {
         [HideInInspector] public List<Content<T>> Contents;
 

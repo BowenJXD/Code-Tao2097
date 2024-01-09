@@ -59,7 +59,7 @@ namespace CodeTao
                     }
                     else
                     {
-                        result = _ownerMoveController.LastNonZeroDirection.Value * AttackRange;
+                        result = _ownerMoveController.LastNonZeroDirection.Value * attackRange;
                     }
                     break;
                 case EAimWay.Random:

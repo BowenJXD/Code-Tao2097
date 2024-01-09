@@ -55,7 +55,7 @@ namespace CodeTao
 
 		void FillBtns()
 		{
-			var randomItems = itemManager.GetRandomItems(3);
+			var randomItems = itemManager.GetRandomUpgradeItems(3);
 			if (randomItems == null) return;
 			
 			foreach (var btn in btns)

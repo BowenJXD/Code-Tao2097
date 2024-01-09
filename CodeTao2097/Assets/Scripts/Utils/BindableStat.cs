@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GraphProcessor;
 using QFramework;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -274,6 +275,30 @@ namespace CodeTao
         public static implicit operator float(BindableStat myObject)
         {
             return myObject.Value;
+        }
+    }
+    
+    [CustomPropertyDrawer(typeof(BindableProperty<>))]
+    public class BindablePropertyDrawer : PropertyDrawer
+    {
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            EditorGUI.BeginProperty(position,label,property);
+            SerializedProperty mValueProperty = property.FindPropertyRelative("mValue");
+            EditorGUI.PropertyField(position, mValueProperty, label);
+            EditorGUI.EndProperty();
+        }
+    }
+    
+    [CustomPropertyDrawer(typeof(BindableStat))]
+    public class BindableStatDrawer : PropertyDrawer
+    {
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            EditorGUI.BeginProperty(position,label,property);
+            SerializedProperty mValueProperty = property.FindPropertyRelative("mValue");
+            EditorGUI.PropertyField(position, mValueProperty, label);
+            EditorGUI.EndProperty();
         }
     }
 }

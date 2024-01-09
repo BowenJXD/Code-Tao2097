@@ -74,13 +74,13 @@ namespace CodeTao
             return result;
         }
         
-        public static List<float> GenerateAngles(float count, float startAngle = -180, float endAngle = 180)
+        public static List<float> GenerateAngles(int count, float step)
         {
             List<float> result = new List<float>();
-            float step = (endAngle - startAngle) / count;
-            for (float angle = startAngle; angle < endAngle; angle += step)
+            float start = step * (count - 1) / 2;
+            for (int i = 0; i < count; i++)
             {
-                result.Add(angle);
+                result.Add(start - i * step);
             }
 
             return result;

@@ -1,4 +1,4 @@
-// Generate Id:af3c1960-7a7b-42a9-9cfa-f6f60f3ce9e2
+// Generate Id:ea8024a0-09ac-4c2a-b721-e57b0ea20334
 using UnityEngine;
 
 namespace CodeTao
@@ -8,7 +8,9 @@ namespace CodeTao
 
 		public Transform Weapons;
 
-		public Transform Items;
+		public Transform Artefacts;
+
+		public Transform Blessings;
 
 	}
 }

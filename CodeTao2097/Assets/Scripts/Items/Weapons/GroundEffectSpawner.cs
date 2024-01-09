@@ -9,14 +9,14 @@ namespace CodeTao
 {
     public partial class GroundEffectSpawner : SpawnerWeapon<GroundEffect>
     {
-        [BoxGroup("GroundEffectCaster")]
+        [BoxGroup("Ground Effect Spawner")]
         public List<Vector2> spawnPoints = new List<Vector2>();
         private int _currentSpawnPointIndex = 0;
-        [BoxGroup("GroundEffectCaster")]
+        [BoxGroup("Ground Effect Spawner")]
         public EAimWay aimWay = EAimWay.Random;
-        [BoxGroup("GroundEffectCaster")]
+        [BoxGroup("Ground Effect Spawner")]
         public float spawnPointMaxOffset = 1;
-        [BoxGroup("GroundEffectCaster")]
+        [BoxGroup("Ground Effect Spawner")]
         public bool rootToOwner = false;
         
         private MoveController _ownerMoveController;
@@ -66,7 +66,7 @@ namespace CodeTao
                     }
                     else
                     {
-                        result = _ownerMoveController.LastNonZeroDirection.Value * AttackRange;
+                        result = _ownerMoveController.LastNonZeroDirection.Value * attackRange;
                     }
                     break;
                 case EAimWay.Random:

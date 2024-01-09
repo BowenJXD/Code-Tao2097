@@ -29,7 +29,7 @@ namespace CodeTao
             backFlow = Container.GetContent<BackFlow>();
             if (backFlow)
             {
-                return backFlow.GetWeight();
+                return (int)weight;
             }
             else
             {

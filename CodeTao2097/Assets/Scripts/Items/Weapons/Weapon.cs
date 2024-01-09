@@ -10,8 +10,12 @@ namespace CodeTao
 {
     public class Weapon : Item
     {
-        public ElementType elementType = ElementType.None;
-        
+        public ElementType elementType
+        {
+            get => relatedElements.FirstOrDefault();
+            set => relatedElements = new List<ElementType>() {value};
+        }
+
         [SerializeField]
         public SerializableDictionary<EWAt, BindableStat> ats = new SerializableDictionary<EWAt, BindableStat>()
         {
@@ -20,31 +24,34 @@ namespace CodeTao
             {EWAt.Duration, new BindableStat(5).SetMinValue(0.1f)},
             {EWAt.Speed, new BindableStat(4)},
             {EWAt.Cooldown, new BindableStat(2).SetMinValue(0.1f)},
-            {EWAt.Area, new BindableStat(1).SetMinValue(0.1f)}
+            {EWAt.Area, new BindableStat(1).SetMinValue(0.1f)},
+            {EWAt.EffectHitRate, new BindableStat(50).SetMaxValue(100f)}
         };
 
+        [BoxGroup("Weapon")]
         public Buff buffToApply;
-        /// <summary>
-        /// 0 - 100
-        /// </summary>
-        public BindableStat buffHitRate = new BindableStat(50);
-        
+
+        [BoxGroup("Weapon")]
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
+        
+        [BoxGroup("Weapon")]
         public BindableStat reloadTime = new BindableStat(0);
-        [ShowInInspector] public BindableStat attackRange = new BindableStat(10);
-        public virtual float AttackRange => attackRange.Value;
+        
+        [BoxGroup("Weapon")]
+        public BindableStat attackRange = new BindableStat(10);
         
         [HideInInspector] public Attacker attacker;
         [HideInInspector] public Damager damager;
 
         protected LoopTask fireLoop;
         
+        [TabGroup("Content")]
         public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
 
         public override void OnAdd()
         {
             base.OnAdd();
-            attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
+            attacker = Container.GetComponentFromUnit<Attacker>();
         }
 
         public override void Init()
@@ -55,6 +62,7 @@ namespace CodeTao
             damager.DMG = ats[EWAt.Damage];
             damager.DealDamageAfter += TryApplyBuff;
             buffToApply = this.GetComponentInDescendants<Buff>();
+            reloadTime.AddModifierGroups(ats[EWAt.Cooldown].ModGroups);
             
             // setup fire loop
             fireLoop = new LoopTask(this, ats[EWAt.Cooldown], Fire, StartReload);
@@ -113,7 +121,7 @@ namespace CodeTao
 
         public virtual bool CheckBuffHit(Damage damage)
         {
-            return RandomUtil.rand.Next(100) < buffHitRate.Value;
+            return RandomUtil.rand.Next(100) < ats[EWAt.EffectHitRate].Value;
         }
         
         public virtual void StartReload()
@@ -194,7 +202,7 @@ namespace CodeTao
             List<Collider2D> colliders = new List<Collider2D>();
             if (range == 0)
             {
-                range = AttackRange;
+                range = attackRange;
             }
             if (colUsed)
             {

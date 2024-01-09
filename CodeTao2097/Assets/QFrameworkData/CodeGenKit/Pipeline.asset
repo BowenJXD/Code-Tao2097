@@ -18,12 +18,23 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
-    ScriptsFolder: Assets/Scripts/UI
-    ClassName: GameUIManager
+    BindInfos:
+    - TypeName: Transform
+      PathToRoot: Weapons
+      MemberName: Weapons
+    - TypeName: Transform
+      PathToRoot: Artefacts
+      MemberName: Artefacts
+    - TypeName: Transform
+      PathToRoot: Blessings
+      MemberName: Blessings
+    ScriptsFolder: Assets/Scripts/Items
+    ClassName: Inventory
     Namespace: CodeTao
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace CodeTao\r\n{\r\n\tpublic
-      partial class GameUIManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Inventory : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:50cca210-a32e-431e-a493-322f7aa80e59\r\nusing UnityEngine;\r\n\r\nnamespace
-      CodeTao\r\n{\r\n\tpublic partial class GameUIManager\r\n\t{\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:ea8024a0-09ac-4c2a-b721-e57b0ea20334\r\nusing UnityEngine;\r\n\r\nnamespace
+      CodeTao\r\n{\r\n\tpublic partial class Inventory\r\n\t{\r\n\r\n\t\tpublic Transform
+      Weapons;\r\n\r\n\t\tpublic Transform Artefacts;\r\n\r\n\t\tpublic Transform
+      Blessings;\r\n\r\n\t}\r\n}\r\n"

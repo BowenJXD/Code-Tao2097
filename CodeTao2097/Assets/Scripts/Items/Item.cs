@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using QFramework;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -7,8 +8,10 @@ namespace CodeTao
 {
     public abstract class Item : Content<Item>
     {
-        [BoxGroup("Content")]
+        [TabGroup("Item")]
         public BindableStat weight = new BindableStat(10);
+        [TabGroup("Item")]
+        public List<ElementType> relatedElements = new List<ElementType>();
 
         public override void OnAdd()
         {

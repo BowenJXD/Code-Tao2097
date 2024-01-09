@@ -1,7 +1,5 @@
-Damager,TotalDamage,TotalDps,Level0,Level1,Level2
-ResonanceDamager,4278,101.2245,Infinity,100.9879
-ChaoDamager,2120.556,50.17582,Infinity,49.58427
-EnemyDamager,12.5,0.2957704,Infinity
-SaDouChengBingDamager,1224,28.96184,Infinity,28.48861
-BackFlowDamager,255.5556,6.046863,Infinity,5.928555
-ExplosionDamager,1050,24.84472,Infinity,23.66164
+Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9,Level10,Level11
+SaDouChengBingDamager,2544,84.06693,Infinity,24.97956,102.5267,49.48103,227.0311,336.8473,85.07443
+ResonanceDamager,3196,105.6124,Infinity,17.98528,4.134142,48.60784,3.243301,242.6442,643.2822,550.5292,101.9897,217.7517
+BackFlowDamager,255,8.426519,Infinity,1.665304,10.33536,2.182987,16.2165,23.78865,26.11934,18.98377,33.99655
+ChaoDamager,585,19.33143,Infinity,2.08163,10.33536,3.638311,8.108252,11.89432,93.28337,208.8214,254.9741

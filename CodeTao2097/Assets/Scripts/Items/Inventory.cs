@@ -8,7 +8,9 @@ namespace CodeTao
     public partial class Inventory : Container<Item>
     {
         public List<Weapon> weaponInventory = new List<Weapon>();
-
+        public List<Artefact> artefactInventory = new List<Artefact>();
+        public List<Blessing> blessingInventory = new List<Blessing>();
+        
         private void Start()
         {
             List<Item> items = ComponentUtil.GetComponentsInDescendants<Item>(this);
@@ -35,7 +37,13 @@ namespace CodeTao
             }
             else if (item.GetType() == typeof(Artefact) || item.CompareTag("Artefact"))
             {
-                parent = Items;
+                parent = Artefacts;
+                artefactInventory.Add(item as Artefact);
+            }
+            else if (item.GetType() == typeof(Blessing) || item.CompareTag("Blessing"))
+            {
+                parent = Blessings;
+                blessingInventory.Add(item as Blessing);
             }
             
             if (item.transform.parent != parent)

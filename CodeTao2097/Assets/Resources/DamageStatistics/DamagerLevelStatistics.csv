@@ -1,7 +1,5 @@
 Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9
-ResonanceDamager,4278,101.2245101.2245,
-ChaoDamager,2120.556,50.175823.289719,60.45499,
-EnemyDamager,12.5,0.29577040.2957704,
-SaDouChengBingDamager,1224,28.961841.664149,39.80909,
-BackFlowDamager,255.5556,6.0468636.046863,
-ExplosionDamager,1050,24.8447224.84472,
+SaDouChengBingDamager,2544,84.066934.555236,97.56078,
+ResonanceDamager,3196,105.6124105.6124,
+BackFlowDamager,255,8.4265190.476833,12.64174,
+ChaoDamager,585,19.331430.9062762,209.2525,

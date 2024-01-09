@@ -1,14 +1,16 @@
 ﻿using System.Collections.Generic;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace CodeTao
 {
     public class Artefact : Item
     {
+        [TabGroup("Content")]
         public List<ArtefactUpgradeMod> upgradeMods = new List<ArtefactUpgradeMod>();
         
-        public AttributeController attributeController;
+        [HideInInspector] public AttributeController attributeController;
 
         public override void OnAdd()
         {

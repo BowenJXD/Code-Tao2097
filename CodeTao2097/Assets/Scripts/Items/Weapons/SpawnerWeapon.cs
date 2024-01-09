@@ -12,12 +12,6 @@ namespace CodeTao
         public T unitPrefab;
         protected UnitPool<T> pool;
 
-        /// <summary>
-        /// Reload time = cooldown / reloadCoolDownRatio
-        /// </summary>
-        [BoxGroup("Secondary Attributes")]
-        public BindableProperty<float> coolDownReloadRatio = new BindableProperty<float>(0.5f);
-
         public override void Init()
         {
             base.Init();
@@ -27,11 +21,6 @@ namespace CodeTao
                 unitPrefab = ComponentUtil.GetComponentInDescendants<T>(this);
             }
             pool = new UnitPool<T>(unitPrefab);
-            
-            ats[EWAt.Cooldown].RegisterWithInitValue(cooldown =>
-            {
-                reloadTime.Value = cooldown * coolDownReloadRatio.Value;
-            }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
         public override void Fire()

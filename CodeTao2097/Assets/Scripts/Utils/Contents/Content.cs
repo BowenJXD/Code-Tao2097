@@ -6,7 +6,7 @@ using UnityEngine;
 namespace CodeTao
 {
     [Serializable]
-    public abstract class Content<T> : ViewController where T : Content<T>
+    public abstract class Content<T> : MonoBehaviour where T : Content<T>
     {
         #region Add&Remove
         
@@ -16,6 +16,7 @@ namespace CodeTao
 
         public Action<T> RemoveAfter;
         
+        [TabGroup("Content")]
         public ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return;
 
         public virtual bool AddToContainer(Container<T> container)

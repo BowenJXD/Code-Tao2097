@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using QFramework;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -46,29 +47,6 @@ namespace CodeTao
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
-        /*#if UNITY_EDITOR
-        [UnityEditor.CustomEditor(typeof(Orbiter))]
-        public class OrbiterEditor : UnityEditor.Editor
-        {
-        	public override void OnInspectorGUI()
-        	{
-        		base.OnInspectorGUI();
-        
-        		if (GUILayout.Button("Generate Spawning Directions"))
-        		{
-        			var controller = target as Orbiter;
-        			controller.GenerateShootingDirections();
-        		}
-        	}
-        }
-        #endif
-        
-        public void GenerateShootingDirections()
-        {
-            spawningDirections = Util.GenerateAngles(ats[EWAt.Amount]);
-            LogKit.I("Generated SpawningDirections: " + spawningDirections);
-        }*/
-        
         public override Projectile SpawnUnit(Vector2 localPos)
         {
             Projectile unit = base.SpawnUnit(localPos);
@@ -95,7 +73,14 @@ namespace CodeTao
                 angle = spawnIndex * 360 / amount;
             }
             
-            return Util.GetVectorFromAngle(angle) * AttackRange;
+            return Util.GetVectorFromAngle(angle) * attackRange;
+        }
+        
+        [Button("Generate Directions")]
+        public void GenerateDirections()
+        {
+            spawningDirections = Util.GenerateAngles((int)ats[EWAt.Amount], spawningDirections.FirstOrDefault());
+            LogKit.I("Generated AttackingDirections: " + spawningDirections);
         }
     }
 }

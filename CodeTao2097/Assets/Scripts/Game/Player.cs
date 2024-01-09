@@ -6,17 +6,13 @@ namespace CodeTao
 {
 	public partial class Player : CombatUnit
 	{
-		void Update()
-		{
-			MoveController.MovementDirection.Value = GetMovementDirection();
-			Move(MoveController.MovementDirection.Value);
-		}
-
 		public static Player Instance;
+		public Animator anim;
 
 		private void Awake()
 		{
 			Instance = this;
+			anim = this.GetComponentInDescendants<Animator>();
 		}
 
 		private void Start()
@@ -37,9 +33,22 @@ namespace CodeTao
 			{
 				Deinit();
 			};
+
+			MoveController.MovementDirection.RegisterWithInitValue(value =>
+			{
+				anim.SetBool("isMoving", value != Vector2.zero);
+				anim.SetFloat("moveX", value.x);
+				anim.SetFloat("moveY", value.y);
+			}).UnRegisterWhenGameObjectDestroyed(this);
 			
 			SelfAttributeController.onAddAAtModGroup += AddAAtMod;
 			SelfAttributeController.onAddWAtModGroup += Inventory.AddWAtModGroup;
+		}
+
+		void Update()
+		{
+		    MoveController.MovementDirection.Value = GetMovementDirection();
+		    Move(MoveController.MovementDirection.Value);
 		}
 
 		public Vector2 GetMovementDirection()
@@ -52,11 +61,6 @@ namespace CodeTao
 		public void Move(Vector2 direction)
 		{
 			SelfRigidbody2D.velocity = direction * MoveController.SPD;
-		}
-
-		public override void AddAAtMod(EAAt at, ModifierGroup modGroup)
-		{
-			base.AddAAtMod(at, modGroup);
 		}
 
 		public override BindableStat GetAAtMod(EAAt at)
