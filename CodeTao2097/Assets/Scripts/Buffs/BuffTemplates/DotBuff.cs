@@ -30,13 +30,13 @@ namespace CodeTao
                     CombatUnit combatUnit = ComponentUtil.GetComponentInAncestors<CombatUnit>(Container);
                     combatUnit.GetAAtMod(baseAttribute).RegisterWithInitValue(value =>
                     {
-                        damager.DMG.AddModifier(value, modType, "BuffBaseAttribute", ERepetitionBehavior.Overwrite);
+                        damager.DMG.AddModifier(value, modType, "BuffBaseAttribute", RepetitionBehavior.Overwrite);
                     }).UnRegisterWhenGameObjectDestroyed(this);
                 }
                 
                 LVL.RegisterWithInitValue(value =>
                 {
-                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "BuffLevel", ERepetitionBehavior.Overwrite);
+                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "BuffLevel", RepetitionBehavior.Overwrite);
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
 

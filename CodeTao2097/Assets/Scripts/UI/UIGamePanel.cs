@@ -9,6 +9,10 @@ namespace CodeTao
 	public class UIGamePanelData : UIPanelData
 	{
 	}
+	
+	/// <summary>
+	/// 游戏内界面的UI，包括HUD
+	/// </summary>
 	public partial class UIGamePanel : UIPanel
 	{
 		public ExpController expController;

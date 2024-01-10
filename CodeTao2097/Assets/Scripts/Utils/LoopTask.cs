@@ -9,7 +9,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    // [Serializable]
+    /// <summary>
+    /// 以一定间隔重复执行单个效果的任务
+    /// </summary>
     public class LoopTask
     {
 

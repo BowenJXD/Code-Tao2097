@@ -8,6 +8,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 武器的基类，包含武器的基本属性，以及武器的基本功能
+    /// </summary>
     public class Weapon : Item
     {
         public ElementType elementType

@@ -7,6 +7,10 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 近战武器，当攻击时，通过physics，对攻击范围内的所有单位造成伤害
+    /// Melee weapon attacks in a certain range on fire.
+    /// </summary>
     public class MeleeWeapon : Weapon
     {
         /// <summary>

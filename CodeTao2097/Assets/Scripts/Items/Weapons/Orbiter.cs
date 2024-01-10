@@ -7,6 +7,10 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 生成环绕自己旋转的弹射物
+    /// Spawns projectiles that orbit around the owner.
+    /// </summary>
     public partial class Orbiter : SpawnerWeapon<Projectile>
     {
         /// <summary>

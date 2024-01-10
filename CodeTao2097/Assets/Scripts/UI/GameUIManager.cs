@@ -2,6 +2,9 @@
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 游戏UI管理器
+    /// </summary>
     public partial class GameUIManager : ViewController
     {
         void Start()

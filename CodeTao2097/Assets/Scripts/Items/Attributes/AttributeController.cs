@@ -13,7 +13,7 @@ namespace CodeTao
         public Dictionary<EWAt, ModifierGroup> weaponModGroups = new Dictionary<EWAt, ModifierGroup>();
 
         public void AddArtefactModifier(EAAt at, float value, EModifierType modifierType, string modName,
-            ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+            RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
             if (artefactModGroups.ContainsKey(at))
             {
@@ -51,7 +51,7 @@ namespace CodeTao
         }
 
         public void AddWeaponModifier(EWAt at, float value, EModifierType modifierType, string modName = "inventory",
-            ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+            RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
             if (weaponModGroups.ContainsKey(at))
             {

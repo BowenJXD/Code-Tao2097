@@ -4,6 +4,10 @@ using Object = UnityEngine.Object;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 内容对象池
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ContentPool<T> : ObjectPool<T> where T : Content<T>
     {
         static T defaultPrefab;

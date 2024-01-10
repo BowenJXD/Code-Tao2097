@@ -11,6 +11,9 @@ using UnityEngine.Pool;
 
 namespace CodeTao
 {
+	/// <summary>
+	/// 升级面板的UI，包括各种升级选项
+	/// </summary>
 	public partial class ExpUpgradePanel : UIElement
 	{
 		ItemManager itemManager;

@@ -5,6 +5,10 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 内容，一对多关系中的多，可以升级，可以被添加到容器中
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     [Serializable]
     public abstract class Content<T> : MonoBehaviour where T : Content<T>
     {
@@ -17,7 +21,7 @@ namespace CodeTao
         public Action<T> RemoveAfter;
         
         [TabGroup("Content")]
-        public ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return;
+        public RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return;
 
         public virtual bool AddToContainer(Container<T> container)
         {

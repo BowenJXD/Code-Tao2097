@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 物品管理器，管理所有物品，提供获取随机物品的方法
+    /// </summary>
     public class ItemManager : MonoSingleton<ItemManager>
     {
         public List<Item> items = new List<Item>();

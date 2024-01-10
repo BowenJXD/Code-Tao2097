@@ -5,9 +5,12 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 生成建筑物
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class BuildingSpawner<T> : SpawnerWeapon<T> where T : Building
     {
-        
         public List<Vector2> spawnPoints = new List<Vector2>();
         private int _currentSpawnPointIndex = 0;
         

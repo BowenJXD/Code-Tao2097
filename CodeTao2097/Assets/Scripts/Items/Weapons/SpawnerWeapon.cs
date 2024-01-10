@@ -7,6 +7,10 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 以生成单位为主要功能的武器的基类，需要指定生成地点
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class SpawnerWeapon<T> : Weapon where T : UnitController
     {
         public T unitPrefab;

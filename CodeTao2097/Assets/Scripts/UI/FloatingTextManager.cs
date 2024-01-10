@@ -8,6 +8,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 悬浮文字管理器
+    /// </summary>
     public class FloatingTextManager : MonoSingleton<FloatingTextManager>
     {
         public float faceBrightness;

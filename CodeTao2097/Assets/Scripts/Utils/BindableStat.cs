@@ -10,6 +10,10 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 各种数值修改方式的枚举
+    /// 最终的数值计算方式为：(基础值 + 基础值修改的和) * 乘法修改的积 * (1 + 加乘修改的和) + 加法修改的和
+    /// </summary>
     public enum EModifierType
     {
         Basic,
@@ -18,14 +22,10 @@ namespace CodeTao
         Multiplicative
     }
 
-    public enum ERepetitionBehavior
-    {
-        Return,
-        Overwrite,
-        AddStack,
-        NewStack
-    }
-
+    /// <summary>
+    /// 对应一个数值修改群组，可以绑定事件，在数值修改群组发生变化时，触发绑定的事件
+    /// 可以注册多个数值修改群组
+    /// </summary>
     [Serializable]
     public class BindableStat : BindableProperty<float>
     {
@@ -68,7 +68,7 @@ namespace CodeTao
         }
 
         public bool AddModifier(float value, EModifierType modifierType, string name = "", 
-            ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+            RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
             bool result = _mainModGroup.AddModifier(value, modifierType, name, repetitionBehavior);
             if (result)

@@ -25,7 +25,7 @@ namespace CodeTao
             damage.SetSource(this);
             damage.SetDamageSection(DamageSection.SourceATK, "", ATK.Value);
             damage.SetDamageSection(DamageSection.CRIT, "", GetCritRate());
-            damage.SetDamageSection(DamageSection.ElementBON, "", 1 + ElementBonuses[damage.DamageElement], ERepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.ElementBON, "", 1 + ElementBonuses[damage.DamageElement], RepetitionBehavior.Overwrite);
             return damage;
         }
         

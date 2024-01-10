@@ -9,6 +9,10 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 生成直线飞行的弹射物
+    /// Spawns projectiles that fly in a straight line.
+    /// </summary>
     public partial class Shooter : SpawnerWeapon<Projectile>
     {
         [BoxGroup("Shooter")]

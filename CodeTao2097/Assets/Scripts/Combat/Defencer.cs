@@ -108,7 +108,7 @@ namespace CodeTao
             damage.SetTarget(this);
             var def = DEF.Value;
             damage.SetDamageSection(DamageSection.TargetDEF, "", 1 - def / (Global.Instance.DefenceFactor + def));
-            damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement], ERepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement], RepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;
         }

@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 物品基类，包含物品的基本属性，以及物品的基本功能
+    /// </summary>
     public abstract class Item : Content<Item>
     {
         [TabGroup("Item")]

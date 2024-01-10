@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 生成领域的武器
+    /// </summary>
     public partial class GroundEffectSpawner : SpawnerWeapon<GroundEffect>
     {
         [BoxGroup("Ground Effect Spawner")]

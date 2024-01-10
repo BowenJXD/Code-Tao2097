@@ -5,6 +5,10 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 容器，一对多关系中的一，管理多个Content内容的组件
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class Container<T> : MonoBehaviour where T : Content<T>
     {
         [HideInInspector] public List<Content<T>> Contents;
@@ -19,7 +23,7 @@ namespace CodeTao
         /// <param name="newContent"></param>
         /// <param name="repetitionBehavior"></param>
         /// <returns></returns>
-        public virtual bool AddContent(Content<T> newContent, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+        public virtual bool AddContent(Content<T> newContent, RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
             bool result = false;
             
@@ -37,19 +41,19 @@ namespace CodeTao
             {
                 switch (repetitionBehavior)
                 {
-                    case ERepetitionBehavior.Return:
+                    case RepetitionBehavior.Return:
                         break;
-                    case ERepetitionBehavior.Overwrite:
+                    case RepetitionBehavior.Overwrite:
                         matches.ForEach(delegate(Content<T> content)
                         {
                             Contents.Remove(content);
                         });
                         result = true;
                         break;
-                    case ERepetitionBehavior.AddStack:
+                    case RepetitionBehavior.AddStack:
                         matches[0].Stack(newContent);
                         break;
-                    case ERepetitionBehavior.NewStack:
+                    case RepetitionBehavior.NewStack:
                         result = true;
                         break;
                 }

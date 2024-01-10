@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 鸣潮Origin Wave
+    /// 生成Originwave冲击波，冲击波从自身出发，呈圆形向外扩散。
+    /// </summary>
     public class OriginWaveSpawner : SpawnerWeapon<OriginWave>
     {
         public override void Init()

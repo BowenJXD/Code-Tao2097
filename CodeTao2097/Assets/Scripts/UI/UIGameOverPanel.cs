@@ -10,6 +10,10 @@ namespace CodeTao
 	public class UIGameOverPanelData : UIPanelData
 	{
 	}
+	
+	/// <summary>
+	/// 游戏失败界面的UI
+	/// </summary>
 	public partial class UIGameOverPanel : UIPanel
 	{
 		protected override void OnInit(IUIData uiData = null)

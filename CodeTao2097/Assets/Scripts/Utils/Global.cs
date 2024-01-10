@@ -7,6 +7,9 @@ using Random = System.Random;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 全局控制器，用于控制游戏的全局变量
+    /// </summary>
     public class Global : MonoSingleton<Global>
     {
         public int RandomSeed = 0;
@@ -58,22 +61,6 @@ namespace CodeTao
                 IsPass.Value = false;
                 UIKit.OpenPanel<UIGameOverPanel>();
             };
-        }
-
-        /// <summary>
-        /// Register config files
-        /// </summary>
-        void RegisterConfigs()
-        {
-            string[] configFiles = new string[]
-            {
-                "WeaponCn",
-            };
-
-            foreach (var fileName in configFiles)
-            {
-                ConfigManager.Instance.Register(fileName, new ConfigData(fileName));
-            }
         }
         
         public void Reset()

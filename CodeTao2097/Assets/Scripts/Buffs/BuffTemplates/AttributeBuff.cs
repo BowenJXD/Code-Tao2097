@@ -18,7 +18,7 @@ namespace CodeTao
             LVL.RegisterWithInitValue(value =>
             {
                 buffOwner?.attributeController?.AddArtefactModifier(attribute, modValue * value, modifierType, name,
-                    ERepetitionBehavior.Overwrite);
+                    RepetitionBehavior.Overwrite);
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
         

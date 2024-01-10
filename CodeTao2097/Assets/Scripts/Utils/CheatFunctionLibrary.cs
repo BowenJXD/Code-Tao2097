@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 作弊功能库，用于测试
+    /// </summary>
     public class CheatFunctionLibrary : MonoSingleton<CheatFunctionLibrary>
     {
         PlayerInput playerInput;

@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 数值修改群组，用于管理各种数值修改
+    /// </summary>
     public class ModifierGroup
     {
         public string Source { get; set; }
@@ -28,7 +31,7 @@ namespace CodeTao
         public Action onChanged;
         
         public bool AddModifier(float value, EModifierType modifierType, string name = "", 
-            ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+            RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
             bool result = false;
             Dictionary<string, float> modifiers = _modifiers[modifierType];
@@ -38,24 +41,24 @@ namespace CodeTao
             }
             if (name == "")
             {
-                repetitionBehavior = ERepetitionBehavior.NewStack;
+                repetitionBehavior = RepetitionBehavior.NewStack;
             }
 
             if (modifiers.ContainsKey(name))
             {
                 switch (repetitionBehavior)
                 {
-                    case ERepetitionBehavior.Return:
+                    case RepetitionBehavior.Return:
                         break;
-                    case ERepetitionBehavior.Overwrite:
+                    case RepetitionBehavior.Overwrite:
                         modifiers[name] = value;
                         result = true;
                         break;
-                    case ERepetitionBehavior.AddStack:
+                    case RepetitionBehavior.AddStack:
                         modifiers[name] += value;
                         result = true;
                         break;
-                    case ERepetitionBehavior.NewStack: // not implemented
+                    case RepetitionBehavior.NewStack: // not implemented
                         name += modifiers.Count;
                         modifiers.Add(name, value);
                         result = true;

@@ -77,7 +77,7 @@ namespace CodeTao
             return this;
         }
 
-        public bool SetDamageSection(DamageSection section, string name, float value, ERepetitionBehavior repetitionBehavior = ERepetitionBehavior.Return)
+        public bool SetDamageSection(DamageSection section, string name, float value, RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
             if (DamageSections.ContainsKey(section))
             {
@@ -85,12 +85,12 @@ namespace CodeTao
                 {
                     switch (repetitionBehavior)
                     {
-                        case ERepetitionBehavior.Return:
+                        case RepetitionBehavior.Return:
                             break;
-                        case ERepetitionBehavior.Overwrite:
+                        case RepetitionBehavior.Overwrite:
                             DamageSections[section][name] = value;
                             break;
-                        case ERepetitionBehavior.AddStack:
+                        case RepetitionBehavior.AddStack:
                             DamageSections[section][name] += value;
                             break;
                     }

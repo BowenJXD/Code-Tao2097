@@ -5,6 +5,10 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 炼狱Inferno
+    /// 类似大蒜，周围一圈。
+    /// </summary>
     public partial class Stinky : MeleeWeapon
     {
         public override void Init()

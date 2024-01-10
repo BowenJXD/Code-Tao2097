@@ -22,7 +22,7 @@ namespace CodeTao
                 {
                     moveController.SPD.RegisterWithInitValue(value =>
                     {
-                        damager.DMG.AddModifier(value - 1, EModifierType.Multiplicative, "SPD", ERepetitionBehavior.Overwrite);
+                        damager.DMG.AddModifier(value - 1, EModifierType.Multiplicative, "SPD", RepetitionBehavior.Overwrite);
                     }).UnRegisterWhenGameObjectDestroyed(this);
                 }
             }

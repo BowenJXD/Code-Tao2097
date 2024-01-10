@@ -1,5 +1,8 @@
 ﻿namespace CodeTao
 {
+    /// <summary>
+    /// 各种瞄准方式，每个武器的瞄准方式都不尽相同
+    /// </summary>
     public enum EAimWay
     {
         /// <summary>

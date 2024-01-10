@@ -8,6 +8,9 @@ using Random = System.Random;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 各种工具集合
+    /// </summary>
     public static class Util
     {
         public static bool IsTagIncluded(string tag, List<EntityType> tags)
@@ -106,6 +109,9 @@ namespace CodeTao
         }
     }
 
+    /// <summary>
+    /// 各种与随机相关的工具集合
+    /// </summary>
     public static class RandomUtil
     {
         public static Random rand => Global.Instance.Random;
@@ -200,6 +206,9 @@ namespace CodeTao
         }
     }
 
+    /// <summary>
+    /// 各种与组件相关的工具集合，适用于多层级的组件结构
+    /// </summary>
     public static class ComponentUtil
     {
         /// <summary>
