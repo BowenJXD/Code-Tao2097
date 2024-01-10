@@ -32,7 +32,7 @@ namespace CodeTao
             Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, range);
             foreach (Collider2D col in cols)
             {
-                TagOwner tagOwner = col.GetComponentFromUnit<TagOwner>();
+                TagOwner tagOwner = col.GetComp<TagOwner>();
                 if (tagOwner && tagOwner.HasTag(Tag.Resonating))
                 {
                     ResonanceWave wave = ResonanceWaveManager.Instance.Get();

@@ -34,7 +34,7 @@ namespace CodeTao
 
         private void Awake()
         {
-            col2D = this.GetComponentInDescendants<Collider2D>();
+            col2D = this.GetCollider();
         }
 
         protected virtual void OnEnable()

@@ -22,7 +22,7 @@ namespace CodeTao
 			
 			col.OnTriggerEnter2DEvent(triggerCol =>
 			{
-				Collectable collectable = triggerCol.GetComponentFromUnit<Collectable>();
+				Collectable collectable = triggerCol.GetUnit() as Collectable;
 				if (collectable)
 				{
 					if (collectable.ValidateCollision(col))

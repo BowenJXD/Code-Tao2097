@@ -19,14 +19,6 @@ namespace CodeTao
         [HideInInspector] public Collider2D collectableCol;		
         public float knockBackForce = 1;
 
-        public override void OnSceneLoaded()
-        {
-            base.OnSceneLoaded();
-            if (!collectableCol){
-                collectableCol = this.GetComponentInDescendants<Collider2D>(true, (int)ELayer.Collectable);
-            }
-        }
-
         public override void PreInit()
         {
             base.PreInit();
@@ -38,6 +30,10 @@ namespace CodeTao
             }
             navAgent.enabled = false;
             
+            if (!collectableCol)
+            {
+                collectableCol = this.GetCollider((int)ELayer.Collectable);
+            }
             collectableCol.enabled = false;
             interactableCol.enabled = false;
             

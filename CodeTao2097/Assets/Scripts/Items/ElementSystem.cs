@@ -78,7 +78,7 @@ namespace CodeTao
 
         private void OnDisable()
         {
-            inventory.AddAfter -= OnInventoryAddItem;
+            if (inventory) inventory.AddAfter -= OnInventoryAddItem;
         }
     }
 }

@@ -63,8 +63,10 @@ var gameManager = GameManager.Instance;
         {
             get
             {
+                // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
                 if (mInstance == null && !mOnApplicationQuit)
                 {
+                    // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
                     mInstance = SingletonCreator.CreateMonoSingleton<T>();
                 }
 

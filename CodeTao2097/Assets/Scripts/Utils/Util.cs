@@ -417,5 +417,22 @@ namespace CodeTao
             // Recursively search the ancestors with increased depth
             return GetComponentInAncestors<T>(child.parent, currentDepth + 1, maxDepth);
         }
+        
+        public static T GetComp<T>(this Collider2D col) where T : UnitComponent
+        {
+            UnitController unitController = ColliderManager.Instance.colUnitDict[col];
+            return unitController.GetComp<T>();
+        }
+
+        public static UnitController GetUnit(this Collider2D col)
+        {
+            return ColliderManager.Instance.colUnitDict[col];
+        }
+
+        public static Collider2D GetCollider(this UnitController unit, int layer = 0)
+        {
+            Collider2D col = ColliderManager.Instance.GetCollider(unit, layer);
+            return col;
+        }
     }
 }

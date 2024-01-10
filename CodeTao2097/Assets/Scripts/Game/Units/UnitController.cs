@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
@@ -13,7 +14,7 @@ namespace CodeTao
         
         public T GetComp<T>() where T : UnitComponent
         {
-            return Link.GetComp<T>();
+            return Link?.GetComp<T>();
         }
 
         /// <summary>
@@ -22,15 +23,7 @@ namespace CodeTao
         /// </summary>
         public virtual void OnSceneLoaded()
         {
-            if (Link == null){
-                Link = new ComponentLink();
-                List<UnitComponent> unitComponents = this.GetComponentsInDescendants<UnitComponent>();
-                foreach (var unitComponent in unitComponents)
-                {
-                    unitComponent.Unit = this;
-                    Link.AddComponent(unitComponent);
-                }
-            }
+            PreInit();
         }
 
         /// <summary>
@@ -45,6 +38,14 @@ namespace CodeTao
                 {
                     unitComponent.Unit = this;
                     Link.AddComponent(unitComponent);
+                }
+            }
+
+            if (!ColliderManager.Instance.CheckRegistered(this)){
+                List<Collider2D> colliders = this.GetComponentsInDescendants<Collider2D>();
+                foreach (var col in colliders)
+                {
+                    ColliderManager.Instance.Register(this, col);
                 }
             }
         }

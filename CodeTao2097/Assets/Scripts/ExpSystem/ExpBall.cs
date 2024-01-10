@@ -13,7 +13,7 @@ namespace CodeTao
         public BindableProperty<float> EXPValue = new BindableProperty<float>(1);
         
         public override void Interact(Collider2D col = null){
-            ExpController expController = col.GetComponentFromUnit<ExpController>();
+            ExpController expController = col.GetComp<ExpController>();
             expController.AlterEXP(EXPValue.Value);
             base.Interact(col);
         }

@@ -21,7 +21,7 @@ namespace CodeTao
             base.PreInit();
             defencer = this.GetComp<Defencer>();
             damager = this.GetComp<Damager>();
-            col2D = this.GetComponentInDescendants<Collider2D>();
+            col2D = this.GetCollider();
             sp = this.GetComponentInDescendants<SpriteRenderer>();
             attributeController = this.GetComp<AttributeController>();
         }

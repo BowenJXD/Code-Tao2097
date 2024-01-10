@@ -62,7 +62,7 @@ namespace CodeTao
             base.PreInit();
             
             rb2D = GetComponent<Rigidbody2D>();
-            col2D = this.GetComponentInDescendants<Collider2D>();
+            col2D = this.GetCollider();
             moveController = GetComp<MoveController>();
         }
 

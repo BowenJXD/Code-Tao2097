@@ -7,6 +7,7 @@ namespace CodeTao
     /// </summary>
     public enum ELayer
     {
+        Null = 0,
         Enemy = 7,
         Player = 8,
         Collectable = 9,

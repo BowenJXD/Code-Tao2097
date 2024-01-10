@@ -14,10 +14,10 @@ namespace CodeTao
         
         public Defencer ColToDef(Damager damager, Collider2D col)
         {
-            UnitController unitController = col.GetComponentInAncestors<UnitController>();
+            UnitController unitController = col.GetUnit();
             if (unitController)
             {
-                Defencer defencer = unitController.GetComponentInDescendants<Defencer>();
+                Defencer defencer = unitController.GetComp<Defencer>();
                 if (Util.IsTagIncluded(unitController.tag, damager.damagingTags) && defencer)
                 {
                     return defencer;

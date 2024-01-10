@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 组件列表，用于获取单位的组件
+    /// </summary>
     public class ComponentLink
     {
         public Dictionary<Type, UnitComponent> components = new Dictionary<Type, UnitComponent>();
@@ -50,6 +53,9 @@ namespace CodeTao
         }
     }
     
+    /// <summary>
+    /// 单位组件，用于获取单位其他单位组件，或单位控制器
+    /// </summary>
     public class UnitComponent : MonoBehaviour
     {
         public UnitController Unit { get; set; }

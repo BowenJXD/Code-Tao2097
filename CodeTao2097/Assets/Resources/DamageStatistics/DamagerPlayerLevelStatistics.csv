@@ -1,4 +1,4 @@
-Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3,Level4,Level5,Level6
-SaDouChengBingDamager,1656,77.36597,Infinity,26.6254,140.3922,103.3087,143.6848
-ResonanceDamager,742,34.66519,Infinity,29.35621,7.760373,7.59623,123.6874
-BackFlowDamager,100,4.671858,Infinity,0.4266892,4.409303,11.39435,18.51608
+Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3
+SaDouChengBingDamager,544,32.03431,Infinity,28.74508,35.02443
+BackFlowDamager,35,2.061031,Infinity,0.443597,4.378053
+ResonanceDamager,224,13.1906,Infinity,8.694501,20.31417

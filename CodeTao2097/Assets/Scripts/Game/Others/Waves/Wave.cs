@@ -38,7 +38,7 @@ namespace CodeTao
         void Awake()
         {
             sp = this.GetComponentInDescendants<SpriteRenderer>();
-            col = this.GetComponentInDescendants<Collider2D>();
+            col = this.GetCollider();
         }
         
         public override void Init()

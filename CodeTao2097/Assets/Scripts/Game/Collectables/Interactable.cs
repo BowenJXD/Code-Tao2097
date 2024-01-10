@@ -14,18 +14,12 @@ namespace CodeTao
         
         [HideInInspector] public Collider2D interactableCol;
 
-        public override void OnSceneLoaded()
-        {
-            base.OnSceneLoaded();
-            if (!interactableCol){
-                interactableCol = this.GetComponentInDescendants<Collider2D>(true, (int)ELayer.Interactable);
-            }
-        }
-
         public override void PreInit()
         {
             base.PreInit();
-            
+            if (!interactableCol){
+                interactableCol = this.GetCollider((int)ELayer.Interactable);
+            }
             interactableCol.OnTriggerEnter2DEvent(col =>
             {
                 if (ValidateCollision(col))
