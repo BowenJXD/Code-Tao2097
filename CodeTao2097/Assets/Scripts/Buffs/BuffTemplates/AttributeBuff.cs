@@ -17,7 +17,7 @@ namespace CodeTao
             base.Init();
             LVL.RegisterWithInitValue(value =>
             {
-                buffOwner?.attributeController?.AddArtefactModifier(attribute, modValue * value, modifierType, name,
+                buffOwner?.GetComp<AttributeController>()?.AddArtefactModifier(attribute, modValue * value, modifierType, name,
                     RepetitionBehavior.Overwrite);
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
@@ -25,7 +25,7 @@ namespace CodeTao
         public override void OnRemove()
         {
             base.OnRemove();
-            buffOwner?.attributeController?.RemoveArtefactModifier(attribute, modifierType, name);
+            buffOwner?.GetComp<AttributeController>()?.RemoveArtefactModifier(attribute, modifierType, name);
         }
     }
 }

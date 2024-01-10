@@ -23,7 +23,7 @@ namespace CodeTao
             }
             backFlow.damager.DealDamageAfter += damage =>
             {
-                TagOwner tagOwner = damage.Target.GetComponentFromUnit<TagOwner>();
+                TagOwner tagOwner = damage.Target.GetComp<TagOwner>();
                 if (tagOwner && tagOwner.HasTag(Tag.Resonating))
                 {
                     ResonanceWaveManager.Instance.Get().Position(tagOwner.transform.position).Init();

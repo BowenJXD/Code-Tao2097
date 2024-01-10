@@ -21,37 +21,37 @@ namespace CodeTao
 		private void Start()
 		{
 			// Change color after taking DMG
-			Defencer.TakeDamageAfter += (damage) =>
+			Link.GetComp<Defencer>().TakeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();
 
-				ActionKit.Delay(Defencer.DMGCD, () =>
+				ActionKit.Delay(Link.GetComp<Defencer>().DMGCD, () =>
 				{
 					if (!this) return;
 					Sprite.color = Color.white;
 				}).Start(this);
 			};
 			
-			Defencer.OnDeath += (damage) =>
+			Link.GetComp<Defencer>().OnDeath += (damage) =>
 			{
 				Deinit();
 			};
 
-			MoveController.MovementDirection.RegisterWithInitValue(value =>
+			Link.GetComp<MoveController>().MovementDirection.RegisterWithInitValue(value =>
 			{
 				anim.SetBool("isMoving", value != Vector2.zero);
 				anim.SetFloat("moveX", value.x);
 				anim.SetFloat("moveY", value.y);
 			}).UnRegisterWhenGameObjectDestroyed(this);
 			
-			SelfAttributeController.onAddAAtModGroup += AddAAtMod;
-			SelfAttributeController.onAddWAtModGroup += Inventory.AddWAtModGroup;
+			Link.GetComp<AttributeController>().onAddAAtModGroup += AddAAtMod;
+			Link.GetComp<AttributeController>().onAddWAtModGroup += Link.GetComp<Inventory>().AddWAtModGroup;
 		}
 
 		void Update()
 		{
-		    MoveController.MovementDirection.Value = GetMovementDirection();
-		    Move(MoveController.MovementDirection.Value);
+			Link.GetComp<MoveController>().MovementDirection.Value = GetMovementDirection();
+		    Move(Link.GetComp<MoveController>().MovementDirection.Value);
 		}
 
 		public Vector2 GetMovementDirection()
@@ -63,7 +63,7 @@ namespace CodeTao
 		
 		public void Move(Vector2 direction)
 		{
-			SelfRigidbody2D.velocity = direction * MoveController.SPD;
+			SelfRigidbody2D.velocity = direction * Link.GetComp<MoveController>().SPD;
 		}
 
 		public override BindableStat GetAAtMod(EAAt at)
@@ -72,64 +72,68 @@ namespace CodeTao
 			switch (at)
             {
                 case EAAt.ATK:
-                    result = Attacker.ATK;
+                    result = Link.GetComp<Attacker>().ATK;
                     break;
                 case EAAt.CritRate:
-                    result = Attacker.CritRate;
+                    result = Link.GetComp<Attacker>().CritRate;
                     break;
                 case EAAt.CritDamage:
-                    result = Attacker.CritDamage;
+                    result = Link.GetComp<Attacker>().CritDamage;
                     break;
                 case EAAt.AllElementBON:
-                    result = Attacker.ElementBonuses[ElementType.All];
+                    result = Link.GetComp<Attacker>().ElementBonuses[ElementType.All];
                     break;
                 case EAAt.MetalElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Metal];
+                    result = Link.GetComp<Attacker>().ElementBonuses[ElementType.Metal];
                     break;
                 case EAAt.WoodElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Wood];
+                    result = Link.GetComp<Attacker>().ElementBonuses[ElementType.Wood];
                     break;
                 case EAAt.WaterElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Water];
+                    result = Link.GetComp<Attacker>().ElementBonuses[ElementType.Water];
                     break;
                 case EAAt.FireElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Fire];
+                    result = Link.GetComp<Attacker>().ElementBonuses[ElementType.Fire];
                     break;
                 case EAAt.EarthElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Earth];
+                    result = Link.GetComp<Attacker>().ElementBonuses[ElementType.Earth];
                     break;
                 
                 case EAAt.DEF:
-                    result = Defencer.DEF;
+                    result = Link.GetComp<Defencer>().DEF;
                     break;
                 case EAAt.MaxHP:
-                    result = Defencer.MaxHP;
+                    result = Link.GetComp<Defencer>().MaxHP;
                     break;
+                case EAAt.Lives:
+					result = Link.GetComp<Defencer>().Lives;
+					break;
+                
                 case EAAt.AllElementRES:
-                    result = Defencer.ElementResistances[ElementType.All];
+                    result = Link.GetComp<Defencer>().ElementResistances[ElementType.All];
                     break;
                 case EAAt.MetalElementRES:
-                    result = Defencer.ElementResistances[ElementType.Metal];
+                    result = Link.GetComp<Defencer>().ElementResistances[ElementType.Metal];
                     break;
                 case EAAt.WoodElementRES:
-                    result = Defencer.ElementResistances[ElementType.Wood];
+                    result = Link.GetComp<Defencer>().ElementResistances[ElementType.Wood];
                     break;
                 case EAAt.WaterElementRES:
-                    result = Defencer.ElementResistances[ElementType.Water];
+                    result = Link.GetComp<Defencer>().ElementResistances[ElementType.Water];
                     break;
                 case EAAt.FireElementRES:
-                    result = Defencer.ElementResistances[ElementType.Fire];
+                    result = Link.GetComp<Defencer>().ElementResistances[ElementType.Fire];
                     break;
                 case EAAt.EarthElementRES:
-                    result = Defencer.ElementResistances[ElementType.Earth];
+                    result = Link.GetComp<Defencer>().ElementResistances[ElementType.Earth];
                     break;
                 
                 case EAAt.SPD:
-                    result = MoveController.SPD;
+                    result = Link.GetComp<MoveController>().SPD;
                     break;
                 
                 case EAAt.EXPBonus:
-                    result = ExpController.EXPRate;
+                    result = Link.GetComp<ExpController>().EXPRate;
                     break;
                 
                 default:

@@ -9,7 +9,7 @@ namespace CodeTao
     /// <summary>
     /// 造成伤害的组件。通常挂载在武器或武器衍生物上。包括伤害数值、伤害类型、伤害间隔等。为造成伤害的必要条件。
     /// </summary>
-    public class Damager : ViewController
+    public class Damager : UnitComponent
     {
         public ElementType DamageElementType = ElementType.None;
         public BindableStat DMG = new BindableStat();
@@ -37,7 +37,8 @@ namespace CodeTao
 
         public bool ValidateDamage(Defencer defencer, Attacker attacker)
         {
-            bool result = !IsInCD && Util.IsTagIncluded(ComponentUtil.GetTagFromParent(defencer), damagingTags);
+            UnitController unit = defencer.Unit;
+            bool result = !IsInCD && Util.IsTagIncluded(unit.tag, damagingTags);
 
             return result;
         }

@@ -33,17 +33,7 @@ namespace CodeTao
         public override void OnAdd()
         {
             base.OnAdd();
-            _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
-        }
-
-        private void Awake()
-        {
-            damager = ShooterDamager;
-        }
-
-        private void OnEnable()
-        {
-            damager = ShooterDamager;
+            _ownerMoveController = Container.GetComp<MoveController>();
         }
 
         public override Projectile SpawnUnit(Vector2 localPos)

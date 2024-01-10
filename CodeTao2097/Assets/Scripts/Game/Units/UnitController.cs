@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using QFramework;
 
 namespace CodeTao
@@ -8,16 +9,45 @@ namespace CodeTao
     /// </summary>
     public abstract class UnitController : ViewController
     {
+        public ComponentLink Link { get; private set; }
+        
+        public T GetComp<T>() where T : UnitComponent
+        {
+            return Link.GetComp<T>();
+        }
+
         /// <summary>
         /// Will be called from global when scene is loaded,
         /// Used to bind components
         /// </summary>
-        public virtual void OnSceneLoaded(){}
-        
+        public virtual void OnSceneLoaded()
+        {
+            if (Link == null){
+                Link = new ComponentLink();
+                List<UnitComponent> unitComponents = this.GetComponentsInDescendants<UnitComponent>();
+                foreach (var unitComponent in unitComponents)
+                {
+                    unitComponent.Unit = this;
+                    Link.AddComponent(unitComponent);
+                }
+            }
+        }
+
         /// <summary>
         /// Called from UnitPool
         /// </summary>
-        public virtual void PreInit(){}
+        public virtual void PreInit()
+        {
+            if (Link == null){
+                Link = new ComponentLink();
+                List<UnitComponent> unitComponents = this.GetComponentsInDescendants<UnitComponent>();
+                foreach (var unitComponent in unitComponents)
+                {
+                    unitComponent.Unit = this;
+                    Link.AddComponent(unitComponent);
+                }
+            }
+        }
         
         public Action onInit;
         

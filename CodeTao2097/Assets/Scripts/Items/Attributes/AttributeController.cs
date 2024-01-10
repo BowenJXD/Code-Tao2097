@@ -7,7 +7,7 @@ namespace CodeTao
     /// <summary>
     /// 属性管理器组件，用于管理单位的各种属性。
     /// </summary>
-    public class AttributeController : ViewController
+    public class AttributeController : UnitComponent
     {
         public Dictionary<EAAt, ModifierGroup> artefactModGroups = new Dictionary<EAAt, ModifierGroup>();
         public Dictionary<EWAt, ModifierGroup> weaponModGroups = new Dictionary<EWAt, ModifierGroup>();
@@ -55,12 +55,20 @@ namespace CodeTao
         {
             if (weaponModGroups.ContainsKey(at))
             {
-                weaponModGroups[at].AddModifier(value, modifierType, modName);
+                weaponModGroups[at].AddModifier(value, modifierType, modName, repetitionBehavior);
             }
             else
             {
                 AddWeaponModGroup(at);
-                weaponModGroups[at].AddModifier(value, modifierType, modName);
+                weaponModGroups[at].AddModifier(value, modifierType, modName, repetitionBehavior);
+            }
+        }
+        
+        public void RemoveWeaponModifier(EWAt at, EModifierType modifierType, string modName)
+        {
+            if (weaponModGroups.ContainsKey(at))
+            {
+                weaponModGroups[at].RemoveModifier(modifierType, modName);
             }
         }
         

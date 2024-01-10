@@ -15,7 +15,7 @@ namespace CodeTao
         {
             base.Init();
 
-            damager = ComponentUtil.GetComponentInDescendants<Damager>(this, true);
+            damager = this.GetComponentInDescendants<Damager>(true);
 
             ats[EWAt.Area].RegisterWithInitValue(range =>
             {

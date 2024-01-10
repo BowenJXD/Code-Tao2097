@@ -11,7 +11,7 @@ namespace CodeTao
     /// <summary>
     /// 增幅伤害的组件，通常挂载在有defencer的单位上。包括攻击力、暴击率、暴击伤害、五行伤害加成，不为造成伤害的必要条件。
     /// </summary>
-    public partial class Attacker : ViewController
+    public partial class Attacker : UnitComponent
     {
         public BindableStat ATK = new BindableStat();
         public BindableStat CritRate = new BindableStat(); // 0% - 100%
@@ -25,7 +25,7 @@ namespace CodeTao
             damage.SetSource(this);
             damage.SetDamageSection(DamageSection.SourceATK, "", ATK.Value);
             damage.SetDamageSection(DamageSection.CRIT, "", GetCritRate());
-            damage.SetDamageSection(DamageSection.ElementBON, "", 1 + ElementBonuses[damage.DamageElement], RepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.DamageIncrement, "", 1 + ElementBonuses[damage.DamageElement], RepetitionBehavior.Overwrite);
             return damage;
         }
         

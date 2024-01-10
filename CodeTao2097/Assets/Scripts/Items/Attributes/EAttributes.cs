@@ -5,6 +5,7 @@
     /// </summary>
     public enum EWAt
     {
+        Null,
         Damage,
         Cooldown,
         Area,
@@ -22,7 +23,7 @@
     /// </summary>
     public enum EAAt
     {
-        NULL,
+        Null,
         ATK,
         DEF,
         MaxHP,
@@ -42,5 +43,6 @@
         FireElementRES,
         EarthElementRES,
         EXPBonus,
+        Lives,
     }
 }

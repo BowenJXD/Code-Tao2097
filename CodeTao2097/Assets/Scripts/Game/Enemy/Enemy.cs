@@ -25,11 +25,11 @@ namespace CodeTao
 			SelfNavAgent.updateUpAxis = false;
 			
 			// Change color after taking DMG
-			Defencer.TakeDamageAfter += (damage) =>
+			GetComp<Defencer>().TakeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();
 
-				ActionKit.Delay(Defencer.DMGCD, () =>
+				ActionKit.Delay(GetComp<Defencer>().DMGCD, () =>
 				{
 					if (!this) return;
 					Sprite.color = Color.white;
@@ -39,29 +39,29 @@ namespace CodeTao
 			// Attack player when player is in range
 			HitBox.OnTriggerStay2DEvent((col) =>
 			{
-				UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
-				Defencer defencer = ComponentUtil.GetComponentInAncestors<Defencer>(col, 1);
+				UnitController unitController = col.GetComponentInAncestors<UnitController>();
+				Defencer def = col.GetComponentInAncestors<Defencer>(1);
 				if (unitController)
 				{
-					if (Util.IsTagIncluded(unitController.tag, EnemyDamager.damagingTags) && defencer)
+					if (Util.IsTagIncluded(unitController.tag, GetComp<Damager>().damagingTags) && def)
 					{
-						DamageManager.Instance.ExecuteDamage(EnemyDamager, defencer, Attacker);
+						DamageManager.Instance.ExecuteDamage(GetComp<Damager>(), def, GetComp<Attacker>());
 					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(this);
 
-			MoveController.SPD.RegisterWithInitValue(value =>
+			GetComp<MoveController>().SPD.RegisterWithInitValue(value =>
 			{
 				SelfNavAgent.speed = value;
 			}).UnRegisterWhenGameObjectDestroyed(this);
 			
-			SelfAttributeController.onAddAAtModGroup += AddAAtMod;
+			GetComp<AttributeController>().onAddAAtModGroup += AddAAtMod;
 		}
 
 		private void OnEnable()
 		{
 			// spawn experience ball
-			Defencer.OnDeath += damage =>
+			GetComp<Defencer>().OnDeath += damage =>
 			{
 				Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, 0);
 				var expBall = ExpGenerator.Instance.Get().Position(spawnPosition);
@@ -85,60 +85,64 @@ namespace CodeTao
 			switch (at)
             {
                 case EAAt.ATK:
-                    result = Attacker.ATK;
+                    result = GetComp<Attacker>().ATK;
                     break;
                 case EAAt.CritRate:
-                    result = Attacker.CritRate;
+                    result = GetComp<Attacker>().CritRate;
                     break;
                 case EAAt.CritDamage:
-                    result = Attacker.CritDamage;
+                    result = GetComp<Attacker>().CritDamage;
                     break;
                 case EAAt.AllElementBON:
-                    result = Attacker.ElementBonuses[ElementType.All];
+                    result = GetComp<Attacker>().ElementBonuses[ElementType.All];
                     break;
                 case EAAt.MetalElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Metal];
+                    result = GetComp<Attacker>().ElementBonuses[ElementType.Metal];
                     break;
                 case EAAt.WoodElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Wood];
+                    result = GetComp<Attacker>().ElementBonuses[ElementType.Wood];
                     break;
                 case EAAt.WaterElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Water];
+                    result = GetComp<Attacker>().ElementBonuses[ElementType.Water];
                     break;
                 case EAAt.FireElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Fire];
+                    result = GetComp<Attacker>().ElementBonuses[ElementType.Fire];
                     break;
                 case EAAt.EarthElementBON:
-                    result = Attacker.ElementBonuses[ElementType.Earth];
+                    result = GetComp<Attacker>().ElementBonuses[ElementType.Earth];
                     break;
                 
                 case EAAt.DEF:
-                    result = Defencer.DEF;
+                    result = GetComp<Defencer>().DEF;
                     break;
                 case EAAt.MaxHP:
-                    result = Defencer.MaxHP;
+                    result = GetComp<Defencer>().MaxHP;
                     break;
+                case EAAt.Lives:
+	                result = GetComp<Defencer>().Lives;
+	                break;
+                
                 case EAAt.AllElementRES:
-                    result = Defencer.ElementResistances[ElementType.All];
+                    result = GetComp<Defencer>().ElementResistances[ElementType.All];
                     break;
                 case EAAt.MetalElementRES:
-                    result = Defencer.ElementResistances[ElementType.Metal];
+                    result = GetComp<Defencer>().ElementResistances[ElementType.Metal];
                     break;
                 case EAAt.WoodElementRES:
-                    result = Defencer.ElementResistances[ElementType.Wood];
+                    result = GetComp<Defencer>().ElementResistances[ElementType.Wood];
                     break;
                 case EAAt.WaterElementRES:
-                    result = Defencer.ElementResistances[ElementType.Water];
+                    result = GetComp<Defencer>().ElementResistances[ElementType.Water];
                     break;
                 case EAAt.FireElementRES:
-                    result = Defencer.ElementResistances[ElementType.Fire];
+                    result = GetComp<Defencer>().ElementResistances[ElementType.Fire];
                     break;
                 case EAAt.EarthElementRES:
-                    result = Defencer.ElementResistances[ElementType.Earth];
+                    result = GetComp<Defencer>().ElementResistances[ElementType.Earth];
                     break;
                 
                 case EAAt.SPD:
-                    result = MoveController.SPD;
+                    result = GetComp<MoveController>().SPD;
                     break;
                 
                 case EAAt.EXPBonus:

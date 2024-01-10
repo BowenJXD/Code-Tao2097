@@ -24,10 +24,10 @@ namespace CodeTao
 
             if (!damager)
             {
-                damager = ComponentUtil.GetComponentInDescendants<Damager>(this);
-                if (baseAttribute != EAAt.NULL)
+                damager = this.GetComponentInDescendants<Damager>();
+                if (baseAttribute != EAAt.Null)
                 {
-                    CombatUnit combatUnit = ComponentUtil.GetComponentInAncestors<CombatUnit>(Container);
+                    CombatUnit combatUnit = Container.GetComponentInAncestors<CombatUnit>();
                     combatUnit.GetAAtMod(baseAttribute).RegisterWithInitValue(value =>
                     {
                         damager.DMG.AddModifier(value, modType, "BuffBaseAttribute", RepetitionBehavior.Overwrite);
@@ -40,7 +40,7 @@ namespace CodeTao
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
 
-            _target = ComponentUtil.GetComponentFromUnit<Defencer>(buffOwner);
+            _target = buffOwner.GetComp<Defencer>();
             if (_target)
             {
                 Trigger();

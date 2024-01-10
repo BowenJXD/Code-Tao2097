@@ -27,9 +27,9 @@ namespace CodeTao
             playerInput.actions["3"].performed += ctx => F3();
             playerInput.actions["4"].performed += ctx => F4();
             
-            expController = Player.Instance.ExpController;
-            defencer = Player.Instance.Defencer;
-            attacker = Player.Instance.Attacker;
+            expController = Player.Instance.Link.GetComp<ExpController>();
+            defencer = Player.Instance.Link.GetComp<Defencer>();
+            attacker = Player.Instance.Link.GetComp<Attacker>();
             enemyGenerator = FindObjectOfType<EnemyGenerator>();
         }
 
@@ -52,7 +52,7 @@ namespace CodeTao
             Enemy[] enemies = FindObjectsOfType<Enemy>();
             foreach (Enemy enemy in enemies)
             {
-                enemy.Defencer.IsInCD = true;
+                enemy.GetComp<Defencer>().IsInCD = true;
             }
         }
 

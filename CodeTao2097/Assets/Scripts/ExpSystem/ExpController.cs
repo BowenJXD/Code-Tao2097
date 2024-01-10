@@ -7,7 +7,7 @@ namespace CodeTao
     /// <summary>
     /// 管理一个单位的修为的组件，包括修为值，等级，以及修为获取速率。
     /// </summary>
-    public class ExpController : ViewController
+    public class ExpController : UnitComponent
     {
         public BindableProperty<float> EXP = new BindableProperty<float>(0);
         

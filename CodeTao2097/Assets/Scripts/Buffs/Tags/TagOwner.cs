@@ -6,7 +6,7 @@ namespace CodeTao
     /// <summary>
     /// A unit component to save tags.
     /// </summary>
-    public class TagOwner : ViewController
+    public class TagOwner : UnitComponent
     {
         public List<Tag> tags = new List<Tag>();
         

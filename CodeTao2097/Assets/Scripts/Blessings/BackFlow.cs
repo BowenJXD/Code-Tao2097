@@ -17,7 +17,7 @@ namespace CodeTao
             if (!damager)
             {
                 damager = this.GetComponentInDescendants<Damager>();
-                MoveController moveController = Player.Instance.MoveController;
+                MoveController moveController = Player.Instance.Link.GetComp<MoveController>();
                 if (moveController)
                 {
                     moveController.SPD.RegisterWithInitValue(value =>

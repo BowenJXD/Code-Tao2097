@@ -16,7 +16,7 @@ namespace CodeTao
         
         private void Start()
         {
-            List<Item> items = ComponentUtil.GetComponentsInDescendants<Item>(this);
+            List<Item> items = this.GetComponentsInDescendants<Item>();
             foreach (var item in items)
             {
                 item.AddToContainer(this);

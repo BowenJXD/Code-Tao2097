@@ -10,10 +10,11 @@ namespace CodeTao
     /// <summary>
     /// 受到伤害的组件。包括血量，防御，抗性，伤害cd，以及受到伤害的逻辑。为造成伤害的必要条件。
     /// </summary>
-    public partial class Defencer : ViewController
+    public partial class Defencer : UnitComponent
     {
         #region HP
         
+        public BindableStat Lives = new BindableStat(1);
         public BindableStat HP = new BindableStat();
         public BindableStat MaxHP = new BindableStat();
 
@@ -42,10 +43,18 @@ namespace CodeTao
 
         public void Die(Damage damage)
         {
-            OnDeath?.Invoke(damage);
-            if (IsDead)
+            Lives.Value--;
+            if (Lives.Value <= 0)
             {
-                OnDeath = null;
+                OnDeath?.Invoke(damage);
+                if (IsDead)
+                {
+                    OnDeath = null;
+                }
+            }
+            else
+            {
+                SetHP(MaxHP);
             }
         }
         
@@ -98,7 +107,7 @@ namespace CodeTao
         
         public bool ValidateDamage(Damager damager, Attacker attacker)
         {
-            bool result = !IsInCD && !Util.IsTagIncluded(ComponentUtil.GetTagFromParent(damager), defencingTags);
+            bool result = !IsInCD && !Util.IsTagIncluded(Unit.tag, defencingTags);
 
             return result;
         }
@@ -108,7 +117,7 @@ namespace CodeTao
             damage.SetTarget(this);
             var def = DEF.Value;
             damage.SetDamageSection(DamageSection.TargetDEF, "", 1 - def / (Global.Instance.DefenceFactor + def));
-            damage.SetDamageSection(DamageSection.ElementRES, "", 1 - ElementResistances[damage.DamageElement], RepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.DamageDecrement, "", 1 - ElementResistances[damage.DamageElement], RepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
             return damage;
         }

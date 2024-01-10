@@ -19,11 +19,11 @@ namespace CodeTao
         public override void PreInit()
         {
             base.PreInit();
-            defencer = this.GetComponentInDescendants<Defencer>();
-            damager = this.GetComponentInDescendants<Damager>();
+            defencer = this.GetComp<Defencer>();
+            damager = this.GetComp<Damager>();
             col2D = this.GetComponentInDescendants<Collider2D>();
             sp = this.GetComponentInDescendants<SpriteRenderer>();
-            attributeController = this.GetComponentInDescendants<AttributeController>();
+            attributeController = this.GetComp<AttributeController>();
         }
         
         public override void Init()
@@ -59,8 +59,8 @@ namespace CodeTao
                 // Attack player when player is in range
                 col2D.OnTriggerStay2DEvent((col) =>
                 {
-                    UnitController unitController = ComponentUtil.GetComponentInAncestors<UnitController>(col);
-                    Defencer defencer = ComponentUtil.GetComponentInAncestors<Defencer>(col, 1);
+                    UnitController unitController = col.GetComponentInAncestors<UnitController>();
+                    Defencer defencer = col.GetComponentInAncestors<Defencer>(1);
                     if (unitController)
                     {
                         if (Util.IsTagIncluded(unitController.tag, damager.damagingTags) && defencer)

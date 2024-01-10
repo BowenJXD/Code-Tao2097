@@ -54,7 +54,7 @@ namespace CodeTao
         public override void OnAdd()
         {
             base.OnAdd();
-            attacker = Container.GetComponentFromUnit<Attacker>();
+            attacker = Container.GetComp<Attacker>();
         }
 
         public override void Init()
@@ -95,8 +95,8 @@ namespace CodeTao
         public virtual void TryApplyBuff(Damage damage)
         {
             if (damage.Target.IsDead) return;
-            BuffOwner target = ComponentUtil.GetComponentFromUnit<BuffOwner>(damage.Target);
-            if (target && CheckBuffHit(damage))
+            BuffOwner target = damage.Target.GetComp<BuffOwner>();
+            if (target && buffToApply && CheckBuffHit(damage))
             {
                 ApplyBuff(target);
             }

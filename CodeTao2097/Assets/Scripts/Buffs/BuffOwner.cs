@@ -11,11 +11,6 @@ namespace CodeTao
     /// </summary>
     public class BuffOwner : Container<Buff>
     {
-        [HideInInspector] public AttributeController attributeController;
         
-        public void Start()
-        {
-            attributeController = ComponentUtil.GetComponentFromUnit<AttributeController>(this);
-        }
     }
 }

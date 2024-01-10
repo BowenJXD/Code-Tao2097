@@ -160,7 +160,7 @@ namespace CodeTao
         private void Start()
         {
             DamageManager.Instance.damageAfter += AddDamage;
-            playerExpController = Player.Instance.GetComponentFromUnit<ExpController>();
+            playerExpController = Player.Instance.GetComp<ExpController>();
             playerExpController.LVL.RegisterWithInitValue(level =>
             {
                 playerLevelStartTimes.Add(Global.GameTime);

@@ -63,7 +63,7 @@ namespace CodeTao
             
             rb2D = GetComponent<Rigidbody2D>();
             col2D = this.GetComponentInDescendants<Collider2D>();
-            moveController = this.GetComponentInDescendants<MoveController>();
+            moveController = GetComp<MoveController>();
         }
 
         public override void Init()

@@ -9,7 +9,7 @@ namespace CodeTao
     /// 容器，一对多关系中的一，管理多个Content内容的组件
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class Container<T> : MonoBehaviour where T : Content<T>
+    public abstract class Container<T> : UnitComponent where T : Content<T>
     {
         [HideInInspector] public List<Content<T>> Contents;
 

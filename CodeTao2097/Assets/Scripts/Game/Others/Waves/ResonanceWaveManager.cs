@@ -14,7 +14,7 @@ namespace CodeTao
         {
             base.OnSingletonInit();
             damager = this.GetComponentInDescendants<Damager>();
-            Attacker attacker = Player.Instance.GetComponentFromUnit<Attacker>();
+            Attacker attacker = Player.Instance.GetComp<Attacker>();
             if (attacker)
             {
                 attacker.ATK.RegisterWithInitValue(value =>

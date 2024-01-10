@@ -10,18 +10,6 @@ namespace CodeTao
 
 		public CircleCollider2D HitBox;
 
-		public CodeTao.MoveController MoveController;
-
-		public CodeTao.Attacker Attacker;
-
-		public CodeTao.Defencer Defencer;
-
-		public CodeTao.Damager EnemyDamager;
-
-		public CodeTao.BuffOwner SelfBuffOwner;
-
-		public CodeTao.AttributeController SelfAttributeController;
-
 		public UnityEngine.Rigidbody2D SelfRigidbody2D;
 
 		public UnityEngine.AI.NavMeshAgent SelfNavAgent;

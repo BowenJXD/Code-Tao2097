@@ -6,23 +6,26 @@ namespace CodeTao
 	/// <summary>
 	/// 获取附近的collectable的组件
 	/// </summary>
-	public partial class Collector : ViewController
+	public partial class Collector : UnitComponent
 	{
 		public BindableStat range = new BindableStat(3);
+		public Collider2D col;
 		
 		void Start()
 		{
+			col = this.GetComponentInDescendants<Collider2D>();
+			
 			range.RegisterWithInitValue(value =>
 			{
-				CollectRange.radius = value;
+				col.LocalScale(value);
 			}).UnRegisterWhenGameObjectDestroyed(this);
 			
-			CollectRange.OnTriggerEnter2DEvent(col =>
+			col.OnTriggerEnter2DEvent(triggerCol =>
 			{
-				Collectable collectable = ComponentUtil.GetComponentFromUnit<Collectable>(col);
+				Collectable collectable = triggerCol.GetComponentFromUnit<Collectable>();
 				if (collectable)
 				{
-					if (collectable.ValidateCollision(CollectRange))
+					if (collectable.ValidateCollision(col))
 					{
 						collectable.StartCollection(transform);
 					}

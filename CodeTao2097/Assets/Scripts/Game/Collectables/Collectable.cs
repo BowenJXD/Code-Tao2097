@@ -42,7 +42,7 @@ namespace CodeTao
             interactableCol.enabled = false;
             
             if (!moveController){
-                moveController = this.GetComponentInDescendants<MoveController>(true);
+                moveController = GetComp<MoveController>();
             }
             moveController.SPD.RegisterWithInitValue(value =>
             {

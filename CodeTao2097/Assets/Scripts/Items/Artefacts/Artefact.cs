@@ -17,7 +17,7 @@ namespace CodeTao
 
         public override void OnAdd()
         {
-            attributeController = ComponentUtil.GetComponentFromUnit<AttributeController>(Container);
+            attributeController = Container.GetComp<AttributeController>();
             base.OnAdd();
         }
 

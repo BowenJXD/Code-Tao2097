@@ -14,11 +14,12 @@ namespace CodeTao
     {
         public int RandomSeed = 0;
 
+        public float duration = 60;
         public Random Random;
 
         public float DefenceFactor = 10;
         public static BindableProperty<bool> IsPass = new BindableProperty<bool>(false);
-        public static BindableProperty<float> GameDuration = new BindableProperty<float>(60);
+        public static BindableProperty<float> GameDuration;
         public static BindableProperty<float> GameTime = new BindableProperty<float>(0);
         
         public UnityEvent OnGameStart = new UnityEvent();
@@ -27,6 +28,8 @@ namespace CodeTao
         {
             Random = new Random(RandomSeed);
             OnGameStart.Invoke();
+            
+            GameDuration = new BindableProperty<float>(duration);
             
             // pass the game when game time reaches the duration
             GameTime.RegisterWithInitValue(value =>

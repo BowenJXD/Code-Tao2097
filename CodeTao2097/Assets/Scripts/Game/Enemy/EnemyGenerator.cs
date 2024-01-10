@@ -19,8 +19,8 @@ namespace CodeTao
 	public partial class EnemyGenerator : ViewController
 	{
 		protected List<UnitPool<Enemy>> enemyPools = new List<UnitPool<Enemy>>();
-		public List<Enemy> enemyPrefabs = new List<Enemy>();
-		public List<GeneratorTask> tasks = new List<GeneratorTask>();
+		public Enemy enemyPrefab;
+		public List<GeneratorTask> tasks;
 		
 		protected ObjectPool<ParticleSystem> deathFXPool;
 		public ParticleSystem deathFX;
@@ -35,11 +35,8 @@ namespace CodeTao
 		
 		private void Awake()
 		{
-			for (int i = 0; i < enemyPrefabs.Count; i++)
-			{
-				UnitPool<Enemy> enemyPool = new UnitPool<Enemy>(enemyPrefabs[i], transform, 2000);
-				enemyPools.Add(enemyPool);
-			}
+			UnitPool<Enemy> enemyPool = new UnitPool<Enemy>(enemyPrefab, transform, 2000);
+			enemyPools.Add(enemyPool);
 			
 			deathFXPool = new ObjectPool<ParticleSystem>(() =>
 			{
@@ -58,8 +55,6 @@ namespace CodeTao
 			}
 			, prefab => { Destroy(prefab); }
 			, true, 100);
-			
-			Global.GameDuration.Value = tasks.Sum(task => task.duration);
 		}
 
 		void Start()

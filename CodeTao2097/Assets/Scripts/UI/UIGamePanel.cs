@@ -24,12 +24,12 @@ namespace CodeTao
 
 			if (!expController)
 			{
-				expController = Player.Instance.ExpController;
+				expController = Player.Instance.Link.GetComp<ExpController>();
 			}
 			
 			if (!defencer)
 			{
-				defencer = Player.Instance.Defencer;
+				defencer = Player.Instance.Link.GetComp<Defencer>();
 			}
 			
 			// HP

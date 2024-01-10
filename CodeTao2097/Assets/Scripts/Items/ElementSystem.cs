@@ -18,7 +18,7 @@ namespace CodeTao
         public override void OnSingletonInit()
         {
             base.OnSingletonInit();
-            if (!inventory) inventory = Player.Instance.Inventory;
+            if (!inventory) inventory = Player.Instance.Link.GetComp<Inventory>();
             inventory.AddAfter += OnInventoryAddItem;
         }
 

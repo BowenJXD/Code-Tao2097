@@ -417,15 +417,5 @@ namespace CodeTao
             // Recursively search the ancestors with increased depth
             return GetComponentInAncestors<T>(child.parent, currentDepth + 1, maxDepth);
         }
-        
-        public static string GetTagFromParent(this Component component)
-        {
-            return component.transform.parent.tag;
-        }
-        
-        public static UnitController GetUnitController(this Component component)
-        {
-            return GetComponentInAncestors<UnitController>(component);
-        }
     }
 }

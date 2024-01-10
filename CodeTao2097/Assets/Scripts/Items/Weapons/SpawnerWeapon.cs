@@ -22,7 +22,7 @@ namespace CodeTao
 
             if (!unitPrefab)
             {
-                unitPrefab = ComponentUtil.GetComponentInDescendants<T>(this);
+                unitPrefab = this.GetComponentInDescendants<T>();
             }
             pool = new UnitPool<T>(unitPrefab);
         }

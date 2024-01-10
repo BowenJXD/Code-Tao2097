@@ -5,24 +5,7 @@ namespace CodeTao
 {
 	public partial class Player
 	{
-
-		public CodeTao.Inventory Inventory;
-
 		public SpriteRenderer Sprite;
-
-		public CodeTao.MoveController MoveController;
-
-		public CodeTao.Attacker Attacker;
-
-		public CodeTao.Defencer Defencer;
-
-		public CodeTao.Collector Collector;
-
-		public CodeTao.ExpController ExpController;
-
-		public CodeTao.BuffOwner SelfBuffOwner;
-
-		public CodeTao.AttributeController SelfAttributeController;
 
 		public UnityEngine.Rigidbody2D SelfRigidbody2D;
 

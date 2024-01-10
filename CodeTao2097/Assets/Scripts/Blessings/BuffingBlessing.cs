@@ -17,16 +17,16 @@ namespace CodeTao
         public override void OnAdd()
         {
             base.OnAdd();
-            attacker = ComponentUtil.GetComponentFromUnit<Attacker>(Container);
+            attacker = Container.GetComp<Attacker>();
             attacker.DealDamageAfter += TryApplyBuff;
-            buffToApply = ComponentUtil.GetComponentInDescendants<Buff>(this);
+            buffToApply = this.GetComponentInDescendants<Buff>();
             _buffPool = new ContentPool<Buff>(buffToApply);
         }
 
         public void TryApplyBuff(Damage damage)
         {
             if (damage.Target.IsDead) return;
-            BuffOwner target = ComponentUtil.GetComponentFromUnit<BuffOwner>(damage.Target);
+            BuffOwner target = damage.Target.GetComp<BuffOwner>();
             if (target && CheckCondition(damage))
             {
                 ApplyBuff(target);

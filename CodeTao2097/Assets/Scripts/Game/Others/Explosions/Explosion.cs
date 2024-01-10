@@ -17,7 +17,7 @@ namespace CodeTao
         {
             base.PreInit();
             ani = this.GetComponentInDescendants<Animator>();
-            damager = this.GetComponentInDescendants<Damager>();
+            damager = GetComp<Damager>();
         }
         
         public override void Init()

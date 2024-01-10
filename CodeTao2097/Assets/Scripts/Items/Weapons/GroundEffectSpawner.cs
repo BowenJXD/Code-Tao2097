@@ -27,7 +27,7 @@ namespace CodeTao
         public override void OnAdd()
         {
             base.OnAdd();
-            _ownerMoveController = ComponentUtil.GetComponentFromUnit<MoveController>(Container);
+            _ownerMoveController = Container.GetComp<MoveController>();
         }
 
         public override GroundEffect SpawnUnit(Vector2 localPos)

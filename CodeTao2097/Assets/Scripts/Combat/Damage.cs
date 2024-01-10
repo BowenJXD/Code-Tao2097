@@ -15,11 +15,11 @@ namespace CodeTao
         SourceATK,
         TargetDEF,
         CRIT,
-        ElementBON,
+        DamageIncrement,
         /// <summary>
         /// Defaults to be 0
         /// </summary>
-        ElementRES,
+        DamageDecrement,
         ReactionMultiplier
     }
 
@@ -142,7 +142,7 @@ namespace CodeTao
         public static string GetCSVHeader()
         {
             return
-                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,ElementBON,ElementRES,ReactionMultiplier,Knockback";
+                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,Knockback";
         }
         
         public string ToCSV()

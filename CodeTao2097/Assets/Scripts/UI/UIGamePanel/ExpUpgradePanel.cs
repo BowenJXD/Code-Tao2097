@@ -24,7 +24,7 @@ namespace CodeTao
 		private void Awake()
 		{
 			if (!itemManager) itemManager = ItemManager.Instance;
-			_playerInventory = Player.Instance.Inventory;
+			_playerInventory = Player.Instance.Link.GetComp<Inventory>();
 			
 			ExpUpBtnPool = new ObjectPool<ExpUpgradeBtn>(
 				() =>
