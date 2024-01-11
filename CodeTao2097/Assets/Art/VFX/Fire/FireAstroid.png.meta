@@ -1,0 +1,1051 @@
+fileFormatVersion: 2
+guid: fc714ffeec4b679408de91d7e665121e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FireAstroid_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5551a0779f96f438dd415aeb816603
+      internalID: 1095904595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_1
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d15925b9dfaf64db633d9b35f1dc9e
+      internalID: 1027909350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_2
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5def7c8b1d7f975458084dbec3c8f10c
+      internalID: -1206421251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_3
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a0cdcb9de8c734c95dce2a34f33257
+      internalID: -47334975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_4
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded304e3719c2924da524b04c89e4940
+      internalID: 942550435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_5
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77024dd2b6a0b5047be4e115a501a1c2
+      internalID: -893580239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_6
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f1d705286bd80468c0bf7499bfe8ec
+      internalID: -405211501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_7
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684cdb2693ac17b4bbb25d4e236536d5
+      internalID: -1501743678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_8
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6923578f2f693d4e8d10d4bfbcff13a
+      internalID: -1297905958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_9
+      rect:
+        serializedVersion: 2
+        x: 2862
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ce31885bc7ce34197085f45353dfd3
+      internalID: 855025304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_10
+      rect:
+        serializedVersion: 2
+        x: 3180
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5e8928ac87ff2498b353a63b566392
+      internalID: -742890438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_11
+      rect:
+        serializedVersion: 2
+        x: 3498
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85248bf39c38bbf4cb678d18ddaec187
+      internalID: 1620298384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_12
+      rect:
+        serializedVersion: 2
+        x: 3816
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b56768593accb41bb731d351e50d5a
+      internalID: -1080585877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_13
+      rect:
+        serializedVersion: 2
+        x: 4134
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc66452bb71ecad468cb59d45f15f419
+      internalID: -336101133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_14
+      rect:
+        serializedVersion: 2
+        x: 4452
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3823663fcadde1a4fa4de46746540a03
+      internalID: 1416455620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_15
+      rect:
+        serializedVersion: 2
+        x: 4770
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feacc510b11bf5d4f96f1b561bbba086
+      internalID: -1126070486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_16
+      rect:
+        serializedVersion: 2
+        x: 5088
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a68cac42f76ee43a9f6d08f125041d
+      internalID: -619835709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_17
+      rect:
+        serializedVersion: 2
+        x: 5406
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941491b23fc93cd4a8031e677a899516
+      internalID: 634952979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_18
+      rect:
+        serializedVersion: 2
+        x: 5724
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a02b9be097c0e94a9f3220d6fef33a1
+      internalID: 2042644320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_19
+      rect:
+        serializedVersion: 2
+        x: 6042
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6beaf2718f5427f4fb6844e132a6deb8
+      internalID: -601856418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_20
+      rect:
+        serializedVersion: 2
+        x: 6360
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc8c84f72bb5684299e642568e8f8c3
+      internalID: -1813882756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_21
+      rect:
+        serializedVersion: 2
+        x: 6678
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13627002baaab149832cdd9dac1e6df
+      internalID: 1538759075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_22
+      rect:
+        serializedVersion: 2
+        x: 6996
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411e7a3ba2cc01648b84985a090611c1
+      internalID: -1249143674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_23
+      rect:
+        serializedVersion: 2
+        x: 7314
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19cbb7178d3b0d4bb94ac40c590570c
+      internalID: 708719931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_24
+      rect:
+        serializedVersion: 2
+        x: 7632
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbb3a47085cfb246967d94565277769
+      internalID: 687420563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_25
+      rect:
+        serializedVersion: 2
+        x: 7950
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e77c1757cae664ba12d4ecb2e374e2
+      internalID: -1038421943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_26
+      rect:
+        serializedVersion: 2
+        x: 8268
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7deac74bced8ff40b08386d562d11ae
+      internalID: 1159023863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_27
+      rect:
+        serializedVersion: 2
+        x: 8586
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d517011a41bf4c445921334fda72ad60
+      internalID: 975227905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_28
+      rect:
+        serializedVersion: 2
+        x: 8904
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a912422c2539a408b2f8e42ac59150
+      internalID: -103256243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_29
+      rect:
+        serializedVersion: 2
+        x: 9222
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610ad6baef74a244f8d4ea967189497a
+      internalID: 1795790772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_30
+      rect:
+        serializedVersion: 2
+        x: 9540
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de58979df977cca478890440d7922478
+      internalID: 1456760632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_31
+      rect:
+        serializedVersion: 2
+        x: 9858
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fcca78c0252a14dafa44451d3c355c
+      internalID: 864828590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_32
+      rect:
+        serializedVersion: 2
+        x: 10176
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18445e3fa1bd574aa45cc1fdd85ba46
+      internalID: -2113004359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_33
+      rect:
+        serializedVersion: 2
+        x: 10494
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a318c2c6ab11cf341a1e118c7fb5a836
+      internalID: -126044414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_34
+      rect:
+        serializedVersion: 2
+        x: 10812
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba287d231f446047ad12ec985190708
+      internalID: -498857415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_35
+      rect:
+        serializedVersion: 2
+        x: 11130
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54df764b47a9a947a70bc778d9237d1
+      internalID: 434337134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_36
+      rect:
+        serializedVersion: 2
+        x: 11448
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f8d97fad2f52e49b7ea3a7e2371cf7
+      internalID: 1742758595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_37
+      rect:
+        serializedVersion: 2
+        x: 11766
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83396d029d471114aa5277dd4b32324d
+      internalID: 1042481359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_38
+      rect:
+        serializedVersion: 2
+        x: 12084
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ca736b412553a4ab6c6b178729548b
+      internalID: -491658642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_39
+      rect:
+        serializedVersion: 2
+        x: 12402
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cacf9076aaa22248bba11243deef409
+      internalID: -2055477320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_40
+      rect:
+        serializedVersion: 2
+        x: 12720
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbee7257fe2b1b042a76ee4dcacb447f
+      internalID: 690898586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireAstroid_41
+      rect:
+        serializedVersion: 2
+        x: 13038
+        y: 0
+        width: 318
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d3072e0395b4445a085da709c750d4
+      internalID: 10380564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FireAstroid_0: 1095904595
+      FireAstroid_1: 1027909350
+      FireAstroid_10: -742890438
+      FireAstroid_11: 1620298384
+      FireAstroid_12: -1080585877
+      FireAstroid_13: -336101133
+      FireAstroid_14: 1416455620
+      FireAstroid_15: -1126070486
+      FireAstroid_16: -619835709
+      FireAstroid_17: 634952979
+      FireAstroid_18: 2042644320
+      FireAstroid_19: -601856418
+      FireAstroid_2: -1206421251
+      FireAstroid_20: -1813882756
+      FireAstroid_21: 1538759075
+      FireAstroid_22: -1249143674
+      FireAstroid_23: 708719931
+      FireAstroid_24: 687420563
+      FireAstroid_25: -1038421943
+      FireAstroid_26: 1159023863
+      FireAstroid_27: 975227905
+      FireAstroid_28: -103256243
+      FireAstroid_29: 1795790772
+      FireAstroid_3: -47334975
+      FireAstroid_30: 1456760632
+      FireAstroid_31: 864828590
+      FireAstroid_32: -2113004359
+      FireAstroid_33: -126044414
+      FireAstroid_34: -498857415
+      FireAstroid_35: 434337134
+      FireAstroid_36: 1742758595
+      FireAstroid_37: 1042481359
+      FireAstroid_38: -491658642
+      FireAstroid_39: -2055477320
+      FireAstroid_4: 942550435
+      FireAstroid_40: 690898586
+      FireAstroid_41: 10380564
+      FireAstroid_5: -893580239
+      FireAstroid_6: -405211501
+      FireAstroid_7: -1501743678
+      FireAstroid_8: -1297905958
+      FireAstroid_9: 855025304
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
