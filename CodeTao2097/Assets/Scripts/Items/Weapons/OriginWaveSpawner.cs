@@ -15,9 +15,9 @@ namespace CodeTao
             ats[EWAt.Amount].SetMaxValue(1);
         }
 
-        public override OriginWave SpawnUnit(Vector2 localPos)
+        public override OriginWave SpawnUnit(Vector2 globalPos, Vector2 localPos)
         {
-            OriginWave unit = base.SpawnUnit(localPos);
+            OriginWave unit = base.SpawnUnit(globalPos, localPos);
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
             unit.range.Value = ats[EWAt.Area].Value;
             unit.Parent(Global.Instance.transform);

@@ -62,7 +62,7 @@ namespace CodeTao
         
         #region Condition
         
-        public readonly float DMGCD;
+        public float DMGCD;
         public bool IsInCD;
         
         public void StartCD()
@@ -171,7 +171,6 @@ namespace CodeTao
             }
             
             OnTakeDamageFuncs.Clear();
-            TakeDamageAfter = null;
             
             IsInCD = false;
         }

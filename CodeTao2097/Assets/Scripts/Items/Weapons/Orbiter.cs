@@ -51,9 +51,9 @@ namespace CodeTao
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
-        public override Projectile SpawnUnit(Vector2 localPos)
+        public override Projectile SpawnUnit(Vector2 globalPos, Vector2 localPos)
         {
-            Projectile unit = base.SpawnUnit(localPos);
+            Projectile unit = base.SpawnUnit(globalPos, localPos);
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
             unit.Parent(transform)
                 .Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(localPos.normalized)))

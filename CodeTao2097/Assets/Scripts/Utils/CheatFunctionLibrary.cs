@@ -35,11 +35,8 @@ namespace CodeTao
 
         void F1()
         {
-            expUpTask = new LoopTask(this, expUpInterval, () =>
-            {
-                expController.LevelUp();
-            });
-            expUpTask.Start();
+            expController.EXPRate.Value = 0f;
+            expController.LevelUp();
         }
 
         void F2()

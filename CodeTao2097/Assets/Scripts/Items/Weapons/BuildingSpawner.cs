@@ -25,9 +25,9 @@ namespace CodeTao
             _ownerMoveController = Container.GetComp<MoveController>();
         }
 
-        public override T SpawnUnit(Vector2 localPos)
+        public override T SpawnUnit(Vector2 globalPos, Vector2 localPos)
         {
-            T unit = base.SpawnUnit(localPos);
+            T unit = base.SpawnUnit(globalPos, localPos);
             unit.lifeTime.Value = ats[EWAt.Duration].Value;
             unit.Parent(BuildingManager.Instance.transform)
                 .LocalScale(new Vector3(ats[EWAt.Area], ats[EWAt.Area]));

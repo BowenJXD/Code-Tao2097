@@ -57,7 +57,7 @@ namespace CodeTao
             if (col2D && damager)
             {
                 // Attack player when player is in range
-                col2D.OnTriggerStay2DEvent((col) =>
+                col2D.OnTriggerEnter2DEvent((col) =>
                 {
                     UnitController unitController = col.GetComponentInAncestors<UnitController>();
                     Defencer defencer = col.GetComponentInAncestors<Defencer>(1);

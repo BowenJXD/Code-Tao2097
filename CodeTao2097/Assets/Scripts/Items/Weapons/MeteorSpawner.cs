@@ -10,13 +10,12 @@ namespace CodeTao
     /// </summary>
     public class MeteorSpawner : BuildingSpawner<Meteor>
     {
-        public override Meteor SpawnUnit(Vector2 localPos)
+        public override Meteor SpawnUnit(Vector2 globalPos, Vector2 localPos)
         {
-            Meteor obj = base.SpawnUnit(localPos);
-            Vector3 spawnPosition = transform.position + (Vector3)localPos;
-            obj.onFall += () => SpawnExplosion(spawnPosition)?.Init();
+            Meteor unit = base.SpawnUnit(globalPos, localPos);
+            SpawnExplosion(globalPos)?.Init();
             
-            return obj;
+            return unit;
         }
         
         Explosion SpawnExplosion(Vector2 spawnPosition)

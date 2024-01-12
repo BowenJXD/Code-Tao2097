@@ -1,6 +1,4 @@
 Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9
-SaDouChengBingDamager,2532.801,76.467872.212592,140.508,58.27575,89.27866,
-ResonanceDamager,1494.266,45.1134545.11345,
-BackFlowDamager,253.3333,7.6483960.4174185,11.74485,
-OrbiterDamager,253.6111,7.6567831.254009,20.20159,
-ExplosionDamager,600,18.1146218.11462,
+GroundEffectDamager,34210,568.59397.139232,606.9982,
+SaDouChengBingDamager,9521.598,158.25555.245583,169.7207,
+ResonanceDamager,5306,88.1893988.18939,

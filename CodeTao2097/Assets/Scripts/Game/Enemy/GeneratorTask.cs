@@ -17,12 +17,10 @@ namespace CodeTao
     [Serializable]
     public class GeneratorTask
     {
-        public List<int> amountsToGenerate = new List<int>();
+        public int amountToGenerate = 0;
 
         public float duration = 60;
 
-        private float Interval => duration / amountsToGenerate.Sum();
-        
         [HideInInspector] public UnityEvent<int> onGenerate = new UnityEvent<int>();
         [HideInInspector] public UnityEvent onFinish = new UnityEvent();
 
@@ -30,20 +28,22 @@ namespace CodeTao
 
         public void Start(MonoBehaviour owner)
         {
-            LoopTask = new LoopTask(owner, Interval, Generate, Finish);
+            float interval = amountToGenerate > 0? duration / amountToGenerate : float.MaxValue;
+            LoopTask = new LoopTask(owner, interval, Generate, Finish);
             LoopTask.SetTimeCondition(duration);
             LoopTask.Start();
         }
 
         public void Generate()
         {
-            if (amountsToGenerate.Sum() == 0)
+            if (amountToGenerate == 0)
             {
                 Finish();
                 return;
             }
-            int index = RandomUtil.GetRandomWeightedIndex(amountsToGenerate);
-            amountsToGenerate[index] = Mathf.Max(0, amountsToGenerate[index] - 1);
+
+            int index = RandomUtil.Rand(amountToGenerate);
+            amountToGenerate -= 1;
             onGenerate.Invoke(index);
         }
 

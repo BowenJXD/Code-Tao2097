@@ -26,12 +26,14 @@ namespace CodeTao
         
         public static string GetCSVHeader()
         {
-            return $"Time,{Damage.GetCSVHeader()},PlayerLevel,DamagerLevel";
+            return $"Time,Receiver Unit,{Damage.GetCSVHeader()},PlayerLevel,DamagerLevel";
         }
         
         public string ToCSV()
         {
-            return $"{time},{damage.ToCSV()},{playerLevel},{damagerLevel}";
+            // Item inflictingContent = damage.Median.GetComponentInAncestors<Item>();
+            UnitController receiverUnit = damage.Target.Unit;
+            return $"{time},{receiverUnit.name} {receiverUnit.GetHashCode()},{damage.ToCSV()},{playerLevel},{damagerLevel}";
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using CodeTao;
+using DG.Tweening;
 using QFramework;
 using TMPro;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace CodeTao
         public float minTextSize;
         public float maxTextSize;
         public float damageSizeIncrement;
+        public float initialScale;
         public float textDuration;
         
         public TextMeshProUGUI textPrefab;
@@ -53,8 +55,9 @@ namespace CodeTao
             
             newText.text = Math.Round(DMG, 2).ToString();
             newText.fontSize = Mathf.Clamp(minTextSize + DMG / damageSizeIncrement, minTextSize, maxTextSize);
-            newText.transform.position = position;
-            newText.transform.SetParent(transform);
+            var localScale = newText.transform.localScale;
+            newText.Position(position).Parent(transform).LocalScale(localScale * initialScale);
+            /*newText.transform.DOScale(localScale, textDuration / 2).SetEase(Ease.OutBack);*/
         
             newText.faceColor = color * faceBrightness;
             Color outlineColour = color / outlineDarkness;

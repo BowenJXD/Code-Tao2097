@@ -13,6 +13,8 @@ namespace CodeTao
     /// <typeparam name="T"></typeparam>
     public abstract class SpawnerWeapon<T> : Weapon where T : UnitController
     {
+        public AnimateObject spawnAnimation;
+        protected ObjectPool<AnimateObject> aniPool;
         public T unitPrefab;
         protected UnitPool<T> pool;
 
@@ -22,9 +24,21 @@ namespace CodeTao
 
             if (!unitPrefab)
             {
-                unitPrefab = this.GetComponentInDescendants<T>();
+                unitPrefab = this.GetComponentInDescendants<T>(true);
             }
             pool = new UnitPool<T>(unitPrefab);
+            if (!spawnAnimation)
+            {
+                spawnAnimation = this.GetComponentInDescendants<AnimateObject>(true);
+            }
+
+            if (spawnAnimation){
+                aniPool = new ObjectPool<AnimateObject>(
+                    () => { return Instantiate(spawnAnimation, AnimateObjectManager.Instance.transform); }, 
+                    prefab => { prefab.gameObject.SetActive(true); }, 
+                    prefab => { prefab.gameObject.SetActive(false); }, 
+                    prefab => { Destroy(prefab); });
+            }
         }
 
         public override void Fire()
@@ -34,24 +48,35 @@ namespace CodeTao
             Vector2 baseDirection = GetBaseDirection();
             for (int i = 0; i < ats[EWAt.Amount].Value; i++)
             {
-                Vector2 spawnPoint = GetLocalSpawnPoint(baseDirection, i);
-                SpawnUnit(spawnPoint).Init();
+                Vector2 localSpawnPoint = GetLocalSpawnPoint(baseDirection, i);
+                Vector2 globalSpawnPoint = transform.position + (Vector3)localSpawnPoint;
+                if (aniPool != null)
+                {
+                    AnimateObject newAnim = aniPool.Get().Position(globalSpawnPoint);
+                    newAnim.onTrigger = () => { SpawnUnit(globalSpawnPoint, localSpawnPoint).Init(); };
+                    newAnim.onEnd = () => { aniPool.Release(newAnim); };
+                }
+                else
+                {
+                    SpawnUnit(globalSpawnPoint, localSpawnPoint).Init();
+                }
             }
         }
-        
+
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="globalPos"></param>
         /// <param name="localPos">The spawn position relative to the transform</param>
         /// <returns></returns>
-        public virtual T SpawnUnit(Vector2 localPos)
+        public virtual T SpawnUnit(Vector2 globalPos, Vector2 localPos)
         {
             T unit = pool.Get();
             unit.onDeinit = () =>
             {
                 pool.Release(unit);
             };
-            unit.Position(transform.position + (Vector3)localPos);
+            unit.Position(globalPos);
             return unit;
         }
 

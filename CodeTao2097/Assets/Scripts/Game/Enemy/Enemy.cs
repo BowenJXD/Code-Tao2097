@@ -14,13 +14,10 @@ namespace CodeTao
 		public Transform target;
 		public BindableStat EXPValue = new BindableStat(1);
 
-		private void Start()
+		public override void PreInit()
 		{
-			if (!target)
-			{
-				target = Player.Instance.transform;
-			}
-
+			base.PreInit();
+			
 			SelfNavAgent.updateRotation = false;
 			SelfNavAgent.updateUpAxis = false;
 			
@@ -37,7 +34,7 @@ namespace CodeTao
 			};
 
 			// Attack player when player is in range
-			HitBox.OnTriggerStay2DEvent((col) =>
+			HitBox.OnTriggerEnter2DEvent((col) =>
 			{
 				UnitController unitController = col.GetComponentInAncestors<UnitController>();
 				Defencer def = col.GetComponentInAncestors<Defencer>(1);
@@ -48,14 +45,22 @@ namespace CodeTao
 						DamageManager.Instance.ExecuteDamage(GetComp<Damager>(), def, GetComp<Attacker>());
 					}
 				}
-			}).UnRegisterWhenGameObjectDestroyed(this);
+			});
 
 			GetComp<MoveController>().SPD.RegisterWithInitValue(value =>
 			{
 				SelfNavAgent.speed = value;
-			}).UnRegisterWhenGameObjectDestroyed(this);
+			});
 			
 			GetComp<AttributeController>().onAddAAtModGroup += AddAAtMod;
+		}
+
+		private void Start()
+		{
+			if (!target)
+			{
+				target = Player.Instance.transform;
+			}
 		}
 
 		private void OnEnable()
