@@ -19,56 +19,50 @@ namespace CodeTao
             set => relatedElements = new List<ElementType>() {value};
         }
 
-        [SerializeField]
-        public SerializableDictionary<EWAt, BindableStat> ats = new SerializableDictionary<EWAt, BindableStat>()
-        {
-            {EWAt.Damage, new BindableStat(10)}, 
-            {EWAt.Amount, new BindableStat(1)},
-            {EWAt.Duration, new BindableStat(5).SetMinValue(0.1f)},
-            {EWAt.Speed, new BindableStat(4)},
-            {EWAt.Cooldown, new BindableStat(2).SetMinValue(0.1f)},
-            {EWAt.Area, new BindableStat(1).SetMinValue(0.1f)},
-            {EWAt.EffectHitRate, new BindableStat(50).SetMaxValue(100f)}
-        };
+        public BindableStat damage = new BindableStat(10);
+        public BindableStat amount = new BindableStat(1);
+        public BindableStat duration = new BindableStat(5).SetMinValue(0.1f);
+        public BindableStat speed = new BindableStat(4);
+        public BindableStat cooldown = new BindableStat(2).SetMinValue(0.1f);
+        public BindableStat area = new BindableStat(1).SetMinValue(0.1f);
+        public BindableStat knockBack = new BindableStat(0);
+        public BindableStat effectHitRate = new BindableStat(50).SetMaxValue(100f);
 
-        [BoxGroup("Weapon")]
-        public Buff buffToApply;
-
-        [BoxGroup("Weapon")]
         public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
-        
-        [BoxGroup("Weapon")]
         public BindableStat reloadTime = new BindableStat(0);
-        
-        [BoxGroup("Weapon")]
         public BindableStat attackRange = new BindableStat(10);
         
         [HideInInspector] public Attacker attacker;
-        [HideInInspector] public Damager damager;
+        [HideInInspector] public List<Damager> damagers;
 
         protected LoopTask fireLoop;
+        
+        protected WeaponSelector weaponSelector;
+        protected List<WeaponExecutor> weaponExecuters = new List<WeaponExecutor>();
+        protected List<EntityType> attackingTypes = new List<EntityType>();
         
         [TabGroup("Content")]
         public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
 
-        public override void OnAdd()
-        {
-            base.OnAdd();
-            attacker = Container.GetComp<Attacker>();
-        }
-
         public override void Init()
         {
             base.Init();
-            damager = this.GetComponentInDescendants<Damager>();
-            damager.DamageElementType = elementType;
-            damager.DMG = ats[EWAt.Damage];
-            damager.DealDamageAfter += TryApplyBuff;
-            buffToApply = this.GetComponentInDescendants<Buff>();
-            reloadTime.AddModifierGroups(ats[EWAt.Cooldown].ModGroups);
+
+            if (!weaponSelector) weaponSelector = GetComponent<WeaponSelector>();
+            if (!weaponSelector) weaponSelector = this.GetComponentInDescendants<WeaponSelector>();
+            weaponSelector.Init(this);
+            
+            if (weaponExecuters.Count <= 0) weaponExecuters = this.GetComponentsInDescendants<WeaponExecutor>(true).ToList();
+            weaponExecuters.ForEach(we => we.Init(this));
+            
+            if (!attacker) attacker = Container.GetComp<Attacker>();
+            if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
+            damagers.ForEach(damager => attackingTypes.AddRange(damager.damagingTags));
+            
+            reloadTime.AddModifierGroups(cooldown.ModGroups);
             
             // setup fire loop
-            fireLoop = new LoopTask(this, ats[EWAt.Cooldown], Fire, StartReload);
+            fireLoop = new LoopTask(this, cooldown, Fire, StartReload);
             if (shotsToReload.Value > 0)
             {
                 shotsToReload.RegisterWithInitValue(count =>
@@ -77,56 +71,28 @@ namespace CodeTao
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
             fireLoop.Start();
-            ats[EWAt.Cooldown].RegisterWithInitValue(interval =>
+            cooldown.RegisterWithInitValue(interval =>
             {
                 fireLoop.LoopInterval = interval;
             }).UnRegisterWhenGameObjectDestroyed(this);
-            
-            _buffPool = new ContentPool<Buff>(buffToApply);
         }
 
         public virtual void Fire()
         {
-            
-        }
-        
-        private ContentPool<Buff> _buffPool;
-        
-        public virtual void TryApplyBuff(Damage damage)
-        {
-            if (damage.Target.IsDead) return;
-            BuffOwner target = damage.Target.GetComp<BuffOwner>();
-            if (target && buffToApply && CheckBuffHit(damage))
+            List<Vector3> globalPositions = weaponSelector.GetGlobalPositions();
+            ISequence actionSequence = ActionKit.Sequence();
+            for (int i = 0; i < weaponExecuters.Count; i++)
             {
-                ApplyBuff(target);
-            }
-        }
-        
-        public virtual Buff ApplyBuff(BuffOwner target)
-        {
-            Buff buff = _buffPool.Get().Parent(this);
-            buff.duration.AddModifierGroups(ats[EWAt.Duration].ModGroups);
-            
-            if (!buff.AddToContainer(target))
-            {
-                _buffPool.Release(buff);
-            }
-            else
-            {
-                buff.RemoveAfter += buffRemoved =>
+                WeaponExecutor weaponExecutor = weaponExecuters[i];
+                actionSequence.Callback(() => weaponExecutor.Execute(globalPositions));
+                if (i < weaponExecuters.Count - 1)
                 {
-                    _buffPool.Release(buffRemoved);
-                };
+                    actionSequence.Condition(() => weaponExecutor.next);
+                }
             }
-
-            return buff;
+            actionSequence.Start(this);
         }
 
-        public virtual bool CheckBuffHit(Damage damage)
-        {
-            return RandomUtil.rand.Next(100) < ats[EWAt.EffectHitRate].Value;
-        }
-        
         public virtual void StartReload()
         {
             ActionKit.Delay(reloadTime.Value, () =>
@@ -149,26 +115,47 @@ namespace CodeTao
             {
                 if (mod.CheckCondition(newLevel))
                 {
-                    ModAttribute(mod);
+                    GetWAtStat(mod.attribute).AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
                     if (mod.exclusive) break;
                 }
             }
         }
         
-        public virtual void ModAttribute(WeaponUpgradeMod mod)
+        public virtual BindableStat GetWAtStat(EWAt at)
         {
-            if (ats.Contains(mod.attribute))
+            BindableStat statToMod = null;
+            switch (at)
             {
-                ats[mod.attribute].AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
+                case EWAt.Damage:
+                    statToMod = damage;
+                    break;
+                case EWAt.Cooldown:
+                    statToMod = cooldown;
+                    break;
+                case EWAt.Area:
+                    statToMod = area;
+                    break;
+                case EWAt.Amount:
+                    statToMod = amount;
+                    break;
+                case EWAt.Duration:
+                    statToMod = duration;
+                    break;
+                case EWAt.Speed:
+                    statToMod = speed;
+                    break;
+                case EWAt.Range:
+                    statToMod = attackRange;
+                    break;
+                case EWAt.Knockback:
+                    statToMod = knockBack;
+                    break;
+                case EWAt.EffectHitRate:
+                    statToMod = effectHitRate;
+                    break;
             }
-            else if (mod.attribute == EWAt.Range)
-            {
-                attackRange.AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
-            }
-            else if (mod.attribute == EWAt.Knockback)
-            {
-                damager.KnockBackFactor.AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
-            }
+
+            return statToMod;
         }
         
         public override string GetUpgradeDescription()
@@ -188,12 +175,6 @@ namespace CodeTao
             return base.GetUpgradeDescription() + result.StringJoin("\n");
         }
 
-        public virtual void Attack(Defencer defencer)
-        {
-            Damage dmg = DamageManager.Instance.ExecuteDamage(damager, defencer, attacker);
-        }
-        
-        
         /// <summary>
         /// Get available targets in attackRange in ascending order of distance
         /// </summary>
@@ -219,11 +200,16 @@ namespace CodeTao
             SortedList<float, Defencer> targetDistances = new SortedList<float, Defencer>();
             foreach (var col in colliders)
             {
-                Defencer target = DamageManager.Instance.ColToDef(damager, col);
-                if (target)
+                Defencer target = null;
+                UnitController unitController = col.GetUnit();
+                if (unitController)
                 {
-                    float targetDistance = Vector2.Distance(transform.position, col.transform.position);
-                    targetDistances.Add(targetDistance, target);
+                    target = unitController.GetComp<Defencer>();
+                    if (Util.IsTagIncluded(unitController.tag, attackingTypes) && target)
+                    {
+                        float targetDistance = Vector2.Distance(transform.position, col.transform.position);
+                        targetDistances.Add(targetDistance, target);
+                    }
                 }
             }
 

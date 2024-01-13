@@ -6,9 +6,10 @@ namespace CodeTao
     /// <summary>
     /// 建筑物的基类，有实体，地图上初始就可以有。
     /// </summary>
-    public class Building : CombatUnit
+    public class Building : CombatUnit, IWeaponDerivative
     {
         public BindableStat lifeTime = new BindableStat(5f);
+        public BindableStat area = new BindableStat(1f);
         protected LoopTask lifeTask;
         protected Defencer defencer;
         protected Damager damager;
@@ -115,6 +116,19 @@ namespace CodeTao
         {
             base.Deinit();
             lifeTask.Pause();
+        }
+
+        public Weapon weapon { get; set; }
+        public void SetWeapon(Weapon newWeapon, Damager newDamager)
+        {
+            weapon = newWeapon;
+            if (!damager) damager = newDamager;
+            lifeTime.InheritStat(weapon.duration);
+            area.InheritStat(weapon.area);
+            area.RegisterWithInitValue(value =>
+            {
+                this.LocalScale(new Vector3(value, value));
+            }).UnRegisterWhenGameObjectDestroyed(this);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeTao 
 {
@@ -11,9 +12,14 @@ namespace CodeTao
     /// </summary>
     public class Damager : UnitComponent
     {
-        public ElementType DamageElementType = ElementType.None;
-        public BindableStat DMG = new BindableStat();
-        public BindableStat KnockBackFactor = new BindableStat(0);
+        public ElementType damageElementType = ElementType.None;
+        public BindableStat DMG = new BindableStat(-1);
+        public BindableStat knockBackFactor = new BindableStat(-1);
+        
+        public BindableStat effectHitRate = new BindableStat(-1).SetMaxValue(100f);
+        public BindableStat effectDuration = new BindableStat(-1).SetMinValue(0.1f);
+        public Buff buffToApply;
+        private ContentPool<Buff> _buffPool;
         
         #region Condition
         
@@ -35,6 +41,12 @@ namespace CodeTao
         
         #endregion
 
+        private void OnEnable()
+        {
+            if (!buffToApply) buffToApply = this.GetComponentInDescendants<Buff>();
+            if (buffToApply && _buffPool == null) _buffPool = new ContentPool<Buff>(buffToApply);
+        }
+
         public bool ValidateDamage(Defencer defencer, Attacker attacker)
         {
             UnitController unit = defencer.Unit;
@@ -47,8 +59,8 @@ namespace CodeTao
         {
             damage.SetMedian(this);
             damage.SetBase(DMG.Value);
-            damage.SetElement(DamageElementType);
-            damage.MultiplyKnockBack(KnockBackFactor);
+            damage.SetElement(damageElementType);
+            damage.MultiplyKnockBack(knockBackFactor);
             return damage;
         }
         
@@ -65,14 +77,50 @@ namespace CodeTao
             if (damage != null)
             {
                 damage.Target.TakeDamage(damage);
+                TryApplyBuff(damage);
                 DealDamageAfter?.Invoke(damage);
             }
+        }
+        
+        public virtual void TryApplyBuff(Damage damage)
+        {
+            if (damage.Target.IsDead) return;
+            BuffOwner target = damage.Target.GetComp<BuffOwner>();
+            if (target && buffToApply && CheckBuffHit(damage))
+            {
+                ApplyBuff(target);
+            }
+        }
+        
+        public virtual Buff ApplyBuff(BuffOwner target)
+        {
+            Buff buff = _buffPool.Get().Parent(this);
+            buff.duration.AddModifierGroups(effectDuration.ModGroups);
+            
+            if (!buff.AddToContainer(target))
+            {
+                _buffPool.Release(buff);
+            }
+            else
+            {
+                buff.RemoveAfter += buffRemoved =>
+                {
+                    _buffPool.Release(buffRemoved);
+                };
+            }
+
+            return buff;
+        }
+
+        public virtual bool CheckBuffHit(Damage damage)
+        {
+            return RandomUtil.rand.Next(100) < effectHitRate.Value;
         }
 
         private void OnDisable()
         {
             DMG.Reset();
-            KnockBackFactor.Reset();
+            knockBackFactor.Reset();
             OnDealDamageFuncs.Clear();
             DealDamageAfter = null;
         }

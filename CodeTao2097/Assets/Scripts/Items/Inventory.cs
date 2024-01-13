@@ -64,7 +64,7 @@ namespace CodeTao
         {
             foreach (var weapon in weaponInventory)
             {
-                weapon.ats[at].AddModifierGroup(modGroup);
+                weapon.GetWAtStat(at).AddModifierGroup(modGroup);
             }
         }
     }

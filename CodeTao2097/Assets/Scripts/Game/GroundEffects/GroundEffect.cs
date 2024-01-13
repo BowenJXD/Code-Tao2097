@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using QFramework;
+using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 
 namespace CodeTao
@@ -18,14 +19,14 @@ namespace CodeTao
     /// <summary>
     /// 领域GroundEffect：无实体，间歇性对领域内的敌人造成伤害。进出领域可以有伤害。
     /// </summary>
-    public partial class GroundEffect : UnitController
+    public partial class GroundEffect : UnitController, IWeaponDerivative
     {
         [HideInInspector] public Damager damager;
         [HideInInspector] public Collider2D col2D;
-        [HideInInspector] public Weapon weapon;
         
         public BindableStat attackInterval = new BindableStat(1f);
         public BindableStat lifeTime = new BindableStat(5f);
+        public BindableStat area = new BindableStat(1f);
         
         public BindableProperty<EAttackTarget> attackWhenEntering = new BindableProperty<EAttackTarget>(EAttackTarget.None);
         public BindableProperty<EAttackTarget> attackWhenExiting = new BindableProperty<EAttackTarget>(EAttackTarget.None);
@@ -37,24 +38,26 @@ namespace CodeTao
             col2D = this.GetCollider();
         }
 
-        protected virtual void OnEnable()
-        {
-            
-           
-        }
+        public Weapon weapon { get; set; }
 
-        public GroundEffect SetWeapon(Weapon newWeapon)
+        void IWeaponDerivative.SetWeapon(Weapon newWeapon, Damager newDamager)
         {
-            this.weapon = newWeapon;
-            return this;
+            weapon = newWeapon;
+            if (!damager) damager = newDamager;
+            attackInterval.InheritStat(weapon.cooldown);
+            lifeTime.InheritStat(weapon.duration);
+            this.Parent(GroundEffectManager.Instance.transform);
+            area.InheritStat(weapon.area);
+            area.RegisterWithInitValue(value =>
+            {
+                this.LocalScale(new Vector3(value, value));
+            }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
         public override void Init()
         {
             base.Init();
-            
-            damager = weapon.damager;
-            
+
             attackLoop = new LoopTask(this, attackInterval, AttackAll, Deinit);
             attackLoop.SetTimeCondition(lifeTime);
             attackLoop.Start();

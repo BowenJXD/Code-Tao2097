@@ -45,7 +45,7 @@ namespace CodeTao
         public virtual string GetUpgradeDescription()
         {
             int newLevel = LVL.Value + 1;
-            return $"{(newLevel == 1 ? "New!! " : "")} {GetType().Name} ({newLevel}): ";
+            return $"{(newLevel == 1 ? "New!! " : "")} {name} ({newLevel}): ";
         }
     }
 }

@@ -9,7 +9,7 @@ namespace CodeTao
     /// <summary>
     /// 从自身出发，呈圆形向外扩散的单位，通过触碰来造成伤害。
     /// </summary>
-    public class Wave : UnitController
+    public class Wave : UnitController, IWeaponDerivative
     {
         public Ease easeMode = Ease.Linear;
         protected SpriteRenderer sp;
@@ -22,13 +22,16 @@ namespace CodeTao
             return this;
         }
 
-        public Wave SetWeapon(Weapon weapon)
+        public Weapon weapon { get; set; }
+        void IWeaponDerivative.SetWeapon(Weapon newWeapon, Damager newDamager)
         {
-            damager = weapon.damager;
+            weapon = newWeapon;
+            if (!damager) damager = newDamager;
             attacker = weapon.attacker;
-            return this;
+            range.InheritStat(weapon.area);
+            lifeTime.InheritStat(weapon.duration);
         }
-        
+
         public float defaultPercent = 0.2f;
         public BindableStat range = new BindableStat(2);
         public BindableStat lifeTime = new BindableStat(1);

@@ -9,14 +9,14 @@ namespace CodeTao
     /// <summary>
     /// 弹射物Projectile：无实体。触碰到单位后造成伤害。
     /// </summary>
-    public partial class Projectile : UnitController
+    public partial class Projectile : UnitController, IWeaponDerivative
     {
         [HideInInspector] public Rigidbody2D rb2D;
         [HideInInspector] public Collider2D col2D;
         [HideInInspector] public MoveController moveController;
-        [HideInInspector] public Weapon weapon;
         [HideInInspector] public Damager damager;
         public BindableStat lifeTime = new BindableStat(5f);
+        public BindableStat area = new BindableStat(1f);
         private LoopTask _lifeTimeTask;
         
         /// <summary>
@@ -26,35 +26,25 @@ namespace CodeTao
         public BindableStat penetration = new BindableStat(1);
         protected List<Collider2D> penetratedCols = new List<Collider2D>();
 
-        public Projectile SetMovingDirection(Vector2 direction)
+        public Weapon weapon { get; set; }
+        void IWeaponDerivative.SetWeapon(Weapon newWeapon, Damager newDamager)
         {
-            moveController.MovementDirection.Value = direction;
-            return this;
+            weapon = newWeapon;
+            if (!damager) damager = newDamager;
+            area.InheritStat(weapon.area);
+            area.RegisterWithInitValue(value =>
+            {
+                this.LocalScale(new Vector3(value, value));
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            lifeTime.InheritStat(weapon.duration);
+            moveController.SPD.InheritStat(weapon.speed);
         }
-        
-        public Projectile SetWeapon(Weapon newWeapon)
+
+        public void InitSpawn(Vector3 globalPos)
         {
-            this.weapon = newWeapon;
-            damager = weapon.damager;
-            return this;
-        }
-        
-        public Projectile SetPenetration(BindableStat newPenetration)
-        {
-            penetration = newPenetration;
-            return this;
-        }
-        
-        public Projectile SetLifeTime(BindableStat newLifeTime)
-        {
-            lifeTime = newLifeTime;
-            return this;
-        }
-        
-        public Projectile SetSPD(BindableStat newSPD)
-        {
-            moveController.SPD = newSPD;
-            return this;
+            Vector3 localPos = globalPos - weapon.transform.position;
+            this.Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(localPos.normalized)));
+            moveController.MovementDirection.Value = localPos.normalized;
         }
 
         public override void PreInit()

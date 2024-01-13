@@ -1,36 +1,25 @@
 ﻿using System;
 using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
-    /// <summary>
-    /// 单位管理器基类，有单位对象池的单例，供获取单位。
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <typeparam name="V"></typeparam>
-    public abstract class UnitManager<T, V> : MonoSingleton<V> where V : MonoSingleton<V> where T : UnitController
+    public class UnitManager : MonoSingleton<UnitManager>
     {
-        protected UnitPool<T> pool;
-        public T prefab;
+        public Transform managerPrefab;
         
-        public override void OnSingletonInit()
+        public SerializableDictionary<Type, Transform> unitManagerDict = new SerializableDictionary<Type, Transform>();
+        
+        public Transform GetTransform<T>() where T : UnitController
         {
-            base.OnSingletonInit();
-            if (!prefab)
+            Type type = typeof(T);
+            if (!unitManagerDict.ContainsKey(type))
             {
-                prefab = this.GetComponentInDescendants<T>(true);
+                Transform manager = Instantiate(managerPrefab, transform);
+                manager.name = type.Name + "Manager";
+                unitManagerDict.Add(type, manager);
             }
-            pool = new UnitPool<T>(prefab, transform);
-        }
-        
-        public Action<T> onUnitGet;
-        
-        public virtual T Get()
-        {
-            T obj = pool.Get();
-            onUnitGet?.Invoke(obj);
-            obj.onDeinit += () => pool.Release(obj);
-            return obj;
+            return unitManagerDict[type];
         }
     }
 }

@@ -6,18 +6,18 @@ namespace CodeTao
 {
     /// <summary>
     /// 爆炸单位，会在生成后爆炸，对周围单位造成伤害，并击退。
+    /// 爆炸的damager的dmg和knockbackfactor由全局控制，damageelement和dealDamageAfter由weapon控制。
     /// </summary>
-    public class Explosion : UnitController
+    public class Explosion : UnitController, IWeaponDerivative
     {
         protected Animator ani;
         public Damager damager;
-        public BindableStat range = new BindableStat(2);
+        public BindableStat area = new BindableStat(2);
 
         public override void PreInit()
         {
             base.PreInit();
-            ani = this.GetComponentInDescendants<Animator>();
-            damager = GetComp<Damager>();
+            if (!ani) ani = this.GetComponentInDescendants<Animator>();
         }
         
         public override void Init()
@@ -30,7 +30,7 @@ namespace CodeTao
 
         void Explode()
         {
-            Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, range);
+            Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, area);
             foreach (Collider2D col in cols)
             {
                 Attack(col);
@@ -44,6 +44,16 @@ namespace CodeTao
             {
                 DamageManager.Instance.ExecuteDamage(damager, def);
             }
+        }
+
+        public Weapon weapon { get; set; }
+        public void SetWeapon(Weapon newWeapon, Damager newDamager)
+        {
+            weapon = newWeapon;
+            if (!damager) damager = newDamager;
+            damager = ExplosionGenerator.Instance.ModDamager(damager);
+            area.InheritStat(weapon.area);
+            damager.damageElementType = weapon.elementType;
         }
     }
 }

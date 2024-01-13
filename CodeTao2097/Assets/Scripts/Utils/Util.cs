@@ -26,6 +26,23 @@ namespace CodeTao
             return false;
         }
 
+        public static BindableStat InheritStat(this BindableStat stat, BindableStat otherStat)
+        {
+            // if negative, inherit the base value from otherStat
+            if (stat < 0)
+            {
+                stat.SetValueWithoutEvent(-stat * otherStat);
+                stat.ModGroups = otherStat.ModGroups;
+            }
+            // if positive, only inherit the modifier groups
+            else
+            {
+                stat.AddModifierGroups(otherStat.ModGroups);
+            }
+
+            return stat;
+        }
+
         /// <summary>
         /// 
         /// </summary>

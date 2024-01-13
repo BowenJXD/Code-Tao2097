@@ -39,6 +39,7 @@ namespace CodeTao
         public List<ModifierGroup> ModGroups
         {
             get => _modGroups;
+            set => _modGroups = value;
         }
 
         public BindableStat()
@@ -160,6 +161,21 @@ namespace CodeTao
             _modGroups.Clear();
             _modGroups.Add(_mainModGroup);
             mOnValueChanged = null;
+        }
+        
+        public void InheritStat(BindableStat otherStat)
+        {
+            // if negative, inherit the base value from otherStat
+            if (mValue < 0)
+            {
+                SetValueWithoutEvent(-this * otherStat);
+                ModGroups = otherStat.ModGroups;
+            }
+            // if positive, only inherit the modifier groups
+            else
+            {
+                AddModifierGroups(otherStat.ModGroups);
+            }
         }
         
         public static implicit operator float(BindableStat myObject)
