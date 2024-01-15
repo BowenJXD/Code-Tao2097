@@ -23,6 +23,8 @@ namespace CodeTao
     {
         [HideInInspector] public Damager damager;
         [HideInInspector] public Collider2D col2D;
+        private SpriteRenderer sprite;
+        ParticleSystem particle;
         
         public BindableStat attackInterval = new BindableStat(1f);
         public BindableStat lifeTime = new BindableStat(5f);
@@ -33,9 +35,12 @@ namespace CodeTao
 
         public LoopTask attackLoop;
 
-        private void Awake()
+        public override void PreInit()
         {
-            col2D = this.GetCollider();
+            base.PreInit();
+            if (!col2D) col2D = this.GetCollider();
+            if (!sprite) sprite = this.GetComponentInDescendants<SpriteRenderer>();
+            if (!particle) particle = this.GetComponentInDescendants<ParticleSystem>();
         }
 
         public Weapon weapon { get; set; }
@@ -46,7 +51,6 @@ namespace CodeTao
             if (!damager) damager = newDamager;
             attackInterval.InheritStat(weapon.cooldown);
             lifeTime.InheritStat(weapon.duration);
-            this.Parent(GroundEffectManager.Instance.transform);
             area.InheritStat(weapon.area);
             area.RegisterWithInitValue(value =>
             {
@@ -72,6 +76,8 @@ namespace CodeTao
                 attackLoop.SetTimeCondition(value);
             }).UnRegisterWhenGameObjectDestroyed(this);
             
+            InitParticle();
+
             switch (attackWhenEntering.Value)
             {
                 case EAttackTarget.None:
@@ -129,6 +135,16 @@ namespace CodeTao
             }
         }
         
+        void InitParticle()
+        {
+            int maxParticles = Mathf.RoundToInt(Mathf.Pow(area, 2) * Mathf.PI);
+            var main = particle.main;
+            main.maxParticles = maxParticles;
+            var shape = particle.shape;
+            shape.radius = area / 2;
+            particle.Play();
+        }
+        
         public virtual void AttackAll()
         {
             List<Collider2D> cols = new List<Collider2D>();
@@ -150,6 +166,12 @@ namespace CodeTao
             {
                 DamageManager.Instance.ExecuteDamage(damager, defencer, weapon? weapon.attacker : null);
             }
+        }
+
+        private void OnDisable()
+        {
+            particle.Stop();
+            particle.Clear();
         }
     }
 }

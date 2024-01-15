@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using QFramework;
+using Sirenix.OdinInspector;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 namespace CodeTao
@@ -18,6 +20,15 @@ namespace CodeTao
 
         private void Start()
         {
+            GetLists();
+        }
+
+        void GetLists()
+        {
+            items.Clear();
+            weapons.Clear();
+            artefacts.Clear();
+            blessings.Clear();
             items = FindObjectsOfType<Item>(true).ToList();
             foreach (var item in items)
             {
@@ -59,6 +70,20 @@ namespace CodeTao
         {
             if (item.LVL.Value == item.MaxLVL) return 0;
             return GetItemWeight(item);
+        }
+        
+        [Button("Load All Configs")]
+        public void LoadAllConfigs()
+        {
+            ConfigManager.LoadAllConfigs();
+            GetLists();
+            ConfigData weaponAttributeConfig = ConfigManager.GetConfigData(PathDefines.WeaponAttribute);
+            ConfigData weaponUpgradeConfig = ConfigManager.GetConfigData(PathDefines.WeaponUpgrade);
+            foreach (var weapon in weapons)
+            {
+                weapon.LoadAttributeData(weaponAttributeConfig);
+                weapon.LoadUpgradeData(weaponUpgradeConfig);
+            }
         }
     }
 }

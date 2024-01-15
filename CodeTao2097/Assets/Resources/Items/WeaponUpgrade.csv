@@ -1,0 +1,7 @@
+Id,Levels,Attribute,Exclusive,Value,ModType
+Id,??,??,???,???,????
+SDCB,13579,Duration,TRUE,2,Basic
+SDCB,,Damage,TRUE,1,Basic
+TWLKH,28,Amount,TRUE,1,Basic
+TWLKH,147,Duration,TRUE,2,Basic
+TWLKH,,Cooldown,TRUE,-0.2,Multiplicative

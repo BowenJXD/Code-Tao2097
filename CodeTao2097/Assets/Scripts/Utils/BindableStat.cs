@@ -56,6 +56,12 @@ namespace CodeTao
             _modGroups.Add(_mainModGroup);
         }
         
+        public BindableStat SetInitValue(float value)
+        {
+            _initValue = value;
+            return this;
+        }
+        
         public BindableStat SetMinValue(float value)
         {
             _minValue = value;
@@ -157,6 +163,7 @@ namespace CodeTao
         
         public void Reset()
         {
+            SetValueWithoutEvent(_initValue);
             _mainModGroup.Clear(false);
             _modGroups.Clear();
             _modGroups.Add(_mainModGroup);

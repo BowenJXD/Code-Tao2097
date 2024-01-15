@@ -142,7 +142,7 @@ namespace CodeTao
         public static string GetCSVHeader()
         {
             return
-                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,Knockback";
+                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack";
         }
         
         public string ToCSV()

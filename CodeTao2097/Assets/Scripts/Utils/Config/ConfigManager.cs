@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
 
@@ -7,46 +8,48 @@ namespace CodeTao
     /// <summary>
     /// Manages all the config data in game
     /// </summary>
-    public class ConfigManager : MonoSingleton<ConfigManager>
+    public static class ConfigManager 
     {
         /// <summary>
         /// config datas that need to be loaded
         /// </summary>
-        protected Dictionary<string, ConfigData> loadList;
+        public static List<string> loadList = new List<string>();
 
         /// <summary>
         /// config datas that have been loaded
         /// </summary>
-        protected Dictionary<string, ConfigData> configs;
-        
-        void Start()
-        {
-            loadList = new Dictionary<string, ConfigData>();
-            configs = new Dictionary<string, ConfigData>();
-        }
+        public static Dictionary<string, ConfigData> configs = new Dictionary<string, ConfigData>();
 
-        /// <summary>
-        /// Register the config data needed to be loaded
-        /// </summary>
-        /// <param name="file"></param>
-        /// <param name="config"></param>
-        public void Register(string file, ConfigData config)
+        public static void LoadLoadList()
         {
-            loadList[file] = config;
-        }
-
-        public void LoadAllConfigs()
-        {
-            foreach (var item in loadList)
-            {
-                TextAsset textAsset = item.Value.LoadFile();
-                item.Value.Load(textAsset.text);
-                configs.Add(item.Value.fileName, item.Value);
-            }
             loadList.Clear();
+            TextAsset textAsset = Resources.Load<TextAsset>(PathDefines.ConfigLoadList);
+            string[] files = textAsset.text.Split('\n');
+            foreach (string file in files)
+            {
+                loadList.Add(file.Trim());
+            }
+        }
+        
+        public static void LoadAllConfigs()
+        {
+            configs.Clear();
+            LoadLoadList();
+            foreach (string file in loadList)
+            {
+                ConfigData config = new ConfigData(file);
+                TextAsset textAsset = config.LoadFile();
+                if (textAsset == null)
+                {
+                    Debug.LogError($"Config file {file} not found!");
+                    continue;
+                }
+                config.Load(textAsset.text);
+                configs.Add(file, config);
+            }
         }
 
-        public ConfigData GetConfigData(string fileName)
+        public static ConfigData GetConfigData(string fileName)
         {
             if (configs.ContainsKey(fileName))
             {

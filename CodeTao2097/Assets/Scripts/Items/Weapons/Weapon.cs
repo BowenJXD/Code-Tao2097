@@ -25,11 +25,9 @@ namespace CodeTao
         public BindableStat speed = new BindableStat(4);
         public BindableStat cooldown = new BindableStat(2).SetMinValue(0.1f);
         public BindableStat area = new BindableStat(1).SetMinValue(0.1f);
+        
         public BindableStat knockBack = new BindableStat(0);
         public BindableStat effectHitRate = new BindableStat(50).SetMaxValue(100f);
-
-        public BindableProperty<int> shotsToReload = new BindableProperty<int>(0);
-        public BindableStat reloadTime = new BindableStat(0);
         public BindableStat attackRange = new BindableStat(10);
         
         [HideInInspector] public Attacker attacker;
@@ -59,17 +57,8 @@ namespace CodeTao
             if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
             damagers.ForEach(damager => attackingTypes.AddRange(damager.damagingTags));
             
-            reloadTime.AddModifierGroups(cooldown.ModGroups);
-            
             // setup fire loop
-            fireLoop = new LoopTask(this, cooldown, Fire, StartReload);
-            if (shotsToReload.Value > 0)
-            {
-                shotsToReload.RegisterWithInitValue(count =>
-                {
-                    fireLoop.SetCountCondition(count);
-                }).UnRegisterWhenGameObjectDestroyed(this);
-            }
+            fireLoop = new LoopTask(this, cooldown, Fire);
             fireLoop.Start();
             cooldown.RegisterWithInitValue(interval =>
             {
@@ -91,88 +80,6 @@ namespace CodeTao
                 }
             }
             actionSequence.Start(this);
-        }
-
-        public virtual void StartReload()
-        {
-            ActionKit.Delay(reloadTime.Value, () =>
-            {
-                Reload();
-            }).Start(this);
-        }
-        
-        public virtual void Reload()
-        {
-            fireLoop.Start();
-        }
-
-        public override void Upgrade(int lvlIncrement = 1)
-        {
-            base.Upgrade(lvlIncrement);
-            int newLevel = LVL.Value;
-
-            foreach (var mod in upgradeMods)
-            {
-                if (mod.CheckCondition(newLevel))
-                {
-                    GetWAtStat(mod.attribute).AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
-                    if (mod.exclusive) break;
-                }
-            }
-        }
-        
-        public virtual BindableStat GetWAtStat(EWAt at)
-        {
-            BindableStat statToMod = null;
-            switch (at)
-            {
-                case EWAt.Damage:
-                    statToMod = damage;
-                    break;
-                case EWAt.Cooldown:
-                    statToMod = cooldown;
-                    break;
-                case EWAt.Area:
-                    statToMod = area;
-                    break;
-                case EWAt.Amount:
-                    statToMod = amount;
-                    break;
-                case EWAt.Duration:
-                    statToMod = duration;
-                    break;
-                case EWAt.Speed:
-                    statToMod = speed;
-                    break;
-                case EWAt.Range:
-                    statToMod = attackRange;
-                    break;
-                case EWAt.Knockback:
-                    statToMod = knockBack;
-                    break;
-                case EWAt.EffectHitRate:
-                    statToMod = effectHitRate;
-                    break;
-            }
-
-            return statToMod;
-        }
-        
-        public override string GetUpgradeDescription()
-        {
-            List<string> result = new List<string>();
-            int newLevel = LVL.Value + 1;
-            
-            foreach (var mod in upgradeMods)
-            {
-                if (mod.CheckCondition(newLevel))
-                {
-                    result.Add(mod.GetDescription());
-                    if (mod.exclusive) break;
-                }
-            }
-            
-            return base.GetUpgradeDescription() + result.StringJoin("\n");
         }
 
         /// <summary>
@@ -214,6 +121,133 @@ namespace CodeTao
             }
 
             return targetDistances.Values.ToList();
+        }
+        
+        public override void Upgrade(int lvlIncrement = 1)
+        {
+            base.Upgrade(lvlIncrement);
+            int newLevel = LVL.Value;
+
+            foreach (var mod in upgradeMods)
+            {
+                if (mod.CheckCondition(newLevel))
+                {
+                    GetWAtStat(mod.attribute).AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
+                    if (mod.exclusive) break;
+                }
+            }
+        }
+        
+        public virtual BindableStat GetWAtStat(EWAt at)
+        {
+            BindableStat statToMod = null;
+            switch (at)
+            {
+                case EWAt.Damage:
+                    statToMod = damage;
+                    break;
+                case EWAt.Cooldown:
+                    statToMod = cooldown;
+                    break;
+                case EWAt.Area:
+                    statToMod = area;
+                    break;
+                case EWAt.Amount:
+                    statToMod = amount;
+                    break;
+                case EWAt.Duration:
+                    statToMod = duration;
+                    break;
+                case EWAt.Speed:
+                    statToMod = speed;
+                    break;
+                case EWAt.Range:
+                    statToMod = attackRange;
+                    break;
+                case EWAt.KnockBack:
+                    statToMod = knockBack;
+                    break;
+                case EWAt.EffectHitRate:
+                    statToMod = effectHitRate;
+                    break;
+            }
+
+            return statToMod;
+        }
+        
+        public override string GetUpgradeDescription()
+        {
+            List<string> result = new List<string>();
+            int newLevel = LVL.Value + 1;
+            
+            foreach (var mod in upgradeMods)
+            {
+                if (mod.CheckCondition(newLevel))
+                {
+                    result.Add(mod.GetDescription());
+                    if (mod.exclusive) break;
+                }
+            }
+            
+            return base.GetUpgradeDescription() + result.StringJoin("\n");
+        }
+
+        public void LoadAttributeData(ConfigData data)
+        {
+            Dictionary<string, string> dataDict = data.GetDataById(name);
+            if (dataDict == null)
+            {
+                Debug.LogError($"No data found for {name}");
+                return;
+            }
+            
+            foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
+            {
+                if (!dataDict.TryGetValue(at.ToString(), out string value)) continue;
+                BindableStat stat = GetWAtStat(at);
+                
+                float initValue;
+                try{
+                    initValue = float.Parse(value);
+                } catch (Exception e)
+                {
+                    Debug.LogError($"Error parsing {value} to float for {name} {at}");
+                    continue;
+                }
+                stat.SetValueWithoutEvent(initValue);
+                stat.SetInitValue(initValue);
+            }
+        }
+
+        public void LoadUpgradeData(ConfigData data)
+        {
+            List<Dictionary<string, string>> dataDicts = data.GetDatasById(name);
+            if (dataDicts == null)
+            {
+                Debug.LogError($"No data found for {name}");
+                return;
+            }
+            
+            upgradeMods.Clear();
+            foreach (var dataDict in dataDicts)
+            {
+                WeaponUpgradeMod mod = new WeaponUpgradeMod();
+                try
+                {
+                    mod.levels = dataDict["Levels"];
+                    string at = dataDict["Attribute"];
+                    EWAt attribute = (EWAt)Enum.Parse(typeof(EWAt), at);
+                    mod.attribute = attribute;
+                    mod.value = float.Parse(dataDict["Value"]);
+                    mod.modType = (EModifierType)Enum.Parse(typeof(EModifierType), dataDict["ModType"]);
+                    mod.exclusive = bool.Parse(dataDict["Exclusive"]);
+                    upgradeMods.Add(mod);
+                } catch (Exception e)
+                {
+                    Debug.LogError($"Error parsing {dataDict["Attribute"]} to EWAt for {name}");
+                    continue;
+                }
+            }
         }
     }
 }

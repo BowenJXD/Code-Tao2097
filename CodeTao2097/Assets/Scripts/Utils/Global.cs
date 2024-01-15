@@ -54,6 +54,8 @@ namespace CodeTao
             {
                 unitController.OnSceneLoaded();
             }
+            
+            ConfigManager.LoadAllConfigs();
         }
 
         private void Start()

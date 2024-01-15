@@ -14,7 +14,7 @@
         Speed,
         Range,
         Penetration,
-        Knockback,
+        KnockBack,
         EffectHitRate,
     }
 
