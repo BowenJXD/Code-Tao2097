@@ -12,6 +12,8 @@ namespace CodeTao
     {
         protected UnitPool<T> pool;
         public T prefab;
+        public float spawnCD = 0;
+        private bool isInCD;
         
         public override void OnSingletonInit()
         {
@@ -27,9 +29,18 @@ namespace CodeTao
         
         public virtual T Get()
         {
+            if (isInCD) return null;
+            
             T obj = pool.Get();
             onUnitGet?.Invoke(obj);
             obj.onDeinit += () => pool.Release(obj);
+
+            if (spawnCD > 0)
+            {
+                isInCD = true;
+                ActionKit.Delay(spawnCD, () => isInCD = false).Start(this);
+            }
+            
             return obj;
         }
     }

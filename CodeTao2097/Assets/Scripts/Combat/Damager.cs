@@ -61,6 +61,10 @@ namespace CodeTao
             damage.SetBase(DMG.Value);
             damage.SetElement(damageElementType);
             damage.MultiplyKnockBack(knockBackFactor);
+            foreach (var func in OnDealDamageFuncs)
+            {
+                damage = func.Invoke(damage);
+            }
             return damage;
         }
         
@@ -69,11 +73,6 @@ namespace CodeTao
         
         public void DealDamage(Damage damage)
         {
-            foreach (var func in OnDealDamageFuncs)
-            {
-                damage = func.Invoke(damage);
-            }
-
             if (damage != null)
             {
                 damage.Target.TakeDamage(damage);

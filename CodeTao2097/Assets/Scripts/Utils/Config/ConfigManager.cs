@@ -31,20 +31,23 @@ namespace CodeTao
             }
         }
         
-        public static void LoadAllConfigs()
+        public static void LoadAllConfigs(bool initContent = true)
         {
             configs.Clear();
             LoadLoadList();
             foreach (string file in loadList)
             {
                 ConfigData config = new ConfigData(file);
-                TextAsset textAsset = config.LoadFile();
-                if (textAsset == null)
-                {
-                    Debug.LogError($"Config file {file} not found!");
-                    continue;
+                if (initContent) {
+                    TextAsset textAsset = config.LoadFile();
+                    if (textAsset == null)
+                    {
+                        Debug.LogError($"Config file {file} not found!");
+                        continue;
+                    }
+
+                    config.Load(textAsset.text);
                 }
-                config.Load(textAsset.text);
                 configs.Add(file, config);
             }
         }
@@ -59,6 +62,24 @@ namespace CodeTao
             {
                 Debug.LogError($"Config file {fileName} not found!");
                 return null;
+            }
+        }
+
+        public static void SaveAllConfigs()
+        {
+            foreach (var config in configs)
+            {
+                string saveString = config.Value.Save();
+                string path = $"{Application.dataPath}/Resources/{config.Value.fileName}.csv";
+                try {
+                    if (!System.IO.File.Exists(path))
+                    {
+                        System.IO.File.Create(path);
+                    }
+                    System.IO.File.WriteAllText(path, saveString);
+                } catch (Exception e) {
+                    Debug.LogError($"Error saving config {config.Key}: {e}");
+                }
             }
         }
     }

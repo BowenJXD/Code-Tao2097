@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace CodeTao
@@ -10,6 +12,7 @@ namespace CodeTao
     /// </summary>
     public class CheatFunctionLibrary : MonoSingleton<CheatFunctionLibrary>
     {
+        public List<UnityEvent> activateEvents;
         PlayerInput playerInput;
         ExpController expController;
         Defencer defencer;
@@ -31,20 +34,31 @@ namespace CodeTao
             defencer = Player.Instance.Link.GetComp<Defencer>();
             attacker = Player.Instance.Link.GetComp<Attacker>();
             enemyGenerator = FindObjectOfType<EnemyGenerator>();
+            
+            foreach (UnityEvent activateEvent in activateEvents)
+            {
+                activateEvent.Invoke();
+            }
         }
 
-        void F1()
+        public void F1()
         {
-            expController.EXPRate.Value = 0f;
-            expController.LevelUp();
+            if (expController.EXPRate.Value > 0f)
+            {
+                expController.EXPRate.Value = 0f;
+            }
+            else
+            {
+                expController.LevelUp();
+            }
         }
 
-        void F2()
+        public void F2()
         {
             defencer.IsInCD = true;
         }
 
-        void F3()
+        public void F3()
         {
             Enemy[] enemies = FindObjectsOfType<Enemy>();
             foreach (Enemy enemy in enemies)
@@ -53,7 +67,7 @@ namespace CodeTao
             }
         }
 
-        void F4()
+        public void F4()
         {
             if (f4Toggle)
             {

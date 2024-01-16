@@ -53,7 +53,7 @@ namespace CodeTao
             if (!damager) damager = newDamager;
             damager = ExplosionGenerator.Instance.ModDamager(damager);
             area.InheritStat(weapon.area);
-            damager.damageElementType = weapon.elementType;
+            damager.damageElementType = weapon.ElementType;
         }
     }
 }

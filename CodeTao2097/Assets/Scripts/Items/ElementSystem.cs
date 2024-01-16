@@ -25,9 +25,9 @@ namespace CodeTao
         void OnInventoryAddItem(Content<Item> newItem)
         {
             Weapon weapon = newItem as Weapon;
-            if (weapon && !elements.Contains(weapon.elementType))
+            if (weapon && !elements.Contains(weapon.ElementType))
             {
-                elements.Add(weapon.elementType);
+                elements.Add(weapon.ElementType);
             }
         }
 

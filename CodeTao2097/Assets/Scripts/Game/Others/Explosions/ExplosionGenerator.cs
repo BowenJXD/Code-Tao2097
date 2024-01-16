@@ -15,6 +15,16 @@ namespace CodeTao
             defaultDamager = this.GetComponentInDescendants<Damager>();
         }
 
+        public override Explosion Get()
+        {
+            Explosion obj = base.Get();
+            if (obj)
+            {
+                obj.damager = ModDamager(obj.damager);
+            }
+            return obj;
+        }
+
         public Damager ModDamager(Damager damager)
         {
             if (damager == null) damager = defaultDamager;

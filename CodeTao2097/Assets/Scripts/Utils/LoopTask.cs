@@ -90,7 +90,6 @@ namespace CodeTao
 
         public void Start()
         {
-            _condition = null;
             _loopCount = 0;
             _loopTime = 0;
             Resume();
@@ -115,8 +114,11 @@ namespace CodeTao
         public void Finish()
         {
             _endTask?.Invoke();
+            _endTask = null;
             _loopTask = null;
+            _condition = null;
             _loopCount = 0;
+            _loopTime = 0;
             Pause();
         }
 

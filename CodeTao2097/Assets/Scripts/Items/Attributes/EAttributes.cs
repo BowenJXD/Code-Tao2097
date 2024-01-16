@@ -13,8 +13,8 @@
         Duration,
         Speed,
         Range,
-        Penetration,
-        KnockBack,
+        
+        KnockBack = 9,
         EffectHitRate,
     }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using QFramework;
 using Sirenix.OdinInspector;
@@ -13,7 +14,7 @@ namespace CodeTao
     /// </summary>
     public class Weapon : Item
     {
-        public ElementType elementType
+        public ElementType ElementType
         {
             get => relatedElements.FirstOrDefault();
             set => relatedElements = new List<ElementType>() {value};
@@ -114,7 +115,7 @@ namespace CodeTao
                     target = unitController.GetComp<Defencer>();
                     if (Util.IsTagIncluded(unitController.tag, attackingTypes) && target)
                     {
-                        float targetDistance = Vector2.Distance(transform.position, col.transform.position);
+                        float targetDistance = Vector2.SqrMagnitude(col.transform.position - transform.position);
                         targetDistances.Add(targetDistance, target);
                     }
                 }
@@ -209,13 +210,32 @@ namespace CodeTao
                 float initValue;
                 try{
                     initValue = float.Parse(value);
+                    stat.SetValueWithoutEvent(initValue);
+                    stat.SetInitValue(initValue);
                 } catch (Exception e)
                 {
                     Debug.LogError($"Error parsing {value} to float for {name} {at}");
-                    continue;
                 }
-                stat.SetValueWithoutEvent(initValue);
-                stat.SetInitValue(initValue);
+            }
+        }
+        
+        public void SaveAttributeData(ConfigData data)
+        {
+            Dictionary<string, string> dataDict = data.GetDataById(name);
+            if (dataDict == null)
+            {
+                dataDict = new Dictionary<string, string>();
+                data.SetDataById(name, dataDict);
+            }
+            
+            dataDict["Id"] = name;
+            foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
+            {
+                if (at == EWAt.Null) continue;
+                BindableStat stat = GetWAtStat(at);
+                if (stat != null){
+                    dataDict[at.ToString()] = stat.Value.ToString(CultureInfo.CurrentCulture);
+                }
             }
         }
 
@@ -247,6 +267,28 @@ namespace CodeTao
                     Debug.LogError($"Error parsing {dataDict["Attribute"]} to EWAt for {name}");
                     continue;
                 }
+            }
+        }
+        
+        public void SaveUpgradeData(ConfigData data)
+        {
+            List<Dictionary<string, string>> dataDicts = data.GetDatasById(name);
+            if (dataDicts == null)
+            {
+                dataDicts = new List<Dictionary<string, string>>();
+                data.SetDatasById(name, dataDicts);
+            }
+            
+            foreach (var upgradeMod in upgradeMods)
+            {
+                Dictionary<string, string> dataDict = new Dictionary<string, string>();
+                dataDict["Id"] = name;
+                dataDict["Levels"] = upgradeMod.levels;
+                dataDict["Attribute"] = upgradeMod.attribute.ToString();
+                dataDict["Value"] = upgradeMod.value.ToString(CultureInfo.CurrentCulture);
+                dataDict["ModType"] = upgradeMod.modType.ToString();
+                dataDict["Exclusive"] = upgradeMod.exclusive.ToString();
+                dataDicts.Add(dataDict);
             }
         }
     }

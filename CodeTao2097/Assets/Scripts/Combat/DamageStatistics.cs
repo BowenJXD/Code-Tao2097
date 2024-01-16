@@ -176,7 +176,7 @@ namespace CodeTao
             Item damagerItem = damage.Median.GetComponentInAncestors<Item>();
             int damagerLevel = damagerItem ? damagerItem.LVL : 0;
             Damager damager = damage.Median;
-            float damageValue = damage.GetDamageValue();
+            float damageValue = damage.Final;
             
             damageLogs.Add(new DamageLog(damage, time, playerLevel, damagerLevel));
 
@@ -242,7 +242,11 @@ namespace CodeTao
         
         void WriteToCSV(string path, string content)
         {
-            System.IO.File.WriteAllText(path, content);
+            try {
+                System.IO.File.WriteAllText(path, content);
+            } catch (Exception e) {
+                Debug.LogError(e);
+            }
         }
     }
 }

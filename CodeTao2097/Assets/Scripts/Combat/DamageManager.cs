@@ -50,6 +50,8 @@ namespace CodeTao
             damager.ProcessDamage(damage);
             defencer.ProcessDamage(damage);
             
+            damage.CalculateDamageValue();
+            
             damager.DealDamage(damage);
             attacker?.DealDamageAfter?.Invoke(damage);
             if (damage.Dealt)
@@ -77,7 +79,7 @@ namespace CodeTao
                 {
                     damagerStats.Add(damager.name, 0);
                 }
-                damagerStats[damager.name] += damage.GetDamageValue();
+                damagerStats[damager.name] += damage.CalculateDamageValue();
             }
             
             string log = "";

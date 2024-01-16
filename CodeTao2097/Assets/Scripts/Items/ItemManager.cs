@@ -71,7 +71,7 @@ namespace CodeTao
             if (item.LVL.Value == item.MaxLVL) return 0;
             return GetItemWeight(item);
         }
-        
+
         [Button("Load All Configs")]
         public void LoadAllConfigs()
         {
@@ -84,6 +84,26 @@ namespace CodeTao
                 weapon.LoadAttributeData(weaponAttributeConfig);
                 weapon.LoadUpgradeData(weaponUpgradeConfig);
             }
+        }
+        
+        
+        [Button("Save All Configs")]
+        public void SaveAllConfigs()
+        {
+            if (ConfigManager.configs.Count == 0)
+            {
+                ConfigManager.LoadAllConfigs(false);
+                GetLists();
+            }
+            
+            ConfigData weaponAttributeConfig = ConfigManager.GetConfigData(PathDefines.WeaponAttribute);
+            ConfigData weaponUpgradeConfig = ConfigManager.GetConfigData(PathDefines.WeaponUpgrade);
+            foreach (var weapon in weapons)
+            {
+                weapon.SaveAttributeData(weaponAttributeConfig);
+                weapon.SaveUpgradeData(weaponUpgradeConfig);
+            }
+            ConfigManager.SaveAllConfigs();
         }
     }
 }

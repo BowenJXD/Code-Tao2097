@@ -7,7 +7,7 @@ namespace CodeTao
     {
         public virtual List<Vector3> GetGlobalPositions()
         {
-            return new List<Vector3>{Vector3.zero};
+            return new List<Vector3>{transform.position};
         }
     }
 }

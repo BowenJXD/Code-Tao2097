@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using CodeTao;
 using JetBrains.Annotations;
@@ -33,6 +34,7 @@ namespace CodeTao
         public Defencer Target { get; private set; }
         public ElementType DamageElement { get; private set; }
         public float Base { get; private set; }
+        public float Final { get; private set; }
         public bool Dealt { get; private set; }
         
         public Dictionary<DamageSection, Dictionary<string, float>> DamageSections = DamageSection.GetValues(typeof(DamageSection))
@@ -103,6 +105,16 @@ namespace CodeTao
 
             return false;
         }
+
+        public float GetDamageSection(DamageSection section)
+        {
+            if (DamageSections.ContainsKey(section))
+            {
+                return DamageSections[section].Values.Sum();
+            }
+
+            return 1;
+        }
             
         public bool RemoveDamageSection(DamageSection section, string name)
         {
@@ -120,7 +132,7 @@ namespace CodeTao
             return this;
         }
         
-        public float GetDamageValue()
+        public void CalculateDamageValue()
         {
             float result = Base;
             foreach (var damageSection in DamageSections)
@@ -130,13 +142,12 @@ namespace CodeTao
                     result *= damageSection.Value.Values.Sum();
                 }
             }
-
-            return result;
+            Final = result;
         }
 
         public override string ToString()
         {
-            return GetDamageValue().ToString();
+            return Final.ToString(CultureInfo.CurrentCulture);
         }
 
         public static string GetCSVHeader()

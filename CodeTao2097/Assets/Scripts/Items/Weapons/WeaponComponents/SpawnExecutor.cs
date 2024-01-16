@@ -21,7 +21,7 @@ namespace CodeTao
 
             if (damager)
             {
-                if (damager.damageElementType == ElementType.None) { damager.damageElementType = weapon.elementType; }
+                if (damager.damageElementType == ElementType.None) { damager.damageElementType = weapon.ElementType; }
 
                 damager.DMG.InheritStat(weapon.damage);
                 damager.knockBackFactor.InheritStat(weapon.knockBack);
@@ -55,8 +55,8 @@ namespace CodeTao
             {
                 pool.Release(unit);
             };
-            unit.Position(globalPos);
             unit.Parent(rootToWeapon ? transform : UnitManager.Instance.GetTransform<UnitController>());
+            unit.Position(globalPos);
 
             if (unit is IWeaponDerivative weaponDerivative){
                 weaponDerivative.SetWeapon(weapon, damager);

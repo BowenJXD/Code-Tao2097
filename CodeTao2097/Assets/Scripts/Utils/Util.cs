@@ -150,6 +150,16 @@ namespace CodeTao
             return rand.Next(min, max);
         }
         
+        /// <summary>
+        /// Crit rate is between 0-100
+        /// </summary>
+        /// <param name="critRate"></param>
+        /// <returns></returns>
+        public static bool RandCrit(float critRate)
+        {
+            return rand.Next(100) < critRate;
+        }
+        
         public static int GetRandomWeightedIndex(List<int> list)
         {
             int totalWeight = list.Sum();

@@ -13,8 +13,11 @@ namespace CodeTao
     {
         [HideInInspector] private Defencer _target;
         [HideInInspector] public Damager damager;
+        private BindableStat CritRate;
+        private BindableStat CritDMG;
         public EAAt baseAttribute;
         public EModifierType modType;
+        public bool canCrit;
 
         public override void Init()
         {
@@ -22,21 +25,35 @@ namespace CodeTao
             LVL.Value = 1;
             MaxLVL.Value = 5;
 
-            if (!damager)
+            if (!damager) { damager = this.GetComponentInDescendants<Damager>(); }
+
+            if (damager)
             {
-                damager = this.GetComponentInDescendants<Damager>();
-                if (baseAttribute != EAAt.Null)
+                CombatUnit combatUnit = Container.Unit as CombatUnit;
+                if (combatUnit && baseAttribute != EAAt.Null)
                 {
-                    CombatUnit combatUnit = Container.GetComponentInAncestors<CombatUnit>();
                     combatUnit.GetAAtMod(baseAttribute).RegisterWithInitValue(value =>
                     {
-                        damager.DMG.AddModifier(value, modType, "BuffBaseAttribute", RepetitionBehavior.Overwrite);
+                        damager.DMG.AddModifier(value, modType, "BuffBaseAttribute", RepetitionBehavior.Overwrite, true);
                     }).UnRegisterWhenGameObjectDestroyed(this);
+                }
+
+                if (combatUnit && canCrit)
+                {
+                    CritRate = combatUnit.GetAAtMod(EAAt.CritRate);
+                    CritDMG = combatUnit.GetAAtMod(EAAt.CritDamage);
+                    damager.OnDealDamageFuncs.Add(damage =>
+                    {
+                        if (RandomUtil.RandCrit(CritRate.Value)){
+                            damage.DamageSections[DamageSection.CRIT]["BuffCrit"] = CritDMG;
+                        }
+                        return damage;
+                    });
                 }
                 
                 LVL.RegisterWithInitValue(value =>
                 {
-                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "BuffLevel", RepetitionBehavior.Overwrite);
+                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "BuffLevel", RepetitionBehavior.Overwrite, true);
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
 

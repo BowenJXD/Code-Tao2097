@@ -20,7 +20,7 @@ namespace CodeTao
             {
                 attacker.ATK.RegisterWithInitValue(value =>
                 {
-                    damager.DMG.AddModifier(value - 1, EModifierType.Multiplicative, "ATK", RepetitionBehavior.Overwrite);
+                    damager.DMG.AddModifier(value, EModifierType.Multiplicative, "ATK", RepetitionBehavior.Overwrite, true);
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
         }

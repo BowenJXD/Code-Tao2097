@@ -66,7 +66,6 @@ namespace CodeTao
         /// </summary>
         void Remove()
         {
-            buffLoop = null;
             RemoveFromContainer(Container);
         }
         

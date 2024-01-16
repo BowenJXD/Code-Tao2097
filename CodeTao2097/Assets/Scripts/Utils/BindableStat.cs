@@ -74,9 +74,13 @@ namespace CodeTao
             return this;
         }
 
-        public bool AddModifier(float value, EModifierType modifierType, string name = "", 
-            RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
+        public bool AddModifier(float value, EModifierType modifierType, string name = "",
+            RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return, bool times = false)
         {
+            if (times && modifierType is EModifierType.MultiAdd or EModifierType.Multiplicative)
+            {
+                value -= 1;
+            }
             bool result = _mainModGroup.AddModifier(value, modifierType, name, repetitionBehavior);
             if (result)
             {
@@ -163,7 +167,6 @@ namespace CodeTao
         
         public void Reset()
         {
-            SetValueWithoutEvent(_initValue);
             _mainModGroup.Clear(false);
             _modGroups.Clear();
             _modGroups.Add(_mainModGroup);

@@ -45,7 +45,7 @@ namespace CodeTao
             string[] titleArr = dataArr[0].Trim().Split(','); // retrieve the first row being the inner keys
             
             // start reading the content from the third row
-            for (int i = 2; i < dataArr.Length; i++)
+            for (int i = 1; i < dataArr.Length; i++)
             {
                 string[] contentArr = dataArr[i].Trim().Split(',');
                 if (contentArr.Length != titleArr.Length)
@@ -67,6 +67,32 @@ namespace CodeTao
                 datas[id].Add(data);
             }
         }
+
+        public string Save()
+        {
+            // inverse of load, save the data in csv form
+            // first row being the titles
+            string result = "";
+            foreach (var pair in datas.First().Value.First())
+            {
+                result += $"{pair.Key},";
+            }
+            result = result.TrimEnd(',') + "\n";
+            foreach (var data in datas)
+            {
+                foreach (var row in data.Value)
+                {
+                    string rowStr = "";
+                    foreach (var pair in row)
+                    {
+                        rowStr += $"{pair.Value},";
+                    }
+                    result += $"{rowStr.TrimEnd(',')}\n";
+                }
+            }
+
+            return result;
+        }
         
         public Dictionary<string, string> GetDataById(string id)
         {
@@ -76,8 +102,21 @@ namespace CodeTao
             }
             else
             {
-                Debug.LogError($"Data {fileName} does not contain id {id}");
                 return null;
+            }
+        }
+        
+        public void SetDataById(string id, Dictionary<string, string> data)
+        {
+            if (datas.ContainsKey(id))
+            {
+                datas[id].Clear();
+                datas[id].Add(data);
+            }
+            else
+            {
+                datas.Add(id, new List<Dictionary<string, string>>());
+                datas[id].Add(data);
             }
         }
 
@@ -89,8 +128,20 @@ namespace CodeTao
             }
             else
             {
-                Debug.LogError($"Data {fileName} does not contain id {id}");
                 return null;
+            }
+        }
+        
+        public void SetDatasById(string id, List<Dictionary<string, string>> datas)
+        {
+            if (this.datas.ContainsKey(id))
+            {
+                this.datas[id].Clear();
+                this.datas[id].AddRange(datas);
+            }
+            else
+            {
+                this.datas.Add(id, datas);
             }
         }
     }

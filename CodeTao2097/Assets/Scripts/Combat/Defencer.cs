@@ -119,6 +119,10 @@ namespace CodeTao
             damage.SetDamageSection(DamageSection.TargetDEF, "", 1 - def / (Global.Instance.DefenceFactor + def));
             damage.SetDamageSection(DamageSection.DamageDecrement, "", 1 - ElementResistances[damage.DamageElement], RepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
+            foreach (var func in OnTakeDamageFuncs)
+            {
+                damage = func.Invoke(damage);
+            }
             return damage;
         }
         
@@ -128,14 +132,9 @@ namespace CodeTao
         
         public void TakeDamage(Damage damage)
         {
-            foreach (var func in OnTakeDamageFuncs)
-            {
-                damage = func.Invoke(damage);
-            }
-
             if (damage != null)
             {
-                float damageValue = damage.GetDamageValue();
+                float damageValue = damage.Final; 
                 if (damageValue > 0)
                 {
                     AlterHP(-damageValue);

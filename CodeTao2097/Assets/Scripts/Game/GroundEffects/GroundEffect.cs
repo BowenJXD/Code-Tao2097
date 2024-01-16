@@ -76,7 +76,7 @@ namespace CodeTao
                 attackLoop.SetTimeCondition(value);
             }).UnRegisterWhenGameObjectDestroyed(this);
             
-            InitParticle();
+            if (particle) InitParticle();
 
             switch (attackWhenEntering.Value)
             {
@@ -170,8 +170,10 @@ namespace CodeTao
 
         private void OnDisable()
         {
-            particle.Stop();
-            particle.Clear();
+            if (particle){
+                particle.Stop();
+                particle.Clear();
+            }
         }
     }
 }
