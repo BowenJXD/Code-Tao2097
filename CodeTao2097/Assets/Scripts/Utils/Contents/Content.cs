@@ -95,7 +95,7 @@ namespace CodeTao
 
         public virtual void Upgrade(int lvlIncrement = 1)
         {
-            LVL.Value += lvlIncrement;
+            SetLVL(LVL.Value + lvlIncrement);
         }
         
         #endregion

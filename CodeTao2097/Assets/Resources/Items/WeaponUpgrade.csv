@@ -1,8 +1,10 @@
 Id,Levels,Attribute,Value,ModType,Exclusive
-LY,28,Cooldown,-0.2,Multiplicative,True
-LY,,Area,0.5,Basic,False
-SDCB,13579,Duration,2,Basic,True
-SDCB,,Damage,1,Basic,True
-TWLKH,28,Amount,1,Basic,True
-TWLKH,147,Duration,2,Basic,True
-TWLKH,,Cooldown,-0.2,Multiplicative,True
+LY,28,Cooldown,-0.2,Multiplicative,TRUE
+LY,,Area,0.5,Basic,FALSE
+SDCB,13579,Duration,2,Basic,TRUE
+SDCB,,Damage,1,Basic,TRUE
+TWLKH,28,Amount,1,Basic,TRUE
+TWLKH,147,Duration,2,Basic,TRUE
+TWLKH,,Cooldown,-0.2,Multiplicative,TRUE
+GHS,147,Amount,1,Basic,TRUE
+GHS,,Cooldown,-0.2,Multiplicative,TRUE

@@ -11,7 +11,7 @@ namespace CodeTao
     /// <summary>
     /// 增幅伤害的组件，通常挂载在有defencer的单位上。包括攻击力、暴击率、暴击伤害、五行伤害加成，不为造成伤害的必要条件。
     /// </summary>
-    public partial class Attacker : UnitComponent
+    public partial class Attacker : UnitComponent, IAAtReceiver
     {
         public BindableStat ATK = new BindableStat();
         public BindableStat CritRate = new BindableStat(); // 0% - 100%
@@ -24,7 +24,12 @@ namespace CodeTao
         {
             damage.SetSource(this);
             damage.SetDamageSection(DamageSection.SourceATK, "", ATK.Value);
-            damage.SetDamageSection(DamageSection.CRIT, "", GetCritRate());
+            float critRate = GetCritRate();
+            if (critRate > 1)
+            {
+                damage.SetDamageSection(DamageSection.CRIT, "", critRate);
+                damage.AddDamageTag(DamageTag.Critical);
+            }
             damage.SetDamageSection(DamageSection.DamageIncrement, "", 1 + ElementBonuses[damage.DamageElement], RepetitionBehavior.Overwrite);
             return damage;
         }
@@ -50,6 +55,18 @@ namespace CodeTao
             {
                 elementBonus.Value.Reset();
             }
+        }
+
+        public void Receive(IAAtSource source)
+        {
+            ATK.InheritStat(source.GetAAt(EAAt.ATK));
+            CritRate.InheritStat(source.GetAAt(EAAt.CritRate));
+            CritDamage.InheritStat(source.GetAAt(EAAt.CritDamage));
+            ElementBonuses[ElementType.Metal].InheritStat(source.GetAAt(EAAt.MetalElementBON));
+            ElementBonuses[ElementType.Fire].InheritStat(source.GetAAt(EAAt.FireElementBON));
+            ElementBonuses[ElementType.Water].InheritStat(source.GetAAt(EAAt.WaterElementBON));
+            ElementBonuses[ElementType.Wood].InheritStat(source.GetAAt(EAAt.WoodElementBON));
+            ElementBonuses[ElementType.Earth].InheritStat(source.GetAAt(EAAt.EarthElementBON));
         }
     }
 }

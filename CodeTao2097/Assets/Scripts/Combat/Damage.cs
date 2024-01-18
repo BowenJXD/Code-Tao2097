@@ -36,6 +36,7 @@ namespace CodeTao
         public float Base { get; private set; }
         public float Final { get; private set; }
         public bool Dealt { get; private set; }
+        public List<DamageTag> damageTags = new List<DamageTag>();
         
         public Dictionary<DamageSection, Dictionary<string, float>> DamageSections = DamageSection.GetValues(typeof(DamageSection))
             .Cast<DamageSection>()
@@ -132,6 +133,23 @@ namespace CodeTao
             return this;
         }
         
+        public void AddDamageTag(DamageTag damageTag)
+        {
+            if (!damageTags.Contains(damageTag))
+                damageTags.Add(damageTag);
+        }
+        
+        public void RemoveDamageTag(DamageTag damageTag)
+        {
+            if (damageTags.Contains(damageTag))
+                damageTags.Remove(damageTag);
+        }
+        
+        public bool HasDamageTag(DamageTag damageTag)
+        {
+            return damageTags.Contains(damageTag);
+        }
+        
         public void CalculateDamageValue()
         {
             float result = Base;
@@ -153,7 +171,7 @@ namespace CodeTao
         public static string GetCSVHeader()
         {
             return
-                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack";
+                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,DamageTags";
         }
         
         public string ToCSV()
@@ -171,7 +189,11 @@ namespace CodeTao
                     log += ",";
                 }
             }
-            log += $"{Knockback}";
+            log += $"{Knockback},";
+            foreach (var damageTag in damageTags)
+            {
+                log += $"{damageTag}\n";
+            }
             return log;
         }
     }

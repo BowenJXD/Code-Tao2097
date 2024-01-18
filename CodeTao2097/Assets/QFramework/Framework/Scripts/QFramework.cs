@@ -604,22 +604,26 @@ namespace QFramework
 
         [SerializeField] protected T mValue;
 
-        public T Value
+        public virtual T Value
         {
             get => GetValue();
-            set
-            {
-                if (value == null && mValue == null) return;
-                if (value != null && value.Equals(mValue)) return;
-
-                SetValue(value);
-                mOnValueChanged?.Invoke(value);
-            }
+            set => SetValue(value);
         }
 
-        protected virtual void SetValue(T newValue) => mValue = newValue;
-
         protected virtual T GetValue() => mValue;
+        protected virtual void SetValue(T newValue)
+        {
+            if (newValue == null && mValue == null) return;
+            if (newValue != null && newValue.Equals(mValue)) return;
+            mValue = newValue;
+            Change();
+        }
+
+        protected virtual void Change()
+        {
+            mOnValueChanged?.Invoke(Value);
+        }
+
 
         public void SetValueWithoutEvent(T newValue) => mValue = newValue;
 

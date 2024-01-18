@@ -29,6 +29,7 @@ namespace CodeTao
 
             if (damager)
             {
+                damager.AddDamageTag(DamageTag.Dot);
                 CombatUnit combatUnit = Container.Unit as CombatUnit;
                 if (combatUnit && baseAttribute != EAAt.Null)
                 {

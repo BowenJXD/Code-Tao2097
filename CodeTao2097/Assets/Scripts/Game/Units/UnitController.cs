@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using QFramework;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ namespace CodeTao
     /// <summary>
     /// 单位控制器，用于管理单位的生命周期
     /// </summary>
-    public abstract class UnitController : ViewController
+    public abstract class UnitController : MonoBehaviour
     {
         public ComponentLink Link { get; private set; }
         
@@ -33,7 +34,8 @@ namespace CodeTao
         {
             if (Link == null){
                 Link = new ComponentLink();
-                List<UnitComponent> unitComponents = this.GetComponentsInDescendants<UnitComponent>();
+                List<UnitComponent> unitComponents = GetComponents<UnitComponent>().ToList(); 
+                unitComponents.AddRange(this.GetComponentsInDescendants<UnitComponent>());
                 foreach (var unitComponent in unitComponents)
                 {
                     unitComponent.Unit = this;

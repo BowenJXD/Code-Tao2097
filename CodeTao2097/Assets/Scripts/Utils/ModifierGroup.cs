@@ -9,8 +9,6 @@ namespace CodeTao
     /// </summary>
     public class ModifierGroup
     {
-        public string Source { get; set; }
-        
         private Dictionary<EModifierType, Dictionary<string, float>> _modifiers = EModifierType.GetValues(typeof(EModifierType))
             .Cast<EModifierType>()
             .ToDictionary(key => key, value => new Dictionary<string, float>());
@@ -44,6 +42,12 @@ namespace CodeTao
                 repetitionBehavior = RepetitionBehavior.NewStack;
             }
 
+            if ((modifierType is EModifierType.Basic or EModifierType.Additive && value == 0)
+                || (modifierType is EModifierType.MultiAdd or EModifierType.Multiplicative && value == 1))
+            {
+                return result;
+            }
+            
             if (modifiers.ContainsKey(name))
             {
                 switch (repetitionBehavior)
@@ -114,6 +118,23 @@ namespace CodeTao
             }
 
             return false;
+        }
+        
+        // to string
+        public override string ToString()
+        {
+            string result = "";
+            foreach (var keyValuePair in _modifiers)
+            {
+                if (keyValuePair.Value.Count <= 0) continue;
+                result += keyValuePair.Key + ": ";
+                foreach (var modifier in keyValuePair.Value)
+                {
+                    result += modifier.Key + " " + modifier.Value + ", ";
+                }
+                result += "\n";
+            }
+            return result;
         }
     }
 }

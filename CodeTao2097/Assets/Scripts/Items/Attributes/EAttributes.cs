@@ -43,6 +43,7 @@
         FireElementRES,
         EarthElementRES,
         EXPBonus,
+        CollectRange,
         Lives,
     }
 }

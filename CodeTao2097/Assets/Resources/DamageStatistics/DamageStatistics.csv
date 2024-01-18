@@ -1,279 +1,297 @@
-Time,Receiver Unit,Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,PlayerLevel,DamagerLevel
-4.16783,Enemy(Clone) -405124,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-4.16783,Enemy(Clone) -405124,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-5.069986,Enemy(Clone) -405124,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-5.069986,Enemy(Clone) -405124,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-5.069986,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-5.069986,Enemy(Clone) -404896,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-5.069986,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-5.069986,Enemy(Clone) -404986,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-5.069986,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-5.069986,Enemy(Clone) -405214,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-5.532784,Enemy(Clone) -405522,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-5.565,Enemy(Clone) -405124,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-5.622187,Enemy(Clone) -405702,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-5.684625,Enemy(Clone) -405612,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-5.732947,Enemy(Clone) -405304,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-5.786018,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-5.786018,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-5.786018,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-6.064919,Enemy(Clone) -405124,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-6.232156,Enemy(Clone) -405972,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-6.270159,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-6.270159,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-6.270159,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-6.557662,Enemy(Clone) -405124,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-6.785897,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-6.785897,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-6.785897,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-7.07595,Enemy(Clone) -405124,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-7.298301,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-7.298301,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-7.298301,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-7.559428,Enemy(Clone) -405124,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-7.796999,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-7.796999,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-7.796999,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-8.309692,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-8.309692,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-8.309692,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-8.841913,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-8.841913,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-8.841913,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-9.366904,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-9.366904,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-9.366904,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-9.7948,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-9.7948,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-9.7948,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-10.2901,Enemy(Clone) -404896,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-10.2901,Enemy(Clone) -404986,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-10.2901,Enemy(Clone) -405214,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-10.55892,Enemy(Clone) -405792,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-10.55892,Enemy(Clone) -405882,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-10.55892,Enemy(Clone) -405972,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-10.55892,Enemy(Clone) -407040,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-10.55892,Enemy(Clone) -406842,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-10.80347,Enemy(Clone) -407998,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-10.87661,Enemy(Clone) -407220,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-10.87661,Enemy(Clone) -406286,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-11.12486,Enemy(Clone) -405432,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-11.12486,Enemy(Clone) -405432,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-11.14486,Enemy(Clone) -408466,ResonanceDamager,EnemyDefencer,,None,10,20,,0.5,,,1,,0,1,0
-11.94223,Enemy(Clone) -405432,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-12.08001,Enemy(Clone) -404986,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-12.08001,Enemy(Clone) -405612,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-12.08001,Enemy(Clone) -405612,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-12.08001,Enemy(Clone) -405432,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-12.08001,Enemy(Clone) -405304,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-12.08001,Enemy(Clone) -405304,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-12.39169,Enemy(Clone) -405432,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-12.83923,Enemy(Clone) -405612,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-12.83923,Enemy(Clone) -405304,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-12.83923,Enemy(Clone) -405432,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-13.09612,Enemy(Clone) -405214,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-13.09612,Enemy(Clone) -404896,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-13.09612,Enemy(Clone) -405612,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-13.09612,Enemy(Clone) -405304,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-13.09612,Enemy(Clone) -405522,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-13.09612,Enemy(Clone) -405522,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-13.09612,Enemy(Clone) -405432,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-13.34638,Enemy(Clone) -405612,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-13.34638,Enemy(Clone) -405304,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-13.78591,Enemy(Clone) -405522,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-13.84592,Enemy(Clone) -405612,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-13.84592,Enemy(Clone) -405304,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-14.29677,Enemy(Clone) -405522,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-14.29677,Enemy(Clone) -405612,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-14.29677,Enemy(Clone) -405304,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-14.75987,Enemy(Clone) -405522,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-15.29895,Enemy(Clone) -405522,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-15.83392,Enemy(Clone) -405522,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-16.0972,Enemy(Clone) -405522,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-16.27956,Enemy(Clone) -405522,BuffDamager,EnemyDefencer,,Fire,15,30,,0.5,,,1,,0,1,0
-19.13563,Enemy(Clone) -407310,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-19.13563,Enemy(Clone) -407310,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-19.13563,Enemy(Clone) -405702,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-19.13563,Enemy(Clone) -405702,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-19.84306,Enemy(Clone) -407310,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-19.84306,Enemy(Clone) -405702,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-20.1122,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-20.1122,Enemy(Clone) -407220,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-20.1122,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-20.1122,Enemy(Clone) -405882,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-20.1122,Enemy(Clone) -407310,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-20.1122,Enemy(Clone) -405702,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-20.1122,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-20.1122,Enemy(Clone) -406672,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-20.37232,Enemy(Clone) -407310,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-20.37232,Enemy(Clone) -405702,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-20.80056,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-20.80056,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-20.80056,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-20.85758,Enemy(Clone) -407310,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-20.85758,Enemy(Clone) -405702,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-21.09228,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.09228,Enemy(Clone) -406842,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-21.09228,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.09228,Enemy(Clone) -407130,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-21.31566,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.31566,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.31566,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.39089,Enemy(Clone) -407310,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-21.39089,Enemy(Clone) -405702,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-21.77065,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.77065,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.82838,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.82838,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.82838,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-21.90838,Enemy(Clone) -407310,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-21.90838,Enemy(Clone) -405702,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-22.25601,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.25601,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.29354,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.29354,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.29354,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.36481,Enemy(Clone) -407310,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-22.7424,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.7424,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.78315,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.78315,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-22.78315,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.29506,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.29506,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.36098,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.36098,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.36098,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.79279,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.79279,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.84444,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.84444,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-23.84444,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.2765,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.2765,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.33348,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.33348,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.33348,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.7697,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.7697,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.82313,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.82313,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-24.82313,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-25.28269,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-25.28269,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-25.33975,Enemy(Clone) -407220,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-25.33975,Enemy(Clone) -405882,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-25.33975,Enemy(Clone) -406672,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-25.78894,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-25.78894,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-26.34085,Enemy(Clone) -406842,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-26.34085,Enemy(Clone) -407130,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-28.11081,Enemy(Clone) -407040,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-28.11081,Enemy(Clone) -407040,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-28.11081,Enemy(Clone) -406672,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-28.78087,Enemy(Clone) -407040,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -407998,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -404796,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -409308,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -409218,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -406582,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -407040,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -407130,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -406106,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -406106,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.17773,Enemy(Clone) -405792,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-29.17773,Enemy(Clone) -405792,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-29.61588,Enemy(Clone) -407040,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-29.85667,Enemy(Clone) -407040,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -406106,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -405792,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.07273,Enemy(Clone) -405792,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-30.34965,Enemy(Clone) -407040,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-30.59935,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.59935,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.59935,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.59935,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.59935,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.59935,Enemy(Clone) -406106,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-30.59935,Enemy(Clone) -405792,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -406106,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -405792,BuffDamager,EnemyDefencer,,Fire,9,18,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -406944,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -406944,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-31.09276,Enemy(Clone) -409398,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -409398,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-31.09276,Enemy(Clone) -405972,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.09276,Enemy(Clone) -405972,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-31.09276,Enemy(Clone) -405792,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-31.09276,Enemy(Clone) -406106,LYDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,1,1,1,,1,1,1
-31.59285,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.59285,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.59285,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.59285,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.59285,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.59285,Enemy(Clone) -406106,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-31.94791,Enemy(Clone) -406944,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.94791,Enemy(Clone) -409398,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-31.94791,Enemy(Clone) -405972,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.06596,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.06596,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.06596,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.06596,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.06596,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.06596,Enemy(Clone) -406106,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-32.43926,Enemy(Clone) -406944,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.43926,Enemy(Clone) -409398,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.43926,Enemy(Clone) -405972,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.57026,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.57026,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.57026,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.57026,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.57026,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.57026,Enemy(Clone) -406106,BuffDamager,EnemyDefencer,,Fire,12,24,,0.5,,,1,,0,1,0
-32.96295,Enemy(Clone) -406944,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.96295,Enemy(Clone) -409398,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-32.96295,Enemy(Clone) -405972,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.09761,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.09761,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.09761,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.09761,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.09761,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.42332,Enemy(Clone) -406944,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.42332,Enemy(Clone) -409398,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.42332,Enemy(Clone) -405972,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.56126,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.56126,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.56126,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.56126,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.56126,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.95689,Enemy(Clone) -406944,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.95689,Enemy(Clone) -409398,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-33.95689,Enemy(Clone) -405972,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.11219,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.11219,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.11219,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.11219,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.11219,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.47567,Enemy(Clone) -406944,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.47567,Enemy(Clone) -409398,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.47567,Enemy(Clone) -405972,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.60682,Enemy(Clone) -407998,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.60682,Enemy(Clone) -404796,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.60682,Enemy(Clone) -409308,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.60682,Enemy(Clone) -409218,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
-34.60682,Enemy(Clone) -406582,BuffDamager,EnemyDefencer,,Fire,6,12,,0.5,,,1,,0,1,0
+Time,Receiver Unit,Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,DamageTags,PlayerLevel,DamagerLevel
+5.031233,Enemy(Clone) -54448,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+5.165758,Enemy(Clone) -54632,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+5.598762,Enemy(Clone) -54448,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+6.082632,Enemy(Clone) -54448,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+6.449048,Enemy(Clone) -54356,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.449048,Enemy(Clone) -55406,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.550401,Enemy(Clone) -55692,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.715917,Enemy(Clone) -55222,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.898561,Enemy(Clone) -54724,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+7.031409,Enemy(Clone) -54816,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+7.149892,Enemy(Clone) -54540,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+7.248977,Enemy(Clone) -55222,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+7.548896,Enemy(Clone) -54724,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+7.548896,Enemy(Clone) -54816,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.032228,Enemy(Clone) -54448,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.048955,Enemy(Clone) -54724,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.048955,Enemy(Clone) -54816,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.048955,Enemy(Clone) -58264,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.069215,Enemy(Clone) -54632,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+8.531585,Enemy(Clone) -54540,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.548873,Enemy(Clone) -54724,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.548873,Enemy(Clone) -54540,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.548873,Enemy(Clone) -54816,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.548873,Enemy(Clone) -58264,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+8.649106,Enemy(Clone) -54356,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.765531,Enemy(Clone) -55222,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+8.915435,Enemy(Clone) -54632,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.948729,Enemy(Clone) -55692,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+9.065754,Enemy(Clone) -54540,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+9.065754,Enemy(Clone) -58264,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+9.065754,Enemy(Clone) -54632,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+9.449863,Enemy(Clone) -54356,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.548866,Enemy(Clone) -54632,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+9.582253,Enemy(Clone) -58264,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+9.582253,Enemy(Clone) -56164,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+9.798771,Enemy(Clone) -56714,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+9.966822,Enemy(Clone) -55784,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+10.08255,Enemy(Clone) -56164,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+10.08255,Enemy(Clone) -56828,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+10.13251,Enemy(Clone) -55692,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+10.31551,Enemy(Clone) -55130,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.38208,Enemy(Clone) -55784,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.54953,Enemy(Clone) -56256,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.54953,Enemy(Clone) -56714,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.58306,Enemy(Clone) -57508,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+10.93239,Enemy(Clone) -58064,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.96593,Enemy(Clone) -54540,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.01555,Enemy(Clone) -57754,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.08213,Enemy(Clone) -57508,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+11.16594,Enemy(Clone) -57754,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.41522,Enemy(Clone) -59464,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.56476,Enemy(Clone) -54356,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+11.56476,Enemy(Clone) -58064,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+11.56476,Enemy(Clone) -54540,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+11.56476,Enemy(Clone) -57754,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+11.58366,Enemy(Clone) -57508,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+12.03358,Enemy(Clone) -58064,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+12.03358,Enemy(Clone) -54540,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+12.03358,Enemy(Clone) -57754,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+12.04864,Enemy(Clone) -57508,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+12.04864,Enemy(Clone) -54540,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+12.0992,Enemy(Clone) -55600,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.0992,Enemy(Clone) -55406,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.21641,Enemy(Clone) -55692,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.2503,Enemy(Clone) -55600,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.26526,Enemy(Clone) -55130,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.36548,Enemy(Clone) -55784,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.44931,Enemy(Clone) -57028,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.5171,Enemy(Clone) -56256,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+12.53205,Enemy(Clone) -58064,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+12.53205,Enemy(Clone) -54540,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+12.53205,Enemy(Clone) -56256,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.58289,Enemy(Clone) -56714,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.69859,Enemy(Clone) -56348,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+12.89979,Enemy(Clone) -56714,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+13.04809,Enemy(Clone) -57028,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+13.06525,Enemy(Clone) -58264,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+13.06525,Enemy(Clone) -57638,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.4332,Enemy(Clone) -56348,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.49866,Enemy(Clone) -56256,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.51628,Enemy(Clone) -56714,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.53178,Enemy(Clone) -58264,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+13.53178,Enemy(Clone) -59726,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+13.6986,Enemy(Clone) -55784,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.71563,Enemy(Clone) -55222,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.74882,Enemy(Clone) -55130,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.86503,Enemy(Clone) -55692,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.93203,Enemy(Clone) -55600,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.03187,Enemy(Clone) -54724,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.03187,Enemy(Clone) -58264,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.03187,Enemy(Clone) -59726,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -59928,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -57638,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -55600,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -55692,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -55130,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -55222,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -55784,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -55406,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+14.56676,Enemy(Clone) -55406,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+14.70057,Enemy(Clone) -57028,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+14.83202,Enemy(Clone) -55406,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+15.082,Enemy(Clone) -59928,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+15.082,Enemy(Clone) -55406,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+15.15007,Enemy(Clone) -56714,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.19844,Enemy(Clone) -56256,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.19844,Enemy(Clone) -56256,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+15.29873,Enemy(Clone) -57028,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.34886,Enemy(Clone) -56348,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.43139,Enemy(Clone) -57028,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+15.55005,Enemy(Clone) -59928,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+16.06599,Enemy(Clone) -55314,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+16.54846,Enemy(Clone) -55314,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+16.54846,Enemy(Clone) -56828,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+16.56649,Enemy(Clone) -56348,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+16.76606,Enemy(Clone) -57028,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.76606,Enemy(Clone) -56348,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.81588,Enemy(Clone) -57028,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+17.0314,Enemy(Clone) -55314,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.0314,Enemy(Clone) -56164,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.0314,Enemy(Clone) -56828,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.0314,Enemy(Clone) -59464,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.54871,Enemy(Clone) -55314,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.54871,Enemy(Clone) -56828,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.54871,Enemy(Clone) -56164,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.54871,Enemy(Clone) -59464,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+17.56737,Enemy(Clone) -59464,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+18.03219,Enemy(Clone) -59464,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+19.5666,Enemy(Clone) -59928,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+19.5666,Enemy(Clone) -57638,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+19.59962,Enemy(Clone) -57638,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+19.96429,Enemy(Clone) -57028,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+20.05013,Enemy(Clone) -57638,FireGroundDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,0
+22.48211,Enemy(Clone) -54356,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.33213,Enemy(Clone) -58264,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.36592,Enemy(Clone) -59726,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+24.39914,Enemy(Clone) -54724,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.43261,Enemy(Clone) -59726,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.43261,Enemy(Clone) -54816,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.44898,Enemy(Clone) -54632,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.46716,Enemy(Clone) -54356,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.50201,Enemy(Clone) -56932,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.58225,Enemy(Clone) -54448,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.64799,Enemy(Clone) -59180,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.71598,Enemy(Clone) -58528,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.79855,Enemy(Clone) -59372,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.8819,Enemy(Clone) -56164,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.91537,Enemy(Clone) -59558,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.98307,Enemy(Clone) -54356,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.05018,Enemy(Clone) -54816,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.05018,Enemy(Clone) -54632,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.11619,Enemy(Clone) -54724,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.11619,Enemy(Clone) -57508,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.11619,Enemy(Clone) -59464,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.11619,Enemy(Clone) -60374,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.14802,Enemy(Clone) -59372,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.18163,Enemy(Clone) -59726,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.22481,Enemy(Clone) -54724,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+25.22481,Enemy(Clone) -57754,GHProjDamager,EnemyDefencer,PlayerAttacker,Fire,25,5,10,0.5,,1,1,,1,Projectile
+,1,1

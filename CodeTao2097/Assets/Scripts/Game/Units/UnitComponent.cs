@@ -62,7 +62,7 @@ namespace CodeTao
         
         public T GetComp<T>() where T : UnitComponent
         {
-            return Unit.Link.GetComp<T>();
+            return Unit.GetComp<T>();
         }
     }
 }

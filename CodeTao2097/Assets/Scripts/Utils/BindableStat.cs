@@ -29,9 +29,31 @@ namespace CodeTao
     [Serializable]
     public class BindableStat : BindableProperty<float>
     {
-        private float _initValue = 0;
         private float _minValue = float.MinValue;
         private float _maxValue = float.MaxValue;
+        [SerializeField] protected float valueCache;
+        [SerializeField] protected string str;
+
+        protected override float GetValue()
+        {
+            if (valueCache == default)
+            {
+                valueCache = CalculateValue();
+            }
+            return valueCache;
+        }
+
+        protected override void SetValue(float newValue)
+        {
+            AddModifier(newValue - mValue, EModifierType.Basic, "self", RepetitionBehavior.Overwrite);
+        }
+
+        protected override void Change()
+        {
+            valueCache = CalculateValue();
+            str = ToString();
+            base.Change();
+        }
 
         private ModifierGroup _mainModGroup;
         private List<ModifierGroup> _modGroups = new List<ModifierGroup>();
@@ -42,38 +64,43 @@ namespace CodeTao
             set => _modGroups = value;
         }
 
-        public BindableStat()
+        public BindableStat() : base(0)
         {
-            _initValue = mValue;
-            _mainModGroup = new ModifierGroup(() => mOnValueChanged?.Invoke(Value));
-            _modGroups.Add(_mainModGroup);
+            Init();
         }
 
         public BindableStat(float value) : base(value)
         {
-            _initValue = mValue;
-            _mainModGroup = new ModifierGroup(() => mOnValueChanged?.Invoke(Value));
+            Init();
+        }
+
+        public void Init()
+        {
+            valueCache = CalculateValue();
+            _mainModGroup = new ModifierGroup(Change);
             _modGroups.Add(_mainModGroup);
         }
         
-        public BindableStat SetInitValue(float value)
-        {
-            _initValue = value;
-            return this;
-        }
-        
-        public BindableStat SetMinValue(float value)
+        public BindableStat SetMinValue(float value, bool clamp = false)
         {
             _minValue = value;
+            if (clamp && Value < _minValue)
+            {
+                SetValue(_minValue);
+            }
             return this;
         }
         
-        public BindableStat SetMaxValue(float value)
+        public BindableStat SetMaxValue(float value, bool clamp = true)
         {
             _maxValue = value;
+            if (clamp && Value > _maxValue)
+            {
+                SetValue(_maxValue);
+            }
             return this;
         }
-
+        
         public bool AddModifier(float value, EModifierType modifierType, string name = "",
             RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return, bool times = false)
         {
@@ -84,7 +111,7 @@ namespace CodeTao
             bool result = _mainModGroup.AddModifier(value, modifierType, name, repetitionBehavior);
             if (result)
             {
-                mOnValueChanged?.Invoke(Value);
+                Change();
             }
 
             return result;
@@ -97,20 +124,24 @@ namespace CodeTao
 
             if (result)
             {
-                mOnValueChanged?.Invoke(Value);
+                Change();
             }
 
             return result;
         }
         
-        public bool AddModifierGroup(ModifierGroup modifierGroup)
+        public bool AddModifierGroup(ModifierGroup modifierGroup, bool notifyChange = true)
         {
             bool result = false;
             if (!_modGroups.Contains(modifierGroup))
             {
                 _modGroups.Add(modifierGroup);
-                modifierGroup.onChanged += () => { mOnValueChanged?.Invoke(Value); };
+                modifierGroup.onChanged += () => { Change(); };
                 result = true;
+                if (notifyChange)
+                {
+                    Change();
+                }
             }
 
             return result;
@@ -122,18 +153,22 @@ namespace CodeTao
             if (_modGroups.Contains(modifierGroup))
             {
                 _modGroups.Remove(modifierGroup);
-                modifierGroup.onChanged -= () => { mOnValueChanged?.Invoke(Value); };
+                modifierGroup.onChanged -= () => { Change(); };
                 result = true;
             }
 
             return result;
         }
         
-        public void AddModifierGroups(List<ModifierGroup> modifierGroups)
+        public void AddModifierGroups(List<ModifierGroup> modifierGroups, bool notifyChange = true)
         {
             foreach (var modifierGroup in modifierGroups)
             {
-                AddModifierGroup(modifierGroup);
+                AddModifierGroup(modifierGroup, false);
+            }
+            if (notifyChange)
+            {
+                Change();
             }
         }
         
@@ -145,7 +180,7 @@ namespace CodeTao
             }
         }
 
-        protected override float GetValue()
+        protected float CalculateValue()
         {
             float basic = 0;
             float additive = 0;
@@ -162,6 +197,7 @@ namespace CodeTao
 
             float resultValue = (mValue + basic) * multiplicative * (1 + multiAdd) + additive;
             resultValue = Math.Clamp(resultValue, _minValue, _maxValue);
+            valueCache = resultValue;
             return resultValue;
         }
         
@@ -170,6 +206,7 @@ namespace CodeTao
             _mainModGroup.Clear(false);
             _modGroups.Clear();
             _modGroups.Add(_mainModGroup);
+            Change();
             mOnValueChanged = null;
         }
         
@@ -178,7 +215,7 @@ namespace CodeTao
             // if negative, inherit the base value from otherStat
             if (mValue < 0)
             {
-                SetValueWithoutEvent(-this * otherStat);
+                SetValueWithoutEvent(-mValue * otherStat);
                 ModGroups = otherStat.ModGroups;
             }
             // if positive, only inherit the modifier groups
@@ -191,6 +228,18 @@ namespace CodeTao
         public static implicit operator float(BindableStat myObject)
         {
             return myObject.Value;
+        }
+        
+        // to string
+        public override string ToString()
+        {
+            string result = "";
+            foreach (var modifierGroup in _modGroups)
+            {
+                result += modifierGroup.ToString() + "\n";
+            }
+
+            return result;
         }
     }
     
@@ -205,15 +254,42 @@ namespace CodeTao
             EditorGUI.EndProperty();
         }
     }
-    
+
     [CustomPropertyDrawer(typeof(BindableStat))]
     public class BindableStatDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            EditorGUI.BeginProperty(position,label,property);
+            EditorGUI.BeginProperty(position, label, property);
+
+            // Calculate the width for each property field
+            float singleFieldWidth = 3 * position.width / 4f;
+
+            // Split the position into two halves
+            Rect mValueRect = new Rect(position.x, position.y, singleFieldWidth, position.height);
+            Rect readOnlyValueRect = new Rect(position.x + singleFieldWidth, position.y, position.width / 4f, position.height);
+
+            // Find the SerializedProperty for mValue and readOnlyValue
             SerializedProperty mValueProperty = property.FindPropertyRelative("mValue");
-            EditorGUI.PropertyField(position, mValueProperty, label);
+            SerializedProperty readOnlyValueProperty = property.FindPropertyRelative("valueCache");
+            SerializedProperty stringValueProperty = property.FindPropertyRelative("str");
+
+            // Display the mValue property field
+            EditorGUI.PropertyField(mValueRect, mValueProperty, label);
+
+            // Display a readonly label for readOnlyValue
+            EditorGUI.LabelField(readOnlyValueRect, readOnlyValueProperty.floatValue.ToString("F2"), EditorStyles.label);
+
+            if (readOnlyValueRect.Contains(Event.current.mousePosition))
+            {
+                // Check if the mouse was clicked
+                if (Event.current.type == EventType.MouseDown)
+                {
+                    // Log the ToString value when clicking
+                    Debug.Log($"{label}: {stringValueProperty.stringValue}");
+                }
+            }
+
             EditorGUI.EndProperty();
         }
     }

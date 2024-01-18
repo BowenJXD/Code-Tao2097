@@ -16,6 +16,7 @@ namespace CodeTao
             attackRange = weapon.attackRange;
             attackRange.AddModifierGroups(weapon.area.ModGroups);
             if (!damager) { damager = this.GetComponentInDescendants<Damager>(true); }
+            if (damager) damager.AddDamageTag(DamageTag.Melee);
         }
 
         public override void Execute(List<Vector3> globalPositions)

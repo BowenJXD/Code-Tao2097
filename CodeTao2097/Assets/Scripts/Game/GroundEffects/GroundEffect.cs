@@ -19,7 +19,7 @@ namespace CodeTao
     /// <summary>
     /// 领域GroundEffect：无实体，间歇性对领域内的敌人造成伤害。进出领域可以有伤害。
     /// </summary>
-    public partial class GroundEffect : UnitController, IWeaponDerivative
+    public partial class GroundEffect : UnitController, IWeaponDerivative, IWAtReceiver
     {
         [HideInInspector] public Damager damager;
         [HideInInspector] public Collider2D col2D;
@@ -49,9 +49,7 @@ namespace CodeTao
         {
             weapon = newWeapon;
             if (!damager) damager = newDamager;
-            attackInterval.InheritStat(weapon.cooldown);
-            lifeTime.InheritStat(weapon.duration);
-            area.InheritStat(weapon.area);
+            damager.AddDamageTag(DamageTag.GroundEffect);
             area.RegisterWithInitValue(value =>
             {
                 this.LocalScale(new Vector3(value, value));
@@ -174,6 +172,13 @@ namespace CodeTao
                 particle.Stop();
                 particle.Clear();
             }
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            attackInterval.InheritStat(source.GetWAt(EWAt.Cooldown));
+            area.InheritStat(source.GetWAt(EWAt.Area));
+            lifeTime.InheritStat(source.GetWAt(EWAt.Duration));
         }
     }
 }

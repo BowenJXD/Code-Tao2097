@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-namespace CodeTao.Buffs
+namespace CodeTao
 {
     /// <summary>
     /// 痕印（弹射物增伤）Mark of Rebound（水）
@@ -9,10 +10,11 @@ namespace CodeTao.Buffs
     public class MarkOfRebound : Buff
     {
         public float damageIncrement = 0.1f;
-        public int maxStack = 5;
-        private int _stack = 0;
+        public EModifierType modifierType = EModifierType.MultiAdd;
+        public RepetitionBehavior repetitionBehavior = RepetitionBehavior.AddStack;
         
         protected Defencer defencer;
+        List<Damager> damagers = new List<Damager>();
         
         public override void OnAdd()
         {
@@ -21,19 +23,26 @@ namespace CodeTao.Buffs
             
             if (defencer)
             {
-                defencer.OnTakeDamageFuncs.Add(OnTakeDamage);
+                defencer.TakeDamageAfter += OnTakeDamage;
             }
         }
         
-        public Damage OnTakeDamage(Damage damage)
+        public void OnTakeDamage(Damage damage)
         {
-            Projectile projectile = damage.Median.Unit as Projectile;
+            Damager damager = damage.Median;
+            Projectile projectile = damager.Unit as Projectile;
             if (projectile)
             {
-                damage.SetDamageSection(DamageSection.DamageIncrement, name, damageIncrement * _stack, RepetitionBehavior.Overwrite);
-                _stack = Mathf.Min(_stack + 1, maxStack);
+                if (damager.DMG.AddModifier(damageIncrement * LVL, modifierType, name, repetitionBehavior));
+                {
+                    damagers.Add(damager);
+                    projectile.onDeinit += () =>
+                    {
+                        damager.DMG.RemoveModifier(modifierType, name);
+                        damagers.Remove(damager);
+                    };
+                }
             }
-            return damage;
         }
 
         public override void OnRemove()
@@ -41,8 +50,13 @@ namespace CodeTao.Buffs
             base.OnRemove();
             if (defencer)
             {
-                defencer.OnTakeDamageFuncs.Remove(OnTakeDamage);
+                defencer.TakeDamageAfter -= OnTakeDamage;
             }
+            foreach (var damager in damagers)
+            {
+                damager.DMG.RemoveModifier(modifierType, name);
+            }
+            damagers.Clear();
         }
     }
 }

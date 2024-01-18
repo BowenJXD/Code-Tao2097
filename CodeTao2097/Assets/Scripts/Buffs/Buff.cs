@@ -30,11 +30,13 @@ namespace CodeTao
         {
             buffOwner = (BuffOwner) Container;
             
-            if (triggerInterval <= 0f) triggerInterval.Value = float.MaxValue;
+            float interval = triggerInterval <= 0f? float.MaxValue : triggerInterval;
+            buffLoop = new LoopTask(buffOwner, interval, Trigger, Remove);
             
-            buffLoop = new LoopTask(buffOwner, triggerInterval, Trigger, Remove);
-            
-            triggerInterval.RegisterWithInitValue(value => { buffLoop.LoopInterval = value; })
+            triggerInterval.RegisterWithInitValue(value =>
+                {
+                    buffLoop.LoopInterval = value <= 0f? float.MaxValue : value;
+                })
                 .UnRegisterWhenGameObjectDestroyed(this);
             
             if (duration > 0)

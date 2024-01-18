@@ -10,16 +10,38 @@ namespace CodeTao
     /// <summary>
     /// 造成伤害的组件。通常挂载在武器或武器衍生物上。包括伤害数值、伤害类型、伤害间隔等。为造成伤害的必要条件。
     /// </summary>
-    public class Damager : UnitComponent
+    public class Damager : UnitComponent, IWAtReceiver
     {
         public ElementType damageElementType = ElementType.None;
         public BindableStat DMG = new BindableStat(-1);
         public BindableStat knockBackFactor = new BindableStat(-1);
-        
         public BindableStat effectHitRate = new BindableStat(-1).SetMaxValue(100f);
         public BindableStat effectDuration = new BindableStat(-1).SetMinValue(0.1f);
         public Buff buffToApply;
         private ContentPool<Buff> _buffPool;
+        
+        #region Tag
+        
+        public List<DamageTag> damageTags = new List<DamageTag>();
+        
+        public void AddDamageTag(DamageTag damageTag)
+        {
+            if (!damageTags.Contains(damageTag))
+                damageTags.Add(damageTag);
+        }
+        
+        public void RemoveDamageTag(DamageTag damageTag)
+        {
+            if (damageTags.Contains(damageTag))
+                damageTags.Remove(damageTag);
+        }
+        
+        public bool HasDamageTag(DamageTag damageTag)
+        {
+            return damageTags.Contains(damageTag);
+        }
+        
+        #endregion
         
         #region Condition
         
@@ -61,6 +83,10 @@ namespace CodeTao
             damage.SetBase(DMG.Value);
             damage.SetElement(damageElementType);
             damage.MultiplyKnockBack(knockBackFactor);
+            foreach (var damageTag in damageTags)
+            {
+                damage.AddDamageTag(damageTag);
+            }
             foreach (var func in OnDealDamageFuncs)
             {
                 damage = func.Invoke(damage);
@@ -122,6 +148,14 @@ namespace CodeTao
             knockBackFactor.Reset();
             OnDealDamageFuncs.Clear();
             DealDamageAfter = null;
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            DMG.InheritStat(source.GetWAt(EWAt.Damage));
+            knockBackFactor.InheritStat(source.GetWAt(EWAt.KnockBack));
+            effectHitRate.InheritStat(source.GetWAt(EWAt.EffectHitRate));
+            effectDuration.InheritStat(source.GetWAt(EWAt.Duration));
         }
     }
 

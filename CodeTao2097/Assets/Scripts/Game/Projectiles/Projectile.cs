@@ -9,7 +9,7 @@ namespace CodeTao
     /// <summary>
     /// 弹射物Projectile：无实体。触碰到单位后造成伤害。
     /// </summary>
-    public partial class Projectile : UnitController, IWeaponDerivative
+    public partial class Projectile : UnitController, IWeaponDerivative, IWAtReceiver
     {
         [HideInInspector] public Rigidbody2D rb2D;
         [HideInInspector] public Collider2D col2D;
@@ -31,13 +31,7 @@ namespace CodeTao
         {
             weapon = newWeapon;
             if (!damager) damager = newDamager;
-            area.InheritStat(weapon.area);
-            area.RegisterWithInitValue(value =>
-            {
-                this.LocalScale(new Vector3(value, value));
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            lifeTime.InheritStat(weapon.duration);
-            moveController.SPD.InheritStat(weapon.speed);
+            damager.AddDamageTag(DamageTag.Projectile);
         }
 
         public void InitSpawn(Vector3 globalPos)
@@ -77,7 +71,12 @@ namespace CodeTao
                     rb2D.velocity = moveController.SPD * value;
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
-
+            
+            area.RegisterWithInitValue(value =>
+            {
+                this.LocalScale(new Vector3(value, value));
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            
             // attack when colliding with target
             col2D.OnTriggerEnter2DEvent(col =>
             {
@@ -115,6 +114,13 @@ namespace CodeTao
         {
             base.Deinit();
             _lifeTimeTask.Pause();
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            area.InheritStat(source.GetWAt(EWAt.Area));
+            lifeTime.InheritStat(source.GetWAt(EWAt.Duration));
+            moveController.SPD.InheritStat(source.GetWAt(EWAt.Speed));
         }
     }
 }

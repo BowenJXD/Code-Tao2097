@@ -10,8 +10,12 @@ namespace CodeTao
     /// <summary>
     /// 共振波
     /// </summary>
-    public class ResonanceWave : Wave
+    public class ResonanceWave : Wave, IWeaponDerivative
     {
-        
+        public override void SetWeapon(Weapon newWeapon, Damager newDamager)
+        {
+            base.SetWeapon(newWeapon, newDamager);
+            damager.AddDamageTag(DamageTag.Resonance);
+        }
     }
 }

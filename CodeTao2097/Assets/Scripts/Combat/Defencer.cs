@@ -10,12 +10,12 @@ namespace CodeTao
     /// <summary>
     /// 受到伤害的组件。包括血量，防御，抗性，伤害cd，以及受到伤害的逻辑。为造成伤害的必要条件。
     /// </summary>
-    public partial class Defencer : UnitComponent
+    public partial class Defencer : UnitComponent, IAAtReceiver
     {
         #region HP
         
         public BindableStat Lives = new BindableStat(1);
-        public BindableStat HP = new BindableStat();
+        public BindableProperty<float> HP = new BindableProperty<float>();
         public BindableStat MaxHP = new BindableStat();
 
         private float SetHP(float value)
@@ -82,7 +82,7 @@ namespace CodeTao
 
         #region Taking
         
-        public BindableStat DEF = new BindableStat().SetMinValue(0);
+        public BindableStat DEF = new BindableStat();
         
         public Dictionary<ElementType, BindableStat> ElementResistances = ElementType.GetValues(typeof(ElementType))
             .Cast<ElementType>()
@@ -98,7 +98,10 @@ namespace CodeTao
         {
             MaxHP.RegisterWithInitValue(value =>
             {
-                HP.SetMaxValue(value);
+                if (HP.Value > value)
+                {
+                    HP.Value = value;
+                }
             }).UnRegisterWhenGameObjectDestroyed(this);
             HP.Value = MaxHP;
             
@@ -164,6 +167,7 @@ namespace CodeTao
             MaxHP.Reset();
             DEF.Reset();
             KnockBackFactor.Reset();
+            Lives.Reset();
             foreach (var elementResistance in ElementResistances)
             {
                 elementResistance.Value.Reset();
@@ -172,6 +176,18 @@ namespace CodeTao
             OnTakeDamageFuncs.Clear();
             
             IsInCD = false;
+        }
+
+        public void Receive(IAAtSource source)
+        {
+            DEF.InheritStat(source.GetAAt(EAAt.DEF));
+            MaxHP.InheritStat(source.GetAAt(EAAt.MaxHP));
+            Lives.InheritStat(source.GetAAt(EAAt.Lives));
+            ElementResistances[ElementType.Metal].InheritStat(source.GetAAt(EAAt.MetalElementRES));
+            ElementResistances[ElementType.Fire].InheritStat(source.GetAAt(EAAt.FireElementRES));
+            ElementResistances[ElementType.Water].InheritStat(source.GetAAt(EAAt.WaterElementRES));
+            ElementResistances[ElementType.Wood].InheritStat(source.GetAAt(EAAt.WoodElementRES));
+            ElementResistances[ElementType.Earth].InheritStat(source.GetAAt(EAAt.EarthElementRES));
         }
     }
 }

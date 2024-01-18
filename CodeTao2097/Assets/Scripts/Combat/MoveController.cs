@@ -9,7 +9,7 @@ namespace CodeTao
     /// <summary>
     /// 负责管理移动的控制器，包括移动速度，移动方向，以及最后一次移动的方向。
     /// </summary>
-    public partial class MoveController : UnitComponent
+    public partial class MoveController : UnitComponent, IAAtReceiver, IWAtReceiver
     {
         [SerializeField] public BindableStat SPD = new BindableStat(1);
 
@@ -33,6 +33,16 @@ namespace CodeTao
             SPD.Reset();
             MovementDirection = new BindableProperty<Vector2>(Vector2.zero);
             LastNonZeroDirection = new BindableProperty<Vector2>(Vector2.up);
+        }
+
+        public void Receive(IAAtSource source)
+        {
+            SPD.InheritStat(source.GetAAt(EAAt.SPD));
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            SPD.InheritStat(source.GetWAt(EWAt.Speed));
         }
     }
 }

@@ -7,7 +7,7 @@ namespace CodeTao
     /// <summary>
     /// 管理一个单位的修为的组件，包括修为值，等级，以及修为获取速率。
     /// </summary>
-    public class ExpController : UnitComponent
+    public class ExpController : UnitComponent, IAAtReceiver
     {
         public BindableProperty<float> EXP = new BindableProperty<float>(0);
         
@@ -15,10 +15,6 @@ namespace CodeTao
         
         public BindableStat EXPRate = new BindableStat(1);
 
-        private void Start()
-        {
-        }
-        
         public Action levelUpAfter;
         
         public void LevelUp()
@@ -54,6 +50,11 @@ namespace CodeTao
         private void OnDisable()
         {
             Reset();
+        }
+
+        public void Receive(IAAtSource source)
+        {
+            EXPRate.InheritStat(source.GetAAt(EAAt.EXPBonus));
         }
     }
 }

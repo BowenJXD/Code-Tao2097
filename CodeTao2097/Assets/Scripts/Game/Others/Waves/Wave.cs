@@ -9,7 +9,7 @@ namespace CodeTao
     /// <summary>
     /// 从自身出发，呈圆形向外扩散的单位，通过触碰来造成伤害。
     /// </summary>
-    public class Wave : UnitController, IWeaponDerivative
+    public class Wave : UnitController, IWeaponDerivative, IWAtReceiver
     {
         public Ease easeMode = Ease.Linear;
         protected SpriteRenderer sp;
@@ -23,17 +23,15 @@ namespace CodeTao
         }
 
         public Weapon weapon { get; set; }
-        void IWeaponDerivative.SetWeapon(Weapon newWeapon, Damager newDamager)
+        public virtual void SetWeapon(Weapon newWeapon, Damager newDamager)
         {
             weapon = newWeapon;
             if (!damager) damager = newDamager;
             attacker = weapon.attacker;
-            range.InheritStat(weapon.area);
-            lifeTime.InheritStat(weapon.duration);
         }
 
         public float defaultPercent = 0.2f;
-        public BindableStat range = new BindableStat(2);
+        public BindableStat area = new BindableStat(2);
         public BindableStat lifeTime = new BindableStat(1);
 
         protected List<Collider2D> collided = new List<Collider2D>();
@@ -58,7 +56,7 @@ namespace CodeTao
 
             col.OnTriggerEnter2DEvent(Attack).UnRegisterWhenGameObjectDestroyed(this);
             transform.localScale = Vector3.zero;
-            transform.DOScale(range, lifeTime).SetEase(easeMode). OnComplete(Finish);
+            transform.DOScale(area, lifeTime).SetEase(easeMode). OnComplete(Finish);
         }
 
         protected virtual void Attack(Collider2D col)
@@ -88,6 +86,12 @@ namespace CodeTao
         {
             base.Deinit();
             collided.Clear();
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            area.InheritStat(source.GetWAt(EWAt.Area));
+            lifeTime.InheritStat(source.GetWAt(EWAt.Duration));
         }
     }
 }

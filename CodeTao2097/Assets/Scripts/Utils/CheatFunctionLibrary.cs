@@ -30,9 +30,9 @@ namespace CodeTao
             playerInput.actions["3"].performed += ctx => F3();
             playerInput.actions["4"].performed += ctx => F4();
             
-            expController = Player.Instance.Link.GetComp<ExpController>();
-            defencer = Player.Instance.Link.GetComp<Defencer>();
-            attacker = Player.Instance.Link.GetComp<Attacker>();
+            expController = Player.Instance.GetComp<ExpController>();
+            defencer = Player.Instance.GetComp<Defencer>();
+            attacker = Player.Instance.GetComp<Attacker>();
             enemyGenerator = FindObjectOfType<EnemyGenerator>();
             
             foreach (UnityEvent activateEvent in activateEvents)

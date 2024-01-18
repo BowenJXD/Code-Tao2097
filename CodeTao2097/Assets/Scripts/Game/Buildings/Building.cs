@@ -6,7 +6,7 @@ namespace CodeTao
     /// <summary>
     /// 建筑物的基类，有实体，地图上初始就可以有。
     /// </summary>
-    public class Building : CombatUnit, IWeaponDerivative
+    public class Building : CombatUnit, IWeaponDerivative, IWAtReceiver
     {
         public BindableStat lifeTime = new BindableStat(5f);
         public BindableStat area = new BindableStat(1f);
@@ -20,11 +20,11 @@ namespace CodeTao
         public override void PreInit()
         {
             base.PreInit();
-            defencer = this.GetComp<Defencer>();
-            damager = this.GetComp<Damager>();
+            defencer = GetComp<Defencer>();
+            damager = GetComp<Damager>();
             col2D = this.GetCollider();
             sp = this.GetComponentInDescendants<SpriteRenderer>();
-            attributeController = this.GetComp<AttributeController>();
+            attributeController = GetComp<AttributeController>();
         }
         
         public override void Init()
@@ -35,6 +35,11 @@ namespace CodeTao
             lifeTask = new LoopTask(this, lifeTime.Value, Deinit);
             lifeTask.SetCountCondition(1);
             lifeTask.Start();
+
+            area.RegisterWithInitValue(value =>
+            {
+                this.LocalScale(new Vector3(value, value));
+            }).UnRegisterWhenGameObjectDestroyed(this);
             
             // Change color after taking DMG
             if (defencer)
@@ -123,12 +128,12 @@ namespace CodeTao
         {
             weapon = newWeapon;
             if (!damager) damager = newDamager;
-            lifeTime.InheritStat(weapon.duration);
-            area.InheritStat(weapon.area);
-            area.RegisterWithInitValue(value =>
-            {
-                this.LocalScale(new Vector3(value, value));
-            }).UnRegisterWhenGameObjectDestroyed(this);
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            lifeTime.InheritStat(source.GetWAt(EWAt.Duration));
+            area.InheritStat(source.GetWAt(EWAt.Area));
         }
     }
 }

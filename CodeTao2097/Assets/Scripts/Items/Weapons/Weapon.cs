@@ -12,7 +12,7 @@ namespace CodeTao
     /// <summary>
     /// 武器的基类，包含武器的基本属性，以及武器的基本功能
     /// </summary>
-    public class Weapon : Item
+    public class Weapon : Item, IWAtSource
     {
         public ElementType ElementType
         {
@@ -57,6 +57,9 @@ namespace CodeTao
             if (!attacker) attacker = Container.GetComp<Attacker>();
             if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
             damagers.ForEach(damager => attackingTypes.AddRange(damager.damagingTags));
+            
+            List<IWAtReceiver> wAtReceivers = GetComponentsInChildren<IWAtReceiver>(true).ToList();
+            wAtReceivers.ForEach(wAtReceiver => wAtReceiver.Receive(this));
             
             // setup fire loop
             fireLoop = new LoopTask(this, cooldown, Fire);
@@ -133,49 +136,12 @@ namespace CodeTao
             {
                 if (mod.CheckCondition(newLevel))
                 {
-                    GetWAtStat(mod.attribute).AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
+                    GetWAt(mod.attribute).AddModifier(mod.value, mod.modType, $"Level{LVL + 1}");
                     if (mod.exclusive) break;
                 }
             }
         }
-        
-        public virtual BindableStat GetWAtStat(EWAt at)
-        {
-            BindableStat statToMod = null;
-            switch (at)
-            {
-                case EWAt.Damage:
-                    statToMod = damage;
-                    break;
-                case EWAt.Cooldown:
-                    statToMod = cooldown;
-                    break;
-                case EWAt.Area:
-                    statToMod = area;
-                    break;
-                case EWAt.Amount:
-                    statToMod = amount;
-                    break;
-                case EWAt.Duration:
-                    statToMod = duration;
-                    break;
-                case EWAt.Speed:
-                    statToMod = speed;
-                    break;
-                case EWAt.Range:
-                    statToMod = attackRange;
-                    break;
-                case EWAt.KnockBack:
-                    statToMod = knockBack;
-                    break;
-                case EWAt.EffectHitRate:
-                    statToMod = effectHitRate;
-                    break;
-            }
 
-            return statToMod;
-        }
-        
         public override string GetUpgradeDescription()
         {
             List<string> result = new List<string>();
@@ -205,13 +171,10 @@ namespace CodeTao
             foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
             {
                 if (!dataDict.TryGetValue(at.ToString(), out string value)) continue;
-                BindableStat stat = GetWAtStat(at);
                 
-                float initValue;
                 try{
-                    initValue = float.Parse(value);
-                    stat.SetValueWithoutEvent(initValue);
-                    stat.SetInitValue(initValue);
+                    BindableStat stat = new BindableStat(float.Parse(value));
+                    SetWAt(at, stat);
                 } catch (Exception e)
                 {
                     Debug.LogError($"Error parsing {value} to float for {name} {at}");
@@ -232,7 +195,7 @@ namespace CodeTao
             foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
             {
                 if (at == EWAt.Null) continue;
-                BindableStat stat = GetWAtStat(at);
+                BindableStat stat = GetWAt(at);
                 if (stat != null){
                     dataDict[at.ToString()] = stat.Value.ToString(CultureInfo.CurrentCulture);
                 }
@@ -289,6 +252,77 @@ namespace CodeTao
                 dataDict["ModType"] = upgradeMod.modType.ToString();
                 dataDict["Exclusive"] = upgradeMod.exclusive.ToString();
                 dataDicts.Add(dataDict);
+            }
+        }
+
+        public BindableStat GetWAt(EWAt at)
+        {
+            BindableStat statToMod = null;
+            switch (at)
+            {
+                case EWAt.Damage:
+                    statToMod = damage;
+                    break;
+                case EWAt.Cooldown:
+                    statToMod = cooldown;
+                    break;
+                case EWAt.Area:
+                    statToMod = area;
+                    break;
+                case EWAt.Amount:
+                    statToMod = amount;
+                    break;
+                case EWAt.Duration:
+                    statToMod = duration;
+                    break;
+                case EWAt.Speed:
+                    statToMod = speed;
+                    break;
+                case EWAt.Range:
+                    statToMod = attackRange;
+                    break;
+                case EWAt.KnockBack:
+                    statToMod = knockBack;
+                    break;
+                case EWAt.EffectHitRate:
+                    statToMod = effectHitRate;
+                    break;
+            }
+
+            return statToMod;
+        }
+        
+        public void SetWAt(EWAt at, BindableStat stat)
+        {
+            switch (at)
+            {
+                case EWAt.Damage:
+                    damage = stat;
+                    break;
+                case EWAt.Cooldown:
+                    cooldown = stat;
+                    break;
+                case EWAt.Area:
+                    area = stat;
+                    break;
+                case EWAt.Amount:
+                    amount = stat;
+                    break;
+                case EWAt.Duration:
+                    duration = stat;
+                    break;
+                case EWAt.Speed:
+                    speed = stat;
+                    break;
+                case EWAt.Range:
+                    attackRange = stat;
+                    break;
+                case EWAt.KnockBack:
+                    knockBack = stat;
+                    break;
+                case EWAt.EffectHitRate:
+                    effectHitRate = stat;
+                    break;
             }
         }
     }

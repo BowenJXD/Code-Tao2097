@@ -6,7 +6,7 @@ namespace CodeTao
 	/// <summary>
 	/// 获取附近的collectable的组件
 	/// </summary>
-	public partial class Collector : UnitComponent
+	public partial class Collector : UnitComponent, IAAtReceiver
 	{
 		public BindableStat range = new BindableStat(3);
 		public Collider2D col;
@@ -36,6 +36,11 @@ namespace CodeTao
 		private void OnDisable()
 		{
 			range.Reset();
+		}
+
+		public void Receive(IAAtSource source)
+		{
+			range.InheritStat(source.GetAAt(EAAt.CollectRange));
 		}
 	}
 }
