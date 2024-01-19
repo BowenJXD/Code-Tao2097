@@ -38,7 +38,7 @@ namespace CodeTao
         {
             Vector3 localPos = globalPos - weapon.transform.position;
             this.Rotation(Quaternion.Euler(0, 0, Util.GetAngleFromVector(localPos.normalized)));
-            moveController.MovementDirection.Value = localPos.normalized;
+            moveController.movementDirection.Value = localPos.normalized;
         }
 
         public override void PreInit()
@@ -64,9 +64,9 @@ namespace CodeTao
                 // change rigidbody2D's velocity when moveController's SPD or MovementDirection changed
                 moveController.SPD.RegisterWithInitValue(value =>
                 {
-                    rb2D.velocity = moveController.MovementDirection.Value * value;
+                    rb2D.velocity = moveController.movementDirection.Value * value;
                 }).UnRegisterWhenGameObjectDestroyed(this);
-                moveController.MovementDirection.RegisterWithInitValue(value =>
+                moveController.movementDirection.RegisterWithInitValue(value =>
                 {
                     rb2D.velocity = moveController.SPD * value;
                 }).UnRegisterWhenGameObjectDestroyed(this);

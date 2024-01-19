@@ -46,6 +46,17 @@ namespace CodeTao
             return result;
         }
 
+        private void OnEnable()
+        {
+            ATK.Init();
+            CritRate.Init();
+            CritDamage.Init();
+            foreach (var elementBonus in ElementBonuses)
+            {
+                elementBonus.Value.Init();
+            }
+        }
+
         private void OnDisable()
         {
             ATK.Reset();

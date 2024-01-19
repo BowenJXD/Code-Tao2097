@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using QFramework;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeTao
 {
@@ -12,18 +14,27 @@ namespace CodeTao
     public partial class MoveController : UnitComponent, IAAtReceiver, IWAtReceiver
     {
         [SerializeField] public BindableStat SPD = new BindableStat(1);
+        private Rigidbody2D rb;
 
-        public BindableProperty<Vector2> MovementDirection = new BindableProperty<Vector2>(Vector2.zero);
+        public BindableProperty<Vector2> movementDirection = new BindableProperty<Vector2>(Vector2.zero);
         
-        public BindableProperty<Vector2> LastNonZeroDirection = new BindableProperty<Vector2>(Vector2.up);
+        [ReadOnly] public BindableProperty<Vector2> lastNonZeroDirection = new BindableProperty<Vector2>(Vector2.up);
 
         private void Start()
         {
-            MovementDirection.RegisterWithInitValue(value =>
+            rb = Unit.GetComponent<Rigidbody2D>();
+            if (!rb) return;
+            SPD.Init();
+            SPD.RegisterWithInitValue(value =>
             {
+                rb.velocity = movementDirection.Value * value;
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            movementDirection.RegisterWithInitValue(value =>
+            {
+                rb.velocity = value * SPD.Value;
                 if (value != Vector2.zero)
                 {
-                    LastNonZeroDirection.Value = value;
+                    lastNonZeroDirection.Value = value;
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
@@ -31,8 +42,8 @@ namespace CodeTao
         private void OnDisable()
         {
             SPD.Reset();
-            MovementDirection = new BindableProperty<Vector2>(Vector2.zero);
-            LastNonZeroDirection = new BindableProperty<Vector2>(Vector2.up);
+            movementDirection = new BindableProperty<Vector2>(Vector2.zero);
+            lastNonZeroDirection = new BindableProperty<Vector2>(Vector2.up);
         }
 
         public void Receive(IAAtSource source)

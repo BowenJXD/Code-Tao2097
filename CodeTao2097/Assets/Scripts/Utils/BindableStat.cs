@@ -51,18 +51,24 @@ namespace CodeTao
         protected override void Change()
         {
             valueCache = CalculateValue();
-            str = ToString();
+            str = GetDescription();
             base.Change();
         }
 
-        private ModifierGroup _mainModGroup;
-        private List<ModifierGroup> _modGroups = new List<ModifierGroup>();
+        private ModifierGroup _modGroup;
 
-        public List<ModifierGroup> ModGroups
+        protected List<ModifierGroup> GetModGroups()
         {
-            get => _modGroups;
-            set => _modGroups = value;
+            List<ModifierGroup> result = new List<ModifierGroup>();
+            result.Add(_modGroup);
+            for (int i = parents.Count - 1; i >= 0; i--)
+            {
+                if (parents[i] == null) parents.RemoveAt(i);
+                else result.AddRange(parents[i].GetModGroups());
+            }
+            return result;
         }
+        protected List<BindableStat> parents;
 
         public BindableStat() : base(0)
         {
@@ -77,8 +83,8 @@ namespace CodeTao
         public void Init()
         {
             valueCache = CalculateValue();
-            _mainModGroup = new ModifierGroup(Change);
-            _modGroups.Add(_mainModGroup);
+            str = GetDescription();
+            _modGroup = new ModifierGroup(Change);
         }
         
         public BindableStat SetMinValue(float value, bool clamp = false)
@@ -108,19 +114,27 @@ namespace CodeTao
             {
                 value -= 1;
             }
-            bool result = _mainModGroup.AddModifier(value, modifierType, name, repetitionBehavior);
+            bool result = _modGroup.AddModifier(value, modifierType, name, repetitionBehavior);
             if (result)
             {
                 Change();
             }
 
             return result;
+        }
+        
+        public bool AddParent(BindableStat parent)
+        {
+            if (parent == null) return false;
+            if (parents.Contains(parent)) return false;
+            parents.Add(parent);
+            return true;
         }
 
         public bool RemoveModifier(EModifierType modifierType, string name = "")
         {
             bool result = false;
-            result = _mainModGroup.RemoveModifier(modifierType, name);
+            result = _modGroup.RemoveModifier(modifierType, name);
 
             if (result)
             {
@@ -130,54 +144,12 @@ namespace CodeTao
             return result;
         }
         
-        public bool AddModifierGroup(ModifierGroup modifierGroup, bool notifyChange = true)
+        public bool RemoveParent(BindableStat parent)
         {
-            bool result = false;
-            if (!_modGroups.Contains(modifierGroup))
-            {
-                _modGroups.Add(modifierGroup);
-                modifierGroup.onChanged += () => { Change(); };
-                result = true;
-                if (notifyChange)
-                {
-                    Change();
-                }
-            }
-
-            return result;
-        }
-        
-        public bool RemoveModifierGroup(ModifierGroup modifierGroup)
-        {
-            bool result = false;
-            if (_modGroups.Contains(modifierGroup))
-            {
-                _modGroups.Remove(modifierGroup);
-                modifierGroup.onChanged -= () => { Change(); };
-                result = true;
-            }
-
-            return result;
-        }
-        
-        public void AddModifierGroups(List<ModifierGroup> modifierGroups, bool notifyChange = true)
-        {
-            foreach (var modifierGroup in modifierGroups)
-            {
-                AddModifierGroup(modifierGroup, false);
-            }
-            if (notifyChange)
-            {
-                Change();
-            }
-        }
-        
-        public void RemoveModifierGroups(List<ModifierGroup> modifierGroups)
-        {
-            foreach (var modifierGroup in modifierGroups)
-            {
-                RemoveModifierGroup(modifierGroup);
-            }
+            if (parent == null) return false;
+            if (!parents.Contains(parent)) return false;
+            parents.Remove(parent);
+            return true;
         }
 
         protected float CalculateValue()
@@ -187,7 +159,7 @@ namespace CodeTao
             float multiAdd = 0;
             float multiplicative = 1;
 
-            foreach (var modifierGroup in _modGroups)
+            foreach (var modifierGroup in GetModGroups())
             {
                 basic += modifierGroup.GetModifier(EModifierType.Basic).Values.Sum();
                 additive += modifierGroup.GetModifier(EModifierType.Additive).Values.Sum();
@@ -203,26 +175,21 @@ namespace CodeTao
         
         public void Reset()
         {
-            _mainModGroup.Clear(false);
-            _modGroups.Clear();
-            _modGroups.Add(_mainModGroup);
+            _modGroup.Clear(false);
+            parents.Clear();
             Change();
             mOnValueChanged = null;
         }
         
         public void InheritStat(BindableStat otherStat)
         {
+            if (otherStat == null) return;
             // if negative, inherit the base value from otherStat
             if (mValue < 0)
             {
                 SetValueWithoutEvent(-mValue * otherStat);
-                ModGroups = otherStat.ModGroups;
             }
-            // if positive, only inherit the modifier groups
-            else
-            {
-                AddModifierGroups(otherStat.ModGroups);
-            }
+            AddParent(otherStat);
         }
         
         public static implicit operator float(BindableStat myObject)
@@ -231,10 +198,10 @@ namespace CodeTao
         }
         
         // to string
-        public override string ToString()
+        public string GetDescription()
         {
             string result = "";
-            foreach (var modifierGroup in _modGroups)
+            foreach (var modifierGroup in GetModGroups())
             {
                 result += modifierGroup.ToString() + "\n";
             }

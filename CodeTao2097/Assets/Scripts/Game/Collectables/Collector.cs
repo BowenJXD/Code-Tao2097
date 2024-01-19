@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using QFramework;
 
@@ -32,7 +33,12 @@ namespace CodeTao
 				}
 			}).UnRegisterWhenGameObjectDestroyed(this);
 		}
-		
+
+		private void OnEnable()
+		{
+			range.Init();
+		}
+
 		private void OnDisable()
 		{
 			range.Reset();

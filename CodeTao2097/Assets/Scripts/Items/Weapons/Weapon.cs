@@ -58,7 +58,7 @@ namespace CodeTao
             if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
             damagers.ForEach(damager => attackingTypes.AddRange(damager.damagingTags));
             
-            List<IWAtReceiver> wAtReceivers = GetComponentsInChildren<IWAtReceiver>(true).ToList();
+            List<IWAtReceiver> wAtReceivers = this.GetComponentsInDescendants<IWAtReceiver>(true).ToList();
             wAtReceivers.ForEach(wAtReceiver => wAtReceiver.Receive(this));
             
             // setup fire loop
@@ -157,6 +157,30 @@ namespace CodeTao
             }
             
             return base.GetUpgradeDescription() + result.StringJoin("\n");
+        }
+
+        private void OnEnable()
+        {
+            foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
+            {
+                if (at == EWAt.Null) continue;
+                BindableStat stat = GetWAt(at);
+                if (stat != null){
+                    stat.Init();
+                }
+            }
+        }
+
+        private void OnDisable()
+        {
+            foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
+            {
+                if (at == EWAt.Null) continue;
+                BindableStat stat = GetWAt(at);
+                if (stat != null){
+                    stat.Reset();
+                }
+            }
         }
 
         public void LoadAttributeData(ConfigData data)

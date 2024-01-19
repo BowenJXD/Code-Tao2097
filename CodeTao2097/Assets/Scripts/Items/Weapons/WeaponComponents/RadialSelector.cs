@@ -71,7 +71,7 @@ namespace CodeTao
                     }
                     break;
                 case EAimWay.Owner:
-                    result = _ownerMoveController.LastNonZeroDirection.Value;
+                    result = _ownerMoveController.lastNonZeroDirection.Value;
                     break;
                 case EAimWay.Random:
                     result = RandomUtil.GetRandomNormalizedVector();

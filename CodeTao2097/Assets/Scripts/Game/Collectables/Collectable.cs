@@ -37,9 +37,7 @@ namespace CodeTao
             collectableCol.enabled = false;
             interactableCol.enabled = false;
             
-            if (!moveController){
-                moveController = GetComp<MoveController>();
-            }
+            if (!moveController){ moveController = GetComp<MoveController>(); }
             moveController.SPD.RegisterWithInitValue(value =>
             {
                 navAgent.speed = value;

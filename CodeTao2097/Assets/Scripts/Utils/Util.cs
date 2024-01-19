@@ -26,23 +26,6 @@ namespace CodeTao
             return false;
         }
 
-        public static BindableStat InheritStat(this BindableStat stat, BindableStat otherStat)
-        {
-            // if negative, inherit the base value from otherStat
-            if (stat < 0)
-            {
-                stat.SetValueWithoutEvent(-stat * otherStat);
-                stat.ModGroups = otherStat.ModGroups;
-            }
-            // if positive, only inherit the modifier groups
-            else
-            {
-                stat.AddModifierGroups(otherStat.ModGroups);
-            }
-
-            return stat;
-        }
-
         /// <summary>
         /// 
         /// </summary>
@@ -362,14 +345,14 @@ namespace CodeTao
         /// <param name="maxDepth"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static List<T> GetComponentsInDescendants<T>(this Component parent, bool inactive = false, int maxDepth = int.MaxValue) where T : Component
+        public static List<T> GetComponentsInDescendants<T>(this Component parent, bool inactive = false, int maxDepth = int.MaxValue)
         {
             List<T> components = new List<T>();
             GetComponentsInDescendants(parent.transform, components, inactive, 0, maxDepth);
             return components;
         }
 
-        private static void GetComponentsInDescendants<T>(Transform parent, List<T> components, bool inactive, int currentDepth, int maxDepth) where T : Component
+        private static void GetComponentsInDescendants<T>(Transform parent, List<T> components, bool inactive, int currentDepth, int maxDepth)
         {
             if (currentDepth > maxDepth)
             {
@@ -383,9 +366,7 @@ namespace CodeTao
                     continue;
                 }
                 
-                T component = child.GetComponent<T>();
-
-                if (component != null)
+                if (child.TryGetComponent<T>(out T component) )
                 {
                     // Found a component, add it to the list
                     components.Add(component);

@@ -67,6 +67,8 @@ namespace CodeTao
         {
             if (!buffToApply) buffToApply = this.GetComponentInDescendants<Buff>();
             if (buffToApply && _buffPool == null) _buffPool = new ContentPool<Buff>(buffToApply);
+            DMG.Init();
+            knockBackFactor.Init();
         }
 
         public bool ValidateDamage(Defencer defencer, Attacker attacker)
@@ -120,7 +122,7 @@ namespace CodeTao
         public virtual Buff ApplyBuff(BuffOwner target)
         {
             Buff buff = _buffPool.Get().Parent(this);
-            buff.duration.AddModifierGroups(effectDuration.ModGroups);
+            buff.duration.InheritStat(effectDuration);
             
             if (!buff.AddToContainer(target))
             {
@@ -141,7 +143,7 @@ namespace CodeTao
         {
             return RandomUtil.rand.Next(100) < effectHitRate.Value;
         }
-
+        
         private void OnDisable()
         {
             DMG.Reset();

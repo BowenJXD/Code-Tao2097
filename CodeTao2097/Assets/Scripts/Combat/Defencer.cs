@@ -96,6 +96,15 @@ namespace CodeTao
         
         private void OnEnable()
         {
+            MaxHP.Init();
+            DEF.Init();
+            KnockBackFactor.Init();
+            Lives.Init();
+            foreach (var elementResistance in ElementResistances)
+            {
+                elementResistance.Value.Init();
+            }
+            
             MaxHP.RegisterWithInitValue(value =>
             {
                 if (HP.Value > value)

@@ -30,19 +30,19 @@ namespace CodeTao
             if (damager)
             {
                 damager.AddDamageTag(DamageTag.Dot);
-                CombatUnit combatUnit = Container.Unit as CombatUnit;
-                if (combatUnit && baseAttribute != EAAt.Null)
+                AttributeController attributeController = buffOwner.GetComp<AttributeController>();
+                if (attributeController && baseAttribute != EAAt.Null)
                 {
-                    combatUnit.GetAAtMod(baseAttribute).RegisterWithInitValue(value =>
+                    attributeController.GetAAt(baseAttribute).RegisterWithInitValue(value =>
                     {
                         damager.DMG.AddModifier(value, modType, "BuffBaseAttribute", RepetitionBehavior.Overwrite, true);
                     }).UnRegisterWhenGameObjectDestroyed(this);
                 }
 
-                if (combatUnit && canCrit)
+                if (attributeController && canCrit)
                 {
-                    CritRate = combatUnit.GetAAtMod(EAAt.CritRate);
-                    CritDMG = combatUnit.GetAAtMod(EAAt.CritDamage);
+                    CritRate = attributeController.GetAAt(EAAt.CritRate);
+                    CritDMG = attributeController.GetAAt(EAAt.CritDamage);
                     damager.OnDealDamageFuncs.Add(damage =>
                     {
                         if (RandomUtil.RandCrit(CritRate.Value)){

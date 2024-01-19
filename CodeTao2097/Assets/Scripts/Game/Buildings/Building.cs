@@ -76,45 +76,6 @@ namespace CodeTao
                     }
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
-            
-            if (attributeController)
-            {
-                attributeController.onAddAAtModGroup += AddAAtMod;
-            }
-        }
-
-        public override BindableStat GetAAtMod(EAAt at)
-        {
-            BindableStat result = null;
-            switch (at)
-            {
-                case EAAt.DEF:
-                    result = defencer.DEF;
-                    break;
-                case EAAt.MaxHP:
-                    result = defencer.MaxHP;
-                    break;
-                case EAAt.AllElementRES:
-                    result = defencer.ElementResistances[ElementType.All];
-                    break;
-                case EAAt.MetalElementRES:
-                    result = defencer.ElementResistances[ElementType.Metal];
-                    break;
-                case EAAt.WoodElementRES:
-                    result = defencer.ElementResistances[ElementType.Wood];
-                    break;
-                case EAAt.WaterElementRES:
-                    result = defencer.ElementResistances[ElementType.Water];
-                    break;
-                case EAAt.FireElementRES:
-                    result = defencer.ElementResistances[ElementType.Fire];
-                    break;
-                case EAAt.EarthElementRES:
-                    result = defencer.ElementResistances[ElementType.Earth];
-                    break;
-            }
-
-            return result;
         }
 
         public override void Deinit()

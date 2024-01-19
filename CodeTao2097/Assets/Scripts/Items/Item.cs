@@ -25,11 +25,12 @@ namespace CodeTao
         public virtual void Init()
         {
             gameObject.SetActive(true);
+            weight.Init();
         }
         
         public virtual int GetWeight()
         {
-            return (int)weight.Value;
+            return (int)weight;
         }
 
         public override void Upgrade(int lvlIncrement = 1)
@@ -46,6 +47,11 @@ namespace CodeTao
         {
             int newLevel = LVL.Value + 1;
             return $"{(newLevel == 1 ? "New!! " : "")} {name} ({newLevel}): ";
+        }
+
+        private void OnDisable()
+        {
+            weight.Reset();
         }
     }
 }

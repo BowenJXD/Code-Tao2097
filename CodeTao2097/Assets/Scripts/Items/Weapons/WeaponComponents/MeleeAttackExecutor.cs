@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CodeTao
 {
-    public class MeleeAttackExecutor : WeaponExecutor
+    public class MeleeAttackExecutor : WeaponExecutor, IWAtReceiver
     {
         public BindableStat angularRange = new BindableStat(0).SetMaxValue(360f);
         public BindableStat attackRange = new BindableStat(0);
@@ -12,9 +12,6 @@ namespace CodeTao
         public override void Init(Weapon newWeapon)
         {
             base.Init(newWeapon);
-            angularRange.AddModifierGroups(weapon.area.ModGroups);
-            attackRange = weapon.attackRange;
-            attackRange.AddModifierGroups(weapon.area.ModGroups);
             if (!damager) { damager = this.GetComponentInDescendants<Damager>(true); }
             if (damager) damager.AddDamageTag(DamageTag.Melee);
         }
@@ -47,6 +44,12 @@ namespace CodeTao
         public void Attack(Defencer defencer)
         {
             Damage dmg = DamageManager.Instance.ExecuteDamage(damager, defencer, weapon.attacker);
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            angularRange.InheritStat(source.GetWAt(EWAt.Area));
+            attackRange.InheritStat(source.GetWAt(EWAt.Area));
         }
     }
 }

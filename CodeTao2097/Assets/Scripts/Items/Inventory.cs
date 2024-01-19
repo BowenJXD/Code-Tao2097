@@ -59,13 +59,5 @@ namespace CodeTao
         {
             return Contents.Contains(item);
         }
-
-        public void AddWAtModGroup(EWAt at, ModifierGroup modGroup)
-        {
-            foreach (var weapon in weaponInventory)
-            {
-                weapon.GetWAt(at).AddModifierGroup(modGroup);
-            }
-        }
     }
 }

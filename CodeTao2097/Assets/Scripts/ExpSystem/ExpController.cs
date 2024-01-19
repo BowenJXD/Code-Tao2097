@@ -39,17 +39,17 @@ namespace CodeTao
         {
             return LVL.Value + 1;
         }
-        
-        public void Reset()
+
+        public void OnEnable()
+        {
+            EXPRate.Init();
+        }
+
+        private void OnDisable()
         {
             EXP = new BindableProperty<float>(0);
             LVL = new BindableProperty<int>(1);
             EXPRate.Reset();
-        }
-        
-        private void OnDisable()
-        {
-            Reset();
         }
 
         public void Receive(IAAtSource source)

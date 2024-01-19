@@ -51,8 +51,6 @@ namespace CodeTao
 			{
 				SelfNavAgent.speed = value;
 			});
-			
-			GetComp<AttributeController>().onAddAAtModGroup += AddAAtMod;
 		}
 
 		private void Start()
@@ -82,83 +80,6 @@ namespace CodeTao
 			{
 				SelfNavAgent.SetDestination(target.position);
 			}
-		}
-		
-		public override BindableStat GetAAtMod(EAAt at)
-		{
-			BindableStat result = null;
-			switch (at)
-            {
-                case EAAt.ATK:
-                    result = GetComp<Attacker>().ATK;
-                    break;
-                case EAAt.CritRate:
-                    result = GetComp<Attacker>().CritRate;
-                    break;
-                case EAAt.CritDamage:
-                    result = GetComp<Attacker>().CritDamage;
-                    break;
-                case EAAt.AllElementBON:
-                    result = GetComp<Attacker>().ElementBonuses[ElementType.All];
-                    break;
-                case EAAt.MetalElementBON:
-                    result = GetComp<Attacker>().ElementBonuses[ElementType.Metal];
-                    break;
-                case EAAt.WoodElementBON:
-                    result = GetComp<Attacker>().ElementBonuses[ElementType.Wood];
-                    break;
-                case EAAt.WaterElementBON:
-                    result = GetComp<Attacker>().ElementBonuses[ElementType.Water];
-                    break;
-                case EAAt.FireElementBON:
-                    result = GetComp<Attacker>().ElementBonuses[ElementType.Fire];
-                    break;
-                case EAAt.EarthElementBON:
-                    result = GetComp<Attacker>().ElementBonuses[ElementType.Earth];
-                    break;
-                
-                case EAAt.DEF:
-                    result = GetComp<Defencer>().DEF;
-                    break;
-                case EAAt.MaxHP:
-                    result = GetComp<Defencer>().MaxHP;
-                    break;
-                case EAAt.Lives:
-	                result = GetComp<Defencer>().Lives;
-	                break;
-                
-                case EAAt.AllElementRES:
-                    result = GetComp<Defencer>().ElementResistances[ElementType.All];
-                    break;
-                case EAAt.MetalElementRES:
-                    result = GetComp<Defencer>().ElementResistances[ElementType.Metal];
-                    break;
-                case EAAt.WoodElementRES:
-                    result = GetComp<Defencer>().ElementResistances[ElementType.Wood];
-                    break;
-                case EAAt.WaterElementRES:
-                    result = GetComp<Defencer>().ElementResistances[ElementType.Water];
-                    break;
-                case EAAt.FireElementRES:
-                    result = GetComp<Defencer>().ElementResistances[ElementType.Fire];
-                    break;
-                case EAAt.EarthElementRES:
-                    result = GetComp<Defencer>().ElementResistances[ElementType.Earth];
-                    break;
-                
-                case EAAt.SPD:
-                    result = GetComp<MoveController>().SPD;
-                    break;
-                
-                case EAAt.EXPBonus:
-	                result = EXPValue;
-                    break;
-                
-                default:
-                    break;
-            }
-
-			return result;
 		}
 	}
 }
