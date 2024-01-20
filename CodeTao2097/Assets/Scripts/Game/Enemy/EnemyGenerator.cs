@@ -17,6 +17,7 @@ namespace CodeTao
 {
 	/// <summary>
 	/// 敌人生成器，根据任务生成敌人。
+	/// TODO: 生成位置波动随时间变化，而不是按次数
 	/// </summary>
 	public partial class EnemyGenerator : MonoBehaviour
 	{
@@ -28,13 +29,15 @@ namespace CodeTao
 		public ParticleSystem deathFX;
 		protected float deathFXDuration;
 		
+		// 生成位置波动
 		public float minDistance = 10;
 		public float maxDistance = 20;
 		public float distributionVariationInterval = 5;
 		public int minDistribution = 10;
 		public float maxDistributionVariation = 20;
-		
 		protected float lastSpawnedAngle = 0;
+
+		public Action<Enemy> onSpawn;
 		
 		private void Awake()
 		{
@@ -87,6 +90,7 @@ namespace CodeTao
 			
 			Vector3 spawnPosition = GetSpawnPosition();
 			Enemy enemy = enemyPool.Get().Position(spawnPosition).Parent(transform);
+			onSpawn?.Invoke(enemy);
 			enemy.onDeinit += () =>
 			{
 				enemyPool.Release(enemy);
@@ -125,6 +129,11 @@ namespace CodeTao
 			{
 				task.LoopTask.Resume();
 			}
+		}
+
+		private void OnDisable()
+		{
+			onSpawn = null;
 		}
 	}
 }

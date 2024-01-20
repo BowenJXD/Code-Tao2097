@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 namespace CodeTao
 {
     /// <summary>
-    /// Continuously deals damage to the target.
+    /// 持续伤害buff
     /// </summary>
     public partial class DotBuff : Buff
     {

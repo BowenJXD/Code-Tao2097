@@ -3,7 +3,7 @@
 namespace CodeTao
 {
     /// <summary>
-    /// Adds a tag to the unit.
+    /// 在拥有者身上添加标签的buff
     /// </summary>
     public class TagAddingBuff : Buff
     {

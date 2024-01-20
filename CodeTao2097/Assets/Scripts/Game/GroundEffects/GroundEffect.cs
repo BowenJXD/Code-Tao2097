@@ -19,21 +19,15 @@ namespace CodeTao
     /// <summary>
     /// 领域GroundEffect：无实体，间歇性对领域内的敌人造成伤害。进出领域可以有伤害。
     /// </summary>
-    public partial class GroundEffect : UnitController, IWeaponDerivative, IWAtReceiver
+    public partial class GroundEffect : UnitController, IWeaponDerivative
     {
         [HideInInspector] public Damager damager;
         [HideInInspector] public Collider2D col2D;
         private SpriteRenderer sprite;
         ParticleSystem particle;
         
-        public BindableStat attackInterval = new BindableStat(1f);
-        public BindableStat lifeTime = new BindableStat(5f);
-        public BindableStat area = new BindableStat(1f);
-        
         public BindableProperty<EAttackTarget> attackWhenEntering = new BindableProperty<EAttackTarget>(EAttackTarget.None);
         public BindableProperty<EAttackTarget> attackWhenExiting = new BindableProperty<EAttackTarget>(EAttackTarget.None);
-
-        public LoopTask attackLoop;
 
         public override void PreInit()
         {
@@ -50,29 +44,14 @@ namespace CodeTao
             weapon = newWeapon;
             if (!damager) damager = newDamager;
             damager.AddDamageTag(DamageTag.GroundEffect);
-            area.RegisterWithInitValue(value =>
-            {
-                this.LocalScale(new Vector3(value, value));
-            }).UnRegisterWhenGameObjectDestroyed(this);
         }
 
         public override void Init()
         {
             base.Init();
 
-            attackLoop = new LoopTask(this, attackInterval, AttackAll, Deinit);
-            attackLoop.SetTimeCondition(lifeTime);
-            attackLoop.Start();
-            
-            attackInterval.RegisterWithInitValue(interval =>
-            {
-                attackLoop.LoopInterval = interval;
-            }).UnRegisterWhenGameObjectDestroyed(this);
-            
-            lifeTime.RegisterWithInitValue(value =>
-            {
-                attackLoop.SetTimeCondition(value);
-            }).UnRegisterWhenGameObjectDestroyed(this);
+            GetComp<LoopTaskController>()?.AddTrigger(AttackAll);
+            GetComp<LoopTaskController>()?.AddFinish(Deinit);
             
             if (particle) InitParticle();
 
@@ -135,11 +114,12 @@ namespace CodeTao
         
         void InitParticle()
         {
-            int maxParticles = Mathf.RoundToInt(Mathf.Pow(area, 2) * Mathf.PI);
+            float scale = transform.localScale.GetScale();
+            int maxParticles = Mathf.RoundToInt(Mathf.Pow(scale, 2) * Mathf.PI);
             var main = particle.main;
             main.maxParticles = maxParticles;
             var shape = particle.shape;
-            shape.radius = area / 2;
+            shape.radius = scale / 2;
             particle.Play();
         }
         
@@ -172,13 +152,6 @@ namespace CodeTao
                 particle.Stop();
                 particle.Clear();
             }
-        }
-
-        public void Receive(IWAtSource source)
-        {
-            attackInterval.InheritStat(source.GetWAt(EWAt.Cooldown));
-            area.InheritStat(source.GetWAt(EWAt.Area));
-            lifeTime.InheritStat(source.GetWAt(EWAt.Duration));
         }
     }
 }

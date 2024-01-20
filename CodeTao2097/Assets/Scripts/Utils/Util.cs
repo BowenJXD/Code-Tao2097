@@ -89,6 +89,12 @@ namespace CodeTao
             return result;
         }
 
+        public static float GetScale(this Vector3 vector)
+        {
+            // use average
+            return (vector.x + vector.y + vector.z) / 3;
+        }
+
         public static Color GetColor(this ElementType type)
         {
             switch (type)

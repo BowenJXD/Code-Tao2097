@@ -21,9 +21,9 @@ namespace CodeTao
             base.OnAdd();
         }
 
-        public override void Upgrade(int lvlIncrement = 1)
+        public override void AlterLVL(int lvlIncrement = 1)
         {
-            base.Upgrade(lvlIncrement);
+            base.AlterLVL(lvlIncrement);
             int newLevel = LVL.Value;
 
             foreach (var mod in upgradeMods)

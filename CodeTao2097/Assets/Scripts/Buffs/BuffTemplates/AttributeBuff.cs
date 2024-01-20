@@ -4,7 +4,7 @@ using QFramework;
 namespace CodeTao
 {
     /// <summary>
-    /// Modifies an attribute of the unit temporarily.
+    /// 在拥有者身上修改属性的buff
     /// </summary>
     public class AttributeBuff : Buff
     {

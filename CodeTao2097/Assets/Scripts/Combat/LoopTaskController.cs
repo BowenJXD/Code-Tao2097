@@ -8,37 +8,45 @@ namespace CodeTao
     public class LoopTaskController : UnitComponent, IWAtReceiver
     {
         public LoopTask loopTask;
-        public BindableStat interval = new BindableStat(1);
-        public BindableStat duration = new BindableStat(5);
+        public BindableStat interval = new BindableStat();
+        public BindableStat duration = new BindableStat();
         public Action trigger;
         public Action finish;
 
-        public void StartTask()
+        void OnEnable()
         {
-            loopTask = new LoopTask(this, interval.Value, OnTrigger, OnFinish);
             interval.Init();
+            loopTask = new LoopTask(this, float.MaxValue, OnTrigger, OnFinish);
             interval.RegisterWithInitValue(value =>
             {
-                loopTask.LoopInterval = value;
+                if (value != 0) loopTask.LoopInterval = value;
             }).UnRegisterWhenGameObjectDestroyed(this);
             duration.Init();
             duration.RegisterWithInitValue(value =>
             {
-                loopTask.SetTimeCondition(duration);
+                if (value != 0) loopTask.SetTimeCondition(value);
             }).UnRegisterWhenGameObjectDestroyed(this);
             loopTask.Start();
         }
 
+        public void AddTrigger(Action action)
+        {
+            trigger += action;
+        }
+        
         void OnTrigger()
         {
-            if (trigger != null) trigger();
-            else SendMessage("Trigger");
+            trigger?.Invoke();
+        }
+        
+        public void AddFinish(Action action)
+        {
+            finish += action;
         }
 
         void OnFinish()
         {
-            if (finish != null) finish();
-            else SendMessage("Finish");
+            finish?.Invoke();
         }
 
         public void Receive(IWAtSource source)
@@ -49,9 +57,9 @@ namespace CodeTao
 
         private void OnDisable()
         {
-            loopTask = null;
             interval.Reset();
             duration.Reset();
+            loopTask = null;
             trigger = null;
             finish = null;
         }

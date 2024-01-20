@@ -40,7 +40,7 @@ namespace CodeTao
         {
             if (LVL == 0)
             {
-                Upgrade();
+                AlterLVL();
             }
         }
 
@@ -80,9 +80,9 @@ namespace CodeTao
             {
                 lvl = MaxLVL.Value;
             }
-            else if (lvl < 1)
+            else if (lvl <= 0)
             {
-                lvl = 1;
+                RemoveFromContainer(Container);
             }
             if (lvl == LVL.Value)
             {
@@ -93,7 +93,7 @@ namespace CodeTao
             return true;
         }
 
-        public virtual void Upgrade(int lvlIncrement = 1)
+        public virtual void AlterLVL(int lvlIncrement = 1)
         {
             SetLVL(LVL.Value + lvlIncrement);
         }

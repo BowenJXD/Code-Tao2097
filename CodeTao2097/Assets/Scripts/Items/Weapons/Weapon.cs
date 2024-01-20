@@ -58,7 +58,7 @@ namespace CodeTao
             if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
             damagers.ForEach(damager => attackingTypes.AddRange(damager.damagingTags));
             
-            List<IWAtReceiver> wAtReceivers = this.GetComponentsInDescendants<IWAtReceiver>(true).ToList();
+            List<IWAtReceiver> wAtReceivers = this.GetComponentsInChildren<IWAtReceiver>(true).ToList();
             wAtReceivers.ForEach(wAtReceiver => wAtReceiver.Receive(this));
             
             // setup fire loop
@@ -119,6 +119,11 @@ namespace CodeTao
                     if (Util.IsTagIncluded(unitController.tag, attackingTypes) && target)
                     {
                         float targetDistance = Vector2.SqrMagnitude(col.transform.position - transform.position);
+                        while (targetDistances.ContainsKey(targetDistance))
+                        {
+                            targetDistance += 0.0001f;
+                        }
+
                         targetDistances.Add(targetDistance, target);
                     }
                 }
@@ -127,9 +132,9 @@ namespace CodeTao
             return targetDistances.Values.ToList();
         }
         
-        public override void Upgrade(int lvlIncrement = 1)
+        public override void AlterLVL(int lvlIncrement = 1)
         {
-            base.Upgrade(lvlIncrement);
+            base.AlterLVL(lvlIncrement);
             int newLevel = LVL.Value;
 
             foreach (var mod in upgradeMods)
@@ -208,12 +213,8 @@ namespace CodeTao
         
         public void SaveAttributeData(ConfigData data)
         {
-            Dictionary<string, string> dataDict = data.GetDataById(name);
-            if (dataDict == null)
-            {
-                dataDict = new Dictionary<string, string>();
-                data.SetDataById(name, dataDict);
-            }
+            Dictionary<string, string> dataDict = new Dictionary<string, string>();
+            data.SetDataById(name, dataDict);
             
             dataDict["Id"] = name;
             foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
@@ -259,12 +260,8 @@ namespace CodeTao
         
         public void SaveUpgradeData(ConfigData data)
         {
-            List<Dictionary<string, string>> dataDicts = data.GetDatasById(name);
-            if (dataDicts == null)
-            {
-                dataDicts = new List<Dictionary<string, string>>();
-                data.SetDatasById(name, dataDicts);
-            }
+            List<Dictionary<string, string>> dataDicts = new List<Dictionary<string, string>>();
+            data.SetDatasById(name, dataDicts);
             
             foreach (var upgradeMod in upgradeMods)
             {

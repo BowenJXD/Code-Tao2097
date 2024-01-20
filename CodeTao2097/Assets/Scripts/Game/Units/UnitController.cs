@@ -17,6 +17,13 @@ namespace CodeTao
         {
             return Link?.GetComp<T>();
         }
+        
+        public T GetComp<T>(Action<T> tryAction) where T : UnitComponent
+        {
+            T comp = Link?.GetComp<T>();
+            if (comp != null) tryAction?.Invoke(comp);
+            return comp;
+        }
 
         /// <summary>
         /// Will be called from global when scene is loaded,

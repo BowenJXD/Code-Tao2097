@@ -8,11 +8,10 @@ namespace CodeTao
     /// 爆炸单位，会在生成后爆炸，对周围单位造成伤害，并击退。
     /// 爆炸的damager的dmg和knockbackfactor由全局控制，damageelement和dealDamageAfter由weapon控制。
     /// </summary>
-    public class Explosion : UnitController, IWeaponDerivative, IWAtReceiver
+    public class Explosion : UnitController, IWeaponDerivative
     {
         protected Animator ani;
         public Damager damager;
-        public BindableStat area = new BindableStat(2);
 
         public override void PreInit()
         {
@@ -30,7 +29,7 @@ namespace CodeTao
 
         void Explode()
         {
-            Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, area);
+            Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, transform.localScale.GetScale());
             foreach (Collider2D col in cols)
             {
                 Attack(col);
@@ -54,11 +53,6 @@ namespace CodeTao
             damager.AddDamageTag(DamageTag.Explosion);
             damager = ExplosionGenerator.Instance.ModDamager(damager);
             damager.damageElementType = weapon.ElementType;
-        }
-
-        public void Receive(IWAtSource source)
-        {
-            area.InheritStat(source.GetWAt(EWAt.Area));
         }
     }
 }

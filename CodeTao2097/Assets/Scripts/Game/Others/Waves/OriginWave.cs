@@ -14,7 +14,10 @@ namespace CodeTao
             TagOwner tagOwner = col.GetComp<TagOwner>();
             if (tagOwner && tagOwner.HasTag(Tag.Resonating))
             {
-                ResonanceWaveGenerator.Instance.Get().Position(tagOwner.transform.position).Init();
+                if (RandomUtil.RandCrit(damager.effectHitRate))
+                {
+                    ResonanceWaveGenerator.Instance.Get().Position(tagOwner.transform.position).Init();
+                }
             }
         }
     }

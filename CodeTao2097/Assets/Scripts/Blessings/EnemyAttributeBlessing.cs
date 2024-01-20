@@ -10,21 +10,22 @@ namespace CodeTao
         public override void OnAdd()
         {
             base.OnAdd();
-            enemies = EnemyManager.Instance.GetEnemyPrefabs();
-            foreach (var enemy in enemies)
+            EnemyManager.Instance.AddOnSpawnAction(OnSpawn);
+        }
+
+        void OnSpawn(Enemy enemy)
+        {
+            AttributeController attributeController = enemy.GetComp<AttributeController>();
+            if (!attributeController) return;
+            foreach (var attributeMod in attributeMods)
             {
-                AttributeController attributeController = enemy.GetComp<AttributeController>();
-                if (!attributeController) continue;
-                foreach (var attributeMod in attributeMods)
+                if (attributeMod.aat != EAAt.Null)
                 {
-                    if (attributeMod.aat != EAAt.Null)
-                    {
-                        attributeController.AddArtefactModifier(attributeMod.aat, attributeMod.value, attributeMod.modifierType, name);
-                    }
-                    if (attributeMod.wat != EWAt.Null)
-                    {
-                        attributeController.AddWeaponModifier(attributeMod.wat, attributeMod.value, attributeMod.modifierType, name);
-                    }
+                    attributeController.AddArtefactModifier(attributeMod.aat, attributeMod.value, attributeMod.modifierType, name);
+                }
+                if (attributeMod.wat != EWAt.Null)
+                {
+                    attributeController.AddWeaponModifier(attributeMod.wat, attributeMod.value, attributeMod.modifierType, name);
                 }
             }
         }

@@ -79,7 +79,7 @@ namespace CodeTao
 					}
 					else
 					{
-						item.Upgrade();
+						item.AlterLVL();
 					}
 					Time.timeScale = 1.0f;
 					this.Hide();

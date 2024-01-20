@@ -1,21 +1,2479 @@
 Time,Receiver Unit,Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,DamageTags,PlayerLevel,DamagerLevel
-5.57329,Enemy(Clone) -71592,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-6.973196,Enemy(Clone) -71040,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
-7.355042,Enemy(Clone) -71132,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
-7.438334,Enemy(Clone) -71132,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-7.704891,Enemy(Clone) -70856,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
-7.755789,Enemy(Clone) -70856,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-7.905538,Enemy(Clone) -70948,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-7.98901,Enemy(Clone) -70948,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
-8.038238,Enemy(Clone) -70948,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-8.073936,Enemy(Clone) -70948,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-8.138587,Enemy(Clone) -71040,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-8.506087,Enemy(Clone) -70856,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-8.556162,Enemy(Clone) -71132,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-10.53887,Enemy(Clone) -70856,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-10.53887,Enemy(Clone) -70948,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-10.55541,Enemy(Clone) -70948,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-10.55541,Enemy(Clone) -71040,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-10.55541,Enemy(Clone) -71132,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-10.57255,Enemy(Clone) -70856,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
-10.57255,Enemy(Clone) -71132,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,,1,0
+3.786911,Enemy(Clone) -269698,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+4.811117,Enemy(Clone) -270630,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+4.811117,Enemy(Clone) -270998,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+4.811117,Enemy(Clone) -270446,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+5.624313,Enemy(Clone) -271274,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+5.661094,Enemy(Clone) -270998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+5.756546,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+5.813746,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+6.238812,Enemy(Clone) -270630,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.32374,Enemy(Clone) -269792,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+6.32374,Enemy(Clone) -270354,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.372856,Enemy(Clone) -269792,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+6.627201,Enemy(Clone) -271274,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.697226,Enemy(Clone) -270630,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+6.887429,Enemy(Clone) -270630,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+6.887429,Enemy(Clone) -270998,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.952926,Enemy(Clone) -270446,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.952926,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+6.952926,Enemy(Clone) -270446,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+7.003717,Enemy(Clone) -270262,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+7.72853,Enemy(Clone) -269698,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+7.964943,Enemy(Clone) -271274,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+8.225823,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.848248,Enemy(Clone) -272070,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+9.090519,Enemy(Clone) -270354,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.090519,Enemy(Clone) -270354,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.127183,Enemy(Clone) -269984,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+9.374345,Enemy(Clone) -272162,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.459309,Enemy(Clone) -270630,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.459309,Enemy(Clone) -269792,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+9.586358,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.586358,Enemy(Clone) -270906,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.65389,Enemy(Clone) -269792,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+9.681129,Enemy(Clone) -271366,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.08695,Enemy(Clone) -269792,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+10.14214,Enemy(Clone) -269698,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.14214,Enemy(Clone) -271274,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.14214,Enemy(Clone) -271366,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.19555,Enemy(Clone) -269792,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.35103,Enemy(Clone) -273214,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.40817,Enemy(Clone) -273214,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.40817,Enemy(Clone) -273938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.47356,Enemy(Clone) -273214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.47356,Enemy(Clone) -273214,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.55396,Enemy(Clone) -270446,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.55396,Enemy(Clone) -270262,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.55396,Enemy(Clone) -272162,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.55396,Enemy(Clone) -270262,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.55396,Enemy(Clone) -271090,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+10.61844,Enemy(Clone) -270074,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270722,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270814,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270814,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270814,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -270998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -271642,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -272438,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -272938,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -273938,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -274122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.61844,Enemy(Clone) -272254,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.61844,Enemy(Clone) -270998,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.68302,Enemy(Clone) -271274,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.68302,Enemy(Clone) -276104,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.79135,Enemy(Clone) -272846,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.79135,Enemy(Clone) -272162,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.79135,Enemy(Clone) -269792,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.79135,Enemy(Clone) -269984,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.85812,Enemy(Clone) -270998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+10.85812,Enemy(Clone) -269984,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+10.85812,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+11.04719,Enemy(Clone) -272254,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+11.04719,Enemy(Clone) -271090,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+11.04719,Enemy(Clone) -270354,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+11.11263,Enemy(Clone) -272070,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.15699,Enemy(Clone) -271090,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.24713,Enemy(Clone) -271366,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+11.24713,Enemy(Clone) -275918,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+11.24713,Enemy(Clone) -270814,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+11.24713,Enemy(Clone) -271090,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+11.24713,Enemy(Clone) -269984,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+11.82882,Enemy(Clone) -270354,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+11.82882,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.87209,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.91162,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.95983,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.08429,Enemy(Clone) -270814,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+12.08429,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.08429,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.14625,Enemy(Clone) -271274,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.14625,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.20902,Enemy(Clone) -269792,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.25225,Enemy(Clone) -269698,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+12.37094,Enemy(Clone) -270074,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.39487,Enemy(Clone) -270906,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.45027,Enemy(Clone) -271090,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+12.5143,Enemy(Clone) -270074,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.61225,Enemy(Clone) -273324,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.66479,Enemy(Clone) -271366,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.66479,Enemy(Clone) -270262,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+12.80015,Enemy(Clone) -274306,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+12.84839,Enemy(Clone) -271458,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+12.84839,Enemy(Clone) -274030,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+12.84839,Enemy(Clone) -272938,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+12.84839,Enemy(Clone) -270170,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+12.84839,Enemy(Clone) -271734,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+12.84839,Enemy(Clone) -273324,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+12.84839,Enemy(Clone) -271366,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+12.84839,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.84839,Enemy(Clone) -273598,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.91176,Enemy(Clone) -271090,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+13.04074,Enemy(Clone) -274030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.04074,Enemy(Clone) -269698,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+13.14839,Enemy(Clone) -273938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.20753,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.20753,Enemy(Clone) -270446,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.2565,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.2565,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.2565,Enemy(Clone) -273506,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.29161,Enemy(Clone) -270538,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+13.34783,Enemy(Clone) -273214,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.40001,Enemy(Clone) -272346,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.46861,Enemy(Clone) -274412,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+13.49271,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.5536,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.5536,Enemy(Clone) -272162,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+13.6144,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.64121,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.75519,Enemy(Clone) -272070,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.94704,Enemy(Clone) -272646,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.94704,Enemy(Clone) -272070,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+13.94704,Enemy(Clone) -275502,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+13.99174,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+13.99174,Enemy(Clone) -275502,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+14.07573,Enemy(Clone) -273506,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+14.1342,Enemy(Clone) -270998,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.2844,Enemy(Clone) -271366,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+14.3472,Enemy(Clone) -273598,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+14.45685,Enemy(Clone) -270074,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+14.45685,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.5067,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.66901,Enemy(Clone) -280006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.7726,Enemy(Clone) -273598,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+14.82899,Enemy(Clone) -273598,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+14.82899,Enemy(Clone) -271550,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+14.93203,Enemy(Clone) -273324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.01441,Enemy(Clone) -270446,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06792,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06792,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06792,Enemy(Clone) -273324,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06792,Enemy(Clone) -273324,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06792,Enemy(Clone) -273598,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06792,Enemy(Clone) -273598,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.117,Enemy(Clone) -271550,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+15.117,Enemy(Clone) -271550,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.117,Enemy(Clone) -271550,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.117,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.117,Enemy(Clone) -280006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.117,Enemy(Clone) -274306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.117,Enemy(Clone) -272346,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.117,Enemy(Clone) -273506,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.25465,Enemy(Clone) -272346,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.30414,Enemy(Clone) -273506,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.30414,Enemy(Clone) -275918,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.37461,Enemy(Clone) -273122,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.37461,Enemy(Clone) -275918,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.37461,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.40569,Enemy(Clone) -271734,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.40569,Enemy(Clone) -270170,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.40569,Enemy(Clone) -271458,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.40569,Enemy(Clone) -270074,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.40569,Enemy(Clone) -272646,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.40569,Enemy(Clone) -274030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.40569,Enemy(Clone) -272530,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.51227,Enemy(Clone) -275918,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.51227,Enemy(Clone) -270998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.51227,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.51227,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.51227,Enemy(Clone) -275918,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.51227,Enemy(Clone) -270998,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.58774,Enemy(Clone) -270074,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270074,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+15.58774,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -280558,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270630,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270814,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270814,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -270998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -271458,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -271458,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -271826,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272070,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272070,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272254,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272346,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272346,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272346,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272438,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -272846,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -273506,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -273506,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -273938,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -274030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -274030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -274122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -276104,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -277276,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -281232,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -273506,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.58774,Enemy(Clone) -280006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.58774,Enemy(Clone) -270906,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+15.65026,Enemy(Clone) -281424,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.65026,Enemy(Clone) -272438,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.65026,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.65026,Enemy(Clone) -269698,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+15.65026,Enemy(Clone) -272346,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.65026,Enemy(Clone) -278326,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.65026,Enemy(Clone) -272438,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.65026,Enemy(Clone) -274122,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.65026,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.76686,Enemy(Clone) -274122,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.76686,Enemy(Clone) -272438,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.76686,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.76686,Enemy(Clone) -270906,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+15.76686,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.76686,Enemy(Clone) -273030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.76686,Enemy(Clone) -280006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.76686,Enemy(Clone) -274306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.76686,Enemy(Clone) -280742,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.76686,Enemy(Clone) -279278,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.76686,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.76686,Enemy(Clone) -271642,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.84767,Enemy(Clone) -269984,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+15.84767,Enemy(Clone) -274122,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.84767,Enemy(Clone) -275918,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.84767,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.84767,Enemy(Clone) -269984,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+15.84767,Enemy(Clone) -276858,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.84767,Enemy(Clone) -276480,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.84767,Enemy(Clone) -273030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.92739,Enemy(Clone) -276480,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+15.92739,Enemy(Clone) -279066,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.01077,Enemy(Clone) -271458,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.01077,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.01077,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.01077,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.01077,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.01077,Enemy(Clone) -278476,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.08005,Enemy(Clone) -272646,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+16.08005,Enemy(Clone) -272738,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.19204,Enemy(Clone) -273938,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.19204,Enemy(Clone) -271642,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.19204,Enemy(Clone) -271274,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.25628,Enemy(Clone) -274306,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+16.25628,Enemy(Clone) -278696,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.25628,Enemy(Clone) -270538,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+16.30329,Enemy(Clone) -277998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.30329,Enemy(Clone) -272254,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+16.36092,Enemy(Clone) -269894,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+16.40266,Enemy(Clone) -271182,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+16.439,Enemy(Clone) -279914,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.439,Enemy(Clone) -274306,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+16.5,Enemy(Clone) -271090,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+16.5,Enemy(Clone) -272162,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+16.5,Enemy(Clone) -277554,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.7097,Enemy(Clone) -276858,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.79001,Enemy(Clone) -277042,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+16.79001,Enemy(Clone) -276380,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+16.79001,Enemy(Clone) -273598,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+16.79001,Enemy(Clone) -278570,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+16.79001,Enemy(Clone) -269792,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+16.79001,Enemy(Clone) -277368,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+16.79001,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.79001,Enemy(Clone) -273030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.85298,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.85298,Enemy(Clone) -273030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.85298,Enemy(Clone) -273938,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+16.85298,Enemy(Clone) -272254,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+16.90739,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.90739,Enemy(Clone) -273030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.90739,Enemy(Clone) -272254,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+17.04346,Enemy(Clone) -276858,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+17.04346,Enemy(Clone) -277368,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.25192,Enemy(Clone) -274956,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+17.25192,Enemy(Clone) -271642,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+17.30162,Enemy(Clone) -280842,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.42616,Enemy(Clone) -274306,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+17.49052,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.54254,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.62016,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.62016,Enemy(Clone) -274306,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+17.75929,Enemy(Clone) -279546,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.75929,Enemy(Clone) -274306,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+17.82119,Enemy(Clone) -279546,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.82119,Enemy(Clone) -277554,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+17.86464,Enemy(Clone) -275306,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.03358,Enemy(Clone) -272438,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+18.0923,Enemy(Clone) -281744,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -269894,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -269894,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -269894,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -270538,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -270538,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -271090,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -271182,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -271182,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -271182,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.0923,Enemy(Clone) -281232,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.15306,Enemy(Clone) -277998,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.15306,Enemy(Clone) -281232,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.15306,Enemy(Clone) -272162,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.15306,Enemy(Clone) -274306,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.23315,Enemy(Clone) -274412,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.23315,Enemy(Clone) -272646,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+18.23315,Enemy(Clone) -277998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.23315,Enemy(Clone) -281232,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.23315,Enemy(Clone) -274714,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.30706,Enemy(Clone) -272254,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.30706,Enemy(Clone) -275502,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.30706,Enemy(Clone) -269608,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.30706,Enemy(Clone) -275306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.30706,Enemy(Clone) -274622,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.30706,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.30706,Enemy(Clone) -275056,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.39983,Enemy(Clone) -272646,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.39983,Enemy(Clone) -279278,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.39983,Enemy(Clone) -277276,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.49095,Enemy(Clone) -274714,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+18.49095,Enemy(Clone) -275056,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.49095,Enemy(Clone) -269608,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.49095,Enemy(Clone) -274622,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.61865,Enemy(Clone) -271642,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.61865,Enemy(Clone) -269608,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.61865,Enemy(Clone) -275306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.61865,Enemy(Clone) -274622,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.61865,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.61865,Enemy(Clone) -275056,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.61865,Enemy(Clone) -280006,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.71986,Enemy(Clone) -270538,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+18.71986,Enemy(Clone) -269608,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.71986,Enemy(Clone) -275306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.71986,Enemy(Clone) -274622,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.71986,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.71986,Enemy(Clone) -275056,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.81027,Enemy(Clone) -272738,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.81027,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.81027,Enemy(Clone) -275502,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.81027,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.81027,Enemy(Clone) -274956,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.81027,Enemy(Clone) -271642,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+18.81027,Enemy(Clone) -280006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.81027,Enemy(Clone) -276480,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.87901,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.87901,Enemy(Clone) -276480,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+18.95801,Enemy(Clone) -281140,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.95801,Enemy(Clone) -274122,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+19.00164,Enemy(Clone) -276480,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+19.04786,Enemy(Clone) -276858,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.04786,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.10828,Enemy(Clone) -277648,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.10828,Enemy(Clone) -275502,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.10828,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.13262,Enemy(Clone) -270446,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.13262,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.13262,Enemy(Clone) -275502,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+19.18933,Enemy(Clone) -277648,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.18933,Enemy(Clone) -275502,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.23611,Enemy(Clone) -276858,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.23611,Enemy(Clone) -270354,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.29702,Enemy(Clone) -277648,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.33233,Enemy(Clone) -276858,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.33233,Enemy(Clone) -272846,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.36127,Enemy(Clone) -272846,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.36127,Enemy(Clone) -279638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.36127,Enemy(Clone) -274714,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+19.36127,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.42216,Enemy(Clone) -272846,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.42216,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.48296,Enemy(Clone) -272846,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.54099,Enemy(Clone) -270538,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+19.58949,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.6513,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.73463,Enemy(Clone) -277554,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.73463,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.79806,Enemy(Clone) -277998,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+19.79806,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.86109,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.91995,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.91995,Enemy(Clone) -272738,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.91995,Enemy(Clone) -272738,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+19.96833,Enemy(Clone) -277368,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.03166,Enemy(Clone) -276480,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+20.09571,Enemy(Clone) -277906,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+20.15942,Enemy(Clone) -270354,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.15942,Enemy(Clone) -279638,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.15942,Enemy(Clone) -278090,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+20.15942,Enemy(Clone) -269792,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.22083,Enemy(Clone) -277368,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.26776,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.49385,Enemy(Clone) -276858,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.49385,Enemy(Clone) -277998,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+20.49385,Enemy(Clone) -279914,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.55811,Enemy(Clone) -275502,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.55811,Enemy(Clone) -277276,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.55811,Enemy(Clone) -269792,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -270630,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -270998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -277462,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -271274,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -271458,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -274030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -280842,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -276104,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -276480,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -277276,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -277998,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+20.61829,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -278696,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.61829,Enemy(Clone) -279066,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.72814,Enemy(Clone) -280842,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.72814,Enemy(Clone) -281036,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.72814,Enemy(Clone) -276480,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.72814,Enemy(Clone) -274956,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.87,Enemy(Clone) -280426,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+20.87,Enemy(Clone) -280842,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.87,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.87,Enemy(Clone) -276858,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.87,Enemy(Clone) -272738,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.87,Enemy(Clone) -275306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+20.96539,Enemy(Clone) -279638,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -277462,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -270354,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -279914,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -280216,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -279730,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -279066,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -278476,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -278696,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -273122,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -272530,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -271458,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -270998,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -271274,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+20.96539,Enemy(Clone) -279914,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.96539,Enemy(Clone) -276104,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.96539,Enemy(Clone) -280842,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+20.96539,Enemy(Clone) -277804,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+20.96539,Enemy(Clone) -277998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -276196,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -280426,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -278090,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -277906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -277804,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -279278,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.0969,Enemy(Clone) -281140,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.24549,Enemy(Clone) -270630,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.24549,Enemy(Clone) -270262,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+21.24549,Enemy(Clone) -280558,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.24549,Enemy(Clone) -281140,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.24549,Enemy(Clone) -280324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.24549,Enemy(Clone) -279914,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.24549,Enemy(Clone) -275734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.24549,Enemy(Clone) -274214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.32778,Enemy(Clone) -270630,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.32778,Enemy(Clone) -280742,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.32778,Enemy(Clone) -280216,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.32778,Enemy(Clone) -269792,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.32778,Enemy(Clone) -271274,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.40775,Enemy(Clone) -281140,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.40775,Enemy(Clone) -278696,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.40775,Enemy(Clone) -269792,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.46966,Enemy(Clone) -270262,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+21.46966,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.46966,Enemy(Clone) -280742,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.46966,Enemy(Clone) -281232,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.46966,Enemy(Clone) -278476,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.53317,Enemy(Clone) -277998,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+21.53317,Enemy(Clone) -278696,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.53317,Enemy(Clone) -279278,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.5923,Enemy(Clone) -279278,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.6521,Enemy(Clone) -274956,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+21.6521,Enemy(Clone) -279278,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.70205,Enemy(Clone) -274122,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.70205,Enemy(Clone) -275826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.70205,Enemy(Clone) -279546,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.70205,Enemy(Clone) -279638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.78483,Enemy(Clone) -281744,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+21.78483,Enemy(Clone) -275826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.78483,Enemy(Clone) -281744,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.78483,Enemy(Clone) -279638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.85408,Enemy(Clone) -275826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.91884,Enemy(Clone) -270630,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+21.9959,Enemy(Clone) -279066,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+21.9959,Enemy(Clone) -276950,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.03883,Enemy(Clone) -280426,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+22.03883,Enemy(Clone) -273214,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.09851,Enemy(Clone) -277368,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.09851,Enemy(Clone) -277462,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.09851,Enemy(Clone) -277554,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.1608,Enemy(Clone) -280324,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+22.1608,Enemy(Clone) -270354,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+22.1608,Enemy(Clone) -270354,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.3402,Enemy(Clone) -277648,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.3402,Enemy(Clone) -275306,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+22.3402,Enemy(Clone) -276196,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.6061,Enemy(Clone) -279546,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+22.70377,Enemy(Clone) -280742,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.81404,Enemy(Clone) -270262,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+22.81404,Enemy(Clone) -274122,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.81404,Enemy(Clone) -271642,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+22.87503,Enemy(Clone) -274122,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+23.00413,Enemy(Clone) -278696,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+23.13454,Enemy(Clone) -281652,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+23.35841,Enemy(Clone) -272738,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+23.42601,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+23.96559,Enemy(Clone) -280558,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+24.06243,Enemy(Clone) -280558,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -271274,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -272738,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.06243,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -275734,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.06243,Enemy(Clone) -275734,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.06243,Enemy(Clone) -274214,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.06243,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -279066,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.06243,Enemy(Clone) -274214,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+24.30552,Enemy(Clone) -270354,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.30552,Enemy(Clone) -281036,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.30552,Enemy(Clone) -277462,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+24.36619,Enemy(Clone) -277276,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.41247,Enemy(Clone) -276196,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.41247,Enemy(Clone) -276104,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.41247,Enemy(Clone) -270630,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.41247,Enemy(Clone) -276010,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.44911,Enemy(Clone) -280558,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+24.44911,Enemy(Clone) -280742,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.44911,Enemy(Clone) -277462,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.44911,Enemy(Clone) -276664,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.4913,Enemy(Clone) -281232,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.4913,Enemy(Clone) -279822,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.55264,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.55264,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.55264,Enemy(Clone) -279406,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.61834,Enemy(Clone) -274214,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+24.61834,Enemy(Clone) -278090,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.61834,Enemy(Clone) -280426,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.67955,Enemy(Clone) -280324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.73849,Enemy(Clone) -273598,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.73849,Enemy(Clone) -280650,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.73849,Enemy(Clone) -271366,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.73849,Enemy(Clone) -274122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.73849,Enemy(Clone) -269698,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.78359,Enemy(Clone) -275734,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+24.78359,Enemy(Clone) -271366,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.78359,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+24.78359,Enemy(Clone) -276766,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.78359,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.78359,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.84773,Enemy(Clone) -274530,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+24.84773,Enemy(Clone) -275410,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+24.84773,Enemy(Clone) -281836,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.84773,Enemy(Clone) -275826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.84773,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+24.92952,Enemy(Clone) -277184,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.0505,Enemy(Clone) -274622,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+25.16926,Enemy(Clone) -269698,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.16926,Enemy(Clone) -271642,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.16926,Enemy(Clone) -273598,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.16926,Enemy(Clone) -281836,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.16926,Enemy(Clone) -276766,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.16926,Enemy(Clone) -275306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.16926,Enemy(Clone) -274956,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.16926,Enemy(Clone) -277184,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.16926,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.16926,Enemy(Clone) -282006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.22684,Enemy(Clone) -282006,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+25.34037,Enemy(Clone) -273030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.38028,Enemy(Clone) -274714,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+25.44152,Enemy(Clone) -281744,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.44152,Enemy(Clone) -275602,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+25.5212,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.5212,Enemy(Clone) -279546,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.5212,Enemy(Clone) -271642,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.5652,Enemy(Clone) -280944,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.5652,Enemy(Clone) -281424,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+25.5652,Enemy(Clone) -282006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -269698,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280558,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280558,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -271274,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -271274,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -271366,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -276766,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -275918,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -272438,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -273030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -273030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -273214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -282006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -282006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -269984,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -275410,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -274530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279546,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -272070,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -276572,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -276950,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -277184,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -274030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -278090,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280426,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -283778,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279822,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279822,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -278570,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279066,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279066,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280742,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280742,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279406,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -279406,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280944,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -280944,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -281744,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.62587,Enemy(Clone) -281744,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -280006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -274306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -271642,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -271642,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -269984,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -277042,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -277906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -278570,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -280944,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.66798,Enemy(Clone) -281836,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -273214,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+25.75295,Enemy(Clone) -272162,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -271366,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -275056,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -276380,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -277804,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.75295,Enemy(Clone) -281652,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.81409,Enemy(Clone) -281836,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.81409,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.81409,Enemy(Clone) -274122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.81409,Enemy(Clone) -271182,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.81409,Enemy(Clone) -273506,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.89267,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+25.89267,Enemy(Clone) -272346,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.89267,Enemy(Clone) -273506,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.89267,Enemy(Clone) -271182,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.89267,Enemy(Clone) -271642,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.95373,Enemy(Clone) -270074,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.95373,Enemy(Clone) -278326,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.95373,Enemy(Clone) -277804,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+25.95373,Enemy(Clone) -269984,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.01666,Enemy(Clone) -281836,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.01666,Enemy(Clone) -277462,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+26.01666,Enemy(Clone) -271550,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.01666,Enemy(Clone) -277906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.08534,Enemy(Clone) -277042,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.08534,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.08534,Enemy(Clone) -276380,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.08534,Enemy(Clone) -272162,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.08534,Enemy(Clone) -272346,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.08534,Enemy(Clone) -280650,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.08534,Enemy(Clone) -270722,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.1463,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.1463,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.1463,Enemy(Clone) -271182,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.1463,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.23071,Enemy(Clone) -273324,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.23071,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.23071,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.23071,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.23071,Enemy(Clone) -281652,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.23071,Enemy(Clone) -274214,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+26.23071,Enemy(Clone) -274530,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.23071,Enemy(Clone) -280006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.31328,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.31328,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.31328,Enemy(Clone) -281652,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.38005,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.38005,Enemy(Clone) -278326,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.38005,Enemy(Clone) -269608,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.38005,Enemy(Clone) -274622,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.45497,Enemy(Clone) -275056,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.45497,Enemy(Clone) -275734,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.45497,Enemy(Clone) -275214,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.45497,Enemy(Clone) -274714,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.45497,Enemy(Clone) -269608,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+26.51417,Enemy(Clone) -269608,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.51417,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.51417,Enemy(Clone) -275734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.51417,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.51417,Enemy(Clone) -274214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.51417,Enemy(Clone) -274214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.51417,Enemy(Clone) -274622,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.51417,Enemy(Clone) -275056,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.63471,Enemy(Clone) -270906,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+26.6848,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.75014,Enemy(Clone) -273938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.81382,Enemy(Clone) -280944,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+26.81382,Enemy(Clone) -273938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.85997,Enemy(Clone) -274306,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.85997,Enemy(Clone) -283872,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.85997,Enemy(Clone) -275410,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.85997,Enemy(Clone) -276196,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.92206,Enemy(Clone) -273938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.92206,Enemy(Clone) -269608,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.92206,Enemy(Clone) -274622,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -281424,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -276010,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+26.98273,Enemy(Clone) -273938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+26.98273,Enemy(Clone) -281036,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -276664,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+26.98273,Enemy(Clone) -275410,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -274530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -274956,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -276104,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -276288,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -277276,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+26.98273,Enemy(Clone) -281332,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.04368,Enemy(Clone) -283584,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+27.11423,Enemy(Clone) -276572,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -281744,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -273598,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -281036,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -276010,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -277462,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -279822,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -279406,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -276010,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -276104,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -276288,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -277462,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -277462,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -279822,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -279406,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -281424,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -271366,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -281036,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.11423,Enemy(Clone) -281836,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -280944,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.11423,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.16932,Enemy(Clone) -278326,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+27.16932,Enemy(Clone) -276766,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.16932,Enemy(Clone) -281332,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+27.16932,Enemy(Clone) -269698,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.16932,Enemy(Clone) -280944,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.25014,Enemy(Clone) -271642,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.25014,Enemy(Clone) -281560,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.25014,Enemy(Clone) -277184,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.25014,Enemy(Clone) -281332,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.25014,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.25014,Enemy(Clone) -274956,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.25014,Enemy(Clone) -276196,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.31254,Enemy(Clone) -282006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.31254,Enemy(Clone) -271734,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+27.31254,Enemy(Clone) -282006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.31254,Enemy(Clone) -281652,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.38669,Enemy(Clone) -271182,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.38669,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.38669,Enemy(Clone) -277184,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+27.38669,Enemy(Clone) -270906,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.44979,Enemy(Clone) -272254,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.44979,Enemy(Clone) -272646,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.51036,Enemy(Clone) -276196,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.51036,Enemy(Clone) -272254,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.51036,Enemy(Clone) -273030,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.56929,Enemy(Clone) -271366,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+27.56929,Enemy(Clone) -272254,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.56929,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.56929,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.56929,Enemy(Clone) -274030,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+27.56929,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.63449,Enemy(Clone) -274214,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+27.63449,Enemy(Clone) -281424,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.63449,Enemy(Clone) -272254,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.63449,Enemy(Clone) -276288,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.63449,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.63449,Enemy(Clone) -276288,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.69823,Enemy(Clone) -280006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.69823,Enemy(Clone) -276380,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.69823,Enemy(Clone) -277042,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.69823,Enemy(Clone) -272070,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.69823,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.69823,Enemy(Clone) -272162,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.69823,Enemy(Clone) -272346,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.69823,Enemy(Clone) -281036,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.69823,Enemy(Clone) -274214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.75924,Enemy(Clone) -281036,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+27.75924,Enemy(Clone) -276766,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.75924,Enemy(Clone) -276288,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+27.75924,Enemy(Clone) -283584,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.75924,Enemy(Clone) -272070,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.75924,Enemy(Clone) -283584,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.75924,Enemy(Clone) -273506,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.75924,Enemy(Clone) -273324,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.79998,Enemy(Clone) -269698,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+27.97998,Enemy(Clone) -272646,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+27.97998,Enemy(Clone) -283872,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+27.97998,Enemy(Clone) -272346,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.04243,Enemy(Clone) -270170,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.04243,Enemy(Clone) -277184,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.04243,Enemy(Clone) -272346,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.10907,Enemy(Clone) -274306,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.10907,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.10907,Enemy(Clone) -283492,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.17732,Enemy(Clone) -277184,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+28.17732,Enemy(Clone) -276572,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.40937,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.47738,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.47738,Enemy(Clone) -269698,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+28.47738,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.47738,Enemy(Clone) -283492,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.60486,Enemy(Clone) -272938,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.60486,Enemy(Clone) -277648,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.65146,Enemy(Clone) -276664,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+28.65146,Enemy(Clone) -276288,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.65146,Enemy(Clone) -281424,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.71406,Enemy(Clone) -276766,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -276766,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -276196,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -276288,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -277184,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -281332,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -281424,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -269698,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -276196,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -276288,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -277184,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -281424,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -269698,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+28.71406,Enemy(Clone) -276196,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.78524,Enemy(Clone) -277804,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.78524,Enemy(Clone) -273324,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.8962,Enemy(Clone) -283676,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+28.8962,Enemy(Clone) -283492,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+28.8962,Enemy(Clone) -283584,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+28.8962,Enemy(Clone) -271826,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.8962,Enemy(Clone) -277906,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.8962,Enemy(Clone) -273324,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+28.8962,Enemy(Clone) -272438,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+28.96371,Enemy(Clone) -278090,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+28.96371,Enemy(Clone) -280324,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+29.04879,Enemy(Clone) -270074,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+29.04879,Enemy(Clone) -283778,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+29.04879,Enemy(Clone) -283492,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.04879,Enemy(Clone) -277648,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+29.13915,Enemy(Clone) -276380,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+29.13915,Enemy(Clone) -270074,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+29.13915,Enemy(Clone) -283778,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+29.13915,Enemy(Clone) -281332,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.13915,Enemy(Clone) -277804,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.13915,Enemy(Clone) -277906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.13915,Enemy(Clone) -278090,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.13915,Enemy(Clone) -280426,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.13915,Enemy(Clone) -280426,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+29.13915,Enemy(Clone) -280324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.13915,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -283778,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+29.21256,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -283492,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.21256,Enemy(Clone) -283492,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.30534,Enemy(Clone) -283778,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+29.39574,Enemy(Clone) -281332,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+29.48109,Enemy(Clone) -281836,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.48109,Enemy(Clone) -280944,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.48109,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.48109,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.48109,Enemy(Clone) -281332,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.48109,Enemy(Clone) -280944,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.48109,Enemy(Clone) -281836,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.5566,Enemy(Clone) -273030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.5566,Enemy(Clone) -273030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.5566,Enemy(Clone) -273030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.67925,Enemy(Clone) -274306,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+29.67925,Enemy(Clone) -273506,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.67925,Enemy(Clone) -272646,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.88063,Enemy(Clone) -273598,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.88063,Enemy(Clone) -273598,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.88063,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+29.95181,Enemy(Clone) -283492,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+30.08757,Enemy(Clone) -283492,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.08757,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.08757,Enemy(Clone) -283492,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.08757,Enemy(Clone) -271182,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.08757,Enemy(Clone) -270906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.08757,Enemy(Clone) -271182,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.08757,Enemy(Clone) -283492,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.08757,Enemy(Clone) -281332,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.13206,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.13206,Enemy(Clone) -281560,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+30.13206,Enemy(Clone) -270074,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.13206,Enemy(Clone) -283584,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.20033,Enemy(Clone) -272530,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.20033,Enemy(Clone) -283584,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.20033,Enemy(Clone) -273506,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.26211,Enemy(Clone) -278570,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.26211,Enemy(Clone) -278326,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.26211,Enemy(Clone) -272070,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.30447,Enemy(Clone) -280006,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.30447,Enemy(Clone) -283584,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+30.30447,Enemy(Clone) -274306,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.30447,Enemy(Clone) -271182,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.30447,Enemy(Clone) -270906,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.30447,Enemy(Clone) -277042,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.30447,Enemy(Clone) -271734,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+30.37087,Enemy(Clone) -276380,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.37087,Enemy(Clone) -275918,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.37087,Enemy(Clone) -272162,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.37087,Enemy(Clone) -276572,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.43563,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.43563,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.43563,Enemy(Clone) -279066,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.43563,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.43563,Enemy(Clone) -280558,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.43563,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -281652,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -286156,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -271734,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+30.58906,Enemy(Clone) -277804,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -277906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -278090,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -280426,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -280324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -272438,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -273214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -277648,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -274122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -274530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -270074,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -274956,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -276950,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -274030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -277804,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -277906,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -278090,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -280426,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -280324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -279822,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -279406,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -270722,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.58906,Enemy(Clone) -274956,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.58906,Enemy(Clone) -276950,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+30.664,Enemy(Clone) -274530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -275214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -275410,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -274956,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.664,Enemy(Clone) -283676,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -269984,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -270722,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.664,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -280742,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -273506,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -280650,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.664,Enemy(Clone) -281652,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.664,Enemy(Clone) -283872,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.77636,Enemy(Clone) -283676,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.77636,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.77636,Enemy(Clone) -275410,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.77636,Enemy(Clone) -275410,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.77636,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.77636,Enemy(Clone) -271734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.77636,Enemy(Clone) -274956,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.77636,Enemy(Clone) -285270,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.8879,Enemy(Clone) -274530,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+30.8879,Enemy(Clone) -272438,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.8879,Enemy(Clone) -278326,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.8879,Enemy(Clone) -278570,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.8879,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.8879,Enemy(Clone) -274530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.8879,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.99962,Enemy(Clone) -272070,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.99962,Enemy(Clone) -274622,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.99962,Enemy(Clone) -280742,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+30.99962,Enemy(Clone) -283676,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.99962,Enemy(Clone) -280006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.99962,Enemy(Clone) -272846,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+30.99962,Enemy(Clone) -270074,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+31.0673,Enemy(Clone) -272070,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.0673,Enemy(Clone) -280742,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+31.0673,Enemy(Clone) -272530,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+31.15395,Enemy(Clone) -274030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.15395,Enemy(Clone) -280006,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.24437,Enemy(Clone) -275602,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.34408,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.34408,Enemy(Clone) -279730,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.34408,Enemy(Clone) -278570,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.34408,Enemy(Clone) -278326,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.34408,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.34408,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.34408,Enemy(Clone) -274412,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+31.4321,Enemy(Clone) -280650,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.4321,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.4321,Enemy(Clone) -283396,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.4321,Enemy(Clone) -272162,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.4321,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.4321,Enemy(Clone) -284690,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+31.54248,Enemy(Clone) -280742,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+31.63462,Enemy(Clone) -283396,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+31.90645,Enemy(Clone) -274622,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+32.0099,Enemy(Clone) -278570,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.0099,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+32.0099,Enemy(Clone) -283396,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+32.06371,Enemy(Clone) -278326,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.06371,Enemy(Clone) -283676,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.21584,Enemy(Clone) -283396,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.21584,Enemy(Clone) -283396,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+32.25267,Enemy(Clone) -272162,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.39815,Enemy(Clone) -274306,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.39815,Enemy(Clone) -274030,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.39815,Enemy(Clone) -275918,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.43816,Enemy(Clone) -276572,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+32.59679,Enemy(Clone) -276572,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.59679,Enemy(Clone) -270170,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+32.63409,Enemy(Clone) -283396,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+32.7793,Enemy(Clone) -285270,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+32.7793,Enemy(Clone) -277648,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+32.7793,Enemy(Clone) -278696,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+32.7793,Enemy(Clone) -285454,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+32.7793,Enemy(Clone) -272938,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+32.7793,Enemy(Clone) -274030,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+33.04959,Enemy(Clone) -283396,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+33.04959,Enemy(Clone) -274956,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+33.04959,Enemy(Clone) -283676,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+33.04959,Enemy(Clone) -283396,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+33.28355,Enemy(Clone) -283872,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.28355,Enemy(Clone) -274030,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+33.48774,Enemy(Clone) -275918,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+33.48774,Enemy(Clone) -275918,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+33.48774,Enemy(Clone) -278476,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+33.65759,Enemy(Clone) -274412,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.65759,Enemy(Clone) -280650,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.65759,Enemy(Clone) -269894,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.696,Enemy(Clone) -286156,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -286156,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -274412,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -280650,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -286362,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.696,Enemy(Clone) -280650,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -269894,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.696,Enemy(Clone) -280650,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+33.75787,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.75787,Enemy(Clone) -286362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.75787,Enemy(Clone) -277368,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.82712,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.82712,Enemy(Clone) -270262,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.89005,Enemy(Clone) -270170,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+33.89005,Enemy(Clone) -286156,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.89005,Enemy(Clone) -272438,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+33.94973,Enemy(Clone) -272438,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+33.9945,Enemy(Clone) -273122,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+34.04784,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.04784,Enemy(Clone) -270446,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+34.04784,Enemy(Clone) -286362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.0866,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.14466,Enemy(Clone) -270170,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+34.14466,Enemy(Clone) -272846,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.14466,Enemy(Clone) -272846,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.20211,Enemy(Clone) -283396,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.20211,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.29613,Enemy(Clone) -278696,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+34.35353,Enemy(Clone) -277648,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.35353,Enemy(Clone) -278696,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.35353,Enemy(Clone) -285270,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.35353,Enemy(Clone) -272738,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.35353,Enemy(Clone) -272738,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.39943,Enemy(Clone) -284690,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.39943,Enemy(Clone) -284690,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.4756,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.4756,Enemy(Clone) -275918,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.52236,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.52236,Enemy(Clone) -283396,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.57771,Enemy(Clone) -277368,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.57771,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.57771,Enemy(Clone) -286362,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+34.72713,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.72713,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.79701,Enemy(Clone) -286260,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+34.79701,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.79701,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.8405,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.8405,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.90184,Enemy(Clone) -274030,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+34.96502,Enemy(Clone) -270170,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+34.96502,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.0676,Enemy(Clone) -277368,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+35.0676,Enemy(Clone) -274030,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.13401,Enemy(Clone) -277648,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+35.13401,Enemy(Clone) -286260,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.13401,Enemy(Clone) -278696,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.13401,Enemy(Clone) -277368,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.21181,Enemy(Clone) -278696,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+35.21181,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.21181,Enemy(Clone) -285270,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.25864,Enemy(Clone) -285084,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.25864,Enemy(Clone) -277648,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.25864,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+35.31594,Enemy(Clone) -277648,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+35.31594,Enemy(Clone) -279546,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.36015,Enemy(Clone) -285270,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+35.41562,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.41562,Enemy(Clone) -275056,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.54241,Enemy(Clone) -272846,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.54241,Enemy(Clone) -269984,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.54241,Enemy(Clone) -284690,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.54241,Enemy(Clone) -272738,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.54241,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -286156,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -284410,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -272938,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -280944,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -271550,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -274622,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -279638,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -277276,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -286362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -285454,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -280650,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -285638,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -270814,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -285178,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -269698,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -281140,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+35.58118,Enemy(Clone) -275306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -274714,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.58118,Enemy(Clone) -286156,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+35.64315,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -285084,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -277276,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -278696,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -285270,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -280742,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -275306,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.64315,Enemy(Clone) -285362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.72799,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.72799,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.80855,Enemy(Clone) -280558,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.80855,Enemy(Clone) -277554,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+35.86964,Enemy(Clone) -281836,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.86964,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.92541,Enemy(Clone) -285362,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+35.98719,Enemy(Clone) -275734,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+35.98719,Enemy(Clone) -276010,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+35.98719,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.05334,Enemy(Clone) -270538,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+36.05334,Enemy(Clone) -274622,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.05334,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.05334,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.16377,Enemy(Clone) -274622,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -284410,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -284410,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -276664,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+36.16377,Enemy(Clone) -273214,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.16377,Enemy(Clone) -276950,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.16377,Enemy(Clone) -285638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -285638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -280842,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.16377,Enemy(Clone) -277368,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.16377,Enemy(Clone) -285638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -270814,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -272738,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -284690,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -284690,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -272738,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -272846,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -286156,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.16377,Enemy(Clone) -272846,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.27081,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -286156,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.27081,Enemy(Clone) -281560,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -272530,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -284102,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -285362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -270446,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.27081,Enemy(Clone) -285638,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.35411,Enemy(Clone) -284102,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.35411,Enemy(Clone) -281140,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.35411,Enemy(Clone) -285084,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.35411,Enemy(Clone) -285084,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.41551,Enemy(Clone) -285638,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+36.41551,Enemy(Clone) -270814,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+36.47862,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.47862,Enemy(Clone) -273214,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.47862,Enemy(Clone) -270446,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+36.47862,Enemy(Clone) -276950,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.47862,Enemy(Clone) -271090,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.52323,Enemy(Clone) -285822,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.52323,Enemy(Clone) -285270,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.66354,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.66354,Enemy(Clone) -281140,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+36.66354,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.71907,Enemy(Clone) -277368,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.71907,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.8271,Enemy(Clone) -277368,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+36.8271,Enemy(Clone) -272438,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+36.88035,Enemy(Clone) -285362,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -280842,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -285178,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -280558,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -285914,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -273598,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -272938,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -273324,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -285546,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -285454,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -277462,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -279638,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -270630,ExplosionDamager,EnemyDefencer,,Metal,25,50,,0.5,,,1,,3,Explosion
+,1,1
+36.88035,Enemy(Clone) -285362,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+36.88035,Enemy(Clone) -285178,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+36.88035,Enemy(Clone) -285084,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+36.94371,Enemy(Clone) -280842,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.94371,Enemy(Clone) -285178,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.94371,Enemy(Clone) -280558,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+36.94371,Enemy(Clone) -285362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.00346,Enemy(Clone) -272938,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+37.11263,Enemy(Clone) -277368,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.11263,Enemy(Clone) -274622,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+37.11263,Enemy(Clone) -272530,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+37.11263,Enemy(Clone) -280842,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+37.11263,Enemy(Clone) -285362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.20403,Enemy(Clone) -284102,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+37.30624,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+37.36776,Enemy(Clone) -280558,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+37.36776,Enemy(Clone) -272938,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.36776,Enemy(Clone) -285546,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.36776,Enemy(Clone) -273598,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.36776,Enemy(Clone) -273324,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.41349,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+37.41349,Enemy(Clone) -285178,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.47764,Enemy(Clone) -280742,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+37.47764,Enemy(Clone) -276664,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.47764,Enemy(Clone) -276010,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.53991,Enemy(Clone) -276288,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.53991,Enemy(Clone) -272738,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+37.53991,Enemy(Clone) -285914,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.53991,Enemy(Clone) -277554,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.7429,Enemy(Clone) -285362,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+37.7429,Enemy(Clone) -285084,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.86737,Enemy(Clone) -270538,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+37.86737,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+37.93259,Enemy(Clone) -271826,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+37.98938,Enemy(Clone) -286362,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.10912,Enemy(Clone) -270998,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+38.10912,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.10912,Enemy(Clone) -286362,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.10912,Enemy(Clone) -272346,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.20877,Enemy(Clone) -273122,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.3085,Enemy(Clone) -285822,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+38.43204,Enemy(Clone) -280216,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.47658,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.47658,Enemy(Clone) -278476,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.54578,Enemy(Clone) -280216,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.54578,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+38.6038,Enemy(Clone) -276104,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.65023,Enemy(Clone) -281036,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.65023,Enemy(Clone) -276104,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.70809,Enemy(Clone) -271550,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+38.78459,Enemy(Clone) -278476,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.78459,Enemy(Clone) -274714,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+38.84844,Enemy(Clone) -270170,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+38.84844,Enemy(Clone) -280944,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.96266,Enemy(Clone) -286260,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+38.96266,Enemy(Clone) -279546,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.96266,Enemy(Clone) -287888,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+38.96266,Enemy(Clone) -281036,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+38.96266,Enemy(Clone) -273122,ResonanceDamager,EnemyDefencer,,Metal,10,20,,0.5,,,1,,0,Resonance
+,1,0
+39.04,Enemy(Clone) -286362,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
+39.04,Enemy(Clone) -269698,ChaoDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,,1,1
+39.04,Enemy(Clone) -285638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+39.09744,Enemy(Clone) -285638,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+39.09744,Enemy(Clone) -275056,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+39.09744,Enemy(Clone) -275056,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+39.09744,Enemy(Clone) -275056,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+39.09744,Enemy(Clone) -269984,SaDouChengBingDamager,EnemyDefencer,PlayerAttacker,Metal,25,5,10,0.5,,1,1,,1,Projectile
+,1,1

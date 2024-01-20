@@ -6,15 +6,13 @@ namespace CodeTao
 {
     public class ScaleController : UnitComponent, IWAtReceiver
     {
-        public BindableStat scale = new BindableStat(1);
-        public MonoBehaviour controlee;
+        public BindableStat scale = new BindableStat(-1);
         public void OnEnable()
         {
-            if (!controlee) controlee = Unit;
             scale.Init();
             scale.RegisterWithInitValue(value =>
             {
-                controlee.LocalScale(value);
+                this.LocalScale(value);
             }).UnRegisterWhenGameObjectDestroyed(this);
         }
 

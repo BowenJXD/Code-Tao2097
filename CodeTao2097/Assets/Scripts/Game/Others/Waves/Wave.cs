@@ -9,11 +9,10 @@ namespace CodeTao
     /// <summary>
     /// 从自身出发，呈圆形向外扩散的单位，通过触碰来造成伤害。
     /// </summary>
-    public class Wave : UnitController, IWeaponDerivative, IWAtReceiver
+    public class Wave : UnitController, IWeaponDerivative
     {
         public Ease easeMode = Ease.Linear;
         protected SpriteRenderer sp;
-        protected Collider2D col;
         protected Damager damager;
         protected Attacker attacker;
         public Wave SetDamager(Damager newDamager)
@@ -31,32 +30,27 @@ namespace CodeTao
         }
 
         public float defaultPercent = 0.2f;
-        public BindableStat area = new BindableStat(2);
-        public BindableStat lifeTime = new BindableStat(1);
 
         protected List<Collider2D> collided = new List<Collider2D>();
 
-        void Awake()
+        public override void PreInit()
         {
-            sp = this.GetComponentInDescendants<SpriteRenderer>();
-            col = this.GetCollider();
+            base.PreInit();
+            if (!sp) sp = this.GetComponentInDescendants<SpriteRenderer>();
         }
         
         public override void Init()
         {
             base.Init();
-            try
+            if (sp.material.HasProperty("_Percent"))
             {
                 sp.material.SetFloat("_Percent", defaultPercent);
             }
-            catch (Exception e)
-            {
-                LogKit.I(e);
-            }
 
-            col.OnTriggerEnter2DEvent(Attack).UnRegisterWhenGameObjectDestroyed(this);
+            this.GetCollider()?.OnTriggerEnter2DEvent(Attack).UnRegisterWhenGameObjectDestroyed(this);
+            GetComp<LoopTaskController>()?.AddFinish(Finish);
             transform.localScale = Vector3.zero;
-            transform.DOScale(area, lifeTime).SetEase(easeMode). OnComplete(Finish);
+            transform.DOScale(1, GetComp<LoopTaskController>()?.duration).SetEase(easeMode);
         }
 
         protected virtual void Attack(Collider2D col)
@@ -75,23 +69,20 @@ namespace CodeTao
         
         void Finish()
         {
-            /*sp.material.DOFloat(0, "_Percent", 0.2f).OnComplete(() =>
+            if (sp.material.HasProperty("_Percent"))
             {
-                Deinit();
-            });*/
-            ActionKit.Delay(0.2f, Deinit).Start(this);
+                sp.material.DOFloat(0, "_Percent", 0.2f).OnComplete(Deinit);
+            }
+            else
+            {
+                ActionKit.Delay(0.2f, Deinit).Start(this);
+            }
         }
 
         public override void Deinit()
         {
             base.Deinit();
             collided.Clear();
-        }
-
-        public void Receive(IWAtSource source)
-        {
-            area.InheritStat(source.GetWAt(EWAt.Area));
-            lifeTime.InheritStat(source.GetWAt(EWAt.Duration));
         }
     }
 }

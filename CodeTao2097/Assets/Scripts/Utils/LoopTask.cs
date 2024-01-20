@@ -55,6 +55,7 @@ namespace CodeTao
         /// </summary>
         public void SetTimeCondition(float timeCondition)
         {
+            _loopInterval = Mathf.Min(_loopInterval, timeCondition);
             _condition = () => { return _loopCount * _loopInterval + _loopTime <= timeCondition; };
         }
 

@@ -32,9 +32,15 @@ namespace CodeTao
             base.Execute(globalPositions);
             foreach (var globalPos in globalPositions)
             {
-                AnimateObject newAnim = aniPool.Get().Position(globalPos);
+                AnimateObject newAnim = aniPool.Get();
+                Vector3 localPos = newAnim.transform.localPosition;
+                newAnim.Position(globalPos + localPos);
                 newAnim.onTrigger = Next;
-                newAnim.onEnd = () => { aniPool.Release(newAnim); };
+                newAnim.onEnd = () =>
+                {
+                    newAnim.Position(localPos);
+                    aniPool.Release(newAnim);
+                };
             }
         }
     }

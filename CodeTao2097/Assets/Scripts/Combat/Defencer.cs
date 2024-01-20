@@ -131,9 +131,9 @@ namespace CodeTao
             damage.SetDamageSection(DamageSection.TargetDEF, "", 1 - def / (Global.Instance.DefenceFactor + def));
             damage.SetDamageSection(DamageSection.DamageDecrement, "", 1 - ElementResistances[damage.DamageElement], RepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
-            foreach (var func in OnTakeDamageFuncs)
+            for (int i = OnTakeDamageFuncs.Count - 1; i >= 0; i--)
             {
-                damage = func.Invoke(damage);
+                damage = OnTakeDamageFuncs[i]?.Invoke(damage);
             }
             return damage;
         }

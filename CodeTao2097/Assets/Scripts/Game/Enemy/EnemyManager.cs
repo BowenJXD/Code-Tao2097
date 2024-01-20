@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using QFramework;
 
 namespace CodeTao
@@ -22,6 +23,14 @@ namespace CodeTao
             }
 
             return enemies;
+        }
+        
+        public void AddOnSpawnAction(Action<Enemy> action)
+        {
+            foreach (var enemyGenerator in enemyGenerators)
+            {
+                enemyGenerator.onSpawn += action;
+            }
         }
     }
 }

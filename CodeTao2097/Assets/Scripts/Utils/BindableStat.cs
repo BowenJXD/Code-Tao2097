@@ -68,7 +68,7 @@ namespace CodeTao
             }
             return result;
         }
-        protected List<BindableStat> parents;
+        protected List<BindableStat> parents = new List<BindableStat>();
 
         public BindableStat() : base(0)
         {
@@ -82,9 +82,9 @@ namespace CodeTao
 
         public void Init()
         {
+            _modGroup = new ModifierGroup(Change);
             valueCache = CalculateValue();
             str = GetDescription();
-            _modGroup = new ModifierGroup(Change);
         }
         
         public BindableStat SetMinValue(float value, bool clamp = false)
@@ -128,6 +128,7 @@ namespace CodeTao
             if (parent == null) return false;
             if (parents.Contains(parent)) return false;
             parents.Add(parent);
+            Change();
             return true;
         }
 

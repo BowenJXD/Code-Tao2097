@@ -3,13 +3,11 @@
 namespace CodeTao
 {
     /// <summary>
-    /// Modify damage taken by a specific tag.
+    /// 在拥有者受到特定伤害标签的伤害时触发的buff
     /// </summary>
-    public class DamageTagBuff : Buff
+    public abstract class DamageTagBuff : Buff
     {
         public DamageTag damageTag;
-        public float damageIncrement = 0.1f;
-        public bool upgradeOnTakeDamage = false;
         
         protected Defencer defencer;
         
@@ -24,13 +22,17 @@ namespace CodeTao
             }
         }
         
-        public Damage OnTakeDamage(Damage damage)
+        public virtual Damage OnTakeDamage(Damage damage)
         {
             if (damage.HasDamageTag(damageTag))
             {
-                damage.SetDamageSection(DamageSection.DamageIncrement, name, damageIncrement * LVL, RepetitionBehavior.Overwrite);
-                if (upgradeOnTakeDamage) Upgrade();
+                return ProcessDamage(damage);
             }
+            return damage;
+        }
+        
+        protected virtual Damage ProcessDamage(Damage damage)
+        {
             return damage;
         }
 
