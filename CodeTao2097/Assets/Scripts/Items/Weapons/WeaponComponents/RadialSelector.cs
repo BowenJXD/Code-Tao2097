@@ -7,6 +7,9 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 角度选择器，基于角度生成攻击的位置信息。
+    /// </summary>
     public class RadialSelector : WeaponSelector
     {
         public EAimWay aimWay = EAimWay.Random;

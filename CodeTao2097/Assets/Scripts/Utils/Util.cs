@@ -113,6 +113,17 @@ namespace CodeTao
                     return Color.white;
             }
         }
+        
+        public static Collider2D[] GetVisibleColliders(int layerMask = 0)
+        {
+            Camera mainCamera = Camera.main;
+            Vector3 cameraPosition = mainCamera.transform.position;
+            float cameraHeight = 2 * mainCamera.orthographicSize;
+            float cameraWidth = cameraHeight * mainCamera.aspect;
+            Vector3 cameraSize = new Vector3(cameraWidth, cameraHeight, 0);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(cameraPosition, cameraSize, 0);
+            return colliders;
+        }
     }
 
     /// <summary>

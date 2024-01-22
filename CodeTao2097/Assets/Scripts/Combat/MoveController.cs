@@ -14,6 +14,7 @@ namespace CodeTao
     public partial class MoveController : UnitComponent, IAAtReceiver, IWAtReceiver
     {
         [SerializeField] public BindableStat SPD = new BindableStat(1);
+        public BindableStat acceleration = new BindableStat(0);
         private Rigidbody2D rb;
 
         public BindableProperty<Vector2> movementDirection = new BindableProperty<Vector2>(Vector2.zero);
@@ -37,11 +38,27 @@ namespace CodeTao
                     lastNonZeroDirection.Value = value;
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
+            acceleration.Init();
+            if (acceleration.Value != 0)
+            {
+                ActionKit.Coroutine(Accelerate).Start(this);
+            }
+        }
+        
+        IEnumerator Accelerate()
+        {
+            while (gameObject.activeSelf)
+            {
+                SPD.AddModifier(acceleration * Time.deltaTime, EModifierType.Additive, "acceleration",
+                    RepetitionBehavior.AddStack);
+                yield return null;
+            }
         }
 
         private void OnDisable()
         {
             SPD.Reset();
+            acceleration.Reset();
             movementDirection = new BindableProperty<Vector2>(Vector2.zero);
             lastNonZeroDirection = new BindableProperty<Vector2>(Vector2.up);
         }

@@ -13,18 +13,7 @@ namespace CodeTao
             base.OnSingletonInit();
             enemyGenerators.AddRange(this.GetComponentsInDescendants<EnemyGenerator>());
         }
-        
-        public List<Enemy> GetEnemyPrefabs()
-        {
-            List<Enemy> enemies = new List<Enemy>();
-            foreach (var enemyGenerator in enemyGenerators)
-            {
-                enemies.Add(enemyGenerator.enemyPrefab);
-            }
 
-            return enemies;
-        }
-        
         public void AddOnSpawnAction(Action<Enemy> action)
         {
             foreach (var enemyGenerator in enemyGenerators)

@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    ///  通过physics2D对指定角度范围的单位造成近战伤害。
+    /// </summary>
     public class MeleeAttackExecutor : WeaponExecutor, IWAtReceiver
     {
         public BindableStat angularRange = new BindableStat(0).SetMaxValue(360f);

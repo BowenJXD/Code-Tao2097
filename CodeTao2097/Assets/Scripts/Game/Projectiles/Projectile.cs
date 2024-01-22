@@ -26,7 +26,7 @@ namespace CodeTao
 
         public Weapon weapon { get; set; }
 
-        void IWeaponDerivative.SetWeapon(Weapon newWeapon, Damager newDamager)
+        public virtual void SetWeapon(Weapon newWeapon, Damager newDamager)
         {
             weapon = newWeapon;
             if (!damager) damager = newDamager;
@@ -101,6 +101,12 @@ namespace CodeTao
             {
                 Deinit();
             }
+        }
+
+        public override void Deinit()
+        {
+            base.Deinit();
+            penetratedCols.Clear();
         }
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 生成单位的执行器。
+    /// </summary>
     public class SpawnExecutor : WeaponExecutor
     {
         public UnitController unitPrefab;

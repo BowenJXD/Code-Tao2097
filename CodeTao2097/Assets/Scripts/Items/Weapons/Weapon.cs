@@ -43,6 +43,9 @@ namespace CodeTao
         [TabGroup("Content")]
         public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
 
+        public bool individualFire = false;
+        private List<ISequence> fireSequences = new List<ISequence>();
+
         public override void Init()
         {
             base.Init();
@@ -56,7 +59,11 @@ namespace CodeTao
             
             if (!attacker) attacker = Container.GetComp<Attacker>();
             if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
-            damagers.ForEach(damager => attackingTypes.AddRange(damager.damagingTags));
+            foreach (var damager in damagers)
+            {
+                attackingTypes.AddRange(damager.damagingTags);
+                damager.damageElementType = ElementType;
+            }
             
             List<IWAtReceiver> wAtReceivers = this.GetComponentsInChildren<IWAtReceiver>(true).ToList();
             wAtReceivers.ForEach(wAtReceiver => wAtReceiver.Receive(this));
@@ -72,18 +79,17 @@ namespace CodeTao
 
         public virtual void Fire()
         {
+            if (individualFire && fireSequences.Count > 0 && fireSequences.FirstOrDefault() is { Status: ActionStatus.Started }) return;
             List<Vector3> globalPositions = weaponSelector.GetGlobalPositions();
-            ISequence actionSequence = ActionKit.Sequence();
+            ISequence fireSequence = ActionKit.Sequence();
             for (int i = 0; i < weaponExecuters.Count; i++)
             {
                 WeaponExecutor weaponExecutor = weaponExecuters[i];
-                actionSequence.Callback(() => weaponExecutor.Execute(globalPositions));
-                if (i < weaponExecuters.Count - 1)
-                {
-                    actionSequence.Condition(() => weaponExecutor.next);
-                }
+                fireSequence.Coroutine(() => weaponExecutor.ExecuteCoroutine(globalPositions));
             }
-            actionSequence.Start(this);
+            fireSequences.Add(fireSequence);
+            fireSequence.Callback(() => fireSequences.Remove(fireSequence));
+            fireSequence.Start(this);
         }
 
         /// <summary>

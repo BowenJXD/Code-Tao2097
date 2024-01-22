@@ -128,7 +128,7 @@ namespace CodeTao
             if (parent == null) return false;
             if (parents.Contains(parent)) return false;
             parents.Add(parent);
-            Change();
+            parent.RegisterWithInitValue(value => Change());
             return true;
         }
 

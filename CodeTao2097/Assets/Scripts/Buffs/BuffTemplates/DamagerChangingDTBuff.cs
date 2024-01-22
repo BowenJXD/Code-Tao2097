@@ -7,11 +7,10 @@
     {
         public float damageIncrement = 0.1f;
         public EModifierType modifierType = EModifierType.MultiAdd;
-        public RepetitionBehavior repetitionBehavior = RepetitionBehavior.AddStack;
 
         protected override Damage ProcessDamage(Damage damage)
         {
-            damage.Median.DMG.AddModifier(damageIncrement * LVL, modifierType, name, repetitionBehavior);
+            damage.Median.DMG.AddModifier(damageIncrement * LVL, modifierType, name, RepetitionBehavior.Overwrite);
             return damage;
         }
     }

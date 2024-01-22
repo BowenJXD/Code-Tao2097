@@ -5,6 +5,9 @@ using UnityEngine.Pool;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 动画执行器，动画播放完后继续执行。
+    /// </summary>
     public class AnimExecutor : WeaponExecutor
     {
         public AnimateObject spawnAnimation;

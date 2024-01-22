@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    /// <summary>
+    /// 空间选择器，用于生成攻击的位置信息。
+    /// </summary>
     public class SpatialSelector : WeaponSelector
     {
         private int _currentSpawnPointIndex = 0;

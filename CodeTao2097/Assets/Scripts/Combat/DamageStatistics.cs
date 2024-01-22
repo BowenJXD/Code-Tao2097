@@ -135,7 +135,7 @@ namespace CodeTao
         {
             float totalDamage = damagerLevelDamage.Sum();
             float totalDps = totalDamage / (damagerLevelStartTime[damagerLevelStartTime.Count - 1] - damagerLevelStartTime[0]);
-            string result = $"{damager.name},{totalDamage},{totalDps}";
+            string result = $"{damager.name},{totalDamage},{totalDps},";
             for (int i = 0; i < damagerLevelDamage.Count; i++)
             {
                 if (i + 1 >= damagerLevelDamage.Count && i + 1 >= damagerLevelStartTime.Count) break;

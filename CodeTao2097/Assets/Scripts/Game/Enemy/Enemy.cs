@@ -26,7 +26,7 @@ namespace CodeTao
 			{
 				Sprite.color = damage.DamageElement.GetColor();
 
-				ActionKit.Delay(GetComp<Defencer>().DMGCD, () =>
+				ActionKit.Delay(0.1f, () =>
 				{
 					if (!this) return;
 					Sprite.color = Color.white;
