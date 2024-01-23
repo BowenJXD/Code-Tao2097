@@ -19,7 +19,7 @@ namespace CodeTao
         {
             enemy.onDeinit += () =>
             {
-                if (RandomUtil.RandCrit(chance))
+                if (RandomUtil.Rand100(chance))
                 {
                     DigitalTombGenerator.Instance.Get()?.Position(enemy.transform.position).Init();
                 }

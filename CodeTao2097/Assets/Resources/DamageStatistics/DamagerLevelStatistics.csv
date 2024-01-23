@@ -1,5 +1,4 @@
 Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9
-XYDamager,800,90.52913,8.565708,130.9493,
-XYDamager,500,56.5807,7.017284,90.05929,
-YZLHDamager,21,2.37639,0.1970113,5.317615,
-BackFlowDamager,15,1.697421,0.8494159,3.389213,
+VirusBuffDamager,865,44.93376,44.93376,
+DFLProjDamager,6937.5,360.3792,6.843,443.1888,
+GroundEffectDamager,425,22.07728,3.544085,32.79616,

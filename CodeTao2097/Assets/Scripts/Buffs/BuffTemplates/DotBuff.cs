@@ -12,7 +12,7 @@ namespace CodeTao
     public partial class DotBuff : Buff
     {
         [HideInInspector] private Defencer _target;
-        [HideInInspector] public Damager damager;
+        public Damager damager;
         private BindableStat CritRate;
         private BindableStat CritDMG;
         public EAAt baseAttribute;
@@ -45,7 +45,7 @@ namespace CodeTao
                     CritDMG = attributeController.GetAAt(EAAt.CritDamage);
                     damager.OnDealDamageFuncs.Add(damage =>
                     {
-                        if (RandomUtil.RandCrit(CritRate.Value)){
+                        if (RandomUtil.Rand100(CritRate.Value)){
                             damage.DamageSections[DamageSection.CRIT]["BuffCrit"] = CritDMG;
                         }
                         return damage;

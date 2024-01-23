@@ -11,7 +11,7 @@ namespace CodeTao
 
         protected override Damage ProcessDamage(Damage damage)
         {
-            if (RandomUtil.RandCrit(triggerChance))
+            if (RandomUtil.Rand100(triggerChance))
             {
                 ExpBall expBall = ExpGenerator.Instance.Get().Position(transform.position);
                 expBall.EXPValue.Value = 1;

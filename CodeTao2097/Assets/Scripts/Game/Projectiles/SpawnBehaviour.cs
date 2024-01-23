@@ -9,7 +9,6 @@ namespace CodeTao
         public BindableStat spawnInterval;
         LoopTask spawnTask;
         public UnitController unitPrefab;
-        UnitPool<UnitController> pool;
         public bool rootToParent = true;
         private Weapon weapon;
         private Damager damager;
@@ -18,7 +17,7 @@ namespace CodeTao
         {
             if (!unitPrefab) unitPrefab = GetComponentInChildren<UnitController>();
             if (!damager) damager = GetComponentInChildren<Damager>();
-            if (pool == null) pool = new UnitPool<UnitController>(unitPrefab, rootToParent? transform : UnitManager.Instance.transform);
+            UnitManager.Instance.Register(unitPrefab, rootToParent? transform : null);
             if (!weapon){
                 if (Unit is IWeaponDerivative weaponDerivative)
                 {
@@ -33,11 +32,7 @@ namespace CodeTao
 
         void Spawn()
         {
-            UnitController unit = pool.Get();
-            unit.onDeinit = () =>
-            {
-                pool.Release(unit);
-            };
+            UnitController unit = UnitManager.Instance.Get(unitPrefab);
             unit.Position(transform.position);
 
             if (unit is IWeaponDerivative weaponDerivative){

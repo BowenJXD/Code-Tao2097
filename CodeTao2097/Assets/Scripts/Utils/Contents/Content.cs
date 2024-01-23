@@ -56,8 +56,11 @@ namespace CodeTao
 
             return result;
         }
-        
-        public virtual void OnRemove(){}
+
+        public virtual void OnRemove()
+        {
+            LVL.Value = 0;
+        }
         
         #endregion
 

@@ -25,7 +25,7 @@ namespace CodeTao
 
         void OnBecameInvisible()
         {
-            if (isInCD || !gameObject.activeSelf)
+            if (isInCD || !gameObject.activeSelf || !mainCamera)
             {
                 return;
             }

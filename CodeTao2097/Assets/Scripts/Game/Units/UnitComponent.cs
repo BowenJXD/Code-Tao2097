@@ -59,10 +59,14 @@ namespace CodeTao
     public class UnitComponent : MonoBehaviour
     {
         public UnitController Unit { get; set; }
-        
+
         public T GetComp<T>() where T : UnitComponent
         {
             return Unit.GetComp<T>();
         }
+        
+        public virtual void Init(){}
+        
+        public virtual void Deinit(){}
     }
 }

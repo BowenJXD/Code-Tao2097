@@ -171,6 +171,11 @@ namespace CodeTao
             }
         }
 
+        public void TakeHealing(float value)
+        {
+            AlterHP(value);
+        }
+
         private void OnDisable()
         {
             MaxHP.Reset();
@@ -191,6 +196,7 @@ namespace CodeTao
         {
             DEF.InheritStat(source.GetAAt(EAAt.DEF));
             MaxHP.InheritStat(source.GetAAt(EAAt.MaxHP));
+            SetHP(MaxHP);
             Lives.InheritStat(source.GetAAt(EAAt.Lives));
             ElementResistances[ElementType.Metal].InheritStat(source.GetAAt(EAAt.MetalElementRES));
             ElementResistances[ElementType.Fire].InheritStat(source.GetAAt(EAAt.FireElementRES));

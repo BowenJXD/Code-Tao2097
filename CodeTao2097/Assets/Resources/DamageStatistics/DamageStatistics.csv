@@ -1,135 +1,943 @@
 Time,Receiver Unit,Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,DamageTags,PlayerLevel,DamagerLevel
-2.918614,Enemy(Clone) -272876,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+3.653368,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+3.653368,Enemy(Clone) -16020,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.123196,Enemy(Clone) -273244,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+3.653368,Enemy(Clone) -16020,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.123196,Enemy(Clone) -273060,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+4.504378,Enemy(Clone) -16306,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.123196,Enemy(Clone) -273804,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+4.778302,Enemy(Clone) -16858,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+4.778302,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.456529,Enemy(Clone) -273612,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+4.82806,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+4.853166,Enemy(Clone) -16398,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.562632,Enemy(Clone) -273244,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+4.954018,Enemy(Clone) -17042,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.629266,Enemy(Clone) -274028,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+5.328805,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.629266,Enemy(Clone) -273428,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+5.328805,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.6943,Enemy(Clone) -274844,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+5.453754,Enemy(Clone) -19168,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.6943,Enemy(Clone) -273060,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+5.604187,Enemy(Clone) -19076,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+5.604187,Enemy(Clone) -19076,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-3.792071,Enemy(Clone) -273804,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+5.604187,Enemy(Clone) -19168,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+5.604187,Enemy(Clone) -19168,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-4.496022,Enemy(Clone) -273896,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+5.853846,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+5.930494,Enemy(Clone) -17916,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+5.930494,Enemy(Clone) -17916,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-4.660191,Enemy(Clone) -274304,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.004476,Enemy(Clone) -16858,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.054985,Enemy(Clone) -19662,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.07585,Enemy(Clone) -274212,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -274304,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -276196,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -273896,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -274754,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -274420,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -274120,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -274938,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -273804,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -273060,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -274028,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -272876,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -274844,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -273428,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -273612,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -272968,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -273244,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -275212,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -275086,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -272084,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -275324,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.07585,Enemy(Clone) -272784,YZLHDamager,EnemyDefencer,PlayerAttacker,Water,1,0.2,10,0.5,,1,1,,0,,1,1
-5.269337,Enemy(Clone) -274640,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.054985,Enemy(Clone) -19662,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.054985,Enemy(Clone) -19662,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.550258,Enemy(Clone) -273060,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.153697,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.153697,Enemy(Clone) -18008,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.550258,Enemy(Clone) -273804,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.229048,Enemy(Clone) -17226,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.229048,Enemy(Clone) -17226,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.787186,Enemy(Clone) -273612,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.229048,Enemy(Clone) -17226,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.834545,Enemy(Clone) -273804,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.278797,Enemy(Clone) -16766,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.278797,Enemy(Clone) -16766,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.886398,Enemy(Clone) -274028,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.47908,Enemy(Clone) -17042,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.47908,Enemy(Clone) -17042,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.886398,Enemy(Clone) -273060,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
-5.934634,Enemy(Clone) -273428,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.47908,Enemy(Clone) -17042,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.934634,Enemy(Clone) -273060,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.679706,Enemy(Clone) -21816,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-5.98836,Enemy(Clone) -274844,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.679706,Enemy(Clone) -21816,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.679706,Enemy(Clone) -21816,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.136056,Enemy(Clone) -273244,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.779068,Enemy(Clone) -19076,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.779068,Enemy(Clone) -19168,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.828773,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+6.828773,Enemy(Clone) -17318,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.18706,Enemy(Clone) -273612,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+6.953256,Enemy(Clone) -16858,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.004535,Enemy(Clone) -20576,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.235708,Enemy(Clone) -276866,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.004535,Enemy(Clone) -20576,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.371399,Enemy(Clone) -274028,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.054008,Enemy(Clone) -16020,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,0,Critical
+GroundEffect
 ,1,1
-6.371399,Enemy(Clone) -273428,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.054008,Enemy(Clone) -18560,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.371399,Enemy(Clone) -276774,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.074008,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.437109,Enemy(Clone) -272876,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.074008,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.437109,Enemy(Clone) -274844,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.128432,Enemy(Clone) -17916,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.179415,Enemy(Clone) -18744,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.179415,Enemy(Clone) -18744,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.53594,Enemy(Clone) -275324,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.28699,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.28699,Enemy(Clone) -19662,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.386408,Enemy(Clone) -17824,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.586405,Enemy(Clone) -272968,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.386408,Enemy(Clone) -17824,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.634099,Enemy(Clone) -275212,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.386408,Enemy(Clone) -18284,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.667654,Enemy(Clone) -273804,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.486159,Enemy(Clone) -17226,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.486159,Enemy(Clone) -16766,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.495799,Enemy(Clone) -17724,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
 ,1,1
-6.753971,Enemy(Clone) -276104,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.495799,Enemy(Clone) -16582,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.495799,Enemy(Clone) -16582,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.872309,Enemy(Clone) -277026,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.594457,Enemy(Clone) -16490,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.594457,Enemy(Clone) -16490,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.921161,Enemy(Clone) -275416,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.694819,Enemy(Clone) -19076,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-6.969953,Enemy(Clone) -277118,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.705002,Enemy(Clone) -17042,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.755932,Enemy(Clone) -18836,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.755932,Enemy(Clone) -18836,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.056137,Enemy(Clone) -273428,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.755932,Enemy(Clone) -18836,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.056137,Enemy(Clone) -274028,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+7.85571,Enemy(Clone) -19076,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.85571,Enemy(Clone) -19168,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+7.865479,Enemy(Clone) -21816,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.064402,Enemy(Clone) -16858,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.073037,Enemy(Clone) -17916,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.073037,Enemy(Clone) -17226,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
 ,1,1
-7.056137,Enemy(Clone) -274844,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -17824,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.073037,Enemy(Clone) -17226,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.056137,Enemy(Clone) -276774,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.102165,Enemy(Clone) -273520,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16398,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.073037,Enemy(Clone) -16398,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.236923,Enemy(Clone) -275086,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16398,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.270852,Enemy(Clone) -273612,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
-7.37196,Enemy(Clone) -275416,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16398,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.437199,Enemy(Clone) -277026,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16766,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.487352,Enemy(Clone) -275324,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.535201,Enemy(Clone) -275824,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.800329,Enemy(Clone) -275212,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.073037,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-7.848045,Enemy(Clone) -276012,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.172937,Enemy(Clone) -17042,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-8.166888,Enemy(Clone) -272968,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
-8.398239,Enemy(Clone) -273520,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.50627,Enemy(Clone) -16766,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-8.398239,Enemy(Clone) -276774,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.534028,Enemy(Clone) -18744,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.534028,Enemy(Clone) -16766,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.534028,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.534028,Enemy(Clone) -19662,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.534028,Enemy(Clone) -21816,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-8.502533,Enemy(Clone) -273244,BackFlowDamager,EnemyDefencer,,Water,5,10,,0.5,,,1,,0,,1,1
-8.598672,Enemy(Clone) -275212,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.534028,Enemy(Clone) -21816,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1
-8.766335,Enemy(Clone) -277026,XYDamager,EnemyDefencer,PlayerAttacker,Water,25,5,10,0.5,,1,1,,1,Projectile
+8.762067,Enemy(Clone) -16582,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.762067,Enemy(Clone) -16490,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.762067,Enemy(Clone) -20576,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.762067,Enemy(Clone) -20576,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.786396,Enemy(Clone) -19076,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.786396,Enemy(Clone) -19168,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.938,Enemy(Clone) -18836,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+8.962922,Enemy(Clone) -22354,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+8.962922,Enemy(Clone) -22354,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.012432,Enemy(Clone) -18100,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.012432,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.012432,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.063153,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.063153,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.086411,Enemy(Clone) -17916,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.086411,Enemy(Clone) -17916,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+9.162777,Enemy(Clone) -20940,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+9.162777,Enemy(Clone) -20940,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.261888,Enemy(Clone) -19662,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.261888,Enemy(Clone) -19860,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.261888,Enemy(Clone) -19860,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.261888,Enemy(Clone) -19860,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.28695,Enemy(Clone) -20458,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.314028,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.314028,Enemy(Clone) -18008,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.314028,Enemy(Clone) -18008,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.389055,Enemy(Clone) -18744,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.389055,Enemy(Clone) -20776,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.389055,Enemy(Clone) -20776,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.389055,Enemy(Clone) -20776,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.389055,Enemy(Clone) -16950,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.464957,Enemy(Clone) -16766,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.464957,Enemy(Clone) -17824,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.464957,Enemy(Clone) -17824,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.712209,Enemy(Clone) -18836,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.712209,Enemy(Clone) -18836,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.761549,Enemy(Clone) -16582,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.761549,Enemy(Clone) -16490,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.786418,Enemy(Clone) -19076,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.786418,Enemy(Clone) -19168,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+9.91128,Enemy(Clone) -21628,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+9.91128,Enemy(Clone) -21628,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+9.936529,Enemy(Clone) -19860,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.08675,Enemy(Clone) -18376,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.08675,Enemy(Clone) -18376,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.08675,Enemy(Clone) -18376,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.08675,Enemy(Clone) -18376,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+10.08675,Enemy(Clone) -20776,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.08675,Enemy(Clone) -20776,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.08675,Enemy(Clone) -18376,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.11142,Enemy(Clone) -17916,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.11142,Enemy(Clone) -16766,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.18748,Enemy(Clone) -17134,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.18748,Enemy(Clone) -17134,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.18748,Enemy(Clone) -17134,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.26392,Enemy(Clone) -20668,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.26392,Enemy(Clone) -20668,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.31235,Enemy(Clone) -19662,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.31235,Enemy(Clone) -22446,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.31235,Enemy(Clone) -22446,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.31235,Enemy(Clone) -22446,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.31235,Enemy(Clone) -17318,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.31235,Enemy(Clone) -19168,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.36236,Enemy(Clone) -18744,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.36236,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.41241,Enemy(Clone) -18928,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.41241,Enemy(Clone) -18928,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.41241,Enemy(Clone) -18928,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.48766,Enemy(Clone) -19860,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.57027,Enemy(Clone) -18560,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.60369,Enemy(Clone) -18928,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+10.60369,Enemy(Clone) -18928,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.6369,Enemy(Clone) -16020,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.6369,Enemy(Clone) -18652,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.6369,Enemy(Clone) -18652,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.737,Enemy(Clone) -16582,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.737,Enemy(Clone) -16490,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.737,Enemy(Clone) -18744,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+10.75391,Enemy(Clone) -19076,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.80373,Enemy(Clone) -20366,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.85382,Enemy(Clone) -21142,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.85382,Enemy(Clone) -21142,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.88725,Enemy(Clone) -23060,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.88725,Enemy(Clone) -22354,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.88725,Enemy(Clone) -22354,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.90368,Enemy(Clone) -19860,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.93622,Enemy(Clone) -18284,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.97019,Enemy(Clone) -20668,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.97019,Enemy(Clone) -23060,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.98697,Enemy(Clone) -17724,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.98697,Enemy(Clone) -23060,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+10.98697,Enemy(Clone) -23060,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+10.98697,Enemy(Clone) -16582,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+11.02051,Enemy(Clone) -23060,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.05406,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.05406,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.08737,Enemy(Clone) -18468,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+11.08737,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.08737,Enemy(Clone) -17410,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.08737,Enemy(Clone) -19860,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+11.08737,Enemy(Clone) -19860,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.08737,Enemy(Clone) -16490,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.35382,Enemy(Clone) -19076,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.38659,Enemy(Clone) -20044,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+11.38659,Enemy(Clone) -20044,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.40316,Enemy(Clone) -20366,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.43625,Enemy(Clone) -22446,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+11.45278,Enemy(Clone) -21628,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+11.45278,Enemy(Clone) -21628,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.45278,Enemy(Clone) -21628,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.46961,Enemy(Clone) -20668,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+11.55402,Enemy(Clone) -18192,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.57046,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.90365,Enemy(Clone) -20458,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+11.90365,Enemy(Clone) -20458,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+11.97146,Enemy(Clone) -20668,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+12.00388,Enemy(Clone) -21142,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+12.00388,Enemy(Clone) -23876,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+12.00388,Enemy(Clone) -23876,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.05393,Enemy(Clone) -22354,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+12.05393,Enemy(Clone) -18468,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+12.19553,Enemy(Clone) -16306,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+12.19553,Enemy(Clone) -16306,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.2201,Enemy(Clone) -18100,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+12.2201,Enemy(Clone) -23876,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+12.24521,Enemy(Clone) -23876,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.34553,Enemy(Clone) -18744,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+12.39539,Enemy(Clone) -17916,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.7698,Enemy(Clone) -16950,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+12.9202,Enemy(Clone) -18744,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+12.9202,Enemy(Clone) -18744,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.03686,Enemy(Clone) -18468,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.03686,Enemy(Clone) -18468,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+13.05349,Enemy(Clone) -22354,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.05349,Enemy(Clone) -18284,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.05349,Enemy(Clone) -18284,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.05349,Enemy(Clone) -18560,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.05349,Enemy(Clone) -18560,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+13.05349,Enemy(Clone) -18560,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.06939,Enemy(Clone) -18468,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+13.1528,Enemy(Clone) -23876,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.20253,Enemy(Clone) -18100,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.21946,Enemy(Clone) -16950,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.21946,Enemy(Clone) -16950,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+13.33593,Enemy(Clone) -16306,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.33593,Enemy(Clone) -17134,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.38621,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.38621,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.46948,Enemy(Clone) -23876,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.46948,Enemy(Clone) -22446,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.51953,Enemy(Clone) -20044,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.60296,Enemy(Clone) -19570,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.60296,Enemy(Clone) -19570,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.60296,Enemy(Clone) -19570,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.70383,Enemy(Clone) -18100,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.70383,Enemy(Clone) -17134,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.75297,Enemy(Clone) -20668,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.75297,Enemy(Clone) -20668,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.83603,Enemy(Clone) -16950,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+13.83603,Enemy(Clone) -22446,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+13.88675,Enemy(Clone) -16020,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.0195,Enemy(Clone) -16306,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.0195,Enemy(Clone) -20154,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.0195,Enemy(Clone) -16306,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.0195,Enemy(Clone) -16306,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.0195,Enemy(Clone) -16306,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.06972,Enemy(Clone) -17226,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.06972,Enemy(Clone) -17226,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+14.06972,Enemy(Clone) -21234,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.06972,Enemy(Clone) -21234,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.11951,Enemy(Clone) -18008,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.2362,Enemy(Clone) -17318,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.51987,Enemy(Clone) -16950,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.73613,Enemy(Clone) -22956,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.73613,Enemy(Clone) -22956,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.73613,Enemy(Clone) -19754,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.75283,Enemy(Clone) -19570,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.75283,Enemy(Clone) -20154,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.75283,Enemy(Clone) -20154,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.83659,Enemy(Clone) -16214,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.83659,Enemy(Clone) -16214,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.83659,Enemy(Clone) -20274,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.83659,Enemy(Clone) -20274,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.86946,Enemy(Clone) -22232,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.86946,Enemy(Clone) -18008,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.90323,Enemy(Clone) -17724,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.90323,Enemy(Clone) -17724,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.9361,Enemy(Clone) -20668,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.9361,Enemy(Clone) -22802,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+14.9361,Enemy(Clone) -22802,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+14.9361,Enemy(Clone) -16582,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+15.00328,Enemy(Clone) -16490,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.03717,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.03717,Enemy(Clone) -21142,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.03717,Enemy(Clone) -20668,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.03717,Enemy(Clone) -18928,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.03717,Enemy(Clone) -18928,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06996,Enemy(Clone) -20458,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.06996,Enemy(Clone) -22354,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.06996,Enemy(Clone) -26200,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.06996,Enemy(Clone) -26200,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.06996,Enemy(Clone) -26200,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+15.16999,Enemy(Clone) -16674,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.16999,Enemy(Clone) -16674,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.23697,Enemy(Clone) -17226,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.23697,Enemy(Clone) -21234,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.23697,Enemy(Clone) -23218,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.25261,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.3537,Enemy(Clone) -17134,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.43617,Enemy(Clone) -18192,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.43617,Enemy(Clone) -21908,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.43617,Enemy(Clone) -21908,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.45347,Enemy(Clone) -17042,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.45347,Enemy(Clone) -18376,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.45347,Enemy(Clone) -18376,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.4696,Enemy(Clone) -16020,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.51943,Enemy(Clone) -19952,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.51943,Enemy(Clone) -19952,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.51943,Enemy(Clone) -16766,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+15.55368,Enemy(Clone) -20044,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.55368,Enemy(Clone) -17134,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.56969,Enemy(Clone) -18836,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.56969,Enemy(Clone) -18836,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.63716,Enemy(Clone) -21234,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.63716,Enemy(Clone) -21908,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+15.63716,Enemy(Clone) -21908,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.71975,Enemy(Clone) -21142,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.73658,Enemy(Clone) -22446,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.73658,Enemy(Clone) -21816,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.75305,Enemy(Clone) -23218,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+15.75305,Enemy(Clone) -23218,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.75305,Enemy(Clone) -23218,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+15.88633,Enemy(Clone) -20154,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.88633,Enemy(Clone) -22956,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+15.98629,Enemy(Clone) -18008,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.0196,Enemy(Clone) -16214,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.0196,Enemy(Clone) -20274,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.0196,Enemy(Clone) -21142,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.0196,Enemy(Clone) -19570,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.0196,Enemy(Clone) -16122,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.0196,Enemy(Clone) -16122,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.03724,Enemy(Clone) -17724,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.03724,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.03724,Enemy(Clone) -20458,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.05347,Enemy(Clone) -22802,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.05347,Enemy(Clone) -22354,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.10289,Enemy(Clone) -19168,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.10289,Enemy(Clone) -19168,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.15393,Enemy(Clone) -21142,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.15393,Enemy(Clone) -21142,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.15393,Enemy(Clone) -17318,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.23606,Enemy(Clone) -18100,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.25272,Enemy(Clone) -18652,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.25272,Enemy(Clone) -18652,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.25272,Enemy(Clone) -18652,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.26944,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.28646,Enemy(Clone) -20940,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.28646,Enemy(Clone) -20940,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.31954,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.31954,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.35293,Enemy(Clone) -23310,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.35293,Enemy(Clone) -23310,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.35293,Enemy(Clone) -20044,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.35293,Enemy(Clone) -19260,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.35293,Enemy(Clone) -19260,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.43723,Enemy(Clone) -20366,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.43723,Enemy(Clone) -20366,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.43723,Enemy(Clone) -20366,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.51972,Enemy(Clone) -16214,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.55332,Enemy(Clone) -20044,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.58625,Enemy(Clone) -23310,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.66962,Enemy(Clone) -16766,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.66962,Enemy(Clone) -19860,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.66962,Enemy(Clone) -26384,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.66962,Enemy(Clone) -26384,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.66962,Enemy(Clone) -26384,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.66962,Enemy(Clone) -19860,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.73607,Enemy(Clone) -16214,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.75366,Enemy(Clone) -20274,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.78694,Enemy(Clone) -20274,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.8367,Enemy(Clone) -20274,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.8367,Enemy(Clone) -18192,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.8367,Enemy(Clone) -16490,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.8367,Enemy(Clone) -17724,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+16.85337,Enemy(Clone) -22956,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.87053,Enemy(Clone) -21816,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.88704,Enemy(Clone) -21816,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.88704,Enemy(Clone) -23218,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.88704,Enemy(Clone) -20154,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.93675,Enemy(Clone) -22120,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.93675,Enemy(Clone) -22120,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+16.93675,Enemy(Clone) -22120,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+16.96949,Enemy(Clone) -16858,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.00271,Enemy(Clone) -16214,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.01949,Enemy(Clone) -19662,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.03708,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.03708,Enemy(Clone) -20458,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.05301,Enemy(Clone) -18468,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,0,Critical
+GroundEffect
+,1,1
+17.16961,Enemy(Clone) -16674,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.16961,Enemy(Clone) -16674,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+17.20335,Enemy(Clone) -26200,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.20335,Enemy(Clone) -17226,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.20335,Enemy(Clone) -21234,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.22093,Enemy(Clone) -19168,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.28702,Enemy(Clone) -18008,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.32021,Enemy(Clone) -19860,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.37238,Enemy(Clone) -18192,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.45645,Enemy(Clone) -16858,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.45645,Enemy(Clone) -21908,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.47316,Enemy(Clone) -22120,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.47316,Enemy(Clone) -22120,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.50627,Enemy(Clone) -23310,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.50627,Enemy(Clone) -19260,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.50627,Enemy(Clone) -16214,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+17.54098,Enemy(Clone) -16674,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+17.77094,Enemy(Clone) -23218,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.07042,Enemy(Clone) -18468,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+18.27048,Enemy(Clone) -16858,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.31939,Enemy(Clone) -20044,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.31939,Enemy(Clone) -19260,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.46959,Enemy(Clone) -16122,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+18.46959,Enemy(Clone) -18192,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.50334,Enemy(Clone) -22802,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+18.50334,Enemy(Clone) -16214,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.55348,Enemy(Clone) -26292,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.55348,Enemy(Clone) -26292,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+18.56928,Enemy(Clone) -19570,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.73626,Enemy(Clone) -21816,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.83606,Enemy(Clone) -21628,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.83606,Enemy(Clone) -21628,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.91912,Enemy(Clone) -16766,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.91912,Enemy(Clone) -24080,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+18.91912,Enemy(Clone) -24080,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.91912,Enemy(Clone) -24080,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.93568,Enemy(Clone) -17226,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.95257,Enemy(Clone) -16858,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+18.95257,Enemy(Clone) -26108,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+18.95257,Enemy(Clone) -26108,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+18.95257,Enemy(Clone) -26108,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.05289,Enemy(Clone) -16020,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+19.05289,Enemy(Clone) -26872,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -24282,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+19.05289,Enemy(Clone) -24282,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,0,Critical
+GroundEffect
+,1,1
+19.05289,Enemy(Clone) -26964,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -24178,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+19.05289,Enemy(Clone) -24178,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -18744,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -25874,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -25966,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+19.05289,Enemy(Clone) -25966,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -24518,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+19.05289,Enemy(Clone) -24518,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -25034,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -20776,GroundEffectDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,0,GroundEffect
+,1,1
+19.05289,Enemy(Clone) -17042,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.05289,Enemy(Clone) -16020,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.06943,Enemy(Clone) -22802,VirusBuffDamager,EnemyDefencer,,Wood,5,10,,0.5,,,1,,0,Dot
+,1,0
+19.06943,Enemy(Clone) -19076,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.06943,Enemy(Clone) -19076,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,37.5,5,10,0.5,1.5,1,1,,1,Critical
+Projectile
+,1,1
+19.10271,Enemy(Clone) -19952,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
+,1,1
+19.16025,Enemy(Clone) -21234,DFLProjDamager,EnemyDefencer,PlayerAttacker,Wood,25,5,10,0.5,,1,1,,1,Projectile
 ,1,1

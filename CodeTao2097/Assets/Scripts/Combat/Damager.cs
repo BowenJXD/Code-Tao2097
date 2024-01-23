@@ -122,6 +122,8 @@ namespace CodeTao
         public virtual Buff ApplyBuff(BuffOwner target)
         {
             Buff buff = _buffPool.Get().Parent(this);
+            buff.pool = _buffPool;
+            buff.elementType = damageElementType;
             buff.duration.InheritStat(effectDuration);
             
             if (!buff.AddToContainer(target))
@@ -141,7 +143,7 @@ namespace CodeTao
 
         public virtual bool CheckBuffHit(Damage damage)
         {
-            return RandomUtil.rand.Next(100) < effectHitRate.Value;
+            return RandomUtil.Rand100(effectHitRate);
         }
         
         private void OnDisable()

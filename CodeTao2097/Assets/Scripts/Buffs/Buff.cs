@@ -13,12 +13,14 @@ namespace CodeTao
     /// </summary>
     public abstract class Buff : Content<Buff>
     {
+        public ElementType elementType;
         public List<TriggerCondition> triggerConditions = new List<TriggerCondition>();
         public BindableStat triggerInterval = new BindableStat(0);
         public BindableStat duration = new BindableStat(5);
         public BindableProperty<float> firstTriggerDelay = new BindableProperty<float>(0);
         public LoopTask buffLoop;
         protected BuffOwner buffOwner;
+        public ContentPool<Buff> pool;
 
         public override void OnAdd()
         {
@@ -47,7 +49,7 @@ namespace CodeTao
 
             if (firstTriggerDelay > 0)
             {
-                ActionKit.Delay(firstTriggerDelay, () => buffLoop.Start()).Start(this);
+                ActionKit.Delay(firstTriggerDelay, () => buffLoop?.Start()).Start(this);
             }
             else
             {
@@ -68,7 +70,7 @@ namespace CodeTao
         /// </summary>
         void Remove()
         {
-            RemoveFromContainer(Container);
+            RemoveFromContainer(buffOwner);
         }
         
         /// <summary>

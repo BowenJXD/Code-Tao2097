@@ -12,17 +12,10 @@ namespace CodeTao
     public abstract class UnitController : MonoBehaviour
     {
         public ComponentLink Link { get; private set; }
-        
+
         public T GetComp<T>() where T : UnitComponent
         {
             return Link?.GetComp<T>();
-        }
-        
-        public T GetComp<T>(Action<T> tryAction) where T : UnitComponent
-        {
-            T comp = Link?.GetComp<T>();
-            if (comp != null) tryAction?.Invoke(comp);
-            return comp;
         }
 
         /// <summary>
@@ -66,6 +59,10 @@ namespace CodeTao
         /// </summary>
         public virtual void Init()
         {
+            foreach (var component in Link.components.Values)
+            {
+                component.Init();
+            }
             onInit?.Invoke();
             onInit = null;
             gameObject.SetActive(true);
@@ -83,6 +80,10 @@ namespace CodeTao
         {
             onDeinit?.Invoke();
             onDeinit = null;
+            foreach (var component in Link.components.Values)
+            {
+                component.Deinit();
+            }
         }
     }
 }

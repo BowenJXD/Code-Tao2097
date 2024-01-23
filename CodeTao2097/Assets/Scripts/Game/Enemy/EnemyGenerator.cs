@@ -21,7 +21,6 @@ namespace CodeTao
 	/// </summary>
 	public partial class EnemyGenerator : MonoBehaviour
 	{
-		protected UnitPool<Enemy> enemyPool;
 		public Enemy enemyPrefab;
 		public List<GeneratorTask> tasks;
 		
@@ -41,7 +40,7 @@ namespace CodeTao
 		
 		private void Awake()
 		{
-			enemyPool = new UnitPool<Enemy>(enemyPrefab, transform, 2000);
+			UnitManager.Instance.Register(enemyPrefab, transform, 2000);
 
 			deathFXPool = new ObjectPool<ParticleSystem>(() =>
 			{
@@ -89,11 +88,11 @@ namespace CodeTao
 			if (!Player.Instance) return;
 			
 			Vector3 spawnPosition = GetSpawnPosition();
-			Enemy enemy = enemyPool.Get().Position(spawnPosition).Parent(transform);
+			Enemy enemy = UnitManager.Instance.Get(enemyPrefab);
+			enemy.Position(spawnPosition);
 			onSpawn?.Invoke(enemy);
 			enemy.onDeinit += () =>
 			{
-				enemyPool.Release(enemy);
 				ParticleSystem ps = deathFXPool.Get().Position(enemy.transform.position).Parent(transform);
 				ActionKit.Delay(deathFXDuration, () => { deathFXPool.Release(ps); }).Start(this);
 			};

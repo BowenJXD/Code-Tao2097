@@ -10,7 +10,6 @@ namespace CodeTao
     /// <typeparam name="V"></typeparam>
     public abstract class UnitGenerator<T, V> : MonoSingleton<V> where V : MonoSingleton<V> where T : UnitController
     {
-        protected UnitPool<T> pool;
         public T prefab;
         public float spawnCD = 0;
         private bool isInCD;
@@ -22,7 +21,7 @@ namespace CodeTao
             {
                 prefab = this.GetComponentInDescendants<T>(true);
             }
-            pool = new UnitPool<T>(prefab, transform);
+            UnitManager.Instance.Register(prefab, transform);
         }
         
         public Action<T> onUnitGet;
@@ -31,9 +30,8 @@ namespace CodeTao
         {
             if (isInCD) return null;
             
-            T obj = pool.Get();
+            T obj = UnitManager.Instance.Get(prefab);
             onUnitGet?.Invoke(obj);
-            obj.onDeinit += () => pool.Release(obj);
 
             if (spawnCD > 0)
             {

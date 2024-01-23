@@ -1,4 +1,5 @@
-﻿using QFramework;
+﻿using System.Collections.Generic;
+using QFramework;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -10,6 +11,8 @@ namespace CodeTao
     /// <typeparam name="T"></typeparam>
     public class UnitPool<T> : ObjectPool<T> where T : UnitController
     {
+        public T prefab;
+        
         public UnitPool(T defaultPrefab, Transform parent = null, int defaultCapacity = 100) :
             base(() =>
                 {
@@ -31,6 +34,8 @@ namespace CodeTao
                 }
                 , true, defaultCapacity)
         {
+            prefab = defaultPrefab;
+            
         }
     }
 

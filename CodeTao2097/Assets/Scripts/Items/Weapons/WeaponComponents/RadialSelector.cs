@@ -95,6 +95,7 @@ namespace CodeTao
         {
             if (!weapon) weapon = GetComponent<Weapon>();
             if (!weapon) weapon = this.GetComponentInAncestors<Weapon>(1);
+            weapon.amount.Init();
             shootingDirections = Util.GenerateAngles((int)weapon.amount, shootingDirections.FirstOrDefault());
             LogKit.I("Generated AttackingDirections: " + shootingDirections);
         }

@@ -10,7 +10,6 @@ namespace CodeTao
     public class SpawnExecutor : WeaponExecutor
     {
         public UnitController unitPrefab;
-        protected UnitPool<UnitController> pool;
         public bool rootToWeapon = false;
         protected Damager damager;
 
@@ -18,7 +17,7 @@ namespace CodeTao
         {
             base.Init(newWeapon);
             if (!unitPrefab) { unitPrefab = this.GetComponentInDescendants<UnitController>(true); }
-            pool = new UnitPool<UnitController>(unitPrefab);
+            UnitManager.Instance.Register(unitPrefab, rootToWeapon? transform : null);
 
             if (!damager) { damager = this.GetComponentInDescendants<Damager>(true); }
 
@@ -53,12 +52,7 @@ namespace CodeTao
         /// <returns></returns>
         public virtual UnitController SpawnUnit(Vector2 globalPos)
         {
-            UnitController unit = pool.Get();
-            unit.onDeinit = () =>
-            {
-                pool.Release(unit);
-            };
-            unit.Parent(rootToWeapon ? transform : UnitManager.Instance.GetTransform<UnitController>());
+            UnitController unit = UnitManager.Instance.Get(unitPrefab);
             unit.Position(globalPos);
 
             if (unit is IWeaponDerivative weaponDerivative){

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using QFramework;
+using Sirenix.OdinInspector;
 
 namespace CodeTao
 {
@@ -10,8 +11,9 @@ namespace CodeTao
     /// </summary>
     public class AttributeController : UnitComponent, IAAtSource, IWAtSource
     {
-        public Dictionary<EAAt, BindableStat> aStats = new Dictionary<EAAt, BindableStat>();
-        public Dictionary<EWAt, BindableStat> wStats = new Dictionary<EWAt, BindableStat>();
+        // initialise the dictionary with all the enum values
+        public SerializableDictionary<EAAt, BindableStat> aStats = new();
+        public SerializableDictionary<EWAt, BindableStat> wStats = new();
         protected Inventory inventory;
 
         private void OnEnable()
@@ -115,25 +117,31 @@ namespace CodeTao
 
         public BindableStat GetAAt(EAAt at)
         {
-            if (aStats.ContainsKey(at))
+            if (!aStats.ContainsKey(at))
             {
-                return aStats[at];
+                AddArtefactModGroup(at);
             }
-            else
-            {
-                return null;
-            }
+            return aStats[at];
         }
 
         public BindableStat GetWAt(EWAt at)
         {
-            if (wStats.ContainsKey(at))
+            if (!wStats.ContainsKey(at))
             {
-                return wStats[at];
+                AddWeaponModGroup(at);
             }
-            else
+            return wStats[at];
+        }
+        
+        [Button("Init dicts")]
+        public void InitDicts()
+        {
+            foreach (EAAt at in Enum.GetValues(typeof(EAAt)))
             {
-                return null;
+                if (!aStats.ContainsKey(at))
+                {
+                    aStats.Add(at, new BindableStat());
+                }
             }
         }
     }

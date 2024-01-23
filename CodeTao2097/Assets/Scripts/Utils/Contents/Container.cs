@@ -132,8 +132,9 @@ namespace CodeTao
             }
         }
         
-        private void OnDisable()
+        public override void Deinit()
         {
+            base.Deinit();
             Clear();
         }
     }
