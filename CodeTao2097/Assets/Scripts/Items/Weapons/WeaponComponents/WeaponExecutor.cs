@@ -10,7 +10,7 @@ namespace CodeTao
     /// </summary>
     public class WeaponExecutor : WeaponComponent
     {
-        public bool next = false;
+        public bool next = true;
         
         public virtual void Execute(List<Vector3> globalPositions)
         {

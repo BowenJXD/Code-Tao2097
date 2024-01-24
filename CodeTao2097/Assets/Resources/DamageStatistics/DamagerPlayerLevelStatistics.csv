@@ -1,4 +1,3 @@
 Damager,TotalDamage,TotalDps,Level0,Level1,Level2
-VirusBuffDamager,865,44.93376,Infinity,44.67403
-DFLProjDamager,6937.5,360.3792,Infinity,359.0805
-GroundEffectDamager,425,22.07728,Infinity,20.77862
+DDamager,11725,462.4174,Infinity,460.4454
+ShieldDamager,25,0.9859645,Infinity

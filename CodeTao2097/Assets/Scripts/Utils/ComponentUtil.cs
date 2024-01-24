@@ -34,30 +34,6 @@ namespace CodeTao
             }
             return null;
         }
-        
-        public static T GetComponentInSiblings<T>(this Component component) where T : Component
-        {
-            Transform transform = component.transform;
-            if (transform.parent == null)
-            {
-                return null;
-            }
-
-            Transform parent = transform.parent;
-            foreach (Transform sibling in parent)
-            {
-                if (sibling != transform)
-                {
-                    T comp = sibling.GetComponent<T>();
-                    if (comp != null)
-                    {
-                        return comp;
-                    }
-                }
-            }
-
-            return null;
-        }
 
         /// <summary>
         /// /// Get component in descendants, excluding self, stop when maxDepth or UnitController is reached
@@ -79,40 +55,34 @@ namespace CodeTao
 
         private static T GetComponentInDescendants<T>(Transform parent, int currentDepth, int maxDepth, bool inactive = false, int layer = 0) where T : Component
         {
+            // if maxDepth is reached, return null
             if (currentDepth > maxDepth)
             {
                 return null;
             }
-            
             for (int i = 0; i < parent.childCount; i++)
             {
                 Transform child = parent.GetChild(i);
-                
+                // if inactive is false, only search the active game objects
                 if (!inactive && child.gameObject.activeSelf == false)
                 {
                     continue;
                 }
-                
+                // if layer is specified, only search the game objects in the specified layer
                 if (layer != 0 && child.gameObject.layer != layer)
                 {
                     continue;
                 }
-                
-                T component = child.GetComponent<T>();
-            
-                if (component != null)
+                // if component is found, return the component
+                if (child.TryGetComponent<T>(out T component))
                 {
-                    // Found the component, return it
                     return component;
                 }
-                
-                // Stop with UnitController unless the searching component is a subclass of UnitController
-                UnitController unitController = component as UnitController;
-                if (unitController && !typeof(T).IsSubclassOf(typeof(UnitController)))
+                // if stopper is found, return to the last level
+                if (child.TryGetComponent<IStopper>(out IStopper _))
                 {
-                    return null;
+                    continue;
                 }
-
                 // Recursively search the descendants with increased depth
                 T descendantComponent = GetComponentInDescendants<T>(child, currentDepth + 1, maxDepth);
                 if (descendantComponent != null)
@@ -142,31 +112,28 @@ namespace CodeTao
 
         private static void GetComponentsInDescendants<T>(Transform parent, List<T> components, bool inactive, int currentDepth, int maxDepth)
         {
+            // if maxDepth is reached, return
             if (currentDepth > maxDepth)
             {
                 return;
             }
-
             foreach (Transform child in parent)
             {
+                // if inactive is false, only search the active game objects
                 if (child.gameObject.activeSelf == false && !inactive)
                 {
                     continue;
                 }
-                
+                // if component is found, add the component to the list
                 if (child.TryGetComponent<T>(out T component) )
                 {
-                    // Found a component, add it to the list
                     components.Add(component);
                 }
-
-                // Stop with UnitController unless the searching component is a subclass of UnitController
-                UnitController unitController = component as UnitController;
-                if (unitController && !typeof(T).IsSubclassOf(typeof(UnitController)))
+                // if stopper is found, return to the last level
+                if (child.TryGetComponent<IStopper>(out IStopper _))
                 {
-                    return;
+                    continue;
                 }
-
                 // Recursively search the descendants with increased depth
                 GetComponentsInDescendants(child, components, inactive, currentDepth + 1, maxDepth);
             }
@@ -190,26 +157,21 @@ namespace CodeTao
 
         private static T GetComponentInAncestors<T>(Transform child, int currentDepth, int maxDepth) where T : Component
         {
+            // if maxDepth is reached, return null
             if (currentDepth > maxDepth || child == null)
             {
                 return null;
             }
-
-            T component = child.GetComponent<T>();
-            
-            if (component != null)
+            // if component is found, return the component
+            if (child.TryGetComponent<T>(out T component))
             {
-                // Found the component in ancestor, return it
                 return component;
             }
-            
-            // Stop with UnitController unless the searching component is a subclass of UnitController
-            UnitController unitController = component as UnitController;
-            if (unitController && !typeof(T).IsSubclassOf(typeof(UnitController)))
+            // if stopper is found, return to the last level
+            if (child.TryGetComponent<IStopper>(out IStopper _))
             {
                 return null;
             }
-
             // Recursively search the ancestors with increased depth
             return GetComponentInAncestors<T>(child.parent, currentDepth + 1, maxDepth);
         }

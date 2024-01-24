@@ -30,7 +30,9 @@ namespace CodeTao
                 damage.SetDamageSection(DamageSection.CRIT, "", critRate);
                 damage.AddDamageTag(DamageTag.Critical);
             }
-            damage.SetDamageSection(DamageSection.DamageIncrement, "", 1 + ElementBonuses[damage.DamageElement], RepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.DamageIncrement, "", 
+                1 + ElementBonuses[damage.DamageElement] + ElementBonuses[ElementType.All], 
+                RepetitionBehavior.Overwrite);
             return damage;
         }
         
@@ -73,11 +75,11 @@ namespace CodeTao
             ATK.InheritStat(source.GetAAt(EAAt.ATK));
             CritRate.InheritStat(source.GetAAt(EAAt.CritRate));
             CritDamage.InheritStat(source.GetAAt(EAAt.CritDamage));
-            ElementBonuses[ElementType.Metal].InheritStat(source.GetAAt(EAAt.MetalElementBON));
-            ElementBonuses[ElementType.Fire].InheritStat(source.GetAAt(EAAt.FireElementBON));
-            ElementBonuses[ElementType.Water].InheritStat(source.GetAAt(EAAt.WaterElementBON));
-            ElementBonuses[ElementType.Wood].InheritStat(source.GetAAt(EAAt.WoodElementBON));
-            ElementBonuses[ElementType.Earth].InheritStat(source.GetAAt(EAAt.EarthElementBON));
+            ElementBonuses[ElementType.Metal].InheritStat(source.GetAAt(EAAt.MetalElementBON), true);
+            ElementBonuses[ElementType.Fire].InheritStat(source.GetAAt(EAAt.FireElementBON), true);
+            ElementBonuses[ElementType.Water].InheritStat(source.GetAAt(EAAt.WaterElementBON), true);
+            ElementBonuses[ElementType.Wood].InheritStat(source.GetAAt(EAAt.WoodElementBON), true);
+            ElementBonuses[ElementType.Earth].InheritStat(source.GetAAt(EAAt.EarthElementBON), true);
         }
     }
 }

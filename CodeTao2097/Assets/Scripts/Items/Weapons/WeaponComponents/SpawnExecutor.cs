@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using QFramework;
+using Schema.Builtin.Nodes;
 using UnityEngine;
 
 namespace CodeTao
@@ -12,11 +14,16 @@ namespace CodeTao
         public UnitController unitPrefab;
         public bool rootToWeapon = false;
         protected Damager damager;
+        private LoopTaskController unitTaskController;
 
         public override void Init(Weapon newWeapon)
         {
             base.Init(newWeapon);
-            if (!unitPrefab) { unitPrefab = this.GetComponentInDescendants<UnitController>(true); }
+            if (!unitPrefab)
+            {
+                unitPrefab = this.GetComponentInDescendants<UnitController>(true);
+            }
+            unitTaskController = unitPrefab.GetComp<LoopTaskController>();
             UnitManager.Instance.Register(unitPrefab, rootToWeapon? transform : null);
 
             if (!damager) { damager = this.GetComponentInDescendants<Damager>(true); }
@@ -24,24 +31,24 @@ namespace CodeTao
             if (damager)
             {
                 if (damager.damageElementType == ElementType.None) { damager.damageElementType = weapon.ElementType; }
-
-                damager.DMG.InheritStat(weapon.damage);
-                damager.knockBackFactor.InheritStat(weapon.knockBack);
-                damager.effectHitRate.InheritStat(weapon.effectHitRate);
-                damager.effectDuration.InheritStat(weapon.duration);
             }
-            
         }
 
-        public override void Execute(List<Vector3> globalPositions)
+        public override IEnumerator ExecuteCoroutine(List<Vector3> globalPositions)
         {
-            base.Execute(globalPositions);
             for (int i = 0; i < globalPositions.Count; i++)
             {
                 SpawnUnit(globalPositions[i]).Init();
             }
-            
-            Next();
+            if (!next && unitTaskController)
+            {
+                float duration = unitTaskController.duration;
+                yield return new WaitForSeconds(duration <= 0? float.MaxValue : duration);
+            }
+            else
+            {
+                yield return base.ExecuteCoroutine(globalPositions);
+            }
         }
 
         /// <summary>

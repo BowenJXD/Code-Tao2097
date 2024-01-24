@@ -29,14 +29,14 @@ namespace CodeTao
             if (shotsLeft < shotsToReload)
             {
                 shotsLeft++;
-                yield return null;
             }
             else
             {
                 shotsLeft = 0;
                 modders.ForEach(m => m.RemoveMod());
-                yield return new WaitForSeconds(reloadTime);
-            } 
+            }
+
+            yield return base.ExecuteCoroutine(globalPositions);
         }
     }
 }

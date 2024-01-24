@@ -129,7 +129,9 @@ namespace CodeTao
             damage.SetTarget(this);
             var def = DEF.Value;
             damage.SetDamageSection(DamageSection.TargetDEF, "", 1 - def / (Global.Instance.DefenceFactor + def));
-            damage.SetDamageSection(DamageSection.DamageDecrement, "", 1 - ElementResistances[damage.DamageElement], RepetitionBehavior.Overwrite);
+            damage.SetDamageSection(DamageSection.DamageDecrement, "", 
+                1 - ElementResistances[damage.DamageElement] - ElementResistances[ElementType.All], 
+                RepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
             for (int i = OnTakeDamageFuncs.Count - 1; i >= 0; i--)
             {
@@ -198,11 +200,11 @@ namespace CodeTao
             MaxHP.InheritStat(source.GetAAt(EAAt.MaxHP));
             SetHP(MaxHP);
             Lives.InheritStat(source.GetAAt(EAAt.Lives));
-            ElementResistances[ElementType.Metal].InheritStat(source.GetAAt(EAAt.MetalElementRES));
-            ElementResistances[ElementType.Fire].InheritStat(source.GetAAt(EAAt.FireElementRES));
-            ElementResistances[ElementType.Water].InheritStat(source.GetAAt(EAAt.WaterElementRES));
-            ElementResistances[ElementType.Wood].InheritStat(source.GetAAt(EAAt.WoodElementRES));
-            ElementResistances[ElementType.Earth].InheritStat(source.GetAAt(EAAt.EarthElementRES));
+            ElementResistances[ElementType.Metal].InheritStat(source.GetAAt(EAAt.MetalElementRES), true);
+            ElementResistances[ElementType.Fire].InheritStat(source.GetAAt(EAAt.FireElementRES), true);
+            ElementResistances[ElementType.Water].InheritStat(source.GetAAt(EAAt.WaterElementRES), true);
+            ElementResistances[ElementType.Wood].InheritStat(source.GetAAt(EAAt.WoodElementRES), true);
+            ElementResistances[ElementType.Earth].InheritStat(source.GetAAt(EAAt.EarthElementRES), true);
         }
     }
 }

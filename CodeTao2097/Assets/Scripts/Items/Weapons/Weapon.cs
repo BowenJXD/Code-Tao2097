@@ -34,8 +34,6 @@ namespace CodeTao
         [HideInInspector] public Attacker attacker;
         [HideInInspector] public List<Damager> damagers;
 
-        protected LoopTask fireLoop;
-        
         protected WeaponSelector weaponSelector;
         protected List<WeaponExecutor> weaponExecuters = new List<WeaponExecutor>();
         protected List<EntityType> attackingTypes = new List<EntityType>();
@@ -43,8 +41,7 @@ namespace CodeTao
         [TabGroup("Content")]
         public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
 
-        public bool individualFire = false;
-        private List<ISequence> fireSequences = new List<ISequence>();
+        public bool individualFire = true;
 
         public override void Init()
         {
@@ -67,19 +64,12 @@ namespace CodeTao
             
             List<IWAtReceiver> wAtReceivers = this.GetComponentsInChildren<IWAtReceiver>(true).ToList();
             wAtReceivers.ForEach(wAtReceiver => wAtReceiver.Receive(this));
-            
-            // setup fire loop
-            fireLoop = new LoopTask(this, cooldown, Fire);
-            fireLoop.Start();
-            cooldown.RegisterWithInitValue(interval =>
-            {
-                fireLoop.LoopInterval = interval;
-            }).UnRegisterWhenGameObjectDestroyed(this);
+
+            ActionKit.Delay(duration / 2f, Fire).Start(this);
         }
 
         public virtual void Fire()
         {
-            if (individualFire && fireSequences.Count > 0 && fireSequences.FirstOrDefault() is { Status: ActionStatus.Started }) return;
             List<Vector3> globalPositions = weaponSelector.GetGlobalPositions();
             ISequence fireSequence = ActionKit.Sequence();
             for (int i = 0; i < weaponExecuters.Count; i++)
@@ -87,8 +77,16 @@ namespace CodeTao
                 WeaponExecutor weaponExecutor = weaponExecuters[i];
                 fireSequence.Coroutine(() => weaponExecutor.ExecuteCoroutine(globalPositions));
             }
-            fireSequences.Add(fireSequence);
-            fireSequence.Callback(() => fireSequences.Remove(fireSequence));
+
+            if (individualFire)
+            {
+                ActionKit.Delay(cooldown, Fire).Start(this);
+            }
+            else
+            {
+                fireSequence.Delay(cooldown, Fire);
+            }
+            
             fireSequence.Start(this);
         }
 

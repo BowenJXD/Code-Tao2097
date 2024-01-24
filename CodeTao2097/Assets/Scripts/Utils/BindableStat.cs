@@ -182,7 +182,7 @@ namespace CodeTao
             mOnValueChanged = null;
         }
         
-        public void InheritStat(BindableStat otherStat)
+        public void InheritStat(BindableStat otherStat, bool parentZero = false)
         {
             if (otherStat == null) return;
             // if negative, inherit the base value from otherStat
@@ -190,7 +190,14 @@ namespace CodeTao
             {
                 SetValueWithoutEvent(-mValue * otherStat);
             }
-            AddParent(otherStat);
+            if (mValue > 0 || !parentZero)
+            {
+                AddParent(otherStat);
+            }
+            else
+            {
+                return;
+            }
         }
         
         public static implicit operator float(BindableStat myObject)

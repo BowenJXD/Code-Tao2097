@@ -14,6 +14,8 @@ namespace CodeTao
     {
         public EAimWay aimWay = EAimWay.Random;
         public float shootPointOffset = 1;
+        public float minAngularRange = 0;
+        public float maxAngularRange = 360;
         /// <summary>
         /// A list of angles in degrees, that will be added to the base direction, and keep enumerating.
         /// </summary>
@@ -26,6 +28,14 @@ namespace CodeTao
         {
             base.Init(weapon);
             _ownerMoveController = weapon.Container.GetComp<MoveController>();
+            
+            if (shootingDirections.Count == 0)
+            {
+                weapon.amount.RegisterWithInitValue(value =>
+                {
+                    GenerateDirections(Mathf.RoundToInt(value));
+                }).UnRegisterWhenGameObjectDestroyed(this);
+            }
         }
         
         public override List<Vector3> GetGlobalPositions()
@@ -82,7 +92,7 @@ namespace CodeTao
                 case EAimWay.Cursor:
                     result = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
                     break;
-                default:
+                case EAimWay.Sequential:
                     result = Vector2.right;
                     break;
             }
@@ -91,13 +101,18 @@ namespace CodeTao
         }
         
         [Button("Generate Directions")]
-        public void GenerateDirections()
+        public void GenerateDirections(int amount = 0)
         {
-            if (!weapon) weapon = GetComponent<Weapon>();
-            if (!weapon) weapon = this.GetComponentInAncestors<Weapon>(1);
-            weapon.amount.Init();
-            shootingDirections = Util.GenerateAngles((int)weapon.amount, shootingDirections.FirstOrDefault());
-            LogKit.I("Generated AttackingDirections: " + shootingDirections);
+            if (amount == 0)
+            {
+                if (!weapon) weapon = GetComponent<Weapon>();
+                if (!weapon) weapon = this.GetComponentInAncestors<Weapon>(1);
+                weapon.amount.Init();
+                amount = (int)weapon.amount.Value;
+            }
+            // if minAngularRange is 0, then step = maxAngularRange / amount
+            float step = minAngularRange == 0? maxAngularRange / amount : Mathf.Min(minAngularRange, maxAngularRange / amount);
+            shootingDirections = Util.GenerateAngles(amount, step);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace CodeTao
     /// <summary>
     /// 物品栏组件，用于记录玩家拥有的物品
     /// </summary>
-    public partial class Inventory : Container<Item>
+    public partial class Inventory : Container<Item>, IStopper
     {
         public List<Weapon> weaponInventory = new List<Weapon>();
         public List<Artefact> artefactInventory = new List<Artefact>();
