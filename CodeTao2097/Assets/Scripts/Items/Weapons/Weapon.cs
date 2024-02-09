@@ -12,7 +12,7 @@ namespace CodeTao
     /// <summary>
     /// 武器的基类，包含武器的基本属性，以及武器的基本功能
     /// </summary>
-    public class Weapon : Item, IWAtSource
+    public class Weapon : Item, IWAtSource, IWAtReceiver
     {
         public ElementType ElementType
         {
@@ -22,10 +22,10 @@ namespace CodeTao
 
         public BindableStat damage = new BindableStat(10);
         public BindableStat amount = new BindableStat(1);
-        public BindableStat duration = new BindableStat(5).SetMinValue(0.1f);
+        public BindableStat duration = new BindableStat(5);
         public BindableStat speed = new BindableStat(4);
-        public BindableStat cooldown = new BindableStat(2).SetMinValue(0.1f);
-        public BindableStat area = new BindableStat(1).SetMinValue(0.1f);
+        public BindableStat cooldown = new BindableStat(2);
+        public BindableStat area = new BindableStat(1);
         
         public BindableStat knockBack = new BindableStat(0);
         public BindableStat effectHitRate = new BindableStat(50).SetMaxValue(100f);
@@ -62,8 +62,9 @@ namespace CodeTao
                 damager.damageElementType = ElementType;
             }
             
-            List<IWAtReceiver> wAtReceivers = this.GetComponentsInChildren<IWAtReceiver>(true).ToList();
-            wAtReceivers.ForEach(wAtReceiver => wAtReceiver.Receive(this));
+            Receive(Container.GetComp<AttributeController>().As<IWAtSource>());
+            IWAtReceiver[] wAtReceivers = this.GetComponentsInChildren<IWAtReceiver>(true);
+            this.As<IWAtSource>().Transmit(wAtReceivers);
 
             ActionKit.Delay(duration / 2f, Fire).Start(this);
         }
@@ -348,6 +349,27 @@ namespace CodeTao
                 case EWAt.EffectHitRate:
                     effectHitRate = stat;
                     break;
+            }
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            if (ReferenceEquals(source, this)) return;
+            foreach (EWAt at in Enum.GetValues(typeof(EWAt)))
+            {
+                if (at == EWAt.Null) continue;
+                BindableStat stat = GetWAt(at);
+                BindableStat otherStat = source.GetWAt(at);
+                if (stat != null && otherStat != null){
+                    if (stat < 0)
+                    {
+                        // negative value means not to inherit the value from source
+                        stat.Value = -stat;
+                    }
+                    else {
+                        stat.InheritStat(otherStat);
+                    }
+                }
             }
         }
     }

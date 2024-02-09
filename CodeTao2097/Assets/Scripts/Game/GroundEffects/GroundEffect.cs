@@ -22,6 +22,7 @@ namespace CodeTao
     public partial class GroundEffect : UnitController, IWeaponDerivative
     {
         [HideInInspector] public Damager damager;
+        [HideInInspector] public Attacker attacker;
         [HideInInspector] public Collider2D col2D;
         private SpriteRenderer sprite;
         ParticleSystem particle;
@@ -53,6 +54,9 @@ namespace CodeTao
             GetComp<LoopTaskController>()?.AddTrigger(AttackAll);
             GetComp<LoopTaskController>()?.AddFinish(Deinit);
             
+            attacker = Player.Instance.GetComp<Attacker>();
+            if (!damager) damager = GetComp<Damager>();
+
             if (particle) InitParticle();
 
             switch (attackWhenEntering.Value)
@@ -62,7 +66,7 @@ namespace CodeTao
                 case EAttackTarget.One:
                     col2D.OnTriggerEnter2DEvent(col =>
                     {
-                        Defencer target = DamageManager.Instance.ColToDef(damager, col);
+                        Defencer target = DamageManager.Instance?.ColToDef(damager, col);
                         if (target)
                         {
                             Attack(target);
@@ -72,7 +76,7 @@ namespace CodeTao
                 case EAttackTarget.All:
                     col2D.OnTriggerEnter2DEvent(col =>
                     {
-                        Defencer target = DamageManager.Instance.ColToDef(damager, col);
+                        Defencer target = DamageManager.Instance?.ColToDef(damager, col);
                         if (target)
                         {
                             AttackAll();
@@ -90,7 +94,7 @@ namespace CodeTao
                 case EAttackTarget.One:
                     col2D.OnTriggerExit2DEvent(col =>
                     {
-                        Defencer target = DamageManager.Instance.ColToDef(damager, col);
+                        Defencer target = DamageManager.Instance?.ColToDef(damager, col);
                         if (target)
                         {
                             Attack(target);
@@ -100,7 +104,7 @@ namespace CodeTao
                 case EAttackTarget.All:
                     col2D.OnTriggerExit2DEvent(col =>
                     {
-                        Defencer target = DamageManager.Instance.ColToDef(damager, col);
+                        Defencer target = DamageManager.Instance?.ColToDef(damager, col);
                         if (target)
                         {
                             AttackAll();
@@ -142,7 +146,7 @@ namespace CodeTao
         {
             if (damager)
             {
-                DamageManager.Instance.ExecuteDamage(damager, defencer, weapon? weapon.attacker : null);
+                DamageManager.Instance.ExecuteDamage(damager, defencer, attacker);
             }
         }
 

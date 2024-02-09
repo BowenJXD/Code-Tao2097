@@ -8,6 +8,13 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    public enum AttackerUsage
+    {
+        ATK,
+        Crit,
+        ElementBonus,
+    }
+    
     /// <summary>
     /// 增幅伤害的组件，通常挂载在有defencer的单位上。包括攻击力、暴击率、暴击伤害、五行伤害加成，不为造成伤害的必要条件。
     /// </summary>
@@ -19,20 +26,45 @@ namespace CodeTao
         public Dictionary<ElementType, BindableStat> ElementBonuses = Enum.GetValues(typeof(ElementType))
             .Cast<ElementType>()
             .ToDictionary(key => key, value => new BindableStat(0));
-
-        public Damage ProcessDamage(Damage damage)
+        
+        public List<Func<Damage, Damage>> onDealDamageFuncs = new List<Func<Damage, Damage>>();
+        
+        public Damage ProcessDamage(Damage damage, AttackerUsage[] attackerUsages = null)
         {
-            damage.SetSource(this);
-            damage.SetDamageSection(DamageSection.SourceATK, "", ATK.Value);
-            float critRate = GetCritRate();
-            if (critRate > 1)
+            if (attackerUsages == null)
             {
-                damage.SetDamageSection(DamageSection.CRIT, "", critRate);
-                damage.AddDamageTag(DamageTag.Critical);
+                attackerUsages = new AttackerUsage[] { AttackerUsage.ATK, AttackerUsage.Crit, AttackerUsage.ElementBonus };
             }
-            damage.SetDamageSection(DamageSection.DamageIncrement, "", 
-                1 + ElementBonuses[damage.DamageElement] + ElementBonuses[ElementType.All], 
-                RepetitionBehavior.Overwrite);
+            
+            damage.SetSource(this);
+            
+            if (attackerUsages.Contains(AttackerUsage.ATK)) damage.SetDamageSection(DamageSection.SourceStat, "", ATK.Value);
+            
+            if (attackerUsages.Contains(AttackerUsage.Crit)){
+                float critRate = GetCritRate();
+                if (critRate > 1)
+                {
+                    damage.SetDamageSection(DamageSection.CRIT, "", critRate);
+                    damage.AddDamageTag(DamageTag.Critical);
+                }
+            }
+
+            if (attackerUsages.Contains(AttackerUsage.ElementBonus)){
+                damage.SetDamageSection(DamageSection.DamageIncrement, "",
+                    1 + ElementBonuses[damage.DamageElement] + ElementBonuses[ElementType.All],
+                    RepetitionBehavior.Overwrite);
+            }
+            
+            return damage;
+        }
+
+        public Damage ProcessDamageExt(Damage damage)
+        {
+            foreach (var onDealDamageFunc in onDealDamageFuncs)
+            {
+                damage = onDealDamageFunc(damage);
+            }
+            
             return damage;
         }
         
@@ -41,7 +73,7 @@ namespace CodeTao
         public float GetCritRate()
         {
             float result = 1.0f;
-            if (Global.Instance.Random.Next(100) < CritRate.Value)
+            if (RandomUtil.Rand100(CritRate.Value))
             {
                 result = CritDamage.Value / 100;
             }

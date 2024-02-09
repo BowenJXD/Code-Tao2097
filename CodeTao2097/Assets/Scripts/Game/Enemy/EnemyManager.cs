@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using QFramework;
 
 namespace CodeTao
@@ -20,6 +21,21 @@ namespace CodeTao
             {
                 enemyGenerator.onSpawn += action;
             }
+        }
+        
+        public Enemy GetRandom()
+        {
+            int totalCount = enemyGenerators.Sum(enemyGenerator => enemyGenerator.activeEnemies.Count);
+            int index = RandomUtil.Rand(totalCount);
+            foreach (var enemyGenerator in enemyGenerators)
+            {
+                if (index < enemyGenerator.activeEnemies.Count)
+                {
+                    return enemyGenerator.activeEnemies[index];
+                }
+                index -= enemyGenerator.activeEnemies.Count;
+            }
+            return null;
         }
     }
 }

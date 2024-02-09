@@ -133,6 +133,11 @@ namespace CodeTao
                 1 - ElementResistances[damage.DamageElement] - ElementResistances[ElementType.All], 
                 RepetitionBehavior.Overwrite);
             damage.MultiplyKnockBack(KnockBackFactor);
+            return damage;
+        }
+
+        public Damage ProcessDamageExt(Damage damage)
+        {
             for (int i = OnTakeDamageFuncs.Count - 1; i >= 0; i--)
             {
                 damage = OnTakeDamageFuncs[i]?.Invoke(damage);
@@ -141,7 +146,7 @@ namespace CodeTao
         }
         
         public List<Func<Damage, Damage>> OnTakeDamageFuncs = new List<Func<Damage, Damage>>();
-        public Action<Damage> TakeDamageAfter;
+        public Action<Damage> takeDamageAfter;
         
         
         public void TakeDamage(Damage damage)
@@ -154,8 +159,12 @@ namespace CodeTao
                     AlterHP(-damageValue);
                     damage.SetDealt(true);
                 }
-                TakeDamageAfter?.Invoke(damage);
             }
+        }
+
+        public void TakeDamageAfter(Damage damage)
+        {
+            takeDamageAfter?.Invoke(damage);
             
             if (IsDead)
             {

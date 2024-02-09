@@ -89,14 +89,21 @@ namespace CodeTao
             {
                 damage.AddDamageTag(damageTag);
             }
-            foreach (var func in OnDealDamageFuncs)
-            {
-                damage = func.Invoke(damage);
-            }
             return damage;
         }
         
         public List<Func<Damage, Damage>> OnDealDamageFuncs = new List<Func<Damage, Damage>>();
+        
+        public Damage ProcessDamageExt(Damage damage)
+        {
+            foreach (var onDealDamageFunc in OnDealDamageFuncs)
+            {
+                damage = onDealDamageFunc(damage);
+            }
+            
+            return damage;
+        }
+        
         public Action<Damage> DealDamageAfter;
         
         public void DealDamage(Damage damage)
@@ -106,6 +113,7 @@ namespace CodeTao
                 damage.Target.TakeDamage(damage);
                 TryApplyBuff(damage);
                 DealDamageAfter?.Invoke(damage);
+                damage.Target.TakeDamageAfter(damage);
             }
         }
         

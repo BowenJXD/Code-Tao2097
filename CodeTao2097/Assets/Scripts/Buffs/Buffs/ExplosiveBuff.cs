@@ -10,7 +10,7 @@ namespace CodeTao
         {
             base.OnAdd();
             defencer = Container.GetComp<Defencer>();
-            if (defencer) defencer.TakeDamageAfter += TakeDamageAfter;
+            if (defencer) defencer.takeDamageAfter += TakeDamageAfter;
         }
 
         void TakeDamageAfter(Damage damage)

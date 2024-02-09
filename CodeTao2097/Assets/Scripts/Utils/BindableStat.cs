@@ -127,6 +127,7 @@ namespace CodeTao
         {
             if (parent == null) return false;
             if (parents.Contains(parent)) return false;
+            if (parent == this) return false;
             parents.Add(parent);
             parent.RegisterWithInitValue(value => Change());
             return true;
@@ -182,6 +183,11 @@ namespace CodeTao
             mOnValueChanged = null;
         }
         
+        /// <summary>
+        /// if mValue is 0, not inheriting except if parentZero is true
+        /// </summary>
+        /// <param name="otherStat"></param>
+        /// <param name="parentZero"></param>
         public void InheritStat(BindableStat otherStat, bool parentZero = false)
         {
             if (otherStat == null) return;
@@ -190,7 +196,7 @@ namespace CodeTao
             {
                 SetValueWithoutEvent(-mValue * otherStat);
             }
-            if (mValue > 0 || !parentZero)
+            if (!(mValue == 0 && parentZero))
             {
                 AddParent(otherStat);
             }

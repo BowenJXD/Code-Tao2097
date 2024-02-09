@@ -18,6 +18,8 @@ namespace CodeTao
         public Random Random;
 
         public float DefenceFactor = 10;
+        public Material outlineMaterial;
+        
         public static BindableProperty<bool> IsPass = new BindableProperty<bool>(false);
         public static BindableProperty<float> GameDuration;
         public static BindableProperty<float> GameTime = new BindableProperty<float>(0);

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using QFramework;
+using UnityEngine;
 
 namespace CodeTao
 {
@@ -9,9 +10,13 @@ namespace CodeTao
     {
         private MoveController moveController;
         private Damager damager;
+        Rigidbody2D rb;
+        RigidbodyConstraints2D oldConstraints;
+        private Color oldColor;
+        private float oldWidth;
+        private bool oldEnabled;
         private SpriteRenderer sp;
-        private Color petrifiedColor = new Color(165, 42, 42, 1);
-        private Color originalColor;
+        Outliner outliner;
         
         public override void Init()
         {
@@ -20,13 +25,23 @@ namespace CodeTao
             moveController = Container.GetComp<MoveController>();
             damager = Container.GetComp<Damager>();
             sp = Container.GetComponentFromUnit<SpriteRenderer>();
+            if (sp) outliner = sp.GetOrAddComponent<Outliner>();
 
-            moveController.SPD.AddModifier(0, EModifierType.Multiplicative, name, RepetitionBehavior.Overwrite);
+            moveController.SPD.AddModifier(0, EModifierType.Multiplicative, name, RepetitionBehavior.Overwrite, true);
             damager.IsInCD = true;
-            if (sp)
+            Rigidbody2D rb = Container.GetComponentFromUnit<Rigidbody2D>();
+            if (rb)
             {
-                // TODO: change outline color
+                oldConstraints = rb.constraints;
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
             }
+            oldColor = outliner.OutlineColor;
+            oldWidth = outliner.OutlineWidth;
+            oldEnabled = outliner.enabled;
+            
+            outliner.OutlineColor = elementType.GetColor();
+            outliner.OutlineWidth = 0.1f;
+            outliner.enabled = true;
         }
 
         public override void OnRemove()
@@ -34,10 +49,14 @@ namespace CodeTao
             base.OnRemove();
             moveController.SPD.RemoveModifier(EModifierType.Multiplicative, name);
             damager.IsInCD = false;
-            if (sp)
+            if (rb)
             {
-                // TODO: change outline color
+                rb.constraints = oldConstraints;
             }
+
+            outliner.OutlineColor = oldColor;
+            outliner.OutlineWidth = oldWidth;
+            outliner.enabled = oldEnabled;
         }
     }
 }

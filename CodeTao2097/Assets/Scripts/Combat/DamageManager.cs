@@ -12,10 +12,20 @@ namespace CodeTao
     {
         public Action<Damage> damageAfter;
         
+        public Damage DamageCol(Damager damager, Collider2D col, Attacker attacker = null, AttackerUsage[] attackerUsages = null)
+        {
+            Defencer defencer = ColToDef(damager, col);
+            if (defencer)
+            {
+                return ExecuteDamage(damager, defencer, attacker, attackerUsages);
+            }
+            return null;
+        }
+        
         public Defencer ColToDef(Damager damager, Collider2D col)
         {
             UnitController unitController = col.GetUnit();
-            if (unitController)
+            if (unitController && unitController.gameObject.activeSelf)
             {
                 Defencer defencer = unitController.GetComp<Defencer>();
                 if (Util.IsTagIncluded(unitController.tag, damager.damagingTags) && defencer)
@@ -26,7 +36,42 @@ namespace CodeTao
 
             return null;
         }
+
+        public Damage ExecuteDamage(Damager damager, Defencer defencer, Attacker attacker = null, AttackerUsage[] attackerUsages = null)
+        {
+            Damage damage = ProcessDamage(damager, defencer, attacker, attackerUsages);
+            if (damage == null)
+            {
+                return null;
+            }
+
+            return DealDamage(damage);
+        }
         
+        public Damage ProcessDamage(Damager damager, Defencer defencer, Attacker attacker = null, AttackerUsage[] attackerUsages = null)
+        {
+            if (!CheckDamage(damager, defencer, attacker))
+            {
+                return null;
+            }
+            if (attackerUsages == null)
+            {
+                attackerUsages = new [] { AttackerUsage.ATK, AttackerUsage.Crit, AttackerUsage.ElementBonus };
+            }
+            
+            Damage damage = new Damage();
+            attacker?.ProcessDamage(damage, attackerUsages);
+            damager.ProcessDamage(damage);
+            defencer.ProcessDamage(damage);
+            
+            attacker?.ProcessDamageExt(damage);
+            damager.ProcessDamageExt(damage);
+            defencer.ProcessDamageExt(damage);
+            
+            damage.CalculateDamageValue();
+            return damage;
+        }
+
         public bool CheckDamage(Damager damager, Defencer defencer, Attacker attacker = null)
         {
             bool result = true;
@@ -34,31 +79,15 @@ namespace CodeTao
             result &= defencer.ValidateDamage(damager, attacker);
             return result;
         }
-        
-        public Damage ExecuteDamage(Damager damager, Defencer defencer, Attacker attacker = null)
+
+        public Damage DealDamage(Damage damage)
         {
-            if (!CheckDamage(damager, defencer, attacker))
-            {
-                return null;
-            }
-            
-            damager.StartCD();
-            defencer.StartCD();
-            
-            Damage damage = new Damage();
-            attacker?.ProcessDamage(damage);
-            damager.ProcessDamage(damage);
-            defencer.ProcessDamage(damage);
-            
-            damage.CalculateDamageValue();
-            
-            damager.DealDamage(damage);
-            attacker?.DealDamageAfter?.Invoke(damage);
+            damage.Median.DealDamage(damage);
+            damage.Source?.DealDamageAfter?.Invoke(damage);
             if (damage.Dealt)
             {
                 damageAfter?.Invoke(damage);
             }
-
             return damage;
         }
 

@@ -33,7 +33,7 @@ namespace CodeTao
             // Change color after taking DMG
             if (defencer)
             {
-                defencer.TakeDamageAfter += (damage) =>
+                defencer.takeDamageAfter += (damage) =>
                 {
                     sp.color = damage.DamageElement.GetColor();
 

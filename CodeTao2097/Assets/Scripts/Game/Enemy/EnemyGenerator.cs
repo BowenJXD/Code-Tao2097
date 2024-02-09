@@ -23,6 +23,7 @@ namespace CodeTao
 	{
 		public Enemy enemyPrefab;
 		public List<GeneratorTask> tasks;
+		[NonSerialized] public List<Enemy> activeEnemies = new List<Enemy>();
 		
 		protected ObjectPool<ParticleSystem> deathFXPool;
 		public ParticleSystem deathFX;
@@ -89,12 +90,14 @@ namespace CodeTao
 			
 			Vector3 spawnPosition = GetSpawnPosition();
 			Enemy enemy = UnitManager.Instance.Get(enemyPrefab);
+			activeEnemies.Add(enemy);
 			enemy.Position(spawnPosition);
 			onSpawn?.Invoke(enemy);
 			enemy.onDeinit += () =>
 			{
 				ParticleSystem ps = deathFXPool.Get().Position(enemy.transform.position).Parent(transform);
 				ActionKit.Delay(deathFXDuration, () => { deathFXPool.Release(ps); }).Start(this);
+				activeEnemies.Remove(enemy);
 			};
 
 			enemy.Init();

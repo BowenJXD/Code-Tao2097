@@ -20,21 +20,17 @@ namespace CodeTao
         {
             if (!inventory) inventory = GetComp<Inventory>();
             List<IAAtReceiver> aAtReceivers = Unit.GetComponentsInDescendants<IAAtReceiver>(true).ToList(); 
-            aAtReceivers.ForEach(aAtReceiver => aAtReceiver.Receive(this));
+            this.As<IAAtSource>().Transmit(aAtReceivers);
         }
 
         public void AddArtefactModifier(EAAt at, float value, EModifierType modifierType, string modName,
             RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
-            if (aStats.ContainsKey(at))
-            {
-                aStats[at].AddModifier(value, modifierType, modName, repetitionBehavior);
-            }
-            else
+            if (!aStats.ContainsKey(at))
             {
                 AddArtefactModGroup(at);
-                aStats[at].AddModifier(value, modifierType, modName, repetitionBehavior);
             }
+            aStats[at].AddModifier(value, modifierType, modName, repetitionBehavior);
         }
         
         public void RemoveArtefactModifier(EAAt at, EModifierType modifierType, string modName)
@@ -61,23 +57,11 @@ namespace CodeTao
         public void AddWeaponModifier(EWAt at, float value, EModifierType modifierType, string modName = "inventory",
             RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return)
         {
-            if (wStats.ContainsKey(at))
-            {
-                wStats[at].AddModifier(value, modifierType, modName, repetitionBehavior);
-            }
-            else
+            if (!wStats.ContainsKey(at))
             {
                 AddWeaponModGroup(at);
-                wStats[at].AddModifier(value, modifierType, modName, repetitionBehavior);
             }
-
-            if (inventory)
-            {
-                foreach (var weapon in inventory.Weapons)
-                {
-                    weapon.As<IWAtSource>().GetWAt(at).AddModifier(value, modifierType, modName, repetitionBehavior);
-                }
-            }
+            wStats[at].AddModifier(value, modifierType, modName, repetitionBehavior);
         }
         
         public void RemoveWeaponModifier(EWAt at, EModifierType modifierType, string modName)

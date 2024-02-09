@@ -22,14 +22,19 @@ namespace CodeTao
 			SelfNavAgent.updateUpAxis = false;
 			
 			// Change color after taking DMG
-			GetComp<Defencer>().TakeDamageAfter += (damage) =>
+			GetComp<Defencer>().takeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();
-
+				Action action = () =>
+				{
+					Sprite.color = Color.white;
+				};
+				onDeinit += action;
 				ActionKit.Delay(0.1f, () =>
 				{
 					if (!this) return;
 					Sprite.color = Color.white;
+					onDeinit -= action;
 				}).Start(this);
 			};
 

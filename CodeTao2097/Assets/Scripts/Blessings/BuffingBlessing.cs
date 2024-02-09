@@ -50,7 +50,7 @@ namespace CodeTao
             return buff;
         }
 
-        public bool CheckCondition(Damage damage)
+        public virtual bool CheckCondition(Damage damage)
         {
             return relatedElements.Contains(damage.DamageElement);
         }

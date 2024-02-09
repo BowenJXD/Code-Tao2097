@@ -13,7 +13,7 @@ namespace CodeTao
     /// </summary>
     public enum DamageSection
     {
-        SourceATK,
+        SourceStat,
         TargetDEF,
         CRIT,
         DamageIncrement,
@@ -171,7 +171,7 @@ namespace CodeTao
         public static string GetCSVHeader()
         {
             return
-                "Median,Target,Source,Element,Damage Value,Base Value,SourceATK,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,DamageTags";
+                "Median,Target,Source,Element,Damage Value,Base Value,SourceStat,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,DamageTags";
         }
         
         public string ToCSV()
@@ -192,7 +192,7 @@ namespace CodeTao
             log += $"{Knockback},";
             foreach (var damageTag in damageTags)
             {
-                log += $"{damageTag}\n";
+                log += $"{damageTag}; ";
             }
             return log;
         }

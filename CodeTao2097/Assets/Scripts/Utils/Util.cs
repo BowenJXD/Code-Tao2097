@@ -108,7 +108,7 @@ namespace CodeTao
                 case ElementType.Fire:
                     return Color.red;
                 case ElementType.Earth:
-                    return new Color(165,42,42);
+                    return new Color(0.3f, 0.18f, 0.09f);
                 default:
                     return Color.white;
             }

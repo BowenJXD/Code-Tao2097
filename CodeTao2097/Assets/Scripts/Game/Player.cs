@@ -21,7 +21,7 @@ namespace CodeTao
 		private void Start()
 		{
 			// Change color after taking DMG
-			GetComp<Defencer>().TakeDamageAfter += (damage) =>
+			GetComp<Defencer>().takeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();
 
