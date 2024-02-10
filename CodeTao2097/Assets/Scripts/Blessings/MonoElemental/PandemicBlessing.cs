@@ -72,7 +72,7 @@ namespace CodeTao
                         }
                         else
                         {
-                            newBuff.RemoveAfter += buffRemoved =>
+                            newBuff.removeAfter += buffRemoved =>
                             {
                                 pool.Release(buffRemoved);
                             };

@@ -25,16 +25,18 @@ namespace CodeTao
 			GetComp<Defencer>().takeDamageAfter += (damage) =>
 			{
 				Sprite.color = damage.DamageElement.GetColor();
-				Action action = () =>
+
+				void Action()
 				{
 					Sprite.color = Color.white;
-				};
-				onDeinit += action;
+				}
+
+				onDeinit += Action;
 				ActionKit.Delay(0.1f, () =>
 				{
 					if (!this) return;
 					Sprite.color = Color.white;
-					onDeinit -= action;
+					onDeinit -= Action;
 				}).Start(this);
 			};
 

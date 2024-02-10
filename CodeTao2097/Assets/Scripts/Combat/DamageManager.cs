@@ -88,6 +88,9 @@ namespace CodeTao
             {
                 damageAfter?.Invoke(damage);
             }
+            damage.Median.StartCD();
+            damage.Target.StartCD();
+            
             return damage;
         }
 

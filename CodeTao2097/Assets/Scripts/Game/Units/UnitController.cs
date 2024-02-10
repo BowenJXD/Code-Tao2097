@@ -28,7 +28,7 @@ namespace CodeTao
         }
 
         /// <summary>
-        /// Called from UnitPool
+        /// Will be called once when the gameObject is created or when the scene is loaded
         /// </summary>
         public virtual void PreInit()
         {

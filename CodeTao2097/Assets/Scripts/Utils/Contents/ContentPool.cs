@@ -24,8 +24,8 @@ namespace CodeTao
                 , prefab =>
                 {
                     prefab.gameObject.SetActive(false);
-                    prefab.AddAfter = null;
-                    prefab.RemoveAfter = null;
+                    prefab.addAfter = null;
+                    prefab.removeAfter = null;
                 }
                 , prefab =>
                 {

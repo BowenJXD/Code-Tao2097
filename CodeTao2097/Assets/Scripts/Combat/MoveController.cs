@@ -93,6 +93,8 @@ namespace CodeTao
                 sp.flipY = !sp.flipY;
                 flipped = false;
             }
+            
+            distanceEvents.Clear();
         }
 
         public void Receive(IAAtSource source)

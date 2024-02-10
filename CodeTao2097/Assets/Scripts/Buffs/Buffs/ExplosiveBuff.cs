@@ -18,6 +18,7 @@ namespace CodeTao
             if (damage.Source && damage.GetDamageSection(DamageSection.CRIT) != 1)
             {
                 SpawnExplosion();
+                RemoveFromContainer();
             }
         }
         

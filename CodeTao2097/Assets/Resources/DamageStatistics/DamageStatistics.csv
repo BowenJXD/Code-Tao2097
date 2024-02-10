@@ -1,376 +1,691 @@
 Time,Receiver Unit,Median,Target,Source,Element,Damage Value,Base Value,SourceStat,TargetDEF,CRIT,DamageIncrement,DamageDecrement,ReactionMultiplier,KnockBack,DamageTags,PlayerLevel,DamagerLevel
-3.41776,Enemy(Clone) -1075708,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-3.892104,Enemy(Clone) -1075708,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-4.024799,Enemy(Clone) -1076510,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-4.346319,Enemy(Clone) -1075708,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-4.346319,Enemy(Clone) -1076510,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-4.56983,Enemy(Clone) -1076510,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-4.603058,Enemy(Clone) -1075612,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-4.603058,Enemy(Clone) -1076746,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,8,10,0.5,1.5,1,1,,6,Critical; Projectile; ,1,1
-6.687582,Enemy(Clone) -1076746,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-6.737348,Enemy(Clone) -1075108,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-6.82576,Enemy(Clone) -1075108,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-6.929491,Enemy(Clone) -1075108,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-6.929491,Enemy(Clone) -1076412,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-6.997989,Enemy(Clone) -1076608,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-7.237085,Enemy(Clone) -1076412,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-7.644267,Enemy(Clone) -1076412,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-7.75698,Enemy(Clone) -1076608,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-7.75698,Enemy(Clone) -1076102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-7.873952,Enemy(Clone) -1075906,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-8.089347,Enemy(Clone) -1076102,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-8.126535,Enemy(Clone) -1075708,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-8.16143,Enemy(Clone) -1076608,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-8.16143,Enemy(Clone) -1076608,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-8.459655,Enemy(Clone) -1076102,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-8.831223,Enemy(Clone) -1075612,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-9.282944,Enemy(Clone) -1076314,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-9.282944,Enemy(Clone) -1075612,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-10.47302,Enemy(Clone) -1078018,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-10.63978,Enemy(Clone) -1075318,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-10.63978,Enemy(Clone) -1075510,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,75,10,10,0.5,1.5,1,1,,2,Critical; Retaliation; ,1,1
-10.70436,Enemy(Clone) -1078018,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-10.78855,Enemy(Clone) -1075510,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-10.84122,Enemy(Clone) -1080416,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-10.84122,Enemy(Clone) -1075318,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-10.84122,Enemy(Clone) -1077864,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-10.84122,Enemy(Clone) -1080612,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-10.95986,Enemy(Clone) -1075012,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-10.95986,Enemy(Clone) -1075204,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-11.06191,Enemy(Clone) -1075012,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-11.21087,Enemy(Clone) -1078214,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-11.25186,Enemy(Clone) -1075012,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-11.52787,Enemy(Clone) -1078214,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-11.75905,Enemy(Clone) -1076314,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-11.81482,Enemy(Clone) -1081072,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-12.27952,Enemy(Clone) -1076844,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-12.72283,Enemy(Clone) -1076844,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-12.72283,Enemy(Clone) -1075906,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-12.77293,Enemy(Clone) -1076844,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-12.77293,Enemy(Clone) -1075906,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-12.94691,Enemy(Clone) -1081600,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-12.98318,Enemy(Clone) -1076314,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-13.03248,Enemy(Clone) -1081072,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-13.08308,Enemy(Clone) -1079338,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-13.30556,Enemy(Clone) -1076314,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-13.30556,Enemy(Clone) -1081072,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-13.35133,Enemy(Clone) -1078116,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-13.40506,Enemy(Clone) -1081600,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-13.46776,Enemy(Clone) -1080220,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-13.50272,Enemy(Clone) -1077864,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-13.55303,Enemy(Clone) -1079338,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-13.60377,Enemy(Clone) -1079338,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-13.60377,Enemy(Clone) -1081170,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-13.69157,Enemy(Clone) -1077668,LYDamager,EnemyDefencer,PlayerAttacker,Water,75,10,10,0.5,1.5,1,1,,0,Critical; ,1,1
-13.82485,Enemy(Clone) -1077668,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-13.82485,Enemy(Clone) -1077864,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-14.02562,Enemy(Clone) -1076608,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-14.09467,Enemy(Clone) -1076608,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-14.33986,Enemy(Clone) -1081500,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-14.39042,Enemy(Clone) -1079436,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-14.42711,Enemy(Clone) -1076608,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-14.47316,Enemy(Clone) -1080024,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-14.52316,Enemy(Clone) -1079102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-14.52316,Enemy(Clone) -1076412,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-14.5722,Enemy(Clone) -1080024,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-14.94308,Enemy(Clone) -1080318,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-15.22427,Enemy(Clone) -1075808,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-15.27539,Enemy(Clone) -1076844,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-16.72667,Enemy(Clone) -1080974,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.72667,Enemy(Clone) -1079200,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-16.72667,Enemy(Clone) -1080612,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.72667,Enemy(Clone) -1078542,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.72667,Enemy(Clone) -1078900,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.72667,Enemy(Clone) -1081170,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.72667,Enemy(Clone) -1082608,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-16.72667,Enemy(Clone) -1079828,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.74927,Enemy(Clone) -1076942,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.81046,Enemy(Clone) -1075108,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.86113,Enemy(Clone) -1079730,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.89891,Enemy(Clone) -1076412,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.89891,Enemy(Clone) -1077472,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.89891,Enemy(Clone) -1078116,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.94567,Enemy(Clone) -1079102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.94567,Enemy(Clone) -1081268,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.94567,Enemy(Clone) -1078900,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-16.99615,Enemy(Clone) -1077472,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-16.99615,Enemy(Clone) -1082310,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-16.99615,Enemy(Clone) -1080220,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-16.99615,Enemy(Clone) -1075414,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-17.0458,Enemy(Clone) -1078542,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-17.09435,Enemy(Clone) -1079200,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-17.09435,Enemy(Clone) -1080612,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-17.14378,Enemy(Clone) -1076942,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-17.2093,Enemy(Clone) -1076004,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-17.2093,Enemy(Clone) -1076942,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-17.26202,Enemy(Clone) -1075414,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-17.31204,Enemy(Clone) -1075108,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-17.31204,Enemy(Clone) -1076004,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-17.36079,Enemy(Clone) -1076004,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-17.42807,Enemy(Clone) -1082310,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-17.49635,Enemy(Clone) -1075108,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-17.49635,Enemy(Clone) -1078542,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-17.6607,Enemy(Clone) -1076746,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-17.74485,Enemy(Clone) -1075204,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-17.82816,Enemy(Clone) -1077766,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-17.91282,Enemy(Clone) -1081170,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-17.94419,Enemy(Clone) -1081366,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-17.94419,Enemy(Clone) -1078422,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-17.94419,Enemy(Clone) -1080416,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.02692,Enemy(Clone) -1076746,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.02692,Enemy(Clone) -1081698,LYDamager,EnemyDefencer,PlayerAttacker,Water,75,10,10,0.5,1.5,1,1,,0,Critical; ,1,1
-18.02692,Enemy(Clone) -1080318,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.02692,Enemy(Clone) -1080974,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.07634,Enemy(Clone) -1078680,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-18.11242,Enemy(Clone) -1078324,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.17626,Enemy(Clone) -1080514,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.27841,Enemy(Clone) -1077766,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.27841,Enemy(Clone) -1075204,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.27841,Enemy(Clone) -1078422,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-18.34296,Enemy(Clone) -1081366,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.34296,Enemy(Clone) -1080416,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.39518,Enemy(Clone) -1080318,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-18.39518,Enemy(Clone) -1076746,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.39518,Enemy(Clone) -1078802,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.39518,Enemy(Clone) -1086246,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.42646,Enemy(Clone) -1081698,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-18.42646,Enemy(Clone) -1078680,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.42646,Enemy(Clone) -1078802,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.45953,Enemy(Clone) -1075906,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.45953,Enemy(Clone) -1076510,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.45953,Enemy(Clone) -1085852,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.45953,Enemy(Clone) -1078324,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.45953,Enemy(Clone) -1077864,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.45953,Enemy(Clone) -1077766,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-18.48294,Enemy(Clone) -1080514,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.54317,Enemy(Clone) -1082706,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.72697,Enemy(Clone) -1082212,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.75976,Enemy(Clone) -1086936,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.75976,Enemy(Clone) -1086246,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.75976,Enemy(Clone) -1080710,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.81027,Enemy(Clone) -1077864,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-18.81027,Enemy(Clone) -1086148,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.81027,Enemy(Clone) -1082408,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.85901,Enemy(Clone) -1077040,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.85901,Enemy(Clone) -1085852,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.85901,Enemy(Clone) -1086048,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.91231,Enemy(Clone) -1078680,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-18.91231,Enemy(Clone) -1085348,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-18.96281,Enemy(Clone) -1080514,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.07794,Enemy(Clone) -1082212,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-19.07794,Enemy(Clone) -1077040,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.07794,Enemy(Clone) -1085348,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-19.19574,Enemy(Clone) -1079828,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-19.19574,Enemy(Clone) -1080710,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.19574,Enemy(Clone) -1085852,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.19574,Enemy(Clone) -1086148,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.2601,Enemy(Clone) -1077040,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-19.2601,Enemy(Clone) -1086048,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.2601,Enemy(Clone) -1082408,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.44444,Enemy(Clone) -1079828,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-19.45187,Enemy(Clone) -1086048,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-19.49519,Enemy(Clone) -1086544,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.54309,Enemy(Clone) -1075612,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.54309,Enemy(Clone) -1077570,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.54309,Enemy(Clone) -1085090,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.54309,Enemy(Clone) -1084982,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.59345,Enemy(Clone) -1080710,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.59345,Enemy(Clone) -1086936,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.64388,Enemy(Clone) -1086148,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.64388,Enemy(Clone) -1087230,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.6956,Enemy(Clone) -1082408,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-19.6956,Enemy(Clone) -1079338,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-19.87866,Enemy(Clone) -1085090,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-19.92938,Enemy(Clone) -1077570,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-19.92938,Enemy(Clone) -1079338,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-20.01212,Enemy(Clone) -1086936,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-20.31168,Enemy(Clone) -1086446,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.35672,Enemy(Clone) -1081072,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.4444,Enemy(Clone) -1076608,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.52794,Enemy(Clone) -1086446,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-20.52794,Enemy(Clone) -1076608,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-20.52794,Enemy(Clone) -1081072,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-20.58579,Enemy(Clone) -1086740,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.679,Enemy(Clone) -1086642,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.7195,Enemy(Clone) -1087426,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.77712,Enemy(Clone) -1085450,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.82974,Enemy(Clone) -1080812,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-20.82974,Enemy(Clone) -1077334,LYDamager,EnemyDefencer,PlayerAttacker,Water,75,10,10,0.5,1.5,1,1,,0,Critical; ,1,1
-20.86517,Enemy(Clone) -1086246,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.90132,Enemy(Clone) -1087132,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-20.90132,Enemy(Clone) -1077668,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,75,10,10,0.5,1.5,1,1,,2,Critical; Retaliation; ,1,1
-21.0366,Enemy(Clone) -1076844,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-21.14879,Enemy(Clone) -1086740,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-21.14879,Enemy(Clone) -1086642,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.14879,Enemy(Clone) -1077334,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.14879,Enemy(Clone) -1077668,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.14879,Enemy(Clone) -1087426,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.14879,Enemy(Clone) -1085450,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,8,10,0.5,1.5,1,1,,6,Critical; Projectile; ,1,1
-21.18233,Enemy(Clone) -1085646,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.18233,Enemy(Clone) -1075612,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-21.18233,Enemy(Clone) -1087230,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-21.21793,Enemy(Clone) -1076844,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-21.21793,Enemy(Clone) -1084982,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-21.21793,Enemy(Clone) -1085548,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.21793,Enemy(Clone) -1086544,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-21.21793,Enemy(Clone) -1086642,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-21.21793,Enemy(Clone) -1087132,LYDamager,EnemyDefencer,PlayerAttacker,Water,75,10,10,0.5,1.5,1,1,,0,Critical; ,1,1
-21.21793,Enemy(Clone) -1087426,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-21.26693,Enemy(Clone) -1082706,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.26693,Enemy(Clone) -1082510,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.38335,Enemy(Clone) -1082804,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.43189,Enemy(Clone) -1083492,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-21.43189,Enemy(Clone) -1083492,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.43189,Enemy(Clone) -1083000,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.43189,Enemy(Clone) -1087328,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.43189,Enemy(Clone) -1075318,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-21.48127,Enemy(Clone) -1080812,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-21.48127,Enemy(Clone) -1083492,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-21.77348,Enemy(Clone) -1087328,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-21.77348,Enemy(Clone) -1082804,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-21.77348,Enemy(Clone) -1085754,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-21.77348,Enemy(Clone) -1087546,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-21.77348,Enemy(Clone) -1087328,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-21.84995,Enemy(Clone) -1084872,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-21.84995,Enemy(Clone) -1083000,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-21.89772,Enemy(Clone) -1078018,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-21.89772,Enemy(Clone) -1083098,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-21.93388,Enemy(Clone) -1086838,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-21.93388,Enemy(Clone) -1075510,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-21.98123,Enemy(Clone) -1086838,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-21.98123,Enemy(Clone) -1075318,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.03162,Enemy(Clone) -1083394,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.23886,Enemy(Clone) -1084872,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-22.28082,Enemy(Clone) -1084774,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-22.38171,Enemy(Clone) -1083098,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-22.43733,Enemy(Clone) -1078018,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.43733,Enemy(Clone) -1083098,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.43733,Enemy(Clone) -1085548,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.48423,Enemy(Clone) -1075510,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.48423,Enemy(Clone) -1079200,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.48423,Enemy(Clone) -1078018,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.48423,Enemy(Clone) -1082510,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.48423,Enemy(Clone) -1078324,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.5344,Enemy(Clone) -1075906,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.5344,Enemy(Clone) -1083294,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-22.58599,Enemy(Clone) -1083394,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.58599,Enemy(Clone) -1080974,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.63688,Enemy(Clone) -1083394,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-22.63688,Enemy(Clone) -1082706,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.63688,Enemy(Clone) -1082706,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.734,Enemy(Clone) -1075318,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.734,Enemy(Clone) -1085188,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-22.734,Enemy(Clone) -1084676,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.734,Enemy(Clone) -1083098,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.76729,Enemy(Clone) -1084774,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.85163,Enemy(Clone) -1075012,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.85163,Enemy(Clone) -1076510,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.90418,Enemy(Clone) -1075906,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-22.90418,Enemy(Clone) -1083294,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-22.90418,Enemy(Clone) -1079200,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.90418,Enemy(Clone) -1082902,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.93614,Enemy(Clone) -1081366,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.94618,Enemy(Clone) -1083196,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.94618,Enemy(Clone) -1082608,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.98767,Enemy(Clone) -1087698,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-22.98767,Enemy(Clone) -1078802,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.98767,Enemy(Clone) -1084480,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.98767,Enemy(Clone) -1081600,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-22.98767,Enemy(Clone) -1083766,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.03409,Enemy(Clone) -1080974,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-23.03409,Enemy(Clone) -1084676,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.08551,Enemy(Clone) -1080024,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-23.08551,Enemy(Clone) -1084578,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.13418,Enemy(Clone) -1079926,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.1685,Enemy(Clone) -1075510,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.1685,Enemy(Clone) -1083878,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.21894,Enemy(Clone) -1084774,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.21894,Enemy(Clone) -1075906,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.21894,Enemy(Clone) -1076510,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-23.21894,Enemy(Clone) -1083294,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.21894,Enemy(Clone) -1084676,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-23.26881,Enemy(Clone) -1087698,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-23.26881,Enemy(Clone) -1085188,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-23.32594,Enemy(Clone) -1082608,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.32594,Enemy(Clone) -1082902,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.32594,Enemy(Clone) -1078802,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.37344,Enemy(Clone) -1083196,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.37344,Enemy(Clone) -1081600,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-23.37344,Enemy(Clone) -1083766,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.37344,Enemy(Clone) -1084480,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1080220,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1078900,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1082902,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1085646,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-23.42622,Enemy(Clone) -1079436,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1075012,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1078116,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1079534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.42622,Enemy(Clone) -1081268,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.47333,Enemy(Clone) -1083878,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-23.47333,Enemy(Clone) -1075012,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.47333,Enemy(Clone) -1079102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.47333,Enemy(Clone) -1076412,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.47333,Enemy(Clone) -1084578,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.47333,Enemy(Clone) -1083766,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.47333,Enemy(Clone) -1081500,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-23.47333,Enemy(Clone) -1082902,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.47333,Enemy(Clone) -1084578,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-23.47333,Enemy(Clone) -1084184,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.47333,Enemy(Clone) -1084480,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.47333,Enemy(Clone) -1079926,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.47333,Enemy(Clone) -1081500,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.52501,Enemy(Clone) -1083654,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.52501,Enemy(Clone) -1083196,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-23.52501,Enemy(Clone) -1078900,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.52501,Enemy(Clone) -1081500,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.52501,Enemy(Clone) -1079436,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-23.52501,Enemy(Clone) -1084184,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.52501,Enemy(Clone) -1080024,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.52501,Enemy(Clone) -1080220,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.52501,Enemy(Clone) -1078116,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.52501,Enemy(Clone) -1079436,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,8,10,0.5,1.5,1,1,,6,Critical; Projectile; ,1,1
-23.52501,Enemy(Clone) -1081268,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-23.58319,Enemy(Clone) -1083654,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-23.64106,Enemy(Clone) -1086348,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-23.79006,Enemy(Clone) -1079926,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-23.79006,Enemy(Clone) -1079102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.83436,Enemy(Clone) -1084184,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.83436,Enemy(Clone) -1076412,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.83436,Enemy(Clone) -1084578,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-23.83436,Enemy(Clone) -1079534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.87365,Enemy(Clone) -1079730,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.87365,Enemy(Clone) -1081170,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-23.87365,Enemy(Clone) -1079534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.87365,Enemy(Clone) -1084380,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.92266,Enemy(Clone) -1079632,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-23.97198,Enemy(Clone) -1084380,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-24.01341,Enemy(Clone) -1083986,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-24.05492,Enemy(Clone) -1086348,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-24.19665,Enemy(Clone) -1081170,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-24.23873,Enemy(Clone) -1079730,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-24.28794,Enemy(Clone) -1079632,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-24.34057,Enemy(Clone) -1078214,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-24.34057,Enemy(Clone) -1084282,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-24.34057,Enemy(Clone) -1083986,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-24.43798,Enemy(Clone) -1083986,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,1,1
-24.43798,Enemy(Clone) -1080122,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-24.43798,Enemy(Clone) -1084380,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-24.60747,Enemy(Clone) -1079730,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-24.60747,Enemy(Clone) -1086838,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,1,1
-24.60747,Enemy(Clone) -1079632,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-25.33738,Enemy(Clone) -1084282,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-25.43995,Enemy(Clone) -1078214,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-25.48878,Enemy(Clone) -1084084,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,1,1
-26.01733,Enemy(Clone) -1084084,LYDamager,EnemyDefencer,PlayerAttacker,Water,75,10,10,0.5,1.5,1,1,,0,Critical; ,1,1
-26.8587,Enemy(Clone) -1080122,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-27.04486,Enemy(Clone) -1075708,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-27.34284,Enemy(Clone) -1081858,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-27.34284,Enemy(Clone) -1080122,DDamager,EnemyDefencer,PlayerAttacker,Earth,37.5,5,10,0.5,1.5,1,1,,4,Critical; Projectile; ,1,1
-27.37494,Enemy(Clone) -1079534,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-27.37494,Enemy(Clone) -1081858,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,1,1
-27.37494,Enemy(Clone) -1083196,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,1,1
-27.42452,Enemy(Clone) -1075708,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
-27.80503,Enemy(Clone) -1080122,DDamager,EnemyDefencer,PlayerAttacker,Earth,90,5,10,0.5,1.5,2.4,1,,4,Critical; Projectile; ,1,1
-27.92401,Enemy(Clone) -1075708,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,1,1
-28.07889,Enemy(Clone) -1076102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,1,1
+2.478767,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+2.728734,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+2.728734,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+4.528505,Enemy(Clone) -39552,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+6.479462,Enemy(Clone) -40726,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+6.5775,Enemy(Clone) -39984,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+6.5775,Enemy(Clone) -40726,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+6.678245,Enemy(Clone) -39650,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+6.728678,Enemy(Clone) -40294,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+6.728678,Enemy(Clone) -40294,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+6.802313,Enemy(Clone) -39748,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+6.802313,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+6.903513,Enemy(Clone) -39984,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+7.303236,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+7.303236,Enemy(Clone) -39748,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+7.353495,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+7.67704,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+7.728286,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+7.752919,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+7.828512,Enemy(Clone) -39748,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+7.902326,Enemy(Clone) -39552,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+7.902326,Enemy(Clone) -42102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+8.278275,Enemy(Clone) -42102,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+8.327634,Enemy(Clone) -39552,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+8.603518,Enemy(Clone) -40490,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+8.653824,Enemy(Clone) -39552,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+9.303835,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+9.378371,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+9.553705,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+9.553705,Enemy(Clone) -39454,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+9.553705,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+10.80315,Enemy(Clone) -40392,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+10.80315,Enemy(Clone) -39454,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+10.80315,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+10.85447,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+10.92853,Enemy(Clone) -38952,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+10.97855,Enemy(Clone) -38854,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+10.97855,Enemy(Clone) -42200,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+11.42956,Enemy(Clone) -38854,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+11.52998,Enemy(Clone) -39650,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+11.57886,Enemy(Clone) -39650,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+11.57886,Enemy(Clone) -42200,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+11.67855,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+11.82829,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+11.82829,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+11.85362,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+11.87866,Enemy(Clone) -45556,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+11.92863,Enemy(Clone) -45556,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+12.55427,Enemy(Clone) -45654,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+12.55427,Enemy(Clone) -43816,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+12.6035,Enemy(Clone) -45654,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+12.70203,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+12.80364,Enemy(Clone) -39258,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+12.80364,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+12.85348,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+12.92743,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+12.92743,Enemy(Clone) -41474,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+12.92743,Enemy(Clone) -45654,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+12.97863,Enemy(Clone) -41142,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+12.97863,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+12.97863,Enemy(Clone) -41474,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+13.02884,Enemy(Clone) -43816,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+13.05339,Enemy(Clone) -43816,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+13.05339,Enemy(Clone) -39060,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+13.05339,Enemy(Clone) -39060,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+13.07941,Enemy(Clone) -39060,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+13.22907,Enemy(Clone) -39258,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+13.32883,Enemy(Clone) -41474,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+13.42879,Enemy(Clone) -39060,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+13.5283,Enemy(Clone) -46148,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+13.5283,Enemy(Clone) -39258,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+13.57935,Enemy(Clone) -41376,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+13.654,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+14.00438,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+14.00438,Enemy(Clone) -45458,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+14.07864,Enemy(Clone) -43620,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+14.32914,Enemy(Clone) -42298,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+14.42747,Enemy(Clone) -42436,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+14.42747,Enemy(Clone) -43032,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+14.85283,Enemy(Clone) -42298,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+14.90484,Enemy(Clone) -42436,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+15.07726,Enemy(Clone) -42004,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+15.07726,Enemy(Clone) -44110,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+15.35482,Enemy(Clone) -44110,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+15.45353,Enemy(Clone) -40726,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+15.70348,Enemy(Clone) -40628,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+15.77706,Enemy(Clone) -40726,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+15.85364,Enemy(Clone) -39984,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+15.90514,Enemy(Clone) -39454,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+15.90514,Enemy(Clone) -41670,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+15.97797,Enemy(Clone) -41670,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+15.97797,Enemy(Clone) -40824,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+16.05419,Enemy(Clone) -41768,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+16.10349,Enemy(Clone) -41768,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.10349,Enemy(Clone) -39984,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.10349,Enemy(Clone) -40628,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.2787,Enemy(Clone) -44306,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.65425,Enemy(Clone) -43130,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+16.77898,Enemy(Clone) -40294,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.77898,Enemy(Clone) -39748,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.77898,Enemy(Clone) -42102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.77898,Enemy(Clone) -44306,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.85257,Enemy(Clone) -43130,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+16.85257,Enemy(Clone) -40392,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.9296,Enemy(Clone) -40922,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.9296,Enemy(Clone) -43032,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.9296,Enemy(Clone) -43130,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+16.9296,Enemy(Clone) -43032,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+16.9296,Enemy(Clone) -38952,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.9296,Enemy(Clone) -46346,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.97975,Enemy(Clone) -42934,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.97975,Enemy(Clone) -42934,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+16.97975,Enemy(Clone) -46346,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+16.97975,Enemy(Clone) -41142,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.97975,Enemy(Clone) -38952,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.97975,Enemy(Clone) -40922,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+16.97975,Enemy(Clone) -40922,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+16.97975,Enemy(Clone) -44306,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+17.07932,Enemy(Clone) -42934,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+17.07932,Enemy(Clone) -43522,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+17.07932,Enemy(Clone) -39748,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+17.15419,Enemy(Clone) -40392,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+17.42883,Enemy(Clone) -43522,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+17.42883,Enemy(Clone) -43620,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+17.42883,Enemy(Clone) -43522,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+17.50288,Enemy(Clone) -43522,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+17.57933,Enemy(Clone) -39552,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+17.57933,Enemy(Clone) -45258,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+17.62885,Enemy(Clone) -39748,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+17.80359,Enemy(Clone) -45752,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+17.80359,Enemy(Clone) -43424,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+17.85993,Enemy(Clone) -43620,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.00796,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.13235,Enemy(Clone) -43424,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+18.23212,Enemy(Clone) -44908,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+18.23212,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.23212,Enemy(Clone) -43228,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.23212,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.33154,Enemy(Clone) -41906,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.35649,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+18.4056,Enemy(Clone) -45258,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+18.4056,Enemy(Clone) -39552,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+18.4056,Enemy(Clone) -45752,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+18.4056,Enemy(Clone) -40490,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.4056,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.55334,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.60364,Enemy(Clone) -42836,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.60364,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+18.60364,Enemy(Clone) -43228,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+18.6784,Enemy(Clone) -39258,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.6784,Enemy(Clone) -42836,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+18.75452,Enemy(Clone) -41906,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.82893,Enemy(Clone) -40490,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.82893,Enemy(Clone) -40490,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+18.905,Enemy(Clone) -45556,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+18.905,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+18.905,Enemy(Clone) -43620,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+18.97891,Enemy(Clone) -43424,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+19.02945,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+19.15386,Enemy(Clone) -44908,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+19.15386,Enemy(Clone) -39258,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+19.15386,Enemy(Clone) -43228,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+19.20357,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+19.20357,Enemy(Clone) -39258,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.22992,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+19.30269,Enemy(Clone) -39258,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+19.45489,Enemy(Clone) -49696,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.55224,Enemy(Clone) -49298,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.55224,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.60377,Enemy(Clone) -49298,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.60377,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+19.62886,Enemy(Clone) -42836,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+19.67854,Enemy(Clone) -42004,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.67854,Enemy(Clone) -48148,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.75232,Enemy(Clone) -47338,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+19.75232,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.75232,Enemy(Clone) -42730,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+19.77838,Enemy(Clone) -47338,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+20.45259,Enemy(Clone) -45158,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.50458,Enemy(Clone) -45158,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.55355,Enemy(Clone) -46346,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.60397,Enemy(Clone) -38952,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.60397,Enemy(Clone) -46444,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.8291,Enemy(Clone) -47534,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.8291,Enemy(Clone) -44426,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.90419,Enemy(Clone) -47534,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+20.97935,Enemy(Clone) -44426,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+20.97935,Enemy(Clone) -46444,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+21.05411,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -42632,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -41906,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -42004,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -42730,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -44208,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -47740,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -41906,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+21.05411,Enemy(Clone) -40196,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+21.1272,Enemy(Clone) -44810,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+21.20384,Enemy(Clone) -44690,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+21.32779,Enemy(Clone) -44012,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+21.32779,Enemy(Clone) -41142,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+21.85468,Enemy(Clone) -44208,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+21.85468,Enemy(Clone) -44810,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+21.92871,Enemy(Clone) -45060,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+21.97836,Enemy(Clone) -44012,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+21.97836,Enemy(Clone) -44690,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+21.97836,Enemy(Clone) -47634,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+21.97836,Enemy(Clone) -47436,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+21.97836,Enemy(Clone) -46848,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+21.97836,Enemy(Clone) -41572,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.05486,Enemy(Clone) -47436,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.05486,Enemy(Clone) -47936,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.12947,Enemy(Clone) -43914,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+22.12947,Enemy(Clone) -50092,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+22.12947,Enemy(Clone) -44810,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.12947,Enemy(Clone) -47838,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.37846,Enemy(Clone) -47634,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.50366,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.60476,Enemy(Clone) -50092,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+22.60476,Enemy(Clone) -47436,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.60476,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.60476,Enemy(Clone) -45060,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.60476,Enemy(Clone) -46848,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.60476,Enemy(Clone) -44810,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.60476,Enemy(Clone) -41572,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.60476,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.65401,Enemy(Clone) -46050,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.70602,Enemy(Clone) -47634,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.82979,Enemy(Clone) -46750,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+22.82979,Enemy(Clone) -46848,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.82979,Enemy(Clone) -41572,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+22.92838,Enemy(Clone) -45360,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+23.00395,Enemy(Clone) -43914,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+23.00395,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+23.05413,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.12799,Enemy(Clone) -46050,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+23.12799,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.12799,Enemy(Clone) -45060,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+23.12799,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+23.1793,Enemy(Clone) -45360,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+23.1793,Enemy(Clone) -46946,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+23.1793,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+23.1793,Enemy(Clone) -46050,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+23.22868,Enemy(Clone) -45850,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+23.22868,Enemy(Clone) -45952,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+23.2786,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+23.2786,Enemy(Clone) -46148,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+23.2786,Enemy(Clone) -45952,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+23.40382,Enemy(Clone) -48676,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+23.57974,Enemy(Clone) -47936,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+23.57974,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.57974,Enemy(Clone) -45850,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+23.57974,Enemy(Clone) -41376,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.57974,Enemy(Clone) -46148,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+23.62984,Enemy(Clone) -41376,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.75323,Enemy(Clone) -47936,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+23.82861,Enemy(Clone) -42632,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.8547,Enemy(Clone) -41474,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.8547,Enemy(Clone) -48778,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+23.90521,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.00214,Enemy(Clone) -48148,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.02899,Enemy(Clone) -40726,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.02899,Enemy(Clone) -50596,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.02899,Enemy(Clone) -39650,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.079,Enemy(Clone) -48876,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.079,Enemy(Clone) -50494,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.079,Enemy(Clone) -41474,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+24.12901,Enemy(Clone) -38854,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.12901,Enemy(Clone) -48148,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+24.20276,Enemy(Clone) -42632,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.20276,Enemy(Clone) -43326,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.25527,Enemy(Clone) -48480,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.25527,Enemy(Clone) -41474,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.25527,Enemy(Clone) -49396,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.25527,Enemy(Clone) -43816,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.25527,Enemy(Clone) -50494,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.32934,Enemy(Clone) -39650,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.32934,Enemy(Clone) -48778,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.32934,Enemy(Clone) -50198,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.32934,Enemy(Clone) -48676,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -41768,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -39060,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -39454,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -48676,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -50596,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -40726,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -48382,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -45654,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -38854,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.40368,Enemy(Clone) -38854,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.47893,Enemy(Clone) -48876,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.47893,Enemy(Clone) -42632,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+24.52868,Enemy(Clone) -50494,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.52868,Enemy(Clone) -42200,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.57988,Enemy(Clone) -47740,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.72902,Enemy(Clone) -40726,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.72902,Enemy(Clone) -39650,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+24.77898,Enemy(Clone) -47838,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+24.77898,Enemy(Clone) -50596,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+25.22871,Enemy(Clone) -48876,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+25.22871,Enemy(Clone) -42200,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+25.30425,Enemy(Clone) -47838,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+25.37811,Enemy(Clone) -47838,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+25.70493,Enemy(Clone) -47044,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+25.97768,Enemy(Clone) -47044,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.02873,Enemy(Clone) -43816,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.32985,Enemy(Clone) -39454,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.37912,Enemy(Clone) -43816,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.37912,Enemy(Clone) -39454,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.42841,Enemy(Clone) -42436,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.5043,Enemy(Clone) -43718,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.5542,Enemy(Clone) -45654,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.67953,Enemy(Clone) -46652,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.73005,Enemy(Clone) -43718,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.73005,Enemy(Clone) -46652,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+26.75423,Enemy(Clone) -50396,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+26.90467,Enemy(Clone) -47740,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+26.92894,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+26.92894,Enemy(Clone) -50396,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+26.92894,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+26.92894,Enemy(Clone) -50296,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+26.92894,Enemy(Clone) -44110,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+26.95481,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.07934,Enemy(Clone) -44110,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+27.12985,Enemy(Clone) -50396,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+27.12985,Enemy(Clone) -48578,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.23024,Enemy(Clone) -50296,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.23024,Enemy(Clone) -40628,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.30354,Enemy(Clone) -45654,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+27.30354,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.35502,Enemy(Clone) -39984,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.35502,Enemy(Clone) -44110,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+27.35502,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.40438,Enemy(Clone) -42436,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+27.40438,Enemy(Clone) -46554,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.42932,Enemy(Clone) -48578,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+27.45475,Enemy(Clone) -39060,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+27.45475,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+27.52982,Enemy(Clone) -49298,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+27.52982,Enemy(Clone) -48382,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+27.52982,Enemy(Clone) -40628,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+27.52982,Enemy(Clone) -44426,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.52982,Enemy(Clone) -43914,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.60493,Enemy(Clone) -39984,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+27.60493,Enemy(Clone) -44564,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.60493,Enemy(Clone) -44810,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.60493,Enemy(Clone) -42836,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+27.77766,Enemy(Clone) -39984,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+27.95264,Enemy(Clone) -44426,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+28.00407,Enemy(Clone) -44426,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+28.07937,Enemy(Clone) -43914,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+28.07937,Enemy(Clone) -39060,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+28.10365,Enemy(Clone) -42836,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.154,Enemy(Clone) -44810,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.2273,Enemy(Clone) -49696,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.32857,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.37865,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.82918,Enemy(Clone) -49696,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+28.82918,Enemy(Clone) -49798,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.82918,Enemy(Clone) -49494,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.82918,Enemy(Clone) -43326,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.90294,Enemy(Clone) -48676,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.90294,Enemy(Clone) -42836,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+28.90294,Enemy(Clone) -50198,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+28.92842,Enemy(Clone) -43914,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+28.9537,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+28.9537,Enemy(Clone) -46246,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.0036,Enemy(Clone) -44012,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.0036,Enemy(Clone) -50772,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.05342,Enemy(Clone) -50772,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.05342,Enemy(Clone) -41768,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.12765,Enemy(Clone) -45556,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.18035,Enemy(Clone) -49396,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.18035,Enemy(Clone) -43326,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.25424,Enemy(Clone) -44810,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+29.25424,Enemy(Clone) -49494,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.25424,Enemy(Clone) -43032,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.25424,Enemy(Clone) -49798,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.25424,Enemy(Clone) -48480,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.32754,Enemy(Clone) -50198,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.32754,Enemy(Clone) -49896,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.32754,Enemy(Clone) -49994,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.37884,Enemy(Clone) -42102,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.37884,Enemy(Clone) -46246,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.37884,Enemy(Clone) -49798,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.37884,Enemy(Clone) -49396,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.37884,Enemy(Clone) -49494,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.37884,Enemy(Clone) -50772,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.42931,Enemy(Clone) -49994,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.42931,Enemy(Clone) -48480,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.42931,Enemy(Clone) -42298,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.42931,Enemy(Clone) -43032,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.42931,Enemy(Clone) -38952,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.42931,Enemy(Clone) -41768,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.45377,Enemy(Clone) -49896,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.45377,Enemy(Clone) -48382,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.45377,Enemy(Clone) -49596,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.47918,Enemy(Clone) -44012,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.47918,Enemy(Clone) -49298,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.47918,Enemy(Clone) -42102,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.47918,Enemy(Clone) -45158,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.55222,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.55222,Enemy(Clone) -48778,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.55222,Enemy(Clone) -46346,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.55222,Enemy(Clone) -49596,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.55222,Enemy(Clone) -42298,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.55222,Enemy(Clone) -38952,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.55222,Enemy(Clone) -42004,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.55222,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.60515,Enemy(Clone) -44012,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.60515,Enemy(Clone) -46346,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.60515,Enemy(Clone) -42004,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+29.67985,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+29.67985,Enemy(Clone) -52156,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.67985,Enemy(Clone) -52156,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.67985,Enemy(Clone) -52156,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.77726,Enemy(Clone) -42298,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.77726,Enemy(Clone) -42298,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+29.77726,Enemy(Clone) -48778,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.77726,Enemy(Clone) -45158,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+29.82878,Enemy(Clone) -46346,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+29.82878,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+29.92911,Enemy(Clone) -45458,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+30.72873,Enemy(Clone) -45360,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+30.75348,Enemy(Clone) -50494,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+30.80345,Enemy(Clone) -45360,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+30.80345,Enemy(Clone) -47936,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+30.90402,Enemy(Clone) -50494,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+31.35339,Enemy(Clone) -47936,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+31.37838,Enemy(Clone) -45458,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+31.37838,Enemy(Clone) -47240,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+31.45339,Enemy(Clone) -45850,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+31.52971,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+31.65382,Enemy(Clone) -45850,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+31.85519,Enemy(Clone) -39356,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+32.07956,Enemy(Clone) -47142,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+32.07956,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+32.07956,Enemy(Clone) -46148,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+32.25365,Enemy(Clone) -47240,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+32.30435,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+32.40253,Enemy(Clone) -46148,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+32.52895,Enemy(Clone) -46148,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+32.65365,Enemy(Clone) -45850,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+32.65365,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+33.10435,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+33.32833,Enemy(Clone) -41572,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+33.55426,Enemy(Clone) -52544,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+33.60791,Enemy(Clone) -47634,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+33.6794,Enemy(Clone) -47634,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+33.6794,Enemy(Clone) -41572,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+33.6794,Enemy(Clone) -52544,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+33.75471,Enemy(Clone) -46750,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+33.8037,Enemy(Clone) -46750,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+33.8037,Enemy(Clone) -46246,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+34.9793,Enemy(Clone) -46946,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+35.65364,Enemy(Clone) -41376,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.70476,Enemy(Clone) -46848,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.70476,Enemy(Clone) -45952,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.80377,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.80377,Enemy(Clone) -40922,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.80377,Enemy(Clone) -43424,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.87903,Enemy(Clone) -40392,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.87903,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.87903,Enemy(Clone) -46946,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+35.87903,Enemy(Clone) -50296,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.87903,Enemy(Clone) -43228,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+35.87903,Enemy(Clone) -40922,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+35.92855,Enemy(Clone) -42534,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+35.92855,Enemy(Clone) -40392,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+36.17887,Enemy(Clone) -52642,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+36.22897,Enemy(Clone) -52642,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+36.30365,Enemy(Clone) -42004,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+36.42737,Enemy(Clone) -42004,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+37.12869,Enemy(Clone) -46848,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+37.15366,Enemy(Clone) -46848,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+38.40523,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.48002,Enemy(Clone) -47338,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.55411,Enemy(Clone) -46050,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.65252,Enemy(Clone) -43326,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.87844,Enemy(Clone) -47338,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+38.87844,Enemy(Clone) -52058,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.87844,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.87844,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.87844,Enemy(Clone) -39650,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.92852,Enemy(Clone) -39650,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+38.92852,Enemy(Clone) -46050,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+38.92852,Enemy(Clone) -41670,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.92852,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.92852,Enemy(Clone) -43228,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.92852,Enemy(Clone) -51794,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.95333,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+38.95333,Enemy(Clone) -41142,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.10382,Enemy(Clone) -44690,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.15498,Enemy(Clone) -43326,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.15498,Enemy(Clone) -41142,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.22918,Enemy(Clone) -43326,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+39.22918,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.40382,Enemy(Clone) -47338,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+39.45383,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.45383,Enemy(Clone) -40824,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.50216,Enemy(Clone) -43228,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.50216,Enemy(Clone) -43424,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.50216,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.52951,Enemy(Clone) -52746,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.52951,Enemy(Clone) -39158,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.57916,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.57916,Enemy(Clone) -52746,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.57916,Enemy(Clone) -41670,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.57916,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.57916,Enemy(Clone) -52058,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.57916,Enemy(Clone) -41142,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.62892,Enemy(Clone) -39650,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.75372,Enemy(Clone) -43424,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+39.75372,Enemy(Clone) -52746,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+39.8292,Enemy(Clone) -51794,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+39.8292,Enemy(Clone) -43424,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+39.8292,Enemy(Clone) -41906,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+39.8292,Enemy(Clone) -44306,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+39.8292,Enemy(Clone) -41670,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+39.8292,Enemy(Clone) -39886,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+39.85389,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+39.85389,Enemy(Clone) -42200,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+39.90419,Enemy(Clone) -52058,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+39.90419,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+39.90419,Enemy(Clone) -51894,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+39.97731,Enemy(Clone) -41474,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+39.97731,Enemy(Clone) -44306,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+40.07941,Enemy(Clone) -42200,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+40.2552,Enemy(Clone) -48284,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+40.9048,Enemy(Clone) -47436,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+40.97933,Enemy(Clone) -47436,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.12883,Enemy(Clone) -41906,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.18036,Enemy(Clone) -39454,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+41.40378,Enemy(Clone) -39454,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.40378,Enemy(Clone) -41906,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+41.4771,Enemy(Clone) -51152,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.62855,Enemy(Clone) -42730,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.72841,Enemy(Clone) -48876,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.85451,Enemy(Clone) -49994,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.85451,Enemy(Clone) -45258,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.90234,Enemy(Clone) -45258,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.90234,Enemy(Clone) -49896,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.90234,Enemy(Clone) -40294,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.90234,Enemy(Clone) -48876,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.90234,Enemy(Clone) -42730,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.90234,Enemy(Clone) -51256,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.90234,Enemy(Clone) -51152,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.9291,Enemy(Clone) -45258,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.9291,Enemy(Clone) -48578,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.9291,Enemy(Clone) -39748,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.9291,Enemy(Clone) -41474,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.9291,Enemy(Clone) -42102,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+41.979,Enemy(Clone) -48876,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.979,Enemy(Clone) -51152,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.979,Enemy(Clone) -42730,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+41.979,Enemy(Clone) -46444,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -40726,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -45060,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -50296,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -48148,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -47534,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -44690,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -38854,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -40490,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.0294,Enemy(Clone) -44208,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.07998,Enemy(Clone) -42632,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.07998,Enemy(Clone) -41768,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.07998,Enemy(Clone) -51894,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+42.17747,Enemy(Clone) -41474,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+42.229,Enemy(Clone) -46444,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.229,Enemy(Clone) -42102,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.229,Enemy(Clone) -48578,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.27943,Enemy(Clone) -45060,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.27943,Enemy(Clone) -38854,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.27943,Enemy(Clone) -40726,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.27943,Enemy(Clone) -45952,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.27943,Enemy(Clone) -47534,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.27943,Enemy(Clone) -44208,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.32875,Enemy(Clone) -51894,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.32875,Enemy(Clone) -41768,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.32875,Enemy(Clone) -42632,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.32875,Enemy(Clone) -47044,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.45416,Enemy(Clone) -54262,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.45416,Enemy(Clone) -43718,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.55479,Enemy(Clone) -44110,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.55479,Enemy(Clone) -50092,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+42.62884,Enemy(Clone) -50092,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+42.62884,Enemy(Clone) -39748,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+42.62884,Enemy(Clone) -38854,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.68017,Enemy(Clone) -44208,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.72981,Enemy(Clone) -48148,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.78215,Enemy(Clone) -43718,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.78215,Enemy(Clone) -43914,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.85619,Enemy(Clone) -53274,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.85619,Enemy(Clone) -47936,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.85619,Enemy(Clone) -50596,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.85619,Enemy(Clone) -53078,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.85619,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.85619,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.85619,Enemy(Clone) -44110,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.93331,Enemy(Clone) -45952,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.93331,Enemy(Clone) -42436,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.93331,Enemy(Clone) -53078,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+42.93331,Enemy(Clone) -46346,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.93331,Enemy(Clone) -42004,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+42.93331,Enemy(Clone) -45952,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,110,10,10,0.5,,2.2,1,,2,Retaliation; ,2,1
+43.00744,Enemy(Clone) -39748,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+43.00744,Enemy(Clone) -45158,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.00744,Enemy(Clone) -41572,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.00744,Enemy(Clone) -47634,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.00744,Enemy(Clone) -54262,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.08043,Enemy(Clone) -45556,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.08043,Enemy(Clone) -38854,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.23251,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.23251,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.28057,Enemy(Clone) -43718,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.28057,Enemy(Clone) -43914,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.30768,Enemy(Clone) -43130,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+43.30768,Enemy(Clone) -55058,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.35681,Enemy(Clone) -44110,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.35681,Enemy(Clone) -54862,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.40794,Enemy(Clone) -54262,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.45894,Enemy(Clone) -47634,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.45894,Enemy(Clone) -43522,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+43.53223,Enemy(Clone) -47634,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.58363,Enemy(Clone) -41044,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.58363,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.75485,Enemy(Clone) -55058,DDamager,EnemyDefencer,PlayerAttacker,Earth,60,5,10,0.5,,2.4,1,,4,Projectile; ,2,1
+43.77915,Enemy(Clone) -54862,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+43.97965,Enemy(Clone) -43130,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+43.97965,Enemy(Clone) -43522,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.03152,Enemy(Clone) -47142,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+44.03152,Enemy(Clone) -54164,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+44.10384,Enemy(Clone) -55058,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+44.38087,Enemy(Clone) -44208,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.45389,Enemy(Clone) -54164,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+44.6045,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+44.65398,Enemy(Clone) -43914,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.65398,Enemy(Clone) -42934,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.65398,Enemy(Clone) -45158,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.70455,Enemy(Clone) -42934,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.75529,Enemy(Clone) -47936,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.75529,Enemy(Clone) -42436,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.77937,Enemy(Clone) -57886,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+44.87863,Enemy(Clone) -48284,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+44.87863,Enemy(Clone) -46346,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.95456,Enemy(Clone) -41572,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+44.98001,Enemy(Clone) -48284,DDamager,EnemyDefencer,PlayerAttacker,Earth,25,5,10,0.5,,1,1,,4,Projectile; ,2,1
+45.03005,Enemy(Clone) -47838,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.12733,Enemy(Clone) -47936,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.12733,Enemy(Clone) -42436,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.12733,Enemy(Clone) -46346,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.12733,Enemy(Clone) -45158,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.12733,Enemy(Clone) -41572,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.12733,Enemy(Clone) -42004,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.12733,Enemy(Clone) -50596,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.28041,Enemy(Clone) -45556,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.40402,Enemy(Clone) -47838,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.65374,Enemy(Clone) -52156,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.70435,Enemy(Clone) -46148,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+45.85387,Enemy(Clone) -54960,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.05258,Enemy(Clone) -38952,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.05258,Enemy(Clone) -57150,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -40196,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -42836,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -54064,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -44306,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -56562,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -54960,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -57886,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -56464,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.05258,Enemy(Clone) -56660,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.10368,Enemy(Clone) -50596,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.10368,Enemy(Clone) -42004,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.10368,Enemy(Clone) -46148,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.10368,Enemy(Clone) -38952,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.10368,Enemy(Clone) -45556,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.15409,Enemy(Clone) -39356,DDamager,EnemyDefencer,PlayerAttacker,Earth,100,8,10,0.5,,2.5,1,,6,Projectile; ,2,1
+46.20491,Enemy(Clone) -39454,DDamager,EnemyDefencer,PlayerAttacker,Earth,40,8,10,0.5,,1,1,,6,Projectile; ,2,1
+46.75414,Enemy(Clone) -39454,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.8038,Enemy(Clone) -39454,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.8038,Enemy(Clone) -54960,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.90265,Enemy(Clone) -44306,LYDamager,EnemyDefencer,PlayerAttacker,Water,50,10,10,0.5,,1,1,,0,,2,1
+46.90265,Enemy(Clone) -54360,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+47.00465,Enemy(Clone) -44810,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+47.00465,Enemy(Clone) -54360,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1
+47.09128,Enemy(Clone) -44810,RetaliationDamager,EnemyDefencer,PlayerAttacker,Earth,50,10,10,0.5,,1,1,,2,Retaliation; ,2,1

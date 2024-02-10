@@ -133,18 +133,8 @@ namespace CodeTao
             buff.pool = _buffPool;
             buff.elementType = damageElementType;
             buff.duration.InheritStat(effectDuration);
-            
-            if (!buff.AddToContainer(target))
-            {
-                _buffPool.Release(buff);
-            }
-            else
-            {
-                buff.RemoveAfter += buffRemoved =>
-                {
-                    _buffPool.Release(buffRemoved);
-                };
-            }
+
+            buff.TryAdd(target);
 
             return buff;
         }

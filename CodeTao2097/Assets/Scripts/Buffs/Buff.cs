@@ -63,6 +63,24 @@ namespace CodeTao
             }
         }
         
+        public bool TryAdd(Container<Buff> container)
+        {
+            bool result = AddToContainer(container);
+            if (!result)
+            {
+                pool?.Release(this);
+            }
+            else if (pool != null)
+            {
+                removeAfter += buffRemoved =>
+                {
+                    pool.Release(buffRemoved);
+                };
+            }
+
+            return result;
+        }
+        
         public virtual void Trigger(){}
         
         /// <summary>

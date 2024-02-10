@@ -17,16 +17,15 @@ namespace CodeTao
             base(() =>
                 {
                     T instance = parent ? Object.Instantiate(defaultPrefab, parent) : Object.Instantiate(defaultPrefab);
+                    instance.PreInit();
                     return instance;
                 }, prefab =>
                 {
-                    prefab.PreInit();
                     prefab.Parent(parent);
                 }
                 , prefab =>
                 {
                     prefab.gameObject.SetActive(false);
-                    prefab.onDeinit = null;
                 }
                 , prefab =>
                 {

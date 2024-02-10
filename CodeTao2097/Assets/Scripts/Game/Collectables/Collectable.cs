@@ -28,14 +28,11 @@ namespace CodeTao
                 navAgent.updateRotation = false;
                 navAgent.updateUpAxis = false;
             }
-            navAgent.enabled = false;
             
             if (!collectableCol)
             {
                 collectableCol = this.GetCollider((int)ELayer.Collectable);
             }
-            collectableCol.enabled = false;
-            interactableCol.enabled = false;
             
             if (!moveController){ moveController = GetComp<MoveController>(); }
             moveController.SPD.RegisterWithInitValue(value =>
@@ -51,7 +48,9 @@ namespace CodeTao
         public override void Init()
         {
             base.Init();
+            navAgent.enabled = false;
             collectableCol.enabled = true;
+            interactableCol.enabled = false;
         }
 
         public void StartCollection(Transform newTarget)

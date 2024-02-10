@@ -691,6 +691,19 @@ namespace QFramework
             mOnEvent += onEvent;
             return new CustomUnRegister(() => { UnRegister(onEvent); });
         }
+        
+        public IUnRegister Register(Action onEvent, MonoBehaviour unRegisterWith)
+        {
+            mOnEvent += onEvent;
+            if (unRegisterWith)
+            {
+                return new CustomUnRegister(() =>
+                {
+                    UnRegister(onEvent);
+                }).UnRegisterWhenGameObjectDestroyed(unRegisterWith);
+            }
+            return new CustomUnRegister(() => { UnRegister(onEvent); });
+        }
 
         public void UnRegister(Action onEvent) => mOnEvent -= onEvent;
 
@@ -704,6 +717,19 @@ namespace QFramework
         public IUnRegister Register(Action<T> onEvent)
         {
             mOnEvent += onEvent;
+            return new CustomUnRegister(() => { UnRegister(onEvent); });
+        }
+        
+        public IUnRegister Register(Action<T> onEvent, MonoBehaviour unRegisterWith)
+        {
+            mOnEvent += onEvent;
+            if (unRegisterWith)
+            {
+                return new CustomUnRegister(() =>
+                {
+                    UnRegister(onEvent);
+                }).UnRegisterWhenGameObjectDestroyed(unRegisterWith);
+            }
             return new CustomUnRegister(() => { UnRegister(onEvent); });
         }
 
@@ -727,6 +753,19 @@ namespace QFramework
             mOnEvent += onEvent;
             return new CustomUnRegister(() => { UnRegister(onEvent); });
         }
+        
+        public IUnRegister Register(Action<T, K> onEvent, MonoBehaviour unRegisterWith)
+        {
+            mOnEvent += onEvent;
+            if (unRegisterWith)
+            {
+                return new CustomUnRegister(() =>
+                {
+                    UnRegister(onEvent);
+                }).UnRegisterWhenGameObjectDestroyed(unRegisterWith);
+            }
+            return new CustomUnRegister(() => { UnRegister(onEvent); });
+        }
 
         public void UnRegister(Action<T, K> onEvent) => mOnEvent -= onEvent;
 
@@ -746,6 +785,19 @@ namespace QFramework
         public IUnRegister Register(Action<T, K, S> onEvent)
         {
             mOnEvent += onEvent;
+            return new CustomUnRegister(() => { UnRegister(onEvent); });
+        }
+        
+        public IUnRegister Register(Action<T, K, S> onEvent, MonoBehaviour unRegisterWith)
+        {
+            mOnEvent += onEvent;
+            if (unRegisterWith)
+            {
+                return new CustomUnRegister(() =>
+                {
+                    UnRegister(onEvent);
+                }).UnRegisterWhenGameObjectDestroyed(unRegisterWith);
+            }
             return new CustomUnRegister(() => { UnRegister(onEvent); });
         }
 

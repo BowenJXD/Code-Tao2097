@@ -209,7 +209,7 @@ namespace CodeTao
                 try{
                     BindableStat stat = new BindableStat(float.Parse(value));
                     SetWAt(at, stat);
-                } catch (Exception e)
+                } catch
                 {
                     Debug.LogError($"Error parsing {value} to float for {name} {at}");
                 }
@@ -255,7 +255,7 @@ namespace CodeTao
                     mod.modType = (EModifierType)Enum.Parse(typeof(EModifierType), dataDict["ModType"]);
                     mod.exclusive = bool.Parse(dataDict["Exclusive"]);
                     upgradeMods.Add(mod);
-                } catch (Exception e)
+                } catch
                 {
                     Debug.LogError($"Error parsing {dataDict["Attribute"]} to EWAt for {name}");
                     continue;

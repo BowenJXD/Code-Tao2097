@@ -21,6 +21,7 @@ namespace CodeTao
             attacker.DealDamageAfter += TryApplyBuff;
             buffToApply = this.GetComponentInDescendants<Buff>();
             _buffPool = new ContentPool<Buff>(buffToApply);
+            buffToApply.pool = _buffPool;
         }
 
         public void TryApplyBuff(Damage damage)
@@ -36,17 +37,7 @@ namespace CodeTao
         public virtual Buff ApplyBuff(BuffOwner target)
         {
             Buff buff = _buffPool.Get().Parent(this);
-            if (!buff.AddToContainer(target))
-            {
-                _buffPool.Release(buff);
-            }
-            else
-            {
-                buff.RemoveAfter += buffRemoved =>
-                {
-                    _buffPool.Release(buffRemoved);
-                };
-            }
+            buff.TryAdd(target);
             return buff;
         }
 

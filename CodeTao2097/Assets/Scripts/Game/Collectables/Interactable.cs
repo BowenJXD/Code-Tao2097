@@ -20,6 +20,12 @@ namespace CodeTao
             if (!interactableCol){
                 interactableCol = this.GetCollider((int)ELayer.Interactable);
             }
+        }
+
+        public override void Init()
+        {
+            base.Init();
+            
             interactableCol.OnTriggerEnter2DEvent(col =>
             {
                 if (ValidateCollision(col))

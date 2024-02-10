@@ -15,11 +15,13 @@ namespace CodeTao
 		private void Awake()
 		{
 			Instance = this;
-			anim = this.GetComponentInDescendants<Animator>();
 		}
 
-		private void Start()
+		public override void PreInit()
 		{
+			base.PreInit();
+			anim = this.GetComponentInDescendants<Animator>();
+			
 			// Change color after taking DMG
 			GetComp<Defencer>().takeDamageAfter += (damage) =>
 			{
@@ -36,7 +38,11 @@ namespace CodeTao
 			{
 				Deinit();
 			};
+		}
 
+		public override void Init()
+		{
+			base.Init();
 			GetComp<MoveController>().movementDirection.RegisterWithInitValue(value =>
 			{
 				anim.SetBool("isMoving", value != Vector2.zero);

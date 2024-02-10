@@ -22,14 +22,7 @@ namespace CodeTao
             col2D = this.GetCollider();
             sp = this.GetComponentInDescendants<SpriteRenderer>();
             attributeController = GetComp<AttributeController>();
-        }
-        
-        public override void Init()
-        {
-            base.Init();
             
-            GetComp<LoopTaskController>()?.AddFinish(Deinit);
-
             // Change color after taking DMG
             if (defencer)
             {
@@ -48,6 +41,13 @@ namespace CodeTao
                     Deinit();
                 };
             }
+        }
+        
+        public override void Init()
+        {
+            base.Init();
+            
+            GetComp<LoopTaskController>()?.AddFinish(Deinit);
 
             if (col2D && damager)
             {

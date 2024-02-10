@@ -2,6 +2,7 @@
 using QFramework;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CodeTao
 {
@@ -16,9 +17,9 @@ namespace CodeTao
         
         [HideInInspector] public Container<T> Container;
 
-        public Action<T> AddAfter;
+        public Action<T> addAfter;
 
-        public Action<T> RemoveAfter;
+        public Action<T> removeAfter;
         
         [TabGroup("Content")]
         public RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return;
@@ -28,9 +29,9 @@ namespace CodeTao
             bool result = container.AddContent(this, repetitionBehavior);
             if (result)
             {
-                Container = container;
+                this.Container = container;
                 OnAdd();
-                AddAfter?.Invoke((T)this);
+                addAfter?.Invoke((T)this);
             }
 
             return result;
@@ -44,14 +45,18 @@ namespace CodeTao
             }
         }
 
-        public virtual bool RemoveFromContainer(Container<T> container)
+        public virtual bool RemoveFromContainer(Container<T> container = null)
         {
+            if (container == null)
+            {
+                container = this.Container;
+            }
             bool result = container.RemoveContent(this);
             if (result)
             {
-                Container = null;
+                this.Container = null;
                 OnRemove();
-                RemoveAfter?.Invoke((T)this);
+                removeAfter?.Invoke((T)this);
             }
 
             return result;

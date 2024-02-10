@@ -1,4 +1,5 @@
 ﻿using System;
+using QFramework;
 using UnityEngine;
 
 namespace CodeTao
@@ -16,24 +17,18 @@ namespace CodeTao
         public override void PreInit()
         {
             base.PreInit();
-            if (!ani)
-            {
-                ani = this.GetComponentInDescendants<Animator>();
-            }
-            else
-            {
-                ani.enabled = true;
-                ani.Rebind();
-            }
+            if (!ani) ani = this.GetComponentInDescendants<Animator>();
             aniEventListener = ani.GetComponent<AnimationEventListener>();
-            onFall += OnFall;
         }
         
         public override void Init()
         {
             base.Init();
+            ani.enabled = true;
+            ani.Rebind();
             col2D.enabled = false;
             aniEventListener.SetListener(onFall);
+            onFall += OnFall;
         }
 
         void OnFall()

@@ -147,8 +147,7 @@ namespace CodeTao
         
         public List<Func<Damage, Damage>> OnTakeDamageFuncs = new List<Func<Damage, Damage>>();
         public Action<Damage> takeDamageAfter;
-        
-        
+
         public void TakeDamage(Damage damage)
         {
             if (damage != null)
