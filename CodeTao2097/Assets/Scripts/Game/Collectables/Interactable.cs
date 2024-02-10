@@ -14,9 +14,9 @@ namespace CodeTao
         
         [HideInInspector] public Collider2D interactableCol;
 
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
             if (!interactableCol){
                 interactableCol = this.GetCollider((int)ELayer.Interactable);
             }

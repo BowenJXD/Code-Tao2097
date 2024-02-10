@@ -6,14 +6,21 @@ using UnityEngine;
 
 namespace CodeTao
 {
+    public enum ItemType
+    {
+        Artefact,
+        Weapon,
+        Blessing
+    }
+    
     /// <summary>
     /// 物品基类，包含物品的基本属性，以及物品的基本功能
     /// </summary>
     public abstract class Item : Content<Item>
     {
-        [TabGroup("Item")]
+        [BoxGroup("Item")]
         public BindableStat weight = new BindableStat(10);
-        [TabGroup("Item")]
+        [BoxGroup("Item")]
         public List<ElementType> relatedElements = new List<ElementType>();
 
         public override void OnAdd()

@@ -14,9 +14,9 @@ namespace CodeTao
         protected Collider2D col2D;
         protected SpriteRenderer sp;
         
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
             defencer = GetComp<Defencer>();
             damager = GetComp<Damager>();
             col2D = this.GetCollider();

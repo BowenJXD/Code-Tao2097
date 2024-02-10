@@ -16,8 +16,9 @@ namespace CodeTao
         public SerializableDictionary<EWAt, BindableStat> wStats = new();
         protected Inventory inventory;
 
-        private void OnEnable()
+        public override void SetUp()
         {
+            base.SetUp();
             if (!inventory) inventory = GetComp<Inventory>();
             List<IAAtReceiver> aAtReceivers = Unit.GetComponentsInDescendants<IAAtReceiver>(true).ToList(); 
             this.As<IAAtSource>().Transmit(aAtReceivers);

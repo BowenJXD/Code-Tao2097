@@ -40,9 +40,9 @@ namespace CodeTao
             moveController.movementDirection.Value = localPos.normalized;
         }
 
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
 
             rb2D = GetComponent<Rigidbody2D>();
             col2D = this.GetCollider();

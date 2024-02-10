@@ -1,0 +1,165 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using QFramework;
+using UnityEngine;
+using UnityEngine.Serialization;
+
+namespace CodeTao 
+{
+    /// <summary>
+    /// 造成伤害的组件。通常挂载在武器或武器衍生物上。包括伤害数值、伤害类型、伤害间隔等。为造成伤害的必要条件。
+    /// </summary>
+    public class Damager : UnitComponent, IWAtReceiver
+    {
+        public ElementType damageElementType = ElementType.None;
+        public BindableStat DMG = new BindableStat(-1);
+        public BindableStat knockBackFactor = new BindableStat(-1);
+        public BindableStat effectHitRate = new BindableStat(-1).SetMaxValue(100f);
+        public BindableStat effectDuration = new BindableStat(-1).SetMinValue(0.1f);
+        public Buff buffToApply;
+        private ContentPool<Buff> _buffPool;
+        
+        #region Tag
+        
+        public List<DamageTag> damageTags = new List<DamageTag>();
+        
+        public void AddDamageTag(DamageTag damageTag)
+        {
+            if (!damageTags.Contains(damageTag))
+                damageTags.Add(damageTag);
+        }
+        
+        public void RemoveDamageTag(DamageTag damageTag)
+        {
+            if (damageTags.Contains(damageTag))
+                damageTags.Remove(damageTag);
+        }
+        
+        public bool HasDamageTag(DamageTag damageTag)
+        {
+            return damageTags.Contains(damageTag);
+        }
+        
+        #endregion
+        
+        #region Condition
+        
+        public List<EntityType> damagingTags = new List<EntityType> { EntityType.Enemy };
+
+        public float DMGCD;
+        public bool IsInCD;
+
+        public void StartCD()
+        {
+            if (DMGCD <= 0)
+            {
+                return;
+            }
+            
+            IsInCD = true;
+            ActionKit.Delay(DMGCD, () => { IsInCD = false; }).Start(this);
+        }
+        
+        #endregion
+
+        private void OnEnable()
+        {
+            if (!buffToApply) buffToApply = this.GetComponentInDescendants<Buff>();
+            if (buffToApply && _buffPool == null) _buffPool = new ContentPool<Buff>(buffToApply);
+            DMG.Init();
+            knockBackFactor.Init();
+        }
+
+        public bool ValidateDamage(Defencer defencer, Attacker attacker)
+        {
+            UnitController unit = defencer.Unit;
+            bool result = !IsInCD && Util.IsTagIncluded(unit.tag, damagingTags);
+
+            return result;
+        }
+        
+        public Damage ProcessDamage(Damage damage)
+        {
+            damage.SetMedian(this);
+            damage.SetBase(DMG.Value);
+            damage.SetElement(damageElementType);
+            damage.MultiplyKnockBack(knockBackFactor);
+            foreach (var damageTag in damageTags)
+            {
+                damage.AddDamageTag(damageTag);
+            }
+            return damage;
+        }
+        
+        public List<Func<Damage, Damage>> OnDealDamageFuncs = new List<Func<Damage, Damage>>();
+        
+        public Damage ProcessDamageExt(Damage damage)
+        {
+            foreach (var onDealDamageFunc in OnDealDamageFuncs)
+            {
+                damage = onDealDamageFunc(damage);
+            }
+            
+            return damage;
+        }
+        
+        public Action<Damage> DealDamageAfter;
+        
+        public void DealDamage(Damage damage)
+        {
+            if (damage != null)
+            {
+                damage.Target.TakeDamage(damage);
+                TryApplyBuff(damage);
+                DealDamageAfter?.Invoke(damage);
+                damage.Target.TakeDamageAfter(damage);
+            }
+        }
+        
+        public virtual void TryApplyBuff(Damage damage)
+        {
+            if (damage.Target.IsDead) return;
+            BuffOwner target = damage.Target.GetComp<BuffOwner>();
+            if (target && buffToApply && CheckBuffHit(damage))
+            {
+                ApplyBuff(target);
+            }
+        }
+        
+        public virtual Buff ApplyBuff(BuffOwner target)
+        {
+            Buff buff = _buffPool.Get().Parent(this);
+            buff.pool = _buffPool;
+            buff.elementType = damageElementType;
+            buff.duration.InheritStat(effectDuration);
+
+            buff.TryAdd(target);
+
+            return buff;
+        }
+
+        public virtual bool CheckBuffHit(Damage damage)
+        {
+            return RandomUtil.Rand100(effectHitRate);
+        }
+        
+        private void OnDisable()
+        {
+            DMG.Reset();
+            knockBackFactor.Reset();
+            OnDealDamageFuncs.Clear();
+            DealDamageAfter = null;
+        }
+
+        public void Receive(IWAtSource source)
+        {
+            DMG.InheritStat(source.GetWAt(EWAt.Damage));
+            knockBackFactor.InheritStat(source.GetWAt(EWAt.KnockBack));
+            effectHitRate.InheritStat(source.GetWAt(EWAt.EffectHitRate));
+            effectDuration.InheritStat(source.GetWAt(EWAt.Duration));
+        }
+    }
+
+}
+

@@ -24,13 +24,13 @@ namespace CodeTao
         /// </summary>
         public virtual void OnSceneLoaded()
         {
-            PreInit();
+            SetUp();
         }
 
         /// <summary>
         /// Will be called once when the gameObject is created or when the scene is loaded
         /// </summary>
-        public virtual void PreInit()
+        public virtual void SetUp()
         {
             if (Link == null){
                 Link = new ComponentLink();
@@ -41,6 +41,11 @@ namespace CodeTao
                     unitComponent.Unit = this;
                     Link.AddComponent(unitComponent);
                 }
+            }
+            
+            foreach (var component in Link.components.Values)
+            {
+                component.SetUp();
             }
 
             if (!ColliderManager.Instance.CheckRegistered(this)){

@@ -17,7 +17,7 @@ namespace CodeTao
             base(() =>
                 {
                     T instance = parent ? Object.Instantiate(defaultPrefab, parent) : Object.Instantiate(defaultPrefab);
-                    instance.PreInit();
+                    instance.SetUp();
                     return instance;
                 }, prefab =>
                 {

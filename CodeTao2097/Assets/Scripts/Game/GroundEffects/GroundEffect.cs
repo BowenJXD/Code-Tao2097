@@ -30,9 +30,9 @@ namespace CodeTao
         public BindableProperty<EAttackTarget> attackWhenEntering = new BindableProperty<EAttackTarget>(EAttackTarget.None);
         public BindableProperty<EAttackTarget> attackWhenExiting = new BindableProperty<EAttackTarget>(EAttackTarget.None);
 
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
             if (!col2D) col2D = this.GetCollider();
             if (!sprite) sprite = this.GetComponentInDescendants<SpriteRenderer>();
             if (!particle) particle = this.GetComponentInDescendants<ParticleSystem>();

@@ -38,7 +38,7 @@ namespace CodeTao
         protected List<WeaponExecutor> weaponExecuters = new List<WeaponExecutor>();
         protected List<EntityType> attackingTypes = new List<EntityType>();
         
-        [TabGroup("Content")]
+        [BoxGroup("Content")]
         public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
 
         public bool individualFire = true;

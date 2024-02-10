@@ -33,9 +33,9 @@ namespace CodeTao
 
         protected List<Collider2D> collided = new List<Collider2D>();
 
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
             if (!sp) sp = this.GetComponentInDescendants<SpriteRenderer>();
         }
         

@@ -28,9 +28,9 @@ namespace CodeTao
             protectingDefencer = weapon.Container.GetComp<Defencer>();
         }
 
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
             shieldSp = this.GetComponentInDescendants<SpriteRenderer>(true);
             shieldCol = this.GetComponentInDescendants<Collider2D>(true);
             damager = this.GetComponentInDescendants<Damager>(true);

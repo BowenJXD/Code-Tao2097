@@ -13,9 +13,9 @@ namespace CodeTao
         protected Animator ani;
         public Damager damager;
 
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
             if (!ani) ani = this.GetComponentInDescendants<Animator>();
         }
         

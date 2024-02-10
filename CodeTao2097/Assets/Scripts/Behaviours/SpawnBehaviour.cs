@@ -1,13 +1,9 @@
-﻿using System;
-using QFramework;
-using UnityEngine.Serialization;
+﻿using QFramework;
 
 namespace CodeTao
 {
-    public class SpawnBehaviour : UnitBehaviour, IWAtReceiver
+    public class SpawnBehaviour : UnitBehaviour
     {
-        public BindableStat spawnInterval;
-        LoopTask spawnTask;
         public UnitController unitPrefab;
         public bool rootToParent = true;
         private Weapon weapon;
@@ -15,7 +11,7 @@ namespace CodeTao
 
         private void OnEnable()
         {
-            if (!unitPrefab) unitPrefab = GetComponentInChildren<UnitController>();
+            if (!unitPrefab) unitPrefab = GetComponentInChildren<UnitController>(true);
             if (!damager) damager = GetComponentInChildren<Damager>();
             UnitManager.Instance.Register(unitPrefab, rootToParent? transform : null);
             if (!weapon){
@@ -24,13 +20,9 @@ namespace CodeTao
                     weapon = weaponDerivative.weapon;
                 }
             }
-            spawnTask = new LoopTask(this, spawnInterval, Spawn);
-            spawnInterval.RegisterWithInitValue( value => spawnTask.LoopInterval = value).
-                UnRegisterWhenGameObjectDestroyed(this);
-            spawnTask.Start();
         }
 
-        void Spawn()
+        protected void Spawn()
         {
             UnitController unit = UnitManager.Instance.Get(unitPrefab);
             unit.Position(transform.position);
@@ -40,17 +32,6 @@ namespace CodeTao
                 weaponDerivative.InitSpawn(transform.position);
             }
             unit.Init();
-        }
-
-        private void OnDisable()
-        {
-            spawnTask?.Finish();
-            spawnTask = null;
-        }
-
-        public void Receive(IWAtSource source)
-        {
-            spawnInterval.InheritStat(source.GetWAt(EWAt.Cooldown));
         }
     }
 }

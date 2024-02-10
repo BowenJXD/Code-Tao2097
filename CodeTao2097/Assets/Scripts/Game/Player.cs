@@ -17,9 +17,9 @@ namespace CodeTao
 			Instance = this;
 		}
 
-		public override void PreInit()
+		public override void SetUp()
 		{
-			base.PreInit();
+			base.SetUp();
 			anim = this.GetComponentInDescendants<Animator>();
 			
 			// Change color after taking DMG

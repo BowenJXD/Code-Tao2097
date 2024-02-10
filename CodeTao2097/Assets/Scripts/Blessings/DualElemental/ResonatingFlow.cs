@@ -33,6 +33,7 @@ namespace CodeTao
         
         public override int GetWeight()
         {
+            if (!Container) return 0;
             backFlow = Container.GetContent<BackFlow>();
             if (backFlow)
             {

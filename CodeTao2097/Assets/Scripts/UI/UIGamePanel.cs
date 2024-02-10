@@ -61,8 +61,11 @@ namespace CodeTao
 			
 			expController.LVL.Register(lvl =>
 			{
-				Time.timeScale = 0;
-				ExpUpgradePanel.Show();
+				OpenExpUpgradePanel(new []
+				{
+					ItemType.Artefact,
+					ItemType.Weapon,
+				});
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			// Upgrade
@@ -84,6 +87,11 @@ namespace CodeTao
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 
+		public void OpenExpUpgradePanel(ItemType[] itemTypes)
+		{
+			ExpUpgradePanel.Show(itemTypes);
+		}
+		
 		public void SetTimer(float totalSeconds)
 		{
 			if (Time.frameCount % 30 == 0)

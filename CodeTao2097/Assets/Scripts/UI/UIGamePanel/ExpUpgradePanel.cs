@@ -49,16 +49,17 @@ namespace CodeTao
 				true, 4
 			);
 		}
-
-		protected override void OnShow()
+		
+		public void Show(ItemType[] itemTypes)
 		{
-			base.OnShow();
-			FillBtns();
+			base.Show();
+			Time.timeScale = 0;
+			FillBtns(itemTypes);
 		}
 
-		void FillBtns()
+		void FillBtns(ItemType[] itemTypes)
 		{
-			var randomItems = itemManager.GetRandomUpgradeItems(3);
+			var randomItems = itemManager.GetRandomUpgradeItems(3, itemTypes);
 			if (randomItems == null) return;
 			
 			foreach (var btn in btns)

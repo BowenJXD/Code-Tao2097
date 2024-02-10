@@ -19,9 +19,9 @@ namespace CodeTao
         [HideInInspector] public Collider2D collectableCol;		
         public float knockBackForce = 1;
 
-        public override void PreInit()
+        public override void SetUp()
         {
-            base.PreInit();
+            base.SetUp();
             
             if (!navAgent){
                 navAgent = GetComponent<NavMeshAgent>();

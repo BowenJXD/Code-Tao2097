@@ -60,10 +60,30 @@ namespace CodeTao
             return baseWeight * elementWeight;
         }
         
-        public List<Item> GetRandomUpgradeItems(int count)
+        public List<Item> GetRandomUpgradeItems(int count, ItemType[] itemTypes = null)
         {
             if (items == null || items.Count == 0) return null;
-            return RandomUtil.GetRandomItems(items, count, GetUpgradeItemWeight);
+            if (itemTypes == null || itemTypes.Length == 0)
+            {
+                itemTypes = new ItemType[] {};
+            }
+            List<Item> upgradeItems = new List<Item>();
+            foreach (var itemType in itemTypes)
+            {
+                switch (itemType)
+                {
+                    case ItemType.Weapon:
+                        upgradeItems.AddRange(weapons);
+                        break;
+                    case ItemType.Artefact:
+                        upgradeItems.AddRange(artefacts);
+                        break;
+                    case ItemType.Blessing:
+                        upgradeItems.AddRange(blessings);
+                        break;
+                }
+            }
+            return RandomUtil.GetRandomItems(upgradeItems, count, GetUpgradeItemWeight);
         }
 
         int GetUpgradeItemWeight(Item item)

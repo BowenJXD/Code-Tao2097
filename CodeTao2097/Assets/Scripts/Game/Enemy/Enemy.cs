@@ -14,9 +14,9 @@ namespace CodeTao
 		public Transform target;
 		public BindableStat EXPValue = new BindableStat(1);
 
-		public override void PreInit()
+		public override void SetUp()
 		{
-			base.PreInit();
+			base.SetUp();
 			
 			SelfNavAgent.updateRotation = false;
 			SelfNavAgent.updateUpAxis = false;
@@ -68,8 +68,9 @@ namespace CodeTao
 			}
 		}
 
-		private void OnEnable()
+		public override void Init()
 		{
+			base.Init();
 			// spawn experience ball
 			GetComp<Defencer>().OnDeath += damage =>
 			{

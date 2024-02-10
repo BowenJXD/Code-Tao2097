@@ -21,7 +21,7 @@ namespace CodeTao
 
         public Action<T> removeAfter;
         
-        [TabGroup("Content")]
+        [BoxGroup("Content")]
         public RepetitionBehavior repetitionBehavior = RepetitionBehavior.Return;
 
         public virtual bool AddToContainer(Container<T> container)
@@ -29,7 +29,7 @@ namespace CodeTao
             bool result = container.AddContent(this, repetitionBehavior);
             if (result)
             {
-                this.Container = container;
+                Container = container;
                 OnAdd();
                 addAfter?.Invoke((T)this);
             }
@@ -49,14 +49,14 @@ namespace CodeTao
         {
             if (container == null)
             {
-                container = this.Container;
+                container = Container;
             }
             bool result = container.RemoveContent(this);
             if (result)
             {
-                this.Container = null;
                 OnRemove();
                 removeAfter?.Invoke((T)this);
+                Container = null;
             }
 
             return result;
@@ -70,11 +70,10 @@ namespace CodeTao
         #endregion
 
         #region Level
-
-        [TabGroup("Content")]
-        public BindableProperty<int> LVL = new BindableProperty<int>(0);
         
-        [TabGroup("Content")]
+        [BoxGroup("Content")]
+        public BindableProperty<int> LVL = new BindableProperty<int>(0);
+        [BoxGroup("Content")]
         public BindableProperty<int> MaxLVL = new BindableProperty<int>(9);
 
         public virtual bool Stack(Content<T> newContent)

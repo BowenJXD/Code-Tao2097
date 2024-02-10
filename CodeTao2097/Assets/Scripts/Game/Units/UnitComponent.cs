@@ -65,6 +65,8 @@ namespace CodeTao
             return Unit.GetComp<T>();
         }
         
+        public virtual void SetUp(){}
+        
         public virtual void Init(){}
         
         public virtual void Deinit(){}

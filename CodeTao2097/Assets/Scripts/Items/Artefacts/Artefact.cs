@@ -10,7 +10,7 @@ namespace CodeTao
     /// </summary>
     public class Artefact : Item
     {
-        [TabGroup("Content")]
+        [BoxGroup("Item")]
         public List<ArtefactUpgradeMod> upgradeMods = new List<ArtefactUpgradeMod>();
         
         [HideInInspector] public AttributeController attributeController;
