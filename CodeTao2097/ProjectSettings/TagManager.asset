@@ -49,8 +49,11 @@ TagManager:
   - name: Ground
     uniqueID: 1728775523
     locked: 0
-  - name: BattleUnit
+  - name: Enemy
     uniqueID: 3508632541
+    locked: 0
+  - name: Player
+    uniqueID: 300706249
     locked: 0
   - name: Building
     uniqueID: 4172158929
