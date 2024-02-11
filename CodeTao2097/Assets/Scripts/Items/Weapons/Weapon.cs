@@ -34,26 +34,20 @@ namespace CodeTao
         [HideInInspector] public Attacker attacker;
         [HideInInspector] public List<Damager> damagers;
 
-        protected WeaponSelector weaponSelector;
-        protected List<WeaponExecutor> weaponExecuters = new List<WeaponExecutor>();
+        protected BehaviourSequence sequence;
         protected List<EntityType> attackingTypes = new List<EntityType>();
         
         [BoxGroup("Content")]
         public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
 
-        public bool individualFire = true;
-
         public override void Init()
         {
             base.Init();
 
-            if (!weaponSelector) weaponSelector = GetComponent<WeaponSelector>();
-            if (!weaponSelector) weaponSelector = this.GetComponentInDescendants<WeaponSelector>();
-            weaponSelector.Init(this);
-            
-            if (weaponExecuters.Count <= 0) weaponExecuters = this.GetComponentsInDescendants<WeaponExecutor>(true).ToList();
-            weaponExecuters.ForEach(we => we.Init(this));
-            
+            sequence = this.GetOrAddComponent<BehaviourSequence>();
+            sequence.Set(WeaponBehaviour.weaponKey, this);
+            sequence.Init();
+
             if (!attacker) attacker = Container.GetComp<Attacker>();
             if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
             foreach (var damager in damagers)
@@ -65,30 +59,6 @@ namespace CodeTao
             Receive(Container.GetComp<AttributeController>().As<IWAtSource>());
             IWAtReceiver[] wAtReceivers = this.GetComponentsInChildren<IWAtReceiver>(true);
             this.As<IWAtSource>().Transmit(wAtReceivers);
-
-            ActionKit.Delay(duration / 2f, Fire).Start(this);
-        }
-
-        public virtual void Fire()
-        {
-            List<Vector3> globalPositions = weaponSelector.GetGlobalPositions();
-            ISequence fireSequence = ActionKit.Sequence();
-            for (int i = 0; i < weaponExecuters.Count; i++)
-            {
-                WeaponExecutor weaponExecutor = weaponExecuters[i];
-                fireSequence.Coroutine(() => weaponExecutor.ExecuteCoroutine(globalPositions));
-            }
-
-            if (individualFire)
-            {
-                ActionKit.Delay(cooldown, Fire).Start(this);
-            }
-            else
-            {
-                fireSequence.Delay(cooldown, Fire);
-            }
-            
-            fireSequence.Start(this);
         }
 
         /// <summary>

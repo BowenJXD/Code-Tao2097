@@ -1,6 +1,6 @@
 ﻿namespace CodeTao
 {
-    public class DeathSpawnBehaviour : SpawnBehaviour
+    public class DeathSpawnBehaviour : SpawnUnitBehaviour
     {
         public override void Deinit()
         {

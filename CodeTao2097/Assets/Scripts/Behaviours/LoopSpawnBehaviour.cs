@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 namespace CodeTao
 {
-    public class LoopSpawnBehaviour : SpawnBehaviour, IWAtReceiver
+    public class LoopSpawnBehaviour : SpawnUnitBehaviour, IWAtReceiver
     {
         public BindableStat spawnInterval;
         LoopTask spawnTask;

@@ -73,7 +73,7 @@ namespace CodeTao
             count = Mathf.Clamp(count, 0, listCache.Count);
             List<T> result = new List<T>();
             List<int> weights = listCache.Select(getWeight).ToList();
-            for (int i = 0; i < count; i++)
+            for (int i = count - 1; i >= 0; i--)
             {
                 int randomIndex = GetRandomWeightedIndex(weights);
                 result.Add(listCache[randomIndex]);

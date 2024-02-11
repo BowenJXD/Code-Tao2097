@@ -1,0 +1,52 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using QFramework;
+using UnityEngine;
+using UnityEngine.Pool;
+
+namespace CodeTao
+{
+    /// <summary>
+    /// 动画执行器，动画播放完后继续执行。
+    /// </summary>
+    public class AnimBehaviour : WeaponBehaviour
+    {
+        public AnimateObject spawnAnimation;
+        protected ObjectPool<AnimateObject> aniPool;
+
+        public override void Init(BehaviourSequence newSequence)
+        {
+            base.Init(newSequence);
+            if (!spawnAnimation)
+            {
+                spawnAnimation = this.GetComponentInDescendants<AnimateObject>(true);
+            }
+
+            if (spawnAnimation){
+                aniPool = new ObjectPool<AnimateObject>(
+                    () => { return Instantiate(spawnAnimation, AnimateObjectManager.Instance.transform); }, 
+                    prefab => { prefab.gameObject.SetActive(true); }, 
+                    prefab => { prefab.gameObject.SetActive(false); }, 
+                    prefab => { Destroy(prefab); });
+            }
+        }
+
+        protected override void OnExecute()
+        {
+            base.OnExecute();
+            UnNext();
+            foreach (var globalPos in globalPositions)
+            {
+                AnimateObject newAnim = aniPool.Get();
+                Vector3 localPos = newAnim.transform.localPosition;
+                newAnim.Position(globalPos + localPos);
+                newAnim.onTrigger = Next;
+                newAnim.onEnd = () =>
+                {
+                    newAnim.Position(localPos);
+                    aniPool.Release(newAnim);
+                };
+            }
+        }
+    }
+}

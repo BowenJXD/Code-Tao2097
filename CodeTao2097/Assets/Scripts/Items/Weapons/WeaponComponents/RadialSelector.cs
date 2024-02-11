@@ -24,9 +24,9 @@ namespace CodeTao
         
         private MoveController _ownerMoveController;
 
-        public override void Init(Weapon weapon)
+        public override void Init(BehaviourSequence newSequence)
         {
-            base.Init(weapon);
+            base.Init(newSequence);
             _ownerMoveController = weapon.Container.GetComp<MoveController>();
             
             if (shootingDirections.Count == 0)
@@ -37,21 +37,8 @@ namespace CodeTao
                 }).UnRegisterWhenGameObjectDestroyed(this);
             }
         }
-        
-        public override List<Vector3> GetGlobalPositions()
-        {
-            int amount = (int)weapon.amount.Value;
-            List<Vector3> results = new List<Vector3>();
-            for (int i = 0; i < amount; i++)
-            {
-                Vector3 result = transform.position + GetLocalPosition(i);
-                results.Add(result);
-            }
 
-            return results;
-        }
-
-        public Vector3 GetLocalPosition(int spawnIndex)
+        public override Vector3 GetLocalPosition(int spawnIndex)
         {
             Vector2 basePoint = GetBaseDirection();
             float angle = Util.GetAngleFromVector(basePoint);
