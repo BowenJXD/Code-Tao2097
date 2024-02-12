@@ -27,6 +27,12 @@ namespace CodeTao
         {
             base.OnAdd();
             Init();
+            
+            if (TryGetComponent(out BehaviourSequence bs))
+            {
+                bs.Set(BBKey.ITEM, this);
+                bs.enabled = true;
+            }
         }
 
         public virtual void Init()

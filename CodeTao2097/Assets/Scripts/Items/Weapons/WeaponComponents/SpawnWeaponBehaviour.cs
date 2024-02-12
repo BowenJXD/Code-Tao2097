@@ -26,9 +26,9 @@ namespace CodeTao
             }
             UnitManager.Instance.Register(unitPrefab, rootToWeapon? transform : null);
 
-            if (!damager) { damager = this.GetComponentInDescendants<Damager>(true); }
+            if (!damager) { damager = this.GetComponentInDescendants<Damager>(); }
 
-            if (damager)
+            if (weapon && damager)
             {
                 if (damager.damageElementType == ElementType.None) { damager.damageElementType = weapon.ElementType; }
             }
@@ -61,7 +61,8 @@ namespace CodeTao
             UnitController unit = UnitManager.Instance.Get(unitPrefab);
             unit.Position(globalPos);
 
-            if (unit is IWeaponDerivative weaponDerivative){
+            if (unit is IWeaponDerivative weaponDerivative && weapon && damager)
+            {
                 weaponDerivative.SetWeapon(weapon, damager);
                 weaponDerivative.InitSpawn(globalPos);
             }

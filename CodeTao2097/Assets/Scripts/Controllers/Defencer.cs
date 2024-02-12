@@ -76,7 +76,7 @@ namespace CodeTao
             ActionKit.Delay(DMGCD, () => { IsInCD = false; }).Start(this);
         }
         
-        public List<EntityType> defencingTags = new List<EntityType>();
+        public List<EntityTag> defencingTags = new List<EntityTag>();
         
         #endregion
 

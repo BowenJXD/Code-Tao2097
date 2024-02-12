@@ -12,10 +12,22 @@ namespace CodeTao
     public abstract class UnitController : MonoBehaviour
     {
         public ComponentLink Link { get; private set; }
+        
+        protected BehaviourSequence sequence;
 
         public T GetComp<T>() where T : UnitComponent
         {
             return Link?.GetComp<T>();
+        }
+        
+        public bool TryGetComp<T>(out T comp) where T : UnitComponent
+        {
+            if (Link == null)
+            {
+                comp = null;
+                return false;
+            }
+            return Link.TryGetComp(out comp);
         }
 
         /// <summary>
@@ -55,6 +67,13 @@ namespace CodeTao
                     ColliderManager.Instance.Register(this, col);
                 }
             }
+
+            TryGetComponent(out sequence);
+            if (!sequence) sequence = this.GetComponentInDescendants<BehaviourSequence>();
+            if (sequence)
+            {
+                sequence.Set(BBKey.OWNER, this);
+            }
         }
         
         public Action onInit;
@@ -70,7 +89,10 @@ namespace CodeTao
             }
             onInit?.Invoke();
             onInit = null;
+            
             gameObject.SetActive(true);
+            
+            if (sequence) sequence.enabled = true;
         }
         
         /// <summary>
@@ -83,8 +105,11 @@ namespace CodeTao
         /// </summary>
         public virtual void Deinit()
         {
+            if (sequence) sequence.enabled = false;
+            
             onDeinit?.Invoke();
             onDeinit = null;
+            
             foreach (var component in Link.components.Values)
             {
                 component.Deinit();

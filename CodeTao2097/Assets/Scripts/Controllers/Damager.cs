@@ -45,7 +45,7 @@ namespace CodeTao
         
         #region Condition
         
-        public List<EntityType> damagingTags = new List<EntityType> { EntityType.Enemy };
+        public List<EntityTag> damagingTags = new List<EntityTag> { EntityTag.Enemy };
 
         public float DMGCD;
         public bool IsInCD;

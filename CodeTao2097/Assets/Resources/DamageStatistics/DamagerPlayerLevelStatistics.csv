@@ -1,5 +1,5 @@
 Damager,TotalDamage,TotalDps,Level0,Level1,Level2
-DDamager,14340,259.8379,Infinity,0.7247919
-DDamager,24755,448.5556,Infinity,0.452995
-LYDamager,5550,100.5649,Infinity,0.9059899
-BackFlowDamager,280,5.073544,Infinity,0.09059899
+DFLProjDamager,3350,211.0983,Infinity,1.575361
+VirusBuffDamager,13500,850.6947,Infinity,15.75361
+GroundEffectDamager,75,4.726082,Infinity,1.575361
+BackFlowDamager,0,0

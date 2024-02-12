@@ -22,6 +22,12 @@ namespace CodeTao
             return null;
         }
         
+        public bool TryGetComp<T>(out T comp) where T : UnitComponent
+        {
+            comp = GetComp<T>();
+            return comp != null;
+        }
+        
         public void AddComponents(List<UnitComponent> unitComponents)
         {
             foreach (var unitComponent in unitComponents)
@@ -63,6 +69,11 @@ namespace CodeTao
         public T GetComp<T>() where T : UnitComponent
         {
             return Unit.GetComp<T>();
+        }
+        
+        public bool TryGetComp<T>(out T comp) where T : UnitComponent
+        {
+            return Unit.TryGetComp(out comp);
         }
         
         public virtual void SetUp(){}

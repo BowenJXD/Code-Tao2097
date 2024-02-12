@@ -10,7 +10,7 @@ namespace CodeTao
     /// </summary>
     public class Interactable : UnitController
     {
-        public List<EntityType> interactingTags = new List<EntityType>();
+        public List<EntityTag> interactingTags = new List<EntityTag>();
         
         [HideInInspector] public Collider2D interactableCol;
 

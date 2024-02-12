@@ -10,26 +10,23 @@ namespace CodeTao
     /// </summary>
     public class WeaponBehaviour : BehaviourNode
     {
-        public static string globalPosKey = "globalPos";
         protected List<Vector3> globalPositions;
         
-        public static string localPosKey = "localPos";
         protected List<Vector3> localPositions;
         
-        public static string weaponKey = "weapon";
         protected Weapon weapon;
 
         public override void Init(BehaviourSequence newSequence)
         {
             base.Init(newSequence);
-            weapon = sequence.Get<Weapon>(weaponKey);
+            weapon = sequence.Get<Weapon>(BBKey.WEAPON);
         }
 
         protected override void OnExecute()
         {
             base.OnExecute();
-            globalPositions = sequence.Get<List<Vector3>>(globalPosKey);
-            localPositions = sequence.Get<List<Vector3>>(localPosKey);
+            globalPositions = sequence.Get<List<Vector3>>(BBKey.GLOBAL_POS);
+            localPositions = sequence.Get<List<Vector3>>(BBKey.LOCAL_POS);
         }
     }
 }

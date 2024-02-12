@@ -2,28 +2,28 @@
 
 namespace CodeTao
 {
-    public class SpawnUnitBehaviour : UnitBehaviour
+    public class SpawnUnitBehaviour : BehaviourNode
     {
         public UnitController unitPrefab;
-        public bool rootToParent = true;
+        public bool rootToParent = false;
         private Weapon weapon;
         private Damager damager;
 
-        private void OnEnable()
+        public override void Init(BehaviourSequence newSequence)
         {
+            base.Init(newSequence);
             if (!unitPrefab) unitPrefab = GetComponentInChildren<UnitController>(true);
             if (!damager) damager = GetComponentInChildren<Damager>();
             UnitManager.Instance.Register(unitPrefab, rootToParent? transform : null);
-            if (!weapon){
-                if (Unit is IWeaponDerivative weaponDerivative)
-                {
-                    weapon = weaponDerivative.weapon;
-                }
+            if (!weapon)
+            {
+                weapon = this.GetComponentInAncestors<Weapon>();
             }
         }
 
-        protected void Spawn()
+        protected override void OnExecute()
         {
+            base.OnExecute();
             UnitController unit = UnitManager.Instance.Get(unitPrefab);
             unit.Position(transform.position);
 

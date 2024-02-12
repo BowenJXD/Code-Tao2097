@@ -26,8 +26,8 @@ namespace CodeTao
                 globals.Add(transform.position + local);
             }
 
-            sequence.Set(globalPosKey, globals);
-            sequence.Set(localPosKey, locals);
+            sequence.Set(BBKey.GLOBAL_POS, globals);
+            sequence.Set(BBKey.LOCAL_POS, locals);
         }
         
         public virtual Vector3 GetLocalPosition(int index)

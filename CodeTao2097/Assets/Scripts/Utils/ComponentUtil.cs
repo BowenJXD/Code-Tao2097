@@ -20,9 +20,7 @@ namespace CodeTao
             UnitController unitController = component is UnitController ? (UnitController)component : GetComponentInAncestors<UnitController>(component);
             if (unitController)
             {
-                T result;
-                result = unitController.GetComponent<T>();
-                if (result)
+                if (unitController.TryGetComponent<T>(out T result))
                 {
                     return result;
                 }

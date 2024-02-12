@@ -7,10 +7,19 @@ namespace CodeTao
     /// </summary>
     public class StartSequenceBehaviour : BehaviourNode
     {
+        public bool ignoreOtherConditions = false;
+        
         protected override void OnExecute()
         {
             base.OnExecute();
-            sequence.StartSequence();
+            if (ignoreOtherConditions)
+            { 
+                sequence.Continue();
+            }
+            else
+            {
+                sequence.SetIndexConditionMet(true);
+            }
         }
     }
 }

@@ -35,7 +35,7 @@ namespace CodeTao
         [HideInInspector] public List<Damager> damagers;
 
         protected BehaviourSequence sequence;
-        protected List<EntityType> attackingTypes = new List<EntityType>();
+        protected List<EntityTag> attackingTypes = new List<EntityTag>();
         
         [BoxGroup("Content")]
         public List<WeaponUpgradeMod> upgradeMods = new List<WeaponUpgradeMod>();
@@ -45,8 +45,8 @@ namespace CodeTao
             base.Init();
 
             sequence = this.GetOrAddComponent<BehaviourSequence>();
-            sequence.Set(WeaponBehaviour.weaponKey, this);
-            sequence.Init();
+            sequence.Set(BBKey.WEAPON, this);
+            sequence.enabled = true;
 
             if (!attacker) attacker = Container.GetComp<Attacker>();
             if (damagers.Count <= 0) damagers = this.GetComponentsInDescendants<Damager>(true).ToList();
