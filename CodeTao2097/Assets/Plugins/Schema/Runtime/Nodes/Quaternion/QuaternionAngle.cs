@@ -1,23 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Quaternion"), LightIcon("Nodes/Quaternion"), Category("Quaternion"),
-     Description("Get the angle between two quaternion rotations")]
-    public class QuaternionAngle : Action
-    {
-        [Tooltip("Quaternion A")] public BlackboardEntrySelector<Quaternion> quaternionOne;
-
-        [Tooltip("Quaternion B")] public BlackboardEntrySelector<Quaternion> quaternionTwo;
-
-        [Tooltip("Blackboard variable to store the angle in"), WriteOnly] 
-        public BlackboardEntrySelector<float> angle;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            angle.value = Quaternion.Angle(quaternionOne.value, quaternionTwo.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:19d4ca84d86a2cb5ebd4717418d5906fe7fc723a54eeab2214187d55bbcbd0eb
+size 829

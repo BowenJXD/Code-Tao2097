@@ -1,32 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-using System.Collections.Generic;
-
-namespace QFramework
-{
-    public class RootCode : ICodeScope
-    {
-        private List<ICode> mCodes = new List<ICode>();
-
-        public List<ICode> Codes
-        {
-            get { return mCodes; }
-            set { mCodes = value; }
-        }
-
-
-        public void Gen(ICodeWriter writer)
-        {
-            foreach (var code in Codes)
-            {
-                code.Gen(writer);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e450131b74da6decda4c62deed68e7a6fd337d7ca8c74104e2524f50c9e478d2
+size 797

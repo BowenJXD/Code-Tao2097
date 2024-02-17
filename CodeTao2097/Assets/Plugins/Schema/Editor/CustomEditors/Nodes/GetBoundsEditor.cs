@@ -1,34 +1,3 @@
-using Schema.Builtin.Nodes;
-using UnityEditor;
-
-namespace SchemaEditor.Editors.Nodes
-{
-    [CustomEditor(typeof(GetBounds)), CanEditMultipleObjects]
-    public class GetBoundsEditor : Editor
-    {
-        private SerializedProperty boundsKey;
-        private SerializedProperty gameObjectKey;
-        private SerializedProperty useSelf;
-
-        private void OnEnable()
-        {
-            useSelf = serializedObject.FindProperty("useSelf");
-            gameObjectKey = serializedObject.FindProperty("gameObject");
-            boundsKey = serializedObject.FindProperty("boundsKey");
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-
-            EditorGUILayout.PropertyField(useSelf);
-
-            if (!useSelf.boolValue)
-                EditorGUILayout.PropertyField(gameObjectKey);
-
-            EditorGUILayout.PropertyField(boundsKey);
-
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88e2ab7d4ee398dbafa81d5de2f5f0ea42062b6c4c1208357270a0acbba297e6
+size 1005

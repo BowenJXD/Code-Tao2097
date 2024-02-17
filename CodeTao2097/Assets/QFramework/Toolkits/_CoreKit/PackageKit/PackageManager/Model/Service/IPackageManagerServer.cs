@@ -1,11 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-namespace QFramework
-{
-    internal interface IPackageManagerServer : IModel
-    {
-        void DeletePackage(string packageId, System.Action onResponse);
-        void GetAllRemotePackageInfoV5(Action<List<PackageRepository>, List<string>> onResponse);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:664748300758bfc7d5fd3d53c3940ff5962ef9e6659bbe5a972932d2189a72a0
+size 309

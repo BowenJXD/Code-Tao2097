@@ -1,29 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    /// <summary>
-    /// 后花括号
-    /// </summary>
-    public class CloseBraceCode : ICode
-    {
-        private readonly bool mSemicolon;
-
-        public CloseBraceCode(bool semicolon)
-        {
-            mSemicolon = semicolon;
-        }
-
-        public void Gen(ICodeWriter writer)
-        {
-            var semicolonKey = mSemicolon ? ";" : string.Empty;
-            writer.WriteLine("}" + semicolonKey);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a548afc99684125adebd4322254945eef61032cb13a004dc6c84af229eb58288
+size 796

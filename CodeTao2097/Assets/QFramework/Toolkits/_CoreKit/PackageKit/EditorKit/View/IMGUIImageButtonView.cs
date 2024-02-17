@@ -1,36 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 - 2022 liangxiegame UNDER MIT License
- * 
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-using System;
-using UnityEngine;
-
-namespace QFramework
-{
-    public class ImageButtonView : IMGUIAbstractView
-    {
-        private Texture2D mTexture2D { get; set; }
-
-        private Action mOnClick { get; set; }
-
-        public ImageButtonView(string texturePath, Action onClick)
-        {
-            mTexture2D = Resources.Load<Texture2D>(texturePath);
-            mOnClick = onClick;
-
-            //Style = new GUIStyle(GUI.skin.button);
-        }
-
-        protected override void OnGUI()
-        {
-            if (GUILayout.Button(mTexture2D, LayoutStyles))
-            {
-                mOnClick.Invoke();
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:282e0795fc25a238c082e5ea296a8adf367ccb689791444f430eeb5ab7fb9e35
+size 981

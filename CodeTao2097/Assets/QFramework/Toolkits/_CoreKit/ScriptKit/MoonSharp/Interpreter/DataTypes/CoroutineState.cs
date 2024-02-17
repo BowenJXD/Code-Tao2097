@@ -1,34 +1,3 @@
-﻿
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// State of coroutines
-	/// </summary>
-	public enum CoroutineState
-	{
-		/// <summary>
-		/// This is the main coroutine
-		/// </summary>
-		Main,
-		/// <summary>
-		/// Coroutine has not started yet
-		/// </summary>
-		NotStarted,
-		/// <summary>
-		/// Coroutine is suspended
-		/// </summary>
-		Suspended,
-		/// <summary>
-		/// Coroutine has been forcefully suspended (i.e. auto-yielded)
-		/// </summary>
-		ForceSuspended,
-		/// <summary>
-		/// Coroutine is running
-		/// </summary>
-		Running,
-		/// <summary>
-		/// Coroutine has terminated
-		/// </summary>
-		Dead
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:382c745c84c6e74fdfd86d36408d67237363a84d2f924859be214d71b9e76e5b
+size 655

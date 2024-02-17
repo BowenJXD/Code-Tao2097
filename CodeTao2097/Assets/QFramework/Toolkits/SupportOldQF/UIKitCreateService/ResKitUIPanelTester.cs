@@ -1,36 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace QFramework
-{
-    public class ResKitUIPanelTester : MonoBehaviour
-    {
- 
-            /// <summary>
-            /// 页面的名字
-            /// </summary>
-            public string PanelName;
-
-            /// <summary>
-            /// 层级名字
-            /// </summary>
-            public UILevel Level;
-
-            [SerializeField] private List<UIPanelTesterInfo> mOtherPanels;
-
-            private void Awake()
-            {
-                ResKit.Init();
-            }
-
-            private IEnumerator Start()
-            {
-                yield return new WaitForSeconds(0.2f);
-			
-                UIKit.OpenPanel(PanelName, Level);
-
-                mOtherPanels.ForEach(panelTesterInfo => { UIKit.OpenPanel(panelTesterInfo.PanelName, panelTesterInfo.Level); });
-            }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:77b1a29580b1ad5cfc8957b29a0a35b9ac2545b6bf79ef2cd59f616f67ab32ad
+size 888

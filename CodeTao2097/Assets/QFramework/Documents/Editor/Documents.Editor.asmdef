@@ -1,20 +1,3 @@
-{
-    "name": "Documents.Editor",
-    "references": [
-        "GUID:9e97e42c28a41430880bee376c274c86",
-        "DocKit.Editor",
-        "com.alelievr.NodeGraphProcessor.Editor",
-        "com.alelievr.NodeGraphProcessor.Runtime",
-        "PackageKit",
-        "QFramework.CoreKit"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9db4c688726f7ef7ceadd97d596e84e4a9cc1b45f62852dabc824504eb4b7e6b
+size 555

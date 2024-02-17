@@ -1,17 +1,3 @@
-﻿using QFramework;
-using UnityEngine;
-
-namespace CodeTao
-{
-    public class BlessingChest : Interactable
-    {
-        public override void Interact(Collider2D col = null)
-        {
-            base.Interact(col);
-            if (col)
-            {
-                UIKit.GetPanel<UIGamePanel>().OpenExpUpgradePanel(new [] { ItemType.Blessing });
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c29172f140e8600f4b7dae366d5c1427a3a43c377766e8dfb9b2e534172c668
+size 395

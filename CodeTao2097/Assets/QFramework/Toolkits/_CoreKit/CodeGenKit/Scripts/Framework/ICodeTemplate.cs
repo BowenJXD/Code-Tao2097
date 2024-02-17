@@ -1,35 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    public interface ICodeTemplate
-    {
-        void Write(ICodeTemplateData data);
-    }
-    
-    public interface ICodeTemplate<TData> : ICodeTemplate where TData : ICodeTemplateData
-    {
-        void Write(TData data);
-    }
-
-    public abstract class CodeTemplate<TData> : ICodeTemplate<TData> where TData : class, ICodeTemplateData
-    {
-        public abstract void Write(TData data);
-
-        void ICodeTemplate.Write(ICodeTemplateData data)
-        {
-            Write(data as TData);
-        }
-    }
-
-    public interface ICodeTemplateData
-    {
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:46953b354f33e8a070c1ddf821f0823e0be3324f12f1489e37931b80880c26e3
+size 934

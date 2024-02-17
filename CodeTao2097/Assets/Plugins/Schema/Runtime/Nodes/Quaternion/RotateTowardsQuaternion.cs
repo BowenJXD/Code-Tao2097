@@ -1,26 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Quaternion"), LightIcon("Nodes/Quaternion"), Category("Quaternion"),
-     Description("Rotates from a rotation towards another rotation")]
-    public class RotateTowardsQuaternion : Action
-    {
-        [Tooltip("Quaternion to rotate from")] public BlackboardEntrySelector<Quaternion> from;
-
-        [Tooltip("Quaternion to rotate to")] public BlackboardEntrySelector<Quaternion> to;
-
-        [Tooltip("The maximum angular step. Negative values will rotate in the opposite direction")]
-        public BlackboardEntrySelector<float> maxDegreesDelta;
-
-        [Tooltip("Blackboard variable to store the new rotation in"), WriteOnly] 
-        public BlackboardEntrySelector<Quaternion> rotated;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            rotated.value = Quaternion.RotateTowards(from.value, to.value, maxDegreesDelta.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5aac08dd8d918a791ef77063cb53d75fae41a74e98dc79fbcf87ac7cdfff31cd
+size 1038

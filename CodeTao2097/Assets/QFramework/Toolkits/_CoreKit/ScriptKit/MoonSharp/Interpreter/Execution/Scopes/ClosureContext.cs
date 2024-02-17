@@ -1,28 +1,3 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace MoonSharp.Interpreter.Execution
-{
-	/// <summary>
-	/// The scope of a closure (container of upvalues)
-	/// </summary>
-	internal class ClosureContext : List<DynValue>
-	{
-		/// <summary>
-		/// Gets the symbols.
-		/// </summary>
-		public string[] Symbols { get; private set; }
-
-		internal ClosureContext(SymbolRef[] symbols, IEnumerable<DynValue> values)
-		{
-			Symbols = symbols.Select(s => s.i_Name).ToArray();
-			this.AddRange(values);
-		}
-
-		internal ClosureContext()
-		{
-			Symbols = new string[0];
-		}
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc85bc397aa40cc3a6324ea09c34bccf4574261e31a995c2da085db0ac909304
+size 605

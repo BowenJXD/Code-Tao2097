@@ -1,24 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Transform"),
-     Description("Transform a given position from local to world space")]
-    public class TransformPoint : Action
-    {
-        [Tooltip("Transform to operate on")] public ComponentSelector<Transform> transform;
-        [Tooltip("Point vector")] public BlackboardEntrySelector<Vector3> point;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Transform t = agent.GetComponent(transform);
-
-            if (t == null)
-                return NodeStatus.Failure;
-
-            t.TransformPoint(point.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed0659c10c8efaec4df08d928ebe3236f2de36a2ef4bdfd5f78fb309ab4f851f
+size 787

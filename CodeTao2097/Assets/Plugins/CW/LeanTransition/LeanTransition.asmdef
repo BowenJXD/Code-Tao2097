@@ -1,16 +1,3 @@
-{
-    "name": "LeanTransition",
-    "references": [
-        "LeanCommon",
-        "CW.Common"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de4c9342b01622372382f84c526bdf0797e0e18300ded172102ca4ace86df162
+size 369

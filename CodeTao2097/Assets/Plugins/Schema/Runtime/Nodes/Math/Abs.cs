@@ -1,22 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Get the absolute value of a float")]
-    public class Abs : Action
-    {
-        [Tooltip("Value to get the absolute value of")]
-        public BlackboardEntrySelector<float> value;
-
-        [Tooltip("Selector to store the absolute value in"), WriteOnly] 
-        public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.Abs(value.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e90ca9cc5f58682e3f0d7780f8c559ae06ca1d89996231b39f067c20c22bed2d
+size 673

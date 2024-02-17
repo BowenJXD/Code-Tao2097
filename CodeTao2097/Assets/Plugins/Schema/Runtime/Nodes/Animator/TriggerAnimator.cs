@@ -1,23 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Animator Icon", true), LightIcon("Animator Icon", true), Category("Animator")]
-    public class TriggerAnimator : Action
-    {
-        public ComponentSelector<Animator> animator;
-        public string trigger;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Animator a = agent.GetComponent(animator);
-
-            if (a == null)
-                return NodeStatus.Failure;
-
-            a.SetTrigger(trigger);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5699497df5d30fb3b4cbd42b802ebab9f157f4f538289cad0daba434b034f95b
+size 611

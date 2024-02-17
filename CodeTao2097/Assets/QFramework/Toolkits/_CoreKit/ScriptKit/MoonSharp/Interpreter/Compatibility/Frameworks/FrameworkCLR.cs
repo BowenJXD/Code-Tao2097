@@ -1,36 +1,3 @@
-﻿#if !(DOTNET_CORE || NETFX_CORE) && !PCL
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-
-namespace MoonSharp.Interpreter.Compatibility.Frameworks
-{
-	class FrameworkCurrent : FrameworkClrBase
-	{
-		public override Type GetTypeInfoFromType(Type t)
-		{
-			return t;
-		}
-
-		public override bool IsDbNull(object o)
-		{
-			return o != null && Convert.IsDBNull(o);
-		}
-
-
-		public override bool StringContainsChar(string str, char chr)
-		{
-			return str.Contains(chr);
-		}
-
-		public override Type GetInterface(Type type, string name)
-		{
-			return type.GetInterface(name);
-		}
-	}
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:11a144e79bb8e7f2e4b26caf72d73e45da4f98fa3087c2b6bfd010448ffc1d61
+size 685

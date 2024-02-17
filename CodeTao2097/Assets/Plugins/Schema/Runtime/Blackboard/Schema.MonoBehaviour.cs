@@ -1,21 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Internal.Types
-{
-    [Color("#e34c26")]
-    [UseExternalTypeDefinition(typeof(UnityEngine.MonoBehaviour))]
-    [ExcludePaths(
-        "transform",
-        "gameObject.transform.gameObject",
-        "gameObject.transform.root.parent",
-        "gameObject.transform.root.transform",
-        "gameObject.transform.root.gameObject.transform",
-        "gameObject.transform.parent.root",
-        "gameObject.transform.parent.transform",
-        "gameObject.transform.parent.gameObject.transform"
-    )]
-    [ExcludeTypes(typeof(Matrix4x4))]
-    public class MonoBehaviour : EntryType
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83810143387d46596d640942043000087475a3d075edecc150b7ee3009565393
+size 649

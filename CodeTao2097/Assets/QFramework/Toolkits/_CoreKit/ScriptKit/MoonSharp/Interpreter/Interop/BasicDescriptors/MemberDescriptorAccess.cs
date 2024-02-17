@@ -1,31 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter.Interop.BasicDescriptors
-{
-	/// <summary>
-	/// Permissions for members access
-	/// </summary>
-	[Flags]
-	public enum MemberDescriptorAccess
-	{
-		/// <summary>
-		/// The member can be read from
-		/// </summary>
-		CanRead = 1,
-		/// <summary>
-		/// The member can be written to
-		/// </summary>
-		CanWrite = 2,
-		/// <summary>
-		/// The can be invoked
-		/// </summary>
-		CanExecute = 4
-	}
-
-
-
-
-
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:94e2ef9501864ab40085641f4e285030aab6b588bb396275aff74c7fe44ba870
+size 476

@@ -1,22 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Vector"),
-     Description("Composes a Vector2 with given x and y values")]
-    public class ComposeVector2 : Action
-    {
-        public BlackboardEntrySelector<float> x;
-        public BlackboardEntrySelector<float> y;
-
-        [Tooltip("Entry to store composed vector in"), WriteOnly] 
-        public BlackboardEntrySelector<Vector2> target;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            target.value = new Vector2(x.value, y.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c30d2d54c49d207d7cc545c5008eebf658535784ff7aa6681ae3d47b42b05d6c
+size 709

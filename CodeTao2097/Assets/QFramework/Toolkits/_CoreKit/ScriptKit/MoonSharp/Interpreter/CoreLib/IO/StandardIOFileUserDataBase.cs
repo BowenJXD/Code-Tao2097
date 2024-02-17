@@ -1,31 +1,3 @@
-﻿using System.IO;
-
-namespace MoonSharp.Interpreter.CoreLib.IO
-{
-	/// <summary>
-	/// Abstract class implementing an unclosable file Lua userdata. Methods are meant to be called by Lua code.
-	/// </summary>
-	internal class StandardIOFileUserDataBase : StreamFileUserDataBase
-	{
-		protected override string Close()
-		{
-			return ("cannot close standard file");
-		}
-
-		public static StandardIOFileUserDataBase CreateInputStream(Stream stream)
-		{
-			var f = new StandardIOFileUserDataBase();
-			f.Initialize(stream, new StreamReader(stream), null);
-			return f;
-		}
-
-		public static StandardIOFileUserDataBase CreateOutputStream(Stream stream)
-		{
-			var f = new StandardIOFileUserDataBase();
-			f.Initialize(stream, null, new StreamWriter(stream));
-			return f;
-		}
-
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d457bcc9e8f563f39b72f1ca2dc0081bd19f558f97ef2f7bf305e5ddab06e187
+size 803

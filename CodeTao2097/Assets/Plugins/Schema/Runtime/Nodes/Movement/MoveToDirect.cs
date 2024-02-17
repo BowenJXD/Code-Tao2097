@@ -1,27 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Movement"), LightIcon("Nodes/Movement"), Category("Movement")]
-    public class MoveToDirect : Action
-    {
-        public float speed = 1;
-        public bool rotateTowardsTarget;
-        public BlackboardEntrySelector<Vector3> point;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            if (rotateTowardsTarget)
-            {
-                Vector3 target = (agent.transform.position - point.value).normalized;
-                Quaternion rotation = agent.transform.rotation * Quaternion.LookRotation(target);
-                agent.transform.rotation = rotation;
-            }
-
-            if (Vector3.SqrMagnitude(agent.transform.position - point.value) < 0.1f) return NodeStatus.Success;
-            agent.transform.position =
-                Vector3.MoveTowards(agent.transform.position, point.value, speed * Time.deltaTime);
-            return NodeStatus.Running;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:be73c6e7de8ecc8f2b563e6f453b461d2c077bcc4f993b676585b9f8b3c9c6b2
+size 1037

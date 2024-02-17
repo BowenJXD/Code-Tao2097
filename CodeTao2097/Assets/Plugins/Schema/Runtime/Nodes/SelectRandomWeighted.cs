@@ -1,34 +1,3 @@
-using System;
-using System.Linq;
-using Random = UnityEngine.Random;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Selector"), LightIcon("Nodes/Selector")]
-    public class SelectRandomWeighted : Flow
-    {
-        public SerializableDictionary<string, int> weights;
-
-        public override void OnFlowEnter(object flowMemory, SchemaAgent agent)
-        {
-            foreach (Node child in children.Where(child => !weights.ContainsKey(child.uID))) weights.Add(child.uID, 1);
-        }
-
-        public override int Tick(object nodeMemory, NodeStatus status, int index)
-        {
-            if (index > -1) return -1;
-
-            int ranWeight = Random.Range(1, weights.Values.Sum() + 1);
-
-            foreach (Node child in children)
-            {
-                if (ranWeight <= weights[child.uID])
-                    return Array.IndexOf(children, child);
-
-                ranWeight -= weights[child.uID];
-            }
-
-            return 0;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c8193d19e73c8d7af9f4d0692643d4e44735dfd7fbd5efbc3bbb13b647b05f9
+size 1010

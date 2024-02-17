@@ -1,18 +1,3 @@
-﻿using UnityEngine;
-using Lean.Transition;
-
-public class RepeatFromCode : MonoBehaviour
-{
-	void Start()
-	{
-		InvokeRepeating("UpAndDown", 0.0f, 2.0f); // Call every 2 seconds
-	}
-
-	void UpAndDown()
-	{
-		transform.
-			localPositionTransition(Vector3.up, 1). // Move up over 1 second
-			JoinTransition(). // Connect together
-			localPositionTransition(Vector3.down, 1); // Move down over 1 second
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:84e3e9ce0dfdb137cbb02daebe5c4690b238b32020a6af7c9dbc363e790368dc
+size 400

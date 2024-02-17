@@ -1,24 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Transform"),
-     Description("Transform a given direction from world to local space")]
-    public class InverseTransformDirection : Action
-    {
-        [Tooltip("Transform to operate on")] public ComponentSelector<Transform> transform;
-        [Tooltip("Direction vector")] public BlackboardEntrySelector<Vector3> direction;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Transform t = agent.GetComponent(transform);
-
-            if (t == null)
-                return NodeStatus.Failure;
-
-            t.InverseTransformDirection(direction.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:05d78e724d21bad154b42314368542f0fa42ea3057f73cabf4a197e1eb92c5a0
+size 822

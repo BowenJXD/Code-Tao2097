@@ -1,7 +1,3 @@
-Id,Damage,Cooldown,Area,Amount,Duration,Speed,Range,KnockBack,EffectHitRate
-LY,5,1,3,1,1,1,10,1,100
-SDCB,5,3,1,3,5,4,10,1,50
-GHS,5,2,1,2,5,8,10,1,50
-TWLKH,5,2,3,1,4,1,10,0,50
-MC,10,2,1,1,5,4,10,1,50
-TWLKJ,5,2,3,1,4,1,10,1,50
+version https://git-lfs.github.com/spec/v1
+oid sha256:bdbff5db62d29b2cab1a26a42c495cbb6415fa002691ecda151e15f1d11437ec
+size 225

@@ -1,24 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// Marks a type of automatic registration as userdata (which happens only if UserData.RegisterAssembly is called).
-	/// </summary>
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, Inherited = false, AllowMultiple = false)]
-	public sealed class MoonSharpUserDataAttribute : Attribute
-	{
-		/// <summary>
-		/// The interop access mode
-		/// </summary>
-		public InteropAccessMode AccessMode { get; set; }
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MoonSharpUserDataAttribute"/> class.
-		/// </summary>
-		public MoonSharpUserDataAttribute()
-		{
-			AccessMode = InteropAccessMode.Default;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bec57067d86e301a6170ff2705f739384723d417ab57b0cb1dfd0ac8397f2110
+size 728

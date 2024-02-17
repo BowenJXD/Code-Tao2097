@@ -1,24 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Get the greatest integer less than or equal to a float")]
-    public class Floor : Action
-    {
-        [Tooltip("Float to floor")] public BlackboardEntrySelector<float> value;
-
-        [Tooltip("Selector to store the floored value in"), WriteOnly] 
-        public BlackboardEntrySelector<float> result;
-
-        [Tooltip("Convert the floored value to an integer")]
-        public bool floorToInt = true;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.Floor(value.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a51b9a4e3f63c34fee100f3a15ab4c99e5841392f20124bb74c7ebc0c0309fe0
+size 772

@@ -1,19 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Round a number to the nearest integer")]
-    public class RoundToInt : Action
-    {
-        [Tooltip("Value to round")] public BlackboardEntrySelector<float> value;
-        [Tooltip("Rounded value"), WriteOnly]  public BlackboardEntrySelector<int> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.RoundToInt(value.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:165f22849b9384e447a657b71915cfeaa895898537a6ccccd25e10c3d857d6d4
+size 623

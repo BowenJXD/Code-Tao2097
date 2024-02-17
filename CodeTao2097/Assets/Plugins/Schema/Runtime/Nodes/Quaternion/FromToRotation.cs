@@ -1,23 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Quaternion"), LightIcon("Nodes/Quaternion"),
-     Description("Creates a rotation which rotates from one direction to another direction")]
-    public class FromToRotation : Action
-    {
-        [Tooltip("Direction to rotate from")] public BlackboardEntrySelector<Vector3> fromDirection;
-
-        [Tooltip("Direction to rotate to")] public BlackboardEntrySelector<Vector3> toDirection;
-
-        [Tooltip("Blackboard variable to store the new rotation in"), WriteOnly] 
-        public BlackboardEntrySelector<Quaternion> rotated;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            rotated.value = Quaternion.FromToRotation(fromDirection.value, toDirection.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12ef18fc56f5a0e93a5e286606dc8bf1022584e037f96af6484982920f812d63
+size 867

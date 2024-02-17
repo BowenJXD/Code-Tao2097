@@ -1,21 +1,3 @@
-﻿namespace CodeTao
-{
-    public class BBKey
-    {
-        public static readonly string OWNER = "OWNER";
-        public static readonly string ITEM = "ITEM";
-        public static readonly string WEAPON = "WEAPON";
-        
-        public static readonly string LOCAL_POS = "LOCAL_POS";
-        public static readonly string GLOBAL_POS = "GLOBAL_POS";
-        public static readonly string COLLIDER = "COLLIDER";
-        /// <summary>
-        /// the number of overlapped colliders
-        /// </summary>
-        public static readonly string COL_COUNT = "COL_COUNT";
-        public static readonly string TARGETS = "TARGETS";
-        public static readonly string TARGET_COUNT = "TARGET_COUNT";
-        // public static readonly string
-            
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7f8fb4c267156b66dcbc8f0443106a9cf9b9577684f5dbe8215d8f9b5a47642
+size 779

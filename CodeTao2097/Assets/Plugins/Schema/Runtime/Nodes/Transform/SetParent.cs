@@ -1,27 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Transform"),
-     Description("Set the parent of a Transform")]
-    public class SetParent : Action
-    {
-        [Tooltip("Transform to operate on")] public ComponentSelector<Transform> transform;
-
-        [Tooltip("Transform to use as parent")]
-        public ComponentSelector<Transform> parentTransform;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Transform t1 = agent.GetComponent(transform);
-            Transform t2 = agent.GetComponent(parentTransform);
-
-            if (t1 == null || t2 == null)
-                return NodeStatus.Failure;
-
-            t1.SetParent(t2);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:06cb4044f0fc79b30b9e20eb4e8f06d2e0271067c90694104f97f24b371cd364
+size 858

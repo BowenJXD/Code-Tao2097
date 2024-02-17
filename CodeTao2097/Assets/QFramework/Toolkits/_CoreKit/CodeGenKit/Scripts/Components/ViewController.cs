@@ -1,30 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2017 xiaojun
- * Copyright (c) 2015 ~ 2023 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-
-using UnityEngine;
-
-namespace QFramework
-{
-    public class ViewController : MonoBehaviour, IBindGroup
-    {
-        [HideInInspector] public string Namespace = string.Empty;
-
-        [HideInInspector] public string ScriptName;
-
-        [HideInInspector] public string ScriptsFolder = string.Empty;
-
-        [HideInInspector] public bool GeneratePrefab = false;
-
-
-        [HideInInspector] public string PrefabFolder = string.Empty;
-
-        public string TemplateName => nameof(ViewController);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c213eea57a0b119f09e02be9854f0501462012b547a4c06227dda9977fd1b06
+size 872

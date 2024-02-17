@@ -1,10 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using QFramework.Pro;
-
-[CreateAssetMenu]
-public class #SCRIPTNAME# : IMGUIGraph 
-{ 
-	#NOTRIM#
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7445a8e94cdb3bcd9199d2fd4809582be20808ad760c21444cc301776b6c0eb0
+size 183

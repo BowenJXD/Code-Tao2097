@@ -1,28 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2019 Gwaredd Mountain UNDER MIT License
- * Copyright (c) 2022 liangxiegame UNDER MIT License
- *
- * https://github.com/gwaredd/UnityMarkdownViewer
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-#if UNITY_EDITOR
-using Markdig.Renderers;
-using Markdig.Syntax.Inlines;
-
-namespace QFramework
-{
-    internal class MDRendererInlineCode : MarkdownObjectRenderer<MDRendererMarkdown, CodeInline>
-    {
-        protected override void Write(MDRendererMarkdown renderer, CodeInline node)
-        {
-            var prevStyle = renderer.Style;
-            renderer.Style.Fixed = true;
-            renderer.Text(node.Content);
-            renderer.Style = prevStyle;
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6eee1f8db980c5a7beee4f3f0f52b6fccb2ad7c1e15040a3a27dba674cbebca
+size 919

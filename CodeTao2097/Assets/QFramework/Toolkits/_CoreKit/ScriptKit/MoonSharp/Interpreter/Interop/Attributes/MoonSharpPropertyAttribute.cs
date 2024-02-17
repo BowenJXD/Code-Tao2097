@@ -1,36 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter
-{
-
-	/// <summary>
-	/// Marks a property as a configruation property
-	/// </summary>
-	[AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = true)]
-	public sealed class MoonSharpPropertyAttribute : Attribute
-	{
-		/// <summary>
-		/// The metamethod name (like '__div', '__ipairs', etc.)
-		/// </summary>
-		public string Name { get; private set; }
-
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MoonSharpPropertyAttribute"/> class.
-		/// </summary>
-		public MoonSharpPropertyAttribute()
-		{
-
-		}
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MoonSharpPropertyAttribute"/> class.
-		/// </summary>
-		/// <param name="name">The name for this property</param>
-		public MoonSharpPropertyAttribute(string name)
-		{
-			Name = name;
-		}
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:56851b458e2a8b986beb2e981217967b14cf2d24dda64e076d7ed4f51628a6cf
+size 884

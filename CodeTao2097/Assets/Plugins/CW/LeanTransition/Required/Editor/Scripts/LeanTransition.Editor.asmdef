@@ -1,18 +1,3 @@
-{
-    "name": "LeanTransition.Editor",
-    "references": [
-        "GUID:82c7e6eac44d7e048b22ad98800dcfc7",
-        "GUID:637dfb2b87b2cf0499a8da5b0b91da54"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6bf5e129abe81626dc21d2dd74bffd677e966651004eff735bc0c2f76b14bc3
+size 453

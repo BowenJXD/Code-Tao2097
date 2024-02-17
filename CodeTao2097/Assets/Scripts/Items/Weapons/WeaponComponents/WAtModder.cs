@@ -1,29 +1,3 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Events;
-
-namespace CodeTao
-{
-    /// <summary>
-    /// 武器属性修改器，函数需要手动调用。
-    /// </summary>
-    public class WAtModder : MonoBehaviour
-    {
-        public EWAt at;
-        public float modValue;
-        public EModifierType modType;
-        public RepetitionBehavior repetitionBehavior;
-        
-        public Weapon source;
-
-        public void AddMod()
-        {
-            source.GetWAt(at).AddModifier(modValue, modType, name, repetitionBehavior);
-        }
-
-        public void RemoveMod()
-        {
-            source.GetWAt(at).RemoveModifier(modType, name);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e07b6b673b40b4e2ee3d751b7098e54d815c06645ceae289f6f08c2740834f5c
+size 702

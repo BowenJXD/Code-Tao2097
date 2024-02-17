@@ -1,21 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Get the smallest integer greater than or equal to a float")]
-    public class CeilToInt : Action
-    {
-        [Tooltip("Float to ceil")] public BlackboardEntrySelector<float> value;
-
-        [Tooltip("Selector to store the ceiled value in"), WriteOnly] 
-        public BlackboardEntrySelector<int> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.CeilToInt(value.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a02fc4927ceb1b96b97e34a27bf1bf58cd6b4ee641967c6e22aa6d8072cb9db
+size 675

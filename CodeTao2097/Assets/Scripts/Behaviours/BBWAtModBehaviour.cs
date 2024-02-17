@@ -1,29 +1,3 @@
-﻿namespace CodeTao
-{
-    public class BBWAtModBehaviour : BehaviourNode
-    {
-        public string key;
-        public EWAt at;
-        public float modValueMultiplier;
-        public EModifierType modType;
-        public RepetitionBehavior repetitionBehavior = RepetitionBehavior.Overwrite;
-        public IWAtSource source;
-
-        public override void Init(BehaviourSequence newSequence)
-        {
-            base.Init(newSequence);
-            source ??= GetComponentInParent<IWAtSource>();
-        }
-
-        protected override void OnExecute()
-        {
-            base.OnExecute();
-            float value = modValueMultiplier;
-            if (sequence.TryGet(key, out float bbValue))
-            {
-                value *= bbValue;
-            }
-            source.GetWAt(at).AddModifier(value, modType, name, repetitionBehavior);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff10720b59516c575e721d359eee941928e25f6eaac1f6c875969c9ba6a1568f
+size 890

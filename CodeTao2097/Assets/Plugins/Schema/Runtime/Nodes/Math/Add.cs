@@ -1,21 +1,3 @@
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math")]
-    public class Add : Action
-    {
-        public BlackboardEntrySelector<float> valueOne;
-        public BlackboardEntrySelector<float> valueTwo;
-        [WriteOnly] public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            float v1 = valueOne.value;
-            float v2 = valueTwo.value;
-            float r = v1 + v2;
-
-            result.value = r;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:756a8785850c68a5ea4c379aa62ee87b1c73daf8428034e8716b13498c4aa42e
+size 627

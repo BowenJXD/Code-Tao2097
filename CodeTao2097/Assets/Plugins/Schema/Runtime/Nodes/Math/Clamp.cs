@@ -1,23 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Clamp a float to be between two other float values")]
-    public class Clamp : Action
-    {
-        [Tooltip("Float to clamp")] public BlackboardEntrySelector<float> value;
-        [Tooltip("Lower bound for the float")] public BlackboardEntrySelector<float> lowerBound;
-        [Tooltip("Upper bound for the float")] public BlackboardEntrySelector<float> upperBound;
-
-        [Tooltip("The clamped float"), WriteOnly] 
-        public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.Clamp(value.value, lowerBound.value, upperBound.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53450d36b1d925267cf7b5eeebb21968f9fa9375e48a9d7267df90980baa3be8
+size 875

@@ -1,15 +1,3 @@
-namespace ICSharpCode.SharpZipLib.Core
-{
-	/// <summary>
-	/// Scanning filters support filtering of names.
-	/// </summary>
-	public interface IScanFilter
-	{
-		/// <summary>
-		/// Test a name to see if it 'matches' the filter.
-		/// </summary>
-		/// <param name="name">The name to test.</param>
-		/// <returns>Returns true if the name matches the filter, false if it does not match.</returns>
-		bool IsMatch(string name);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f946c9cf99ebb7215a5333dd11826d872e8d7c481c14ff390874e3006025f68d
+size 424

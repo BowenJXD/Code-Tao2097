@@ -1,17 +1,3 @@
-namespace ICSharpCode.SharpZipLib.Zip.Compression
-{
-	/// <summary>
-	/// This class stores the pending output of the Deflater.
-	/// 
-	/// author of the original java version : Jochen Hoenicke
-	/// </summary>
-	public class DeflaterPending : PendingBuffer
-	{
-		/// <summary>
-		/// Construct instance with default buffer size
-		/// </summary>
-		public DeflaterPending() : base(DeflaterConstants.PENDING_BUF_SIZE)
-		{
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:621668f47056b7a115a2edda2e06d15d62d163cd61d6e18588162a48c2f96949
+size 422

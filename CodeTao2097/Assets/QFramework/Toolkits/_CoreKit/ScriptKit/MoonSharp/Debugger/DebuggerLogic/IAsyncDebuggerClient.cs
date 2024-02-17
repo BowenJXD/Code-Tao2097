@@ -1,23 +1,3 @@
-﻿#if (!PCL) && ((!UNITY_5) || UNITY_STANDALONE)
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MoonSharp.Interpreter;
-using MoonSharp.Interpreter.Debugging;
-
-namespace MoonSharp.VsCodeDebugger.DebuggerLogic
-{
-	internal interface IAsyncDebuggerClient
-	{
-		void SendStopEvent();
-		void OnWatchesUpdated(WatchType watchType);
-		void OnSourceCodeChanged(int sourceID);
-		void OnExecutionEnded();
-		void OnException(ScriptRuntimeException ex);
-		void Unbind();
-	}
-}
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:8674a9bd78ba831087809590298069cf1c0fc2c8e8873798fbd9c35cb00c62a9
+size 538

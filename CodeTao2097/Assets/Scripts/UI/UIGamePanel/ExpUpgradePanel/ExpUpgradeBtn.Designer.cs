@@ -1,27 +1,3 @@
-﻿/****************************************************************************
- * 2023.12 AARON
- ****************************************************************************/
-
-using UnityEngine;
-using UnityEngine.UI;
-using QFramework;
-
-namespace CodeTao
-{
-	public partial class ExpUpgradeBtn
-	{
-		[SerializeField] public UnityEngine.UI.Button UpgradeBtn;
-		[SerializeField] public TMPro.TextMeshProUGUI BtnText;
-
-		public void Clear()
-		{
-			UpgradeBtn = null;
-			BtnText = null;
-		}
-
-		public override string ComponentName
-		{
-			get { return "ExpUpgradeBtn";}
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:18629bc9d1127b7531a47b6783c8c2ae093a96ef1ad398c6795f62d5d70bb93d
+size 599

@@ -1,25 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using QFramework;
-using UnityEngine;
-
-
-namespace CodeTao 
-{
-    /// <summary>
-    /// 五行元素，包括None和All
-    /// </summary>
-    [Serializable]
-    public enum ElementType
-    {
-        None,
-        Metal,
-        Wood,
-        Water,
-        Fire,
-        Earth,
-        All
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:64fdbad06775f6880412a66b51190497647ee2094996beca455fa6769917551a
+size 397

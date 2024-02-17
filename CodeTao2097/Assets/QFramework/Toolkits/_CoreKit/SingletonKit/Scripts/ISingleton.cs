@@ -1,21 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 - 2022 liangxiegame UNDER MIT License
- * 
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    /// <summary>
-    /// 单例接口
-    /// </summary>
-    public interface ISingleton
-    {
-        /// <summary>
-        /// 单例初始化(继承当前接口的类都需要实现该方法)
-        /// </summary>
-        void OnSingletonInit();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d68136c71db3c9dbd22d167422d6907cb89789bfd0649812d05ff42271390e0
+size 618

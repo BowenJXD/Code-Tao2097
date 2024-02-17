@@ -1,21 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.UIElements;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine.UIElements;
-using GraphProcessor;
-
-[NodeCustomEditor(typeof(NODE_TYPE))]
-public class #SCRIPTNAME# : BaseNodeView
-{
-	public override void Enable()
-	{
-		var node = nodeTarget as NODE_TYPE;
-
-        // Create your fields using node's variables and add them to the controlsContainer
-
-		controlsContainer.Add(new Label("Hello World !"));
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:be84d7b9000421de4521aed5735af53d17f0a92c3cc24bc60a6193a2a2f2d351
+size 526

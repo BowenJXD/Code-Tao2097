@@ -1,21 +1,3 @@
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math")]
-    public class Subtract : Action
-    {
-        public BlackboardEntrySelector<float> valueOne;
-        public BlackboardEntrySelector<float> valueTwo;
-        [WriteOnly] public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            float v1 = valueOne.value;
-            float v2 = valueTwo.value;
-            float r = v1 - v2;
-
-            result.value = r;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a3a936857bd446dfbe526137b5acbdb74104a7e9187276f808e5f2c47785702
+size 632

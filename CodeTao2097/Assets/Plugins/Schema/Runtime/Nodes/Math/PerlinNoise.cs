@@ -1,21 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Generate perlin noise from a Vector2 location")]
-    public class PerlinNoise : Action
-    {
-        [Tooltip("Location of sample point")] public BlackboardEntrySelector<Vector2> location;
-
-        [Tooltip("Sampled perlin value"), WriteOnly] 
-        public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.PerlinNoise(location.value.x, location.value.y);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f15d5c3b88d8c110d272a1a05f0b4d0f4ab2ca03949561b8c40eba8031e86c5
+size 691

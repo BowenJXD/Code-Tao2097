@@ -1,19 +1,3 @@
-﻿
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// Class wrapping a request to yield a coroutine
-	/// </summary>
-	public class YieldRequest
-	{
-		/// <summary>
-		/// The return values of the coroutine
-		/// </summary>
-		public DynValue[] ReturnValues;
-
-		/// <summary>
-		/// Gets or sets a value indicating whether this <see cref="YieldRequest"/> is a forced yield.
-		/// </summary>
-		public bool Forced { get; internal set; }
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4568d68b9b1ff81df5070616b1555cafcc11eba6fadb09722ae7761fcddb92c
+size 457

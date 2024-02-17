@@ -1,18 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor.UIElements;
-using UnityEngine.UIElements;
-
-namespace AYellowpaper.Editor
-{
-	internal class Tab : Toggle
-	{
-		public Tab(string text) : base()
-		{
-			base.text = text;
-			RemoveFromClassList(Toggle.ussClassName);
-			AddToClassList(ussClassName);
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:309158fa81adbc8ac4c9577d3af199c48811ee377f976ff18bda5731954e8146
+size 370

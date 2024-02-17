@@ -1,31 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 - 2022 liangxiegame UNDER MIT License
- * 
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-#if UNITY_EDITOR
-using System;
-using UnityEditor;
-
-namespace QFramework
-{
-    public interface IPackageKitView
-    {
-        EditorWindow EditorWindow { get; set; }
-
-        void Init();
-        void OnShow();
-
-        void OnUpdate();
-        void OnGUI();
-        void OnHide();
-
-        void OnWindowGUIEnd();
-
-        void OnDispose();
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:02b02e06ce1aa6eb4d4afca5c527660c37729ba2c3e0dc78991ce79e6b437d88
+size 721

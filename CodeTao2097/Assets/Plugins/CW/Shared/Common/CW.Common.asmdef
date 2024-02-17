@@ -1,34 +1,3 @@
-{
-    "name": "CW.Common",
-    "references": [
-        "Unity.InputSystem",
-        "Unity.RenderPipelines.Core.Runtime",
-        "Unity.RenderPipelines.HighDefinition.Runtime",
-        "JBooth.BetterShaders.Editor"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "com.jbooth.better-shaders",
-            "expression": "",
-            "define": "__BETTERSHADERS__"
-        },
-        {
-            "name": "com.unity.render-pipelines.high-definition",
-            "expression": "",
-            "define": "__HDRP__"
-        },
-        {
-            "name": "com.unity.inputsystem",
-            "expression": "",
-            "define": "__INPUTSYSTEM__"
-        }
-    ],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:62edea9f631bf830e383a138a4f2b754e76fdd14181965207ae2f802bfef6fd2
+size 923

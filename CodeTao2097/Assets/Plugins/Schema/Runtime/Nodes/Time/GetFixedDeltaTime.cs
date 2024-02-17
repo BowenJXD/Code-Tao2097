@@ -1,18 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Time"), LightIcon("Nodes/Time")]
-    public class GetFixedDeltaTime : Action
-    {
-        [Tooltip("The blackboard variable to store fixedDeltaTime in"), WriteOnly] 
-        private BlackboardEntrySelector<float> fixedDeltaTime;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            fixedDeltaTime.value = Time.fixedDeltaTime;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:16aec825400a9cc2b7e4990c30034d1dd3092ccf0d819e18b7d07ad3e06ee355
+size 525

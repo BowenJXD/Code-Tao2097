@@ -1,23 +1,3 @@
-﻿using QFramework;
-
-namespace CodeTao
-{
-    public class SoulHarvestingBuff : DamageTagBuff
-    {
-        /// <summary>
-        /// 0 - 100
-        /// </summary>
-        public float triggerChance = 20;
-
-        protected override Damage ProcessDamage(Damage damage)
-        {
-            if (RandomUtil.Rand100(triggerChance))
-            {
-                ExpBall expBall = ExpGenerator.Instance.Get().Position(transform.position);
-                expBall.EXPValue.Value = 1;
-                expBall.Init();
-            }
-            return base.ProcessDamage(damage);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5466bf08c0283f8dc74ebc4c5ca6d04f522a47dca0716ed7322ee9aa063a7c3e
+size 613

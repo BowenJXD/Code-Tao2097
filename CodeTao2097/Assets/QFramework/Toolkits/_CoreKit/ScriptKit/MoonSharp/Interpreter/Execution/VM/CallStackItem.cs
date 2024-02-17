@@ -1,25 +1,3 @@
-﻿using MoonSharp.Interpreter.Debugging;
-
-namespace MoonSharp.Interpreter.Execution.VM
-{
-	internal class CallStackItem
-	{
-		public int Debug_EntryPoint;
-		public SymbolRef[] Debug_Symbols;
-
-		public SourceRef CallingSourceRef;
-
-		public CallbackFunction ClrFunction;
-		public CallbackFunction Continuation;
-		public CallbackFunction ErrorHandler;
-		public DynValue ErrorHandlerBeforeUnwind;
-
-		public int BasePointer;
-		public int ReturnAddress;
-		public DynValue[] LocalScope;
-		public ClosureContext ClosureScope;
-
-		public CallStackItemFlags Flags;
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:07ce5e560fe452ff26b2ba3c5bd5bbbc98013e361174741de45814d66e48732d
+size 584

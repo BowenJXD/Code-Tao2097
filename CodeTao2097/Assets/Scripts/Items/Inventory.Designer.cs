@@ -1,16 +1,3 @@
-// Generate Id:ea8024a0-09ac-4c2a-b721-e57b0ea20334
-using UnityEngine;
-
-namespace CodeTao
-{
-	public partial class Inventory
-	{
-
-		public Transform Weapons;
-
-		public Transform Artefacts;
-
-		public Transform Blessings;
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c5363c24f5d493a2f8d96ecdab083f9f0f6b344356801d5246f1fc821c3d5eb
+size 240

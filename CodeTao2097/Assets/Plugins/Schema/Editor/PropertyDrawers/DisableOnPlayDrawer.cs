@@ -1,13 +1,3 @@
-using UnityEditor;
-using UnityEngine;
-
-[CustomPropertyDrawer(typeof(DisableOnPlayAttribute))]
-public class DisableOnPlayDrawer : PropertyDrawer
-{
-    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-    {
-        EditorGUI.BeginDisabledGroup(Application.isPlaying);
-        EditorGUI.PropertyField(position, property, label, true);
-        EditorGUI.EndDisabledGroup();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6db1feff842781f29d0d9754bc457bf82ac1935117fc4b35463e33b9f21d30a3
+size 429

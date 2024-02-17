@@ -1,34 +1,3 @@
-﻿using System.Linq;
-using QFramework;
-
-namespace CodeTao
-{
-    public class TurbulenceBlessing : Blessing
-    {
-        MoveController moveController;
-        public float totalDistance = 2;
-        public UnitController unit;
-        private Damager damager;
-
-        public override void Init()
-        {
-            base.Init();
-            moveController = Container.GetComp<MoveController>();
-            AttributeController atController = Container.GetComp<AttributeController>();
-            damager = this.GetComponentInDescendants<Damager>();
-            unit = this.GetComponentInDescendants<UnitController>(true);
-            atController.As<IWAtSource>().Transmit(GetComponentsInChildren<IWAtReceiver>(true));
-            UnitManager.Instance.Register(unit);
-            
-            moveController.RegisterDistanceEvent(totalDistance, DistanceEvent);
-        }
-        
-        void DistanceEvent()
-        {
-            UnitController newUnit = UnitManager.Instance.Get(unit).Position(moveController.transform.position);
-            newUnit.Link.AddComponent(damager);
-            newUnit.Init();
-            moveController.RegisterDistanceEvent(totalDistance, DistanceEvent);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41390a1f47d5bfe99c90d999066c301527828c1f14a982bf3ea5e8aa07a4108a
+size 1243

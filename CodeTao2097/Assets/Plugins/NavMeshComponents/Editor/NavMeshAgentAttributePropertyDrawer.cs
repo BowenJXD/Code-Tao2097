@@ -1,21 +1,3 @@
-using UnityEditor;
-using UnityEngine;
-using NavMeshPlus.Extensions;
-using NavMeshPlus.Editors.Components;
-
-//***********************************************************************************
-// Contributed by author jl-randazzo github.com/jl-randazzo
-//***********************************************************************************
-namespace NavMeshPlus.Editors.Extensions
-{
-    [CustomPropertyDrawer(typeof(NavMeshAgentAttribute))]
-    public class NavMeshAgentAttributePropertyDrawer : PropertyDrawer
-    {
-        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-        {
-            NavMeshComponentsGUIUtility.AgentTypePopup(position, label.text, property);
-        }
-
-        public override float GetPropertyHeight(SerializedProperty property, GUIContent label) => NavMeshComponentsGUIUtility.IsAgentSelectionValid(property) ? 20 : 40;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb6a87a8ceb2bb32e74d0aae4797286d2e6a854833a864c150e8fb5dae2bbf9b
+size 899

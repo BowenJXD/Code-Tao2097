@@ -1,18 +1,3 @@
-﻿using System;
-using QFramework;
-
-namespace CodeTao
-{
-    /// <summary>
-    /// 祝福母类，用于实现祝福的基本功能。祝福无法升级。通过开宝箱获得。
-    /// blessing is a special item that can't be upgraded. It can only be obtained by opening a chest.
-    /// </summary>
-    public class Blessing : Item
-    {
-        public override void OnRemove()
-        {
-            base.OnRemove();
-            enabled = false;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a22ccf63b8c6af154d69fabac3755cda97a6d76df6216f8acf99a4e177434f8
+size 482

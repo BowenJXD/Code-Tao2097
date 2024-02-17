@@ -1,14 +1,3 @@
-{
-  "AssemblyName": "QFramework.CoreKit",
-  "DisplayName": "用户手册",
-  "DisplayNameCN": "用户手册",
-  "DisplayNameEN": "User Manual(InProgress)",
-  "TypeName": "QFramework.Guideline",
-  "InitFunc": "Init",
-  "OnShowFunc": "OnShow",
-  "OnHideFunc": "OnHide",
-  "OnGUIFunc": "OnGUI",
-  "DisposeFunc": "OnDestroy",
-  "GroupName": "QFramework",
-  "RenderOrder": "-1"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:54ef0bf90be6883e9bb122e9a995b8a2c3cf0857303d7ae7851a9fc9617214bf
+size 387

@@ -1,26 +1,3 @@
-using System.Collections.Generic;
-using System.Collections;
-using System;
-
-namespace GraphProcessor
-{
-	public static class AppDomainExtension
-	{
-		public static IEnumerable< Type >	GetAllTypes(this AppDomain domain)
-		{
-            foreach (var assembly in domain.GetAssemblies())
-            {
-				Type[] types = {};
-				
-                try {
-					types = assembly.GetTypes();
-				} catch {
-					//just ignore it ...
-				}
-
-				foreach (var type in types)
-					yield return type;
-			}
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d0734b63c1869e22abc55712a4cabe6f6180b5000b29e896a3c333c0f5709d5
+size 496

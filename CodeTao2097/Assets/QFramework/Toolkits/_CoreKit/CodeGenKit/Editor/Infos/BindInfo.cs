@@ -1,35 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-#if UNITY_EDITOR
-using System;
-
-namespace QFramework
-{
-    /// <summary>
-    /// 存储一些Mark相关的信息
-    /// </summary>
-    [Serializable]
-    public class BindInfo
-    {
-        public string TypeName;
-
-        public string PathToRoot;
-
-        public IBindOld BindScript;
-        
-        public string MemberName;
-    }
-
-    [Serializable]
-    public class BindInfoGroup
-    {
-        
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:5657ec46ef062e30477c61d21ad1b3ac7f82142b2fcea4349617076564fc6928
+size 754

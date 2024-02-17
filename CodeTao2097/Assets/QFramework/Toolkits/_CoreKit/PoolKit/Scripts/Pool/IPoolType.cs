@@ -1,18 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 - 2022 liangxiegame UNDER MIT License
- * 
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    /// <summary>
-    /// I cache type.
-    /// </summary>
-    public interface IPoolType
-    {
-        void Recycle2Cache();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c501a9187fa4dffb4870849f89c27deb648c16c0ec0467cd4c64c43ef92efbd
+size 493

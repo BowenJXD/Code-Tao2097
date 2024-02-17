@@ -1,16 +1,3 @@
-{
-    "name": "QFramework.CoreKitPro",
-    "references": [
-        "QFramework.CoreKit",
-        "QFramework"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e01bf7491abb24ba3368481cdff7927255652175cdcd53ca45a08fc05fc4356
+size 385

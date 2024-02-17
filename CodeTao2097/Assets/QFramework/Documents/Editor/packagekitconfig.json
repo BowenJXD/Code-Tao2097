@@ -1,12 +1,3 @@
-{
-    "AssemblyName": "Documents.Editor",
-    "DisplayName": "Documents 文档",
-    "DisplayNameCN": "文档",
-    "DisplayNameEN": "Documents",
-    "TypeName": "QFramework.Pro.Documents",
-    "InitFunc": "Init",
-    "OnGUIFunc": "OnGUI",
-    "DisposeFunc": "OnDestroy",
-    "GroupName": "Pro",
-    "RenderOrder": "-1"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d4ae75c07068a2a78e072ba8263108522df01619a4395ddb45822c8c52469c2
+size 321

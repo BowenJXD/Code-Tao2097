@@ -1,36 +1,3 @@
-using Schema.Builtin.Nodes;
-using UnityEditor;
-
-namespace SchemaEditor.Editors.Nodes
-{
-    [CustomEditor(typeof(PlaySound)), CanEditMultipleObjects]
-    public class PlaySoundEditor : Editor
-    {
-        private SerializedProperty clip;
-        private SerializedProperty isOneShot;
-        private SerializedProperty volume;
-        private SerializedProperty waitForCompletion;
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-
-            isOneShot = serializedObject.FindProperty("isOneShot");
-            clip = serializedObject.FindProperty("clip");
-            volume = serializedObject.FindProperty("volume");
-            waitForCompletion = serializedObject.FindProperty("waitForCompletion");
-
-            EditorGUILayout.PropertyField(isOneShot);
-
-            if (isOneShot.boolValue)
-            {
-                EditorGUILayout.PropertyField(clip);
-                EditorGUILayout.PropertyField(volume);
-            }
-
-            EditorGUILayout.PropertyField(waitForCompletion);
-
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa974a5580254fadde17839ee9981c16c64a5f8bfe922cdf3d6145473fab11f0
+size 1151

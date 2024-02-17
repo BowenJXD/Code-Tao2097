@@ -1,21 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Get e raised to a specified power")]
-    public class Exp : Action
-    {
-        [Tooltip("Power to raise e to")] public BlackboardEntrySelector<float> pow;
-
-        [Tooltip("Selector to store the cosine in"), WriteOnly] 
-        public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.Exp(pow.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9615ccdf98a6c355e0377424a8afde0b061519a671e61fa12bd2d789c092e99
+size 637

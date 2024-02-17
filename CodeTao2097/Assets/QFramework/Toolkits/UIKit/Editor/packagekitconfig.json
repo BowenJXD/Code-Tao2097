@@ -1,12 +1,3 @@
-{
-    "AssemblyName": "UIKit.Editor",
-    "DisplayName": "UIKit 设置",
-    "DisplayNameCN": "UIKit 设置",
-    "DisplayNameEN": "UIKit Settings(OnlyCN)",
-    "TypeName": "QFramework.UIKitSettingView",
-    "InitFunc": "Init",
-    "OnGUIFunc": "OnGUI",
-    "DisposeFunc": "OnDestroy",
-    "GroupName": "QFramework",
-    "RenderOrder": "3"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3332b1942250741eb5b184ef6049efa367442fbefded90e1143a8caba5062d97
+size 341

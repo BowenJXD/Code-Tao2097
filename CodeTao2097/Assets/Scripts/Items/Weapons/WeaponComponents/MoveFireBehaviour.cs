@@ -1,19 +1,3 @@
-﻿namespace CodeTao
-{
-    /// <summary>
-    /// 每走一段路发动一次冲击。
-    /// </summary>
-    public class MoveFireBehaviour : WeaponBehaviour
-    {
-        private MoveController moveController;
-        public float totalDistance;
-        
-        public override void Init(BehaviourSequence newSequence)
-        {
-            base.Init(newSequence);
-            UnNext();
-            moveController = weapon.Container.GetComp<MoveController>();
-            moveController.RegisterDistanceEvent(totalDistance, Next);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e6ff049997f90b7556c4820b700be07959f2dfdf82b1205ac466559935e695d
+size 550

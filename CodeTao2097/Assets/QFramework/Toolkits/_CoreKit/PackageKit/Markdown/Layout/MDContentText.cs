@@ -1,24 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2019 Gwaredd Mountain UNDER MIT License
- * Copyright (c) 2022 liangxiegame UNDER MIT License
- *
- * https://github.com/gwaredd/UnityMarkdownViewer
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-#if UNITY_EDITOR
-using UnityEngine;
-
-namespace QFramework
-{
-    internal class MDContentText : MDContent
-    {
-        public MDContentText(GUIContent payload, MDStyle style, string link)
-            : base(payload, style, link)
-        {
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:670561d9659001c730cc39537900afa42d3ba1e07c143eb7385fd45fcaba2e86
+size 699

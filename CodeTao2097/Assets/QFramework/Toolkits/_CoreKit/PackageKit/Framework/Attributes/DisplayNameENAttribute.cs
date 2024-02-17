@@ -1,22 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 - 2022 liangxiegame UNDER MIT License
- * 
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-using System;
-
-namespace QFramework
-{
-    public class DisplayNameENAttribute : Attribute
-    {
-        public string DisplayName { get; }
-
-        public DisplayNameENAttribute(string displayName)
-        {
-            DisplayName = displayName;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:832f9386419e83dff8d51ebe8b02caf3be2f6891adcfeea8b5b65e84c41ca682
+size 601

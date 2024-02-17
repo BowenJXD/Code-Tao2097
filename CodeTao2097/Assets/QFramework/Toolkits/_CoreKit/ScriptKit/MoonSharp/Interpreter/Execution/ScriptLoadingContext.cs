@@ -1,21 +1,3 @@
-﻿using MoonSharp.Interpreter.Debugging;
-using MoonSharp.Interpreter.Tree;
-
-namespace MoonSharp.Interpreter.Execution
-{
-	class ScriptLoadingContext
-	{
-		public Script Script { get; private set; }
-		public BuildTimeScope Scope { get; set; }
-		public SourceCode Source { get; set; }
-		public bool Anonymous { get; set; }
-		public bool IsDynamicExpression { get; set; }
-		public Lexer Lexer { get; set; }
-
-		public ScriptLoadingContext(Script s)
-		{
-			Script = s;
-		}
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:94768d93169bac13402cce9ca25ae21a68d97addca075790ce035c23773cd144
+size 494

@@ -1,18 +1,3 @@
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Sequence"), LightIcon("Light/Sequence"),
-     Description("Executes a series of nodes one after another")]
-    public class Sequence : Flow
-    {
-        public override int Tick(object nodeMemory, NodeStatus status, int index)
-        {
-            if (index == -1 && children.Length > 0)
-                return 0;
-
-            if (index + 1 > children.Length - 1 || status == NodeStatus.Failure)
-                return -1;
-
-            return index + 1;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e58a21904676fd227397940be425b7da3405d8684ac4482d2a6cc8debe7cd75
+size 546

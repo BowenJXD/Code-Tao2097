@@ -1,30 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [Name("Set Animator IK Position Weight"), DarkIcon("d_Animator Icon", true), LightIcon("Animator Icon", true),
-     Category("Animator")]
-    public class SetAnimatorIKPositionWeight : Action
-    {
-        public ComponentSelector<Animator> animator;
-        public AvatarIKGoal goal;
-        public AvatarIKHint hint;
-        public bool isHint;
-        public BlackboardEntrySelector<float> weight;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Animator a = agent.GetComponent(animator);
-
-            if (a == null)
-                return NodeStatus.Failure;
-
-            if (isHint)
-                a.SetIKHintPositionWeight(hint, weight.value);
-            else
-                a.SetIKPositionWeight(goal, weight.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:49c951d670d9a68f894643b29eb18876cbcfb5c946f429028e06bf137d9dae65
+size 923

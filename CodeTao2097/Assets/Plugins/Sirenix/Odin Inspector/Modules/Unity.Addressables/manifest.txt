@@ -1,21 +1,3 @@
-ManifestVersion: 1
-ModuleID: Unity.Addressables
-ModuleVersion: 1.1.0.4
-ModuleFiles:
-  AddressablesInspectors.cs
-  AddressablesInspectors.cs.meta
-  Sirenix.OdinInspector.Modules.Unity.Addressables.asmdef
-  Sirenix.OdinInspector.Modules.Unity.Addressables.asmdef.meta
-  Validators.meta
-  Validators/AssetLabelReferenceValidator.cs
-  Validators/AssetLabelReferenceValidator.cs.meta
-  Validators/AssetReferenceValidator.cs
-  Validators/AssetReferenceValidator.cs.meta
-  Validators/CheckDuplicateBundleDependenciesValidator.cs
-  Validators/CheckDuplicateBundleDependenciesValidator.cs.meta
-  Validators/CheckResourcesToAddressableDuplicateDependenciesValidator.cs
-  Validators/CheckResourcesToAddressableDuplicateDependenciesValidator.cs.meta
-  Validators/DisallowAddressableSubAssetFieldAttributeValidator.cs
-  Validators/DisallowAddressableSubAssetFieldAttributeValidator.cs.meta
-  Validators/MissingAddressableGroupReferenceValidator.cs
-  Validators/MissingAddressableGroupReferenceValidator.cs.meta
+version https://git-lfs.github.com/spec/v1
+oid sha256:61e700c538f84d578c102d3305f3bc3fcf63039db6833c465909a2a6c1184429
+size 1019

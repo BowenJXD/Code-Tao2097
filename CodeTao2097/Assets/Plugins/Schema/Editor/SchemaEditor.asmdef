@@ -1,18 +1,3 @@
-{
-  "name": "SchemaEditor",
-  "rootNamespace": "",
-  "references": [
-    "GUID:42896ccc13d809e40b8fda7704d79c89"
-  ],
-  "includePlatforms": [
-    "Editor"
-  ],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:62e5f98387de212b4f760beb7ffe902a8a5c04136446abec61c3db09abd11341
+size 401

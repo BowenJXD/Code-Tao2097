@@ -1,24 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-using System;
-
-namespace QFramework
-{
-    public interface ICodeWriter : IDisposable
-    {
-        /// <summary>
-        /// 缩进数量
-        /// </summary>
-        int IndentCount { get; set; }
-
-
-        void WriteFormatLine(string format, params object[] args);
-        void WriteLine(string code = null);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5490d5b4ef1eae7313b5acf2acddd45b7f958170201100461389b70b229be3a9
+size 657

@@ -1,15 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Selector"), LightIcon("Nodes/Selector")]
-    public class SelectRandom : Flow
-    {
-        public override int Tick(object nodeMemory, NodeStatus status, int index)
-        {
-            if (index > -1) return -1;
-
-            return Random.Range(0, children.Length);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3e2de63267b5c0ce4c52428190682781e35a32fb16c4e81185bba21e943cd1a
+size 376

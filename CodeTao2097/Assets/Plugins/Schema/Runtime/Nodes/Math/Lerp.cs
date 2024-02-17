@@ -1,27 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Linearly interpolate between two floats by a time parameter")]
-    public class Lerp : Action
-    {
-        [Tooltip("Current float")] public BlackboardEntrySelector<float> current;
-        [Tooltip("Target float")] public BlackboardEntrySelector<float> target;
-        [Tooltip("Parameter t to lerp by")] public BlackboardEntrySelector<float> t;
-        [Tooltip("Do not limit t")] public bool unclamped;
-
-        [Tooltip("The lerped float"), WriteOnly] 
-        public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            if (unclamped)
-                result.value = Mathf.LerpUnclamped(current.value, target.value, t.value);
-            else
-                result.value = Mathf.Lerp(current.value, target.value, t.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b4054490ec53c3d64822f6fd1ec5416ac99de591afb11ec37d7737bc877c4a8
+size 1043

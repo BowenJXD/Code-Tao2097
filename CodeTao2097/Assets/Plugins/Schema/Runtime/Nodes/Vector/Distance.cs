@@ -1,28 +1,3 @@
-﻿using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true),
-     Description("Find the distance between two Vector values"), Category("Vector")]
-    public class Distance : Action
-    {
-        [Tooltip("Vector A")] public BlackboardEntrySelector<Vector3> vectorOne;
-        [Tooltip("Vector B")] public BlackboardEntrySelector<Vector3> vectorTwo;
-
-        [Tooltip("Blackboard variable to store the distance in"), WriteOnly] 
-        public BlackboardEntrySelector<float> distance;
-
-        [Tooltip("Whether to get distance squared, which avoids the expensive square root operation")]
-        public bool squared;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Vector3 diff = vectorOne.value - vectorTwo.value;
-            float dist = squared ? diff.sqrMagnitude : diff.magnitude;
-
-            distance.value = dist;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f781fbd94fa964c387d50723b700f09c6ce14c7b609dec169cef08be5d18c53f
+size 1030

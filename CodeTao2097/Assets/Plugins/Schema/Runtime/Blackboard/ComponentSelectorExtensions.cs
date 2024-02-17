@@ -1,31 +1,3 @@
-using UnityEngine;
-
-namespace Schema
-{
-    public static class ComponentSelectorExtensions
-    {
-        /// <summary>
-        ///     Get component of type using a ComponentSelector
-        /// </summary>
-        /// <typeparam name="T">Type of component to retrieve. Must match type of selector</typeparam>
-        /// <param name="component">Component to retreive the other component from</param>
-        /// <param name="selector">Selector to use to get component</param>
-        /// <returns>Component retrived by the method</returns>
-        public static T GetComponent<T>(this Component component, ComponentSelector<T> selector) where T : Component
-        {
-            return selector.GetValue(component);
-        }
-
-        /// <summary>
-        ///     Get component of type using a ComponentSelector
-        /// </summary>
-        /// <typeparam name="T">Type of component to retrieve. Must match type of selector</typeparam>
-        /// <param name="gameObject">GameObject to retreive the other component from</param>
-        /// <param name="selector">Selector to use to get component</param>
-        /// <returns>Component retrived by the method</returns>
-        public static T GetComponent<T>(this GameObject gameObject, ComponentSelector<T> selector) where T : Component
-        {
-            return selector.GetValue(gameObject);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b5c877be39da34410c8759d7a979e2f56fd4efd6830e34f91c479bd0c9ab7b7
+size 1398

@@ -1,23 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Transform"),
-     Description("Set a Transform to be first in its local transform list")]
-    public class SetAsFirstSibling : Action
-    {
-        [Tooltip("Transform to operate on")] public ComponentSelector<Transform> transform;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Transform t = agent.GetComponent(transform);
-
-            if (t == null)
-                return NodeStatus.Failure;
-
-            t.SetAsFirstSibling();
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f23f64c8b050d621281dba6e894efe2ba8af527f0d0498e386ba401143339cd2
+size 703

@@ -1,2 +1,3 @@
-Items/WeaponAttribute
-Items/WeaponUpgrade
+version https://git-lfs.github.com/spec/v1
+oid sha256:046c1d88f7f34a84ccebaec304973132bd1da241dc0fc8f3fce2cb0c9b998c74
+size 92

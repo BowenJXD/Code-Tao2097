@@ -1,29 +1,3 @@
-{
-    "name": "Sirenix.OdinInspector.Modules.Unity.Addressables",
-    "references": [
-        "Unity.Addressables",
-        "Unity.Addressables.Editor",
-        "Sirenix.Serialization",
-        "Sirenix.OdinInspector.Attributes",
-        "Sirenix.OdinInspector.Editor",
-        "Sirenix.Utilities.Editor",
-        "Sirenix.Utilities",
-        "Sirenix.OdinValidator.Editor"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": true,
-    "overrideReferences": false,
-    "precompiledReferences": [
-        "Sirenix.Serialization.dll",
-        "Sirenix.OdinInspector.Attributes.dll",
-        "Sirenix.OdinInspector.Editor.dll",
-        "Sirenix.Utilities.Editor.dll",
-        "Sirenix.Utilities.dll",
-        "Sirenix.OdinValidator.Editor.dll"
-    ],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8efd749490cd20283b15ec49115cda4aa4277f2d9a897817252a038f640f8ee2
+size 898

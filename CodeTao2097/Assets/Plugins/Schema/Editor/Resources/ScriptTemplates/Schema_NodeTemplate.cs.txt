@@ -1,16 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Schema;
-
-public class #SCRIPTNAME# : Action {
-	class #SCRIPTNAME#Memory {
-		//Per-node memory goes here
-	}
-	
-	public override NodeStatus Tick(object nodeMemory, SchemaAgent agent) {
-		#SCRIPTNAME#Memory memory = (#SCRIPTNAME#Memory)nodeMemory;
-	
-		return NodeStatus.Success;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:edda0408e7e2272b00da02c173d6182a75583bede82b636a48a337ef8236f858
+size 381

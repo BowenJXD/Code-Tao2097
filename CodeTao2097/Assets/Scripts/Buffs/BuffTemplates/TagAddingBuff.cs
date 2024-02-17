@@ -1,29 +1,3 @@
-﻿using UnityEngine.Serialization;
-
-namespace CodeTao
-{
-    /// <summary>
-    /// 在拥有者身上添加标签的buff
-    /// </summary>
-    public class TagAddingBuff : Buff
-    {
-        public Tag tagToAdd;
-        protected TagOwner tagOwner;
-        
-        public override void Init()
-        {
-            base.Init();
-            tagOwner = Container.GetComp<TagOwner>();
-            if (tagOwner)
-            {
-                tagOwner.AddTag(tagToAdd);
-            }
-        }
-
-        public override void OnRemove()
-        {
-            base.OnRemove();
-            tagOwner.RemoveTag(tagToAdd);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a2b98790a29eadf302b4d2f147cf75274859bde9716ea2dc73c01968959314c
+size 658

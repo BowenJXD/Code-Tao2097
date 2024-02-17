@@ -1,31 +1,3 @@
-﻿using CodeTao;
-using QFramework;
-
-namespace CodeTao
-{
-    /// <summary>
-    /// 在拥有者身上修改属性的buff
-    /// </summary>
-    public class AttributeBuff : Buff
-    {
-        public BindableProperty<float> modValue;
-        public EAAt attribute;
-        public EModifierType modifierType;
-
-        public override void Init()
-        {
-            base.Init();
-            LVL.RegisterWithInitValue(value =>
-            {
-                buffOwner?.GetComp<AttributeController>()?.AddArtefactModifier(attribute, modValue * value, modifierType, name,
-                    RepetitionBehavior.Overwrite);
-            }).UnRegisterWhenGameObjectDestroyed(this);
-        }
-        
-        public override void OnRemove()
-        {
-            base.OnRemove();
-            buffOwner?.GetComp<AttributeController>()?.RemoveArtefactModifier(attribute, modifierType, name);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e505dcf9ef3c0133cb84e3694da883bf585b5b3f9c026571148a89df350d397c
+size 930

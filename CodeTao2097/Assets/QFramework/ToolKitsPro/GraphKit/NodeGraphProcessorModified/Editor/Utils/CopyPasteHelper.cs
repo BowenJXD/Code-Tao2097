@@ -1,18 +1,3 @@
-﻿#if UNITY_2019_4_OR_NEWER
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace GraphProcessor
-{
-	[System.Serializable]
-	public class CopyPasteHelper
-	{
-		public List< JsonElement >	copiedNodes = new List< JsonElement >();
-
-		public List< JsonElement >	copiedGroups = new List< JsonElement >();
-	
-		public List< JsonElement >	copiedEdges = new List< JsonElement >();
-	}
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:e7434a09b996966fbd41cfc9030ff8ea7da900cdd28da325c0607c7aea6a5f89
+size 417

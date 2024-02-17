@@ -1,36 +1,3 @@
-﻿using UnityEngine;
-using UnityEngine.AI;
-
-namespace NavMeshPlus.Extensions
-{
-    public interface IAgentOverride
-    {
-        void UpdateAgent();
-    }
-
-    public class AgentDefaultOverride : IAgentOverride
-    {
-        public void UpdateAgent()
-        {
-        }
-    }
-    public class AgentOverride2d: MonoBehaviour
-    {
-        public NavMeshAgent Agent { get; private set; }
-        public IAgentOverride agentOverride { get; set; }
-        private void Awake()
-        {
-            Agent = GetComponent<NavMeshAgent>();
-        }
-        private void Start()
-        {
-            Agent.updateRotation = false;
-            Agent.updateUpAxis = false;
-        }
-
-        private void Update()
-        {
-            agentOverride?.UpdateAgent();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2fce626915a712705a070539f59ef402bfb43f4bd31515d2f258087598a6afba
+size 777

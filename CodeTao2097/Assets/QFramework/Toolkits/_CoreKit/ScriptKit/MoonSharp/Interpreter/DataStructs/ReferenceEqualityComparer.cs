@@ -1,20 +1,3 @@
-﻿using System.Collections.Generic;
-
-namespace MoonSharp.Interpreter.DataStructs
-{
-	/// <summary>
-	/// Implementation of IEqualityComparer enforcing reference equality
-	/// </summary>
-	internal class ReferenceEqualityComparer : IEqualityComparer<object>
-	{
-		bool IEqualityComparer<object>.Equals(object x, object y)
-		{
-			return object.ReferenceEquals(x, y);
-		}
-
-		int IEqualityComparer<object>.GetHashCode(object obj)
-		{
-			return obj.GetHashCode();
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c876f8e83ae97d5e6083f8657ef67d82342237c3d877c23154780af7e7a731c
+size 485

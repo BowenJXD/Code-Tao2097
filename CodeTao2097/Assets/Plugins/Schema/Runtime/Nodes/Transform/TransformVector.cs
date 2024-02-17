@@ -1,24 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Transform"),
-     Description("Transform a given vector from local to world space")]
-    public class TransformVector : Action
-    {
-        [Tooltip("Transform to operate on")] public ComponentSelector<Transform> transform;
-        [Tooltip("Vector to translate")] public BlackboardEntrySelector<Vector3> vector;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Transform t = agent.GetComponent(transform);
-
-            if (t == null)
-                return NodeStatus.Failure;
-
-            t.TransformVector(vector.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f8b1e214f715b2e6289d423c13bbc5ee9fc6949e9acfa870f13a936f0e62360
+size 796

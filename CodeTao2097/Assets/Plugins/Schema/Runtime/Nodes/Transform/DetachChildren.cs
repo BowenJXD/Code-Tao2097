@@ -1,24 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Transform"),
-     Description("Unparent all children of a Transform")]
-    public class DetachChildren : Action
-    {
-        [Tooltip("Transform to detach from children")]
-        public ComponentSelector<Transform> transform;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Transform t = agent.GetComponent(transform);
-
-            if (t == null)
-                return NodeStatus.Failure;
-
-            t.DetachChildren();
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f1df12677f4b12bee3510e7facb349adf1a3c244abb250b7bc54e7c3198c504
+size 697

@@ -1,26 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter.Interop
-{
-	/// <summary>
-	/// Forces a class member visibility to scripts. Can be used to hide public members or to expose non-public ones.
-	/// </summary>
-	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field
-		| AttributeTargets.Constructor | AttributeTargets.Event, Inherited = true, AllowMultiple = false)]
-	public sealed class MoonSharpVisibleAttribute : Attribute
-	{
-		/// <summary>
-		/// Gets a value indicating whether this <see cref="MoonSharpVisibleAttribute"/> is set to "visible".
-		/// </summary>
-		public bool Visible { get; private set; }
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MoonSharpVisibleAttribute"/> class.
-		/// </summary>
-		/// <param name="visible">if set to true the member will be exposed to scripts, if false the member will be hidden.</param>
-		public MoonSharpVisibleAttribute(bool visible)
-		{
-			Visible = visible;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e1e0b5d5f06bf612afc81ce317d8af17feb51c5bf70432e2ba9e1ab0bb319c9
+size 1001

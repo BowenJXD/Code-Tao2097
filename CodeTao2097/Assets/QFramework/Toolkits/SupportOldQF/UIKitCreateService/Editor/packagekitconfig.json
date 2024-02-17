@@ -1,13 +1,3 @@
-{
-    "AssemblyName": "Assembly-CSharp-Editor,",
-    "DisplayName": "UIKit 创建服务",
-    "DisplayNameCN": "UIKit 创建服务",
-    "DisplayNameEN": "UIKit Create Service(OnlyCN)",
-    "TypeName": "QFramework.UIKitCreateServiceView",
-    "InitFunc": "Init",
-    "OnGUIFunc": "OnGUI",
-    "OnWindowGUIEndFunc": "OnWindowGUIEnd",
-    "DisposeFunc": "OnDestroy",
-    "GroupName": "QFramework",
-    "RenderOrder": "4"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47ddeea37d380932fa5f8fd2518ddb12e9b922bbe7043639ce819e5bb187d8c3
+size 420

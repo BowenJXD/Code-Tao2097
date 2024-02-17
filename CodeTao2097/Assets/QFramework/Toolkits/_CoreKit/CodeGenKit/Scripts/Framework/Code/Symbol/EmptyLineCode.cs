@@ -1,27 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    public class EmptyLineCode : ICode
-    {
-        public void Gen(ICodeWriter writer)
-        {
-            writer.WriteLine();
-        }
-    }
-
-    public static partial class ICodeScopeExtensions
-    {
-        public static ICodeScope EmptyLine(this ICodeScope self)
-        {
-            self.Codes.Add(new EmptyLineCode());
-            return self;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48342674151ec7b67718643a4da494fad0342f1109fa3e153c00c6921845ecf9
+size 734

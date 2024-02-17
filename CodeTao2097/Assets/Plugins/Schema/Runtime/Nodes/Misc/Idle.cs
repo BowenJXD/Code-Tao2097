@@ -1,12 +1,3 @@
-namespace Schema.Builtin.Nodes
-{
-    [Description("Will stop execution of the tree perpetually, until flow is pulled from it by a Decorator."),
-     Category("Miscellaneous")]
-    public class Idle : Action
-    {
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            return NodeStatus.Running;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a5a6114498bc9ccac219274cbb8def719f8fb9c6be94cebb35fc3a9b7a67579
+size 368

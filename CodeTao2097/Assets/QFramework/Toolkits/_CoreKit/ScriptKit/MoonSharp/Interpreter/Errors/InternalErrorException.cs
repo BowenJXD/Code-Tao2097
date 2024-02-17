@@ -1,26 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// Exception thrown when an inconsistent state is reached in the interpreter
-	/// </summary>
-#if !(PCL || ((!UNITY_EDITOR) && (ENABLE_DOTNET)) || NETFX_CORE)
-	[Serializable]
-#endif
-	public class InternalErrorException : InterpreterException
-	{
-		internal InternalErrorException(string message)
-			: base(message)
-		{
-
-		}
-
-		internal InternalErrorException(string format, params object[] args)
-			: base(format, args)
-		{
-
-		}
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86e9a659c378d0cb5111dd4f145766c7fe04fb2d4ffed9d249674a71559bedab
+size 528

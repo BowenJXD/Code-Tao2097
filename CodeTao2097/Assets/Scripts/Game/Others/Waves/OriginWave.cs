@@ -1,24 +1,3 @@
-﻿using QFramework;
-using UnityEngine;
-
-namespace CodeTao
-{
-    /// <summary>
-    /// 鸣潮武器生成的单位，会在触碰到有共振标签的单位时生成共振波。
-    /// </summary>
-    public class OriginWave : Wave
-    {
-        protected override void Attack(Collider2D col)
-        {
-            base.Attack(col);
-            TagOwner tagOwner = col.GetComp<TagOwner>();
-            if (tagOwner && tagOwner.HasTag(Tag.Resonating))
-            {
-                if (RandomUtil.Rand100(damager.effectHitRate))
-                {
-                    ResonanceWaveGenerator.Instance.Get().Position(tagOwner.transform.position).Init();
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3baf179b3e80e801da15481a67f1647430ad3942be2482d4ceb6b6cc83341d0f
+size 722

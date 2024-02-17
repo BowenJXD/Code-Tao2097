@@ -1,32 +1,3 @@
-﻿using NavMeshPlus.Components;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.AI;
-
-namespace NavMeshPlus.Extensions
-{
-    [ExecuteAlways]
-    [AddComponentMenu("Navigation/Navigation RootSources2d", 30)]
-    public class RootSources2d: NavMeshExtension
-    {
-        [SerializeField]
-        private List<GameObject> _rootSources;
-
-        public List<GameObject> RootSources { get => _rootSources; set => _rootSources = value; }
-
-        protected override void Awake()
-        {
-            Order = -1000;
-            base.Awake();
-        }
-
-        public override void CollectSources(NavMeshSurface surface, List<NavMeshBuildSource> sources, NavMeshBuilderState navNeshState)
-        {
-            navNeshState.roots = _rootSources;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ae5f9c1f3659b7d9618ce8f26173d9bbb054a718a7f2c8ad39b8e2c2e36fba8
+size 864

@@ -1,16 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace AYellowpaper.Samples
-{
-	public class InteractableComponent : MonoBehaviour, IInteractable
-	{
-		public string DebugText;
-
-		public void Interact()
-		{
-			Debug.Log($"Interacted with component: {this.name}");
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b933d49d87e165b3220b54eed2fecccae1a57b679c9fdc0f0ccb92a3ce508c6
+size 325

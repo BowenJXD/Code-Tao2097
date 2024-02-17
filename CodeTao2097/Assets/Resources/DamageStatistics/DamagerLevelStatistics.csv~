@@ -1,5 +1,3 @@
-Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9
-ResonanceDamager,48143.21,801.9711801.9711,
-ExplosionDamager,10350,172.4106172.4106,
-SaDouChengBingDamager,15095.07,251.45412.806128,162.231,359.4065,303.6005,
-ChaoDamager,17904.83,298.25924.057456,339.5849,
+version https://git-lfs.github.com/spec/v1
+oid sha256:572ddc494c09c38414c394a6bf7cb20ee05936ae50aea43ce87933061727914c
+size 307

@@ -1,30 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-#if UNITY_EDITOR
-using UnityEditor;
-using UnityEngine;
-
-namespace QFramework
-{
-    public static class PrefabUtils
-    {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="assetPrefabPath">Assets/xxx/yyy.prefab</param>
-        /// <param name="gameObject"></param>
-        public static Object SaveAndConnect(string assetPrefabPath, GameObject gameObject)
-        {
-            return PrefabUtility.SaveAsPrefabAssetAndConnect(gameObject,
-                assetPrefabPath,
-                InteractionMode.AutomatedAction);
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:05929b4d24f68bd4ab40121d652b79a3d4fdf4fb7117669f148b01b9c0f30df7
+size 916

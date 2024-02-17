@@ -1,14 +1,3 @@
-﻿using UnityEngine;
-
-namespace QFramework
-{
-    public class LocaleKitChangeLanguageAction : MonoBehaviour
-    {
-        public Language Language;
-
-        public void Execute()
-        {
-            LocaleKit.ChangeLanguage(Language);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:50d00355bedb97da85648ab239ffa777f62ff42509695074c0a910ccec300d8a
+size 256

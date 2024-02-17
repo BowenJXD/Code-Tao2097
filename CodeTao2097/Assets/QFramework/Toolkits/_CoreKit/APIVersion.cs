@@ -1,15 +1,3 @@
-﻿/****************************************************************************
- * Copyright (c) 2016 - 2023 liangxiegame UNDER MIT License
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    public class APIVersion
-    {
-        public const bool Force = false;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4ae25b2156c9081de2a4850ea84cdc4971dfa4d5b1a0ac8cb145b0d215064ff
+size 460

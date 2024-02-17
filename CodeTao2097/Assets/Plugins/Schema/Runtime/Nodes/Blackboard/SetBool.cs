@@ -1,16 +1,3 @@
-namespace Schema.Builtin.Nodes
-{
-    [Category("Blackboard")]
-    public class SetBool : Action
-    {
-        [WriteOnly] public BlackboardEntrySelector<bool> selector;
-        public BlackboardEntrySelector<bool> value;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            selector.value = value.value;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86ac5e6c82a1f7ba88c2aa2fb140454b6aa8dbaf9376fc49dfbb1084eeef1ea0
+size 424

@@ -1,5 +1,3 @@
-Damager,TotalDamage,TotalDps,Level0,Level1,Level2,Level3,Level4,Level5,Level6,Level7,Level8,Level9
-DFLProjDamager,3350,211.0983,9.851374,249.4062,
-VirusBuffDamager,13500,850.6947,850.6947,
-GroundEffectDamager,75,4.726082,4.803844,4.688137,
-BackFlowDamager,0,0,
+version https://git-lfs.github.com/spec/v1
+oid sha256:fed0e010758783cf76887dbcd244e5b3f1af5df3f432261df05bec1b218e2fe2
+size 99

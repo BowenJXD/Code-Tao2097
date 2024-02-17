@@ -1,19 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_random"), LightIcon("random"), Category("Random"),
-     Description("Get a random point inside a unit circle with radius 1.0")]
-    public class PointInsideUnitCircle : Action
-    {
-        [Tooltip("Where to store the random point"), WriteOnly] 
-        public BlackboardEntrySelector<Vector2> target;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            target.value = Random.insideUnitCircle;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:560c5f83fb488f7779437b90fcd2dde5724fa90e5b413f8ad03ad96e438c2a90
+size 589

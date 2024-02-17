@@ -1,18 +1,3 @@
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
-
-public static class ObjectEditor
-{
-    private static readonly Dictionary<Object, Editor> editors = new Dictionary<Object, Editor>();
-
-    public static void DoEditor(Object obj)
-    {
-        editors.TryGetValue(obj, out Editor editor);
-
-        if (editor == null)
-            editor = editors[obj] = Editor.CreateEditor(obj);
-
-        editor.OnInspectorGUI();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:903304cdedc78de8a78ab57cd48c888d5b98477f03130f4603bd4c955a0f3bea
+size 460

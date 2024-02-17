@@ -1,36 +1,3 @@
-﻿/****************************************************************************
- * Copyright (c) 2016 - 2023 liangxiegame UNDER MIT License
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-#if UNITY_EDITOR
-using System.IO;
-#if UNITY_2020_1_OR_NEWER
-using UnityEditor.AssetImporters;
-#else
-using UnityEditor.Experimental.AssetImporters;
-#endif
-using UnityEngine;
-
-namespace QFramework
-{
-    [ScriptedImporter(1, ".lua")]
-    public class LuaImporter : ScriptedImporter
-    {
-        private string mLuaText;
-
-        public override void OnImportAsset(AssetImportContext ctx)
-        {
-            if (string.IsNullOrEmpty(mLuaText))
-                mLuaText = File.ReadAllText(ctx.assetPath);
-
-            var display = new TextAsset(mLuaText);
-            ctx.AddObjectToAsset("Lua Script", display);
-            ctx.SetMainObject(display);
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:e87acc307d9e1693e2c36e44978aad1d886b2364be9cb1d1e7bc20a2960b6e45
+size 1055

@@ -1,17 +1,3 @@
-﻿
-namespace MoonSharp.Interpreter.Interop.BasicDescriptors
-{
-	/// <summary>
-	/// Interface for descriptors with the capability of being serialized
-	/// for later hardwiring.
-	/// </summary>
-	public interface IWireableDescriptor 
-	{
-		/// <summary>
-		/// Prepares the descriptor for hard-wiring.
-		/// The descriptor fills the passed table with all the needed data for hardwire generators to generate the appropriate code.
-		/// </summary>
-		/// <param name="t">The table to be filled</param>
-		void PrepareForWiring(Table t);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:55a2dd8bc1d2c4a3b9c73963851245c12de2ff8e455f24c2ce576d36e1bdc888
+size 550

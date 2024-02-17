@@ -1,31 +1,3 @@
-using Schema.Builtin.Nodes;
-using UnityEditor;
-
-namespace SchemaEditor.Editors.Nodes
-{
-    [CustomEditor(typeof(GetPosition)), CanEditMultipleObjects]
-    public class GetPositionEditor : Editor
-    {
-        private SerializedProperty local;
-        private SerializedProperty positionKey;
-        private SerializedProperty transform;
-
-        private void OnEnable()
-        {
-            transform = serializedObject.FindProperty("transform");
-            local = serializedObject.FindProperty("local");
-            positionKey = serializedObject.FindProperty("positionKey");
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-
-            EditorGUILayout.PropertyField(transform);
-            EditorGUILayout.PropertyField(local);
-            EditorGUILayout.PropertyField(positionKey);
-
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7631c011ca9ac22b026c4f6a5d7d0adcef7da7abfbbc10648c0c6de8069a169
+size 951

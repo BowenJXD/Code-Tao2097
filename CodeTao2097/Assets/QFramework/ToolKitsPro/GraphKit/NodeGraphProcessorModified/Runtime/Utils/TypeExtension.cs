@@ -1,29 +1,3 @@
-using UnityEngine;
-using System;
-using System.Linq.Expressions;
-
-namespace GraphProcessor
-{
-	public static class TypeExtension
-	{
-		public static bool IsReallyAssignableFrom(this Type type, Type otherType)
-		{
-			if (type.IsAssignableFrom(otherType))
-				return true;
-			if (otherType.IsAssignableFrom(type))
-				return true;
-
-			try
-			{
-				var v = Expression.Variable(otherType);
-				var expr = Expression.Convert(v, type);
-				return expr.Method != null && expr.Method.Name != "op_Implicit";
-			}
-			catch (InvalidOperationException)
-			{
-				return false;
-			}
-		}
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:057a909417877d0629559114bf9d8ed2492c90ebddc1bfe8c582585626b73859
+size 575

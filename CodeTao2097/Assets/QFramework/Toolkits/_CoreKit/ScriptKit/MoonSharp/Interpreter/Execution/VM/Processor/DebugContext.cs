@@ -1,20 +1,3 @@
-﻿using System.Collections.Generic;
-using MoonSharp.Interpreter.Debugging;
-
-namespace MoonSharp.Interpreter.Execution.VM
-{
-	sealed partial class Processor
-	{
-		private class DebugContext
-		{
-			public bool DebuggerEnabled = true;
-			public IDebugger DebuggerAttached = null;
-			public DebuggerAction.ActionType DebuggerCurrentAction = DebuggerAction.ActionType.None;
-			public int DebuggerCurrentActionTarget = -1;
-			public SourceRef LastHlRef = null;
-			public int ExStackDepthAtStep = -1;
-			public List<SourceRef> BreakPoints = new List<SourceRef>();
-			public bool LineBasedBreakPoints = false;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b270aede967bf905f98ceadeb1b2ff350cde3c07e7cd63299f058451f59149a
+size 630

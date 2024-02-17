@@ -1,16 +1,3 @@
-{
-    "name": "NavMeshPlusEditor",
-    "references": [
-        "NavMeshPlus"
-    ],
-    "optionalUnityReferences": [],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47f51ea47806268d0af0c3a00e19f5e6396d94327f9407bd7d3a7e01d6109d4e
+size 350

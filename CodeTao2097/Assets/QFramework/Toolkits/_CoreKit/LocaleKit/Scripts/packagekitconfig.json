@@ -1,13 +1,3 @@
-{
-  "AssemblyName": "QFramework.CoreKit",
-  "DisplayName": "LocaleKit 配置",
-  "DisplayNameCN": "LocaleKit 配置",
-  "DisplayNameEN": "LocaleKit Config",
-  "TypeName": "QFramework.LocaleKitConfigView",
-  "InitFunc": "Init",
-  "OnGUIFunc": "OnGUI",
-  "OnWindowGUIEndFunc": "OnWindowGUIEnd",
-  "DisposeFunc": "OnDestroy",
-  "GroupName": "QFramework",
-  "RenderOrder": "5"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:380e5be2340562732307aa06b5b7c6de2c1fe06cbd90ed1533e311f1b17cd374
+size 374

@@ -1,36 +1,3 @@
-﻿using MoonSharp.Interpreter.Debugging;
-
-namespace MoonSharp.Interpreter.Execution.VM
-{
-	sealed partial class Processor
-	{
-		private SourceRef GetCurrentSourceRef(int instructionPtr)
-		{
-			if (instructionPtr >= 0 && instructionPtr < m_RootChunk.Code.Count)
-			{
-				return m_RootChunk.Code[instructionPtr].SourceCodeRef;
-			}
-			return null;
-		}
-
-
-		private void FillDebugData(InterpreterException ex, int ip)
-		{
-			// adjust IP
-			if (ip == YIELD_SPECIAL_TRAP)
-				ip = m_SavedInstructionPtr;
-			else
-				ip -= 1;
-
-			ex.InstructionPtr = ip;
-
-			SourceRef sref = GetCurrentSourceRef(ip);
-
-			ex.DecorateMessage(m_Script, sref, ip);
-
-			ex.CallStack = Debugger_GetCallStack(sref);
-		}
-
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd88c609e2d930cc8ec55eae2323b3b22d72a5a5cf2fef7bdd5ccb35d19d5b2b
+size 732

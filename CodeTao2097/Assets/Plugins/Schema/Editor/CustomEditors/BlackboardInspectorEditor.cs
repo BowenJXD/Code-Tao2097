@@ -1,16 +1,3 @@
-using Schema.Internal;
-using UnityEditor;
-
-namespace SchemaEditor.Editors
-{
-    [CustomEditor(typeof(Blackboard))]
-    public class BlackboardInspectorEditor : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            EditorGUI.BeginDisabledGroup(true);
-            base.OnInspectorGUI();
-            EditorGUI.EndDisabledGroup();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3844eb0cebffe775fbea725adb0483e53ecd686913205ac47b06bb9458a91b6d
+size 386

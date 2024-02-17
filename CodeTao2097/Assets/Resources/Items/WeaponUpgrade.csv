@@ -1,15 +1,3 @@
-Id,Levels,Attribute,Value,ModType,Exclusive
-LY,28,Cooldown,-0.2,Multiplicative,TRUE
-LY,,Area,0.5,Basic,FALSE
-SDCB,13579,Duration,2,Basic,TRUE
-SDCB,,Damage,1,Basic,TRUE
-TWLKH,28,Amount,1,Basic,TRUE
-TWLKH,147,Duration,2,Basic,TRUE
-TWLKH,,Cooldown,-0.2,Multiplicative,TRUE
-GHS,147,Amount,1,Basic,TRUE
-GHS,,Cooldown,-0.2,Multiplicative,TRUE
-TWLKJ,28,Amount,1,Basic,TRUE
-TWLKJ,147,Duration,2,Basic,TRUE
-TWLKJ,,EffectHitRate,10,Basic,TRUE
-MC,2468,Duration,2,Basic,TRUE
-MC,,Damage,2,Basic,TRUE
+version https://git-lfs.github.com/spec/v1
+oid sha256:1eff8da5130db9198427909ae97404b1fdba898647a0b773e5988d738f470515
+size 483

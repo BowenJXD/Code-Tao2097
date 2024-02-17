@@ -1,31 +1,3 @@
-﻿using System;
-using UnityEngine;
-
-namespace QFramework
-{
-    public class OnBecameVisibleEventTrigger : MonoBehaviour
-    {
-        public readonly EasyEvent OnBecameVisibleEvent = new EasyEvent();
-
-        private void OnBecameVisible()
-        {
-            OnBecameVisibleEvent.Trigger();
-        }
-    }
-
-    public static class OnBecameVisibleEventTriggerExtension
-    {
-        public static IUnRegister OnBecameVisibleEvent<T>(this T self, Action onBecameVisible)
-            where T : Component
-        {
-            return self.GetOrAddComponent<OnBecameVisibleEventTrigger>().OnBecameVisibleEvent
-                .Register(onBecameVisible);
-        }
-
-        public static IUnRegister OnBecameVisibleEvent(this GameObject self, Action onBecameVisible)
-        {
-            return self.GetOrAddComponent<OnBecameVisibleEventTrigger>().OnBecameVisibleEvent
-                .Register(onBecameVisible);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6346c027a5ed8fe0bcd258c5f567a4131305ef2d8ff0cc24dc0ce775af2a16aa
+size 961

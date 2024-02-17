@@ -1,33 +1,3 @@
-#if UNITY_EDITOR
-using System.Collections.Generic;
-using UnityEditor;
-
-namespace QFramework
-{
-    internal interface IPackageManagerModel : IModel
-    {
-        List<PackageRepository> Repositories { get; set; }
-    }
-
-    class PackageManagerModel : AbstractModel, IPackageManagerModel
-    {
-        public PackageManagerModel()
-        {
-            Repositories = PackageInfosRequestCache.Get().PackageRepositories;
-        }
-
-        public List<PackageRepository> Repositories { get; set; }
-
-        public bool VersionCheck
-        {
-            get { return EditorPrefs.GetBool("QFRAMEWORK_VERSION_CHECK", true); }
-            set { EditorPrefs.SetBool("QFRAMEWORK_VERSION_CHECK", value); }
-        }
-
-        protected override void OnInit()
-        {
-            
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f202028271df2609c29344712e407067f96673d8b3263aaa15db73bc7f599f4
+size 797

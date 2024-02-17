@@ -1,22 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Internal.Types
-{
-    [Color("#f34b7d")]
-    [UseExternalTypeDefinition(typeof(UnityEngine.GameObject))]
-    [ExcludePaths(
-        "gameObject",
-        "transform.gameObject",
-        "transform.parent.transform",
-        "transform.parent.gameObject",
-        "transform.parent.root",
-        "transform.root.transform",
-        "transform.root.root",
-        "transform.root.gameObject",
-        "transform.root.parent"
-    )]
-    [ExcludeTypes(typeof(Matrix4x4))]
-    public class GameObject : EntryType
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:320290e9d988d2de69bcb8c3be295113137ee72ae21e9305459546bb434a99b1
+size 579

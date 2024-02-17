@@ -1,2 +1,3 @@
-Id, Name, Description, Effect
-J1, 撒豆成兵, 发射金种子（弹射物，参与共振，会逐渐减速至静止）。,金抗性降低20%，持续5秒。
+version https://git-lfs.github.com/spec/v1
+oid sha256:21593ef94566e8664071eb49ef2945a0f0a700daba6f80048d1e87343f238651
+size 161

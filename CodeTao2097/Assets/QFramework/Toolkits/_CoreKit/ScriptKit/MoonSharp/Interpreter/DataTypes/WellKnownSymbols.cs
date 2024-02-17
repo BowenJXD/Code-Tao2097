@@ -1,19 +1,3 @@
-﻿
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// Constants of well known "symbols" in the MoonSharp grammar
-	/// </summary>
-	public static class WellKnownSymbols
-	{
-		/// <summary>
-		/// The variadic argument symbol ("...")
-		/// </summary>
-		public const string VARARGS = "...";
-
-		/// <summary>
-		/// The environment symbol ("_ENV")
-		/// </summary>
-		public const string ENV = "_ENV";
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e952761d7d9ec0e54da211ded226659747d6c0d4194db8c5860aab7e68ca980
+size 421

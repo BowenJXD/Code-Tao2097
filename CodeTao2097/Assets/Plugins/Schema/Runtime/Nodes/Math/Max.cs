@@ -1,24 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math"),
-     Description("Get the maximum of a list of values")]
-    public class Max : Action
-    {
-        [Tooltip("List of values to get the maximum of")]
-        public List<BlackboardEntrySelector<float>> values;
-
-        [Tooltip("Selector to store maximum in"), WriteOnly] 
-        public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            result.value = Mathf.Max(values.Select(v => v.value).ToArray());
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:922aaad7287c433cbdc84c2653c9718ae60e56cc1268ce802352f24c9e3ed65c
+size 754

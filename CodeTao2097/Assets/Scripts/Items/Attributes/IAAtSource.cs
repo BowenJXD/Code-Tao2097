@@ -1,22 +1,3 @@
-﻿using System.Collections.Generic;
-
-namespace CodeTao
-{
-    public interface IAAtSource
-    {
-        BindableStat GetAAt(EAAt at);
-        
-        void Transmit(List<IAAtReceiver> receivers)
-        {
-            foreach(IAAtReceiver receiver in receivers)
-            {
-                receiver.Receive(this);
-            }
-        }
-    }
-    
-    public interface IAAtReceiver
-    {
-        void Receive(IAAtSource source);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf4eaee4d34c3b1269c92b30e6cf6ce8328ca5ca7b5389efaaa59d3df040a6cd
+size 459

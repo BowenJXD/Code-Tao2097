@@ -1,26 +1,3 @@
-/****************************************************************************
- * 2023.12 AARON
- ****************************************************************************/
-
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using QFramework;
-
-namespace CodeTao
-{
-	/// <summary>
-	/// 单个升级选项按钮的UI
-	/// </summary>
-	public partial class ExpUpgradeBtn : UIElement
-	{
-		private void Awake()
-		{
-		}
-
-		protected override void OnBeforeDestroy()
-		{
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0c2248adf5c3e3362a8be7833514871575d8463aa8ef83a52699377dd81384a
+size 533

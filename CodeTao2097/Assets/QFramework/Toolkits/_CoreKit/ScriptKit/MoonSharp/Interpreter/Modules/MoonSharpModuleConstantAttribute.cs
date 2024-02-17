@@ -1,18 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// In a module type, mark fields with this attribute to have them exposed as a module constant.
-	/// 
-	/// See <see cref="MoonSharpModuleAttribute"/> for more information about modules.
-	/// </summary>
-	[AttributeUsage(AttributeTargets.Field, Inherited = false, AllowMultiple = false)]
-	public sealed class MoonSharpModuleConstantAttribute : Attribute
-	{
-		/// <summary>
-		/// Gets or sets the name of the constant - if different from the name of the field itself
-		/// </summary>
-		public string Name { get; set; }
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:973fde2f7ddf1b40fd92cdc8bb36adc2b52c8180acc143f901e2d23efe59e9b7
+size 608

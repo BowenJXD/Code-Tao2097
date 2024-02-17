@@ -1,18 +1,3 @@
-// Generate Id:7e61d5da-d558-4b0c-b414-d6166d7b2ea3
-using UnityEngine;
-
-namespace CodeTao
-{
-	public partial class Enemy
-	{
-
-		public SpriteRenderer Sprite;
-
-		public CircleCollider2D HitBox;
-
-		public UnityEngine.Rigidbody2D SelfRigidbody2D;
-
-		public UnityEngine.AI.NavMeshAgent SelfNavAgent;
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4b9e653f0a8c51daeeaa09208663283bff3007175178d2e6818f5ba018af373
+size 318

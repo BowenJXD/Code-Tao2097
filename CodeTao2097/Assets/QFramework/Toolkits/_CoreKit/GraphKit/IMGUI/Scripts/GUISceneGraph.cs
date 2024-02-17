@@ -1,34 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2017 Thor Brigsted UNDER MIT LICENSE  see licenses.txt 
- * Copyright (c) 2022 liangxiegame UNDER Paid MIT LICENSE  see licenses.txt
- *
- * xNode: https://github.com/Siccity/xNode
- ****************************************************************************/
-
-using UnityEngine;
-
-namespace QFramework
-{
-    /// <summary> Lets you instantiate a node graph in the scene. This allows you to reference in-scene objects. </summary>
-    public class GUISceneGraph : MonoBehaviour
-    {
-        public GUIGraph graph;
-    }
-
-    /// <summary> Derive from this class to create a SceneGraph with a specific graph type. </summary>
-    /// <example>
-    /// <code>
-    /// public class MySceneGraph : GUISceneGraph<MyGraph> {
-    /// 	
-    /// }
-    /// </code>
-    /// </example>
-    public class GUISceneGraph<T> : GUISceneGraph where T : GUIGraph
-    {
-        public new T graph
-        {
-            get => base.graph as T;
-            set => base.graph = value;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:25ce51140e348ce5d08c5675cf05a613479ae6e6ed29b1225262dd5a32ce6929
+size 1100

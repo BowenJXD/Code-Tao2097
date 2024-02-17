@@ -1,30 +1,3 @@
-﻿using QFramework;
-
-namespace CodeTao
-{
-    public class DigitalTombBlessing : Blessing
-    {
-        /// <summary>
-        /// 0 - 100
-        /// </summary>
-        public BindableStat chance = new BindableStat(10f);
-
-        public override void OnAdd()
-        {
-            base.OnAdd();
-            EnemyManager.Instance.AddOnSpawnAction(OnSpawn);
-        }
-
-        void OnSpawn(Enemy enemy)
-        {
-            enemy.onDeinit += () =>
-            {
-                if (RandomUtil.Rand100(chance))
-                {
-                    DigitalTombGenerator.Instance.Get()?.Position(enemy.transform.position).Init();
-                }
-            };
-        }
-    }
-    
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4fbbf5e90eeb765d57b76e1ce46ed666b82e853f3113088d8915bdb883d0ca99
+size 711

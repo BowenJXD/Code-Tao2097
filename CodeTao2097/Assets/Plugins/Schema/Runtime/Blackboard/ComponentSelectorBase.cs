@@ -1,14 +1,3 @@
-using System;
-using UnityEngine;
-
-namespace Schema.Internal
-{
-    [Serializable]
-    public abstract class ComponentSelectorBase : BlackboardEntrySelector<GameObject>
-    {
-        /// <summary>
-        ///     The gameObject entry to get the component from, null if useSelf is true (read only)
-        /// </summary>
-        public new GameObject value => base.value;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e5cfedd61c0b3dbbcabb1784ab4b5f1533b0a74ad6d5c1128bfd5662ed07808
+size 389

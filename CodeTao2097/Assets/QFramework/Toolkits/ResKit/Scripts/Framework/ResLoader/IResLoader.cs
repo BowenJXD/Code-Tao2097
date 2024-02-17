@@ -1,24 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2016 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    using System;
-        
-    public interface IResLoader 
-    {
-        IRes LoadResSync(ResSearchKeys resSearchKeys);
-        UnityEngine.Object LoadAssetSync(ResSearchKeys resSearchKeys);
-        
-        void Add2Load(ResSearchKeys resSearchKeys, Action<bool, IRes> listener = null, bool lastOrder = true);
-        void LoadAsync(System.Action listener = null);
-        
-        void ReleaseAllRes();
-        void UnloadAllInstantiateRes(bool flag);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31d03470dc00d903d8a5feaace5d5b2c35eea4897ded030f5734e5eae3b3186c
+size 824

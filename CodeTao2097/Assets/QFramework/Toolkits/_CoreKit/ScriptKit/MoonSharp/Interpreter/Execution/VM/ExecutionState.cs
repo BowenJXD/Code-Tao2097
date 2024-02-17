@@ -1,12 +1,3 @@
-﻿using MoonSharp.Interpreter.DataStructs;
-
-namespace MoonSharp.Interpreter.Execution.VM
-{
-	internal sealed class ExecutionState
-	{
-		public FastStack<DynValue> ValueStack = new FastStack<DynValue>(131072);
-		public FastStack<CallStackItem> ExecutionStack = new FastStack<CallStackItem>(131072);
-		public int InstructionPtr = 0;
-		public CoroutineState State = CoroutineState.NotStarted;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47708c1beb0edc948b2a88f114ca2beb2bc8a40431a6a70460c4deb3975c59dc
+size 406

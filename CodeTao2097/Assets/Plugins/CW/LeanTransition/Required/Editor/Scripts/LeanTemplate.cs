@@ -1,28 +1,3 @@
-﻿using UnityEngine;
-using UnityEditor;
-
-namespace Lean.Transition.Editor
-{
-	/// <summary>This allows you to define a transition template.</summary>
-	[CreateAssetMenu(fileName = "NewTemplate", menuName = "Lean/Transition/Template")]
-	public class LeanTemplate : ScriptableObject
-	{
-		[Multiline(100)]
-		public string Body;
-	}
-
-	[CustomEditor(typeof(LeanTemplate))]
-	public class LeanTemplate_Editor : UnityEditor.Editor
-	{
-		public override void OnInspectorGUI()
-		{
-			var labelWidth = EditorGUIUtility.labelWidth;
-
-			EditorGUIUtility.labelWidth = 50.0f;
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("Body"));
-			EditorGUIUtility.labelWidth = labelWidth;
-
-			serializedObject.ApplyModifiedProperties();
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa0c2a7f70299e4c250e232e392fe71d5880639ea3d74e72e8222f75e2264de3
+size 733

@@ -1,35 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2019 Gwaredd Mountain UNDER MIT License
- * Copyright (c) 2022 liangxiegame UNDER MIT License
- *
- * https://github.com/gwaredd/UnityMarkdownViewer
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    internal interface IMDBuilder
-    {
-        void Text(string text, MDStyle style, string link, string tooltip);
-        void Image(string url, string alt, string tooltip);
-
-        void NewLine();
-        void Space();
-        void HorizontalLine();
-
-        void Indent();
-        void Outdent();
-        void Prefix(string text, MDStyle style);
-
-        void StartBlock(bool quoted);
-        void EndBlock();
-
-        void StartTable();
-        void EndTable();
-
-        void StartTableRow(bool isHeader);
-        void EndTableRow();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48cb12fbbb3c18f8798b0c12a21f1e6359294f4e8b1b05633a610b7050dddd8c
+size 1006

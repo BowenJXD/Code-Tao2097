@@ -1,16 +1,3 @@
-using System.Collections.Generic;
-
-namespace QFramework
-{
-    public class PanelCodeInfo
-    {
-        public          string                     GameObjectName;
-        public          Dictionary<string, string> DicNameToFullName = new Dictionary<string, string>();
-        public readonly List<BindInfo>             BindInfos         = new List<BindInfo>();
-        public readonly List<ElementCodeInfo>      ElementCodeDatas  = new List<ElementCodeInfo>();
-
-        public string              Identifier  { get; set; }
-        public bool                Changed     { get; set; }
-        public IEnumerable<string> ForeignKeys { get; private set; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6990ad9e2e5f38eaef2a2f9dcff30347a059e16f26ef99c63f69021ce5fb904
+size 659

@@ -1,21 +1,3 @@
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Math"), LightIcon("Nodes/Math"), Category("Math")]
-    public class Divide : Action
-    {
-        public BlackboardEntrySelector<float> valueOne;
-        public BlackboardEntrySelector<float> valueTwo;
-        [WriteOnly] public BlackboardEntrySelector<float> result;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            float v1 = valueOne.value;
-            float v2 = valueTwo.value;
-            float r = v1 / v2;
-
-            result.value = r;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba7001b77817a7b55bcb9c9942b750fb6a8bf24aee57c9011b6d5860ff9dd251
+size 630

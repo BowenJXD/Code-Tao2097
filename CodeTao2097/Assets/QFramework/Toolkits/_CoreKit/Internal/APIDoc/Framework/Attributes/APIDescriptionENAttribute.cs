@@ -1,23 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 - 2022 liangxiegame UNDER MIT License
- * 
- * http://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-using System;
-
-namespace QFramework
-{
-    public class APIDescriptionENAttribute : Attribute
-    {
-        public string Description { get; private set; }
-
-        public APIDescriptionENAttribute(string description)
-        {
-            Description = description;
-        }
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b1aa65adbde00b7ac39424654a2f7e2ccc36926b20198887490bcf6b9121da5
+size 629

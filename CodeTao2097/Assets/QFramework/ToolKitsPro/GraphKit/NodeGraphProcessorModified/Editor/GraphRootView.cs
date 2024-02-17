@@ -1,31 +1,3 @@
-#if UNITY_2019_3_OR_NEWER
-using System;
-using GraphProcessor;
-using UnityEngine;
-using UnityEngine.UIElements;
-
-namespace QFramework.Pro
-{
-    [Serializable]
-    public class GraphRootView
-    {
-        public GraphRootView(VisualElement rootVisualElement)
-        {
-            RootVisualElement = rootVisualElement;
-
-            RootVisualElement.name = "graphRootView";
-            RootVisualElement.styleSheets.Add(Resources.Load<StyleSheet>("BlueGraphEditor/Variables"));
-            RootVisualElement.styleSheets.Add(Resources.Load<StyleSheet>(GraphWindowStyle));
-        }
-
-        public VisualElement RootVisualElement;
-        public BaseGraphView GraphView;
-
-        public readonly string GraphWindowStyle = "GraphProcessorStyles/BaseGraphView";
-
-        public bool IsGraphLoaded => GraphView != null && GraphView.graph != null;
-
-        [SerializeField] public BaseGraph Graph;
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:d8c197ba121746f30cf7fc6b69ea680b5ba79af4e64b9dda7cb2d10b3de991f9
+size 906

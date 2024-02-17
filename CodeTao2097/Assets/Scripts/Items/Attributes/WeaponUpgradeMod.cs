@@ -1,19 +1,3 @@
-﻿using System;
-using UnityEngine;
-
-namespace CodeTao
-{
-    /// <summary>
-    /// 用于设置一个weapon升级的属性变化
-    /// </summary>
-    [Serializable]
-    public class WeaponUpgradeMod : UpgradeMod
-    {
-        public EWAt attribute;
-
-        public override string GetAttribute()
-        {
-            return attribute.ToString();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:abefd25d25bc14ccde71515631850c33eaafbf8ace24e1a3ba5629112b952ff6
+size 571

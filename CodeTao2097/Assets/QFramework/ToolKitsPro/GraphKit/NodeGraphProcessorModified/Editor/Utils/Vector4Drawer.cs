@@ -1,25 +1,3 @@
-#if UNITY_2019_4_OR_NEWER
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.UIElements;
-using UnityEngine.UIElements;
-
-namespace GraphProcessor
-{
-    // We need a drawer to display Vector4 on a single line because by default it's a toggle
-    [CustomPropertyDrawer(typeof(Vector4))]
-    public class IngredientDrawerUIE : PropertyDrawer
-    {
-        public override VisualElement CreatePropertyGUI(SerializedProperty property)
-        {
-            var vectorField = new Vector4Field() { value = property.vector4Value };
-            vectorField.RegisterValueChangedCallback(e => {
-                property.vector4Value = e.newValue;
-                property.serializedObject.ApplyModifiedProperties();
-            });
-
-            return vectorField;
-        }
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:a46753664094866007c693d836ce9beba53283b73ec462f4dbf98d17aad3254d
+size 782

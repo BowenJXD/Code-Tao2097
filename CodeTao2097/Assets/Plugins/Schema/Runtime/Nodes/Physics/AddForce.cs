@@ -1,23 +1,3 @@
-﻿using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Rigidbody Icon", true), LightIcon("Rigidbody Icon", true), Category("Physics")]
-    public class AddForce : Action
-    {
-        public ComponentSelector<Rigidbody> rigidbody;
-        public BlackboardEntrySelector<Vector3> forceVector;
-        public ForceMode forceMode;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Rigidbody r = agent.GetComponent(rigidbody);
-
-            if (r == null)
-                return NodeStatus.Failure;
-
-            r.AddForce(forceVector.value, forceMode);
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da2d1e243659fe5e57ac015e078be238f5e1679cfcbc9c1482702b512f606dfc
+size 696

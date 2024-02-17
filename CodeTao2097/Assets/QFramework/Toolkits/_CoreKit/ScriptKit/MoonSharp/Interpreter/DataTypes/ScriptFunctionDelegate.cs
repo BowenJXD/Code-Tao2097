@@ -1,17 +1,3 @@
-﻿
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// A Delegate type which can wrap a script function
-	/// </summary>
-	/// <param name="args">The arguments.</param>
-	/// <returns>The return value of the script function</returns>
-	public delegate object ScriptFunctionDelegate(params object[] args);
-	/// <summary>
-	/// A Delegate type which can wrap a script function with a generic typed return value
-	/// </summary>
-	/// <typeparam name="T"></typeparam>
-	/// <param name="args">The arguments.</param>
-	/// <returns>The return value of the script function</returns>
-	public delegate T ScriptFunctionDelegate<T>(params object[] args);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2be9995da5fb9498bcb44f8f1fcab39c7cade879a1f856d788194888c8bdbb5b
+size 659

@@ -1,22 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_cs Script Icon", true), LightIcon("cs Script Icon", true), Category("MonoBehaviour"),
-     Description("Stop all coroutines on a MonoBehavior")]
-    public class StopAllCoroutines : Action
-    {
-        [Tooltip("MonoBehaviour with the running coroutine that you would like to terminate")]
-        public BlackboardEntrySelector<MonoBehaviour> monoBehaviour;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            if (monoBehaviour.value == null)
-                return NodeStatus.Failure;
-
-            monoBehaviour.value.StopAllCoroutines();
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0aa7f503a0fccc1bb52938fab3b3fa6b56e26ca9a2583ffac305522542eb7923
+size 738

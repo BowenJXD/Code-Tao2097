@@ -1,15 +1,3 @@
-﻿using UnityEngine;
-
-namespace NavMeshPlus.Extensions
-{
-    public class AgentRotate2d: MonoBehaviour
-    {
-        private AgentOverride2d override2D;
-        private void Start()
-        {
-            override2D = GetComponent<AgentOverride2d>();
-            override2D.agentOverride = new RotateAgentInstantly(override2D.Agent, override2D);
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2251fbdc4d62defa9e766c2b566cec725939ff51044d361d80ed3bbc98c03194
+size 365

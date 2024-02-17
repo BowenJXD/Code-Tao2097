@@ -1,16 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter.Execution
-{
-	internal class RuntimeScopeBlock
-	{
-		public int From { get; internal set; }
-		public int To { get; internal set; }
-		public int ToInclusive { get; internal set; }
-
-		public override string ToString()
-		{
-			return String.Format("ScopeBlock : {0} -> {1} --> {2}", From, To, ToInclusive);
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:892dccc1739cdf192fc6367aa05ec63dad00ba8161b5139884e77dbfec494136
+size 376

@@ -1,26 +1,3 @@
-﻿using System;
-
-namespace MoonSharp.Interpreter
-{
-	/// <summary>
-	/// Marks a method as the handler of metamethods of a userdata type
-	/// </summary>
-	[AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
-	public sealed class MoonSharpUserDataMetamethodAttribute : Attribute
-	{
-		/// <summary>
-		/// The metamethod name (like '__div', '__ipairs', etc.)
-		/// </summary>
-		public string Name { get; private set; }
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MoonSharpUserDataMetamethodAttribute"/> class.
-		/// </summary>
-		/// <param name="name">The metamethod name (like '__div', '__ipairs', etc.)</param>
-		public MoonSharpUserDataMetamethodAttribute(string name)
-		{
-			Name = name;
-		}
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1da5d63349ae5cc6e9832cdae56c4b3afac2720e4d8cf681f3a8770d0b208457
+size 776

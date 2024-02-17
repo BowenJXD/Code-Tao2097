@@ -1,21 +1,3 @@
-﻿using System.IO;
-using System.Text;
-
-namespace MoonSharp.Interpreter.CoreLib.IO
-{
-	/// <summary>
-	/// Abstract class implementing a file Lua userdata. Methods are meant to be called by Lua code.
-	/// </summary>
-	internal class FileUserData : StreamFileUserDataBase
-	{
-		public FileUserData(Script script, string filename, Encoding encoding, string mode)
-		{
-			Stream stream = Script.GlobalOptions.Platform.IO_OpenFile(script, filename, encoding, mode);
-
-			StreamReader reader = (stream.CanRead) ? new StreamReader(stream, encoding) : null;
-			StreamWriter writer = (stream.CanWrite) ? new StreamWriter(stream, encoding) : null;
-
-			base.Initialize(stream, reader, writer);
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3ab36d139327196d1eb18e4ec19085770e34e94cbcb824fa453c18c3bf24e60
+size 708

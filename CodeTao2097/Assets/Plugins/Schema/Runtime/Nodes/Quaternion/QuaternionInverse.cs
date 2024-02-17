@@ -1,21 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Quaternion"), LightIcon("Nodes/Quaternion"), Category("Quaternion"),
-     Description("Get the inverse of a quaternion rotation")]
-    public class QuaternionInverse : Action
-    {
-        [Tooltip("Rotation to invert")] public BlackboardEntrySelector<Quaternion> quaternion;
-
-        [Tooltip("Blackboard variable to store the inverted rotation in"), WriteOnly] 
-        public BlackboardEntrySelector<Quaternion> inverted;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            inverted.value = Quaternion.Inverse(quaternion.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a6527bcfe498aabf37f11c112476728e902110e6a131c42e2461c0ee3ae726c
+size 734

@@ -1,16 +1,3 @@
-﻿using UnityEngine;
-
-namespace NavMeshPlus.Extensions
-{
-    class AgentRotateSmooth2d: MonoBehaviour
-    {
-        public float angularSpeed;
-        private AgentOverride2d override2D;
-
-        private void Start()
-        {
-            override2D = GetComponent<AgentOverride2d>();
-            override2D.agentOverride = new RotateAgentSmoothly(override2D.Agent, override2D, angularSpeed);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3466ac1ff964a1a5a5e0c8b7a1bd8cb2c47c2bdec0e5ebcbb98604296233b77b
+size 412

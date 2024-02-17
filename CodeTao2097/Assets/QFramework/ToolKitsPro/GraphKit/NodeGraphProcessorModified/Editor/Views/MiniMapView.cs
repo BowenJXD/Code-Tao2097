@@ -1,24 +1,3 @@
-﻿#if UNITY_2019_4_OR_NEWER
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor.UIElements;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine.UIElements;
-
-namespace GraphProcessor
-{
-	public class MiniMapView : MiniMap
-	{
-		new BaseGraphView	graphView;
-		Vector2				size;
-
-		public MiniMapView(BaseGraphView baseGraphView)
-		{
-			this.graphView = baseGraphView;
-			SetPosition(new Rect(0, 0, 100, 100));
-			size = new Vector2(100, 100);
-		}
-	}
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d2d69c2b54d787a8e00a76b663f92e1dc7e93b062d26c1dbbe97732ada27e75
+size 507

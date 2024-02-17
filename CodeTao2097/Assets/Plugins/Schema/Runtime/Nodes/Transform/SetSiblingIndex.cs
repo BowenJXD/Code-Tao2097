@@ -1,24 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("d_Transform Icon", true), LightIcon("Transform Icon", true), Category("Transform"),
-     Description("Set the sibling index of a Transform")]
-    public class SetSiblingIndex : Action
-    {
-        [Tooltip("Transform to operate on")] public ComponentSelector<Transform> transform;
-        [Tooltip("Sibling index")] public BlackboardEntrySelector<int> siblingIndex;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            Transform t = agent.GetComponent(transform);
-
-            if (t == null)
-                return NodeStatus.Failure;
-
-            t.SetSiblingIndex(siblingIndex.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e047d006f742217ba1a56095b39c8d059c2f81abf36ffa190b5fa5ce61e5694
+size 784

@@ -1,26 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2015 ~ 2022 liangxiegame UNDER MIT LICENSE
- * 
- * https://qframework.cn
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-namespace QFramework
-{
-    using UnityEngine;
-
-    public interface IBind
-    {
-        string TypeName { get; }
-        
-        string Comment { get; }
-
-        Transform Transform { get; }
-    }
-
-    public interface IBindGroup
-    {
-        string TemplateName { get; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:276c0ae75d1f6546476c8271ae744da290e55832d2a3713f1ad7794c2532145c
+size 619

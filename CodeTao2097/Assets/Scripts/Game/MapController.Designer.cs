@@ -1,14 +1,3 @@
-// Generate Id:2be88bfc-0ea5-4e40-9869-b80f8bba33da
-using UnityEngine;
-
-namespace CodeTao
-{
-	public partial class MapController
-	{
-
-		public UnityEngine.Tilemaps.Tilemap Tilemap;
-
-		public Transform Navigations;
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:67a86a054df254c49a328b61d0d977ad053db23c02a87b492cc59047b3d2452d
+size 232

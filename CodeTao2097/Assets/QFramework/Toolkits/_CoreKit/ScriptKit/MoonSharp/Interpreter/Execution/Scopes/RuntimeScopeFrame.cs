@@ -1,21 +1,3 @@
-﻿using System.Collections.Generic;
-
-namespace MoonSharp.Interpreter.Execution
-{
-	internal class RuntimeScopeFrame 
-	{
-		public List<SymbolRef> DebugSymbols { get; private set; }
-		public int Count { get { return DebugSymbols.Count; } }
-		public int ToFirstBlock { get; internal set; }
-
-		public RuntimeScopeFrame()
-		{
-			DebugSymbols = new List<SymbolRef>();
-		}
-
-		public override string ToString()
-		{
-			return string.Format("ScopeFrame : #{0}", Count);
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1699cced841c6b52b54f5c8fd6f809cc98aa64db77464cdbcc23b3538aab9b0
+size 490

@@ -1,34 +1,3 @@
-﻿using System;
-using MoonSharp.Interpreter.Execution;
-using MoonSharp.Interpreter.Execution.VM;
-using MoonSharp.Interpreter.Tree.Expressions;
-
-namespace MoonSharp.Interpreter.Tree.Statements
-{
-	class FunctionCallStatement : Statement
-	{
-		FunctionCallExpression m_FunctionCallExpression;
-
-		public FunctionCallStatement(ScriptLoadingContext lcontext, FunctionCallExpression functionCallExpression)
-			: base(lcontext)
-		{
-			m_FunctionCallExpression = functionCallExpression;
-			lcontext.Source.Refs.Add(m_FunctionCallExpression.SourceRef);
-		}
-
-
-		public override void Compile(ByteCode bc)
-		{
-			using (bc.EnterSource(m_FunctionCallExpression.SourceRef))
-			{
-				m_FunctionCallExpression.Compile(bc);
-				RemoveBreakpointStop(bc.Emit_Pop());
-			}
-		}
-
-		private void RemoveBreakpointStop(Instruction instruction)
-		{
-			instruction.SourceCodeRef = null;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5087b8a57455d1076466f7aa2772d3fa2d6e8509e69719eca04e31ad53695577
+size 902

@@ -1,28 +1,3 @@
-/****************************************************************************
- * Copyright (c) 2022.3 liangxiegame UNDER MIT LICENSE
- * 
- * http://qframework.io
- * https://github.com/liangxiegame/QFramework
- * https://gitee.com/liangxiegame/QFramework
- ****************************************************************************/
-
-using UnityEngine;
-
-#if UNITY_2019_4_OR_NEWER
-using UnityEngine.UIElements;
-#else
-using UnityEngine.Experimental.UIElements;
-#endif
-
-namespace QFramework
-{
-    public static class FixEx
-    {
-        public static TextField FixIME(this TextField self)
-        {
-            self.RegisterCallback<FocusInEvent>(e=>Input.imeCompositionMode = IMECompositionMode.On);
-            self.RegisterCallback<FocusOutEvent>(e=>Input.imeCompositionMode = IMECompositionMode.Auto);
-            return self;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:67258cb59d7951a0076e9d93f44c96ec4d18dccf01b9b87add768ebe8c23edd8
+size 843

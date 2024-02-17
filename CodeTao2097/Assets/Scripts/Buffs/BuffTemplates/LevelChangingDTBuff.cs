@@ -1,17 +1,3 @@
-﻿namespace CodeTao
-{
-    /// <summary>
-    /// 基于自身等级增幅伤害，然后修改自身等级的<see cref="DamageTagBuff"/>
-    /// </summary>
-    public class LevelChangingDTBuff : DamageTagBuff
-    {
-        public float damageIncrement = 0.1f;
-        public int lvlIncrement = 1;
-        protected override Damage ProcessDamage(Damage damage)
-        {
-            damage.SetDamageSection(DamageSection.DamageIncrement, name, damageIncrement * LVL, RepetitionBehavior.Overwrite);
-            AlterLVL(lvlIncrement);
-            return damage;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:159e7c389c8cc7302e80c2426406ec9e8fb69d2c2356a90cc6016ea0d494900d
+size 593

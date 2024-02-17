@@ -1,10 +1,3 @@
-using System.Collections.Generic;
-
-namespace Schema.Internal.Types
-{
-    [Color("#b07219")]
-    [UseExternalTypeDefinition(typeof(List<UnityEngine.GameObject>))]
-    public class GameObjectList : EntryType
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88bcfc056cb01d73a59fe9ae47656138c3c440c6b6f01fb5e9a176ed6702f060
+size 228

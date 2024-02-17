@@ -1,34 +1,3 @@
-using System;
-using UnityEngine;
-
-namespace SchemaEditor.Internal.ComponentSystem.Components
-{
-    public sealed class BlockerComponent : GUIComponent, ICanvasMouseEventSink
-    {
-        public Func<Rect> rect { get; set; }
-
-        public Rect GetRect()
-        {
-            return rect();
-        }
-
-        public override void Create(CreateArgs args)
-        {
-            BlockerComponentCreateArgs createArgs = args as BlockerComponentCreateArgs;
-
-            if (createArgs == null)
-                throw new ArgumentException();
-
-            rect = createArgs.rect;
-        }
-
-        public override void OnGUI()
-        {
-        }
-
-        public class BlockerComponentCreateArgs : CreateArgs
-        {
-            public Func<Rect> rect { get; set; }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a1f9f22756d525c036e7834b5b0a10dae2d602ac045cef669bd09a26611ade4
+size 815

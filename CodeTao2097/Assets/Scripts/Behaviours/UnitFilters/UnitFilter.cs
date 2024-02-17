@@ -1,23 +1,3 @@
-﻿using System.Collections.Generic;
-
-namespace CodeTao
-{
-    /// <summary>
-    ///  单位过滤器基类
-    /// </summary>
-    public abstract class UnitFilter : BehaviourNode
-    {
-        protected override void OnExecute()
-        {
-            base.OnExecute();
-            if (sequence.TryGet(BBKey.TARGETS, out List<UnitController> units))
-            {
-                units = Filter(units);
-                sequence.Set(BBKey.TARGETS, units);
-                sequence.Set(BBKey.TARGET_COUNT, units.Count);
-            }
-        }
-
-        protected abstract List<UnitController> Filter(List<UnitController> units);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:80037209aacd9f96b900382770325a40713fac89a8ae8b17153250b7df375970
+size 655

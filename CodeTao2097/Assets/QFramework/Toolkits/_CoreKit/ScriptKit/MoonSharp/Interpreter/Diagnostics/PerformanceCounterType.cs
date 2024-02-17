@@ -1,18 +1,3 @@
-﻿
-namespace MoonSharp.Interpreter.Diagnostics
-{
-	/// <summary>
-	/// Enumeration of unit of measures of the performance counters
-	/// </summary>
-	public enum PerformanceCounterType
-	{
-		/// <summary>
-		/// The performance counter is specified in bytes (of memory)
-		/// </summary>
-		MemoryBytes,
-		/// <summary>
-		/// The performance counter is specified in milliseconds
-		/// </summary>
-		TimeMilliseconds,
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0cb894580b8714505967aefd98bb4495357a8cff2dd2a1e13791dd324b0ff295
+size 432

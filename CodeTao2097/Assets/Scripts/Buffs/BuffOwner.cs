@@ -1,28 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using CodeTao;
-using QFramework;
-using UnityEngine;
-
-namespace CodeTao
-{
-    /// <summary>
-    /// Container for buffs.
-    /// </summary>
-    public class BuffOwner : Container<Buff>
-    {
-        public List<Buff> FindAll(Func<Buff, bool> condition)
-        {
-            List<Buff> buffs = new List<Buff>();
-            foreach (Buff buff in Contents)
-            {
-                if (condition(buff))
-                {
-                    buffs.Add(buff);
-                }
-            }
-
-            return buffs;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8de8ed2068714d396c2d6b2fbf9035c7781579a41ee34e2f89e28bcf764baaaa
+size 615

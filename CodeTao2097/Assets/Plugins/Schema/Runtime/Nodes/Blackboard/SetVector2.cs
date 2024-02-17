@@ -1,20 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [Category("Blackboard")]
-    public class SetVector2 : Action
-    {
-        [Tooltip("Value to use when setting")] public BlackboardEntrySelector<Vector2> value;
-
-        [Tooltip("Entry value to set"), WriteOnly] 
-        public BlackboardEntrySelector<Vector2> selector;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            selector.value = value.value;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:611bf8b4cf754d525ff62e38df902428189e5f04cce9813281728f70cd40a3c7
+size 537

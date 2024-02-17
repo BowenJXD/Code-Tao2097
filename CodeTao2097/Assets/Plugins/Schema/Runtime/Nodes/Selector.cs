@@ -1,17 +1,3 @@
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Selector"), LightIcon("Light/Selector")]
-    public class Selector : Flow
-    {
-        public override int Tick(object nodeMemory, NodeStatus status, int index)
-        {
-            if (index == -1 && children.Length > 0)
-                return 0;
-
-            if (index + 1 > children.Length - 1 || status == NodeStatus.Success)
-                return -1;
-
-            return index + 1;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c568f5005c7ef8ca9fd182913cd095e2af9d6b8456a85c4a601f459abf6e406
+size 479

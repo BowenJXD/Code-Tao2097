@@ -1,15 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9042a5d800cc5cc4f9c3d1dcbff35439, type: 3}
-  m_Name: GlobalBlackboard
-  m_EditorClassIdentifier: 
-  m_entries: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee3fae1b573800bd19bac73a08f303c732119c9f2576f467a7f3c577ff4f9203
+size 421

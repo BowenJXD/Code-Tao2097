@@ -1,20 +1,3 @@
-﻿using UnityEngine;
-
-namespace Lean.Transition
-{
-	public static partial class LeanExtensions
-	{
-		/// <summary>This will give you the previously registered transition state.</summary>
-		public static LeanState GetTransition<T>(this T target)
-			where T : Component
-		{
-			return LeanTransition.PreviousState;
-		}
-
-		/// <summary>This will give you the previously registered transition state.</summary>
-		public static LeanState GetTransition(this GameObject target)
-		{
-			return LeanTransition.PreviousState;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ee3d7136b0d4fbfff8088ca182335576f9a09e76cea83319319982a02758f23
+size 520

@@ -1,3 +1,3 @@
-Everything is in the namespace AYellowpaper.
-Use the attribute RequireInterface on any serializable field of type UnityEngine.Object or of any type inheriting UnityEngine.Object, as well as List<> and Arrays that contain said types.
-Alternatively use the InterfaceReference class, which is serializable and doesn't require the attribute. This allows you to access the Value property which automatically casts to the interface.
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a6a79d563033b9ecaed104bada76f891cbeab1b8529ac244e0244814d392985
+size 428

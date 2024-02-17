@@ -1,18 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Time"), LightIcon("Nodes/Time"), Description("Get Time.time and store it in a variable")]
-    public class GetTime : Action
-    {
-        [Tooltip("The blackboard variable to store time in"), WriteOnly] 
-        public BlackboardEntrySelector<float> time;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            time.value = Time.time;
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9fd38c5a89adb807c987f820425f1a844f880897f9278c28c3d0b6d90205c5bb
+size 531

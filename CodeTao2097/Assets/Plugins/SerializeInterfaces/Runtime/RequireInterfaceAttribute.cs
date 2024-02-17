@@ -1,19 +1,3 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace AYellowpaper
-{
-	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
-	public class RequireInterfaceAttribute : PropertyAttribute
-	{
-		public readonly Type InterfaceType;
-
-		public RequireInterfaceAttribute(Type interfaceType)
-		{
-			Debug.Assert(interfaceType.IsInterface, $"{nameof(interfaceType)} needs to be an interface.");
-			InterfaceType = interfaceType;
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bcee2cb7b541f6e936ebf292bcad17782f55d8ed79faddb5a3f71694fba8890c
+size 506

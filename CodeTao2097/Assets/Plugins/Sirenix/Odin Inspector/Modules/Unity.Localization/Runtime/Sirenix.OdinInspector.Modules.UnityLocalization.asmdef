@@ -1,11 +1,3 @@
-{
-    "name": "Sirenix.OdinInspector.Modules.UnityLocalization",
-    "references": [ "Unity.Localization", "Sirenix.Serialization", "Sirenix.Serialization.Config" ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": true,
-    "autoReferenced": true,
-    "overrideReferences": false,
-    "precompiledReferences": [ "Sirenix.Serialization.dll", "Sirenix.Serialization.Config.dll" ],
-    "defineConstraints": [ "!ODIN_INSPECTOR_EDITOR_ONLY" ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a20560368031a2c3ce00f4dd90038e43b7d5b660adee3fd26e47b39fc7bf6eb
+size 480

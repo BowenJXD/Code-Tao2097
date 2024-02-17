@@ -1,17 +1,3 @@
-{
-    "name": "AYellowpaper.SerializeInterfaces.Editor",
-    "references": [
-        "GUID:31976cc9e85bdd9459e856fcb40d0d50"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5df4dafaf312f52e3c73a9b73c097e6a93ad579fb4968f30ff0bbf9351523cd
+size 422

@@ -1,17 +1,3 @@
-﻿namespace CodeTao
-{
-    public class InfernalFire : Blessing
-    {
-        public override void Init()
-        {
-            base.Init();
-            UnitManager.Instance.AddOnGetAction<GroundEffect>(OnSpawn);
-        }
-        
-        void OnSpawn(GroundEffect unit)
-        {
-            if (unit.attackWhenEntering == EAttackTarget.None) unit.attackWhenEntering.Value = EAttackTarget.One;
-            if (unit.attackWhenExiting == EAttackTarget.None) unit.attackWhenExiting.Value = EAttackTarget.One;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2da5caa88e475dd3108917c3bfa923df55df914c61726c7e4877ec870ed58c20
+size 541

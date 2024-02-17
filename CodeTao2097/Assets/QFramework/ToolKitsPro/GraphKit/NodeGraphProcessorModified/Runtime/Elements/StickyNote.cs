@@ -1,22 +1,3 @@
-using System;
-using UnityEngine;
-
-namespace GraphProcessor
-{
-    /// <summary>
-    /// Serializable Sticky node class
-    /// </summary>
-    [Serializable]
-    public class StickyNote
-    {
-        public Rect position;
-        public string title = "Hello World!";
-        public string content = "Description";
-
-        public StickyNote(string title, Vector2 position)
-        {
-            this.title = title;
-            this.position = new Rect(position.x, position.y, 200, 300);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe67b7e4a594078f33aeec625e6679d62c4572d1c65551e7c5b525b640e3765d
+size 503

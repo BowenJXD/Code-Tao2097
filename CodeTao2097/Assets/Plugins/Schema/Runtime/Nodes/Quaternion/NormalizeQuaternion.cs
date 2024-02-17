@@ -1,21 +1,3 @@
-using UnityEngine;
-
-namespace Schema.Builtin.Nodes
-{
-    [DarkIcon("Nodes/d_Quaternion"), LightIcon("Nodes/Quaternion"), Category("Quaternion"),
-     Description("Normalize a Quaternion")]
-    public class NormalizeQuaternion : Action
-    {
-        [Tooltip("Quaternion to normalize")] public BlackboardEntrySelector<Quaternion> quaternion;
-
-        [Tooltip("Blackboard variable to store the normalized vector in"), WriteOnly] 
-        public BlackboardEntrySelector<Quaternion> normalized;
-
-        public override NodeStatus Tick(object nodeMemory, SchemaAgent agent)
-        {
-            normalized.value = Quaternion.Normalize(quaternion.value);
-
-            return NodeStatus.Success;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca51de4d86ece3e4c0520e4a973b804980ca296ec4500dd36598e058f570ced8
+size 729
