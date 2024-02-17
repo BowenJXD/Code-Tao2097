@@ -49,6 +49,9 @@ TagManager:
   - name: Ground
     uniqueID: 1728775523
     locked: 0
+  - name: GroundEffect
+    uniqueID: 2784140975
+    locked: 0
   - name: Enemy
     uniqueID: 3508632541
     locked: 0
@@ -61,7 +64,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: WeaponDerivative
+  - name: Projectile
     uniqueID: 100902795
     locked: 0
   - name: Effect
